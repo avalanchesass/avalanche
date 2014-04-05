@@ -1,0 +1,152 @@
+/*------------------------------------*\
+  TYPOGRAPHY
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * MIXINS..............
+ * HEADLINES...........
+ * ANCHORS.............
+ * WHITESPACE..........
+ */
+
+
+
+/*------------------------------------*\
+  $MIXINS
+\*------------------------------------*/
+
+@mixin font-size($font-size, $line-height: true) {
+  font-size: $font-size;
+
+  @if $line-height {
+    line-height: ceil(em2pixel($font-size) / $font-base-line-height) * ($font-base-line-height / em2pixel($font-size));
+  }
+}
+
+
+
+/*------------------------------------*\
+  $HEADLINES
+\*------------------------------------*/
+/**
+ * Reset margin on headlines
+ */
+h1, h2, h3, h4 {
+  color: $cs-a;
+  font-weight: $font-b-weight-bold;
+  font-family: $font-b-family;
+}
+
+h1 {
+  @extend %spacing-vertical-rhythm;
+  @include font-size($font-size-h1);
+}
+
+h2 {
+  @extend %spacing-vertical-rhythm;
+  @include font-size($font-size-h2);
+}
+
+h3 {
+  @extend %spacing-vertical-rhythm;
+  @include font-size($font-size-h3);
+}
+
+h4 {
+  @extend %spacing-vertical-rhythm;
+  @include font-size($font-size-h4);
+}
+
+h5 {
+  @include font-size($font-size-h5);
+  margin: 0;
+}
+
+h6 {
+  @include font-size($font-size-h6);
+  margin: 0;
+}
+
+
+
+/*------------------------------------*\
+  $ANCHORS
+\*------------------------------------*/
+/**
+ * <span class="a">readmore...</span>
+ */
+a, .a {
+  color: $a-color;
+  text-decoration: $a-text-decoration;
+
+  &:visited {
+    color: $a-color-visited;
+  }
+
+  &:hover,
+  &:focus {
+    color: $a-color-hover;
+    text-decoration: $a-text-decoration-hover;
+  }
+}
+
+/**
+ * Style text anchors like normal text on big screens
+ * (big screen most likely not mobile)
+ */
+@include breakpoint-min($breakpoint-s) {
+  a[href^="tel"] {
+    &,
+    &:hover,
+    &:focus {
+      color: $font-base-color;
+      text-decoration: none;
+      cursor: default;
+    }
+  }
+}
+
+
+
+/*------------------------------------*\
+  $WHITESPACE
+\*------------------------------------*/
+/**
+ * Add whitespace around some block elements
+ */
+p,
+ul,
+ol,
+dl,
+pre,
+form,
+table,
+figure,
+address,
+fieldset,
+blockquote {
+  @extend %spacing-vertical-rhythm;
+}
+
+ul, ol, dl {
+  padding-left: 1.5em;
+}
+
+/**
+ * no margin for nested lists
+ */
+li {
+  ul, ol, dl {
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * no margin for nested tables
+ */
+table {
+  table {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

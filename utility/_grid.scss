@@ -1,0 +1,153 @@
+@if $u-grid {
+
+/*------------------------------------*\
+  GRID
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * BASE................
+ * SMALL...............
+ * MEDIUM..............
+ * LARGE...............
+ * XLARGE..............
+ *
+ *
+ * <div class="grid">
+ *   <div class="grid__item--6 grid__item--m--3">
+ *     [optional]<div class="grid__inner"></div>[/optional]
+ *   </div>
+ *   <div class="grid__item--6 grid__item--m--3">
+ *     [optional]<div class="grid__inner"></div>[/optional]
+ *   </div>
+ *   <div class="grid__item--12 grid__item--s--6">
+ *     [optional]<div class="grid__inner"></div>[/optional]
+ *   </div>
+ *   <div class="grid__item--12 grid__item--s--6">
+ *     [optional]<div class="grid__inner"></div>[/optional]
+ *   </div>
+ * </div>
+ */
+
+
+
+/*------------------------------------*\
+  $BASE
+\*------------------------------------*/
+/**
+ * Styles for all devices
+ */
+$u-grid-base-size: (100% / $u-grid-item-count);
+
+.grid {
+  @extend .clearfix;
+
+  @if $u-grid-size-m == false {
+    margin-left: -$u-grid-spacing-m;
+  }
+
+  @include breakpoint-max($breakpoint-m-max) {
+    margin-left: -$u-grid-spacing-s;
+  }
+}
+
+[class*="grid__item"] {
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+
+  @if $u-grid-size-m == false {
+    padding-left: $u-grid-spacing-m;
+  }
+
+  @include breakpoint-max($breakpoint-m-max) {
+    padding-left: $u-grid-spacing-s;
+  }
+}
+
+@for $i from 1 through $u-grid-item-count {
+  .grid__item--#{$i} { width: ($u-grid-base-size * $i); }
+}
+
+
+
+@if $u-grid-size-s {
+  /*------------------------------------*\
+    $SMALL
+  \*------------------------------------*/
+
+  @include breakpoint-min($breakpoint-s) {
+    @for $i from 1 through $u-grid-item-count {
+      .grid__item--s--#{$i} { width: ($u-grid-base-size * $i); }
+    }
+  }
+}
+
+
+
+@if $u-grid-size-m {
+  /*------------------------------------*\
+    $MEDIUM
+  \*------------------------------------*/
+
+  @include breakpoint-min($breakpoint-m) {
+    .grid {
+      margin-left: -$u-grid-spacing-m;
+    }
+
+    [class*="grid__item"] {
+      padding-left: $u-grid-spacing-m;
+    }
+
+    @for $i from 1 through $u-grid-item-count {
+      .grid__item--m--#{$i} { width: ($u-grid-base-size * $i); }
+    }
+  }
+}
+
+
+
+@if $u-grid-size-l {
+  /*------------------------------------*\
+    $LARGE
+  \*------------------------------------*/
+
+  @include breakpoint-min($breakpoint-l) {
+    .grid {
+      margin-left: -$u-grid-spacing-l;
+    }
+
+    [class*="grid__item"] {
+      padding-left: $u-grid-spacing-l;
+    }
+
+    @for $i from 1 through $u-grid-item-count {
+      .grid__item--l--#{$i} { width: ($u-grid-base-size * $i); }
+    }
+  }
+}
+
+
+
+@if $u-grid-size-xl {
+  /*------------------------------------*\
+    $XLARGE
+  \*------------------------------------*/
+
+  @include breakpoint-min($breakpoint-xl) {
+    .grid {
+      margin-left: -$u-grid-spacing-xl;
+    }
+
+    [class*="grid__item"] {
+      padding-left: $u-grid-spacing-xl;
+    }
+
+    @for $i from 1 through $u-grid-item-count {
+      .grid__item--l--#{$i} { width: ($u-grid-base-size * $i); }
+    }
+  }
+}
+
+} // endif

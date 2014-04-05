@@ -1,0 +1,295 @@
+/*
+1. Reset – ground zero.
+2. Elements – unclassed h1, unclassed ul etc.
+3. Objects and abstractions — generic, underlying design patterns.
+4. Components – full components constructed from objects and their extensions.
+5. Style trumps – error states etc.
+ */
+
+/*
+RM DOC FUTURE
+- kb.roromedia.com knowledgebase
+- Drupal installation
+- Taxonomy je rm_* paket mit versionsnummern / oder eine Taxonomy mit name/nr
+- bei paket kann gewählt werden welche packages in welcher version verwendet werden
+- jeweils eigene doc seite für neue version
+- avalanche aus oder eingliedern?
+- je paket intro bild wie avalanche aber mit jeweils eigener farbe und eichenem icon
+- logo als schrift und feld für icon klasse bei inhaltstyp
+- https://drupal.org/project/themekey eigenes sub theme (farben) je projekt
+ */
+
+
+/*
+TODO
+- hr baseline style
+- check if em / rem are used everywhere
+ */
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------*\
+  VARIABLES
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * COLOR-SHEME.........Set theme colors
+ * TYPOGRAPHY..........
+ * BREAKPOINTS.........
+ * SPACING.............
+ * LAYOUT..............
+ * UTILITIES...........
+ * SCAFFOLDING.........
+ */
+
+
+
+/*------------------------------------*\
+  $COLOR-SHEME
+\*------------------------------------*/
+/**
+ * Basic colors
+ * Fancy generator: https://kuler.adobe.com
+ */
+$cs-a: #F1AE17;
+$cs-b: #B18011;
+$cs-c: #71520B;
+$cs-d: #FEB718;
+$cs-e: #D79C15;
+
+/**
+ * Colors for alerts
+ * e.g. success, error, info
+ */
+$cs-positive: #468847;
+$cs-neutral:  #3A87AD;
+$cs-cautious: #c09853;
+$cs-negative: #b94a48;
+
+/**
+ * 3 Shades of Grey
+ */
+$cs-grey:       #CCCCCC;
+$cs-grey-dark:  darken($cs-grey, 15%);
+$cs-grey-light: lighten($cs-grey, 15%);
+
+
+
+/*------------------------------------*\
+  $TYPOGRAPHY
+\*------------------------------------*/
+/**
+ * Set the font weight variables according to the font
+ * e.g. http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700
+ * In this case set the font weights to 200, 400 and 700
+ *
+ * If you set a font weight in your css you must use this variables!
+ * e.g. font-weight: $font-a-weight-normal;
+ */
+
+$font-base-size:        16px; // must be in px
+$font-base-color:       #222;
+$font-base-line-height: 1.5;
+
+/**
+ * Font-sizes
+ */
+$font-size-xs:   0.75em;
+$font-size-s:    0.85em;
+$font-size-m:    1em;
+$font-size-l:    1.25em;
+$font-size-xl:   2em;
+$font-size-xxl:  3em;
+$font-size-xxxl: 4em;
+
+$font-size-h1: 2.25em;
+$font-size-h2: 1.875em;
+$font-size-h3: 1.5em;
+$font-size-h4: 1.25em;
+$font-size-h5: 1em;
+$font-size-h6: 1em;
+
+/**
+ * Primary font
+ */
+$font-a-family: 'Helvetica Neue', sans-serif;
+
+$font-a-weight-thin:        100;
+$font-a-weight-extra-light: 200;
+$font-a-weight-light:       300;
+$font-a-weight-normal:      400;
+$font-a-weight-medium:      500;
+$font-a-weight-semi-bold:   600;
+$font-a-weight-bold:        700;
+$font-a-weight-extra-bold:  800;
+$font-a-weight-ultra-bold:  900;
+
+/**
+ * Secondary font
+ */
+$font-b-family: 'Source Sans Pro', sans-serif;
+
+$font-b-weight-thin:        200;
+$font-b-weight-extra-light: 200;
+$font-b-weight-light:       200;
+$font-b-weight-normal:      400;
+$font-b-weight-medium:      400;
+$font-b-weight-semi-bold:   400;
+$font-b-weight-bold:        700;
+$font-b-weight-extra-bold:  700;
+$font-b-weight-ultra-bold:  700;
+
+/**
+ * Anchors
+ */
+$a-color:                 $cs-a;
+$a-color-visited:         $a-color;
+$a-color-hover:           $a-color;
+$a-text-decoration:       underline;
+$a-text-decoration-hover: none;
+
+/**
+ * Text selection
+ */
+$selection-background: $cs-a;
+$selection-color:      #fff;
+
+
+
+/*------------------------------------*\
+  $BREAKPOINTS
+\*------------------------------------*/
+/**
+ * Breakpoints
+ */
+$breakpoint-s:  480px;
+$breakpoint-m:  720px;
+$breakpoint-l:  960px;
+$breakpoint-xl: 1200px;
+
+$breakpoint-s-max:  $breakpoint-s - 1;
+$breakpoint-m-max:  $breakpoint-m - 1;
+$breakpoint-l-max:  $breakpoint-l - 1;
+$breakpoint-xl-max: $breakpoint-xl - 1;
+
+
+
+/*------------------------------------*\
+  $SPACING
+\*------------------------------------*/
+/**
+ * Basic spacing sizes
+ */
+$spacing-xs:   0.5em;
+$spacing-s:    1em;
+$spacing-m:    1.5em;
+$spacing-l:    2em;
+$spacing-xl:   3em;
+$spacing-xxl:  4em;
+$spacing-xxxl: 6em;
+
+/**
+ * Spacing for block level elements
+ */
+$spacing-block-top:    0;
+$spacing-block-bottom: $spacing-m;
+
+
+
+/*------------------------------------*\
+  $LAYOUT
+\*------------------------------------*/
+
+$layout-max-width: 1200px;
+
+
+
+/*------------------------------------*\
+  $UTILITIES
+\*------------------------------------*/
+/**
+ * Clearfix
+ */
+$u-clearfix: true;
+
+/**
+ * Grid
+ */
+$u-grid: true;
+
+$u-grid-item-count: 12;
+
+// sizes
+$u-grid-size-s:  true;
+$u-grid-size-m:  false;
+$u-grid-size-l:  false;
+$u-grid-size-xl: true;
+
+// Spacing between items
+$u-grid-spacing-s:  $spacing-s;
+$u-grid-spacing-m:  $spacing-m;
+$u-grid-spacing-l:  $spacing-m;
+$u-grid-spacing-xl: $spacing-m;
+
+/**
+ * Button
+ */
+$u-button: false;
+
+// sizes
+$u-button-size-s:    false;
+$u-button-size-l:    false;
+$u-button-size-xl:   false;
+$u-button-size-full: false;
+
+// font sizes
+$u-button-font-size-s:  false;
+$u-button-font-size-l:  false;
+$u-button-font-size-xl: false;
+
+// functions
+$u-button-function-positive: false;
+$u-button-function-neutral:  false;
+$u-button-function-cautious: false;
+$u-button-function-negative: false;
+$u-button-function-inactive: false;
+$u-button-function-disabled: false;
+
+/**
+ * Menu
+ */
+$u-menu: true;
+
+/**
+ * Island
+ */
+$u-island: false;
+
+// functions
+$u-island-function-positive: false;
+$u-island-function-neutral:  false;
+$u-island-function-cautious: false;
+$u-island-function-negative: false;
+$u-island-function-inactive: false;
+$u-island-function-disabled: false;
+
+/**
+ * Media
+ */
+$u-media: false;
+
+
+
+/*------------------------------------*\
+  $SCAFFOLDING
+\*------------------------------------*/
+
+@import 'system/scaffolding';

@@ -1,0 +1,125 @@
+@if $u-island {
+
+/*------------------------------------*\
+  ISLAND
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * BASE................
+ * FUNCTIONS...........
+ * CS..................
+ */
+
+
+
+/*------------------------------------*\
+  $BASE
+\*------------------------------------*/
+
+.island {
+  @extend .clearfix;
+  @if $spacing-vertical-rhythm {
+    @include spacing(1, padding);
+  } @else {
+    padding: $spacing-m;
+  }
+  display: block;
+  background: $cs-grey-light;
+
+  & > :last-child { margin-bottom: 0; }
+}
+
+
+
+/*------------------------------------*\
+  $FUNCTIONS
+\*------------------------------------*/
+
+@if $u-island-function-positive {
+  /**
+   * Positive actions; e.g. sign in, purchase, submit, etc.
+   */
+  .island--positive {
+    background: mix($cs-positive, #fff, 20%);
+  }
+}
+
+@if $u-island-function-neutral {
+  /**
+   * Neutral
+   */
+  .island--neutral {
+    background: mix($cs-neutral, #fff, 20%);
+  }
+}
+
+@if $u-island-function-cautious {
+  /**
+   * Cautious
+   */
+  .island--cautious {
+    background: mix($cs-cautious, #fff, 20%);
+  }
+}
+
+@if $u-island-function-negative {
+  /**
+   * Negative actions; e.g. close account, delete photo, remove friend, etc.
+   */
+  .island--negative {
+    background: mix($cs-negative, #fff, 20%);
+  }
+}
+
+
+
+/*------------------------------------*\
+  $CS
+\*------------------------------------*/
+
+@if $u-island-cs-a {
+  /**
+   * cs-a
+   */
+  .island--cs-a {
+    background: $cs-a;
+  }
+}
+
+@if $u-island-cs-b {
+  /**
+   * cs-a
+   */
+  .island--cs-b {
+    background: $cs-b;
+  }
+}
+
+@if $u-island-cs-c {
+  /**
+   * cs-a
+   */
+  .island--cs-c {
+    background: $cs-c;
+  }
+}
+
+@if $u-island-cs-d {
+  /**
+   * cs-a
+   */
+  .island--cs-d {
+    background: $cs-d;
+  }
+}
+
+@if $u-island-cs-e {
+  /**
+   * cs-a
+   */
+  .island--cs-e {
+    background: $cs-e;
+  }
+}
+
+} // endif

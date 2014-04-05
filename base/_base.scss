@@ -1,0 +1,90 @@
+/*------------------------------------*\
+  BASE
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * ELEMENTS............
+ * SELECTION...........
+ */
+
+
+
+/*------------------------------------*\
+  $ELEMENTS
+\*------------------------------------*/
+
+html {
+  font-size: $font-base-size / 16px + em;
+  line-height: strip-units($font-base-line-height / $font-base-size);
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: $font-base-color;
+  font-family: $font-a-family;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  margin: 1em 0;
+  padding: 0;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $cs-grey;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+audio,
+canvas,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+
+
+
+/*------------------------------------*\
+  $SELECTION
+\*------------------------------------*/
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: $selection-background;
+  color: $selection-color;
+  text-shadow: none;
+}
+
+::selection {
+  background: $selection-background;
+  color: $selection-color;
+  text-shadow: none;
+}

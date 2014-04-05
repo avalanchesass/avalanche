@@ -1,0 +1,53 @@
+/*------------------------------------*\
+  FUNCTIONS
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * STRIP-UNITS.........
+ * PIXEL2EM............
+ * EM2PIXEL............
+ */
+
+
+
+/*------------------------------------*\
+  $STRIP-UNITS
+\*------------------------------------*/
+
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+
+
+/*------------------------------------*\
+  $PIXEL2EM
+\*------------------------------------*/
+/**
+ * Convert a px value to em
+ * based on $font-base-size
+ */
+@function pixel2em($px, $base: $font-base-size) {
+  @if unit($px) == px {
+    @return (strip-units($px) / strip-units($base)) * 1em;
+  }
+
+  @return $px;
+}
+
+
+
+/*------------------------------------*\
+  $EM2PIXEL
+\*------------------------------------*/
+/**
+ * Convert a em value to px
+ * based on $font-base-size
+ */
+@function em2pixel($em, $base: $font-base-size) {
+  @if unit($em) == em {
+    @return (strip-units($em) * strip-units($base)) * 1px;
+  }
+
+  @return $em;
+}
