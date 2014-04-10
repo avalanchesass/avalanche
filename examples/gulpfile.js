@@ -9,7 +9,7 @@ var livereload   = require('gulp-livereload');
 
 // Styles
 gulp.task('styles', function () {
-  return gulp.src('src/avalanche.scss')
+  return gulp.src('style.scss')
     .pipe(sass({ style: 'expanded', precision: 7, sourcemap: true }))
     .on('error', gutil.log)
     .pipe(autoprefixer('last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'ios 6', 'android 4'))
@@ -27,7 +27,7 @@ gulp.task('clean', function () {
 // Watch
 gulp.task('watch', function () {
   // Watch .scss files
-  gulp.watch('src/*.scss', ['styles']);
+  gulp.watch('*.scss', ['styles']);
 });
 
 // Default task
