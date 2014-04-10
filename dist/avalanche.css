@@ -1,0 +1,899 @@
+@charset "UTF-8";
+/*
+1. Reset – ground zero.
+2. Elements – unclassed h1, unclassed ul etc.
+3. Objects and abstractions — generic, underlying design patterns.
+4. Components – full components constructed from objects and their extensions.
+5. Style trumps – error states etc.
+ */
+/*
+RM DOC FUTURE
+- kb.roromedia.com knowledgebase
+- Drupal installation
+- Taxonomy je rm_* paket mit versionsnummern / oder eine Taxonomy mit name/nr
+- bei paket kann gewählt werden welche packages in welcher version verwendet werden
+- jeweils eigene doc seite für neue version
+- avalanche aus oder eingliedern?
+- je paket intro bild wie avalanche aber mit jeweils eigener farbe und eichenem icon
+- logo als schrift und feld für icon klasse bei inhaltstyp
+- https://drupal.org/project/themekey eigenes sub theme (farben) je projekt
+ */
+/*
+TODO
+- hr baseline style
+- check if em / rem are used everywhere
+ */
+/*------------------------------------*\
+  VARIABLES
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * COLOR-SHEME.........Set theme colors
+ * TYPOGRAPHY..........
+ * BREAKPOINTS.........
+ * SPACING.............
+ * LAYOUT..............
+ * UTILITIES...........
+ * SCAFFOLDING.........
+ */
+/*------------------------------------*\
+  $COLOR-SHEME
+\*------------------------------------*/
+/**
+ * Basic colors
+ * Fancy generator: https://kuler.adobe.com
+ */
+/**
+ * Colors for alerts
+ * e.g. success, error, info
+ */
+/**
+ * 3 Shades of Grey
+ */
+/*------------------------------------*\
+  $TYPOGRAPHY
+\*------------------------------------*/
+/**
+ * Set the font weight variables according to the font
+ * e.g. http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700
+ * In this case set the font weights to 200, 400 and 700
+ *
+ * If you set a font weight in your css you must use this variables!
+ * e.g. font-weight: $font-a-weight-normal;
+ */
+/**
+ * Font-sizes
+ */
+/**
+ * Primary font
+ */
+/**
+ * Secondary font
+ */
+/**
+ * Anchors
+ */
+/**
+ * Text selection
+ */
+/*------------------------------------*\
+  $BREAKPOINTS
+\*------------------------------------*/
+/**
+ * Breakpoints
+ */
+/*------------------------------------*\
+  $SPACING
+\*------------------------------------*/
+/**
+ * Basic spacing sizes
+ */
+/**
+ * Spacing for block level elements
+ */
+/*------------------------------------*\
+  $LAYOUT
+\*------------------------------------*/
+/*------------------------------------*\
+  $UTILITIES
+\*------------------------------------*/
+/**
+ * Clearfix
+ */
+/**
+ * Grid
+ */
+/**
+ * Button
+ */
+/**
+ * Menu
+ */
+/**
+ * Island
+ */
+/**
+ * Media
+ */
+/*------------------------------------*\
+  $SCAFFOLDING
+\*------------------------------------*/
+/*------------------------------------*\
+  SCAFFOLDING
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * SYSTEM..............
+ * BASE................
+ * UTILITY.............
+ */
+/*------------------------------------*\
+  $SYSTEM
+\*------------------------------------*/
+/*------------------------------------*\
+  FUNCTIONS
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * STRIP-UNITS.........
+ * PIXEL2EM............
+ * EM2PIXEL............
+ */
+/*------------------------------------*\
+  $STRIP-UNITS
+\*------------------------------------*/
+/*------------------------------------*\
+  $PIXEL2EM
+\*------------------------------------*/
+/**
+ * Convert a px value to em
+ * based on $font-base-size
+ */
+/*------------------------------------*\
+  $EM2PIXEL
+\*------------------------------------*/
+/**
+ * Convert a em value to px
+ * based on $font-base-size
+ */
+/*------------------------------------*\
+  BREAKPOINT
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * BREAKPOINT-MIN......
+ * BREAKPOINT-MAX......
+ * BREAKPOINT-BETWEEN..
+ */
+/*------------------------------------*\
+  $BREAKPOINT-MIN
+\*------------------------------------*/
+/*------------------------------------*\
+  $BREAKPOINT-MAX
+\*------------------------------------*/
+/*------------------------------------*\
+  $BREAKPOINT-BETWEEN
+\*------------------------------------*/
+/*------------------------------------*\
+  $BASE
+\*------------------------------------*/
+/*------------------------------------*\
+  CLEARFIX
+\*------------------------------------*/
+/**
+ * Contain floats
+ */
+.clearfix, .grid {
+  *zoom: 1;
+}
+.clearfix:before, .grid:before, .clearfix:after, .grid:after {
+  display: table;
+  content: ' ';
+}
+.clearfix:after, .grid:after {
+  clear: both;
+}
+
+/*------------------------------------*\
+  SPACING
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * VARIABLES...........
+ * MIXINS..............
+ * BOTTOM..............
+ * INNER...............
+ * DEBUG...............
+ */
+/*------------------------------------*\
+  $VARIABLES
+\*------------------------------------*/
+/*------------------------------------*\
+  $MIXINS
+\*------------------------------------*/
+h1, h2, h3, h4, p,
+ul,
+ol,
+dl,
+pre,
+form,
+table,
+figure,
+address,
+fieldset,
+blockquote {
+  margin-top: 0;
+  margin-bottom: 1.5;
+  margin-bottom: 0.09375rem;
+}
+
+/*------------------------------------*\
+  $BOTTOM
+\*------------------------------------*/
+.spacing--bottom--xs {
+  margin-bottom: 1.5;
+  margin-bottom: 0.09375rem;
+}
+
+.spacing--bottom--s {
+  margin-bottom: 3;
+  margin-bottom: 0.1875rem;
+}
+
+.spacing--bottom--m {
+  margin-bottom: 4.5;
+  margin-bottom: 0.28125rem;
+}
+
+.spacing--bottom--l {
+  margin-bottom: 6;
+  margin-bottom: 0.375rem;
+}
+
+.spacing--bottom--xl {
+  margin-bottom: 7.5;
+  margin-bottom: 0.46875rem;
+}
+
+.spacing--bottom--xxl {
+  margin-bottom: 9;
+  margin-bottom: 0.5625rem;
+}
+
+.spacing--bottom--xxxl {
+  margin-bottom: 10.5;
+  margin-bottom: 0.65625rem;
+}
+
+.spacing--bottom--off {
+  margin-bottom: 0;
+}
+
+/*------------------------------------*\
+  $INNER
+\*------------------------------------*/
+.spacing--inner--both--xs {
+  padding-top: 1.5;
+  padding-top: 0.09375rem;
+  padding-bottom: 1.5;
+  padding-bottom: 0.09375rem;
+}
+
+.spacing--inner--both--s {
+  padding-top: 3;
+  padding-top: 0.1875rem;
+  padding-bottom: 3;
+  padding-bottom: 0.1875rem;
+}
+
+.spacing--inner--both--m {
+  padding-top: 4.5;
+  padding-top: 0.28125rem;
+  padding-bottom: 4.5;
+  padding-bottom: 0.28125rem;
+}
+
+.spacing--inner--both--l {
+  padding-top: 6;
+  padding-top: 0.375rem;
+  padding-bottom: 6;
+  padding-bottom: 0.375rem;
+}
+
+.spacing--inner--both--xl {
+  padding-top: 7.5;
+  padding-top: 0.46875rem;
+  padding-bottom: 7.5;
+  padding-bottom: 0.46875rem;
+}
+
+.spacing--inner--both--xxl {
+  padding-top: 9;
+  padding-top: 0.5625rem;
+  padding-bottom: 9;
+  padding-bottom: 0.5625rem;
+}
+
+.spacing--inner--both--xxxl {
+  padding-top: 10.5;
+  padding-top: 0.65625rem;
+  padding-bottom: 10.5;
+  padding-bottom: 0.65625rem;
+}
+
+/*.spacing--bottom--xs {
+  margin-bottom: $spacing-xs;
+}
+
+.spacing--bottom--s {
+  margin-bottom: $spacing-s;
+}
+
+.spacing--bottom--m {
+  margin-bottom: $spacing-m;
+}
+
+.spacing--bottom--l {
+  margin-bottom: $spacing-l;
+}
+
+.spacing--bottom--xl {
+  margin-bottom: $spacing-xl;
+}
+
+.spacing--bottom--xxl {
+  margin-bottom: $spacing-xxl;
+}
+
+.spacing--bottom--xxxl {
+  margin-bottom: $spacing-xxxl;
+}
+
+.spacing--bottom--off {
+  margin-bottom: 0;
+}
+
+
+
+.spacing--inner--both--xs {
+  padding-top: $spacing-xs;
+  padding-bottom: $spacing-xs;
+}
+
+.spacing--inner--both--s {
+  padding-top: $spacing-s;
+  padding-bottom: $spacing-s;
+}
+
+.spacing--inner--both--m {
+  padding-top: $spacing-m;
+  padding-bottom: $spacing-m;
+}
+
+.spacing--inner--both--l {
+  padding-top: $spacing-l;
+  padding-bottom: $spacing-l;
+}
+
+.spacing--inner--both--xl {
+  padding-top: $spacing-xl;
+  padding-bottom: $spacing-xl;
+}
+
+.spacing--inner--both--xxl {
+  padding-top: $spacing-xxl;
+  padding-bottom: $spacing-xxl;
+}
+
+.spacing--inner--both--xxxl {
+  padding-top: $spacing-xxxl;
+  padding-bottom: $spacing-xxl;
+}*/
+/*------------------------------------*\
+  $DEBUG
+\*------------------------------------*/
+html {
+  background-image: url(http://basehold.it/i/1.5);
+}
+
+/*------------------------------------*\
+  LAYOUT
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * CONTAINER...........
+ */
+/*------------------------------------*\
+  $CONTAINER
+\*------------------------------------*/
+.container {
+  margin: 0 auto;
+  padding: 0 1em;
+  max-width: 1200px;
+}
+
+/*------------------------------------*\
+  BASE
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * ELEMENTS............
+ * SELECTION...........
+ */
+/*------------------------------------*\
+  $ELEMENTS
+\*------------------------------------*/
+html {
+  font-size: 100%;
+  line-height: 0.09375;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222222;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  margin: 1em 0;
+  padding: 0;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+audio,
+canvas,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+
+/*------------------------------------*\
+  $SELECTION
+\*------------------------------------*/
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #f1ae17;
+  color: white;
+  text-shadow: none;
+}
+
+::selection {
+  background: #f1ae17;
+  color: white;
+  text-shadow: none;
+}
+
+/*------------------------------------*\
+  TYPOGRAPHY
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * MIXINS..............
+ * HEADLINES...........
+ * ANCHORS.............
+ * WHITESPACE..........
+ */
+/*------------------------------------*\
+  $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+  $HEADLINES
+\*------------------------------------*/
+/**
+ * Reset margin on headlines
+ */
+h1, h2, h3, h4 {
+  color: #f1ae17;
+  font-weight: 700;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h1 {
+  font-size: 2.25em;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 1.875em;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+h4 {
+  font-size: 1.25em;
+  line-height: 1.05;
+}
+
+h5 {
+  font-size: 1em;
+  line-height: 1.03125;
+  margin: 0;
+}
+
+h6 {
+  font-size: 1em;
+  line-height: 1.03125;
+  margin: 0;
+}
+
+/*------------------------------------*\
+  $ANCHORS
+\*------------------------------------*/
+/**
+ * <span class="a">readmore...</span>
+ */
+a, .a {
+  color: #f1ae17;
+  text-decoration: underline;
+}
+a:visited, .a:visited {
+  color: #f1ae17;
+}
+a:hover, a:focus, .a:hover, .a:focus {
+  color: #f1ae17;
+  text-decoration: none;
+}
+
+/**
+ * Style text anchors like normal text on big screens
+ * (big screen most likely not mobile)
+ */
+@media only screen and (min-width: 30em) {
+  a[href^="tel"], a[href^="tel"]:hover, a[href^="tel"]:focus {
+    color: #222222;
+    text-decoration: none;
+    cursor: default;
+  }
+}
+/*------------------------------------*\
+  $WHITESPACE
+\*------------------------------------*/
+/**
+ * Add whitespace around some block elements
+ */
+ul, ol, dl {
+  padding-left: 1.5em;
+}
+
+/**
+ * no margin for nested lists
+ */
+li ul, li ol, li dl {
+  margin-bottom: 0;
+}
+
+/**
+ * no margin for nested tables
+ */
+table table {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/*------------------------------------*\
+  $UTILITY
+\*------------------------------------*/
+/*------------------------------------*\
+  GRID
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * BASE................
+ * SMALL...............
+ * MEDIUM..............
+ * LARGE...............
+ * XLARGE..............
+ *
+ *
+ * <div class="grid">
+ *   <div class="grid__item--6 grid__item--m--3">
+ *     [optional]<div class="grid__inner"></div>[/optional]
+ *   </div>
+ *   <div class="grid__item--6 grid__item--m--3">
+ *     [optional]<div class="grid__inner"></div>[/optional]
+ *   </div>
+ *   <div class="grid__item--12 grid__item--s--6">
+ *     [optional]<div class="grid__inner"></div>[/optional]
+ *   </div>
+ *   <div class="grid__item--12 grid__item--s--6">
+ *     [optional]<div class="grid__inner"></div>[/optional]
+ *   </div>
+ * </div>
+ */
+/*------------------------------------*\
+  $BASE
+\*------------------------------------*/
+/**
+ * Styles for all devices
+ */
+.grid {
+  margin-left: -1.5em;
+}
+@media only screen and (max-width: 44.9375em) {
+  .grid {
+    margin-left: -1em;
+  }
+}
+
+[class*="grid__item"] {
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 1.5em;
+}
+@media only screen and (max-width: 44.9375em) {
+  [class*="grid__item"] {
+    padding-left: 1em;
+  }
+}
+
+.grid__item--1 {
+  width: 8.3333333%;
+}
+
+.grid__item--2 {
+  width: 16.6666667%;
+}
+
+.grid__item--3 {
+  width: 25%;
+}
+
+.grid__item--4 {
+  width: 33.3333333%;
+}
+
+.grid__item--5 {
+  width: 41.6666667%;
+}
+
+.grid__item--6 {
+  width: 50%;
+}
+
+.grid__item--7 {
+  width: 58.3333333%;
+}
+
+.grid__item--8 {
+  width: 66.6666667%;
+}
+
+.grid__item--9 {
+  width: 75%;
+}
+
+.grid__item--10 {
+  width: 83.3333333%;
+}
+
+.grid__item--11 {
+  width: 91.6666667%;
+}
+
+.grid__item--12 {
+  width: 100%;
+}
+
+/*------------------------------------*\
+  $SMALL
+\*------------------------------------*/
+@media only screen and (min-width: 30em) {
+  .grid__item--s--1 {
+    width: 8.3333333%;
+  }
+
+  .grid__item--s--2 {
+    width: 16.6666667%;
+  }
+
+  .grid__item--s--3 {
+    width: 25%;
+  }
+
+  .grid__item--s--4 {
+    width: 33.3333333%;
+  }
+
+  .grid__item--s--5 {
+    width: 41.6666667%;
+  }
+
+  .grid__item--s--6 {
+    width: 50%;
+  }
+
+  .grid__item--s--7 {
+    width: 58.3333333%;
+  }
+
+  .grid__item--s--8 {
+    width: 66.6666667%;
+  }
+
+  .grid__item--s--9 {
+    width: 75%;
+  }
+
+  .grid__item--s--10 {
+    width: 83.3333333%;
+  }
+
+  .grid__item--s--11 {
+    width: 91.6666667%;
+  }
+
+  .grid__item--s--12 {
+    width: 100%;
+  }
+}
+/*------------------------------------*\
+  $XLARGE
+\*------------------------------------*/
+@media only screen and (min-width: 75em) {
+  .grid {
+    margin-left: -1.5em;
+  }
+
+  [class*="grid__item"] {
+    padding-left: 1.5em;
+  }
+
+  .grid__item--l--1 {
+    width: 8.3333333%;
+  }
+
+  .grid__item--l--2 {
+    width: 16.6666667%;
+  }
+
+  .grid__item--l--3 {
+    width: 25%;
+  }
+
+  .grid__item--l--4 {
+    width: 33.3333333%;
+  }
+
+  .grid__item--l--5 {
+    width: 41.6666667%;
+  }
+
+  .grid__item--l--6 {
+    width: 50%;
+  }
+
+  .grid__item--l--7 {
+    width: 58.3333333%;
+  }
+
+  .grid__item--l--8 {
+    width: 66.6666667%;
+  }
+
+  .grid__item--l--9 {
+    width: 75%;
+  }
+
+  .grid__item--l--10 {
+    width: 83.3333333%;
+  }
+
+  .grid__item--l--11 {
+    width: 91.6666667%;
+  }
+
+  .grid__item--l--12 {
+    width: 100%;
+  }
+}
+/*------------------------------------*\
+  MENU
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * DEFAULT.............
+ * MOBILE..............
+ * HORIZONTAL..........
+ */
+/*------------------------------------*\
+  $DEFAULT
+\*------------------------------------*/
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.menu__item {
+  position: relative;
+}
+
+.menu__link {
+  text-decoration: none;
+}
+
+.nolink {
+  cursor: default;
+}
+
+/*------------------------------------*\
+  $MOBILE
+\*------------------------------------*/
+/*------------------------------------*\
+  $HORIZONTAL
+\*------------------------------------*/
+@media only screen and (min-width: 30em) {
+  .menu--horizontal {
+    /**
+     * Dropdown
+     */
+  }
+  .menu--horizontal .menu__item--level1 {
+    display: inline-block;
+  }
+  .menu--horizontal .menu__item--expanded:hover > .menu,
+  .menu--horizontal .menu__item--expanded a:focus + .menu,
+  .menu--horizontal .menu__item--expanded a:active + .menu,
+  .menu--horizontal .menu__item--expanded .menu__link--touched + .menu {
+    opacity: 1;
+  }
+  .menu--horizontal .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1002;
+    float: left;
+    width: 8em;
+    background-clip: padding-box;
+    opacity: 0;
+    -webkit-transition: opacity, 0.1s;
+    transition: opacity, 0.1s;
+  }
+  .menu--horizontal .menu .menu {
+    top: 0;
+    left: 8em;
+  }
+}
+
+/*# sourceMappingURL=avalanche.css.map */
