@@ -14,7 +14,7 @@
 \*------------------------------------*/
 
 html {
-  font-size: $font-base-size / 16px + em;
+  font-size: strip-units($font-base-size) / (16 / 100) * 1%;
   line-height: strip-units($font-base-line-height / $font-base-size);
 }
 
