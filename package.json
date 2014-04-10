@@ -1,0 +1,17 @@
+{
+  "name": "septem",
+  "version": "1.0.0",
+  "author": "Markus Oberlehner",
+  "license": "GPL v2",
+  "devDependencies": {
+    "gulp": "~3.5.5",
+    "gulp-rename": "~1.2.0",
+    "gulp-ruby-sass": "~0.4.0",
+    "gulp-clean": "~0.2.4",
+    "gulp-autoprefixer": "0.0.6",
+    "gulp-uglify": "~0.2.1",
+    "gulp-jshint": "~1.5.0",
+    "gulp-util": "~2.2.14",
+    "gulp-livereload": "~1.2.0"
+  }
+}
