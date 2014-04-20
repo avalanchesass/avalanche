@@ -18,7 +18,7 @@ $breakpoint-pixel2em: true !default;
   $BREAKPOINT-MIN
 \*------------------------------------*/
 
-@mixin breakpoint-min($min-width, $media: "only screen and") {
+@mixin breakpoint-min($min-width, $media: "") {
   @if $breakpoint-pixel2em {
     $min-width: pixel2em($min-width);
   }
@@ -36,7 +36,7 @@ $breakpoint-pixel2em: true !default;
   $BREAKPOINT-MAX
 \*------------------------------------*/
 
-@mixin breakpoint-max($max-width, $media: "only screen and") {
+@mixin breakpoint-max($max-width, $media: "") {
   @if $breakpoint-pixel2em {
     $max-width: pixel2em($max-width);
   }
@@ -54,7 +54,7 @@ $breakpoint-pixel2em: true !default;
   $BREAKPOINT-BETWEEN
 \*------------------------------------*/
 
-@mixin breakpoint-between($min-width, $max-width, $media: "only screen and") {
+@mixin breakpoint-between($min-width, $max-width, $media: "") {
   @if $breakpoint-pixel2em {
     $min-width: pixel2em($min-width);
     $max-width: pixel2em($max-width);
