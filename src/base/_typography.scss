@@ -91,7 +91,7 @@ a, .a {
 }
 
 /**
- * Style text anchors like normal text on big screens
+ * Style tel anchors like normal text on big screens
  * (big screen most likely not mobile)
  */
 @include breakpoint-min($breakpoint-s) {
