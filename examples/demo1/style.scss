@@ -1,0 +1,431 @@
+@import 'config';
+
+/*------------------------------------*\
+  STYLE
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * GENERAL.............
+ * COLOR-SHEME.........
+ * TYPOGRAPHY..........
+ * BREAKPOINTS.........
+ * SPACING.............
+ * LAYOUT..............
+ * UTILITIES...........
+ */
+
+
+
+/*------------------------------------*\
+  $GENERAL
+\*------------------------------------*/
+
+html {
+  background: transparent;
+}
+
+.container {
+  @include spacing(2, padding-top);
+  @include spacing(2, padding-bottom);
+}
+
+.section {
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.section--main {
+  &:not(:last-of-type) {
+    @include spacing(4, margin-bottom);
+    position: relative;
+
+    &:after {
+      @include spacing(-2.2, bottom);
+      position: absolute;
+      width: 100%;
+      border-bottom: 1px solid $cs-grey;
+      content: '';
+    }
+  }
+}
+
+.section--sub {
+  &:not(:last-of-type) {
+    @include spacing(2, margin-bottom);
+  }
+}
+
+
+
+/*------------------------------------*\
+  $COLOR-SHEME
+\*------------------------------------*/
+
+.cs__colors {
+  li {
+    @include spacing(0.5, padding);
+  }
+}
+
+/**
+ * Basic colors
+ */
+// cs-x
+.cs__cs-a {
+  background: $cs-a;
+  color: $cs-a-contrast;
+
+  &:after {
+    content: ': ' + $cs-a;
+  }
+}
+
+.cs__cs-b {
+  background: $cs-b;
+  color: $cs-b-contrast;
+
+  &:after {
+    content: ': ' + $cs-b;
+  }
+}
+
+.cs__cs-c {
+  background: $cs-c;
+  color: $cs-c-contrast;
+
+  &:after {
+    content: ': ' + $cs-c;
+  }
+}
+
+.cs__cs-d {
+  background: $cs-d;
+  color: $cs-d-contrast;
+
+  &:after {
+    content: ': ' + $cs-d;
+  }
+}
+
+.cs__cs-e {
+  background: $cs-e;
+  color: $cs-e-contrast;
+
+  &:after {
+    content: ': ' + $cs-e;
+  }
+}
+
+// cs-x-contrast
+.cs__cs-a-contrast {
+  background: $cs-a-contrast;
+  color: $cs-a;
+
+  &:after {
+    content: ': ' + $cs-a-contrast;
+  }
+}
+
+.cs__cs-b-contrast {
+  background: $cs-b-contrast;
+  color: $cs-b;
+
+  &:after {
+    content: ': ' + $cs-b-contrast;
+  }
+}
+
+.cs__cs-c-contrast {
+  background: $cs-c-contrast;
+  color: $cs-c;
+
+  &:after {
+    content: ': ' + $cs-c-contrast;
+  }
+}
+
+.cs__cs-d-contrast {
+  background: $cs-d-contrast;
+  color: $cs-d;
+
+  &:after {
+    content: ': ' + $cs-d-contrast;
+  }
+}
+
+.cs__cs-e-contrast {
+  background: $cs-e-contrast;
+  color: $cs-e;
+
+  &:after {
+    content: ': ' + $cs-e-contrast;
+  }
+}
+
+/**
+ * Colors for alerts
+ */
+.cs__cs-positive {
+  background: $cs-positive;
+  color: #fff;
+
+  &:after {
+    content: ': ' + $cs-positive;
+  }
+}
+
+.cs__cs-neutral {
+  background: $cs-neutral;
+  color: #fff;
+
+  &:after {
+    content: ': ' + $cs-neutral;
+  }
+}
+
+.cs__cs-cautious {
+  background: $cs-cautious;
+  color: #fff;
+
+  &:after {
+    content: ': ' + $cs-cautious;
+  }
+}
+
+.cs__cs-negative {
+  background: $cs-negative;
+  color: #fff;
+
+  &:after {
+    content: ': ' + $cs-negative;
+  }
+}
+
+/**
+ * 3 Shades of Grey
+ */
+// cs-x
+.cs__cs-grey {
+  background: $cs-grey;
+  color: #444;
+
+  &:after {
+    content: ': ' + $cs-grey;
+  }
+}
+
+.cs__cs-grey-dark {
+  background: $cs-grey-dark;
+  color: #fff;
+
+  &:after {
+    content: ': ' + $cs-grey-dark;
+  }
+}
+
+.cs__cs-grey-light {
+  background: $cs-grey-light;
+  color: #444;
+
+  &:after {
+    content: ': ' + $cs-grey-light;
+  }
+}
+
+
+
+/*------------------------------------*\
+  $TYPOGRAPHY
+\*------------------------------------*/
+/**
+ * Font-sizes
+ */
+.typo__font-size-xs {
+  @include font-size($font-size-xs);
+}
+
+.typo__font-size-s {
+  @include font-size($font-size-s);
+}
+
+.typo__font-size-m {
+  @include font-size($font-size-m);
+}
+
+.typo__font-size-l {
+  @include font-size($font-size-l);
+}
+
+.typo__font-size-xl {
+  @include font-size($font-size-xl);
+}
+
+.typo__font-size-xxl {
+  @include font-size($font-size-xxl);
+}
+
+.typo__font-size-xxxl {
+  @include font-size($font-size-xxxl);
+}
+
+/**
+ * Primary font
+ */
+.typo__font-a {
+  &:before {
+    display: block;
+    font-weight: $font-a-weight-bold;
+    content: '$font-a-family: ' + $font-a-family;
+  }
+}
+
+/**
+ * Secondary font
+ */
+.typo__font-b {
+  font-family: $font-b-family;
+
+  &:before {
+    display: block;
+    font-weight: $font-b-weight-bold;
+    content: '$font-b-family: ' + $font-b-family;
+  }
+}
+
+
+
+/*------------------------------------*\
+  $BREAKPOINTS
+\*------------------------------------*/
+
+.bp__breakpoint-s {
+  &:after {
+    content: ': ' + $breakpoint-s;
+  }
+}
+
+.bp__breakpoint-m {
+  &:after {
+    content: ': ' + $breakpoint-m;
+  }
+}
+
+.bp__breakpoint-l {
+  &:after {
+    content: ': ' + $breakpoint-l;
+  }
+}
+
+.bp__breakpoint-xl {
+  &:after {
+    content: ': ' + $breakpoint-xl;
+  }
+}
+
+.bp__breakpoint-s-max {
+  &:after {
+    content: ': ' + $breakpoint-s-max;
+  }
+}
+
+.bp__breakpoint-m-max {
+  &:after {
+    content: ': ' + $breakpoint-m-max;
+  }
+}
+
+.bp__breakpoint-l-max {
+  &:after {
+    content: ': ' + $breakpoint-l-max;
+  }
+}
+
+.bp__breakpoint-xl-max {
+  &:after {
+    content: ': ' + $breakpoint-xl-max;
+  }
+}
+
+
+
+/*------------------------------------*\
+  $SPACING
+\*------------------------------------*/
+/**
+ * Vertical rhythm
+ */
+.sp__spacing-vertical-rhythm {
+  &:after {
+    content: ': ' + $spacing-vertical-rhythm;
+  }
+}
+
+/**
+ * Basic spacing
+ */
+.sp__spacing-xs {
+  &:after {
+    content: ': ' + $spacing-xs;
+  }
+}
+
+.sp__spacing-s {
+  &:after {
+    content: ': ' + $spacing-s;
+  }
+}
+
+.sp__spacing-m {
+  &:after {
+    content: ': ' + $spacing-m;
+  }
+}
+
+.sp__spacing-l {
+  &:after {
+    content: ': ' + $spacing-l;
+  }
+}
+
+.sp__spacing-xl {
+  &:after {
+    content: ': ' + $spacing-xl;
+  }
+}
+
+.sp__spacing-xxl {
+  &:after {
+    content: ': ' + $spacing-xxl;
+  }
+}
+
+.sp__spacing-xxxl {
+  &:after {
+    content: ': ' + $spacing-xxxl;
+  }
+}
+
+
+
+/*------------------------------------*\
+  $LAYOUT
+\*------------------------------------*/
+
+.ly__layout-max-width {
+  &:after {
+    content: ': ' + $layout-max-width;
+  }
+}
+
+
+
+/*------------------------------------*\
+  $UTILITIES
+\*------------------------------------*/
+
+.ut {
+  .button {
+    @include spacing(1, margin-bottom);
+  }
+}

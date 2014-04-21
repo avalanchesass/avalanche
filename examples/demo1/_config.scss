@@ -21,19 +21,19 @@
  * Basic colors
  * Fancy generator: https://kuler.adobe.com
  */
-$cs-a: #242625;
+$cs-a: #16193B;
 $cs-a-contrast: #fff;
 
-$cs-b: #3C3F46;
+$cs-b: #35478C;
 $cs-b-contrast: #fff;
 
-$cs-c: #585F67;
+$cs-c: #4E7AC7;
 $cs-c-contrast: #fff;
 
-$cs-d: #717274;
+$cs-d: #7FB2F0;
 $cs-d-contrast: #fff;
 
-$cs-e: #E9E7EA;
+$cs-e: #ADD5F7;
 $cs-e-contrast: #fff;
 
 /**
@@ -41,7 +41,7 @@ $cs-e-contrast: #fff;
  * e.g. success, error, info
  */
 $cs-positive: #468847;
-$cs-neutral:  #3A87AD;
+$cs-neutral: #3A87AD;
 $cs-cautious: #c09853;
 $cs-negative: #b94a48;
 
@@ -107,17 +107,17 @@ $font-a-weight-ultra-bold:  900;
 /**
  * Secondary font
  */
-$font-b-family: $font-a-family;
+$font-b-family: 'Roboto Slab', serif;
 
 $font-b-weight-thin:        100;
-$font-b-weight-extra-light: 200;
+$font-b-weight-extra-light: 100;
 $font-b-weight-light:       300;
 $font-b-weight-normal:      400;
-$font-b-weight-medium:      500;
-$font-b-weight-semi-bold:   600;
+$font-b-weight-medium:      400;
+$font-b-weight-semi-bold:   700;
 $font-b-weight-bold:        700;
-$font-b-weight-extra-bold:  800;
-$font-b-weight-ultra-bold:  900;
+$font-b-weight-extra-bold:  700;
+$font-b-weight-ultra-bold:  700;
 
 /**
  * Anchors
@@ -179,7 +179,7 @@ $spacing-xxxl: 5em;
   $LAYOUT
 \*------------------------------------*/
 
-$layout-max-width: 42em;
+$layout-max-width: 52em;
 
 
 
@@ -187,18 +187,13 @@ $layout-max-width: 42em;
   $UTILITIES
 \*------------------------------------*/
 /**
- * Clearfix
- */
-$u-clearfix: true;
-
-/**
  * Grid
  */
 $u-grid: true;
 
 $u-grid-item-count: 12;
 
-// sizes
+// Sizes
 $u-grid-size-s:  true;
 $u-grid-size-m:  true;
 $u-grid-size-l:  true;
@@ -215,18 +210,18 @@ $u-grid-spacing-xl: $spacing-m;
  */
 $u-button: true;
 
-// sizes
+// Sizes
 $u-button-size-s:    true;
 $u-button-size-l:    true;
 $u-button-size-xl:   true;
 $u-button-size-full: true;
 
-// font sizes
+// Font sizes
 $u-button-font-size-s:  true;
 $u-button-font-size-l:  true;
 $u-button-font-size-xl: true;
 
-// functions
+// Functions
 $u-button-function-positive: true;
 $u-button-function-neutral:  true;
 $u-button-function-cautious: true;
@@ -244,15 +239,13 @@ $u-menu: true;
  */
 $u-island: true;
 
-// functions
+// Functions
 $u-island-function-positive: true;
 $u-island-function-neutral:  true;
 $u-island-function-cautious: true;
 $u-island-function-negative: true;
-$u-island-function-inactive: true;
-$u-island-function-disabled: true;
 
-// cs
+// Color Sheme
 $u-island-cs-a: true;
 $u-island-cs-b: true;
 $u-island-cs-c: true;
@@ -270,4 +263,4 @@ $u-media: true;
   $SCAFFOLDING
 \*------------------------------------*/
 
-@import '../src/system/scaffolding';
+@import '../../src/system/scaffolding';

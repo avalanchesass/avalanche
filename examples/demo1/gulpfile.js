@@ -27,7 +27,7 @@ gulp.task('clean', function () {
 gulp.task('watch', function () {
   // Watch .scss files
   gulp.watch('*.scss', ['styles']);
-  gulp.watch('../src/*.scss', ['styles']);
+  gulp.watch('../../src/**/*.scss', ['styles']);
 });
 
 // Default task

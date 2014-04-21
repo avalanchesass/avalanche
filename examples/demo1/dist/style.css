@@ -77,9 +77,6 @@
   $UTILITIES
 \*------------------------------------*/
 /**
- * Clearfix
- */
-/**
  * Grid
  */
 /**
@@ -376,6 +373,21 @@ html {
 }
 
 /*------------------------------------*\
+  LIST
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * UNSTYLED............
+ */
+/*------------------------------------*\
+  $UNSTYLED
+\*------------------------------------*/
+.list--unstyled {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+/*------------------------------------*\
   LAYOUT
 \*------------------------------------*/
 /**
@@ -388,7 +400,7 @@ html {
 .container {
   margin: 0 auto;
   padding: 0 1em;
-  max-width: 42em;
+  max-width: 52em;
 }
 
 /*------------------------------------*\
@@ -465,13 +477,13 @@ textarea {
  * Customize the background color to match your design.
  */
 ::-moz-selection {
-  background: #242625;
+  background: #16193b;
   color: white;
   text-shadow: none;
 }
 
 ::selection {
-  background: #242625;
+  background: #16193b;
   color: white;
   text-shadow: none;
 }
@@ -496,9 +508,9 @@ textarea {
  * Reset margin on headlines
  */
 h1, h2, h3, h4 {
-  color: #242625;
+  color: #16193b;
   font-weight: 700;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Roboto Slab", serif;
 }
 
 h1 {
@@ -540,22 +552,22 @@ h6 {
  * <span class="a">readmore...</span>
  */
 a, .a {
-  color: #242625;
+  color: #16193b;
   text-decoration: underline;
 }
 a:visited, .a:visited {
-  color: #242625;
+  color: #16193b;
 }
 a:hover, a:focus, .a:hover, .a:focus {
-  color: #242625;
+  color: #16193b;
   text-decoration: none;
 }
 
 /**
- * Style text anchors like normal text on big screens
+ * Style tel anchors like normal text on big screens
  * (big screen most likely not mobile)
  */
-@media only screen and (min-width: 26.6666667em) {
+@media (min-width: 26.6666667em) {
   a[href^="tel"], a[href^="tel"]:hover, a[href^="tel"]:focus {
     color: #222222;
     text-decoration: none;
@@ -583,7 +595,6 @@ li ul, li ol, li dl {
  * no margin for nested tables
  */
 table table {
-  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -623,7 +634,7 @@ table table {
 /**
  * Styles for all devices
  */
-@media only screen and (max-width: 39.9444444em) {
+@media (max-width: 39.9444444em) {
   .grid {
     margin-left: -1em;
   }
@@ -636,7 +647,7 @@ table table {
   box-sizing: border-box;
   width: 100%;
 }
-@media only screen and (max-width: 39.9444444em) {
+@media (max-width: 39.9444444em) {
   [class*="grid__item"] {
     padding-left: 1em;
   }
@@ -693,7 +704,7 @@ table table {
 /*------------------------------------*\
   $SMALL
 \*------------------------------------*/
-@media only screen and (min-width: 26.6666667em) {
+@media (min-width: 26.6666667em) {
   .grid__item--s--1 {
     width: 8.3333333%;
   }
@@ -745,7 +756,7 @@ table table {
 /*------------------------------------*\
   $MEDIUM
 \*------------------------------------*/
-@media only screen and (min-width: 40em) {
+@media (min-width: 40em) {
   .grid {
     margin-left: -1.25em;
   }
@@ -805,7 +816,7 @@ table table {
 /*------------------------------------*\
   $LARGE
 \*------------------------------------*/
-@media only screen and (min-width: 53.3333333em) {
+@media (min-width: 53.3333333em) {
   .grid {
     margin-left: -1.25em;
   }
@@ -865,7 +876,7 @@ table table {
 /*------------------------------------*\
   $XLARGE
 \*------------------------------------*/
-@media only screen and (min-width: 66.6666667em) {
+@media (min-width: 66.6666667em) {
   .grid {
     margin-left: -1.25em;
   }
@@ -941,7 +952,7 @@ table table {
   display: inline-block;
   margin: 0;
   border: none;
-  background: #242625;
+  background: #16193b;
   vertical-align: top;
   white-space: nowrap;
   font-size: 100%;
@@ -954,7 +965,7 @@ table table {
   text-decoration: none;
 }
 .button:hover, .button:focus, .button:active {
-  background: #656766;
+  background: #5b5e75;
 }
 
 /*------------------------------------*\
@@ -1111,7 +1122,7 @@ table table {
 /*------------------------------------*\
   $HORIZONTAL
 \*------------------------------------*/
-@media only screen and (min-width: 26.6666667em) {
+@media (min-width: 26.6666667em) {
   .menu--horizontal {
     /**
      * Dropdown
@@ -1173,6 +1184,7 @@ table table {
  */
 .island--positive {
   background: #dae7da;
+  color: #468847;
 }
 
 /**
@@ -1180,6 +1192,7 @@ table table {
  */
 .island--neutral {
   background: #d7e7ee;
+  color: #3a87ad;
 }
 
 /**
@@ -1187,6 +1200,7 @@ table table {
  */
 .island--cautious {
   background: #f2eadc;
+  color: #c09853;
 }
 
 /**
@@ -1194,6 +1208,7 @@ table table {
  */
 .island--negative {
   background: #f1dada;
+  color: #b94a48;
 }
 
 /*------------------------------------*\
@@ -1203,7 +1218,7 @@ table table {
  * cs-a
  */
 .island--cs-a {
-  background: #242625;
+  background: #16193b;
   color: white;
 }
 
@@ -1211,7 +1226,7 @@ table table {
  * cs-a
  */
 .island--cs-b {
-  background: #3c3f46;
+  background: #35478c;
   color: white;
 }
 
@@ -1219,7 +1234,7 @@ table table {
  * cs-a
  */
 .island--cs-c {
-  background: #585f67;
+  background: #4e7ac7;
   color: white;
 }
 
@@ -1227,7 +1242,7 @@ table table {
  * cs-a
  */
 .island--cs-d {
-  background: #717274;
+  background: #7fb2f0;
   color: white;
 }
 
@@ -1235,7 +1250,7 @@ table table {
  * cs-a
  */
 .island--cs-e {
-  background: #e9e7ea;
+  background: #add5f7;
   color: white;
 }
 
@@ -1270,7 +1285,7 @@ table table {
 /**
  * Reset media styling on small screens
  */
-@media only screen and (max-width: 39.9444444em) {
+@media (max-width: 39.9444444em) {
   .media--mobile-reset .media__img {
     float: none;
     margin-right: 0;
@@ -1302,137 +1317,360 @@ table table {
   overflow: hidden;
 }
 
-.container {
-  margin: 0 auto;
-  padding: 0 2em;
-  max-width: 42em;
-}
-
-pre[class*="language-"] {
-  padding: 13.5px;
-  padding: 0.75rem;
-}
-
 /*------------------------------------*\
-  $STYLE
+  STYLE
 \*------------------------------------*/
+/**
+ * CONTENTS
+ * GENERAL.............
+ * COLOR-SHEME.........
+ * TYPOGRAPHY..........
+ * BREAKPOINTS.........
+ * SPACING.............
+ * LAYOUT..............
+ * UTILITIES...........
+ */
 /*------------------------------------*\
   $GENERAL
 \*------------------------------------*/
-.bg-wrap {
-  background: white url(http://basehold.it/i/27);
+html {
+  background: transparent;
 }
 
-.block-spacing {
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem;
+.container {
+  padding-top: 54px;
+  padding-top: 3rem;
+  padding-bottom: 54px;
+  padding-bottom: 3rem;
 }
 
-/**
- * Island
- */
-.island {
-  border-left: 5px solid #cccccc;
+.section > :last-child {
+  margin-bottom: 0;
 }
 
-.island--cautious {
-  border-left-color: #c09853;
-}
-
-/**
- * Sections
- */
-.sg-section:not(:last-of-type) {
-  margin-bottom: 81px;
-  margin-bottom: 4.5rem;
-  padding-bottom: 81px;
-  padding-bottom: 4.5rem;
+.section--main:not(:last-of-type) {
+  margin-bottom: 108px;
+  margin-bottom: 6rem;
   position: relative;
 }
-.sg-section:not(:last-of-type):after {
+.section--main:not(:last-of-type):after {
+  bottom: -59.4px;
+  bottom: -3.3rem;
   position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
   border-bottom: 1px solid #cccccc;
   content: '';
 }
-.sg-section .sg-section:not(:last-of-type) {
+
+.section--sub:not(:last-of-type) {
   margin-bottom: 54px;
   margin-bottom: 3rem;
-  padding-bottom: 0;
 }
-.sg-section .sg-section:not(:last-of-type):after {
-  display: none;
+
+/*------------------------------------*\
+  $COLOR-SHEME
+\*------------------------------------*/
+.cs__colors li {
+  padding: 13.5px;
+  padding: 0.75rem;
 }
 
 /**
- * Examples
+ * Basic colors
  */
-.island--example {
-  padding-top: 54px;
-  padding-top: 3rem;
-  position: relative;
+.cs__cs-a {
+  background: #16193b;
+  color: white;
 }
-.island--example:before {
-  top: 27px;
-  top: 1.5rem;
-  left: 27px;
-  left: 1.5rem;
-  position: absolute;
-  content: 'EXAMPLE';
-  color: #a6a6a6;
-  font-weight: 700;
+.cs__cs-a:after {
+  content: ": #16193b";
+}
+
+.cs__cs-b {
+  background: #35478c;
+  color: white;
+}
+.cs__cs-b:after {
+  content: ": #35478c";
+}
+
+.cs__cs-c {
+  background: #4e7ac7;
+  color: white;
+}
+.cs__cs-c:after {
+  content: ": #4e7ac7";
+}
+
+.cs__cs-d {
+  background: #7fb2f0;
+  color: white;
+}
+.cs__cs-d:after {
+  content: ": #7fb2f0";
+}
+
+.cs__cs-e {
+  background: #add5f7;
+  color: white;
+}
+.cs__cs-e:after {
+  content: ": #add5f7";
+}
+
+.cs__cs-a-contrast {
+  background: white;
+  color: #16193b;
+}
+.cs__cs-a-contrast:after {
+  content: ": white";
+}
+
+.cs__cs-b-contrast {
+  background: white;
+  color: #35478c;
+}
+.cs__cs-b-contrast:after {
+  content: ": white";
+}
+
+.cs__cs-c-contrast {
+  background: white;
+  color: #4e7ac7;
+}
+.cs__cs-c-contrast:after {
+  content: ": white";
+}
+
+.cs__cs-d-contrast {
+  background: white;
+  color: #7fb2f0;
+}
+.cs__cs-d-contrast:after {
+  content: ": white";
+}
+
+.cs__cs-e-contrast {
+  background: white;
+  color: #add5f7;
+}
+.cs__cs-e-contrast:after {
+  content: ": white";
+}
+
+/**
+ * Colors for alerts
+ */
+.cs__cs-positive {
+  background: #468847;
+  color: #fff;
+}
+.cs__cs-positive:after {
+  content: ": #468847";
+}
+
+.cs__cs-neutral {
+  background: #3a87ad;
+  color: #fff;
+}
+.cs__cs-neutral:after {
+  content: ": #3a87ad";
+}
+
+.cs__cs-cautious {
+  background: #c09853;
+  color: #fff;
+}
+.cs__cs-cautious:after {
+  content: ": #c09853";
+}
+
+.cs__cs-negative {
+  background: #b94a48;
+  color: #fff;
+}
+.cs__cs-negative:after {
+  content: ": #b94a48";
+}
+
+/**
+ * 3 Shades of Grey
+ */
+.cs__cs-grey {
+  background: #cccccc;
+  color: #444;
+}
+.cs__cs-grey:after {
+  content: ": #cccccc";
+}
+
+.cs__cs-grey-dark {
+  background: #a6a6a6;
+  color: #fff;
+}
+.cs__cs-grey-dark:after {
+  content: ": #a6a6a6";
+}
+
+.cs__cs-grey-light {
+  background: #f2f2f2;
+  color: #444;
+}
+.cs__cs-grey-light:after {
+  content: ": #f2f2f2";
+}
+
+/*------------------------------------*\
+  $TYPOGRAPHY
+\*------------------------------------*/
+/**
+ * Font-sizes
+ */
+.typo__font-size-xs {
+  font-size: 0.75em;
+  line-height: 2;
+}
+
+.typo__font-size-s {
+  font-size: 0.85em;
+  line-height: 1.7647059;
+}
+
+.typo__font-size-m {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.typo__font-size-l {
+  font-size: 1.25em;
+  line-height: 1.2;
+}
+
+.typo__font-size-xl {
+  font-size: 1.5em;
   line-height: 1;
 }
 
+.typo__font-size-xxl {
+  font-size: 1.875em;
+  line-height: 1.6;
+}
+
+.typo__font-size-xxxl {
+  font-size: 2.25em;
+  line-height: 1.3333333;
+}
+
+/**
+ * Primary font
+ */
+.typo__font-a:before {
+  display: block;
+  font-weight: 700;
+  content: '$font-a-family: "Helvetica Neue", sans-serif';
+}
+
+/**
+ * Secondary font
+ */
+.typo__font-b {
+  font-family: "Roboto Slab", serif;
+}
+.typo__font-b:before {
+  display: block;
+  font-weight: 700;
+  content: '$font-b-family: "Roboto Slab", serif';
+}
+
 /*------------------------------------*\
-  $HEADER
+  $BREAKPOINTS
 \*------------------------------------*/
-.header--main {
-  position: relative;
-  z-index: -1;
-  display: table;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  height: 2160px;
-  background: #242625;
-  text-align: center;
+.bp__breakpoint-s:after {
+  content: ": 480px";
 }
 
-.logo--main {
-  display: table-cell;
-  vertical-align: middle;
+.bp__breakpoint-m:after {
+  content: ": 720px";
 }
 
-.logo--main__img {
-  width: 80%;
+.bp__breakpoint-l:after {
+  content: ": 960px";
+}
+
+.bp__breakpoint-xl:after {
+  content: ": 1200px";
+}
+
+.bp__breakpoint-s-max:after {
+  content: ": 479px";
+}
+
+.bp__breakpoint-m-max:after {
+  content: ": 719px";
+}
+
+.bp__breakpoint-l-max:after {
+  content: ": 959px";
+}
+
+.bp__breakpoint-xl-max:after {
+  content: ": 1199px";
 }
 
 /*------------------------------------*\
-  $UTILITY
+  $SPACING
 \*------------------------------------*/
 /**
- * Grid
+ * Vertical rhythm
  */
-.sg-utility__grid .grid__inner {
-  padding: 13.5px;
-  padding: 0.75rem;
-  position: relative;
-  z-index: 0;
-  background: #cccccc;
+.sp__spacing-vertical-rhythm:after {
+  content: ": true";
 }
-.sg-utility__grid .grid__inner:after {
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  border: 1px solid #a6a6a6;
-  content: '';
+
+/**
+ * Basic spacing
+ */
+.sp__spacing-xs:after {
+  content: ": 0.5em";
+}
+
+.sp__spacing-s:after {
+  content: ": 1em";
+}
+
+.sp__spacing-m:after {
+  content: ": 1.25em";
+}
+
+.sp__spacing-l:after {
+  content: ": 2em";
+}
+
+.sp__spacing-xl:after {
+  content: ": 3em";
+}
+
+.sp__spacing-xxl:after {
+  content: ": 4em";
+}
+
+.sp__spacing-xxxl:after {
+  content: ": 5em";
+}
+
+/*------------------------------------*\
+  $LAYOUT
+\*------------------------------------*/
+.ly__layout-max-width:after {
+  content: ": 52em";
+}
+
+/*------------------------------------*\
+  $UTILITIES
+\*------------------------------------*/
+.ut .button {
+  margin-bottom: 27px;
+  margin-bottom: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
