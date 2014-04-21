@@ -41,6 +41,7 @@
    */
   .island--positive {
     background: mix($cs-positive, #fff, 20%);
+    color: $cs-positive;
   }
 }
 
@@ -50,6 +51,7 @@
    */
   .island--neutral {
     background: mix($cs-neutral, #fff, 20%);
+    color: $cs-neutral;
   }
 }
 
@@ -59,6 +61,7 @@
    */
   .island--cautious {
     background: mix($cs-cautious, #fff, 20%);
+    color: $cs-cautious;
   }
 }
 
@@ -68,6 +71,7 @@
    */
   .island--negative {
     background: mix($cs-negative, #fff, 20%);
+    color: $cs-negative;
   }
 }
 
