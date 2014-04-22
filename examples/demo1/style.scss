@@ -20,10 +20,6 @@
   $GENERAL
 \*------------------------------------*/
 
-html {
-  background: transparent;
-}
-
 .container {
   @include spacing(2, padding-top);
   @include spacing(2, padding-bottom);

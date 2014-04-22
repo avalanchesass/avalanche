@@ -208,13 +208,14 @@ $spacing-magic-ratio:   strip-units($font-base-line-height / $font-base-size);
 
 
 
-/*------------------------------------*\
-  $DEBUG
-\*------------------------------------*/
+@if $spacing-vertical-rhythm-debug {
+  /*------------------------------------*\
+    $DEBUG
+  \*------------------------------------*/
 
-// if debug
-$spacing-baseline-size: strip-units($spacing-magic-number);
-html {
-  background-image: url(http://basehold.it/i/#{$spacing-baseline-size});
+  $spacing-baseline-size: strip-units($spacing-magic-number);
+
+  html {
+    background-image: url(http://basehold.it/i/#{$spacing-baseline-size});
+  }
 }
-// endif

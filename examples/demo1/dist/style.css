@@ -1333,10 +1333,6 @@ table table {
 /*------------------------------------*\
   $GENERAL
 \*------------------------------------*/
-html {
-  background: transparent;
-}
-
 .container {
   padding-top: 54px;
   padding-top: 3rem;
