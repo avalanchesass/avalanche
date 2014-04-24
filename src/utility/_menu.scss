@@ -46,7 +46,7 @@
   $HORIZONTAL
 \*------------------------------------*/
 
-@include breakpoint-min($breakpoint-s) {
+@media (min-width: $breakpoint-s) {
   .menu--horizontal {
     .menu__item--level1 {
       display: inline-block;

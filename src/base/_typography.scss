@@ -94,7 +94,7 @@ a, .a {
  * Style tel anchors like normal text on big screens
  * (big screen most likely not mobile)
  */
-@include breakpoint-min($breakpoint-s) {
+@media (min-width: $breakpoint-s) {
   a[href^="tel"] {
     &,
     &:hover,

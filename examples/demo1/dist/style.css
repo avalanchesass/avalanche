@@ -133,24 +133,6 @@
  * based on $font-base-size
  */
 /*------------------------------------*\
-  BREAKPOINT
-\*------------------------------------*/
-/**
- * CONTENTS
- * BREAKPOINT-MIN......
- * BREAKPOINT-MAX......
- * BREAKPOINT-BETWEEN..
- */
-/*------------------------------------*\
-  $BREAKPOINT-MIN
-\*------------------------------------*/
-/*------------------------------------*\
-  $BREAKPOINT-MAX
-\*------------------------------------*/
-/*------------------------------------*\
-  $BREAKPOINT-BETWEEN
-\*------------------------------------*/
-/*------------------------------------*\
   $BASE
 \*------------------------------------*/
 /*------------------------------------*\
@@ -567,7 +549,7 @@ a:hover, a:focus, .a:hover, .a:focus {
  * Style tel anchors like normal text on big screens
  * (big screen most likely not mobile)
  */
-@media (min-width: 26.6666667em) {
+@media (min-width: 480px) {
   a[href^="tel"], a[href^="tel"]:hover, a[href^="tel"]:focus {
     color: #222222;
     text-decoration: none;
@@ -634,7 +616,7 @@ table table {
 /**
  * Styles for all devices
  */
-@media (max-width: 39.9444444em) {
+@media (max-width: 719px) {
   .grid {
     margin-left: -1em;
   }
@@ -647,7 +629,7 @@ table table {
   box-sizing: border-box;
   width: 100%;
 }
-@media (max-width: 39.9444444em) {
+@media (max-width: 719px) {
   [class*="grid__item"] {
     padding-left: 1em;
   }
@@ -704,7 +686,7 @@ table table {
 /*------------------------------------*\
   $SMALL
 \*------------------------------------*/
-@media (min-width: 26.6666667em) {
+@media (min-width: 480px) {
   .grid__item--s--1 {
     width: 8.3333333%;
   }
@@ -756,7 +738,7 @@ table table {
 /*------------------------------------*\
   $MEDIUM
 \*------------------------------------*/
-@media (min-width: 40em) {
+@media (min-width: 720px) {
   .grid {
     margin-left: -1.25em;
   }
@@ -816,7 +798,7 @@ table table {
 /*------------------------------------*\
   $LARGE
 \*------------------------------------*/
-@media (min-width: 53.3333333em) {
+@media (min-width: 960px) {
   .grid {
     margin-left: -1.25em;
   }
@@ -876,7 +858,7 @@ table table {
 /*------------------------------------*\
   $XLARGE
 \*------------------------------------*/
-@media (min-width: 66.6666667em) {
+@media (min-width: 1200px) {
   .grid {
     margin-left: -1.25em;
   }
@@ -1122,7 +1104,7 @@ table table {
 /*------------------------------------*\
   $HORIZONTAL
 \*------------------------------------*/
-@media (min-width: 26.6666667em) {
+@media (min-width: 480px) {
   .menu--horizontal {
     /**
      * Dropdown
@@ -1285,7 +1267,7 @@ table table {
 /**
  * Reset media styling on small screens
  */
-@media (max-width: 39.9444444em) {
+@media (max-width: 719px) {
   .media--mobile-reset .media__img {
     float: none;
     margin-right: 0;

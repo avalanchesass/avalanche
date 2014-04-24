@@ -39,7 +39,7 @@
 /**
  * Reset media styling on small screens
  */
-@include breakpoint-max($breakpoint-m-max) {
+@media (max-width: $breakpoint-m-max) {
   .media--mobile-reset {
     .media__img {
       float: none;
