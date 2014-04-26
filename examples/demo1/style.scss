@@ -420,8 +420,85 @@
   $UTILITIES
 \*------------------------------------*/
 
-.ut {
+.ut__sizes,
+.ut__font-sizes,
+.ut__functions {
   .button {
     @include spacing(1, margin-bottom);
+  }
+}
+
+/**
+ * Menu
+ */
+$u-menu-accent-color: mix($cs-a, #fff, 80%);
+
+.menu__controls {
+  box-sizing: border-box;
+  padding: $spacing-xs;
+  background: $cs-a;
+}
+
+.menu__toggle {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  background: $u-menu-accent-color;
+}
+
+.menu__list--level1 {
+  background: $cs-a;
+}
+
+.menu__link {
+  padding: $spacing-xs em2rem($spacing-s);
+  transition: background 0.3s;
+
+  &,
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    color: $cs-a-contrast;
+  }
+  &:hover {
+    background: $u-menu-accent-color;
+  }
+}
+.menu__list--level2 .menu__link {
+  padding-top: $spacing-xs / 2;
+  padding-bottom: $spacing-xs / 2;
+  font-size: $font-size-s;
+}
+.menu__list--level3 .menu__link {
+  padding-left: em2rem($spacing-l);
+}
+
+.menu__link--level1 {
+  border: 1px solid $u-menu-accent-color;
+  border-right-width: 0;
+  border-left-width: 0;
+}
+.menu__item:not(:last-of-type) .menu__link--level1 {
+  border-bottom-width: 0;
+}
+
+.menu--horizontal {
+  @media (min-width: $breakpoint-m) {
+    .menu__link--level1 {
+      border-top-width: 0;
+      border-bottom-width: 0;
+    }
+    .menu__item:not(:last-of-type) .menu__link--level1 {
+      border-right-width: 1px;
+    }
+
+    .menu__list--level1 .menu__list {
+      width: 10em;
+      background: $cs-a;
+    }
+
+    .menu__list--level3 .menu__link {
+      padding-left: em2rem($spacing-s);
+    }
   }
 }

@@ -114,6 +114,7 @@
  * STRIP-UNITS.........
  * PIXEL2EM............
  * EM2PIXEL............
+ * EM2REM..............
  */
 /*------------------------------------*\
   $STRIP-UNITS
@@ -133,6 +134,12 @@
  * based on $font-base-size
  */
 /*------------------------------------*\
+  $EM2REM
+\*------------------------------------*/
+/**
+ * Convert a em value to rem
+ */
+/*------------------------------------*\
   $BASE
 \*------------------------------------*/
 /*------------------------------------*\
@@ -141,14 +148,14 @@
 /**
  * Contain floats
  */
-.clearfix, .grid, .island, .media {
+.clearfix, .grid, .menu--horizontal .menu__list--level1, .island, .media {
   *zoom: 1;
 }
-.clearfix:before, .grid:before, .island:before, .media:before, .clearfix:after, .grid:after, .island:after, .media:after {
+.clearfix:before, .grid:before, .menu--horizontal .menu__list--level1:before, .island:before, .media:before, .clearfix:after, .grid:after, .menu--horizontal .menu__list--level1:after, .island:after, .media:after {
   display: table;
   content: ' ';
 }
-.clearfix:after, .grid:after, .island:after, .media:after {
+.clearfix:after, .grid:after, .menu--horizontal .menu__list--level1:after, .island:after, .media:after {
   clear: both;
 }
 
@@ -364,7 +371,7 @@ html {
 /*------------------------------------*\
   $UNSTYLED
 \*------------------------------------*/
-.list--unstyled {
+.list--unstyled, .menu__list {
   padding-left: 0;
   list-style-type: none;
 }
@@ -1074,68 +1081,125 @@ table table {
 /**
  * CONTENTS
  * DEFAULT.............
- * MOBILE..............
+ * OFF CANVAS..........
  * HORIZONTAL..........
+ * VERTICAL............
  */
 /*------------------------------------*\
   $DEFAULT
 \*------------------------------------*/
-.menu {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+/**
+ * 1. Set position root for off canvas menu
+ * 2. Set position root for sub menus (dropdowns)
+ */
+html {
+  position: relative;
+  /* [1] */
+}
+
+.menu__list {
+  margin-bottom: 0;
+}
+
+.menu__list--level1 {
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
 }
 
 .menu__item {
   position: relative;
+  /* [2] */
 }
 
 .menu__link {
+  display: block;
   text-decoration: none;
 }
 
-.nolink {
-  cursor: default;
+.menu__checkbox {
+  display: none;
+}
+
+@media (min-width: 720px) {
+  .menu__controls {
+    display: none;
+  }
 }
 
 /*------------------------------------*\
-  $MOBILE
+  $OFF CANVAS
 \*------------------------------------*/
+.menu--off-canvas .menu__controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+}
+.menu--off-canvas .menu__list--level1 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: 3em;
+  max-width: 20em;
+  width: 70%;
+  -webkit-transform: translate(-100%, 0);
+  -ms-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
+}
+.menu--off-canvas .menu__checkbox:checked + .menu__list--level1 {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
 /*------------------------------------*\
   $HORIZONTAL
 \*------------------------------------*/
-@media (min-width: 480px) {
-  .menu--horizontal {
-    /**
-     * Dropdown
-     */
+@media (max-width: 719px) {
+  .menu--horizontal .menu__list--level1 {
+    height: 0;
+    -webkit-transform: scale(1, 0);
+    -ms-transform: scale(1, 0);
+    transform: scale(1, 0);
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
   }
-  .menu--horizontal .menu__item--level1 {
-    display: inline-block;
-  }
-  .menu--horizontal .menu__item--expanded:hover > .menu,
-  .menu--horizontal .menu__item--expanded a:focus + .menu,
-  .menu--horizontal .menu__item--expanded a:active + .menu,
-  .menu--horizontal .menu__item--expanded .menu__link--touched + .menu {
-    opacity: 1;
-  }
-  .menu--horizontal .menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1002;
-    float: left;
-    width: 8em;
-    background-clip: padding-box;
-    opacity: 0;
-    -webkit-transition: opacity, 0.1s;
-    transition: opacity, 0.1s;
-  }
-  .menu--horizontal .menu .menu {
-    top: 0;
-    left: 8em;
+  .menu--horizontal .menu__checkbox:checked + .menu__list--level1 {
+    height: auto;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
   }
 }
+@media (min-width: 720px) {
+  .menu--horizontal .menu__list--level1 .menu__list {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+  }
+  .menu--horizontal .menu__list--level1 .menu__list .menu__list {
+    top: 0;
+    left: 100%;
+  }
+  .menu--horizontal .menu__item:hover > .menu__list,
+  .menu--horizontal .menu__item:focus > .menu__list {
+    visibility: visible;
+    opacity: 1;
+  }
+  .menu--horizontal .menu__item--level1 {
+    float: left;
+  }
+}
+
+/*------------------------------------*\
+  $VERTICAL
+\*------------------------------------*/
 /*------------------------------------*\
   ISLAND
 \*------------------------------------*/
@@ -1646,9 +1710,81 @@ table table {
 /*------------------------------------*\
   $UTILITIES
 \*------------------------------------*/
-.ut .button {
+.ut__sizes .button,
+.ut__font-sizes .button,
+.ut__functions .button {
   margin-bottom: 27px;
   margin-bottom: 1.5rem;
+}
+
+/**
+ * Menu
+ */
+.menu__controls {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.5em;
+  background: #16193b;
+}
+
+.menu__toggle {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  background: #444662;
+}
+
+.menu__list--level1 {
+  background: #16193b;
+}
+
+.menu__link {
+  padding: 0.5em 1rem;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+.menu__link, .menu__link:hover, .menu__link:focus, .menu__link:active, .menu__link:visited {
+  color: white;
+}
+.menu__link:hover {
+  background: #444662;
+}
+
+.menu__list--level2 .menu__link {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  font-size: 0.85em;
+}
+
+.menu__list--level3 .menu__link {
+  padding-left: 2rem;
+}
+
+.menu__link--level1 {
+  border: 1px solid #444662;
+  border-right-width: 0;
+  border-left-width: 0;
+}
+
+.menu__item:not(:last-of-type) .menu__link--level1 {
+  border-bottom-width: 0;
+}
+
+@media (min-width: 720px) {
+  .menu--horizontal .menu__link--level1 {
+    border-top-width: 0;
+    border-bottom-width: 0;
+  }
+  .menu--horizontal .menu__item:not(:last-of-type) .menu__link--level1 {
+    border-right-width: 1px;
+  }
+  .menu--horizontal .menu__list--level1 .menu__list {
+    width: 10em;
+    background: #16193b;
+  }
+  .menu--horizontal .menu__list--level3 .menu__link {
+    padding-left: 1rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
