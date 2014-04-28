@@ -21,8 +21,8 @@
 \*------------------------------------*/
 
 .container {
-  @include spacing(2, padding-top);
-  @include spacing(2, padding-bottom);
+  padding-top: $spacing-m;
+  padding-bottom: $spacing-m;
 }
 
 .section {
@@ -33,22 +33,15 @@
 
 .section--main {
   &:not(:last-of-type) {
-    @include spacing(4, margin-bottom);
-    position: relative;
-
-    &:after {
-      @include spacing(-2.2, bottom);
-      position: absolute;
-      width: 100%;
-      border-bottom: 1px solid $cs-grey;
-      content: '';
-    }
+    margin-bottom: $spacing-xxl;
+    padding-bottom: $spacing-xxl;
+    border-bottom: 1px solid $cs-grey;
   }
 }
 
 .section--sub {
   &:not(:last-of-type) {
-    @include spacing(2, margin-bottom);
+    margin-bottom: $spacing-m;
   }
 }
 
@@ -60,7 +53,7 @@
 
 .cs__colors {
   li {
-    @include spacing(0.5, padding);
+    padding: $spacing-xs;
   }
 }
 
@@ -238,31 +231,31 @@
  * Font-sizes
  */
 .typo__font-size-xs {
-  @include font-size($font-size-xs);
+  font-size: $font-size-xs;
 }
 
 .typo__font-size-s {
-  @include font-size($font-size-s);
+  font-size: $font-size-s;
 }
 
 .typo__font-size-m {
-  @include font-size($font-size-m);
+  font-size: $font-size-m;
 }
 
 .typo__font-size-l {
-  @include font-size($font-size-l);
+  font-size: $font-size-l;
 }
 
 .typo__font-size-xl {
-  @include font-size($font-size-xl);
+  font-size: $font-size-xl;
 }
 
 .typo__font-size-xxl {
-  @include font-size($font-size-xxl);
+  font-size: $font-size-xxl;
 }
 
 .typo__font-size-xxxl {
-  @include font-size($font-size-xxxl);
+  font-size: $font-size-xxxl;
 }
 
 /**
@@ -349,15 +342,6 @@
   $SPACING
 \*------------------------------------*/
 /**
- * Vertical rhythm
- */
-.sp__spacing-vertical-rhythm {
-  &:after {
-    content: ': ' + $spacing-vertical-rhythm;
-  }
-}
-
-/**
  * Basic spacing
  */
 .sp__spacing-xs {
@@ -424,7 +408,7 @@
 .ut__font-sizes,
 .ut__functions {
   .button {
-    @include spacing(1, margin-bottom);
+    margin-bottom: $spacing-s;
   }
 }
 

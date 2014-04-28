@@ -18,12 +18,8 @@
 
 .island {
   @extend .clearfix;
-  @if $spacing-vertical-rhythm {
-    @include spacing(1, padding);
-  } @else {
-    padding: $spacing-m;
-  }
   display: block;
+  padding: $spacing-m;
   background: $cs-grey-light;
 
   & > :last-child { margin-bottom: 0; }

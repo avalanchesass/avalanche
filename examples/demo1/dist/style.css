@@ -65,9 +65,6 @@
   $SPACING
 \*------------------------------------*/
 /**
- * Vertical rhythm
- */
-/**
  * Basic spacing
  */
 /*------------------------------------*\
@@ -164,70 +161,38 @@
 \*------------------------------------*/
 /**
  * CONTENTS
- * VARIABLES...........
- * MIXINS..............
  * BOTTOM..............
  * INNER...............
- * DEBUG...............
  */
-/*------------------------------------*\
-  $VARIABLES
-\*------------------------------------*/
-/*------------------------------------*\
-  $MIXINS
-\*------------------------------------*/
-h1, h2, h3, h4, p,
-ul,
-ol,
-dl,
-pre,
-form,
-table,
-figure,
-address,
-fieldset,
-blockquote {
-  margin-top: 0;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem;
-}
-
 /*------------------------------------*\
   $BOTTOM
 \*------------------------------------*/
 .spacing--bottom--xs {
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5em;
 }
 
 .spacing--bottom--s {
-  margin-bottom: 54px;
-  margin-bottom: 3rem;
+  margin-bottom: 1em;
 }
 
 .spacing--bottom--m {
-  margin-bottom: 81px;
-  margin-bottom: 4.5rem;
+  margin-bottom: 1.25em;
 }
 
 .spacing--bottom--l {
-  margin-bottom: 108px;
-  margin-bottom: 6rem;
+  margin-bottom: 2em;
 }
 
 .spacing--bottom--xl {
-  margin-bottom: 135px;
-  margin-bottom: 7.5rem;
+  margin-bottom: 3em;
 }
 
 .spacing--bottom--xxl {
-  margin-bottom: 162px;
-  margin-bottom: 9rem;
+  margin-bottom: 4em;
 }
 
 .spacing--bottom--xxxl {
-  margin-bottom: 189px;
-  margin-bottom: 10.5rem;
+  margin-bottom: 5em;
 }
 
 .spacing--bottom--off {
@@ -238,127 +203,38 @@ blockquote {
   $INNER
 \*------------------------------------*/
 .spacing--inner--both--xs {
-  padding-top: 27px;
-  padding-top: 1.5rem;
-  padding-bottom: 27px;
-  padding-bottom: 1.5rem;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 .spacing--inner--both--s {
-  padding-top: 54px;
-  padding-top: 3rem;
-  padding-bottom: 54px;
-  padding-bottom: 3rem;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .spacing--inner--both--m {
-  padding-top: 81px;
-  padding-top: 4.5rem;
-  padding-bottom: 81px;
-  padding-bottom: 4.5rem;
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
 }
 
 .spacing--inner--both--l {
-  padding-top: 108px;
-  padding-top: 6rem;
-  padding-bottom: 108px;
-  padding-bottom: 6rem;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 .spacing--inner--both--xl {
-  padding-top: 135px;
-  padding-top: 7.5rem;
-  padding-bottom: 135px;
-  padding-bottom: 7.5rem;
+  padding-top: 3em;
+  padding-bottom: 3em;
 }
 
 .spacing--inner--both--xxl {
-  padding-top: 162px;
-  padding-top: 9rem;
-  padding-bottom: 162px;
-  padding-bottom: 9rem;
+  padding-top: 4em;
+  padding-bottom: 4em;
 }
 
 .spacing--inner--both--xxxl {
-  padding-top: 189px;
-  padding-top: 10.5rem;
-  padding-bottom: 189px;
-  padding-bottom: 10.5rem;
-}
-
-/*.spacing--bottom--xs {
-  margin-bottom: $spacing-xs;
-}
-
-.spacing--bottom--s {
-  margin-bottom: $spacing-s;
-}
-
-.spacing--bottom--m {
-  margin-bottom: $spacing-m;
-}
-
-.spacing--bottom--l {
-  margin-bottom: $spacing-l;
-}
-
-.spacing--bottom--xl {
-  margin-bottom: $spacing-xl;
-}
-
-.spacing--bottom--xxl {
-  margin-bottom: $spacing-xxl;
-}
-
-.spacing--bottom--xxxl {
-  margin-bottom: $spacing-xxxl;
-}
-
-.spacing--bottom--off {
-  margin-bottom: 0;
-}
-
-
-
-.spacing--inner--both--xs {
-  padding-top: $spacing-xs;
-  padding-bottom: $spacing-xs;
-}
-
-.spacing--inner--both--s {
-  padding-top: $spacing-s;
-  padding-bottom: $spacing-s;
-}
-
-.spacing--inner--both--m {
-  padding-top: $spacing-m;
-  padding-bottom: $spacing-m;
-}
-
-.spacing--inner--both--l {
-  padding-top: $spacing-l;
-  padding-bottom: $spacing-l;
-}
-
-.spacing--inner--both--xl {
-  padding-top: $spacing-xl;
-  padding-bottom: $spacing-xl;
-}
-
-.spacing--inner--both--xxl {
-  padding-top: $spacing-xxl;
-  padding-bottom: $spacing-xxl;
-}
-
-.spacing--inner--both--xxxl {
-  padding-top: $spacing-xxxl;
-  padding-bottom: $spacing-xxl;
-}*/
-/*------------------------------------*\
-  $DEBUG
-\*------------------------------------*/
-html {
-  background-image: url(http://basehold.it/i/27);
+  padding-top: 5em;
+  padding-bottom: 5em;
 }
 
 /*------------------------------------*\
@@ -482,14 +358,10 @@ textarea {
 \*------------------------------------*/
 /**
  * CONTENTS
- * MIXINS..............
  * HEADLINES...........
  * ANCHORS.............
  * WHITESPACE..........
  */
-/*------------------------------------*\
-  $MIXINS
-\*------------------------------------*/
 /*------------------------------------*\
   $HEADLINES
 \*------------------------------------*/
@@ -497,41 +369,38 @@ textarea {
  * Reset margin on headlines
  */
 h1, h2, h3, h4 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
   color: #16193b;
   font-weight: 700;
   font-family: "Roboto Slab", serif;
+  line-height: 1;
 }
 
 h1 {
   font-size: 2.25em;
-  line-height: 1.3333333;
 }
 
 h2 {
   font-size: 1.875em;
-  line-height: 1.6;
 }
 
 h3 {
   font-size: 1.5em;
-  line-height: 1;
 }
 
 h4 {
   font-size: 1.25em;
-  line-height: 1.2;
 }
 
 h5 {
-  font-size: 1em;
-  line-height: 1.5;
   margin: 0;
+  font-size: 1em;
 }
 
 h6 {
-  font-size: 1em;
-  line-height: 1.5;
   margin: 0;
+  font-size: 1em;
 }
 
 /*------------------------------------*\
@@ -569,6 +438,21 @@ a:hover, a:focus, .a:hover, .a:focus {
 /**
  * Add whitespace around some block elements
  */
+p,
+ul,
+ol,
+dl,
+pre,
+form,
+table,
+figure,
+address,
+fieldset,
+blockquote {
+  margin-top: 0;
+  margin-bottom: 1.25em;
+}
+
 ul, ol, dl {
   padding-left: 1.5em;
 }
@@ -936,10 +820,9 @@ table table {
   $BASE
 \*------------------------------------*/
 .button {
-  padding: 13.5px 27px;
-  padding: 0.75rem 1.5rem;
   display: inline-block;
   margin: 0;
+  padding: 0.5em 1em;
   border: none;
   background: #16193b;
   vertical-align: top;
@@ -967,18 +850,15 @@ table table {
 * remains uniform.
 */
 .button--s {
-  padding: 0px 13.5px;
-  padding: 0rem 0.75rem;
+  padding: 0 0.5em;
 }
 
 .button--l {
-  padding: 27px 40.5px;
-  padding: 1.5rem 2.25rem;
+  padding: 1em 1.25em;
 }
 
 .button--xl {
-  padding: 40.5px 54px;
-  padding: 2.25rem 3rem;
+  padding: 1.25em 2em;
 }
 
 /**
@@ -999,17 +879,14 @@ table table {
 */
 .button--font--s {
   font-size: 0.85em;
-  line-height: 1.7647059;
 }
 
 .button--font--l {
   font-size: 1.25em;
-  line-height: 1.2;
 }
 
 .button--font--xl {
   font-size: 1.5em;
-  line-height: 1;
 }
 
 /*------------------------------------*\
@@ -1213,9 +1090,8 @@ html {
   $BASE
 \*------------------------------------*/
 .island {
-  padding: 27px;
-  padding: 1.5rem;
   display: block;
+  padding: 1.25em;
   background: #f2f2f2;
 }
 .island > :last-child {
@@ -1380,10 +1256,8 @@ html {
   $GENERAL
 \*------------------------------------*/
 .container {
-  padding-top: 54px;
-  padding-top: 3rem;
-  padding-bottom: 54px;
-  padding-bottom: 3rem;
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
 }
 
 .section > :last-child {
@@ -1391,30 +1265,20 @@ html {
 }
 
 .section--main:not(:last-of-type) {
-  margin-bottom: 108px;
-  margin-bottom: 6rem;
-  position: relative;
-}
-.section--main:not(:last-of-type):after {
-  bottom: -59.4px;
-  bottom: -3.3rem;
-  position: absolute;
-  width: 100%;
+  margin-bottom: 4em;
+  padding-bottom: 4em;
   border-bottom: 1px solid #cccccc;
-  content: '';
 }
 
 .section--sub:not(:last-of-type) {
-  margin-bottom: 54px;
-  margin-bottom: 3rem;
+  margin-bottom: 1.25em;
 }
 
 /*------------------------------------*\
   $COLOR-SHEME
 \*------------------------------------*/
 .cs__colors li {
-  padding: 13.5px;
-  padding: 0.75rem;
+  padding: 0.5em;
 }
 
 /**
@@ -1570,37 +1434,30 @@ html {
  */
 .typo__font-size-xs {
   font-size: 0.75em;
-  line-height: 2;
 }
 
 .typo__font-size-s {
   font-size: 0.85em;
-  line-height: 1.7647059;
 }
 
 .typo__font-size-m {
   font-size: 1em;
-  line-height: 1.5;
 }
 
 .typo__font-size-l {
   font-size: 1.25em;
-  line-height: 1.2;
 }
 
 .typo__font-size-xl {
   font-size: 1.5em;
-  line-height: 1;
 }
 
 .typo__font-size-xxl {
   font-size: 1.875em;
-  line-height: 1.6;
 }
 
 .typo__font-size-xxxl {
   font-size: 2.25em;
-  line-height: 1.3333333;
 }
 
 /**
@@ -1663,13 +1520,6 @@ html {
   $SPACING
 \*------------------------------------*/
 /**
- * Vertical rhythm
- */
-.sp__spacing-vertical-rhythm:after {
-  content: ": true";
-}
-
-/**
  * Basic spacing
  */
 .sp__spacing-xs:after {
@@ -1713,8 +1563,7 @@ html {
 .ut__sizes .button,
 .ut__font-sizes .button,
 .ut__functions .button {
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1em;
 }
 
 /**
