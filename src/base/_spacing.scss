@@ -3,56 +3,9 @@
 \*------------------------------------*/
 /**
  * CONTENTS
- * VARIABLES...........
- * MIXINS..............
  * BOTTOM..............
  * INNER...............
- * DEBUG...............
  */
-
-
-
-/*------------------------------------*\
-  $VARIABLES
-\*------------------------------------*/
-
-$spacing-magic-number:  $font-base-line-height;
-$spacing-magic-ratio:   strip-units($font-base-line-height / $font-base-size);
-
-
-
-/*------------------------------------*\
-  $MIXINS
-\*------------------------------------*/
-
-@mixin spacing($ratio, $property) {
-  @if length($ratio) == 1 {
-    #{$property}: $spacing-magic-number * $ratio;
-    #{$property}: ((strip-units($spacing-magic-number) * $ratio) / strip-units($font-base-size)) * 1rem;
-  } @else {
-    $ratio-list: $ratio;
-
-    $ratio-px-list: ();
-    $ratio-rem-list: ();
-
-    @each $ratio in $ratio-list {
-      $ratio-in-px: $spacing-magic-number * $ratio;
-      $ratio-px-list: append($ratio-px-list, $ratio-in-px);
-
-      $ratio-in-rem: ((strip-units($spacing-magic-number) * $ratio) / strip-units($font-base-size)) * 1rem;
-      $ratio-rem-list: append($ratio-rem-list, $ratio-in-rem);
-    }
-
-    #{$property}: $ratio-px-list;
-    #{$property}: $ratio-rem-list;
-  }
-}
-
-%spacing-vertical-rhythm {
-  margin-top: 0;
-  margin-bottom: $spacing-magic-number;
-  margin-bottom: $spacing-magic-ratio + rem;
-}
 
 
 
@@ -61,83 +14,6 @@ $spacing-magic-ratio:   strip-units($font-base-line-height / $font-base-size);
 \*------------------------------------*/
 
 .spacing--bottom--xs {
-  @include spacing(1, margin-bottom);
-}
-
-.spacing--bottom--s {
-  @include spacing(2, margin-bottom);
-}
-
-.spacing--bottom--m {
-  @include spacing(3, margin-bottom);
-}
-
-.spacing--bottom--l {
-  @include spacing(4, margin-bottom);
-}
-
-.spacing--bottom--xl {
-  @include spacing(5, margin-bottom);
-}
-
-.spacing--bottom--xxl {
-  @include spacing(6, margin-bottom);
-}
-
-.spacing--bottom--xxxl {
-  @include spacing(7, margin-bottom);
-}
-
-.spacing--bottom--off {
-  margin-bottom: 0;
-}
-
-
-
-/*------------------------------------*\
-  $INNER
-\*------------------------------------*/
-
-.spacing--inner--both--xs {
-  @include spacing(1, padding-top);
-  @include spacing(1, padding-bottom);
-}
-
-.spacing--inner--both--s {
-  @include spacing(2, padding-top);
-  @include spacing(2, padding-bottom);
-}
-
-.spacing--inner--both--m {
-  @include spacing(3, padding-top);
-  @include spacing(3, padding-bottom);
-}
-
-.spacing--inner--both--l {
-  @include spacing(4, padding-top);
-  @include spacing(4, padding-bottom);
-}
-
-.spacing--inner--both--xl {
-  @include spacing(5, padding-top);
-  @include spacing(5, padding-bottom);
-}
-
-.spacing--inner--both--xxl {
-  @include spacing(6, padding-top);
-  @include spacing(6, padding-bottom);
-}
-
-.spacing--inner--both--xxxl {
-  @include spacing(7, padding-top);
-  @include spacing(7, padding-bottom);
-}
-
-
-
-
-
-/*.spacing--bottom--xs {
   margin-bottom: $spacing-xs;
 }
 
@@ -171,6 +47,10 @@ $spacing-magic-ratio:   strip-units($font-base-line-height / $font-base-size);
 
 
 
+/*------------------------------------*\
+  $INNER
+\*------------------------------------*/
+
 .spacing--inner--both--xs {
   padding-top: $spacing-xs;
   padding-bottom: $spacing-xs;
@@ -203,18 +83,5 @@ $spacing-magic-ratio:   strip-units($font-base-line-height / $font-base-size);
 
 .spacing--inner--both--xxxl {
   padding-top: $spacing-xxxl;
-  padding-bottom: $spacing-xxl;
-}*/
-
-
-
-/*------------------------------------*\
-  $DEBUG
-\*------------------------------------*/
-
-// if debug
-$spacing-baseline-size: strip-units($spacing-magic-number);
-html {
-  background-image: url(http://basehold.it/i/#{$spacing-baseline-size});
+  padding-bottom: $spacing-xxxl;
 }
-// endif

@@ -1,0 +1,488 @@
+@import 'config';
+
+/*------------------------------------*\
+  STYLE
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * GENERAL.............
+ * COLOR-SHEME.........
+ * TYPOGRAPHY..........
+ * BREAKPOINTS.........
+ * SPACING.............
+ * LAYOUT..............
+ * UTILITIES...........
+ */
+
+
+
+/*------------------------------------*\
+  $GENERAL
+\*------------------------------------*/
+
+.container {
+  padding-top: $spacing-m;
+  padding-bottom: $spacing-m;
+}
+
+.section {
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.section--main {
+  &:not(:last-of-type) {
+    margin-bottom: $spacing-xxl;
+    padding-bottom: $spacing-xxl;
+    border-bottom: 1px solid $cs-grey;
+  }
+}
+
+.section--sub {
+  &:not(:last-of-type) {
+    margin-bottom: $spacing-m;
+  }
+}
+
+
+
+/*------------------------------------*\
+  $COLOR-SHEME
+\*------------------------------------*/
+
+.cs__colors {
+  li {
+    padding: $spacing-xs;
+  }
+}
+
+/**
+ * Basic colors
+ */
+// cs-x
+.cs__cs-a {
+  background: $cs-a;
+  color: $cs-a-contrast;
+
+  &:after {
+    content: ': ' + $cs-a;
+  }
+}
+
+.cs__cs-b {
+  background: $cs-b;
+  color: $cs-b-contrast;
+
+  &:after {
+    content: ': ' + $cs-b;
+  }
+}
+
+.cs__cs-c {
+  background: $cs-c;
+  color: $cs-c-contrast;
+
+  &:after {
+    content: ': ' + $cs-c;
+  }
+}
+
+.cs__cs-d {
+  background: $cs-d;
+  color: $cs-d-contrast;
+
+  &:after {
+    content: ': ' + $cs-d;
+  }
+}
+
+.cs__cs-e {
+  background: $cs-e;
+  color: $cs-e-contrast;
+
+  &:after {
+    content: ': ' + $cs-e;
+  }
+}
+
+// cs-x-contrast
+.cs__cs-a-contrast {
+  background: $cs-a-contrast;
+  color: $cs-a;
+
+  &:after {
+    content: ': ' + $cs-a-contrast;
+  }
+}
+
+.cs__cs-b-contrast {
+  background: $cs-b-contrast;
+  color: $cs-b;
+
+  &:after {
+    content: ': ' + $cs-b-contrast;
+  }
+}
+
+.cs__cs-c-contrast {
+  background: $cs-c-contrast;
+  color: $cs-c;
+
+  &:after {
+    content: ': ' + $cs-c-contrast;
+  }
+}
+
+.cs__cs-d-contrast {
+  background: $cs-d-contrast;
+  color: $cs-d;
+
+  &:after {
+    content: ': ' + $cs-d-contrast;
+  }
+}
+
+.cs__cs-e-contrast {
+  background: $cs-e-contrast;
+  color: $cs-e;
+
+  &:after {
+    content: ': ' + $cs-e-contrast;
+  }
+}
+
+/**
+ * Colors for alerts
+ */
+.cs__cs-positive {
+  background: $cs-positive;
+  color: #fff;
+
+  &:after {
+    content: ': ' + $cs-positive;
+  }
+}
+
+.cs__cs-neutral {
+  background: $cs-neutral;
+  color: #fff;
+
+  &:after {
+    content: ': ' + $cs-neutral;
+  }
+}
+
+.cs__cs-cautious {
+  background: $cs-cautious;
+  color: #fff;
+
+  &:after {
+    content: ': ' + $cs-cautious;
+  }
+}
+
+.cs__cs-negative {
+  background: $cs-negative;
+  color: #fff;
+
+  &:after {
+    content: ': ' + $cs-negative;
+  }
+}
+
+/**
+ * 3 Shades of Grey
+ */
+// cs-x
+.cs__cs-grey {
+  background: $cs-grey;
+  color: #444;
+
+  &:after {
+    content: ': ' + $cs-grey;
+  }
+}
+
+.cs__cs-grey-dark {
+  background: $cs-grey-dark;
+  color: #fff;
+
+  &:after {
+    content: ': ' + $cs-grey-dark;
+  }
+}
+
+.cs__cs-grey-light {
+  background: $cs-grey-light;
+  color: #444;
+
+  &:after {
+    content: ': ' + $cs-grey-light;
+  }
+}
+
+
+
+/*------------------------------------*\
+  $TYPOGRAPHY
+\*------------------------------------*/
+/**
+ * Font-sizes
+ */
+.typo__font-size-xs {
+  font-size: $font-size-xs;
+}
+
+.typo__font-size-s {
+  font-size: $font-size-s;
+}
+
+.typo__font-size-m {
+  font-size: $font-size-m;
+}
+
+.typo__font-size-l {
+  font-size: $font-size-l;
+}
+
+.typo__font-size-xl {
+  font-size: $font-size-xl;
+}
+
+.typo__font-size-xxl {
+  font-size: $font-size-xxl;
+}
+
+.typo__font-size-xxxl {
+  font-size: $font-size-xxxl;
+}
+
+/**
+ * Primary font
+ */
+.typo__font-a {
+  &:before {
+    display: block;
+    font-weight: $font-a-weight-bold;
+    content: '$font-a-family: ' + $font-a-family;
+  }
+}
+
+/**
+ * Secondary font
+ */
+.typo__font-b {
+  font-family: $font-b-family;
+
+  &:before {
+    display: block;
+    font-weight: $font-b-weight-bold;
+    content: '$font-b-family: ' + $font-b-family;
+  }
+}
+
+
+
+/*------------------------------------*\
+  $BREAKPOINTS
+\*------------------------------------*/
+
+.bp__breakpoint-s {
+  &:after {
+    content: ': ' + $breakpoint-s;
+  }
+}
+
+.bp__breakpoint-m {
+  &:after {
+    content: ': ' + $breakpoint-m;
+  }
+}
+
+.bp__breakpoint-l {
+  &:after {
+    content: ': ' + $breakpoint-l;
+  }
+}
+
+.bp__breakpoint-xl {
+  &:after {
+    content: ': ' + $breakpoint-xl;
+  }
+}
+
+.bp__breakpoint-s-max {
+  &:after {
+    content: ': ' + $breakpoint-s-max;
+  }
+}
+
+.bp__breakpoint-m-max {
+  &:after {
+    content: ': ' + $breakpoint-m-max;
+  }
+}
+
+.bp__breakpoint-l-max {
+  &:after {
+    content: ': ' + $breakpoint-l-max;
+  }
+}
+
+.bp__breakpoint-xl-max {
+  &:after {
+    content: ': ' + $breakpoint-xl-max;
+  }
+}
+
+
+
+/*------------------------------------*\
+  $SPACING
+\*------------------------------------*/
+/**
+ * Basic spacing
+ */
+.sp__spacing-xs {
+  &:after {
+    content: ': ' + $spacing-xs;
+  }
+}
+
+.sp__spacing-s {
+  &:after {
+    content: ': ' + $spacing-s;
+  }
+}
+
+.sp__spacing-m {
+  &:after {
+    content: ': ' + $spacing-m;
+  }
+}
+
+.sp__spacing-l {
+  &:after {
+    content: ': ' + $spacing-l;
+  }
+}
+
+.sp__spacing-xl {
+  &:after {
+    content: ': ' + $spacing-xl;
+  }
+}
+
+.sp__spacing-xxl {
+  &:after {
+    content: ': ' + $spacing-xxl;
+  }
+}
+
+.sp__spacing-xxxl {
+  &:after {
+    content: ': ' + $spacing-xxxl;
+  }
+}
+
+
+
+/*------------------------------------*\
+  $LAYOUT
+\*------------------------------------*/
+
+.ly__layout-max-width {
+  &:after {
+    content: ': ' + $layout-max-width;
+  }
+}
+
+
+
+/*------------------------------------*\
+  $UTILITIES
+\*------------------------------------*/
+
+.ut__sizes,
+.ut__font-sizes,
+.ut__functions {
+  .button {
+    margin-bottom: $spacing-s;
+  }
+}
+
+/**
+ * Menu
+ */
+$u-menu-accent-color: mix($cs-a, #fff, 80%);
+
+.menu__controls {
+  box-sizing: border-box;
+  padding: $spacing-xs;
+  background: $cs-a;
+}
+
+.menu__toggle {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  background: $u-menu-accent-color;
+}
+
+.menu__list--level1 {
+  background: $cs-a;
+}
+
+.menu__link {
+  padding: $spacing-xs em2rem($spacing-s);
+  transition: background 0.3s;
+
+  &,
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    color: $cs-a-contrast;
+  }
+  &:hover {
+    background: $u-menu-accent-color;
+  }
+}
+.menu__list--level2 .menu__link {
+  padding-top: $spacing-xs / 2;
+  padding-bottom: $spacing-xs / 2;
+  font-size: $font-size-s;
+}
+.menu__list--level3 .menu__link {
+  padding-left: em2rem($spacing-l);
+}
+
+.menu__link--level1 {
+  border: 1px solid $u-menu-accent-color;
+  border-right-width: 0;
+  border-left-width: 0;
+}
+.menu__item:not(:last-of-type) .menu__link--level1 {
+  border-bottom-width: 0;
+}
+
+.menu--horizontal {
+  @media (min-width: $breakpoint-m) {
+    .menu__link--level1 {
+      border-top-width: 0;
+      border-bottom-width: 0;
+    }
+    .menu__item:not(:last-of-type) .menu__link--level1 {
+      border-right-width: 1px;
+    }
+
+    .menu__list--level1 .menu__list {
+      width: 10em;
+      background: $cs-a;
+    }
+
+    .menu__list--level3 .menu__link {
+      padding-left: em2rem($spacing-s);
+    }
+  }
+}

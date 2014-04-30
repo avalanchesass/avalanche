@@ -2,7 +2,6 @@
 var gulp         = require('gulp');
 var sass         = require('gulp-ruby-sass');
 var autoprefixer = require('gulp-autoprefixer');
-var rename       = require('gulp-rename');
 var clean        = require('gulp-clean');
 var gutil        = require('gulp-util');
 var livereload   = require('gulp-livereload');

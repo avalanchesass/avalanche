@@ -18,13 +18,9 @@
 \*------------------------------------*/
 
 .button {
-  @if $spacing-vertical-rhythm {
-    @include spacing((0.5, 1), padding);
-  } @else {
-    padding: $spacing-xs $spacing-s;
-  }
   display: inline-block;
   margin: 0;
+  padding: $spacing-xs $spacing-s;
   border: none;
   background: $cs-a;
   vertical-align: top;
@@ -62,31 +58,19 @@
 */
 @if $u-button-size-s {
   .button--s {
-    @if $spacing-vertical-rhythm {
-      @include spacing((0, 0.5), padding);
-    } @else {
-      padding: 0 $spacing-xs;
-    }
+    padding: 0 $spacing-xs;
   }
 }
 
 @if $u-button-size-s {
   .button--l {
-    @if $spacing-vertical-rhythm {
-      @include spacing((1, 1.5), padding);
-    } @else {
-      padding: $spacing-s $spacing-m;
-    }
+    padding: $spacing-s $spacing-m;
   }
 }
 
 @if $u-button-size-xl {
   .button--xl {
-     @if $spacing-vertical-rhythm {
-      @include spacing((1.5, 2), padding);
-    } @else {
-      padding: $spacing-m $spacing-l;
-    }
+    padding: $spacing-m $spacing-l;
   }
 }
 
@@ -112,19 +96,19 @@
 */
 @if $u-button-font-size-s {
   .button--font--s {
-    @include font-size($font-size-s);
+    font-size: $font-size-s;
   }
 }
 
 @if $u-button-font-size-l {
   .button--font--l {
-    @include font-size($font-size-l);
+    font-size: $font-size-l;
   }
 }
 
 @if $u-button-font-size-xl {
   .button--font--xl {
-    @include font-size($font-size-xl);
+    font-size: $font-size-xl;
   }
 }
 

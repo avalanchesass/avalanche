@@ -6,6 +6,7 @@
  * STRIP-UNITS.........
  * PIXEL2EM............
  * EM2PIXEL............
+ * EM2REM..............
  */
 
 
@@ -47,6 +48,22 @@
 @function em2pixel($em, $base: $font-base-size) {
   @if unit($em) == em {
     @return (strip-units($em) * strip-units($base)) * 1px;
+  }
+
+  @return $em;
+}
+
+
+
+/*------------------------------------*\
+  $EM2REM
+\*------------------------------------*/
+/**
+ * Convert a em value to rem
+ */
+@function em2rem($em) {
+  @if unit($em) == em {
+    @return strip-units($em) * 1rem;
   }
 
   @return $em;

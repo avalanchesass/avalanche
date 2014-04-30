@@ -45,7 +45,7 @@ $u-grid-base-size: (100% / $u-grid-item-count);
     margin-left: -$u-grid-spacing-m;
   }
 
-  @include breakpoint-max($breakpoint-m-max) {
+  @media (max-width: $breakpoint-m-max) {
     margin-left: -$u-grid-spacing-s;
   }
 }
@@ -59,7 +59,7 @@ $u-grid-base-size: (100% / $u-grid-item-count);
     padding-left: $u-grid-spacing-m;
   }
 
-  @include breakpoint-max($breakpoint-m-max) {
+  @media (max-width: $breakpoint-m-max) {
     padding-left: $u-grid-spacing-s;
   }
 }
@@ -75,7 +75,7 @@ $u-grid-base-size: (100% / $u-grid-item-count);
     $SMALL
   \*------------------------------------*/
 
-  @include breakpoint-min($breakpoint-s) {
+  @media (min-width: $breakpoint-s) {
     @for $i from 1 through $u-grid-item-count {
       .grid__item--s--#{$i} { width: ($u-grid-base-size * $i); }
     }
@@ -89,7 +89,7 @@ $u-grid-base-size: (100% / $u-grid-item-count);
     $MEDIUM
   \*------------------------------------*/
 
-  @include breakpoint-min($breakpoint-m) {
+  @media (min-width: $breakpoint-m) {
     .grid {
       margin-left: -$u-grid-spacing-m;
     }
@@ -111,7 +111,7 @@ $u-grid-base-size: (100% / $u-grid-item-count);
     $LARGE
   \*------------------------------------*/
 
-  @include breakpoint-min($breakpoint-l) {
+  @media (min-width: $breakpoint-l) {
     .grid {
       margin-left: -$u-grid-spacing-l;
     }
@@ -133,7 +133,7 @@ $u-grid-base-size: (100% / $u-grid-item-count);
     $XLARGE
   \*------------------------------------*/
 
-  @include breakpoint-min($breakpoint-xl) {
+  @media (min-width: $breakpoint-xl) {
     .grid {
       margin-left: -$u-grid-spacing-xl;
     }

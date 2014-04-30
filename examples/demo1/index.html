@@ -1,0 +1,361 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>avalanche - Demo 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="dist/style.css">
+  </head>
+  <body class="container">
+    <!--[if lt IE 9]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <h1>avalanche.css Demo 1</h1>
+    <p>About this demo...</p>
+    <section class="section section--main section--cs cs">
+      <h2>Color sheme</h2>
+      <p>About color shemes...</p>
+      <section class="section section--sub section--sub--cs">
+        <h3>Basic Colors</h3>
+        <div class="grid">
+          <div class="grid__item--12 grid__item--s--6">
+            <ul class="cs__colors list--unstyled">
+              <li class="cs__cs-a">$cs-a</li>
+              <li class="cs__cs-b">$cs-b</li>
+              <li class="cs__cs-c">$cs-c</li>
+              <li class="cs__cs-d">$cs-d</li>
+              <li class="cs__cs-e">$cs-e</li>
+            </ul>
+          </div>
+          <div class="grid__item--12 grid__item--s--6">
+            <ul class="cs__colors list--unstyled clearfix">
+              <li class="cs__cs-a-contrast">$cs-a-contrast</li>
+              <li class="cs__cs-b-contrast">$cs-b-contrast</li>
+              <li class="cs__cs-c-contrast">$cs-c-contrast</li>
+              <li class="cs__cs-d-contrast">$cs-d-contrast</li>
+              <li class="cs__cs-e-contrast">$cs-e-contrast</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section section--sub section--sub--cs">
+        <h3>Colors for alerts</h3>
+        <ul class="cs__colors cs__colors--alerts list--unstyled">
+          <li class="cs__cs-positive">$cs-positive</li>
+          <li class="cs__cs-neutral">$cs-neutral</li>
+          <li class="cs__cs-cautious">$cs-cautious</li>
+          <li class="cs__cs-negative">$cs-negative</li>
+        </ul>
+      </section>
+      <section class="section section--sub section--sub--cs">
+        <h3>3 Shades of grey</h3>
+        <ul class="cs__colors cs__colors--grey list--unstyled">
+          <li class="cs__cs-grey">$cs-grey</li>
+          <li class="cs__cs-grey-dark">$cs-grey-dark</li>
+          <li class="cs__cs-grey-light">$cs-grey-light</li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="section section--main section--typo typo">
+      <h2>Typography</h2>
+      <p>About typography...</p>
+      <section class="section section--sub section--sub--typo">
+        <h3>Font-sizes</h3>
+        <div class="spacing--bottom--xs">
+          <div class="typo__font-size-xs">$font-size-xs</div>
+          <div class="typo__font-size-s">$font-size-s</div>
+          <div class="typo__font-size-m">$font-size-m</div>
+          <div class="typo__font-size-l">$font-size-l</div>
+          <div class="typo__font-size-xl">$font-size-xl</div>
+          <div class="typo__font-size-xxl">$font-size-xxl</div>
+          <div class="typo__font-size-xxxl">$font-size-xxxl</div>
+        </div>
+        <div class="spacing--bottom--xs">
+          <h1>h1</h1>
+          <h2>h2</h2>
+          <h3>h3</h3>
+          <h4>h4</h4>
+          <h5>h5</h5>
+          <h6>h6</h6>
+        </div>
+      </section>
+      <section class="section section--sub section--sub--typo">
+        <h3>Primary font</h3>
+        <p class="typo__font-a">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+        </p>
+      </section>
+      <section class="section section--sub section--sub--typo">
+        <h3>Secondary font</h3>
+        <p class="typo__font-b">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+        </p>
+      </section>
+    </section>
+
+    <section class="section section--main section--bp bp">
+      <h2>Breakpoints</h2>
+      <p>About breakpoints...</p>
+      <section class="section section--sub section--sub--bp">
+        <h3>Breakpoints</h3>
+        <div class="grid">
+          <div class="grid__item--12 grid__item--s--6">
+            <ul>
+              <li class="bp__breakpoint-s">$breakpoint-s</li>
+              <li class="bp__breakpoint-m">$breakpoint-m</li>
+              <li class="bp__breakpoint-l">$breakpoint-l</li>
+              <li class="bp__breakpoint-xl">$breakpoint-xl</li>
+            </ul>
+          </div>
+          <div class="grid__item--12 grid__item--s--6">
+            <ul>
+              <li class="bp__breakpoint-s-max">$breakpoint-s-max</li>
+              <li class="bp__breakpoint-m-max">$breakpoint-m-max</li>
+              <li class="bp__breakpoint-l-max">$breakpoint-l-max</li>
+              <li class="bp__breakpoint-xl-max">$breakpoint-xl-max</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section section--sub section--sub--bp">
+        <h3>Examples</h3>
+        <h4>Target min viewport width (default)</h4>
+<pre>
+.box {
+  width: 200px;
+
+  @media (min-width: $breakpoint-s) {
+    width: 300px;
+  }
+}
+</pre>
+
+        <h4>Target max viewport width (try to avoid)</h4>
+<pre>
+.box {
+  width: 200px;
+
+  @media (max-width: $breakpoint-m-max) {
+    width: 150px;
+  }
+}
+</pre>
+
+        <h4>Target a specific viewport width (try to avoid)</h4>
+<pre>
+.box {
+  width: 200px;
+
+  @media (min-width: $breakpoint-s) and (max-width: $breakpoint-m-max) {
+    width: 300px;
+  }
+}
+</pre>
+      </section>
+    </section>
+
+    <section class="section section--main section--sp sp">
+      <h2>Spacing</h2>
+      <p>About spacing...</p>
+      <section class="section section--sub section--sub--sp">
+        <h3>Basic spacing</h3>
+        <p>About basic spacing...</p>
+        <ul>
+          <li class="sp__spacing-xs">$spacing-xs</li>
+          <li class="sp__spacing-s">$spacing-s</li>
+          <li class="sp__spacing-m">$spacing-m</li>
+          <li class="sp__spacing-l">$spacing-l</li>
+          <li class="sp__spacing-xl">$spacing-xl</li>
+          <li class="sp__spacing-xxl">$spacing-xxl</li>
+          <li class="sp__spacing-xxxl">$spacing-xxxl</li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="section section--main section--ly ly">
+      <h2>Layout</h2>
+      <p>About layout...</p>
+      <ul>
+        <li class="ly__layout-max-width">$layout-max-width</li>
+      </ul>
+    </section>
+
+    <section class="section section--main section--ut ut">
+      <h2>Utilities</h2>
+      <p>About utilities...</p>
+      <section class="section section--sub section--sub--ut">
+        <h3>Grid</h3>
+        <p>About grid...</p>
+        <div class="grid">
+          <div class="grid__item--12 grid__item--s--6 grid__item--l--3">
+            <div class="island">&nbsp;</div>
+          </div>
+          <div class="grid__item--12 grid__item--s--6 grid__item--l--3">
+            <div class="island">&nbsp;</div>
+          </div>
+          <div class="grid__item--12 grid__item--s--6 grid__item--l--3">
+            <div class="island">&nbsp;</div>
+          </div>
+          <div class="grid__item--12 grid__item--s--6 grid__item--l--3">
+            <div class="island">&nbsp;</div>
+          </div>
+        </div>
+<pre>
+&lt;div class=&quot;grid&quot;&gt;
+  &lt;div class=&quot;grid__item--12 grid__item--s--6 grid__item--l--3&quot;&gt;
+    &lt;div class=&quot;island&quot;&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;grid__item--12 grid__item--s--6 grid__item--l--3&quot;&gt;
+    &lt;div class=&quot;island&quot;&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;grid__item--12 grid__item--s--6 grid__item--l--3&quot;&gt;
+    &lt;div class=&quot;island&quot;&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;grid__item--12 grid__item--s--6 grid__item--l--3&quot;&gt;
+    &lt;div class=&quot;island&quot;&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        <div class="grid">
+          <div class="grid__item--12 grid__item--s--4">
+            <div class="island">&nbsp;</div>
+          </div>
+          <div class="grid__item--6 grid__item--s--4">
+            <div class="island">&nbsp;</div>
+          </div>
+          <div class="grid__item--6 grid__item--s--4">
+            <div class="island">&nbsp;</div>
+          </div>
+        </div>
+<pre>
+&lt;div class=&quot;grid&quot;&gt;
+  &lt;div class=&quot;grid__item--12 grid__item--s--4&quot;&gt;
+    &lt;div class=&quot;island&quot;&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;grid__item--6 grid__item--s--4&quot;&gt;
+    &lt;div class=&quot;island&quot;&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;grid__item--6 grid__item--s--4&quot;&gt;
+    &lt;div class=&quot;island&quot;&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+      </section>
+      <section class="section section--sub section--sub--ut">
+        <h3>Button</h3>
+        <p>About button...</p>
+        <div class="ut__sizes">
+          <h4>Sizes</h4>
+          <span class="button button--s">.button.button--s</span>
+          <span class="button">.button</span>
+          <span class="button button--l">.button.button--l</span>
+          <span class="button button--xl">.button.button--xl</span>
+          <span class="button button--full">.button.button--full</span>
+        </div>
+        <div class="ut__font-sizes">
+          <h4>Font sizes</h4>
+          <span class="button button--font--s">.button.button--font--s</span>
+          <span class="button">.button</span>
+          <span class="button button--font--l">.button.button--font--l</span>
+          <span class="button button--font--xl">.button.button--font--xl</span>
+        </div>
+        <div class="ut__font-sizes">
+          <h4>Functions</h4>
+          <span class="button button--positive">.button.button--positive</span>
+          <span class="button button--neutral">.button.button--neutral</span>
+          <span class="button button--cautious">.button.button--cautious</span>
+          <span class="button button--negative">.button.button--negative</span>
+          <span class="button button--inactive">.button.button--inactive</span>
+          <span class="button button--disabled">.button.button--disabled</span>
+        </div>
+      </section>
+      <section class="section section--sub section--sub--ut">
+        <h3>Menu</h3>
+        <p>About menu...</p>
+        <div class="menu-style-switcher spacing--bottom--s">
+          <button class="button button--inactive" data-menu-class="menu--off-canvas">Off-Canvas</button>
+          <button class="button" data-menu-class="menu--horizontal">Horizontal</button>
+          <button class="button button--inactive" data-menu-class="menu--vertical">Vertical</button>
+        </div>
+        <nav class="menu menu--horizontal">
+          <div class="menu__controls">
+            <label for="menu__checkbox" class="menu__toggle button button--s">&#9776; Menu</label>
+          </div>
+          <input id="menu__checkbox" class="menu__checkbox" name="menu__checkbox" type="checkbox">
+          <ul class="menu__list menu__list--level1">
+            <li class="menu__item menu__item--level1"><a href="#link1" class="menu__link menu__link--level1">Link1</a>
+              <ul class="menu__list menu__list--level2">
+                <li class="menu__item menu__item--level2"><a href="#" class="menu__link menu__link--level2">Link</a>
+                  <ul class="menu__list menu__list--level3">
+                    <li class="menu__item menu__item--level3"><a href="#" class="menu__link menu__link--level3">Link</a></li>
+                    <li class="menu__item menu__item--level3"><a href="#" class="menu__link menu__link--level3">Link</a></li>
+                    <li class="menu__item menu__item--level3"><a href="#" class="menu__link menu__link--level3">Link</a></li>
+                  </ul>
+                </li>
+                <li class="menu__item menu__item--level2"><a href="#" class="menu__link menu__link--level2">Link</a></li>
+                <li class="menu__item menu__item--level2"><a href="#" class="menu__link menu__link--level2">Link</a></li>
+              </ul>
+            </li>
+            <li class="menu__item menu__item--level1"><a href="#link2" class="menu__link menu__link--level1">Link2</a></li>
+            <li class="menu__item menu__item--level1"><a href="#link3" class="menu__link menu__link--level1">Link3</a>
+              <ul class="menu__list menu__list--level2">
+                <li class="menu__item menu__item--level2"><a href="#" class="menu__link menu__link--level2">Link</a>
+                  <ul class="menu__list menu__list--level3">
+                    <li class="menu__item menu__item--level3"><a href="#" class="menu__link menu__link--level3">Link</a></li>
+                    <li class="menu__item menu__item--level3"><a href="#" class="menu__link menu__link--level3">Link</a></li>
+                    <li class="menu__item menu__item--level3"><a href="#" class="menu__link menu__link--level3">Link</a></li>
+                  </ul>
+                </li>
+                <li class="menu__item menu__item--level2"><a href="#" class="menu__link menu__link--level2">Link</a>
+                  <ul class="menu__list menu__list--level3">
+                    <li class="menu__item menu__item--level3"><a href="#" class="menu__link menu__link--level3">Link</a></li>
+                    <li class="menu__item menu__item--level3"><a href="#" class="menu__link menu__link--level3">Link</a></li>
+                    <li class="menu__item menu__item--level3"><a href="#" class="menu__link menu__link--level3">Link</a></li>
+                  </ul>
+                </li>
+                <li class="menu__item menu__item--level2"><a href="#" class="menu__link menu__link--level2">Link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <section class="section section--sub section--sub--ut">
+        <h3>Island</h3>
+        <p>About island...</p>
+        <div class="ut__island-default">
+          <h4>Default</h4>
+          <div class="island">.island</div>
+        </div>
+        <div class="ut__island-functions">
+          <h4>Functions</h4>
+          <div class="island island--positive">.island.island--positive</div>
+          <div class="island island--neutral">.island.island--neutral</div>
+          <div class="island island--cautious">.island.island--cautious</div>
+          <div class="island island--negative">.island.island--negative</div>
+        </div>
+      </section>
+      <section class="section section--sub section--sub--ut">
+        <h3>Media</h3>
+        <p>About media...</p>
+        <div class="media">
+          <div class="media__img">
+            <img src="http://lorempixel.com/output/animals-q-c-150-120-8.jpg">
+          </div>
+          <div class="media__img--rev">
+            <img src="http://lorempixel.com/output/animals-q-c-150-120-8.jpg">
+          </div>
+          <div class="media__body">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
