@@ -422,6 +422,16 @@ a:hover, a:focus, .a:hover, .a:focus {
 }
 
 /**
+ * Reversed link behaviour
+ */
+.a--reversed {
+  text-decoration: none;
+}
+.a--reversed:hover, .a--reversed:focus {
+  text-decoration: underline;
+}
+
+/**
  * Style tel anchors like normal text on big screens
  * (big screen most likely not mobile)
  */

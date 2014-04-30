@@ -75,6 +75,18 @@ a, .a {
 }
 
 /**
+ * Reversed link behaviour
+ */
+.a--reversed {
+  text-decoration: $a-text-decoration-hover;
+
+  &:hover,
+  &:focus {
+    text-decoration: $a-text-decoration;
+  }
+}
+
+/**
  * Style tel anchors like normal text on big screens
  * (big screen most likely not mobile)
  */
