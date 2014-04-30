@@ -41,7 +41,7 @@ $cs-e-contrast: #fff;
  * e.g. success, error, info
  */
 $cs-positive: #468847;
-$cs-neutral: #3A87AD;
+$cs-neutral:  #3A87AD;
 $cs-cautious: #c09853;
 $cs-negative: #b94a48;
 
@@ -132,7 +132,7 @@ $a-text-decoration-hover: none;
  * Text selection
  */
 $selection-background: $cs-a;
-$selection-color:      #fff;
+$selection-color:      $cs-a-contrast;
 
 
 

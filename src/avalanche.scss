@@ -1,43 +1,5 @@
-/*
-1. Reset – ground zero.
-2. Elements – unclassed h1, unclassed ul etc.
-3. Objects and abstractions — generic, underlying design patterns.
-4. Components – full components constructed from objects and their extensions.
-5. Style trumps – error states etc.
- */
-
-/*
-RM DOC FUTURE
-- kb.roromedia.com knowledgebase
-- Drupal installation
-- Taxonomy je rm_* paket mit versionsnummern / oder eine Taxonomy mit name/nr
-- bei paket kann gewählt werden welche packages in welcher version verwendet werden
-- jeweils eigene doc seite für neue version
-- avalanche aus oder eingliedern?
-- je paket intro bild wie avalanche aber mit jeweils eigener farbe und eichenem icon
-- logo als schrift und feld für icon klasse bei inhaltstyp
-- https://drupal.org/project/themekey eigenes sub theme (farben) je projekt
- */
-
-
-/*
-TODO
-- hr baseline style
-- check if em / rem are used everywhere
- */
-
-
-
-
-
-
-
-
-
-
-
 /*------------------------------------*\
-  VARIABLES
+  $VARIABLES
 \*------------------------------------*/
 /**
  * CONTENTS
@@ -59,11 +21,20 @@ TODO
  * Basic colors
  * Fancy generator: https://kuler.adobe.com
  */
-$cs-a: #F1AE17;
-$cs-b: #B18011;
-$cs-c: #71520B;
-$cs-d: #FEB718;
-$cs-e: #D79C15;
+$cs-a: #16193B;
+$cs-a-contrast: #fff;
+
+$cs-b: #35478C;
+$cs-b-contrast: #fff;
+
+$cs-c: #4E7AC7;
+$cs-c-contrast: #fff;
+
+$cs-d: #7FB2F0;
+$cs-d-contrast: #fff;
+
+$cs-e: #ADD5F7;
+$cs-e-contrast: #fff;
 
 /**
  * Colors for alerts
@@ -93,11 +64,12 @@ $cs-grey-light: lighten($cs-grey, 15%);
  *
  * If you set a font weight in your css you must use this variables!
  * e.g. font-weight: $font-a-weight-normal;
+ *
+ * 1. must be in px, do not use in your styles
  */
-
-$font-base-size:        16px; // must be in px
+$font-base-size:        18px; /* [1] */
+$font-base-line-height: 27px; /* [1] */
 $font-base-color:       #222;
-$font-base-line-height: 1.5;
 
 /**
  * Font-sizes
@@ -106,16 +78,16 @@ $font-size-xs:   0.75em;
 $font-size-s:    0.85em;
 $font-size-m:    1em;
 $font-size-l:    1.25em;
-$font-size-xl:   2em;
-$font-size-xxl:  3em;
-$font-size-xxxl: 4em;
+$font-size-xl:   1.5em;
+$font-size-xxl:  1.875em;
+$font-size-xxxl: 2.25em;
 
-$font-size-h1: 2.25em;
-$font-size-h2: 1.875em;
-$font-size-h3: 1.5em;
-$font-size-h4: 1.25em;
-$font-size-h5: 1em;
-$font-size-h6: 1em;
+$font-size-h1: $font-size-xxxl;
+$font-size-h2: $font-size-xxl;
+$font-size-h3: $font-size-xl;
+$font-size-h4: $font-size-l;
+$font-size-h5: $font-size-m;
+$font-size-h6: $font-size-m;
 
 /**
  * Primary font
@@ -135,17 +107,17 @@ $font-a-weight-ultra-bold:  900;
 /**
  * Secondary font
  */
-$font-b-family: 'Source Sans Pro', sans-serif;
+$font-b-family: serif;
 
-$font-b-weight-thin:        200;
+$font-b-weight-thin:        100;
 $font-b-weight-extra-light: 200;
-$font-b-weight-light:       200;
+$font-b-weight-light:       300;
 $font-b-weight-normal:      400;
-$font-b-weight-medium:      400;
-$font-b-weight-semi-bold:   400;
+$font-b-weight-medium:      500;
+$font-b-weight-semi-bold:   600;
 $font-b-weight-bold:        700;
-$font-b-weight-extra-bold:  700;
-$font-b-weight-ultra-bold:  700;
+$font-b-weight-extra-bold:  800;
+$font-b-weight-ultra-bold:  900;
 
 /**
  * Anchors
@@ -160,7 +132,7 @@ $a-text-decoration-hover: none;
  * Text selection
  */
 $selection-background: $cs-a;
-$selection-color:      #fff;
+$selection-color:      $cs-a-contrast;
 
 
 
@@ -186,21 +158,15 @@ $breakpoint-xl-max: $breakpoint-xl - 1;
   $SPACING
 \*------------------------------------*/
 /**
- * Basic spacing sizes
+ * Basic spacing
  */
 $spacing-xs:   0.5em;
 $spacing-s:    1em;
-$spacing-m:    1.5em;
+$spacing-m:    1.25em;
 $spacing-l:    2em;
 $spacing-xl:   3em;
 $spacing-xxl:  4em;
-$spacing-xxxl: 6em;
-
-/**
- * Spacing for block level elements
- */
-$spacing-block-top:    0;
-$spacing-block-bottom: $spacing-m;
+$spacing-xxxl: 5em;
 
 
 
@@ -208,7 +174,7 @@ $spacing-block-bottom: $spacing-m;
   $LAYOUT
 \*------------------------------------*/
 
-$layout-max-width: 1200px;
+$layout-max-width: 52em;
 
 
 
@@ -216,22 +182,17 @@ $layout-max-width: 1200px;
   $UTILITIES
 \*------------------------------------*/
 /**
- * Clearfix
- */
-$u-clearfix: true;
-
-/**
  * Grid
  */
-$u-grid: true;
+$u-grid: false;
 
 $u-grid-item-count: 12;
 
-// sizes
-$u-grid-size-s:  true;
+// Sizes
+$u-grid-size-s:  false;
 $u-grid-size-m:  false;
 $u-grid-size-l:  false;
-$u-grid-size-xl: true;
+$u-grid-size-xl: false;
 
 // Spacing between items
 $u-grid-spacing-s:  $spacing-s;
@@ -244,18 +205,18 @@ $u-grid-spacing-xl: $spacing-m;
  */
 $u-button: false;
 
-// sizes
+// Sizes
 $u-button-size-s:    false;
 $u-button-size-l:    false;
 $u-button-size-xl:   false;
 $u-button-size-full: false;
 
-// font sizes
+// Font sizes
 $u-button-font-size-s:  false;
 $u-button-font-size-l:  false;
 $u-button-font-size-xl: false;
 
-// functions
+// Functions
 $u-button-function-positive: false;
 $u-button-function-neutral:  false;
 $u-button-function-cautious: false;
@@ -266,20 +227,25 @@ $u-button-function-disabled: false;
 /**
  * Menu
  */
-$u-menu: true;
+$u-menu: false;
 
 /**
  * Island
  */
 $u-island: false;
 
-// functions
+// Functions
 $u-island-function-positive: false;
 $u-island-function-neutral:  false;
 $u-island-function-cautious: false;
 $u-island-function-negative: false;
-$u-island-function-inactive: false;
-$u-island-function-disabled: false;
+
+// Color Sheme
+$u-island-cs-a: false;
+$u-island-cs-b: false;
+$u-island-cs-c: false;
+$u-island-cs-d: false;
+$u-island-cs-e: false;
 
 /**
  * Media
