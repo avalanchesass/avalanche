@@ -1,7 +1,8 @@
 var expect = require('chai').expect
   , unique = require('..')
   , Stream = require('stream')
-  , after = require('after');
+  , after = require('after')
+  , setImmediate = global.setImmediate || process.nextTick;
 
 describe('unique stream', function() {
 
