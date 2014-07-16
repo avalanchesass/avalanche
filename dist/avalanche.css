@@ -147,7 +147,7 @@ hr { display: block; margin: 1em 0; padding: 0; height: 1px; border: 0; border-t
 audio, canvas, img, svg, video { vertical-align: middle; }
 
 /* Remove default fieldset styles. */
-fieldset { margin: 0; padding: 0; border: 0; }
+fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
 
 /* Allow only vertical resizing of textareas. */
 textarea { resize: vertical; }
@@ -204,6 +204,29 @@ li ul, li ol, li dl { margin-bottom: 0; }
 
 /** no margin for nested tables */
 table table { margin-bottom: 0; }
+
+/*------------------------------------*\ FORM
+\*------------------------------------*/
+/** CONTENTS BASE................ */
+/*------------------------------------*\ $BASE
+\*------------------------------------*/
+label { display: block; }
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] { display: inline-block; padding: 0.5em; border: 1px solid #a6a6a6; background-image: none; -webkit-transition: border-color ease-in-out 0.1s, -webkit-box-shadow ease-in-out 0.1s; transition: border-color ease-in-out 0.1s, box-shadow ease-in-out 0.1s; }
+select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus { outline: none; border-color: #16193b; -webkit-box-shadow: 0 0 0.375em #16193b; box-shadow: 0 0 0.375em #16193b; }
+
+input[type="radio"], input[type="checkbox"] { margin-top: 1px \9; line-height: normal; }
+input[type="radio"] + label, input[type="checkbox"] + label { display: inline-block; }
+
+input[type="file"] { display: block; }
+
+input[type="range"] { display: block; width: 100%; }
+
+select[multiple], select[size] { height: auto; }
+
+input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focus { border: 3px solid red; }
+
+textarea { height: auto; }
 
 /*------------------------------------*\ $UTILITY
 \*------------------------------------*/
