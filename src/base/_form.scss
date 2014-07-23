@@ -34,6 +34,7 @@ input[type="tel"],
 input[type="color"] {
   display: inline-block;
   padding: $spacing-xs;
+  max-width: 100%;
   border: 1px solid $cs-grey-dark;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   transition: border-color ease-in-out 0.1s, box-shadow ease-in-out 0.1s;
