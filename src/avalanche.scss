@@ -8,7 +8,7 @@
  * BREAKPOINTS.........
  * SPACING.............
  * LAYOUT..............
- * UTILITIES...........
+ * COMPONENTS..........
  * SCAFFOLDING.........
  */
 
@@ -180,78 +180,78 @@ $layout-box-sizing-reset: true;
 
 
 /*------------------------------------*\
-  $UTILITIES
+  $COMPONENTS
 \*------------------------------------*/
 /**
  * Grid
  */
-$u-grid: false;
+$cmp-grid: false;
 
-$u-grid-item-count: 12;
+$cmp-grid-item-count: 12;
 
 // Sizes
-$u-grid-size-s:  false;
-$u-grid-size-m:  false;
-$u-grid-size-l:  false;
-$u-grid-size-xl: false;
+$cmp-grid-size-s:  false;
+$cmp-grid-size-m:  false;
+$cmp-grid-size-l:  false;
+$cmp-grid-size-xl: false;
 
 // Spacing between items
-$u-grid-spacing-s:  $spacing-s;
-$u-grid-spacing-m:  $spacing-m;
-$u-grid-spacing-l:  $spacing-m;
-$u-grid-spacing-xl: $spacing-m;
+$cmp-grid-spacing-s:  $spacing-s;
+$cmp-grid-spacing-m:  $spacing-m;
+$cmp-grid-spacing-l:  $spacing-m;
+$cmp-grid-spacing-xl: $spacing-m;
 
 /**
  * Button
  */
-$u-button: false;
+$cmp-button: false;
 
 // Sizes
-$u-button-size-s:    false;
-$u-button-size-l:    false;
-$u-button-size-xl:   false;
-$u-button-size-full: false;
+$cmp-button-size-s:    false;
+$cmp-button-size-l:    false;
+$cmp-button-size-xl:   false;
+$cmp-button-size-full: false;
 
 // Font sizes
-$u-button-font-size-s:  false;
-$u-button-font-size-l:  false;
-$u-button-font-size-xl: false;
+$cmp-button-font-size-s:  false;
+$cmp-button-font-size-l:  false;
+$cmp-button-font-size-xl: false;
 
 // Functions
-$u-button-function-positive: false;
-$u-button-function-neutral:  false;
-$u-button-function-cautious: false;
-$u-button-function-negative: false;
-$u-button-function-inactive: false;
-$u-button-function-disabled: false;
+$cmp-button-function-positive: false;
+$cmp-button-function-neutral:  false;
+$cmp-button-function-cautious: false;
+$cmp-button-function-negative: false;
+$cmp-button-function-inactive: false;
+$cmp-button-function-disabled: false;
 
 /**
  * Menu
  */
-$u-menu: false;
+$cmp-menu: false;
 
 /**
  * Island
  */
-$u-island: false;
+$cmp-island: false;
 
 // Functions
-$u-island-function-positive: false;
-$u-island-function-neutral:  false;
-$u-island-function-cautious: false;
-$u-island-function-negative: false;
+$cmp-island-function-positive: false;
+$cmp-island-function-neutral:  false;
+$cmp-island-function-cautious: false;
+$cmp-island-function-negative: false;
 
 // Color Sheme
-$u-island-cs-a: false;
-$u-island-cs-b: false;
-$u-island-cs-c: false;
-$u-island-cs-d: false;
-$u-island-cs-e: false;
+$cmp-island-cs-a: false;
+$cmp-island-cs-b: false;
+$cmp-island-cs-c: false;
+$cmp-island-cs-d: false;
+$cmp-island-cs-e: false;
 
 /**
  * Media
  */
-$u-media: false;
+$cmp-media: false;
 
 
 

@@ -1,4 +1,4 @@
-@if $u-button {
+@if $cmp-button {
 
 /*------------------------------------*\
   BUTTON
@@ -56,25 +56,25 @@
 * These all follow the same sizing rules as above; text is 1em, space around it
 * remains uniform.
 */
-@if $u-button-size-s {
+@if $cmp-button-size-s {
   .button--s {
     padding: 0 $spacing-xs;
   }
 }
 
-@if $u-button-size-l {
+@if $cmp-button-size-l {
   .button--l {
     padding: $spacing-s $spacing-m;
   }
 }
 
-@if $u-button-size-xl {
+@if $cmp-button-size-xl {
   .button--xl {
     padding: $spacing-m $spacing-l;
   }
 }
 
-@if $u-button-size-full {
+@if $cmp-button-size-full {
   /**
   * These buttons will fill the entirety of their container.
   */
@@ -94,19 +94,19 @@
 /**
 * Button font-size modifiers.
 */
-@if $u-button-font-size-s {
+@if $cmp-button-font-size-s {
   .button--font--s {
     font-size: $font-size-s;
   }
 }
 
-@if $u-button-font-size-l {
+@if $cmp-button-font-size-l {
   .button--font--l {
     font-size: $font-size-l;
   }
 }
 
-@if $u-button-font-size-xl {
+@if $cmp-button-font-size-xl {
   .button--font--xl {
     font-size: $font-size-xl;
   }
@@ -118,7 +118,7 @@
   $FUNCTIONS
 \*------------------------------------*/
 
-@if $u-button-function-positive {
+@if $cmp-button-function-positive {
   /**
   * Positive actions; e.g. sign in, purchase, submit, etc.
   */
@@ -134,7 +134,7 @@
   }
 }
 
-@if $u-button-function-neutral {
+@if $cmp-button-function-neutral {
   /**
   * Neutral
   */
@@ -150,7 +150,7 @@
   }
 }
 
-@if $u-button-function-cautious {
+@if $cmp-button-function-cautious {
   /**
   * Cautious
   */
@@ -166,7 +166,7 @@
   }
 }
 
-@if $u-button-function-negative {
+@if $cmp-button-function-negative {
   /**
   * Negative actions; e.g. close account, delete photo, remove friend, etc.
   */
@@ -182,7 +182,7 @@
   }
 }
 
-@if $u-button-function-inactive or $u-button-function-disabled {
+@if $cmp-button-function-inactive or $cmp-button-function-disabled {
   /**
   * Inactive and disabled buttons.
   */

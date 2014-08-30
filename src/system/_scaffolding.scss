@@ -5,7 +5,7 @@
  * CONTENTS
  * SYSTEM..............
  * BASE................
- * UTILITY.............
+ * COMPONENTS..........
  */
 
 
@@ -22,23 +22,20 @@
   $BASE
 \*------------------------------------*/
 
-@import '../base/clearfix';
-@import '../base/visibility';
-@import '../base/spacing';
-@import '../base/list';
-@import '../base/layout';
 @import '../base/base';
-@import '../base/typography';
 @import '../base/form';
+@import '../base/layout';
+@import '../base/typography';
+@import '../base/utility';
 
 
 
 /*------------------------------------*\
-  $UTILITY
+  $COMPONENTS
 \*------------------------------------*/
 
-@import '../utility/grid';
-@import '../utility/button';
-@import '../utility/menu';
-@import '../utility/island';
-@import '../utility/media';
+@import '../components/grid';
+@import '../components/button';
+@import '../components/menu';
+@import '../components/island';
+@import '../components/media';

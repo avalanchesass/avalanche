@@ -1,4 +1,4 @@
-@if $u-island {
+@if $cmp-island {
 
 /*------------------------------------*\
   ISLAND
@@ -17,7 +17,7 @@
 \*------------------------------------*/
 
 .island {
-  @extend .clearfix;
+  @extend .u-cf;
   display: block;
   padding: $spacing-m;
   background: $cs-grey-light;
@@ -31,7 +31,7 @@
   $FUNCTIONS
 \*------------------------------------*/
 
-@if $u-island-function-positive {
+@if $cmp-island-function-positive {
   /**
    * Positive actions; e.g. sign in, purchase, submit, etc.
    */
@@ -41,7 +41,7 @@
   }
 }
 
-@if $u-island-function-neutral {
+@if $cmp-island-function-neutral {
   /**
    * Neutral
    */
@@ -51,7 +51,7 @@
   }
 }
 
-@if $u-island-function-cautious {
+@if $cmp-island-function-cautious {
   /**
    * Cautious
    */
@@ -61,7 +61,7 @@
   }
 }
 
-@if $u-island-function-negative {
+@if $cmp-island-function-negative {
   /**
    * Negative actions; e.g. close account, delete photo, remove friend, etc.
    */
@@ -77,7 +77,7 @@
   $CS
 \*------------------------------------*/
 
-@if $u-island-cs-a {
+@if $cmp-island-cs-a {
   /**
    * cs-a
    */
@@ -87,7 +87,7 @@
   }
 }
 
-@if $u-island-cs-b {
+@if $cmp-island-cs-b {
   /**
    * cs-a
    */
@@ -97,7 +97,7 @@
   }
 }
 
-@if $u-island-cs-c {
+@if $cmp-island-cs-c {
   /**
    * cs-a
    */
@@ -107,7 +107,7 @@
   }
 }
 
-@if $u-island-cs-d {
+@if $cmp-island-cs-d {
   /**
    * cs-a
    */
@@ -117,7 +117,7 @@
   }
 }
 
-@if $u-island-cs-e {
+@if $cmp-island-cs-e {
   /**
    * cs-a
    */

@@ -1,4 +1,4 @@
-@if $u-menu {
+@if $cmp-menu {
 
 /*------------------------------------*\
   MENU
@@ -25,7 +25,7 @@ html {
 }
 
 .menu__list {
-  @extend .list--unstyled;
+  @extend .u-list-reset;
   margin-bottom: 0;
 }
 
@@ -91,7 +91,7 @@ html {
 
 .menu--horizontal {
   .menu__list--level1 {
-    @extend .clearfix;
+    @extend .u-cf;
   }
 
   @media (max-width: $breakpoint-m-max) {

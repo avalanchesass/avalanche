@@ -1,4 +1,4 @@
-@if $u-grid {
+@if $cmp-grid {
 
 /*------------------------------------*\
   GRID
@@ -36,17 +36,17 @@
 /**
  * Styles for all devices
  */
-$u-grid-base-size: (100% / $u-grid-item-count);
+$cmp-grid-base-size: (100% / $cmp-grid-item-count);
 
 .grid {
-  @extend .clearfix;
+  @extend .u-cf;
 
-  @if $u-grid-size-m == false {
-    margin-left: -$u-grid-spacing-m;
+  @if $cmp-grid-size-m == false {
+    margin-left: -$cmp-grid-spacing-m;
   }
 
   @media (max-width: $breakpoint-m-max) {
-    margin-left: -$u-grid-spacing-s;
+    margin-left: -$cmp-grid-spacing-s;
   }
 }
 
@@ -58,95 +58,95 @@ $u-grid-base-size: (100% / $u-grid-item-count);
     box-sizing: border-box;
   }
 
-  @if $u-grid-size-m == false {
-    padding-left: $u-grid-spacing-m;
+  @if $cmp-grid-size-m == false {
+    padding-left: $cmp-grid-spacing-m;
   }
 
   @media (max-width: $breakpoint-m-max) {
-    padding-left: $u-grid-spacing-s;
+    padding-left: $cmp-grid-spacing-s;
   }
 }
 
-@for $i from 1 through $u-grid-item-count {
-  .grid__item--#{$i} { width: ($u-grid-base-size * $i); }
+@for $i from 1 through $cmp-grid-item-count {
+  .grid__item--#{$i} { width: ($cmp-grid-base-size * $i); }
 }
 
 
 
-@if $u-grid-size-s {
+@if $cmp-grid-size-s {
   /*------------------------------------*\
     $SMALL
   \*------------------------------------*/
 
   @media (min-width: $breakpoint-s) {
-    @for $i from 1 through $u-grid-item-count {
-      .grid__item--s--#{$i} { width: ($u-grid-base-size * $i); }
+    @for $i from 1 through $cmp-grid-item-count {
+      .grid__item--s--#{$i} { width: ($cmp-grid-base-size * $i); }
     }
   }
 }
 
 
 
-@if $u-grid-size-m {
+@if $cmp-grid-size-m {
   /*------------------------------------*\
     $MEDIUM
   \*------------------------------------*/
 
   @media (min-width: $breakpoint-m) {
     .grid {
-      margin-left: -$u-grid-spacing-m;
+      margin-left: -$cmp-grid-spacing-m;
     }
 
     [class*="grid__item"] {
-      padding-left: $u-grid-spacing-m;
+      padding-left: $cmp-grid-spacing-m;
     }
 
-    @for $i from 1 through $u-grid-item-count {
-      .grid__item--m--#{$i} { width: ($u-grid-base-size * $i); }
+    @for $i from 1 through $cmp-grid-item-count {
+      .grid__item--m--#{$i} { width: ($cmp-grid-base-size * $i); }
     }
   }
 }
 
 
 
-@if $u-grid-size-l {
+@if $cmp-grid-size-l {
   /*------------------------------------*\
     $LARGE
   \*------------------------------------*/
 
   @media (min-width: $breakpoint-l) {
     .grid {
-      margin-left: -$u-grid-spacing-l;
+      margin-left: -$cmp-grid-spacing-l;
     }
 
     [class*="grid__item"] {
-      padding-left: $u-grid-spacing-l;
+      padding-left: $cmp-grid-spacing-l;
     }
 
-    @for $i from 1 through $u-grid-item-count {
-      .grid__item--l--#{$i} { width: ($u-grid-base-size * $i); }
+    @for $i from 1 through $cmp-grid-item-count {
+      .grid__item--l--#{$i} { width: ($cmp-grid-base-size * $i); }
     }
   }
 }
 
 
 
-@if $u-grid-size-xl {
+@if $cmp-grid-size-xl {
   /*------------------------------------*\
     $XLARGE
   \*------------------------------------*/
 
   @media (min-width: $breakpoint-xl) {
     .grid {
-      margin-left: -$u-grid-spacing-xl;
+      margin-left: -$cmp-grid-spacing-xl;
     }
 
     [class*="grid__item"] {
-      padding-left: $u-grid-spacing-xl;
+      padding-left: $cmp-grid-spacing-xl;
     }
 
-    @for $i from 1 through $u-grid-item-count {
-      .grid__item--l--#{$i} { width: ($u-grid-base-size * $i); }
+    @for $i from 1 through $cmp-grid-item-count {
+      .grid__item--l--#{$i} { width: ($cmp-grid-base-size * $i); }
     }
   }
 }
