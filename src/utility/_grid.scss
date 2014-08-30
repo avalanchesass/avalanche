@@ -52,8 +52,11 @@ $u-grid-base-size: (100% / $u-grid-item-count);
 
 [class*="grid__item"] {
   float: left;
-  box-sizing: border-box;
   width: 100%;
+
+  @if $layout-box-sizing-reset == false {
+    box-sizing: border-box;
+  }
 
   @if $u-grid-size-m == false {
     padding-left: $u-grid-spacing-m;
