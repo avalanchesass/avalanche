@@ -40,35 +40,32 @@ $cmp-grid-base-size: (100% / $cmp-grid-item-count);
 
 .grid {
   @extend .u-cf;
-
   @if $cmp-grid-size-m == false {
     margin-left: -$cmp-grid-spacing-m;
   }
-
   @media (max-width: $breakpoint-m-max) {
     margin-left: -$cmp-grid-spacing-s;
   }
 }
 
-[class*="grid__item"] {
+[class*='grid__item'] {
   float: left;
   width: 100%;
-
   @if $layout-box-sizing-reset == false {
     box-sizing: border-box;
   }
-
   @if $cmp-grid-size-m == false {
     padding-left: $cmp-grid-spacing-m;
   }
-
   @media (max-width: $breakpoint-m-max) {
     padding-left: $cmp-grid-spacing-s;
   }
 }
 
 @for $i from 1 through $cmp-grid-item-count {
-  .grid__item--#{$i} { width: ($cmp-grid-base-size * $i); }
+  .grid__item--#{$i} {
+    width: ($cmp-grid-base-size * $i);
+  }
 }
 
 
@@ -77,10 +74,11 @@ $cmp-grid-base-size: (100% / $cmp-grid-item-count);
   /*------------------------------------*\
     $SMALL
   \*------------------------------------*/
-
   @media (min-width: $breakpoint-s) {
     @for $i from 1 through $cmp-grid-item-count {
-      .grid__item--s--#{$i} { width: ($cmp-grid-base-size * $i); }
+      .grid__item--s--#{$i} {
+        width: ($cmp-grid-base-size * $i);
+      }
     }
   }
 }
@@ -91,18 +89,19 @@ $cmp-grid-base-size: (100% / $cmp-grid-item-count);
   /*------------------------------------*\
     $MEDIUM
   \*------------------------------------*/
-
   @media (min-width: $breakpoint-m) {
     .grid {
       margin-left: -$cmp-grid-spacing-m;
     }
 
-    [class*="grid__item"] {
+    [class*='grid__item'] {
       padding-left: $cmp-grid-spacing-m;
     }
 
     @for $i from 1 through $cmp-grid-item-count {
-      .grid__item--m--#{$i} { width: ($cmp-grid-base-size * $i); }
+      .grid__item--m--#{$i} {
+        width: ($cmp-grid-base-size * $i);
+      }
     }
   }
 }
@@ -113,18 +112,19 @@ $cmp-grid-base-size: (100% / $cmp-grid-item-count);
   /*------------------------------------*\
     $LARGE
   \*------------------------------------*/
-
   @media (min-width: $breakpoint-l) {
     .grid {
       margin-left: -$cmp-grid-spacing-l;
     }
 
-    [class*="grid__item"] {
+    [class*='grid__item'] {
       padding-left: $cmp-grid-spacing-l;
     }
 
     @for $i from 1 through $cmp-grid-item-count {
-      .grid__item--l--#{$i} { width: ($cmp-grid-base-size * $i); }
+      .grid__item--l--#{$i} {
+        width: ($cmp-grid-base-size * $i);
+      }
     }
   }
 }
@@ -135,18 +135,19 @@ $cmp-grid-base-size: (100% / $cmp-grid-item-count);
   /*------------------------------------*\
     $XLARGE
   \*------------------------------------*/
-
   @media (min-width: $breakpoint-xl) {
     .grid {
       margin-left: -$cmp-grid-spacing-xl;
     }
 
-    [class*="grid__item"] {
+    [class*='grid__item'] {
       padding-left: $cmp-grid-spacing-xl;
     }
 
     @for $i from 1 through $cmp-grid-item-count {
-      .grid__item--l--#{$i} { width: ($cmp-grid-base-size * $i); }
+      .grid__item--l--#{$i} {
+        width: ($cmp-grid-base-size * $i);
+      }
     }
   }
 }

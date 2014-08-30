@@ -16,7 +16,10 @@
 /**
  * Reset margin on headlines
  */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   margin-top: 0;
   margin-bottom: $spacing-xs;
   color: $cs-a;
@@ -59,14 +62,13 @@ h6 {
 /**
  * <span class="a">readmore...</span>
  */
-a, .a {
+a,
+.a {
   color: $a-color;
   text-decoration: $a-text-decoration;
-
   &:visited {
     color: $a-color-visited;
   }
-
   &:hover,
   &:focus {
     color: $a-color-hover;
@@ -79,7 +81,6 @@ a, .a {
  */
 .a--reversed {
   text-decoration: $a-text-decoration-hover;
-
   &:hover,
   &:focus {
     text-decoration: $a-text-decoration;
@@ -91,7 +92,7 @@ a, .a {
  * (big screen most likely not mobile)
  */
 @media (min-width: $breakpoint-s) {
-  a[href^="tel"] {
+  a[href^='tel'] {
     &,
     &:hover,
     &:focus {
@@ -125,7 +126,9 @@ blockquote {
   margin-bottom: (($font-base-line-height / $font-base-size) * 1em);
 }
 
-ul, ol, dl {
+ul,
+ol,
+dl {
   padding-left: 1.5em;
 }
 
@@ -133,7 +136,9 @@ ul, ol, dl {
  * no margin for nested lists
  */
 li {
-  ul, ol, dl {
+  ul,
+  ol,
+  dl {
     margin-bottom: 0;
   }
 }

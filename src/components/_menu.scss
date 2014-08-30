@@ -67,7 +67,6 @@ html {
     display: block;
     width: 100%;
   }
-
   .menu__list--level1 {
     position: absolute;
     top: 0;
@@ -93,7 +92,6 @@ html {
   .menu__list--level1 {
     @extend .u-cf;
   }
-
   @media (max-width: ($cmp-menu-mobile-breakpoint - 1)) {
     .menu__list--level1 {
       height: 0;
@@ -105,7 +103,6 @@ html {
       transform: scale(1, 1);
     }
   }
-
   @media (min-width: $cmp-menu-mobile-breakpoint) {
     .menu__list--level1 .menu__list {
       position: absolute;

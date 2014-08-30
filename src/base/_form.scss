@@ -18,27 +18,26 @@ label {
 
 select,
 textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
+input[type='text'],
+input[type='password'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='date'],
+input[type='month'],
+input[type='time'],
+input[type='week'],
+input[type='number'],
+input[type='email'],
+input[type='url'],
+input[type='search'],
+input[type='tel'],
+input[type='color'] {
   display: inline-block;
   padding: $spacing-xs;
   max-width: 100%;
   border: 1px solid $cs-grey-dark;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   transition: border-color ease-in-out 0.1s, box-shadow ease-in-out 0.1s;
-
   &:focus {
     outline: none;
     border-color: $cs-a;
@@ -47,23 +46,22 @@ input[type="color"] {
 }
 
 // Position radios and checkboxes better
-input[type="radio"],
-input[type="checkbox"] {
+input[type='radio'],
+input[type='checkbox'] {
   margin-top: 1px \9; // IE8-9
   line-height: normal;
-
   & + label {
     display: inline-block;
   }
 }
 
 // Set the height of file controls to match text inputs
-input[type="file"] {
+input[type='file'] {
   display: block;
 }
 
 // Make range inputs behave like textual form controls
-input[type="range"] {
+input[type='range'] {
   display: block;
   width: 100%;
 }
@@ -75,9 +73,9 @@ select[size] {
 }
 
 // Focus for file, radio, and checkbox
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus {
+input[type='file']:focus,
+input[type='radio']:focus,
+input[type='checkbox']:focus {
   border: 3px solid red;
 }
 

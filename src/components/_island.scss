@@ -21,8 +21,9 @@
   display: block;
   padding: $spacing-m;
   background: $cs-grey-light;
-
-  & > :last-child { margin-bottom: 0; }
+  & > :last-child {
+    margin-bottom: 0;
+  }
 }
 
 

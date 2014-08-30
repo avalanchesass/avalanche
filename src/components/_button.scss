@@ -28,7 +28,6 @@
   font-size: 100%;
   font-family: inherit;
   cursor: pointer;
-
   &,
   &:hover,
   &:focus,
@@ -37,7 +36,6 @@
     color: #fff;
     text-decoration: none;
   }
-
   &:hover,
   &:focus,
   &:active {
@@ -51,11 +49,11 @@
   $SIZES
 \*------------------------------------*/
 /**
-* Button size modifiers.
-*
-* These all follow the same sizing rules as above; text is 1em, space around it
-* remains uniform.
-*/
+ * Button size modifiers.
+ *
+ * These all follow the same sizing rules as above; text is 1em, space around it
+ * remains uniform.
+ */
 @if $cmp-button-size-s {
   .button--s {
     padding: 0 $spacing-xs;
@@ -76,8 +74,8 @@
 
 @if $cmp-button-size-full {
   /**
-  * These buttons will fill the entirety of their container.
-  */
+   * These buttons will fill the entirety of their container.
+   */
   .button--full {
     padding-right: 0;
     padding-left: 0;
@@ -92,8 +90,8 @@
   $FONT-SIZES
 \*------------------------------------*/
 /**
-* Button font-size modifiers.
-*/
+ * Button font-size modifiers.
+ */
 @if $cmp-button-font-size-s {
   .button--font--s {
     font-size: $font-size-s;
@@ -120,12 +118,11 @@
 
 @if $cmp-button-function-positive {
   /**
-  * Positive actions; e.g. sign in, purchase, submit, etc.
-  */
+   * Positive actions; e.g. sign in, purchase, submit, etc.
+   */
   .button--positive {
     background: $cs-positive;
     color: #fff;
-
     &:hover,
     &:focus,
     &:active {
@@ -136,12 +133,11 @@
 
 @if $cmp-button-function-neutral {
   /**
-  * Neutral
-  */
+   * Neutral
+   */
   .button--neutral {
     background: $cs-neutral;
     color: #fff;
-
     &:hover,
     &:focus,
     &:active {
@@ -152,12 +148,11 @@
 
 @if $cmp-button-function-cautious {
   /**
-  * Cautious
-  */
+   * Cautious
+   */
   .button--cautious {
     background: $cs-cautious;
     color: #fff;
-
     &:hover,
     &:focus,
     &:active {
@@ -168,12 +163,11 @@
 
 @if $cmp-button-function-negative {
   /**
-  * Negative actions; e.g. close account, delete photo, remove friend, etc.
-  */
+   * Negative actions; e.g. close account, delete photo, remove friend, etc.
+   */
   .button--negative {
     background: $cs-negative;
     color: #fff;
-
     &:hover,
     &:focus,
     &:active {
@@ -184,8 +178,8 @@
 
 @if $cmp-button-function-inactive or $cmp-button-function-disabled {
   /**
-  * Inactive and disabled buttons.
-  */
+   * Inactive and disabled buttons.
+   */
   .button--inactive,
   .button--disabled {
     &,
@@ -196,7 +190,6 @@
       color: $cs-grey-dark;
     }
   }
-
   .button--disabled {
     &,
     &:hover,

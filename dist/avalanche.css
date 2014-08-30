@@ -69,8 +69,8 @@ hr { display: block; margin: 1em 0; padding: 0; height: 1px; border: 0; border-t
 /* Remove the gap between images, videos, audio and canvas and the bottom of their containers: h5bp.com/i/440 */
 audio, canvas, img, svg, video { vertical-align: middle; }
 
-/* Remove default fieldset styles. */
-fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
+/* Remove default fieldset styles.  1. Chrome and Firefox set a `min-width: min-content;` on fieldsets, so we reset that to ensure it behaves more like a standard block element. See https://github.com/twbs/bootstrap/issues/12359. */
+fieldset { margin: 0; padding: 0; min-width: 0; /* [1] */ border: 0; }
 
 /* Allow only vertical resizing of textareas. */
 textarea { resize: vertical; }
@@ -89,19 +89,19 @@ textarea { resize: vertical; }
 \*------------------------------------*/
 label { display: block; }
 
-select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] { display: inline-block; padding: 0.5em; max-width: 100%; border: 1px solid #a6a6a6; background-image: none; -webkit-transition: border-color ease-in-out 0.1s, -webkit-box-shadow ease-in-out 0.1s; transition: border-color ease-in-out 0.1s, box-shadow ease-in-out 0.1s; }
-select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus { outline: none; border-color: #16193b; -webkit-box-shadow: 0 0 0.375em #16193b; box-shadow: 0 0 0.375em #16193b; }
+select, textarea, input[type='text'], input[type='password'], input[type='datetime'], input[type='datetime-local'], input[type='date'], input[type='month'], input[type='time'], input[type='week'], input[type='number'], input[type='email'], input[type='url'], input[type='search'], input[type='tel'], input[type='color'] { display: inline-block; padding: 0.5em; max-width: 100%; border: 1px solid #a6a6a6; background-image: none; -webkit-transition: border-color ease-in-out 0.1s, -webkit-box-shadow ease-in-out 0.1s; transition: border-color ease-in-out 0.1s, box-shadow ease-in-out 0.1s; }
+select:focus, textarea:focus, input[type='text']:focus, input[type='password']:focus, input[type='datetime']:focus, input[type='datetime-local']:focus, input[type='date']:focus, input[type='month']:focus, input[type='time']:focus, input[type='week']:focus, input[type='number']:focus, input[type='email']:focus, input[type='url']:focus, input[type='search']:focus, input[type='tel']:focus, input[type='color']:focus { outline: none; border-color: #16193b; -webkit-box-shadow: 0 0 0.375em #16193b; box-shadow: 0 0 0.375em #16193b; }
 
-input[type="radio"], input[type="checkbox"] { margin-top: 1px \9; line-height: normal; }
-input[type="radio"] + label, input[type="checkbox"] + label { display: inline-block; }
+input[type='radio'], input[type='checkbox'] { margin-top: 1px \9; line-height: normal; }
+input[type='radio'] + label, input[type='checkbox'] + label { display: inline-block; }
 
-input[type="file"] { display: block; }
+input[type='file'] { display: block; }
 
-input[type="range"] { display: block; width: 100%; }
+input[type='range'] { display: block; width: 100%; }
 
 select[multiple], select[size] { height: auto; }
 
-input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focus { border: 3px solid red; }
+input[type='file']:focus, input[type='radio']:focus, input[type='checkbox']:focus { border: 3px solid red; }
 
 textarea { height: auto; }
 
@@ -150,7 +150,7 @@ a:hover, a:focus, .a:hover, .a:focus { color: #16193b; text-decoration: none; }
 .a--reversed:hover, .a--reversed:focus { text-decoration: underline; }
 
 /** Style tel anchors like normal text on big screens (big screen most likely not mobile) */
-@media (min-width: 480px) { a[href^="tel"], a[href^="tel"]:hover, a[href^="tel"]:focus { color: #222222; text-decoration: none; cursor: default; } }
+@media (min-width: 480px) { a[href^='tel'], a[href^='tel']:hover, a[href^='tel']:focus { color: #222222; text-decoration: none; cursor: default; } }
 /*------------------------------------*\ $WHITESPACE
 \*------------------------------------*/
 /** Add whitespace around some block elements */
@@ -218,8 +218,8 @@ table table { margin-bottom: 0; }
 .u-hidden { display: none !important; visibility: hidden; }
 
 /** Hide only visually, but have it available for screenreaders: h5bp.com/v */
-.u-visuallyhidden { width: 1px; height: 1px; margin: -1px; padding: 0; position: absolute; overflow: hidden; border: 0; clip: rect(0 0 0 0); }
-.u-visuallyhidden.focusable:active, .u-visuallyhidden.focusable:focus { width: auto; height: auto; margin: 0; position: static; overflow: visible; clip: auto; }
+.u-visuallyhidden { position: absolute; overflow: hidden; clip: rect(0 0 0 0); margin: -1px; padding: 0; width: 1px; height: 1px; border: 0; }
+.u-visuallyhidden.focusable:active, .u-visuallyhidden.focusable:focus { position: static; overflow: visible; clip: auto; margin: 0; width: auto; height: auto; }
 
 /** Hide visually and from screenreaders, but maintain layout */
 .u-invisible { visibility: hidden; }
