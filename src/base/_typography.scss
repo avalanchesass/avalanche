@@ -122,7 +122,7 @@ address,
 fieldset,
 blockquote {
   margin-top: 0;
-  margin-bottom: $spacing-m;
+  margin-bottom: (($font-base-line-height / $font-base-size) * 1em);
 }
 
 ul, ol, dl {

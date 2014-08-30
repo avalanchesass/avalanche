@@ -201,7 +201,7 @@ a:hover, a:focus, .a:hover, .a:focus { color: #16193b; text-decoration: none; }
 /*------------------------------------*\ $WHITESPACE
 \*------------------------------------*/
 /** Add whitespace around some block elements */
-p, ul, ol, dl, pre, form, table, figure, address, fieldset, blockquote { margin-top: 0; margin-bottom: 1.25em; }
+p, ul, ol, dl, pre, form, table, figure, address, fieldset, blockquote { margin-top: 0; margin-bottom: 1.5em; }
 
 ul, ol, dl { padding-left: 1.5em; }
 
