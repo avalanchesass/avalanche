@@ -47,7 +47,7 @@ html {
 }
 
 .menu__controls {
-  @media (min-width: $breakpoint-m) {
+  @media (min-width: $cmp-menu-mobile-breakpoint) {
     display: none;
   }
 }
@@ -94,7 +94,7 @@ html {
     @extend .u-cf;
   }
 
-  @media (max-width: $breakpoint-m-max) {
+  @media (max-width: ($cmp-menu-mobile-breakpoint - 1)) {
     .menu__list--level1 {
       height: 0;
       transform: scale(1, 0);
@@ -106,7 +106,7 @@ html {
     }
   }
 
-  @media (min-width: $breakpoint-m) {
+  @media (min-width: $cmp-menu-mobile-breakpoint) {
     .menu__list--level1 .menu__list {
       position: absolute;
       visibility: hidden;

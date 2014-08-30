@@ -230,6 +230,9 @@ $cmp-button-function-disabled: false;
  */
 $cmp-menu: false;
 
+// Breakpoint for mobile version of menu
+$cmp-menu-mobile-breakpoint: $breakpoint-m;
+
 /**
  * Island
  */
