@@ -10,7 +10,7 @@ var gutil        = require('gulp-util');
 
 // Styles
 gulp.task('styles', function () {
-  return gulp.src('scss/**/*.scss')
+  return gulp.src('src/**/*.scss')
     .pipe(sass({ style: 'compact', precision: 7, sourcemap: true }))
     .on('error', gutil.log)
     .pipe(autoprefixer('last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'ios 6', 'android 4'))
