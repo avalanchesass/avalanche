@@ -7,6 +7,7 @@
  * LIST-RESET..........
  * SPACING.............
  * VISIBILITY..........
+ * DISPLAY.............
  */
 
 
@@ -160,4 +161,22 @@
  */
 .u-invisible {
   visibility: hidden;
+}
+
+
+
+/*------------------------------------*\
+  $DISPLAY
+\*------------------------------------*/
+
+.u-display-block {
+  display: block;
+}
+
+.u-display-inline {
+  display: inline;
+}
+
+.u-display-inline-block {
+  display: inline-block;
 }
