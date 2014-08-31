@@ -164,9 +164,14 @@ li ul, li ol, li dl { margin-bottom: 0; }
 /** no margin for nested tables */
 table table { margin-bottom: 0; }
 
+/** Normalize default font related tags */
+b, strong { font-weight: 700; }
+
+small { font-size: 0.85em; }
+
 /*------------------------------------*\ UTILITY
 \*------------------------------------*/
-/** CONTENTS CLEARFIX............ LIST-RESET.......... SPACING............. VISIBILITY.......... */
+/** CONTENTS CLEARFIX............ LIST-RESET.......... SPACING............. VISIBILITY.......... DISPLAY............. */
 /*------------------------------------*\ CLEARFIX
 \*------------------------------------*/
 /** Clearfix Contain floats */
@@ -219,10 +224,18 @@ table table { margin-bottom: 0; }
 
 /** Hide only visually, but have it available for screenreaders: h5bp.com/v */
 .u-visuallyhidden { position: absolute; overflow: hidden; clip: rect(0 0 0 0); margin: -1px; padding: 0; width: 1px; height: 1px; border: 0; }
-.u-visuallyhidden.focusable:active, .u-visuallyhidden.focusable:focus { position: static; overflow: visible; clip: auto; margin: 0; width: auto; height: auto; }
+.u-visuallyhidden.u-focusable:active, .u-visuallyhidden.u-focusable:focus { position: static; overflow: visible; clip: auto; margin: 0; width: auto; height: auto; }
 
 /** Hide visually and from screenreaders, but maintain layout */
 .u-invisible { visibility: hidden; }
+
+/*------------------------------------*\ $DISPLAY
+\*------------------------------------*/
+.u-display-block { display: block; }
+
+.u-display-inline { display: inline; }
+
+.u-display-inline-block { display: inline-block; }
 
 /*------------------------------------*\ $COMPONENTS
 \*------------------------------------*/

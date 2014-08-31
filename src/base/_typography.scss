@@ -151,3 +151,15 @@ table {
     margin-bottom: 0;
   }
 }
+
+/**
+ * Normalize default font related tags
+ */
+b,
+strong {
+  font-weight: $font-a-weight-bold;
+}
+
+small {
+  font-size: $font-size-s;
+}
