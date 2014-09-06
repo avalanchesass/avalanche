@@ -1,0 +1,182 @@
+/*------------------------------------*\
+  UTILITY
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * CLEARFIX............
+ * LIST-RESET..........
+ * SPACING.............
+ * VISIBILITY..........
+ * DISPLAY.............
+ */
+
+
+
+/*------------------------------------*\
+  CLEARFIX
+\*------------------------------------*/
+/**
+ * Clearfix
+ * Contain floats
+ */
+.u-cf {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: ' ';
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+
+/*------------------------------------*\
+  $LIST-RESET
+\*------------------------------------*/
+
+.u-list-reset {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+
+
+/*------------------------------------*\
+  $SPACING
+\*------------------------------------*/
+/**
+ * Bottom
+ */
+.u-spacing--bottom--xs {
+  margin-bottom: $spacing-xs;
+}
+
+.u-spacing--bottom--s {
+  margin-bottom: $spacing-s;
+}
+
+.u-spacing--bottom--m {
+  margin-bottom: $spacing-m;
+}
+
+.u-spacing--bottom--l {
+  margin-bottom: $spacing-l;
+}
+
+.u-spacing--bottom--xl {
+  margin-bottom: $spacing-xl;
+}
+
+.u-spacing--bottom--xxl {
+  margin-bottom: $spacing-xxl;
+}
+
+.u-spacing--bottom--xxxl {
+  margin-bottom: $spacing-xxxl;
+}
+
+.u-spacing--bottom--off {
+  margin-bottom: 0;
+}
+
+/**
+ * Inner
+ */
+.u-spacing--inner--both--xs {
+  padding-top: $spacing-xs;
+  padding-bottom: $spacing-xs;
+}
+
+.u-spacing--inner--both--s {
+  padding-top: $spacing-s;
+  padding-bottom: $spacing-s;
+}
+
+.u-spacing--inner--both--m {
+  padding-top: $spacing-m;
+  padding-bottom: $spacing-m;
+}
+
+.u-spacing--inner--both--l {
+  padding-top: $spacing-l;
+  padding-bottom: $spacing-l;
+}
+
+.u-spacing--inner--both--xl {
+  padding-top: $spacing-xl;
+  padding-bottom: $spacing-xl;
+}
+
+.u-spacing--inner--both--xxl {
+  padding-top: $spacing-xxl;
+  padding-bottom: $spacing-xxl;
+}
+
+.u-spacing--inner--both--xxxl {
+  padding-top: $spacing-xxxl;
+  padding-bottom: $spacing-xxxl;
+}
+
+
+
+/*------------------------------------*\
+  $VISIBILITY
+\*------------------------------------*/
+/**
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.u-hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/**
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.u-visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  &.u-focusable:active,
+  &.u-focusable:focus {
+    position: static;
+    overflow: visible;
+    clip: auto;
+    margin: 0;
+    width: auto;
+    height: auto;
+  }
+}
+
+/**
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.u-invisible {
+  visibility: hidden;
+}
+
+
+
+/*------------------------------------*\
+  $DISPLAY
+\*------------------------------------*/
+
+.u-display-block {
+  display: block;
+}
+
+.u-display-inline {
+  display: inline;
+}
+
+.u-display-inline-block {
+  display: inline-block;
+}

@@ -32,7 +32,6 @@
   @if unit($px) == px {
     @return (strip-units($px) / strip-units($base)) * 1em;
   }
-
   @return $px;
 }
 
@@ -49,7 +48,6 @@
   @if unit($em) == em {
     @return (strip-units($em) * strip-units($base)) * 1px;
   }
-
   @return $em;
 }
 
@@ -65,6 +63,5 @@
   @if unit($em) == em {
     @return strip-units($em) * 1rem;
   }
-
   @return $em;
 }

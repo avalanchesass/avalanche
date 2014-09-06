@@ -1,35 +1,41 @@
 // Load plugins
 var gulp         = require('gulp');
-var sass         = require('gulp-ruby-sass');
 var autoprefixer = require('gulp-autoprefixer');
-var clean        = require('gulp-clean');
-var gutil        = require('gulp-util');
+var cssshrink    = require('gulp-cssshrink');
 var livereload   = require('gulp-livereload');
+var minifyCSS    = require('gulp-minify-css');
+var rename       = require('gulp-rename');
+var sass         = require('gulp-ruby-sass');
+var gutil        = require('gulp-util');
 
 // Styles
 gulp.task('styles', function () {
-  return gulp.src('src/avalanche.scss')
-    .pipe(sass({ style: 'expanded', precision: 7, sourcemap: true }))
+  return gulp.src('src/**/*.scss')
+    .pipe(sass({ style: 'compact', precision: 7, sourcemap: true }))
     .on('error', gutil.log)
     .pipe(autoprefixer('last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'ios 6', 'android 4'))
     .on('error', gutil.log)
+    .pipe(gulp.dest('dist'));
+});
+
+// Minify
+gulp.task('minify', ['styles'], function () {
+  return gulp.src('dist/avalanche.css')
+    .pipe(minifyCSS())
+    .pipe(cssshrink())
+    .pipe(rename(function (path) {
+      path.basename += '.min';
+    }))
     .pipe(gulp.dest('dist'))
     .pipe(livereload());
 });
 
-// Clean
-gulp.task('clean', function () {
-  return gulp.src(['dist'], {read: false})
-    .pipe(clean());
-});
-
 // Watch
 gulp.task('watch', function () {
-  // Watch .scss files
-  gulp.watch('src/*.scss', ['styles']);
+  gulp.watch('src/**/*.scss', ['styles', 'minify']);
 });
 
-// Default task
-gulp.task('default', ['clean'], function () {
-  gulp.start('styles');
+// Default
+gulp.task('default', function () {
+  gulp.start('watch');
 });

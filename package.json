@@ -5,10 +5,22 @@
   "license": "GPL v2",
   "devDependencies": {
     "gulp": "~3.5.5",
-    "gulp-ruby-sass": "~0.4.0",
-    "gulp-clean": "~0.2.4",
     "gulp-autoprefixer": "0.0.6",
-    "gulp-util": "~2.2.14",
-    "gulp-livereload": "~1.2.0"
-  }
+    "gulp-cssshrink": "^0.1.4",
+    "gulp-livereload": "~1.2.0",
+    "gulp-minify-css": "^0.3.7",
+    "gulp-rename": "^1.2.0",
+    "gulp-ruby-sass": "~0.4.0",
+    "gulp-util": "~2.2.14"
+  },
+  "description": "SASS / CSS Framework",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maoberlehner/avalanche"
+  },
+  "bugs": {
+    "url": "https://github.com/maoberlehner/avalanche/issues"
+  },
+  "homepage": "https://github.com/maoberlehner/avalanche"
 }

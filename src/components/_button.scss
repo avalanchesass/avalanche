@@ -1,0 +1,203 @@
+@if $cmp-button {
+
+/*------------------------------------*\
+  BUTTON
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * BASE................
+ * SIZES...............
+ * FONT-SIZES..........
+ * FUNCTIONS...........
+ */
+
+
+
+/*------------------------------------*\
+  $BASE
+\*------------------------------------*/
+
+.button {
+  display: inline-block;
+  margin: 0;
+  padding: $spacing-xs $spacing-s;
+  border: none;
+  background: $cs-a;
+  vertical-align: top;
+  white-space: nowrap;
+  font-size: 100%;
+  font-family: inherit;
+  cursor: pointer;
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    color: #fff;
+    text-decoration: none;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    background: mix($cs-a, #fff, 70%);
+  }
+}
+
+
+
+/*------------------------------------*\
+  $SIZES
+\*------------------------------------*/
+/**
+ * Button size modifiers.
+ *
+ * These all follow the same sizing rules as above; text is 1em, space around it
+ * remains uniform.
+ */
+@if $cmp-button-size-s {
+  .button--s {
+    padding: 0 $spacing-xs;
+  }
+}
+
+@if $cmp-button-size-l {
+  .button--l {
+    padding: $spacing-s $spacing-m;
+  }
+}
+
+@if $cmp-button-size-xl {
+  .button--xl {
+    padding: $spacing-m $spacing-l;
+  }
+}
+
+@if $cmp-button-size-full {
+  /**
+   * These buttons will fill the entirety of their container.
+   */
+  .button--full {
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+/*------------------------------------*\
+  $FONT-SIZES
+\*------------------------------------*/
+/**
+ * Button font-size modifiers.
+ */
+@if $cmp-button-font-size-s {
+  .button--font--s {
+    font-size: $font-size-s;
+  }
+}
+
+@if $cmp-button-font-size-l {
+  .button--font--l {
+    font-size: $font-size-l;
+  }
+}
+
+@if $cmp-button-font-size-xl {
+  .button--font--xl {
+    font-size: $font-size-xl;
+  }
+}
+
+
+
+/*------------------------------------*\
+  $FUNCTIONS
+\*------------------------------------*/
+
+@if $cmp-button-function-positive {
+  /**
+   * Positive actions; e.g. sign in, purchase, submit, etc.
+   */
+  .button--positive {
+    background: $cs-positive;
+    color: #fff;
+    &:hover,
+    &:focus,
+    &:active {
+      background: mix($cs-positive, #fff, 70%);
+    }
+  }
+}
+
+@if $cmp-button-function-neutral {
+  /**
+   * Neutral
+   */
+  .button--neutral {
+    background: $cs-neutral;
+    color: #fff;
+    &:hover,
+    &:focus,
+    &:active {
+      background: mix($cs-neutral, #fff, 70%);
+    }
+  }
+}
+
+@if $cmp-button-function-cautious {
+  /**
+   * Cautious
+   */
+  .button--cautious {
+    background: $cs-cautious;
+    color: #fff;
+    &:hover,
+    &:focus,
+    &:active {
+      background: mix($cs-cautious, #fff, 70%);
+    }
+  }
+}
+
+@if $cmp-button-function-negative {
+  /**
+   * Negative actions; e.g. close account, delete photo, remove friend, etc.
+   */
+  .button--negative {
+    background: $cs-negative;
+    color: #fff;
+    &:hover,
+    &:focus,
+    &:active {
+      background: mix($cs-negative, #fff, 70%);
+    }
+  }
+}
+
+@if $cmp-button-function-inactive or $cmp-button-function-disabled {
+  /**
+   * Inactive and disabled buttons.
+   */
+  .button--inactive,
+  .button--disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $cs-grey-light;
+      color: $cs-grey-dark;
+    }
+  }
+  .button--disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      cursor: text;
+    }
+  }
+}
+
+} // endif

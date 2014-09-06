@@ -4,6 +4,7 @@
 /**
  * CONTENTS
  * CONTAINER...........
+ * BOX-SIZING-RESET....
  */
 
 
@@ -16,4 +17,23 @@
   margin: 0 auto;
   padding: 0 1em;
   max-width: $layout-max-width;
+}
+
+
+
+/*------------------------------------*\
+  $BOX-SIZING-RESET
+\*------------------------------------*/
+
+@if $layout-box-sizing-reset {
+  html {
+    box-sizing: border-box;
+  }
+  * {
+    &,
+    &:before,
+    &:after {
+      box-sizing: inherit;
+    }
+  }
 }
