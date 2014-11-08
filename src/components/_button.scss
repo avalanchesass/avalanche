@@ -31,7 +31,8 @@
   &,
   &:hover,
   &:focus,
-  &:active {
+  &:active,
+  &:visited {
     outline: none;
     color: #fff;
     text-decoration: none;
