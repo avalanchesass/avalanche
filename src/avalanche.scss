@@ -49,8 +49,8 @@ $cs-negative: #b94a48;
  * 3 Shades of Grey
  */
 $cs-grey:       #CCCCCC;
-$cs-grey-dark:  darken($cs-grey, 15%);
-$cs-grey-light: lighten($cs-grey, 15%);
+$cs-grey-dark:  darken($cs-grey, 5%);
+$cs-grey-light: lighten($cs-grey, 5%);
 
 
 
@@ -67,8 +67,8 @@ $cs-grey-light: lighten($cs-grey, 15%);
  *
  * 1. must be in px, do not use in your styles
  */
-$font-base-size:        18px; /* [1] */
-$font-base-line-height: 27px; /* [1] */
+$font-base-size:        16px; /* [1] */
+$font-base-line-height: 24px; /* [1] */
 $font-base-color:       #222;
 
 /**
@@ -174,7 +174,7 @@ $spacing-xxxl: 5em;
   $LAYOUT
 \*------------------------------------*/
 
-$layout-max-width: 52em;
+$layout-max-width: 62em;
 $layout-box-sizing-reset: true;
 
 
