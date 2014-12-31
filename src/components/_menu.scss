@@ -25,8 +25,10 @@ html {
 }
 
 .menu__list {
-  @extend .u-list-reset;
   margin-bottom: 0;
+  background: $cs-a;
+
+  @extend .u-list-reset;
 }
 
 .menu__list--level1 {
@@ -40,6 +42,12 @@ html {
 .menu__link {
   display: block;
   text-decoration: none;
+  &,
+  &:visited,
+  &:hover,
+  &:focus {
+    color: $cs-a-contrast;
+  }
 }
 
 .menu__checkbox {
@@ -61,15 +69,11 @@ html {
 
   .menu--off-canvas {
     .menu__controls {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
       display: block;
-      width: 100%;
+      float: right;
     }
     .menu__list--level1 {
-      position: absolute;
+      position: fixed;
       top: 0;
       bottom: 0;
       left: 0;
@@ -115,7 +119,6 @@ html {
         visibility: visible;
         opacity: 1;
       }
-
       .menu__item--level1 {
         float: left;
       }
@@ -124,7 +127,7 @@ html {
 
   @if $cmp-menu-horizontal-responsive {
     .menu--horizontal-responsive {
-      @media (max-width: ($cmp-menu-mobile-breakpoint - 1)) {
+      @media (max-width: avalanche-breakpointmax($cmp-menu-mobile-breakpoint)) {
         .menu__list--level1 {
           height: 0;
           transform: scale(1, 0);
@@ -133,6 +136,9 @@ html {
         .menu__checkbox:checked + .menu__list--level1 {
           height: auto;
           transform: scale(1, 1);
+        }
+        .menu__item--level1 {
+          float: none;
         }
       }
       @media (min-width: $cmp-menu-mobile-breakpoint) {
@@ -151,7 +157,6 @@ html {
           visibility: visible;
           opacity: 1;
         }
-
         .menu__item--level1 {
           float: left;
         }

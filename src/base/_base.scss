@@ -14,8 +14,8 @@
 \*------------------------------------*/
 
 html {
-  font-size: strip-units($font-base-size) / (16 / 100) * 1%;
-  line-height: strip-units($font-base-line-height / $font-base-size);
+  font-size: avalanche-strip-units($font-base-size) / (16 / 100) * 1%;
+  line-height: avalanche-strip-units($font-base-line-height / $font-base-size);
 }
 
 html,
@@ -36,7 +36,7 @@ hr {
   padding: 0;
   height: 1px;
   border: 0;
-  border-top: 1px solid $cs-grey;
+  border-top: 1px solid $cs-grey-b;
 }
 
 /*

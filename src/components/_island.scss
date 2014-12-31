@@ -7,7 +7,7 @@
  * CONTENTS
  * BASE................
  * FUNCTIONS...........
- * CS..................
+ * COLOR-SHEME.........
  */
 
 
@@ -20,7 +20,7 @@
   @extend .u-cf;
   display: block;
   padding: $spacing-m;
-  background: $cs-grey-light;
+  background: $cs-grey-a;
   & > :last-child {
     margin-bottom: 0;
   }
@@ -75,7 +75,7 @@
 
 
 /*------------------------------------*\
-  $CS
+  $COLOR-SHEME
 \*------------------------------------*/
 
 @if $cmp-island-cs-a {

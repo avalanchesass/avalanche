@@ -43,7 +43,7 @@ $cmp-grid-base-size: (100% / $cmp-grid-item-count);
   @if $cmp-grid-size-m == false {
     margin-left: -$cmp-grid-spacing-m;
   }
-  @media (max-width: $breakpoint-m-max) {
+  @media (max-width: $breakpoint-max-m) {
     margin-left: -$cmp-grid-spacing-s;
   }
 }
@@ -57,7 +57,7 @@ $cmp-grid-base-size: (100% / $cmp-grid-item-count);
   @if $cmp-grid-size-m == false {
     padding-left: $cmp-grid-spacing-m;
   }
-  @media (max-width: $breakpoint-m-max) {
+  @media (max-width: $breakpoint-max-m) {
     padding-left: $cmp-grid-spacing-s;
   }
 }

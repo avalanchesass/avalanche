@@ -1,0 +1,70 @@
+source: 'avalanche.scss'
+title: 'Avalanche - Living Style Guide'
+
+header: |
+  <div class="header">
+    <img src="logo.svg">
+  </div>
+
+styleguide-scss: |
+  .font-a {
+    font-family: $font-a-family;
+  }
+  .font-b {
+    font-family: $font-b-family;
+  }
+  strong {
+    font-weight: $font-a-weight-bold !important;
+  }
+  [class*="grid__item"]:after {
+    content: 'Grid item';
+    display: block;
+    background: $cs-a;
+    color: $cs-a-contrast;
+    padding: 0.25em 0.5em;
+  }
+  button {
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+  .livingstyleguide--example {
+    position: static;
+  }
+
+style:
+  base-font: $font-a-family
+  base-font-size: $font-base-size
+  base-font-weight: 'normal'
+  base-line-height: '1.5'
+  base-text-align: 'left'
+  page-title-font-size: '2em'
+  headline-font: $font-b-family
+  headline-font-size: '1.5em'
+  headline-text-align: 'left'
+  sub-headline-font-size: '1.125em'
+  sub-sub-headline-font-size: '1em'
+  headline-font-weight: 'bold'
+  headline-line-height: '1.1'
+  code-font: 'Courier, "Courier New", monospace'
+  code-font-size: '0.85em'
+  code-font-weight: 'normal'
+  code-line-height: '1.5'
+  background-color: '#f7f7f7'
+  border-width: '1px'
+  border-color: 'silver'
+  border-radius: '0'
+  width: '720px'
+  gap-width: '10px'
+  full-width-padding: '10px'
+  code-background-color: '#dddddd'
+  code-color: '#505050'
+  code-border-width: '1px'
+  code-border-color: 'silver'
+  code-border-radius: '0'
+  color-swatch-color: 'black'
+  color-swatch-border-width: '4px'
+  color-swatch-border-color: 'rgba(black, 0.05)'
+  color-swatch-border-radius: '50%'
+  color-swatches-per-line: '2'
+  highlight-color: '#f6ffa3'
+  highlight-border-radius: '2px'

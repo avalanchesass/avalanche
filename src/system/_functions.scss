@@ -7,6 +7,7 @@
  * PIXEL2EM............
  * EM2PIXEL............
  * EM2REM..............
+ * BREAKPOINTMAX.......
  */
 
 
@@ -15,7 +16,7 @@
   $STRIP-UNITS
 \*------------------------------------*/
 
-@function strip-units($number) {
+@function avalanche-strip-units($number) {
   @return $number / ($number * 0 + 1);
 }
 
@@ -28,9 +29,9 @@
  * Convert a px value to em
  * based on $font-base-size
  */
-@function pixel2em($px, $base: $font-base-size) {
+@function avalanche-pixel2em($px, $base: $font-base-size) {
   @if unit($px) == px {
-    @return (strip-units($px) / strip-units($base)) * 1em;
+    @return (avalanche-strip-units($px) / avalanche-strip-units($base)) * 1em;
   }
   @return $px;
 }
@@ -44,9 +45,9 @@
  * Convert a em value to px
  * based on $font-base-size
  */
-@function em2pixel($em, $base: $font-base-size) {
+@function avalanche-em2pixel($em, $base: $font-base-size) {
   @if unit($em) == em {
-    @return (strip-units($em) * strip-units($base)) * 1px;
+    @return (avalanche-strip-units($em) * avalanche-strip-units($base)) * 1px;
   }
   @return $em;
 }
@@ -59,9 +60,25 @@
 /**
  * Convert a em value to rem
  */
-@function em2rem($em) {
+@function avalanche-em2rem($em) {
   @if unit($em) == em {
-    @return strip-units($em) * 1rem;
+    @return avalanche-strip-units($em) * 1rem;
   }
   @return $em;
+}
+
+
+
+/*------------------------------------*\
+  $BREAKPOINTMAX
+\*------------------------------------*/
+/**
+ * Get a max breakpoint
+ */
+@function avalanche-breakpointmax($breakpoint, $base: $font-base-size) {
+  @if unit($breakpoint) == em {
+    $em1px: 1 / avalanche-strip-units($base);
+    @return $breakpoint - $em1px;
+  }
+  @return $breakpoint - 1;
 }

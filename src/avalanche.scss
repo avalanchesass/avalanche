@@ -1,3 +1,5 @@
+@import 'system/functions';
+
 /*------------------------------------*\
   $VARIABLES
 \*------------------------------------*/
@@ -19,7 +21,7 @@
 \*------------------------------------*/
 /**
  * Basic colors
- * Fancy generator: https://kuler.adobe.com
+ * Fancy generator: http://coolors.co/
  */
 $cs-a: #16193B;
 $cs-a-contrast: #fff;
@@ -38,7 +40,7 @@ $cs-e-contrast: #fff;
 
 /**
  * Colors for alerts
- * e.g. success, error, info
+ * e.g. success, error, info,...
  */
 $cs-positive: #468847;
 $cs-neutral:  #3A87AD;
@@ -46,11 +48,11 @@ $cs-cautious: #c09853;
 $cs-negative: #b94a48;
 
 /**
- * 3 Shades of Grey
+ * Grey
  */
-$cs-grey:       #CCCCCC;
-$cs-grey-dark:  darken($cs-grey, 5%);
-$cs-grey-light: lighten($cs-grey, 5%);
+$cs-grey-a: #efefef;
+$cs-grey-b: darken($cs-grey-a, 10%);
+$cs-grey-c: darken($cs-grey-b, 10%);
 
 
 
@@ -90,7 +92,7 @@ $font-size-h5: $font-size-m;
 $font-size-h6: $font-size-m;
 
 /**
- * Primary font
+ * Font A
  */
 $font-a-family: 'Helvetica Neue', sans-serif;
 
@@ -105,9 +107,9 @@ $font-a-weight-extra-bold:  800;
 $font-a-weight-ultra-bold:  900;
 
 /**
- * Secondary font
+ * Font B
  */
-$font-b-family: serif;
+$font-b-family: Futura, 'Trebuchet MS', sans-serif;
 
 $font-b-weight-thin:        100;
 $font-b-weight-extra-light: 200;
@@ -139,27 +141,23 @@ $selection-color:      $cs-a-contrast;
 /*------------------------------------*\
   $BREAKPOINTS
 \*------------------------------------*/
-/**
- * Breakpoints
- */
-$breakpoint-s:  480px;
-$breakpoint-m:  720px;
-$breakpoint-l:  960px;
-$breakpoint-xl: 1200px;
 
-$breakpoint-s-max:  $breakpoint-s - 1;
-$breakpoint-m-max:  $breakpoint-m - 1;
-$breakpoint-l-max:  $breakpoint-l - 1;
-$breakpoint-xl-max: $breakpoint-xl - 1;
+$breakpoint-s:  30em;
+$breakpoint-m:  45em;
+$breakpoint-l:  60em;
+$breakpoint-xl: 75em;
+
+$breakpoint-max-s:  avalanche-breakpointmax($breakpoint-s);
+$breakpoint-max-m:  avalanche-breakpointmax($breakpoint-m);
+$breakpoint-max-l:  avalanche-breakpointmax($breakpoint-l);
+$breakpoint-max-xl: avalanche-breakpointmax($breakpoint-xl);
 
 
 
 /*------------------------------------*\
   $SPACING
 \*------------------------------------*/
-/**
- * Basic spacing
- */
+
 $spacing-xs:   0.5em;
 $spacing-s:    1em;
 $spacing-m:    1.25em;
@@ -185,15 +183,15 @@ $layout-box-sizing-reset: true;
 /**
  * Grid
  */
-$cmp-grid: false;
+$cmp-grid: true;
 
 $cmp-grid-item-count: 12;
 
 // Sizes
-$cmp-grid-size-s:  false;
-$cmp-grid-size-m:  false;
-$cmp-grid-size-l:  false;
-$cmp-grid-size-xl: false;
+$cmp-grid-size-s:  true;
+$cmp-grid-size-m:  true;
+$cmp-grid-size-l:  true;
+$cmp-grid-size-xl: true;
 
 // Spacing between items
 $cmp-grid-spacing-s:  $spacing-s;
@@ -204,67 +202,67 @@ $cmp-grid-spacing-xl: $spacing-m;
 /**
  * Button
  */
-$cmp-button: false;
+$cmp-button: true;
 
 // Sizes
-$cmp-button-size-s:    false;
-$cmp-button-size-l:    false;
-$cmp-button-size-xl:   false;
-$cmp-button-size-full: false;
+$cmp-button-size-s:    true;
+$cmp-button-size-l:    true;
+$cmp-button-size-xl:   true;
+$cmp-button-size-full: true;
 
 // Font sizes
-$cmp-button-font-size-s:  false;
-$cmp-button-font-size-l:  false;
-$cmp-button-font-size-xl: false;
+$cmp-button-font-size-s:  true;
+$cmp-button-font-size-l:  true;
+$cmp-button-font-size-xl: true;
 
 // Functions
-$cmp-button-function-positive: false;
-$cmp-button-function-neutral:  false;
-$cmp-button-function-cautious: false;
-$cmp-button-function-negative: false;
-$cmp-button-function-inactive: false;
-$cmp-button-function-disabled: false;
+$cmp-button-function-positive: true;
+$cmp-button-function-neutral:  true;
+$cmp-button-function-cautious: true;
+$cmp-button-function-negative: true;
+$cmp-button-function-inactive: true;
+$cmp-button-function-disabled: true;
 
 /**
  * Menu
  */
-$cmp-menu: false;
+$cmp-menu: true;
 
 // Breakpoint for mobile version of menu
 $cmp-menu-mobile-breakpoint: $breakpoint-m;
 
 // Off canvas
-$cmp-menu-off-canvas: false;
+$cmp-menu-off-canvas: true;
 
 // Horizontal
-$cmp-menu-horizontal: false;
-$cmp-menu-horizontal-responsive: false;
+$cmp-menu-horizontal: true;
+$cmp-menu-horizontal-responsive: true;
 
 // Menu vertical
-$cmp-menu-vertical: false;
+$cmp-menu-vertical: true;
 
 /**
  * Island
  */
-$cmp-island: false;
+$cmp-island: true;
 
 // Functions
-$cmp-island-function-positive: false;
-$cmp-island-function-neutral:  false;
-$cmp-island-function-cautious: false;
-$cmp-island-function-negative: false;
+$cmp-island-function-positive: true;
+$cmp-island-function-neutral:  true;
+$cmp-island-function-cautious: true;
+$cmp-island-function-negative: true;
 
 // Color Sheme
-$cmp-island-cs-a: false;
-$cmp-island-cs-b: false;
-$cmp-island-cs-c: false;
-$cmp-island-cs-d: false;
-$cmp-island-cs-e: false;
+$cmp-island-cs-a: true;
+$cmp-island-cs-b: true;
+$cmp-island-cs-c: true;
+$cmp-island-cs-d: true;
+$cmp-island-cs-e: true;
 
 /**
  * Media
  */
-$cmp-media: false;
+$cmp-media: true;
 
 
 
