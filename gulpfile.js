@@ -14,7 +14,7 @@ gulp.task('styles', function () {
   return gulp.src('src/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass())
-    .pipe(autoprefixer('last 2 versions'))
+    .pipe(autoprefixer())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('dist'));
 });
