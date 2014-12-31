@@ -233,6 +233,16 @@ $cmp-menu: false;
 // Breakpoint for mobile version of menu
 $cmp-menu-mobile-breakpoint: $breakpoint-m;
 
+// Off canvas
+$cmp-menu-off-canvas: false;
+
+// Horizontal
+$cmp-menu-horizontal: false;
+$cmp-menu-horizontal-responsive: false;
+
+// Menu vertical
+$cmp-menu-vertical: false;
+
 /**
  * Island
  */

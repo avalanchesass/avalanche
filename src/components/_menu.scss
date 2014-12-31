@@ -54,88 +54,123 @@ html {
 
 
 
-/*------------------------------------*\
-  $OFF CANVAS
-\*------------------------------------*/
+@if $cmp-menu-off-canvas {
+  /*------------------------------------*\
+    $OFF CANVAS
+  \*------------------------------------*/
 
-.menu--off-canvas {
-  .menu__controls {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    display: block;
-    width: 100%;
-  }
-  .menu__list--level1 {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    padding-top: $spacing-xl;
-    max-width: 20em;
-    width: 70%;
-    transform: translate(-100%, 0);
-  }
-  .menu__checkbox:checked + .menu__list--level1 {
-    transform: translate(0, 0);
-  }
-}
-
-
-
-/*------------------------------------*\
-  $HORIZONTAL
-\*------------------------------------*/
-
-.menu--horizontal {
-  .menu__list--level1 {
-    @extend .u-cf;
-  }
-  @media (max-width: ($cmp-menu-mobile-breakpoint - 1)) {
+  .menu--off-canvas {
+    .menu__controls {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      display: block;
+      width: 100%;
+    }
     .menu__list--level1 {
-      height: 0;
-      transform: scale(1, 0);
-      transform-origin: 0 0;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      padding-top: $spacing-xl;
+      max-width: 20em;
+      width: 70%;
+      transform: translate(-100%, 0);
     }
     .menu__checkbox:checked + .menu__list--level1 {
-      height: auto;
-      transform: scale(1, 1);
-    }
-  }
-  @media (min-width: $cmp-menu-mobile-breakpoint) {
-    .menu__list--level1 .menu__list {
-      position: absolute;
-      visibility: hidden;
-      opacity: 0;
-      transition: opacity 0.2s;
-    }
-    .menu__list--level1 .menu__list .menu__list {
-      top: 0;
-      left: 100%;
-    }
-    .menu__item:hover > .menu__list,
-    .menu__item:focus > .menu__list {
-      visibility: visible;
-      opacity: 1;
-    }
-
-    .menu__item--level1 {
-      float: left;
+      transform: translate(0, 0);
     }
   }
 }
 
 
 
-/*------------------------------------*\
-  $VERTICAL
-\*------------------------------------*/
+@if $cmp-menu-horizontal or $cmp-menu-horizontal-responsive {
+  /*------------------------------------*\
+    $HORIZONTAL
+  \*------------------------------------*/
 
-.menu--vertical {
-  // no styling necessary
-  // use this class to add your own stylings
-  // (but not here)
+  .menu--horizontal,
+  .menu--horizontal-responsive {
+    .menu__list--level1 {
+      @extend .u-cf;
+    }
+  }
+
+  @if $cmp-menu-horizontal {
+    .menu--horizontal {
+      .menu__list--level1 .menu__list {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+      .menu__list--level1 .menu__list .menu__list {
+        top: 0;
+        left: 100%;
+      }
+      .menu__item:hover > .menu__list,
+      .menu__item:focus > .menu__list {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .menu__item--level1 {
+        float: left;
+      }
+    }
+  }
+
+  @if $cmp-menu-horizontal-responsive {
+    .menu--horizontal-responsive {
+      @media (max-width: ($cmp-menu-mobile-breakpoint - 1)) {
+        .menu__list--level1 {
+          height: 0;
+          transform: scale(1, 0);
+          transform-origin: 0 0;
+        }
+        .menu__checkbox:checked + .menu__list--level1 {
+          height: auto;
+          transform: scale(1, 1);
+        }
+      }
+      @media (min-width: $cmp-menu-mobile-breakpoint) {
+        .menu__list--level1 .menu__list {
+          position: absolute;
+          visibility: hidden;
+          opacity: 0;
+          transition: opacity 0.2s;
+        }
+        .menu__list--level1 .menu__list .menu__list {
+          top: 0;
+          left: 100%;
+        }
+        .menu__item:hover > .menu__list,
+        .menu__item:focus > .menu__list {
+          visibility: visible;
+          opacity: 1;
+        }
+
+        .menu__item--level1 {
+          float: left;
+        }
+      }
+    }
+  }
+}
+
+
+
+@if $cmp-menu-vertical {
+  /*------------------------------------*\
+    $VERTICAL
+  \*------------------------------------*/
+
+  .menu--vertical {
+    // no styling necessary
+    // use this class to add your own stylings
+  }
 }
 
 } // endif

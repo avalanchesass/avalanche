@@ -145,7 +145,7 @@ $cmp-grid-base-size: (100% / $cmp-grid-item-count);
     }
 
     @for $i from 1 through $cmp-grid-item-count {
-      .grid__item--l--#{$i} {
+      .grid__item--xl--#{$i} {
         width: ($cmp-grid-base-size * $i);
       }
     }
