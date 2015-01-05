@@ -1,10 +1,10 @@
 # avalanche
-SASS / CSS Framework
+SASS / CSS Framework  
 https://github.com/maoberlehner/avalanche
 
 ### Author
-Markus Oberlehner
-Twitter: https://twitter.com/MaOberlehner
+Markus Oberlehner  
+Twitter: https://twitter.com/MaOberlehner  
 Work: Web Developer @ roromedia - http://www.roromedia.com
 
 ### License
