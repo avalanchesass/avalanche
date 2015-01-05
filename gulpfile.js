@@ -12,14 +12,22 @@ var sourcemaps       = require('gulp-sourcemaps');
 gulp.task('styles', function () {
   return gulp.src('src/**/*.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass())
-    .pipe(autoprefixer())
+      .pipe(sass())
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest('dist'));
+});
+
+// Prefix
+gulp.task('prefix', ['styles'], function () {
+  return gulp.src('dist/avalanche.css')
+    .pipe(sourcemaps.init({loadMaps: true}))
+      .pipe(autoprefixer())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('dist'));
 });
 
 // Minify
-gulp.task('minify', ['styles'], function () {
+gulp.task('minify', ['prefix'], function () {
   return gulp.src('dist/avalanche.css')
     .pipe(minifyCSS())
     .pipe(cssshrink())
@@ -32,7 +40,7 @@ gulp.task('minify', ['styles'], function () {
 
 // Watch
 gulp.task('watch', function () {
-  gulp.watch('src/**/*', ['styles', 'minify']);
+  gulp.watch('src/**/*', ['styles', 'prefix', 'minify']);
 });
 
 // Default
