@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/maoberlehner/cultusrego.git",
-                "reference": "8f6117060513916b9832e18ca16bb5f546417fb8"
+                "reference": "13b40a7772fcfcd880a738739a328ea2a018b322"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maoberlehner/cultusrego/zipball/8f6117060513916b9832e18ca16bb5f546417fb8",
-                "reference": "8f6117060513916b9832e18ca16bb5f546417fb8",
+                "url": "https://api.github.com/repos/maoberlehner/cultusrego/zipball/13b40a7772fcfcd880a738739a328ea2a018b322",
+                "reference": "13b40a7772fcfcd880a738739a328ea2a018b322",
                 "shasum": ""
             },
             "require": {
@@ -45,7 +45,7 @@
             "keywords": [
                 "styleguide"
             ],
-            "time": "2015-01-05 09:32:46"
+            "time": "2015-01-05 10:09:36"
         },
         {
             "name": "twig/twig",
