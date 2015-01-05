@@ -3,7 +3,6 @@ var gulp             = require('gulp');
 var autoprefixer     = require('gulp-autoprefixer');
 var cssshrink        = require('gulp-cssshrink');
 var livereload       = require('gulp-livereload');
-var livingstyleguide = require('gulp-livingstyleguide');
 var minifyCSS        = require('gulp-minify-css');
 var rename           = require('gulp-rename');
 var sass             = require('gulp-sass');
@@ -31,16 +30,9 @@ gulp.task('minify', ['styles'], function () {
     .pipe(livereload());
 });
 
-// Styleguide
-gulp.task('styleguide', function() {
-  gulp.src('src/styleguide.lsg')
-    .pipe(livingstyleguide())
-    .pipe(gulp.dest('styleguide'));
-});
-
 // Watch
 gulp.task('watch', function () {
-  gulp.watch('src/**/*', ['styleguide'/*, 'styles', 'minify'*/]);
+  gulp.watch('src/**/*', ['styles', 'minify']);
 });
 
 // Default

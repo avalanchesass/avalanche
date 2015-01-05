@@ -1,0 +1,1404 @@
+/*------------------------------------*\
+  FUNCTIONS
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * STRIP-UNITS.........
+ * PIXEL2EM............
+ * EM2PIXEL............
+ * EM2REM..............
+ * BREAKPOINTMAX.......
+ */
+/*------------------------------------*\
+  $STRIP-UNITS
+\*------------------------------------*/
+/*------------------------------------*\
+  $PIXEL2EM
+\*------------------------------------*/
+/**
+ * Convert a px value to em
+ * based on $font-base-size
+ */
+/*------------------------------------*\
+  $EM2PIXEL
+\*------------------------------------*/
+/**
+ * Convert a em value to px
+ * based on $font-base-size
+ */
+/*------------------------------------*\
+  $EM2REM
+\*------------------------------------*/
+/**
+ * Convert a em value to rem
+ */
+/*------------------------------------*\
+  $BREAKPOINTMAX
+\*------------------------------------*/
+/**
+ * Get a max breakpoint
+ */
+/*------------------------------------*\
+  $VARIABLES
+\*------------------------------------*/
+/**
+ * @name Variables
+ * @level 2.
+ *
+ * CONTENTS
+ * COLOR-SHEME.........Set theme colors
+ * TYPOGRAPHY..........
+ * BREAKPOINTS.........
+ * SPACING.............
+ * LAYOUT..............
+ * COMPONENTS..........
+ * SCAFFOLDING.........
+ */
+/*------------------------------------*\
+  $COLOR-SHEME
+\*------------------------------------*/
+/**
+ * Basic colors
+ * Fancy generator: http://coolors.co/
+ */
+/**
+ * Colors for alerts
+ * e.g. success, error, info,...
+ */
+/**
+ * Grey
+ */
+/*------------------------------------*\
+  $TYPOGRAPHY
+\*------------------------------------*/
+/**
+ * Set the font weight variables according to the font
+ * e.g. http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700
+ * In this case set the font weights to 200, 400 and 700
+ *
+ * If you set a font weight in your css you must use this variables!
+ * e.g. font-weight: $font-a-weight-normal;
+ *
+ * 1. must be in px, do not use in your styles
+ */
+/* [1] */
+/* [1] */
+/**
+ * Font-sizes
+ */
+/**
+ * Font A
+ */
+/**
+ * Font B
+ */
+/**
+ * Anchors
+ */
+/**
+ * Text selection
+ */
+/*------------------------------------*\
+  $BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+  $SPACING
+\*------------------------------------*/
+/*------------------------------------*\
+  $LAYOUT
+\*------------------------------------*/
+/*------------------------------------*\
+  $COMPONENTS
+\*------------------------------------*/
+/**
+ * @name Components
+ * @level 3.
+ */
+/**
+ * Grid
+ */
+/**
+ * Button
+ */
+/**
+ * Menu
+ */
+/**
+ * Island
+ */
+/**
+ * Media
+ */
+/*------------------------------------*\
+  $SCAFFOLDING
+\*------------------------------------*/
+/*------------------------------------*\
+  SCAFFOLDING
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * BASE................
+ * COMPONENTS..........
+ */
+/*------------------------------------*\
+  $BASE
+\*------------------------------------*/
+/*------------------------------------*\
+  BASE
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * ELEMENTS............
+ * SELECTION...........
+ */
+/*------------------------------------*\
+  $ELEMENTS
+\*------------------------------------*/
+/* line 16, /Users/moberlehner/Sites/vagrant/avalanche/src/base/base */
+html {
+  font-size: 100%;
+  line-height: 1.5; }
+
+/* line 25, /Users/moberlehner/Sites/vagrant/avalanche/src/base/base */
+html, button, input, select, textarea {
+  color: #222;
+  font-family: 'Helvetica Neue', sans-serif; }
+
+/*
+ * A better looking default horizontal rule
+ */
+/* line 33, /Users/moberlehner/Sites/vagrant/avalanche/src/base/base */
+hr {
+  display: block;
+  margin: 1em 0;
+  padding: 0;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #d5d5d5; }
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+/* line 50, /Users/moberlehner/Sites/vagrant/avalanche/src/base/base */
+audio, canvas, img, svg, video {
+  vertical-align: middle; }
+
+/*
+ * Remove default fieldset styles.
+ *
+ * 1. Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+ *    so we reset that to ensure it behaves more like a standard block element.
+ *    See https://github.com/twbs/bootstrap/issues/12359.
+ */
+/* line 61, /Users/moberlehner/Sites/vagrant/avalanche/src/base/base */
+fieldset {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  /* [1] */
+  border: 0; }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+/* line 71, /Users/moberlehner/Sites/vagrant/avalanche/src/base/base */
+textarea {
+  resize: vertical; }
+
+/*------------------------------------*\
+  $SELECTION
+\*------------------------------------*/
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+/* line 85, /Users/moberlehner/Sites/vagrant/avalanche/src/base/base */
+::-moz-selection {
+  background: #16193B;
+  color: #fff;
+  text-shadow: none; }
+
+/* line 91, /Users/moberlehner/Sites/vagrant/avalanche/src/base/base */
+::-moz-selection {
+  background: #16193B;
+  color: #fff;
+  text-shadow: none; }
+::selection {
+  background: #16193B;
+  color: #fff;
+  text-shadow: none; }
+
+/*------------------------------------*\
+  FORM
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * BASE................
+ */
+/*------------------------------------*\
+  $BASE
+\*------------------------------------*/
+/* line 15, /Users/moberlehner/Sites/vagrant/avalanche/src/base/form */
+label {
+  display: block; }
+
+/* line 34, /Users/moberlehner/Sites/vagrant/avalanche/src/base/form */
+select, textarea, input[type='text'], input[type='password'], input[type='datetime'], input[type='datetime-local'], input[type='date'], input[type='month'], input[type='time'], input[type='week'], input[type='number'], input[type='email'], input[type='url'], input[type='search'], input[type='tel'], input[type='color'] {
+  display: inline-block;
+  padding: 0.5em;
+  max-width: 100%;
+  border: 1px solid #bcbcbc;
+  background-image: none;
+  transition: border-color ease-in-out 0.1s, box-shadow ease-in-out 0.1s; }
+  /* line 41, /Users/moberlehner/Sites/vagrant/avalanche/src/base/form */
+  select:focus, textarea:focus, input[type='text']:focus, input[type='password']:focus, input[type='datetime']:focus, input[type='datetime-local']:focus, input[type='date']:focus, input[type='month']:focus, input[type='time']:focus, input[type='week']:focus, input[type='number']:focus, input[type='email']:focus, input[type='url']:focus, input[type='search']:focus, input[type='tel']:focus, input[type='color']:focus {
+    outline: none;
+    border-color: #16193B;
+    box-shadow: 0 0 0.375em #16193B; }
+
+/* line 50, /Users/moberlehner/Sites/vagrant/avalanche/src/base/form */
+input[type='radio'], input[type='checkbox'] {
+  margin-top: 1px \9;
+  line-height: normal; }
+  /* line 53, /Users/moberlehner/Sites/vagrant/avalanche/src/base/form */
+  input[type='radio'] + label, input[type='checkbox'] + label {
+    display: inline-block; }
+
+/* line 59, /Users/moberlehner/Sites/vagrant/avalanche/src/base/form */
+input[type='file'] {
+  display: block; }
+
+/* line 64, /Users/moberlehner/Sites/vagrant/avalanche/src/base/form */
+input[type='range'] {
+  display: block;
+  width: 100%; }
+
+/* line 71, /Users/moberlehner/Sites/vagrant/avalanche/src/base/form */
+select[multiple], select[size] {
+  height: auto; }
+
+/* line 78, /Users/moberlehner/Sites/vagrant/avalanche/src/base/form */
+input[type='file']:focus, input[type='radio']:focus, input[type='checkbox']:focus {
+  border: 3px solid red; }
+
+/* line 83, /Users/moberlehner/Sites/vagrant/avalanche/src/base/form */
+textarea {
+  height: auto; }
+
+/*------------------------------------*\
+  LAYOUT
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * CONTAINER...........
+ * BOX-SIZING-RESET....
+ */
+/*------------------------------------*\
+  $CONTAINER
+\*------------------------------------*/
+/* line 16, /Users/moberlehner/Sites/vagrant/avalanche/src/base/layout */
+.container {
+  margin: 0 auto;
+  padding: 0 1em;
+  max-width: 62em; }
+
+/*------------------------------------*\
+  $BOX-SIZING-RESET
+\*------------------------------------*/
+/* line 29, /Users/moberlehner/Sites/vagrant/avalanche/src/base/layout */
+html {
+  box-sizing: border-box; }
+
+/* line 35, /Users/moberlehner/Sites/vagrant/avalanche/src/base/layout */
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/*------------------------------------*\
+  TYPOGRAPHY
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * HEADLINES...........
+ * ANCHORS.............
+ * WHITESPACE..........
+ */
+/*------------------------------------*\
+  $HEADLINES
+\*------------------------------------*/
+/**
+ * Reset margin on headlines
+ */
+/* line 22, /Users/moberlehner/Sites/vagrant/avalanche/src/base/typography */
+h1, h2, h3, h4 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: #16193B;
+  font-weight: 700;
+  font-family: Futura, 'Trebuchet MS', sans-serif;
+  line-height: 1.25; }
+
+/* line 31, /Users/moberlehner/Sites/vagrant/avalanche/src/base/typography */
+h1 {
+  font-size: 2.25em; }
+
+/* line 35, /Users/moberlehner/Sites/vagrant/avalanche/src/base/typography */
+h2 {
+  font-size: 1.875em; }
+
+/* line 39, /Users/moberlehner/Sites/vagrant/avalanche/src/base/typography */
+h3 {
+  font-size: 1.5em; }
+
+/* line 43, /Users/moberlehner/Sites/vagrant/avalanche/src/base/typography */
+h4 {
+  font-size: 1.25em; }
+
+/* line 47, /Users/moberlehner/Sites/vagrant/avalanche/src/base/typography */
+h5 {
+  margin: 0;
+  font-size: 1em; }
+
+/* line 52, /Users/moberlehner/Sites/vagrant/avalanche/src/base/typography */
+h6 {
+  margin: 0;
+  font-size: 1em; }
+
+/*------------------------------------*\
+  $ANCHORS
+\*------------------------------------*/
+/**
+ * <span class="a">readmore...</span>
+ */
+/* line 66, /Users/moberlehner/Sites/vagrant/avalanche/src/base/typography */
+a, .a {
+  color: #16193B;
+  text-decoration: underline; }
+  /* line 69, /Users/moberlehner/Sites/vagrant/avalanche/src/base/typography */
+  a:visited, .a:visited {
+    color: #16193B; }
+  /* line 73, /Users/moberlehner/Sites/vagrant/avalanche/src/base/typography */
+  a:hover, a:focus, .a:hover, .a:focus {
+    color: #16193B;
+    text-decoration: none; }
+
+/**
+ * Reversed link behaviour
+ */
+/* line 82, /Users/moberlehner/Sites/vagrant/avalanche/src/base/typography */
+.a--reversed {
+  text-decoration: none; }
+  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/src/base/typography */
+  .a--reversed:hover, .a--reversed:focus {
+    text-decoration: underline; }
+
+/**
+ * Style tel anchors like normal text on big screens
+ * (big screen most likely not mobile)
+ */
+@media (min-width: 30em) {
+  /* line 98, /Users/moberlehner/Sites/vagrant/avalanche/src/base/typography */
+  a[href^='tel'], a[href^='tel']:hover, a[href^='tel']:focus {
+    color: #222;
+    text-decoration: none;
+    cursor: default; }
+ }
+
+/*------------------------------------*\
+  $WHITESPACE
+\*------------------------------------*/
+/**
+ * Add whitespace around some block elements
+ */
+/* line 124, /Users/moberlehner/Sites/vagrant/avalanche/src/base/typography */
+p, ul, ol, dl, pre, form, table, figure, address, fieldset, blockquote {
+  margin-top: 0;
+  margin-bottom: 1.5em; }
+
+/* line 131, /Users/moberlehner/Sites/vagrant/avalanche/src/base/typography */
+ul, ol, dl {
+  padding-left: 1.5em; }
+
+/**
+ * no margin for nested lists
+ */
+/* line 141, /Users/moberlehner/Sites/vagrant/avalanche/src/base/typography */
+li ul, li ol, li dl {
+  margin-bottom: 0; }
+
+/**
+ * no margin for nested tables
+ */
+/* line 150, /Users/moberlehner/Sites/vagrant/avalanche/src/base/typography */
+table table {
+  margin-bottom: 0; }
+
+/**
+ * Normalize default font related tags
+ */
+/* line 159, /Users/moberlehner/Sites/vagrant/avalanche/src/base/typography */
+b, strong {
+  font-weight: 700; }
+
+/* line 163, /Users/moberlehner/Sites/vagrant/avalanche/src/base/typography */
+small {
+  font-size: 0.85em; }
+
+/*------------------------------------*\
+  UTILITY
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * CLEARFIX............
+ * LIST-RESET..........
+ * SPACING.............
+ * VISIBILITY..........
+ * DISPLAY.............
+ */
+/*------------------------------------*\
+  CLEARFIX
+\*------------------------------------*/
+/**
+ * Clearfix
+ * Contain floats
+ */
+/* line 22, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+.u-cf, .grid, .menu--horizontal .menu__list--level1, .menu--horizontal-responsive .menu__list--level1, .island, .media {
+  *zoom: 1; }
+  /* line 25, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+  .u-cf:before, .grid:before, .menu--horizontal .menu__list--level1:before, .menu--horizontal-responsive .menu__list--level1:before, .island:before, .media:before, .u-cf:after, .grid:after, .menu--horizontal .menu__list--level1:after, .menu--horizontal-responsive .menu__list--level1:after, .island:after, .media:after {
+    display: table;
+    content: ' '; }
+  /* line 29, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+  .u-cf:after, .grid:after, .menu--horizontal .menu__list--level1:after, .menu--horizontal-responsive .menu__list--level1:after, .island:after, .media:after {
+    clear: both; }
+
+/*------------------------------------*\
+  $LIST-RESET
+\*------------------------------------*/
+/* line 40, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+.u-list-reset, .menu__list {
+  padding-left: 0;
+  list-style-type: none; }
+
+/*------------------------------------*\
+  $SPACING
+\*------------------------------------*/
+/**
+ * Bottom
+ */
+/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+.u-spacing--bottom--xs {
+  margin-bottom: 0.5em; }
+
+/* line 57, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+.u-spacing--bottom--s {
+  margin-bottom: 1em; }
+
+/* line 61, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+.u-spacing--bottom--m {
+  margin-bottom: 1.25em; }
+
+/* line 65, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+.u-spacing--bottom--l {
+  margin-bottom: 2em; }
+
+/* line 69, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+.u-spacing--bottom--xl {
+  margin-bottom: 3em; }
+
+/* line 73, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+.u-spacing--bottom--xxl {
+  margin-bottom: 4em; }
+
+/* line 77, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+.u-spacing--bottom--xxxl {
+  margin-bottom: 5em; }
+
+/* line 81, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+.u-spacing--bottom--off {
+  margin-bottom: 0; }
+
+/**
+ * Inner
+ */
+/* line 88, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+.u-spacing--inner--both--xs {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em; }
+
+/* line 93, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+.u-spacing--inner--both--s {
+  padding-top: 1em;
+  padding-bottom: 1em; }
+
+/* line 98, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+.u-spacing--inner--both--m {
+  padding-top: 1.25em;
+  padding-bottom: 1.25em; }
+
+/* line 103, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+.u-spacing--inner--both--l {
+  padding-top: 2em;
+  padding-bottom: 2em; }
+
+/* line 108, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+.u-spacing--inner--both--xl {
+  padding-top: 3em;
+  padding-bottom: 3em; }
+
+/* line 113, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+.u-spacing--inner--both--xxl {
+  padding-top: 4em;
+  padding-bottom: 4em; }
+
+/* line 118, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+.u-spacing--inner--both--xxxl {
+  padding-top: 5em;
+  padding-bottom: 5em; }
+
+/*------------------------------------*\
+  $VISIBILITY
+\*------------------------------------*/
+/**
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+/* line 131, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+.u-hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/**
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+/* line 139, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+.u-visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0; }
+  /* line 149, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+  .u-visuallyhidden.u-focusable:active, .u-visuallyhidden.u-focusable:focus {
+    position: static;
+    overflow: visible;
+    clip: auto;
+    margin: 0;
+    width: auto;
+    height: auto; }
+
+/**
+ * Hide visually and from screenreaders, but maintain layout
+ */
+/* line 162, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+.u-invisible {
+  visibility: hidden; }
+
+/*------------------------------------*\
+  $DISPLAY
+\*------------------------------------*/
+/* line 172, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+.u-display-block {
+  display: block; }
+
+/* line 176, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+.u-display-inline {
+  display: inline; }
+
+/* line 180, /Users/moberlehner/Sites/vagrant/avalanche/src/base/utility */
+.u-display-inline-block {
+  display: inline-block; }
+
+/*------------------------------------*\
+  $COMPONENTS
+\*------------------------------------*/
+/*------------------------------------*\
+  GRID
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * BASE................
+ * SMALL...............
+ * MEDIUM..............
+ * LARGE...............
+ * XLARGE..............
+ *
+ *
+ * <div class="grid">
+ *   <div class="grid__item--6 grid__item--m--3">
+ *     [optional]<div class="grid__inner"></div>[/optional]
+ *   </div>
+ *   <div class="grid__item--6 grid__item--m--3">
+ *     [optional]<div class="grid__inner"></div>[/optional]
+ *   </div>
+ *   <div class="grid__item--12 grid__item--s--6">
+ *     [optional]<div class="grid__inner"></div>[/optional]
+ *   </div>
+ *   <div class="grid__item--12 grid__item--s--6">
+ *     [optional]<div class="grid__inner"></div>[/optional]
+ *   </div>
+ * </div>
+ */
+/*------------------------------------*\
+  $BASE
+\*------------------------------------*/
+/**
+ * Styles for all devices
+ */
+@media (max-width: 44.9375em) {
+  .grid {
+    margin-left: -1em; } }
+
+/* line 51, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+[class*='grid__item'] {
+  float: left;
+  width: 100%; }
+  @media (max-width: 44.9375em) {
+    [class*='grid__item'] {
+      padding-left: 1em; } }
+
+/* line 66, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+.grid__item--1 {
+  width: 8.33333%; }
+
+/* line 66, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+.grid__item--2 {
+  width: 16.66667%; }
+
+/* line 66, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+.grid__item--3 {
+  width: 25%; }
+
+/* line 66, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+.grid__item--4 {
+  width: 33.33333%; }
+
+/* line 66, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+.grid__item--5 {
+  width: 41.66667%; }
+
+/* line 66, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+.grid__item--6 {
+  width: 50%; }
+
+/* line 66, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+.grid__item--7 {
+  width: 58.33333%; }
+
+/* line 66, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+.grid__item--8 {
+  width: 66.66667%; }
+
+/* line 66, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+.grid__item--9 {
+  width: 75%; }
+
+/* line 66, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+.grid__item--10 {
+  width: 83.33333%; }
+
+/* line 66, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+.grid__item--11 {
+  width: 91.66667%; }
+
+/* line 66, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+.grid__item--12 {
+  width: 100%; }
+
+/*------------------------------------*\
+    $SMALL
+  \*------------------------------------*/
+@media (min-width: 30em) {
+  /* line 79, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--s--1 {
+    width: 8.33333%; }
+
+  /* line 79, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--s--2 {
+    width: 16.66667%; }
+
+  /* line 79, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--s--3 {
+    width: 25%; }
+
+  /* line 79, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--s--4 {
+    width: 33.33333%; }
+
+  /* line 79, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--s--5 {
+    width: 41.66667%; }
+
+  /* line 79, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--s--6 {
+    width: 50%; }
+
+  /* line 79, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--s--7 {
+    width: 58.33333%; }
+
+  /* line 79, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--s--8 {
+    width: 66.66667%; }
+
+  /* line 79, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--s--9 {
+    width: 75%; }
+
+  /* line 79, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--s--10 {
+    width: 83.33333%; }
+
+  /* line 79, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--s--11 {
+    width: 91.66667%; }
+
+  /* line 79, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--s--12 {
+    width: 100%; }
+ }
+
+/*------------------------------------*\
+    $MEDIUM
+  \*------------------------------------*/
+@media (min-width: 45em) {
+  /* line 93, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid {
+    margin-left: -1.25em; }
+
+  /* line 97, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  [class*='grid__item'] {
+    padding-left: 1.25em; }
+
+  /* line 102, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--m--1 {
+    width: 8.33333%; }
+
+  /* line 102, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--m--2 {
+    width: 16.66667%; }
+
+  /* line 102, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--m--3 {
+    width: 25%; }
+
+  /* line 102, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--m--4 {
+    width: 33.33333%; }
+
+  /* line 102, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--m--5 {
+    width: 41.66667%; }
+
+  /* line 102, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--m--6 {
+    width: 50%; }
+
+  /* line 102, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--m--7 {
+    width: 58.33333%; }
+
+  /* line 102, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--m--8 {
+    width: 66.66667%; }
+
+  /* line 102, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--m--9 {
+    width: 75%; }
+
+  /* line 102, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--m--10 {
+    width: 83.33333%; }
+
+  /* line 102, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--m--11 {
+    width: 91.66667%; }
+
+  /* line 102, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--m--12 {
+    width: 100%; }
+ }
+
+/*------------------------------------*\
+    $LARGE
+  \*------------------------------------*/
+@media (min-width: 60em) {
+  /* line 116, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid {
+    margin-left: -1.25em; }
+
+  /* line 120, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  [class*='grid__item'] {
+    padding-left: 1.25em; }
+
+  /* line 125, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--l--1 {
+    width: 8.33333%; }
+
+  /* line 125, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--l--2 {
+    width: 16.66667%; }
+
+  /* line 125, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--l--3 {
+    width: 25%; }
+
+  /* line 125, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--l--4 {
+    width: 33.33333%; }
+
+  /* line 125, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--l--5 {
+    width: 41.66667%; }
+
+  /* line 125, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--l--6 {
+    width: 50%; }
+
+  /* line 125, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--l--7 {
+    width: 58.33333%; }
+
+  /* line 125, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--l--8 {
+    width: 66.66667%; }
+
+  /* line 125, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--l--9 {
+    width: 75%; }
+
+  /* line 125, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--l--10 {
+    width: 83.33333%; }
+
+  /* line 125, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--l--11 {
+    width: 91.66667%; }
+
+  /* line 125, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--l--12 {
+    width: 100%; }
+ }
+
+/*------------------------------------*\
+    $XLARGE
+  \*------------------------------------*/
+@media (min-width: 75em) {
+  /* line 139, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid {
+    margin-left: -1.25em; }
+
+  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  [class*='grid__item'] {
+    padding-left: 1.25em; }
+
+  /* line 148, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--xl--1 {
+    width: 8.33333%; }
+
+  /* line 148, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--xl--2 {
+    width: 16.66667%; }
+
+  /* line 148, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--xl--3 {
+    width: 25%; }
+
+  /* line 148, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--xl--4 {
+    width: 33.33333%; }
+
+  /* line 148, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--xl--5 {
+    width: 41.66667%; }
+
+  /* line 148, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--xl--6 {
+    width: 50%; }
+
+  /* line 148, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--xl--7 {
+    width: 58.33333%; }
+
+  /* line 148, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--xl--8 {
+    width: 66.66667%; }
+
+  /* line 148, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--xl--9 {
+    width: 75%; }
+
+  /* line 148, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--xl--10 {
+    width: 83.33333%; }
+
+  /* line 148, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--xl--11 {
+    width: 91.66667%; }
+
+  /* line 148, /Users/moberlehner/Sites/vagrant/avalanche/src/components/grid */
+  .grid__item--xl--12 {
+    width: 100%; }
+ }
+
+/*------------------------------------*\
+  BUTTON
+\*------------------------------------*/
+/**
+ * @name Button
+ * @level 3.1.
+ * @description Hallo Welt
+ *
+ * CONTENTS
+ * BASE................
+ * SIZES...............
+ * FONT-SIZES..........
+ * FUNCTIONS...........
+ */
+/*------------------------------------*\
+  $BASE
+\*------------------------------------*/
+/* line 24, /Users/moberlehner/Sites/vagrant/avalanche/src/components/button */
+.button {
+  display: inline-block;
+  margin: 0;
+  padding: 0.5em 1em;
+  border: none;
+  background: #16193B;
+  vertical-align: top;
+  white-space: nowrap;
+  font-size: 100%;
+  font-family: inherit;
+  cursor: pointer; }
+  /* line 39, /Users/moberlehner/Sites/vagrant/avalanche/src/components/button */
+  .button, .button:hover, .button:focus, .button:active, .button:visited {
+    outline: none;
+    color: #fff;
+    text-decoration: none; }
+  /* line 46, /Users/moberlehner/Sites/vagrant/avalanche/src/components/button */
+  .button:hover, .button:focus, .button:active {
+    background: #5b5e75; }
+
+/*------------------------------------*\
+  $SIZES
+\*------------------------------------*/
+/**
+ * Button size modifiers.
+ *
+ * These all follow the same sizing rules as above; text is 1em, space around it
+ * remains uniform.
+ */
+/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/src/components/button */
+.button--s {
+  padding: 0 0.5em; }
+
+/* line 69, /Users/moberlehner/Sites/vagrant/avalanche/src/components/button */
+.button--l {
+  padding: 1em 1.25em; }
+
+/* line 75, /Users/moberlehner/Sites/vagrant/avalanche/src/components/button */
+.button--xl {
+  padding: 1.25em 2em; }
+
+/**
+   * These buttons will fill the entirety of their container.
+   */
+/* line 84, /Users/moberlehner/Sites/vagrant/avalanche/src/components/button */
+.button--full {
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
+  text-align: center; }
+
+/*------------------------------------*\
+  $FONT-SIZES
+\*------------------------------------*/
+/**
+ * Button font-size modifiers.
+ */
+/* line 101, /Users/moberlehner/Sites/vagrant/avalanche/src/components/button */
+.button--font--s {
+  font-size: 0.85em; }
+
+/* line 107, /Users/moberlehner/Sites/vagrant/avalanche/src/components/button */
+.button--font--l {
+  font-size: 1.25em; }
+
+/* line 113, /Users/moberlehner/Sites/vagrant/avalanche/src/components/button */
+.button--font--xl {
+  font-size: 1.5em; }
+
+/*------------------------------------*\
+  $FUNCTIONS
+\*------------------------------------*/
+/**
+   * Positive actions; e.g. sign in, purchase, submit, etc.
+   */
+/* line 128, /Users/moberlehner/Sites/vagrant/avalanche/src/components/button */
+.button--positive {
+  background: #468847;
+  color: #fff; }
+  /* line 133, /Users/moberlehner/Sites/vagrant/avalanche/src/components/button */
+  .button--positive:hover, .button--positive:focus, .button--positive:active {
+    background: #7dab7e; }
+
+/**
+   * Neutral
+   */
+/* line 143, /Users/moberlehner/Sites/vagrant/avalanche/src/components/button */
+.button--neutral {
+  background: #3A87AD;
+  color: #fff; }
+  /* line 148, /Users/moberlehner/Sites/vagrant/avalanche/src/components/button */
+  .button--neutral:hover, .button--neutral:focus, .button--neutral:active {
+    background: #75abc5; }
+
+/**
+   * Cautious
+   */
+/* line 158, /Users/moberlehner/Sites/vagrant/avalanche/src/components/button */
+.button--cautious {
+  background: #c09853;
+  color: #fff; }
+  /* line 163, /Users/moberlehner/Sites/vagrant/avalanche/src/components/button */
+  .button--cautious:hover, .button--cautious:focus, .button--cautious:active {
+    background: #d2b686; }
+
+/**
+   * Negative actions; e.g. close account, delete photo, remove friend, etc.
+   */
+/* line 173, /Users/moberlehner/Sites/vagrant/avalanche/src/components/button */
+.button--negative {
+  background: #b94a48;
+  color: #fff; }
+  /* line 178, /Users/moberlehner/Sites/vagrant/avalanche/src/components/button */
+  .button--negative:hover, .button--negative:focus, .button--negative:active {
+    background: #ce807e; }
+
+/**
+   * Inactive and disabled buttons.
+   */
+/* line 193, /Users/moberlehner/Sites/vagrant/avalanche/src/components/button */
+.button--inactive, .button--inactive:hover, .button--inactive:focus, .button--inactive:active, .button--disabled, .button--disabled:hover, .button--disabled:focus, .button--disabled:active {
+  background-color: #efefef;
+  color: #bcbcbc; }
+
+/* line 202, /Users/moberlehner/Sites/vagrant/avalanche/src/components/button */
+.button--disabled, .button--disabled:hover, .button--disabled:focus, .button--disabled:active {
+  cursor: text; }
+
+/*------------------------------------*\
+  MENU
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * DEFAULT.............
+ * OFF CANVAS..........
+ * HORIZONTAL..........
+ * VERTICAL............
+ */
+/*------------------------------------*\
+  $DEFAULT
+\*------------------------------------*/
+/**
+ * 1. Set position root for off canvas menu
+ * 2. Set position root for sub menus (dropdowns)
+ */
+/* line 23, /Users/moberlehner/Sites/vagrant/avalanche/src/components/menu */
+html {
+  position: relative;
+  /* [1] */ }
+
+/* line 27, /Users/moberlehner/Sites/vagrant/avalanche/src/components/menu */
+.menu__list {
+  margin-bottom: 0;
+  background: #16193B; }
+
+/* line 34, /Users/moberlehner/Sites/vagrant/avalanche/src/components/menu */
+.menu__list--level1 {
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s; }
+
+/* line 38, /Users/moberlehner/Sites/vagrant/avalanche/src/components/menu */
+.menu__item {
+  position: relative;
+  /* [2] */ }
+
+/* line 42, /Users/moberlehner/Sites/vagrant/avalanche/src/components/menu */
+.menu__link {
+  display: block;
+  text-decoration: none; }
+  /* line 48, /Users/moberlehner/Sites/vagrant/avalanche/src/components/menu */
+  .menu__link, .menu__link:visited, .menu__link:hover, .menu__link:focus {
+    color: #fff; }
+
+/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/src/components/menu */
+.menu__checkbox {
+  display: none; }
+
+@media (min-width: 45em) {
+  .menu__controls {
+    display: none; } }
+
+/*------------------------------------*\
+    $OFF CANVAS
+  \*------------------------------------*/
+/* line 71, /Users/moberlehner/Sites/vagrant/avalanche/src/components/menu */
+.menu--off-canvas .menu__controls {
+  display: block;
+  float: right; }
+/* line 75, /Users/moberlehner/Sites/vagrant/avalanche/src/components/menu */
+.menu--off-canvas .menu__list--level1 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: 3em;
+  max-width: 20em;
+  width: 70%;
+  -webkit-transform: translate(-100%, 0);
+      -ms-transform: translate(-100%, 0);
+          transform: translate(-100%, 0); }
+/* line 85, /Users/moberlehner/Sites/vagrant/avalanche/src/components/menu */
+.menu--off-canvas .menu__checkbox:checked + .menu__list--level1 {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0); }
+
+/*------------------------------------*\
+    $HORIZONTAL
+  \*------------------------------------*/
+/* line 107, /Users/moberlehner/Sites/vagrant/avalanche/src/components/menu */
+.menu--horizontal .menu__list--level1 .menu__list {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s; }
+/* line 113, /Users/moberlehner/Sites/vagrant/avalanche/src/components/menu */
+.menu--horizontal .menu__list--level1 .menu__list .menu__list {
+  top: 0;
+  left: 100%; }
+/* line 118, /Users/moberlehner/Sites/vagrant/avalanche/src/components/menu */
+.menu--horizontal .menu__item:hover > .menu__list, .menu--horizontal .menu__item:focus > .menu__list {
+  visibility: visible;
+  opacity: 1; }
+/* line 122, /Users/moberlehner/Sites/vagrant/avalanche/src/components/menu */
+.menu--horizontal .menu__item--level1 {
+  float: left; }
+
+@media (max-width: 44.9375em) {
+  /* line 131, /Users/moberlehner/Sites/vagrant/avalanche/src/components/menu */
+  .menu--horizontal-responsive .menu__list--level1 {
+    height: 0;
+    -webkit-transform: scale(1, 0);
+        -ms-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0; }
+
+  /* line 136, /Users/moberlehner/Sites/vagrant/avalanche/src/components/menu */
+  .menu--horizontal-responsive .menu__checkbox:checked + .menu__list--level1 {
+    height: auto;
+    -webkit-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+            transform: scale(1, 1); }
+
+  /* line 140, /Users/moberlehner/Sites/vagrant/avalanche/src/components/menu */
+  .menu--horizontal-responsive .menu__item--level1 {
+    float: none; }
+ }
+@media (min-width: 45em) {
+  /* line 145, /Users/moberlehner/Sites/vagrant/avalanche/src/components/menu */
+  .menu--horizontal-responsive .menu__list--level1 .menu__list {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s; }
+
+  /* line 151, /Users/moberlehner/Sites/vagrant/avalanche/src/components/menu */
+  .menu--horizontal-responsive .menu__list--level1 .menu__list .menu__list {
+    top: 0;
+    left: 100%; }
+
+  /* line 156, /Users/moberlehner/Sites/vagrant/avalanche/src/components/menu */
+  .menu--horizontal-responsive .menu__item:hover > .menu__list, .menu--horizontal-responsive .menu__item:focus > .menu__list {
+    visibility: visible;
+    opacity: 1; }
+
+  /* line 160, /Users/moberlehner/Sites/vagrant/avalanche/src/components/menu */
+  .menu--horizontal-responsive .menu__item--level1 {
+    float: left; }
+ }
+
+/*------------------------------------*\
+    $VERTICAL
+  \*------------------------------------*/
+/*------------------------------------*\
+  ISLAND
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * BASE................
+ * FUNCTIONS...........
+ * COLOR-SHEME.........
+ */
+/*------------------------------------*\
+  $BASE
+\*------------------------------------*/
+/* line 19, /Users/moberlehner/Sites/vagrant/avalanche/src/components/island */
+.island {
+  display: block;
+  padding: 1.25em;
+  background: #efefef; }
+  /* line 24, /Users/moberlehner/Sites/vagrant/avalanche/src/components/island */
+  .island > :last-child {
+    margin-bottom: 0; }
+
+/*------------------------------------*\
+  $FUNCTIONS
+\*------------------------------------*/
+/**
+   * Positive actions; e.g. sign in, purchase, submit, etc.
+   */
+/* line 39, /Users/moberlehner/Sites/vagrant/avalanche/src/components/island */
+.island--positive {
+  background: #dae7da;
+  color: #468847; }
+
+/**
+   * Neutral
+   */
+/* line 49, /Users/moberlehner/Sites/vagrant/avalanche/src/components/island */
+.island--neutral {
+  background: #d7e7ee;
+  color: #3A87AD; }
+
+/**
+   * Cautious
+   */
+/* line 59, /Users/moberlehner/Sites/vagrant/avalanche/src/components/island */
+.island--cautious {
+  background: #f2eadc;
+  color: #c09853; }
+
+/**
+   * Negative actions; e.g. close account, delete photo, remove friend, etc.
+   */
+/* line 69, /Users/moberlehner/Sites/vagrant/avalanche/src/components/island */
+.island--negative {
+  background: #f1dada;
+  color: #b94a48; }
+
+/*------------------------------------*\
+  $COLOR-SHEME
+\*------------------------------------*/
+/**
+   * cs-a
+   */
+/* line 85, /Users/moberlehner/Sites/vagrant/avalanche/src/components/island */
+.island--cs-a {
+  background: #16193B;
+  color: #fff; }
+
+/**
+   * cs-a
+   */
+/* line 95, /Users/moberlehner/Sites/vagrant/avalanche/src/components/island */
+.island--cs-b {
+  background: #35478C;
+  color: #fff; }
+
+/**
+   * cs-a
+   */
+/* line 105, /Users/moberlehner/Sites/vagrant/avalanche/src/components/island */
+.island--cs-c {
+  background: #4E7AC7;
+  color: #fff; }
+
+/**
+   * cs-a
+   */
+/* line 115, /Users/moberlehner/Sites/vagrant/avalanche/src/components/island */
+.island--cs-d {
+  background: #7FB2F0;
+  color: #fff; }
+
+/**
+   * cs-a
+   */
+/* line 125, /Users/moberlehner/Sites/vagrant/avalanche/src/components/island */
+.island--cs-e {
+  background: #ADD5F7;
+  color: #fff; }
+
+/*------------------------------------*\
+  MEDIA
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * BASE................
+ *
+ *
+ * Place any image- and text-like content side-by-side, as per:
+ * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+ *
+ * <div class="media">
+ *   <a href="#" class="media__img">
+ *     <img src="pony.png">
+ *   </a>
+ *   [optional]
+ *   <div class="media__img--rev">
+ *     <img src="pony2.png">
+ *   </div>
+ *   [/optional]
+ *   <div class="media__body">
+ *     <p>Lorem Ipsum</p>
+ *   </div>
+ * </div>
+ */
+/*------------------------------------*\
+  $BASE
+\*------------------------------------*/
+/**
+ * Reset media styling on small screens
+ */
+@media (max-width: 44.9375em) {
+  /* line 44, /Users/moberlehner/Sites/vagrant/avalanche/src/components/media */
+  .media--mobile-reset .media__img {
+    float: none;
+    margin-right: 0; }
+  /* line 48, /Users/moberlehner/Sites/vagrant/avalanche/src/components/media */
+  .media--mobile-reset .media__img--rev {
+    float: none;
+    margin-left: 0; }
+ }
+
+/* line 55, /Users/moberlehner/Sites/vagrant/avalanche/src/components/media */
+.media__img {
+  float: left;
+  margin-right: 1.25em; }
+
+/**
+ * Reversed image location (right instead of left).
+ */
+/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/src/components/media */
+.media__img--rev {
+  float: right;
+  margin-left: 1.25em; }
+
+/* line 70, /Users/moberlehner/Sites/vagrant/avalanche/src/components/media */
+.media__img img, .media__img--rev img {
+  display: block; }
+
+/* line 75, /Users/moberlehner/Sites/vagrant/avalanche/src/components/media */
+.media__body {
+  overflow: hidden; }
+
+
+/*# sourceMappingURL=avalanche.css.map */
