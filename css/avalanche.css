@@ -60,8 +60,8 @@
  */
 /**
  * @colors
- *   #16193B #35478C #4E7AC7 #7FB2F0 #ADD5F7
- *   #fff #fff #fff #fff #fff
+ *   $cs-a|#16193B $cs-b|#35478C $cs-c|#4E7AC7 $cs-d|#7FB2F0 $cs-e|#ADD5F7
+ *   $cs-a-contrast|#fff $cs-b-contrast|#fff $cs-c-contrast|#fff $cs-d-contrast|#fff $cs-e-contrast|#fff
  */
 /**
  * @name Colors for alerts
@@ -70,7 +70,7 @@
  */
 /**
  * @colors
- *   #468847 #3A87AD #c09853 #b94a48
+ *   $cs-positive|#468847 $cs-neutral|#3A87AD $cs-cautious|#c09853 $cs-negative|#b94a48
  */
 /**
  * @name Grey
@@ -78,7 +78,7 @@
  */
 /**
  * @colors
- *   #efefef #d5d5d5 #bcbcbc
+ *   $cs-grey-a|#efefef $cs-grey-b|#d5d5d5 $cs-grey-c|#bcbcbc
  */
 /**
  * @name Typography

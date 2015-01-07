@@ -39,8 +39,8 @@ $cs-e: #ADD5F7;
 $cs-e-contrast: #fff;
 /**
  * @colors
- *   #{$cs-a} #{$cs-b} #{$cs-c} #{$cs-d} #{$cs-e}
- *   #{$cs-a-contrast} #{$cs-b-contrast} #{$cs-c-contrast} #{$cs-d-contrast} #{$cs-e-contrast}
+ *   $cs-a|#{$cs-a} $cs-b|#{$cs-b} $cs-c|#{$cs-c} $cs-d|#{$cs-d} $cs-e|#{$cs-e}
+ *   $cs-a-contrast|#{$cs-a-contrast} $cs-b-contrast|#{$cs-b-contrast} $cs-c-contrast|#{$cs-c-contrast} $cs-d-contrast|#{$cs-d-contrast} $cs-e-contrast|#{$cs-e-contrast}
  */
 
 /**
@@ -54,7 +54,7 @@ $cs-cautious: #c09853;
 $cs-negative: #b94a48;
 /**
  * @colors
- *   #{$cs-positive} #{$cs-neutral} #{$cs-cautious} #{$cs-negative}
+ *   $cs-positive|#{$cs-positive} $cs-neutral|#{$cs-neutral} $cs-cautious|#{$cs-cautious} $cs-negative|#{$cs-negative}
  */
 
 /**
@@ -66,7 +66,7 @@ $cs-grey-b: darken($cs-grey-a, 10%);
 $cs-grey-c: darken($cs-grey-b, 10%);
 /**
  * @colors
- *   #{$cs-grey-a} #{$cs-grey-b} #{$cs-grey-c}
+ *   $cs-grey-a|#{$cs-grey-a} $cs-grey-b|#{$cs-grey-b} $cs-grey-c|#{$cs-grey-c}
  */
 
 
