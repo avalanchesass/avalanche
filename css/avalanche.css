@@ -42,7 +42,7 @@
  * @name avalanche
  * @level 1.
  * @description
- *   avalanche is a SCSS framework designed to be a minimal starting point.
+ *   avalanche is a SCSS framework designed to be a minimal starting point.  
  *   The framework is easy extendable and intended to be edited as needed.
  */
 /**
@@ -84,10 +84,10 @@
  * @name Typography
  * @level 2.2.
  * @description
- *   Set the font weight variables according to the font
- *   e.g. http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700
- *   In this case set the font weights to 200, 400 and 700
- *   If you set a font weight in your css you must use this variables!
+ *   Set the font weight variables according to the font  
+ *   e.g. http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700  
+ *   In this case set the font weights to 200, 400 and 700  
+ *   If you set a font weight in your css you must use this variables!  
  *   e.g. font-weight: $font-a-weight-normal;
  */
 /**
@@ -114,18 +114,18 @@
  * @name Font A
  * @level 2.2.3.1.
  * @description
- *   ABCDEFGHIJKLMNOPQRSTUVWXYZ
- *   abcdefghijklmnopqrstuvwxyz
- *   0123456789
+ *   ABCDEFGHIJKLMNOPQRSTUVWXYZ  
+ *   abcdefghijklmnopqrstuvwxyz  
+ *   0123456789  
  *   !&/()$=@;:,.
  */
 /**
  * @name Font B
  * @level 2.2.3.2.
  * @description
- *   ABCDEFGHIJKLMNOPQRSTUVWXYZ
- *   abcdefghijklmnopqrstuvwxyz
- *   0123456789
+ *   ABCDEFGHIJKLMNOPQRSTUVWXYZ  
+ *   abcdefghijklmnopqrstuvwxyz  
+ *   0123456789  
  *   !&/()$=@;:,.
  */
 /**
@@ -1031,8 +1031,8 @@ small {
 /**
  * Button size modifiers.
  *
- * These all follow the same sizing rules as above; text is 1em, space around it
- * remains uniform.
+ * These all follow the same sizing rules as above;  
+ * text is 1em, space around it remains uniform.
  */
 /* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--s {
