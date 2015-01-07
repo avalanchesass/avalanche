@@ -1,30 +1,27 @@
 @import 'system/functions';
 
-/*------------------------------------*\
-  $VARIABLES
-\*------------------------------------*/
 /**
- * @name Variables
- * @level 2.
- *
- * CONTENTS
- * COLOR-SHEME.........Set theme colors
- * TYPOGRAPHY..........
- * BREAKPOINTS.........
- * SPACING.............
- * LAYOUT..............
- * COMPONENTS..........
- * SCAFFOLDING.........
+ * @name avalanche
+ * @level 1.
+ * @description
+ *   avalanche is a SCSS framework designed to be a minimal starting point.
+ *   The framework is easy extendable and intended to be edited as needed.
  */
 
 
 
-/*------------------------------------*\
-  $COLOR-SHEME
-\*------------------------------------*/
 /**
- * Basic colors
- * Fancy generator: http://coolors.co/
+ * @name Variables
+ * @level 2.
+ */
+/**
+ * @name Color Sheme
+ * @level 2.1.
+ * @description Fancy generator: http://coolors.co/
+ */
+/**
+ * @name Basic colors
+ * @level 2.1.1.
  */
 $cs-a: #16193B;
 $cs-a-contrast: #fff;
@@ -40,44 +37,67 @@ $cs-d-contrast: #fff;
 
 $cs-e: #ADD5F7;
 $cs-e-contrast: #fff;
+/**
+ * @colors
+ *   #{$cs-a} #{$cs-b} #{$cs-c} #{$cs-d} #{$cs-e}
+ *   #{$cs-a-contrast} #{$cs-b-contrast} #{$cs-c-contrast} #{$cs-d-contrast} #{$cs-e-contrast}
+ */
 
 /**
- * Colors for alerts
- * e.g. success, error, info,...
+ * @name Colors for alerts
+ * @level 2.1.2.
+ * @description e.g. success, error, info,...
  */
 $cs-positive: #468847;
 $cs-neutral:  #3A87AD;
 $cs-cautious: #c09853;
 $cs-negative: #b94a48;
+/**
+ * @colors
+ *   #{$cs-positive} #{$cs-neutral} #{$cs-cautious} #{$cs-negative}
+ */
 
 /**
- * Grey
+ * @name Grey
+ * @level 2.1.3.
  */
 $cs-grey-a: #efefef;
 $cs-grey-b: darken($cs-grey-a, 10%);
 $cs-grey-c: darken($cs-grey-b, 10%);
-
-
-
-/*------------------------------------*\
-  $TYPOGRAPHY
-\*------------------------------------*/
 /**
- * Set the font weight variables according to the font
- * e.g. http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700
- * In this case set the font weights to 200, 400 and 700
- *
- * If you set a font weight in your css you must use this variables!
- * e.g. font-weight: $font-a-weight-normal;
+ * @colors
+ *   #{$cs-grey-a} #{$cs-grey-b} #{$cs-grey-c}
+ */
+
+
+
+/**
+ * @name Typography
+ * @level 2.2.
+ * @description
+ *   Set the font weight variables according to the font
+ *   e.g. http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700
+ *   In this case set the font weights to 200, 400 and 700
+ *   If you set a font weight in your css you must use this variables!
+ *   e.g. font-weight: $font-a-weight-normal;
+ */
+/**
+ * @name Basic configuration
+ * @level 2.2.1.
  *
  * 1. must be in px, do not use in your styles
  */
 $font-base-size:        16px; /* [1] */
 $font-base-line-height: 24px; /* [1] */
 $font-base-color:       #222;
+/**
+ * @variables
+ *   $font-base-size|#{$font-base-size} $font-base-line-height|#{$font-base-line-height} $font-base-color|#{$font-base-color}
+ */
 
 /**
- * Font-sizes
+ * @name Font sizes
+ * @level 2.2.2.
  */
 $font-size-xs:   0.75em;
 $font-size-s:    0.85em;
@@ -95,7 +115,17 @@ $font-size-h5: $font-size-m;
 $font-size-h6: $font-size-m;
 
 /**
- * Font A
+ * @name System fonts
+ * @level 2.2.3.
+ */
+/**
+ * @name Font A
+ * @level 2.2.3.1.
+ * @description
+ *   ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ *   abcdefghijklmnopqrstuvwxyz
+ *   0123456789
+ *   !&/()$=@;:,.
  */
 $font-a-family: 'Helvetica Neue', sans-serif;
 
@@ -110,7 +140,13 @@ $font-a-weight-extra-bold:  800;
 $font-a-weight-ultra-bold:  900;
 
 /**
- * Font B
+ * @name Font B
+ * @level 2.2.3.2.
+ * @description
+ *   ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ *   abcdefghijklmnopqrstuvwxyz
+ *   0123456789
+ *   !&/()$=@;:,.
  */
 $font-b-family: Futura, 'Trebuchet MS', sans-serif;
 
@@ -125,7 +161,10 @@ $font-b-weight-extra-bold:  800;
 $font-b-weight-ultra-bold:  900;
 
 /**
- * Anchors
+ * @name Anchors
+ * @level 2.2.4.
+ * @markup
+ *   <a href="#">Anchor</a>
  */
 $a-color:                 $cs-a;
 $a-color-visited:         $a-color;
@@ -134,7 +173,10 @@ $a-text-decoration:       underline;
 $a-text-decoration-hover: none;
 
 /**
- * Text selection
+ * @name Text selection
+ * @level 2.2.5.
+ * @description
+ *   Select some text on this page to see it in action
  */
 $selection-background: $cs-a;
 $selection-color:      $cs-a-contrast;
