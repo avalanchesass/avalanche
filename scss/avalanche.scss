@@ -121,11 +121,6 @@ $font-size-h6: $font-size-m;
 /**
  * @name Font A
  * @level 2.2.3.1.
- * @description
- *   ABCDEFGHIJKLMNOPQRSTUVWXYZ  
- *   abcdefghijklmnopqrstuvwxyz  
- *   0123456789  
- *   !&/()$=@;:,.
  */
 $font-a-family: 'Helvetica Neue', sans-serif;
 
@@ -138,15 +133,17 @@ $font-a-weight-semi-bold:   600;
 $font-a-weight-bold:        700;
 $font-a-weight-extra-bold:  800;
 $font-a-weight-ultra-bold:  900;
-
 /**
- * @name Font B
- * @level 2.2.3.2.
- * @description
+ * @font [#{$font-a-family}]
  *   ABCDEFGHIJKLMNOPQRSTUVWXYZ  
  *   abcdefghijklmnopqrstuvwxyz  
  *   0123456789  
  *   !&/()$=@;:,.
+ */
+
+/**
+ * @name Font B
+ * @level 2.2.3.2.
  */
 $font-b-family: Futura, 'Trebuchet MS', sans-serif;
 
@@ -159,6 +156,13 @@ $font-b-weight-semi-bold:   600;
 $font-b-weight-bold:        700;
 $font-b-weight-extra-bold:  800;
 $font-b-weight-ultra-bold:  900;
+/**
+ * @font [#{$font-b-family}]
+ *   ABCDEFGHIJKLMNOPQRSTUVWXYZ  
+ *   abcdefghijklmnopqrstuvwxyz  
+ *   0123456789  
+ *   !&/()$=@;:,.
+ */
 
 /**
  * @name Anchors

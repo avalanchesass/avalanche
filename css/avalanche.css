@@ -113,7 +113,9 @@
 /**
  * @name Font A
  * @level 2.2.3.1.
- * @description
+ */
+/**
+ * @font ['Helvetica Neue', sans-serif]
  *   ABCDEFGHIJKLMNOPQRSTUVWXYZ  
  *   abcdefghijklmnopqrstuvwxyz  
  *   0123456789  
@@ -122,7 +124,9 @@
 /**
  * @name Font B
  * @level 2.2.3.2.
- * @description
+ */
+/**
+ * @font [Futura, 'Trebuchet MS', sans-serif]
  *   ABCDEFGHIJKLMNOPQRSTUVWXYZ  
  *   abcdefghijklmnopqrstuvwxyz  
  *   0123456789  
