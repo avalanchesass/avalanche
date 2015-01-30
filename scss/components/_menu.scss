@@ -1,13 +1,24 @@
-/*------------------------------------*\
-  MENU
-\*------------------------------------*/
 /**
- * CONTENTS
- * DEFAULT.............
- * OFF CANVAS..........
- * HORIZONTAL..........
- * VERTICAL............
+ * @name Menu
+ * @level 4.3.
  */
+/**
+ * Variables
+ */
+$cmp-menu: true;
+
+// Breakpoint for mobile version of menu
+$cmp-menu-mobile-breakpoint: $breakpoint-m;
+
+// Horizontal
+$cmp-menu-horizontal: true;
+$cmp-menu-horizontal-responsive: true;
+
+// Menu vertical
+$cmp-menu-vertical: true;
+
+// Off canvas
+$cmp-menu-off-canvas: true;
 
 
 

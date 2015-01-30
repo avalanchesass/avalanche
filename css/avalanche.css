@@ -9,6 +9,46 @@
  * @name System
  * @level 2.
  */
+/*------------------------------------*\
+  FUNCTIONS
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * STRIP-UNITS.........
+ * PIXEL2EM............
+ * EM2PIXEL............
+ * EM2REM..............
+ * BREAKPOINTMAX.......
+ */
+/*------------------------------------*\
+  $STRIP-UNITS
+\*------------------------------------*/
+/*------------------------------------*\
+  $PIXEL2EM
+\*------------------------------------*/
+/**
+ * Convert a px value to em
+ * based on $font-base-size
+ */
+/*------------------------------------*\
+  $EM2PIXEL
+\*------------------------------------*/
+/**
+ * Convert a em value to px
+ * based on $font-base-size
+ */
+/*------------------------------------*\
+  $EM2REM
+\*------------------------------------*/
+/**
+ * Convert a em value to rem
+ */
+/*------------------------------------*\
+  $BREAKPOINTMAX
+\*------------------------------------*/
+/**
+ * Get a max breakpoint
+ */
 /**
  * @name Variables
  * @level 2.1.
@@ -106,78 +146,54 @@
  * @name Text selection
  * @level 2.1.2.5.
  * @description
- *   Select some text on this page to see it in action
- */
-/*------------------------------------*\
-  $BREAKPOINTS
-\*------------------------------------*/
-/*------------------------------------*\
-  $SPACING
-\*------------------------------------*/
-/*------------------------------------*\
-  $LAYOUT
-\*------------------------------------*/
-/*------------------------------------*\
-  $COMPONENTS
-\*------------------------------------*/
-/**
- * @name Components
- * @level 4.
+ *   Select some text to see it in action
  */
 /**
- * Grid
+ * @name Breakpoints
+ * @level 2.1.3.
+ * @description
+ *   More infos about media queries:  
+ *   [Brad Frost - 7 Habits of highly effective media queries](http://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/)
  */
 /**
- * Button
+ * @name min Breakpoints
+ * @level 2.1.3.1.
  */
 /**
- * Menu
+ * @variables
+ *   $breakpoint-s|30em $breakpoint-m|45em $breakpoint-l|60em $breakpoint-xl|75em
+ */
+/**
+ * @name max Breakpoints
+ * @level 2.1.3.2.
+ * @description
+ *   Use with care, max-widht breakpoints should be preferred!
+ */
+/**
+ * @variables
+ *   $breakpoint-max-s|29.9375em $breakpoint-max-m|44.9375em $breakpoint-max-l|59.9375em $breakpoint-max-xl|74.9375em
+ */
+/**
+ * @name Spacing
+ * @level 2.1.4.
+ */
+/**
+ * @variables
+ *   $spacing-xs|0.5em $spacing-s|1em $spacing-m|1.25em $spacing-l|2em $spacing-xl|3em $spacing-xxl|4em $spacing-xxxl|5em
+ */
+/**
+ * @name Layout
+ * @level 2.1.5.
+ */
+/**
+ * @variables
+ *   $layout-max-width|62em $layout-box-sizing-reset|true
  */
 /**
  * Island
  */
 /**
  * Media
- */
-/*------------------------------------*\
-  FUNCTIONS
-\*------------------------------------*/
-/**
- * CONTENTS
- * STRIP-UNITS.........
- * PIXEL2EM............
- * EM2PIXEL............
- * EM2REM..............
- * BREAKPOINTMAX.......
- */
-/*------------------------------------*\
-  $STRIP-UNITS
-\*------------------------------------*/
-/*------------------------------------*\
-  $PIXEL2EM
-\*------------------------------------*/
-/**
- * Convert a px value to em
- * based on $font-base-size
- */
-/*------------------------------------*\
-  $EM2PIXEL
-\*------------------------------------*/
-/**
- * Convert a em value to px
- * based on $font-base-size
- */
-/*------------------------------------*\
-  $EM2REM
-\*------------------------------------*/
-/**
- * Convert a em value to rem
- */
-/*------------------------------------*\
-  $BREAKPOINTMAX
-\*------------------------------------*/
-/**
- * Get a max breakpoint
  */
 /**
  * @name Base
@@ -657,353 +673,378 @@ small {
  * @name Components
  * @level 4.
  */
-/*------------------------------------*\
-  GRID
-\*------------------------------------*/
 /**
- * CONTENTS
- * BASE................
- * SMALL...............
- * MEDIUM..............
- * LARGE...............
- * XLARGE..............
- *
- *
- * <div class="grid">
- *   <div class="grid__item--6 grid__item--m--3">
- *     [optional]<div class="grid__inner"></div>[/optional]
- *   </div>
- *   <div class="grid__item--6 grid__item--m--3">
- *     [optional]<div class="grid__inner"></div>[/optional]
- *   </div>
- *   <div class="grid__item--12 grid__item--s--6">
- *     [optional]<div class="grid__inner"></div>[/optional]
- *   </div>
- *   <div class="grid__item--12 grid__item--s--6">
- *     [optional]<div class="grid__inner"></div>[/optional]
- *   </div>
- * </div>
+ * @name Grid
+ * @level 4.1.
  */
-/*------------------------------------*\
-  $BASE
-\*------------------------------------*/
 /**
- * Styles for all devices
+ * Variables
  */
-@media (max-width: avalanche-breakpointmax(45em)) {
+/**
+ * @name Base
+ * @level 4.1.1.
+ * @description
+ *   Mobile first styles for all screen sizes
+ *
+ * @markup
+ *    <div class="grid">
+ *      <div class="grid__item--12">Grid Item</div>
+ *      <div class="grid__item--12">Grid Item</div>
+ *    </div>
+ */
+@media (max-width: 44.9375em) {
   .grid {
     margin-left: -1em; } }
 
-/* line 49, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 48, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 [class*='grid__item'] {
   float: left;
   width: 100%; }
-  @media (max-width: avalanche-breakpointmax(45em)) {
+  @media (max-width: 44.9375em) {
     [class*='grid__item'] {
       padding-left: 1em; } }
 
-/* line 64, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--1 {
   width: 8.33333%; }
 
-/* line 64, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--2 {
   width: 16.66667%; }
 
-/* line 64, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--3 {
   width: 25%; }
 
-/* line 64, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--4 {
   width: 33.33333%; }
 
-/* line 64, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--5 {
   width: 41.66667%; }
 
-/* line 64, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--6 {
   width: 50%; }
 
-/* line 64, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--7 {
   width: 58.33333%; }
 
-/* line 64, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--8 {
   width: 66.66667%; }
 
-/* line 64, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--9 {
   width: 75%; }
 
-/* line 64, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--10 {
   width: 83.33333%; }
 
-/* line 64, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--11 {
   width: 91.66667%; }
 
-/* line 64, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--12 {
   width: 100%; }
 
-/*------------------------------------*\
-    $SMALL
-  \*------------------------------------*/
+/**
+   * @name Small
+   * @level 4.1.2.
+   * @description
+   *   Screen sizes 30em (480px) and up
+   *
+   *  @markup
+   *    <div class="grid">
+   *      <div class="grid__item--12 grid__item--s--6">Grid Item</div>
+   *      <div class="grid__item--12 grid__item--s--6">Grid Item</div>
+   *    </div>
+   */
 @media (min-width: 30em) {
-  /* line 77, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--1 {
     width: 8.33333%; }
 
-  /* line 77, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--2 {
     width: 16.66667%; }
 
-  /* line 77, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--3 {
     width: 25%; }
 
-  /* line 77, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--4 {
     width: 33.33333%; }
 
-  /* line 77, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--5 {
     width: 41.66667%; }
 
-  /* line 77, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--6 {
     width: 50%; }
 
-  /* line 77, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--7 {
     width: 58.33333%; }
 
-  /* line 77, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--8 {
     width: 66.66667%; }
 
-  /* line 77, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--9 {
     width: 75%; }
 
-  /* line 77, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--10 {
     width: 83.33333%; }
 
-  /* line 77, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--11 {
     width: 91.66667%; }
 
-  /* line 77, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--12 {
     width: 100%; }
  }
 
-/*------------------------------------*\
-    $MEDIUM
-  \*------------------------------------*/
+/**
+   * @name Medium
+   * @level 4.1.3.
+   * @description
+   *   Screen sizes 45em (720px) and up
+   *
+   *  @markup
+   *    <div class="grid">
+   *      <div class="grid__item--12 grid__item--s--6 grid__item--m--3">Grid Item</div>
+   *      <div class="grid__item--12 grid__item--s--6 grid__item--m--3">Grid Item</div>
+   *      <div class="grid__item--12 grid__item--s--6 grid__item--m--3">Grid Item</div>
+   *      <div class="grid__item--12 grid__item--s--6 grid__item--m--3">Grid Item</div>
+   *    </div>
+   */
 @media (min-width: 45em) {
-  /* line 91, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 110, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid {
     margin-left: -1.25em; }
 
-  /* line 95, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 114, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   [class*='grid__item'] {
     padding-left: 1.25em; }
 
-  /* line 100, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 119, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--1 {
     width: 8.33333%; }
 
-  /* line 100, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 119, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--2 {
     width: 16.66667%; }
 
-  /* line 100, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 119, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--3 {
     width: 25%; }
 
-  /* line 100, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 119, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--4 {
     width: 33.33333%; }
 
-  /* line 100, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 119, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--5 {
     width: 41.66667%; }
 
-  /* line 100, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 119, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--6 {
     width: 50%; }
 
-  /* line 100, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 119, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--7 {
     width: 58.33333%; }
 
-  /* line 100, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 119, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--8 {
     width: 66.66667%; }
 
-  /* line 100, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 119, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--9 {
     width: 75%; }
 
-  /* line 100, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 119, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--10 {
     width: 83.33333%; }
 
-  /* line 100, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 119, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--11 {
     width: 91.66667%; }
 
-  /* line 100, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 119, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--12 {
     width: 100%; }
  }
 
-/*------------------------------------*\
-    $LARGE
-  \*------------------------------------*/
+/**
+   * @name Large
+   * @level 4.1.4.
+   * @description
+   *   Screen sizes 60em (960px) and up
+   *
+   *  @markup
+   *    <div class="grid">
+   *      <div class="grid__item--12 grid__item--m--6 grid__item--l--3">Grid Item</div>
+   *      <div class="grid__item--12 grid__item--m--6 grid__item--l--3">Grid Item</div>
+   *      <div class="grid__item--12 grid__item--m--6 grid__item--l--3">Grid Item</div>
+   *      <div class="grid__item--12 grid__item--m--6 grid__item--l--3">Grid Item</div>
+   *    </div>
+   */
 @media (min-width: 60em) {
-  /* line 114, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 144, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid {
     margin-left: -1.25em; }
 
-  /* line 118, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 148, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   [class*='grid__item'] {
     padding-left: 1.25em; }
 
-  /* line 123, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 153, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--1 {
     width: 8.33333%; }
 
-  /* line 123, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 153, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--2 {
     width: 16.66667%; }
 
-  /* line 123, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 153, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--3 {
     width: 25%; }
 
-  /* line 123, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 153, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--4 {
     width: 33.33333%; }
 
-  /* line 123, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 153, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--5 {
     width: 41.66667%; }
 
-  /* line 123, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 153, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--6 {
     width: 50%; }
 
-  /* line 123, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 153, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--7 {
     width: 58.33333%; }
 
-  /* line 123, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 153, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--8 {
     width: 66.66667%; }
 
-  /* line 123, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 153, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--9 {
     width: 75%; }
 
-  /* line 123, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 153, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--10 {
     width: 83.33333%; }
 
-  /* line 123, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 153, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--11 {
     width: 91.66667%; }
 
-  /* line 123, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 153, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--12 {
     width: 100%; }
  }
 
-/*------------------------------------*\
-    $XLARGE
-  \*------------------------------------*/
+/**
+   * @name X-Large
+   * @level 4.1.5.
+   * @description
+   *   Screen sizes 75em (1200px) and up
+   *
+   *  @markup
+   *    <div class="grid">
+   *      <div class="grid__item--12 grid__item--l--6 grid__item--xl--3">Grid Item</div>
+   *      <div class="grid__item--12 grid__item--l--6 grid__item--xl--3">Grid Item</div>
+   *      <div class="grid__item--12 grid__item--l--6 grid__item--xl--3">Grid Item</div>
+   *      <div class="grid__item--12 grid__item--l--6 grid__item--xl--3">Grid Item</div>
+   *    </div>
+   */
 @media (min-width: 75em) {
-  /* line 137, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 178, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid {
     margin-left: -1.25em; }
 
-  /* line 141, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 182, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   [class*='grid__item'] {
     padding-left: 1.25em; }
 
-  /* line 146, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 187, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--1 {
     width: 8.33333%; }
 
-  /* line 146, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 187, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--2 {
     width: 16.66667%; }
 
-  /* line 146, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 187, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--3 {
     width: 25%; }
 
-  /* line 146, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 187, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--4 {
     width: 33.33333%; }
 
-  /* line 146, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 187, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--5 {
     width: 41.66667%; }
 
-  /* line 146, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 187, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--6 {
     width: 50%; }
 
-  /* line 146, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 187, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--7 {
     width: 58.33333%; }
 
-  /* line 146, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 187, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--8 {
     width: 66.66667%; }
 
-  /* line 146, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 187, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--9 {
     width: 75%; }
 
-  /* line 146, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 187, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--10 {
     width: 83.33333%; }
 
-  /* line 146, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 187, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--11 {
     width: 91.66667%; }
 
-  /* line 146, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 187, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--12 {
     width: 100%; }
  }
 
-/*------------------------------------*\
-  BUTTON
-\*------------------------------------*/
 /**
  * @name Button
- * @level 4.1.
- * @description Hallo Welt
- *
- * CONTENTS
- * BASE................
- * SIZES...............
- * FONT-SIZES..........
- * FUNCTIONS...........
+ * @level 4.2.
  */
-/*------------------------------------*\
-  $BASE
-\*------------------------------------*/
-/* line 22, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
+/**
+ * Variables
+ */
+/**
+ * @name Base
+ * @level 4.2.1.
+ * @markup
+ *   <a href="#" class="button">Button</a>
+ *   <button class="button">Button</button>
+ */
+/* line 36, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button {
   display: inline-block;
   margin: 0;
@@ -1015,132 +1056,178 @@ small {
   font-size: 100%;
   font-family: inherit;
   cursor: pointer; }
-  /* line 37, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
+  /* line 51, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
   .button, .button:hover, .button:focus, .button:active, .button:visited {
     outline: none;
     color: #fff;
     text-decoration: none; }
-  /* line 44, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
+  /* line 58, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
   .button:hover, .button:focus, .button:active {
     background: #5b5e75; }
 
-/*------------------------------------*\
-  $SIZES
-\*------------------------------------*/
 /**
- * Button size modifiers.
- *
- * These all follow the same sizing rules as above;  
- * text is 1em, space around it remains uniform.
+ * @name Sizes
+ * @level 4.2.2.
  */
-/* line 61, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
+/**
+   * @name Small
+   * @level 4.2.2.1.
+   * @markup
+   *   <a href="#" class="button button--s">Button</a>
+   */
+/* line 76, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--s {
   padding: 0 0.5em; }
 
-/* line 67, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
+/**
+   * @name Large
+   * @level 4.2.2.2.
+   * @markup
+   *   <a href="#" class="button button--l">Button</a>
+   */
+/* line 88, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--l {
   padding: 1em 1.25em; }
 
-/* line 73, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
+/**
+   * @name X-Large
+   * @level 4.2.2.3.
+   * @markup
+   *   <a href="#" class="button button--xl">Button</a>
+   */
+/* line 100, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--xl {
   padding: 1.25em 2em; }
 
 /**
-   * These buttons will fill the entirety of their container.
+   * @name Full
+   * @level 4.2.2.4.
+   * @markup
+   *   <a href="#" class="button button--full">Button</a>
    */
-/* line 82, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
+/* line 112, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--full {
   padding-right: 0;
   padding-left: 0;
   width: 100%;
   text-align: center; }
 
-/*------------------------------------*\
-  $FONT-SIZES
-\*------------------------------------*/
 /**
- * Button font-size modifiers.
+ * @name Font sizes
+ * @level 4.2.3.
  */
-/* line 99, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
+/**
+   * @name Small
+   * @level 4.2.3.1.
+   * @markup
+   *   <a href="#" class="button button--font--s">Button</a>
+   */
+/* line 133, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--font--s {
   font-size: 0.85em; }
 
-/* line 105, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
+/**
+   * @name Large
+   * @level 4.2.3.2.
+   * @markup
+   *   <a href="#" class="button button--font--l">Button</a>
+   */
+/* line 145, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--font--l {
   font-size: 1.25em; }
 
-/* line 111, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
+/**
+   * @name X-Large
+   * @level 4.2.3.3.
+   * @markup
+   *   <a href="#" class="button button--font--xl">Button</a>
+   */
+/* line 157, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--font--xl {
   font-size: 1.5em; }
 
-/*------------------------------------*\
-  $FUNCTIONS
-\*------------------------------------*/
 /**
-   * Positive actions; e.g. sign in, purchase, submit, etc.
+ * @name Functions
+ * @level 4.2.4.
+ */
+/**
+   * @name Positive
+   * @level 4.2.4.1.
+   * @markup
+   *   <a href="#" class="button button--positive">Button</a>
    */
-/* line 126, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
+/* line 175, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--positive {
   background: #468847;
   color: #fff; }
-  /* line 131, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
+  /* line 180, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
   .button--positive:hover, .button--positive:focus, .button--positive:active {
     background: #7dab7e; }
 
 /**
-   * Neutral
+   * @name Neutral
+   * @level 4.2.4.2.
+   * @markup
+   *   <a href="#" class="button button--neutral">Button</a>
    */
-/* line 141, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
+/* line 193, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--neutral {
   background: #3A87AD;
   color: #fff; }
-  /* line 146, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
+  /* line 198, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
   .button--neutral:hover, .button--neutral:focus, .button--neutral:active {
     background: #75abc5; }
 
 /**
-   * Cautious
+   * @name Cautious
+   * @level 4.2.4.3.
+   * @markup
+   *   <a href="#" class="button button--cautious">Button</a>
    */
-/* line 156, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
+/* line 211, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--cautious {
   background: #c09853;
   color: #fff; }
-  /* line 161, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
+  /* line 216, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
   .button--cautious:hover, .button--cautious:focus, .button--cautious:active {
     background: #d2b686; }
 
 /**
-   * Negative actions; e.g. close account, delete photo, remove friend, etc.
+   * @name Negative
+   * @level 4.2.4.4.
+   * @markup
+   *   <a href="#" class="button button--negative">Button</a>
    */
-/* line 171, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
+/* line 229, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--negative {
   background: #b94a48;
   color: #fff; }
-  /* line 176, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
+  /* line 234, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
   .button--negative:hover, .button--negative:focus, .button--negative:active {
     background: #ce807e; }
 
 /**
-   * Inactive and disabled buttons.
+   * @name Inactive / disabled
+   * @level 4.2.4.5.
+   * @markup
+   *   <a href="#" class="button button--inactive">Button</a>
+   *   <a href="#" class="button button--disabled">Button</a>
    */
-/* line 191, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
+/* line 253, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--inactive, .button--inactive:hover, .button--inactive:focus, .button--inactive:active, .button--disabled, .button--disabled:hover, .button--disabled:focus, .button--disabled:active {
   background-color: #efefef;
   color: #bcbcbc; }
 
-/* line 200, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
+/* line 262, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--disabled, .button--disabled:hover, .button--disabled:focus, .button--disabled:active {
   cursor: text; }
 
-/*------------------------------------*\
-  MENU
-\*------------------------------------*/
 /**
- * CONTENTS
- * DEFAULT.............
- * OFF CANVAS..........
- * HORIZONTAL..........
- * VERTICAL............
+ * @name Menu
+ * @level 4.3.
+ */
+/**
+ * Variables
  */
 /*------------------------------------*\
   $DEFAULT
@@ -1149,35 +1236,35 @@ small {
  * 1. Set position root for off canvas menu
  * 2. Set position root for sub menus (dropdowns)
  */
-/* line 21, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 32, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 html {
   position: relative;
   /* [1] */ }
 
-/* line 25, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 36, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu__list {
   margin-bottom: 0;
   background: #16193B; }
 
-/* line 32, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 43, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu__list--level1 {
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s; }
 
-/* line 36, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 47, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu__item {
   position: relative;
   /* [2] */ }
 
-/* line 40, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 51, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu__link {
   display: block;
   text-decoration: none; }
-  /* line 46, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 57, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu__link, .menu__link:visited, .menu__link:hover, .menu__link:focus {
     color: #fff; }
 
-/* line 51, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 62, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu__checkbox {
   display: none; }
 
@@ -1188,11 +1275,11 @@ html {
 /*------------------------------------*\
     $OFF CANVAS
   \*------------------------------------*/
-/* line 69, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 80, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--off-canvas .menu__controls {
   display: block;
   float: right; }
-/* line 73, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 84, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--off-canvas .menu__list--level1 {
   position: fixed;
   top: 0;
@@ -1204,7 +1291,7 @@ html {
   -webkit-transform: translate(-100%, 0);
       -ms-transform: translate(-100%, 0);
           transform: translate(-100%, 0); }
-/* line 83, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 94, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--off-canvas .menu__checkbox:checked + .menu__list--level1 {
   -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
@@ -1213,26 +1300,26 @@ html {
 /*------------------------------------*\
     $HORIZONTAL
   \*------------------------------------*/
-/* line 105, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 116, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--horizontal .menu__list--level1 .menu__list {
   position: absolute;
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.2s; }
-/* line 111, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 122, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--horizontal .menu__list--level1 .menu__list .menu__list {
   top: 0;
   left: 100%; }
-/* line 116, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 127, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--horizontal .menu__item:hover > .menu__list, .menu--horizontal .menu__item:focus > .menu__list {
   visibility: visible;
   opacity: 1; }
-/* line 120, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 131, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--horizontal .menu__item--level1 {
   float: left; }
 
 @media (max-width: 44.9375em) {
-  /* line 129, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 140, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__list--level1 {
     height: 0;
     -webkit-transform: scale(1, 0);
@@ -1242,36 +1329,36 @@ html {
         -ms-transform-origin: 0 0;
             transform-origin: 0 0; }
 
-  /* line 134, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 145, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__checkbox:checked + .menu__list--level1 {
     height: auto;
     -webkit-transform: scale(1, 1);
         -ms-transform: scale(1, 1);
             transform: scale(1, 1); }
 
-  /* line 138, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 149, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__item--level1 {
     float: none; }
  }
 @media (min-width: 45em) {
-  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 154, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__list--level1 .menu__list {
     position: absolute;
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.2s; }
 
-  /* line 149, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 160, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__list--level1 .menu__list .menu__list {
     top: 0;
     left: 100%; }
 
-  /* line 154, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 165, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__item:hover > .menu__list, .menu--horizontal-responsive .menu__item:focus > .menu__list {
     visibility: visible;
     opacity: 1; }
 
-  /* line 158, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 169, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__item--level1 {
     float: left; }
  }
@@ -1409,7 +1496,7 @@ html {
 /**
  * Reset media styling on small screens
  */
-@media (max-width: avalanche-breakpointmax(45em)) {
+@media (max-width: 44.9375em) {
   /* line 42, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/media */
   .media--mobile-reset .media__img {
     float: none;

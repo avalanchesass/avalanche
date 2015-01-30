@@ -1,24 +1,38 @@
-/*------------------------------------*\
-  BUTTON
-\*------------------------------------*/
 /**
  * @name Button
- * @level 4.1.
- * @description Hallo Welt
- *
- * CONTENTS
- * BASE................
- * SIZES...............
- * FONT-SIZES..........
- * FUNCTIONS...........
+ * @level 4.2.
  */
+/**
+ * Variables
+ */
+// Sizes
+$cmp-button-size-s:    true;
+$cmp-button-size-l:    true;
+$cmp-button-size-xl:   true;
+$cmp-button-size-full: true;
+
+// Font sizes
+$cmp-button-font-size-s:  true;
+$cmp-button-font-size-l:  true;
+$cmp-button-font-size-xl: true;
+
+// Functions
+$cmp-button-function-positive: true;
+$cmp-button-function-neutral:  true;
+$cmp-button-function-cautious: true;
+$cmp-button-function-negative: true;
+$cmp-button-function-inactive: true;
+$cmp-button-function-disabled: true;
 
 
 
-/*------------------------------------*\
-  $BASE
-\*------------------------------------*/
-
+/**
+ * @name Base
+ * @level 4.2.1.
+ * @markup
+ *   <a href="#" class="button">Button</a>
+ *   <button class="button">Button</button>
+ */
 .button {
   display: inline-block;
   margin: 0;
@@ -48,28 +62,41 @@
 
 
 
-/*------------------------------------*\
-  $SIZES
-\*------------------------------------*/
 /**
- * Button size modifiers.
- *
- * These all follow the same sizing rules as above;  
- * text is 1em, space around it remains uniform.
+ * @name Sizes
+ * @level 4.2.2.
  */
 @if $cmp-button-size-s {
+  /**
+   * @name Small
+   * @level 4.2.2.1.
+   * @markup
+   *   <a href="#" class="button button--s">Button</a>
+   */
   .button--s {
     padding: 0 $spacing-xs;
   }
 }
 
 @if $cmp-button-size-l {
+  /**
+   * @name Large
+   * @level 4.2.2.2.
+   * @markup
+   *   <a href="#" class="button button--l">Button</a>
+   */
   .button--l {
     padding: $spacing-s $spacing-m;
   }
 }
 
 @if $cmp-button-size-xl {
+  /**
+   * @name X-Large
+   * @level 4.2.2.3.
+   * @markup
+   *   <a href="#" class="button button--xl">Button</a>
+   */
   .button--xl {
     padding: $spacing-m $spacing-l;
   }
@@ -77,7 +104,10 @@
 
 @if $cmp-button-size-full {
   /**
-   * These buttons will fill the entirety of their container.
+   * @name Full
+   * @level 4.2.2.4.
+   * @markup
+   *   <a href="#" class="button button--full">Button</a>
    */
   .button--full {
     padding-right: 0;
@@ -89,25 +119,41 @@
 
 
 
-/*------------------------------------*\
-  $FONT-SIZES
-\*------------------------------------*/
 /**
- * Button font-size modifiers.
+ * @name Font sizes
+ * @level 4.2.3.
  */
 @if $cmp-button-font-size-s {
+  /**
+   * @name Small
+   * @level 4.2.3.1.
+   * @markup
+   *   <a href="#" class="button button--font--s">Button</a>
+   */
   .button--font--s {
     font-size: $font-size-s;
   }
 }
 
 @if $cmp-button-font-size-l {
+  /**
+   * @name Large
+   * @level 4.2.3.2.
+   * @markup
+   *   <a href="#" class="button button--font--l">Button</a>
+   */
   .button--font--l {
     font-size: $font-size-l;
   }
 }
 
 @if $cmp-button-font-size-xl {
+  /**
+   * @name X-Large
+   * @level 4.2.3.3.
+   * @markup
+   *   <a href="#" class="button button--font--xl">Button</a>
+   */
   .button--font--xl {
     font-size: $font-size-xl;
   }
@@ -115,13 +161,16 @@
 
 
 
-/*------------------------------------*\
-  $FUNCTIONS
-\*------------------------------------*/
-
+/**
+ * @name Functions
+ * @level 4.2.4.
+ */
 @if $cmp-button-function-positive {
   /**
-   * Positive actions; e.g. sign in, purchase, submit, etc.
+   * @name Positive
+   * @level 4.2.4.1.
+   * @markup
+   *   <a href="#" class="button button--positive">Button</a>
    */
   .button--positive {
     background: $cs-positive;
@@ -136,7 +185,10 @@
 
 @if $cmp-button-function-neutral {
   /**
-   * Neutral
+   * @name Neutral
+   * @level 4.2.4.2.
+   * @markup
+   *   <a href="#" class="button button--neutral">Button</a>
    */
   .button--neutral {
     background: $cs-neutral;
@@ -151,7 +203,10 @@
 
 @if $cmp-button-function-cautious {
   /**
-   * Cautious
+   * @name Cautious
+   * @level 4.2.4.3.
+   * @markup
+   *   <a href="#" class="button button--cautious">Button</a>
    */
   .button--cautious {
     background: $cs-cautious;
@@ -166,7 +221,10 @@
 
 @if $cmp-button-function-negative {
   /**
-   * Negative actions; e.g. close account, delete photo, remove friend, etc.
+   * @name Negative
+   * @level 4.2.4.4.
+   * @markup
+   *   <a href="#" class="button button--negative">Button</a>
    */
   .button--negative {
     background: $cs-negative;
@@ -181,7 +239,11 @@
 
 @if $cmp-button-function-inactive or $cmp-button-function-disabled {
   /**
-   * Inactive and disabled buttons.
+   * @name Inactive / disabled
+   * @level 4.2.4.5.
+   * @markup
+   *   <a href="#" class="button button--inactive">Button</a>
+   *   <a href="#" class="button button--disabled">Button</a>
    */
   .button--inactive,
   .button--disabled {
