@@ -190,12 +190,6 @@
  *   $layout-max-width|62em $layout-box-sizing-reset|true
  */
 /**
- * Island
- */
-/**
- * Media
- */
-/**
  * @name Base
  * @level 3.
  */
@@ -1371,6 +1365,9 @@ html {
  * @level 4.4.
  */
 /**
+ * Variables
+ */
+/**
  * @name Base
  * @level 4.4.1.
  * @description
@@ -1382,12 +1379,12 @@ html {
  *      Island
  *    </div>
  */
-/* line 17, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 35, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island {
   display: block;
   padding: 1.25em;
   background: #efefef; }
-  /* line 22, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+  /* line 40, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
   .island > :last-child {
     margin-bottom: 0; }
 
@@ -1406,7 +1403,7 @@ html {
    *      Positive Island
    *    </div>
    */
-/* line 45, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--positive {
   background: #dae7da;
   color: #468847; }
@@ -1420,7 +1417,7 @@ html {
    *      Neutral Island
    *    </div>
    */
-/* line 61, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 79, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--neutral {
   background: #d7e7ee;
   color: #3A87AD; }
@@ -1434,7 +1431,7 @@ html {
    *      Cautious Island
    *    </div>
    */
-/* line 77, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 95, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cautious {
   background: #f2eadc;
   color: #c09853; }
@@ -1450,7 +1447,7 @@ html {
    *      Negative Island
    *    </div>
    */
-/* line 95, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 113, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--negative {
   background: #f1dada;
   color: #b94a48; }
@@ -1468,7 +1465,7 @@ html {
    *      cs-a Island
    *    </div>
    */
-/* line 117, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 135, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-a {
   background: #16193B;
   color: #fff; }
@@ -1482,7 +1479,7 @@ html {
    *      cs-b Island
    *    </div>
    */
-/* line 133, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 151, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-b {
   background: #35478C;
   color: #fff; }
@@ -1496,7 +1493,7 @@ html {
    *      cs-c Island
    *    </div>
    */
-/* line 149, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 167, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-c {
   background: #4E7AC7;
   color: #fff; }
@@ -1510,7 +1507,7 @@ html {
    *      cs-d Island
    *    </div>
    */
-/* line 165, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 183, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-d {
   background: #7FB2F0;
   color: #fff; }
@@ -1524,54 +1521,55 @@ html {
    *      cs-e Island
    *    </div>
    */
-/* line 181, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 199, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-e {
   background: #ADD5F7;
   color: #fff; }
 
-/*------------------------------------*\
-  MEDIA
-\*------------------------------------*/
 /**
- * CONTENTS
- * BASE................
- *
- *
- * Place any image- and text-like content side-by-side, as per:
- * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
- *
- * <div class="media">
- *   <a href="#" class="media__img">
- *     <img src="pony.png">
- *   </a>
- *   [optional]
- *   <div class="media__img--rev">
- *     <img src="pony2.png">
- *   </div>
- *   [/optional]
- *   <div class="media__body">
- *     <p>Lorem Ipsum</p>
- *   </div>
- * </div>
+ * @name Media
+ * @level 4.5.
  */
-/*------------------------------------*\
-  $BASE
-\*------------------------------------*/
+/**
+ * @name Base
+ * @level 4.5.1.
+ * @description
+ *   The media object is an image on one side, with descriptive content on the other side.  
+ *   [Nicole Sullivan - The media object saves hundreds of lines of code](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code)
+ *
+ * @markup
+ *    <div class="media">
+ *      <div class="media__img">
+ *        <img src="http://placehold.it/70x70" alt="">
+ *      </div>
+ *      <div class="media__body">
+ *        Lorem ipsum dolor sit...
+ *      </div>
+ *    </div>
+ *    <div class="media">
+ *      <div class="media__img--rev">
+ *        <img src="http://placehold.it/70x70" alt="">
+ *      </div>
+ *      <div class="media__body">
+ *        Lorem ipsum dolor sit...
+ *      </div>
+ *    </div>
+ */
 /**
  * Reset media styling on small screens
  */
 @media (max-width: 44.9375em) {
-  /* line 42, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/media */
+  /* line 39, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/media */
   .media--mobile-reset .media__img {
     float: none;
     margin-right: 0; }
-  /* line 46, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/media */
+  /* line 43, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/media */
   .media--mobile-reset .media__img--rev {
     float: none;
     margin-left: 0; }
  }
 
-/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/media */
+/* line 50, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/media */
 .media__img {
   float: left;
   margin-right: 1.25em; }
@@ -1579,16 +1577,16 @@ html {
 /**
  * Reversed image location (right instead of left).
  */
-/* line 61, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/media */
+/* line 58, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/media */
 .media__img--rev {
   float: right;
   margin-left: 1.25em; }
 
-/* line 68, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/media */
+/* line 65, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/media */
 .media__img img, .media__img--rev img {
   display: block; }
 
-/* line 73, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/media */
+/* line 70, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/media */
 .media__body {
   overflow: hidden; }
 

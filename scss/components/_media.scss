@@ -1,35 +1,32 @@
-/*------------------------------------*\
-  MEDIA
-\*------------------------------------*/
 /**
- * CONTENTS
- * BASE................
- *
- *
- * Place any image- and text-like content side-by-side, as per:
- * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
- *
- * <div class="media">
- *   <a href="#" class="media__img">
- *     <img src="pony.png">
- *   </a>
- *   [optional]
- *   <div class="media__img--rev">
- *     <img src="pony2.png">
- *   </div>
- *   [/optional]
- *   <div class="media__body">
- *     <p>Lorem Ipsum</p>
- *   </div>
- * </div>
+ * @name Media
+ * @level 4.5.
  */
-
-
-
-/*------------------------------------*\
-  $BASE
-\*------------------------------------*/
-
+/**
+ * @name Base
+ * @level 4.5.1.
+ * @description
+ *   The media object is an image on one side, with descriptive content on the other side.  
+ *   [Nicole Sullivan - The media object saves hundreds of lines of code](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code)
+ *
+ * @markup
+ *    <div class="media">
+ *      <div class="media__img">
+ *        <img src="http://placehold.it/70x70" alt="">
+ *      </div>
+ *      <div class="media__body">
+ *        Lorem ipsum dolor sit...
+ *      </div>
+ *    </div>
+ *    <div class="media">
+ *      <div class="media__img--rev">
+ *        <img src="http://placehold.it/70x70" alt="">
+ *      </div>
+ *      <div class="media__body">
+ *        Lorem ipsum dolor sit...
+ *      </div>
+ *    </div>
+ */
 .media {
   @extend .u-cf;
 }
