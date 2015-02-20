@@ -29,8 +29,8 @@ $cmp-grid-spacing-xl: $spacing-m;
  *
  * @markup
  *    <div class="grid">
- *      <div class="grid__item--12">Grid Item</div>
- *      <div class="grid__item--12">Grid Item</div>
+ *      <div class="grid__item--6">Grid Item</div>
+ *      <div class="grid__item--6">Grid Item</div>
  *    </div>
  */
 $cmp-grid-base-size: (100% / $cmp-grid-item-count);
