@@ -54,7 +54,7 @@
  * @level 2.1.
  */
 /**
- * @name Color Sheme
+ * @name Color Scheme
  * @level 2.1.1.
  * @description Fancy generator: http://coolors.co/
  */
@@ -167,7 +167,7 @@
  * @name max Breakpoints
  * @level 2.1.3.2.
  * @description
- *   Use with care, max-widht breakpoints should be preferred!
+ *   Use with care, max-width breakpoints should be preferred!
  */
 /**
  * @variables
@@ -688,8 +688,8 @@ small {
  *
  * @markup
  *    <div class="grid">
- *      <div class="grid__item--12">Grid Item</div>
- *      <div class="grid__item--12">Grid Item</div>
+ *      <div class="grid__item--6">Grid Item</div>
+ *      <div class="grid__item--6">Grid Item</div>
  *    </div>
  */
 @media (max-width: 44.9375em) {
@@ -1366,101 +1366,165 @@ html {
 /*------------------------------------*\
     $VERTICAL
   \*------------------------------------*/
-/*------------------------------------*\
-  ISLAND
-\*------------------------------------*/
 /**
- * CONTENTS
- * BASE................
- * FUNCTIONS...........
- * COLOR-SHEME.........
+ * @name Island
+ * @level 4.4.
  */
-/*------------------------------------*\
-  $BASE
-\*------------------------------------*/
-/* line 17, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/**
+ * @name Base
+ * @level 4.4.1.
+ * @description
+ *   A single class used to box off content, leaving it closed on all sides like, well, an island.  
+ *   [Harry Roberts - The 'island' object](http://csswizardry.com/2011/10/the-island-object/)
+ *
+ * @markup
+ *    <div class="island">
+ *      Island
+ *    </div>
+ */
+/* line 20, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island {
   display: block;
   padding: 1.25em;
   background: #efefef; }
-  /* line 22, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+  /* line 25, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
   .island > :last-child {
     margin-bottom: 0; }
 
-/*------------------------------------*\
-  $FUNCTIONS
-\*------------------------------------*/
 /**
-   * Positive actions; e.g. sign in, purchase, submit, etc.
+ * @name Functions
+ * @level 4.4.2.
+ */
+/**
+   * @name Positive
+   * @level 4.4.2.1.
+   * @description
+   *   Positive actions; e.g. sign in, purchase, submit, etc.
+   *
+   * @markup
+   *    <div class="island island--positive">
+   *      Positive Island
+   *    </div>
    */
-/* line 37, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 48, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--positive {
   background: #dae7da;
   color: #468847; }
 
 /**
-   * Neutral
+   * @name Neutral
+   * @level 4.4.2.2.
+   *
+   * @markup
+   *    <div class="island island--neutral">
+   *      Neutral Island
+   *    </div>
    */
-/* line 47, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 64, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--neutral {
   background: #d7e7ee;
   color: #3A87AD; }
 
 /**
-   * Cautious
+   * @name Cautious
+   * @level 4.4.2.3.
+   *
+   * @markup
+   *    <div class="island island--cautious">
+   *      Cautious Island
+   *    </div>
    */
-/* line 57, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 80, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cautious {
   background: #f2eadc;
   color: #c09853; }
 
 /**
-   * Negative actions; e.g. close account, delete photo, remove friend, etc.
+   * @name Negative
+   * @level 4.4.2.4.
+   * @description
+   *   Negative actions; e.g. close account, delete photo, remove friend, etc.
+   *
+   * @markup
+   *    <div class="island island--negative">
+   *      Negative Island
+   *    </div>
    */
-/* line 67, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 98, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--negative {
   background: #f1dada;
   color: #b94a48; }
 
-/*------------------------------------*\
-  $COLOR-SHEME
-\*------------------------------------*/
 /**
-   * cs-a
+ * @name Color scheme
+ * @level 4.4.3.
+ */
+/**
+   * @name cs-a
+   * @level 4.4.3.1.
+   *
+   * @markup
+   *    <div class="island island--cs-a">
+   *      cs-a Island
+   *    </div>
    */
-/* line 83, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 120, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-a {
   background: #16193B;
   color: #fff; }
 
 /**
-   * cs-a
+   * @name cs-b
+   * @level 4.4.3.2.
+   *
+   * @markup
+   *    <div class="island island--cs-b">
+   *      cs-b Island
+   *    </div>
    */
-/* line 93, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 136, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-b {
   background: #35478C;
   color: #fff; }
 
 /**
-   * cs-a
+   * @name cs-c
+   * @level 4.4.3.3.
+   *
+   * @markup
+   *    <div class="island island--cs-c">
+   *      cs-c Island
+   *    </div>
    */
-/* line 103, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 152, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-c {
   background: #4E7AC7;
   color: #fff; }
 
 /**
-   * cs-a
+   * @name cs-d
+   * @level 4.4.3.4.
+   *
+   * @markup
+   *    <div class="island island--cs-d">
+   *      cs-d Island
+   *    </div>
    */
-/* line 113, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 168, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-d {
   background: #7FB2F0;
   color: #fff; }
 
 /**
-   * cs-a
+   * @name cs-e
+   * @level 4.4.3.5.
+   *
+   * @markup
+   *    <div class="island island--cs-e">
+   *      cs-e Island
+   *    </div>
    */
-/* line 123, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 184, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-e {
   background: #ADD5F7;
   color: #fff; }

@@ -1,19 +1,22 @@
-/*------------------------------------*\
-  ISLAND
-\*------------------------------------*/
 /**
- * CONTENTS
- * BASE................
- * FUNCTIONS...........
- * COLOR-SHEME.........
+ * @name Island
+ * @level 4.4.
  */
 
 
 
-/*------------------------------------*\
-  $BASE
-\*------------------------------------*/
-
+/**
+ * @name Base
+ * @level 4.4.1.
+ * @description
+ *   A single class used to box off content, leaving it closed on all sides like, well, an island.  
+ *   [Harry Roberts - The 'island' object](http://csswizardry.com/2011/10/the-island-object/)
+ *
+ * @markup
+ *    <div class="island">
+ *      Island
+ *    </div>
+ */
 .island {
   @extend .u-cf;
   display: block;
@@ -26,13 +29,21 @@
 
 
 
-/*------------------------------------*\
-  $FUNCTIONS
-\*------------------------------------*/
-
+/**
+ * @name Functions
+ * @level 4.4.2.
+ */
 @if $cmp-island-function-positive {
   /**
-   * Positive actions; e.g. sign in, purchase, submit, etc.
+   * @name Positive
+   * @level 4.4.2.1.
+   * @description
+   *   Positive actions; e.g. sign in, purchase, submit, etc.
+   *
+   * @markup
+   *    <div class="island island--positive">
+   *      Positive Island
+   *    </div>
    */
   .island--positive {
     background: mix($cs-positive, #fff, 20%);
@@ -42,7 +53,13 @@
 
 @if $cmp-island-function-neutral {
   /**
-   * Neutral
+   * @name Neutral
+   * @level 4.4.2.2.
+   *
+   * @markup
+   *    <div class="island island--neutral">
+   *      Neutral Island
+   *    </div>
    */
   .island--neutral {
     background: mix($cs-neutral, #fff, 20%);
@@ -52,7 +69,13 @@
 
 @if $cmp-island-function-cautious {
   /**
-   * Cautious
+   * @name Cautious
+   * @level 4.4.2.3.
+   *
+   * @markup
+   *    <div class="island island--cautious">
+   *      Cautious Island
+   *    </div>
    */
   .island--cautious {
     background: mix($cs-cautious, #fff, 20%);
@@ -62,7 +85,15 @@
 
 @if $cmp-island-function-negative {
   /**
-   * Negative actions; e.g. close account, delete photo, remove friend, etc.
+   * @name Negative
+   * @level 4.4.2.4.
+   * @description
+   *   Negative actions; e.g. close account, delete photo, remove friend, etc.
+   *
+   * @markup
+   *    <div class="island island--negative">
+   *      Negative Island
+   *    </div>
    */
   .island--negative {
     background: mix($cs-negative, #fff, 20%);
@@ -72,13 +103,19 @@
 
 
 
-/*------------------------------------*\
-  $COLOR-SHEME
-\*------------------------------------*/
-
+/**
+ * @name Color scheme
+ * @level 4.4.3.
+ */
 @if $cmp-island-cs-a {
   /**
-   * cs-a
+   * @name cs-a
+   * @level 4.4.3.1.
+   *
+   * @markup
+   *    <div class="island island--cs-a">
+   *      cs-a Island
+   *    </div>
    */
   .island--cs-a {
     background: $cs-a;
@@ -88,7 +125,13 @@
 
 @if $cmp-island-cs-b {
   /**
-   * cs-a
+   * @name cs-b
+   * @level 4.4.3.2.
+   *
+   * @markup
+   *    <div class="island island--cs-b">
+   *      cs-b Island
+   *    </div>
    */
   .island--cs-b {
     background: $cs-b;
@@ -98,7 +141,13 @@
 
 @if $cmp-island-cs-c {
   /**
-   * cs-a
+   * @name cs-c
+   * @level 4.4.3.3.
+   *
+   * @markup
+   *    <div class="island island--cs-c">
+   *      cs-c Island
+   *    </div>
    */
   .island--cs-c {
     background: $cs-c;
@@ -108,7 +157,13 @@
 
 @if $cmp-island-cs-d {
   /**
-   * cs-a
+   * @name cs-d
+   * @level 4.4.3.4.
+   *
+   * @markup
+   *    <div class="island island--cs-d">
+   *      cs-d Island
+   *    </div>
    */
   .island--cs-d {
     background: $cs-d;
@@ -118,7 +173,13 @@
 
 @if $cmp-island-cs-e {
   /**
-   * cs-a
+   * @name cs-e
+   * @level 4.4.3.5.
+   *
+   * @markup
+   *    <div class="island island--cs-e">
+   *      cs-e Island
+   *    </div>
    */
   .island--cs-e {
     background: $cs-e;
