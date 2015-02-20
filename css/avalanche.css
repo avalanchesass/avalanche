@@ -1382,12 +1382,12 @@ html {
  *      Island
  *    </div>
  */
-/* line 20, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 17, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island {
   display: block;
   padding: 1.25em;
   background: #efefef; }
-  /* line 25, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+  /* line 22, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
   .island > :last-child {
     margin-bottom: 0; }
 
@@ -1406,7 +1406,7 @@ html {
    *      Positive Island
    *    </div>
    */
-/* line 48, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 45, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--positive {
   background: #dae7da;
   color: #468847; }
@@ -1420,7 +1420,7 @@ html {
    *      Neutral Island
    *    </div>
    */
-/* line 64, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 61, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--neutral {
   background: #d7e7ee;
   color: #3A87AD; }
@@ -1434,7 +1434,7 @@ html {
    *      Cautious Island
    *    </div>
    */
-/* line 80, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 77, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cautious {
   background: #f2eadc;
   color: #c09853; }
@@ -1450,7 +1450,7 @@ html {
    *      Negative Island
    *    </div>
    */
-/* line 98, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 95, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--negative {
   background: #f1dada;
   color: #b94a48; }
@@ -1468,7 +1468,7 @@ html {
    *      cs-a Island
    *    </div>
    */
-/* line 120, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 117, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-a {
   background: #16193B;
   color: #fff; }
@@ -1482,7 +1482,7 @@ html {
    *      cs-b Island
    *    </div>
    */
-/* line 136, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 133, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-b {
   background: #35478C;
   color: #fff; }
@@ -1496,7 +1496,7 @@ html {
    *      cs-c Island
    *    </div>
    */
-/* line 152, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 149, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-c {
   background: #4E7AC7;
   color: #fff; }
@@ -1510,7 +1510,7 @@ html {
    *      cs-d Island
    *    </div>
    */
-/* line 168, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 165, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-d {
   background: #7FB2F0;
   color: #fff; }
@@ -1524,7 +1524,7 @@ html {
    *      cs-e Island
    *    </div>
    */
-/* line 184, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
+/* line 181, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-e {
   background: #ADD5F7;
   color: #fff; }
