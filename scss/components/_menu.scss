@@ -22,10 +22,9 @@ $cmp-menu-off-canvas: true;
 
 
 
-/*------------------------------------*\
-  $DEFAULT
-\*------------------------------------*/
-
+/**
+ * Defaults
+ */
 .menu__list {
   @extend .u-list-reset;
   margin-bottom: 0;
@@ -64,25 +63,41 @@ $cmp-menu-off-canvas: true;
 
 
 @if $cmp-menu-off-canvas {
-  /*------------------------------------*\
-    $OFF CANVAS
-  \*------------------------------------*/
-
+  /**
+   * @name Off canvas
+   * @level 4.3.1.
+   *
+   * @markup
+   *   <nav class="menu menu--off-canvas">
+   *     <div class="menu__controls">
+   *       <label for="menu__checkbox" class="menu__toggle button button--s">&#9776; Menu</label>
+   *     </div>
+   *     <input id="menu__checkbox" class="menu__checkbox" name="menu__checkbox" type="checkbox">
+   *     <ul class="menu__list menu__list--level1">
+   *       <li class="menu__item menu__item--level1">
+   *         <a href="#" class="menu__link menu__link--level1">Link 1</a>
+   *       </li>
+   *       <li class="menu__item menu__item--level1">
+   *         <a href="#" class="menu__link menu__link--level1">Link 2</a>
+   *       </li>
+   *       <li class="menu__item menu__item--level1">
+   *         <a href="#" class="menu__link menu__link--level1">Link 3</a>
+   *       </li>
+   *     </ul>
+   *   </nav>
+   */
   html {
     position: relative;
   }
-
   .menu--off-canvas {
     .menu__controls {
       display: block;
-      float: right;
     }
     .menu__list--level1 {
       position: fixed;
       top: 0;
       bottom: 0;
       left: 0;
-      padding-top: $spacing-xl;
       max-width: 20em;
       width: 70%;
       transform: translate(-100%, 0);
@@ -96,10 +111,10 @@ $cmp-menu-off-canvas: true;
 
 
 @if $cmp-menu-horizontal or $cmp-menu-horizontal-responsive {
-  /*------------------------------------*\
-    $HORIZONTAL
-  \*------------------------------------*/
-
+  /**
+   * @name Horizontal
+   * @level 4.3.2.
+   */
   .menu--horizontal,
   .menu--horizontal-responsive {
     .menu__list--level1 {
@@ -108,6 +123,33 @@ $cmp-menu-off-canvas: true;
   }
 
   @if $cmp-menu-horizontal {
+    /**
+     * @name Horizontal (non responsiv)
+     * @level 4.3.2.1.
+     *
+     * @markup
+     *   <nav class="menu menu--horizontal">
+     *     <ul class="menu__list menu__list--level1">
+     *       <li class="menu__item menu__item--level1">
+     *         <a href="#" class="menu__link menu__link--level1">Link 1</a>
+     *         <ul class="menu__list menu__list--level2">
+     *           <li class="menu__item menu__item--level2">
+     *             <a href="#" class="menu__link menu__link--level2">Link 1.1</a>
+     *           </li>
+     *           <li class="menu__item menu__item--level2">
+     *             <a href="#" class="menu__link menu__link--level2">Link 1.2</a>
+     *           </li>
+     *         </ul>
+     *       </li>
+     *       <li class="menu__item menu__item--level1">
+     *         <a href="#" class="menu__link menu__link--level1">Link 2</a>
+     *       </li>
+     *       <li class="menu__item menu__item--level1">
+     *         <a href="#" class="menu__link menu__link--level1">Link 3</a>
+     *       </li>
+     *     </ul>
+     *   </nav>
+     */
     .menu--horizontal {
       .menu__list--level1 .menu__list {
         position: absolute;
@@ -131,6 +173,37 @@ $cmp-menu-off-canvas: true;
   }
 
   @if $cmp-menu-horizontal-responsive {
+    /**
+     * @name Horizontal responsiv
+     * @level 4.3.2.2.
+     *
+     * @markup
+     *   <nav class="menu menu--horizontal-responsive">
+     *     <div class="menu__controls">
+     *       <label for="menu__checkbox-horizontal" class="menu__toggle button button--s">&#9776; Menu</label>
+     *     </div>
+     *     <input id="menu__checkbox-horizontal" class="menu__checkbox" name="menu__checkbox-horizontal" type="checkbox">
+     *     <ul class="menu__list menu__list--level1">
+     *       <li class="menu__item menu__item--level1">
+     *         <a href="#" class="menu__link menu__link--level1">Link 1</a>
+     *         <ul class="menu__list menu__list--level2">
+     *           <li class="menu__item menu__item--level2">
+     *             <a href="#" class="menu__link menu__link--level2">Link 1.1</a>
+     *           </li>
+     *           <li class="menu__item menu__item--level2">
+     *             <a href="#" class="menu__link menu__link--level2">Link 1.2</a>
+     *           </li>
+     *         </ul>
+     *       </li>
+     *       <li class="menu__item menu__item--level1">
+     *         <a href="#" class="menu__link menu__link--level1">Link 2</a>
+     *       </li>
+     *       <li class="menu__item menu__item--level1">
+     *         <a href="#" class="menu__link menu__link--level1">Link 3</a>
+     *       </li>
+     *     </ul>
+     *   </nav>
+     */
     .menu--horizontal-responsive {
       @media (max-width: avalanche-breakpointmax($cmp-menu-mobile-breakpoint)) {
         .menu__list--level1 {
@@ -173,10 +246,33 @@ $cmp-menu-off-canvas: true;
 
 
 @if $cmp-menu-vertical {
-  /*------------------------------------*\
-    $VERTICAL
-  \*------------------------------------*/
-
+  /**
+   * @name Vertical
+   * @level 4.3.3.
+   *
+   * @markup
+   *   <nav class="menu menu--vertical">
+   *     <ul class="menu__list menu__list--level1">
+   *       <li class="menu__item menu__item--level1">
+   *         <a href="#" class="menu__link menu__link--level1">Link 1</a>
+   *         <ul class="menu__list menu__list--level2">
+   *           <li class="menu__item menu__item--level2">
+   *             <a href="#" class="menu__link menu__link--level2">Link 1.1</a>
+   *           </li>
+   *           <li class="menu__item menu__item--level2">
+   *             <a href="#" class="menu__link menu__link--level2">Link 1.2</a>
+   *           </li>
+   *         </ul>
+   *       </li>
+   *       <li class="menu__item menu__item--level1">
+   *         <a href="#" class="menu__link menu__link--level1">Link 2</a>
+   *       </li>
+   *       <li class="menu__item menu__item--level1">
+   *         <a href="#" class="menu__link menu__link--level1">Link 3</a>
+   *       </li>
+   *     </ul>
+   *   </nav>
+   */
   .menu--vertical {
     // no styling necessary
     // use this class to add your own stylings

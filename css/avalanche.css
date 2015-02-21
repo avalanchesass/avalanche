@@ -1221,32 +1221,32 @@ small {
 /**
  * Variables
  */
-/*------------------------------------*\
-  $DEFAULT
-\*------------------------------------*/
-/* line 29, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/**
+ * Defaults
+ */
+/* line 28, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu__list {
   margin-bottom: 0;
   background: #16193B; }
 
-/* line 35, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 34, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu__list--level1 {
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s; }
 
-/* line 39, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 38, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu__item {
   position: relative; }
 
-/* line 43, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 42, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu__link {
   display: block;
   text-decoration: none; }
-  /* line 49, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 48, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu__link, .menu__link:hover, .menu__link:focus, .menu__link:visited {
     color: #fff; }
 
-/* line 54, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu__checkbox {
   display: none; }
 
@@ -1254,58 +1254,135 @@ small {
   .menu__controls {
     display: none; } }
 
-/*------------------------------------*\
-    $OFF CANVAS
-  \*------------------------------------*/
-/* line 71, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/**
+   * @name Off canvas
+   * @level 4.3.1.
+   *
+   * @markup
+   *   <nav class="menu menu--off-canvas">
+   *     <div class="menu__controls">
+   *       <label for="menu__checkbox" class="menu__toggle button button--s">&#9776; Menu</label>
+   *     </div>
+   *     <input id="menu__checkbox" class="menu__checkbox" name="menu__checkbox" type="checkbox">
+   *     <ul class="menu__list menu__list--level1">
+   *       <li class="menu__item menu__item--level1">
+   *         <a href="#" class="menu__link menu__link--level1">Link 1</a>
+   *       </li>
+   *       <li class="menu__item menu__item--level1">
+   *         <a href="#" class="menu__link menu__link--level1">Link 2</a>
+   *       </li>
+   *       <li class="menu__item menu__item--level1">
+   *         <a href="#" class="menu__link menu__link--level1">Link 3</a>
+   *       </li>
+   *     </ul>
+   *   </nav>
+   */
+/* line 89, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 html {
   position: relative; }
 
-/* line 76, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 93, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--off-canvas .menu__controls {
-  display: block;
-  float: right; }
-/* line 80, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  display: block; }
+/* line 96, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--off-canvas .menu__list--level1 {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
-  padding-top: 3em;
   max-width: 20em;
   width: 70%;
   -webkit-transform: translate(-100%, 0);
       -ms-transform: translate(-100%, 0);
           transform: translate(-100%, 0); }
-/* line 90, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 105, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--off-canvas .menu__checkbox:checked + .menu__list--level1 {
   -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
           transform: translate(0, 0); }
 
-/*------------------------------------*\
-    $HORIZONTAL
-  \*------------------------------------*/
-/* line 112, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/**
+   * @name Horizontal
+   * @level 4.3.2.
+   */
+/**
+     * @name Horizontal (non responsiv)
+     * @level 4.3.2.1.
+     *
+     * @markup
+     *   <nav class="menu menu--horizontal">
+     *     <ul class="menu__list menu__list--level1">
+     *       <li class="menu__item menu__item--level1">
+     *         <a href="#" class="menu__link menu__link--level1">Link 1</a>
+     *         <ul class="menu__list menu__list--level2">
+     *           <li class="menu__item menu__item--level2">
+     *             <a href="#" class="menu__link menu__link--level2">Link 1.1</a>
+     *           </li>
+     *           <li class="menu__item menu__item--level2">
+     *             <a href="#" class="menu__link menu__link--level2">Link 1.2</a>
+     *           </li>
+     *         </ul>
+     *       </li>
+     *       <li class="menu__item menu__item--level1">
+     *         <a href="#" class="menu__link menu__link--level1">Link 2</a>
+     *       </li>
+     *       <li class="menu__item menu__item--level1">
+     *         <a href="#" class="menu__link menu__link--level1">Link 3</a>
+     *       </li>
+     *     </ul>
+     *   </nav>
+     */
+/* line 154, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--horizontal .menu__list--level1 .menu__list {
   position: absolute;
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.2s; }
-/* line 118, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 160, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--horizontal .menu__list--level1 .menu__list .menu__list {
   top: 0;
   left: 100%; }
-/* line 123, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 165, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--horizontal .menu__item:hover > .menu__list, .menu--horizontal .menu__item:focus > .menu__list {
   visibility: visible;
   opacity: 1; }
-/* line 127, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 169, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--horizontal .menu__item--level1 {
   float: left; }
 
+/**
+     * @name Horizontal responsiv
+     * @level 4.3.2.2.
+     *
+     * @markup
+     *   <nav class="menu menu--horizontal-responsive">
+     *     <div class="menu__controls">
+     *       <label for="menu__checkbox-horizontal" class="menu__toggle button button--s">&#9776; Menu</label>
+     *     </div>
+     *     <input id="menu__checkbox-horizontal" class="menu__checkbox" name="menu__checkbox-horizontal" type="checkbox">
+     *     <ul class="menu__list menu__list--level1">
+     *       <li class="menu__item menu__item--level1">
+     *         <a href="#" class="menu__link menu__link--level1">Link 1</a>
+     *         <ul class="menu__list menu__list--level2">
+     *           <li class="menu__item menu__item--level2">
+     *             <a href="#" class="menu__link menu__link--level2">Link 1.1</a>
+     *           </li>
+     *           <li class="menu__item menu__item--level2">
+     *             <a href="#" class="menu__link menu__link--level2">Link 1.2</a>
+     *           </li>
+     *         </ul>
+     *       </li>
+     *       <li class="menu__item menu__item--level1">
+     *         <a href="#" class="menu__link menu__link--level1">Link 2</a>
+     *       </li>
+     *       <li class="menu__item menu__item--level1">
+     *         <a href="#" class="menu__link menu__link--level1">Link 3</a>
+     *       </li>
+     *     </ul>
+     *   </nav>
+     */
 @media (max-width: 44.9375em) {
-  /* line 136, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 209, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__list--level1 {
     height: 0;
     -webkit-transform: scale(1, 0);
@@ -1315,43 +1392,67 @@ html {
         -ms-transform-origin: 0 0;
             transform-origin: 0 0; }
 
-  /* line 141, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 214, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__checkbox:checked + .menu__list--level1 {
     height: auto;
     -webkit-transform: scale(1, 1);
         -ms-transform: scale(1, 1);
             transform: scale(1, 1); }
 
-  /* line 145, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 218, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__item--level1 {
     float: none; }
  }
 @media (min-width: 45em) {
-  /* line 150, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 223, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__list--level1 .menu__list {
     position: absolute;
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.2s; }
 
-  /* line 156, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 229, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__list--level1 .menu__list .menu__list {
     top: 0;
     left: 100%; }
 
-  /* line 161, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 234, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__item:hover > .menu__list, .menu--horizontal-responsive .menu__item:focus > .menu__list {
     visibility: visible;
     opacity: 1; }
 
-  /* line 165, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 238, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__item--level1 {
     float: left; }
  }
 
-/*------------------------------------*\
-    $VERTICAL
-  \*------------------------------------*/
+/**
+   * @name Vertical
+   * @level 4.3.3.
+   *
+   * @markup
+   *   <nav class="menu menu--vertical">
+   *     <ul class="menu__list menu__list--level1">
+   *       <li class="menu__item menu__item--level1">
+   *         <a href="#" class="menu__link menu__link--level1">Link 1</a>
+   *         <ul class="menu__list menu__list--level2">
+   *           <li class="menu__item menu__item--level2">
+   *             <a href="#" class="menu__link menu__link--level2">Link 1.1</a>
+   *           </li>
+   *           <li class="menu__item menu__item--level2">
+   *             <a href="#" class="menu__link menu__link--level2">Link 1.2</a>
+   *           </li>
+   *         </ul>
+   *       </li>
+   *       <li class="menu__item menu__item--level1">
+   *         <a href="#" class="menu__link menu__link--level1">Link 2</a>
+   *       </li>
+   *       <li class="menu__item menu__item--level1">
+   *         <a href="#" class="menu__link menu__link--level1">Link 3</a>
+   *       </li>
+   *     </ul>
+   *   </nav>
+   */
 /**
  * @name Island
  * @level 4.4.
