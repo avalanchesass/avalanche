@@ -25,19 +25,11 @@ $cmp-menu-off-canvas: true;
 /*------------------------------------*\
   $DEFAULT
 \*------------------------------------*/
-/**
- * 1. Set position root for off canvas menu
- * 2. Set position root for sub menus (dropdowns)
- */
-html {
-  position: relative; /* [1] */
-}
 
 .menu__list {
+  @extend .u-list-reset;
   margin-bottom: 0;
   background: $cs-a;
-
-  @extend .u-list-reset;
 }
 
 .menu__list--level1 {
@@ -45,16 +37,16 @@ html {
 }
 
 .menu__item {
-  position: relative; /* [2] */
+  position: relative;
 }
 
 .menu__link {
   display: block;
   text-decoration: none;
   &,
-  &:visited,
   &:hover,
-  &:focus {
+  &:focus,
+  &:visited {
     color: $cs-a-contrast;
   }
 }
@@ -75,6 +67,10 @@ html {
   /*------------------------------------*\
     $OFF CANVAS
   \*------------------------------------*/
+
+  html {
+    position: relative;
+  }
 
   .menu--off-canvas {
     .menu__controls {

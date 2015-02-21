@@ -1224,39 +1224,29 @@ small {
 /*------------------------------------*\
   $DEFAULT
 \*------------------------------------*/
-/**
- * 1. Set position root for off canvas menu
- * 2. Set position root for sub menus (dropdowns)
- */
-/* line 32, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
-html {
-  position: relative;
-  /* [1] */ }
-
-/* line 36, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 29, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu__list {
   margin-bottom: 0;
   background: #16193B; }
 
-/* line 43, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 35, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu__list--level1 {
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s; }
 
-/* line 47, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 39, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu__item {
-  position: relative;
-  /* [2] */ }
+  position: relative; }
 
-/* line 51, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 43, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu__link {
   display: block;
   text-decoration: none; }
-  /* line 57, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
-  .menu__link, .menu__link:visited, .menu__link:hover, .menu__link:focus {
+  /* line 49, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  .menu__link, .menu__link:hover, .menu__link:focus, .menu__link:visited {
     color: #fff; }
 
-/* line 62, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 54, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu__checkbox {
   display: none; }
 
@@ -1267,11 +1257,15 @@ html {
 /*------------------------------------*\
     $OFF CANVAS
   \*------------------------------------*/
-/* line 80, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 71, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+html {
+  position: relative; }
+
+/* line 76, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--off-canvas .menu__controls {
   display: block;
   float: right; }
-/* line 84, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 80, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--off-canvas .menu__list--level1 {
   position: fixed;
   top: 0;
@@ -1283,7 +1277,7 @@ html {
   -webkit-transform: translate(-100%, 0);
       -ms-transform: translate(-100%, 0);
           transform: translate(-100%, 0); }
-/* line 94, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 90, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--off-canvas .menu__checkbox:checked + .menu__list--level1 {
   -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
@@ -1292,26 +1286,26 @@ html {
 /*------------------------------------*\
     $HORIZONTAL
   \*------------------------------------*/
-/* line 116, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 112, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--horizontal .menu__list--level1 .menu__list {
   position: absolute;
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.2s; }
-/* line 122, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 118, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--horizontal .menu__list--level1 .menu__list .menu__list {
   top: 0;
   left: 100%; }
-/* line 127, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 123, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--horizontal .menu__item:hover > .menu__list, .menu--horizontal .menu__item:focus > .menu__list {
   visibility: visible;
   opacity: 1; }
-/* line 131, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 127, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--horizontal .menu__item--level1 {
   float: left; }
 
 @media (max-width: 44.9375em) {
-  /* line 140, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 136, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__list--level1 {
     height: 0;
     -webkit-transform: scale(1, 0);
@@ -1321,36 +1315,36 @@ html {
         -ms-transform-origin: 0 0;
             transform-origin: 0 0; }
 
-  /* line 145, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 141, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__checkbox:checked + .menu__list--level1 {
     height: auto;
     -webkit-transform: scale(1, 1);
         -ms-transform: scale(1, 1);
             transform: scale(1, 1); }
 
-  /* line 149, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 145, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__item--level1 {
     float: none; }
  }
 @media (min-width: 45em) {
-  /* line 154, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 150, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__list--level1 .menu__list {
     position: absolute;
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.2s; }
 
-  /* line 160, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 156, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__list--level1 .menu__list .menu__list {
     top: 0;
     left: 100%; }
 
-  /* line 165, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 161, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__item:hover > .menu__list, .menu--horizontal-responsive .menu__item:focus > .menu__list {
     visibility: visible;
     opacity: 1; }
 
-  /* line 169, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 165, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__item--level1 {
     float: left; }
  }
