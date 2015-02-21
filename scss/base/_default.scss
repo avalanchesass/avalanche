@@ -1,18 +1,10 @@
-/*------------------------------------*\
-  BASE
-\*------------------------------------*/
 /**
- * CONTENTS
- * ELEMENTS............
- * SELECTION...........
+ * @name Default
+ * @level 3.1.
+ * @description
+ *   Base styles: opinionated defaults  
+ *   Adopted from the great https://html5boilerplate.com/
  */
-
-
-
-/*------------------------------------*\
-  $ELEMENTS
-\*------------------------------------*/
-
 html {
   font-size: avalanche-strip-units($font-base-size) / (16 / 100) * 1%;
   line-height: avalanche-strip-units($font-base-line-height / $font-base-size);
@@ -40,11 +32,13 @@ hr {
 }
 
 /*
- * Remove the gap between images, videos, audio and canvas and the bottom of
- * their containers: h5bp.com/i/440
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
  */
 audio,
 canvas,
+iframe,
 img,
 svg,
 video {
@@ -53,15 +47,10 @@ video {
 
 /*
  * Remove default fieldset styles.
- *
- * 1. Chrome and Firefox set a `min-width: min-content;` on fieldsets,
- *    so we reset that to ensure it behaves more like a standard block element.
- *    See https://github.com/twbs/bootstrap/issues/12359.
  */
 fieldset {
   margin: 0;
   padding: 0;
-  min-width: 0; /* [1] */
   border: 0;
 }
 
@@ -72,15 +61,9 @@ textarea {
   resize: vertical;
 }
 
-
-
-/*------------------------------------*\
-  $SELECTION
-\*------------------------------------*/
 /*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
  */
 ::-moz-selection {
   background: $selection-background;

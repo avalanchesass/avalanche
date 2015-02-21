@@ -193,23 +193,19 @@
  * @name Base
  * @level 3.
  */
-/*------------------------------------*\
-  BASE
-\*------------------------------------*/
 /**
- * CONTENTS
- * ELEMENTS............
- * SELECTION...........
+ * @name Default
+ * @level 3.1.
+ * @description
+ *   Base styles: opinionated defaults  
+ *   Adopted from the great https://html5boilerplate.com/
  */
-/*------------------------------------*\
-  $ELEMENTS
-\*------------------------------------*/
-/* line 16, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/base */
+/* line 8, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/default */
 html {
   font-size: 100%;
   line-height: 1.5; }
 
-/* line 25, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/base */
+/* line 17, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/default */
 html, button, input, select, textarea {
   color: #222;
   font-family: 'Helvetica Neue', sans-serif; }
@@ -217,7 +213,7 @@ html, button, input, select, textarea {
 /*
  * A better looking default horizontal rule
  */
-/* line 33, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/base */
+/* line 25, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/default */
 hr {
   display: block;
   margin: 1em 0;
@@ -227,50 +223,41 @@ hr {
   border-top: 1px solid #d5d5d5; }
 
 /*
- * Remove the gap between images, videos, audio and canvas and the bottom of
- * their containers: h5bp.com/i/440
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
  */
-/* line 50, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/base */
-audio, canvas, img, svg, video {
+/* line 44, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/default */
+audio, canvas, iframe, img, svg, video {
   vertical-align: middle; }
 
 /*
  * Remove default fieldset styles.
- *
- * 1. Chrome and Firefox set a `min-width: min-content;` on fieldsets,
- *    so we reset that to ensure it behaves more like a standard block element.
- *    See https://github.com/twbs/bootstrap/issues/12359.
  */
-/* line 61, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/base */
+/* line 51, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/default */
 fieldset {
   margin: 0;
   padding: 0;
-  min-width: 0;
-  /* [1] */
   border: 0; }
 
 /*
  * Allow only vertical resizing of textareas.
  */
-/* line 71, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/base */
+/* line 60, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/default */
 textarea {
   resize: vertical; }
 
-/*------------------------------------*\
-  $SELECTION
-\*------------------------------------*/
 /*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
  */
-/* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/base */
+/* line 68, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/default */
 ::-moz-selection {
   background: #16193B;
   color: #fff;
   text-shadow: none; }
 
-/* line 91, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/base */
+/* line 74, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/default */
 ::-moz-selection {
   background: #16193B;
   color: #fff;
