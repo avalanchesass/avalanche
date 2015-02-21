@@ -1,42 +1,53 @@
-/*------------------------------------*\
-  FORM
-\*------------------------------------*/
 /**
- * CONTENTS
- * BASE................
+ * @name Form
+ * @level 3.2.
+ * @markup
+ *   <form>
+ *     <div>
+ *       <label for="text">Text field</label>
+ *       <input type="text" id="text" name="text" placeholder="Placeholder">
+ *     </div>
+ *     <div>
+ *       <label for="password">Password field</label>
+ *       <input type="password" id="password" name="password">
+ *     </div>
+ *     <div>
+ *       <label for="select">Select field</label>
+ *       <select id="select" name="select"><option>test</option></select>
+ *     </div>
+ *     <div>
+ *       <input id="radio-lorem" name="radio" type="radio" value="Lorem"> <label for="radio-lorem">Lorem</label>
+ *       <input id="radio-ipsum" name="radio" type="radio" value="Ipsum"> <label for="radio-ipsum">Ipsum</label>
+ *     </div>
+ *     <div>
+ *       <input id="checkbox-lorem" name="checkbox" type="checkbox" value="Lorem"> <label for="checkbox-lorem">Lorem</label>
+ *       <input id="checkbox-ipsum" name="checkbox" type="checkbox" value="Ipsum"> <label for="checkbox-ipsum">Ipsum</label>
+ *     </div>
+ *     <div>
+ *       <label for="file">File field</label>
+ *       <input type="file" id="file" name="file">
+ *     </div>
+ *     <div>
+ *       <label for="range">Range field</label>
+ *       <input type="range" id="range" name="range">
+ *     </div>
+ *     <div>
+ *       <input type="submit" value="Submit" class="button">
+ *       <button type="submit" class="button">Submit</button>
+ *      </div>
+ *   </form>
  */
-
-
-
-/*------------------------------------*\
-  $BASE
-\*------------------------------------*/
-
 label {
   display: block;
 }
 
-select,
-textarea,
-input[type='text'],
-input[type='password'],
-input[type='datetime'],
-input[type='datetime-local'],
-input[type='date'],
-input[type='month'],
-input[type='time'],
-input[type='week'],
-input[type='number'],
-input[type='email'],
-input[type='url'],
-input[type='search'],
-input[type='tel'],
-input[type='color'] {
-  display: inline-block;
+button,
+input,
+textarea {
   padding: $spacing-xs;
   max-width: 100%;
   border: 1px solid $cs-grey-c;
-  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  line-height: inherit;
   transition: border-color ease-in-out 0.1s, box-shadow ease-in-out 0.1s;
   &:focus {
     outline: none;
@@ -45,11 +56,25 @@ input[type='color'] {
   }
 }
 
-// Position radios and checkboxes better
+button,
+input[type='submit'] {
+  border: none;
+}
+
+input[type='radio'],
+input[type='checkbox'],
+input[type='file'],
+input[type='range'] {
+  padding: 0;
+  max-width: none;
+  border: none;
+  &:focus {
+    box-shadow: none;
+  }
+}
+
 input[type='radio'],
 input[type='checkbox'] {
-  margin-top: 1px \9; // IE8-9
-  line-height: normal;
   & + label {
     display: inline-block;
   }
@@ -58,6 +83,10 @@ input[type='checkbox'] {
 // Set the height of file controls to match text inputs
 input[type='file'] {
   display: block;
+  line-height: normal;
+  &:focus {
+    border: 0.1875em solid red;
+  }
 }
 
 // Make range inputs behave like textual form controls
@@ -70,13 +99,6 @@ input[type='range'] {
 select[multiple],
 select[size] {
   height: auto;
-}
-
-// Focus for file, radio, and checkbox
-input[type='file']:focus,
-input[type='radio']:focus,
-input[type='checkbox']:focus {
-  border: 3px solid red;
 }
 
 // Reset height for `textarea`s
