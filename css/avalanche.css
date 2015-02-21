@@ -256,12 +256,6 @@ textarea {
   background: #16193B;
   color: #fff;
   text-shadow: none; }
-
-/* line 74, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/default */
-::-moz-selection {
-  background: #16193B;
-  color: #fff;
-  text-shadow: none; }
 ::selection {
   background: #16193B;
   color: #fff;

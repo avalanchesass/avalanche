@@ -65,12 +65,6 @@ textarea {
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
  */
-::-moz-selection {
-  background: $selection-background;
-  color: $selection-color;
-  text-shadow: none;
-}
-
 ::selection {
   background: $selection-background;
   color: $selection-color;
