@@ -28,10 +28,10 @@ $cmp-grid-spacing-xl: $spacing-m;
  *   Mobile first styles for all screen sizes
  *
  * @markup
- *    <div class="grid">
- *      <div class="grid__item--6">Grid Item</div>
- *      <div class="grid__item--6">Grid Item</div>
- *    </div>
+ *   <div class="grid">
+ *     <div class="grid__item--6">Grid Item</div>
+ *     <div class="grid__item--6">Grid Item</div>
+ *   </div>
  */
 $cmp-grid-base-size: (100% / $cmp-grid-item-count);
 

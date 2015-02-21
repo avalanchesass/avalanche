@@ -10,22 +10,22 @@
  *   [Nicole Sullivan - The media object saves hundreds of lines of code](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code)
  *
  * @markup
- *    <div class="media">
- *      <div class="media__img">
- *        <img src="http://placehold.it/70x70" alt="">
- *      </div>
- *      <div class="media__body">
- *        Lorem ipsum dolor sit...
- *      </div>
- *    </div>
- *    <div class="media">
- *      <div class="media__img--rev">
- *        <img src="http://placehold.it/70x70" alt="">
- *      </div>
- *      <div class="media__body">
- *        Lorem ipsum dolor sit...
- *      </div>
- *    </div>
+ *   <div class="media">
+ *     <div class="media__img">
+ *       <img src="http://placehold.it/70x70" alt="">
+ *     </div>
+ *     <div class="media__body">
+ *       Lorem ipsum dolor sit...
+ *     </div>
+ *   </div>
+ *   <div class="media">
+ *     <div class="media__img--rev">
+ *       <img src="http://placehold.it/70x70" alt="">
+ *     </div>
+ *     <div class="media__body">
+ *       Lorem ipsum dolor sit...
+ *     </div>
+ *   </div>
  */
 .media {
   @extend .u-cf;

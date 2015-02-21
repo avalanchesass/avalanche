@@ -681,10 +681,10 @@ small {
  *   Mobile first styles for all screen sizes
  *
  * @markup
- *    <div class="grid">
- *      <div class="grid__item--6">Grid Item</div>
- *      <div class="grid__item--6">Grid Item</div>
- *    </div>
+ *   <div class="grid">
+ *     <div class="grid__item--6">Grid Item</div>
+ *     <div class="grid__item--6">Grid Item</div>
+ *   </div>
  */
 /* line 38, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid {
@@ -1468,9 +1468,9 @@ html {
  *   [Harry Roberts - The 'island' object](http://csswizardry.com/2011/10/the-island-object/)
  *
  * @markup
- *    <div class="island">
- *      Island
- *    </div>
+ *   <div class="island">
+ *     Island
+ *   </div>
  */
 /* line 35, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island {
@@ -1492,9 +1492,9 @@ html {
    *   Positive actions; e.g. sign in, purchase, submit, etc.
    *
    * @markup
-   *    <div class="island island--positive">
-   *      Positive Island
-   *    </div>
+   *   <div class="island island--positive">
+   *     Positive Island
+   *   </div>
    */
 /* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--positive {
@@ -1506,9 +1506,9 @@ html {
    * @level 4.4.2.2.
    *
    * @markup
-   *    <div class="island island--neutral">
-   *      Neutral Island
-   *    </div>
+   *   <div class="island island--neutral">
+   *     Neutral Island
+   *   </div>
    */
 /* line 79, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--neutral {
@@ -1520,9 +1520,9 @@ html {
    * @level 4.4.2.3.
    *
    * @markup
-   *    <div class="island island--cautious">
-   *      Cautious Island
-   *    </div>
+   *   <div class="island island--cautious">
+   *     Cautious Island
+   *   </div>
    */
 /* line 95, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cautious {
@@ -1536,9 +1536,9 @@ html {
    *   Negative actions; e.g. close account, delete photo, remove friend, etc.
    *
    * @markup
-   *    <div class="island island--negative">
-   *      Negative Island
-   *    </div>
+   *   <div class="island island--negative">
+   *     Negative Island
+   *   </div>
    */
 /* line 113, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--negative {
@@ -1554,9 +1554,9 @@ html {
    * @level 4.4.3.1.
    *
    * @markup
-   *    <div class="island island--cs-a">
-   *      cs-a Island
-   *    </div>
+   *   <div class="island island--cs-a">
+   *     cs-a Island
+   *   </div>
    */
 /* line 135, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-a {
@@ -1568,9 +1568,9 @@ html {
    * @level 4.4.3.2.
    *
    * @markup
-   *    <div class="island island--cs-b">
-   *      cs-b Island
-   *    </div>
+   *   <div class="island island--cs-b">
+   *     cs-b Island
+   *   </div>
    */
 /* line 151, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-b {
@@ -1582,9 +1582,9 @@ html {
    * @level 4.4.3.3.
    *
    * @markup
-   *    <div class="island island--cs-c">
-   *      cs-c Island
-   *    </div>
+   *   <div class="island island--cs-c">
+   *     cs-c Island
+   *   </div>
    */
 /* line 167, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-c {
@@ -1596,9 +1596,9 @@ html {
    * @level 4.4.3.4.
    *
    * @markup
-   *    <div class="island island--cs-d">
-   *      cs-d Island
-   *    </div>
+   *   <div class="island island--cs-d">
+   *     cs-d Island
+   *   </div>
    */
 /* line 183, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-d {
@@ -1610,9 +1610,9 @@ html {
    * @level 4.4.3.5.
    *
    * @markup
-   *    <div class="island island--cs-e">
-   *      cs-e Island
-   *    </div>
+   *   <div class="island island--cs-e">
+   *     cs-e Island
+   *   </div>
    */
 /* line 199, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-e {
@@ -1631,22 +1631,22 @@ html {
  *   [Nicole Sullivan - The media object saves hundreds of lines of code](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code)
  *
  * @markup
- *    <div class="media">
- *      <div class="media__img">
- *        <img src="http://placehold.it/70x70" alt="">
- *      </div>
- *      <div class="media__body">
- *        Lorem ipsum dolor sit...
- *      </div>
- *    </div>
- *    <div class="media">
- *      <div class="media__img--rev">
- *        <img src="http://placehold.it/70x70" alt="">
- *      </div>
- *      <div class="media__body">
- *        Lorem ipsum dolor sit...
- *      </div>
- *    </div>
+ *   <div class="media">
+ *     <div class="media__img">
+ *       <img src="http://placehold.it/70x70" alt="">
+ *     </div>
+ *     <div class="media__body">
+ *       Lorem ipsum dolor sit...
+ *     </div>
+ *   </div>
+ *   <div class="media">
+ *     <div class="media__img--rev">
+ *       <img src="http://placehold.it/70x70" alt="">
+ *     </div>
+ *     <div class="media__body">
+ *       Lorem ipsum dolor sit...
+ *     </div>
+ *   </div>
  */
 /**
  * Reset media styling on small screens
