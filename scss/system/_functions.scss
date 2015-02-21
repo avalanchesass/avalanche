@@ -4,8 +4,8 @@
 /**
  * CONTENTS
  * STRIP-UNITS.........
- * PIXEL2EM............
- * EM2PIXEL............
+ * PX2EM...............
+ * EM2PX...............
  * EM2REM..............
  * BREAKPOINTMAX.......
  */
@@ -23,13 +23,13 @@
 
 
 /*------------------------------------*\
-  $PIXEL2EM
+  $PX2EM
 \*------------------------------------*/
 /**
  * Convert a px value to em
  * based on $font-base-size
  */
-@function avalanche-pixel2em($px, $base: $font-base-size) {
+@function avalanche-px2em($px, $base: $font-base-size) {
   @if unit($px) == px {
     @return (avalanche-strip-units($px) / avalanche-strip-units($base)) * 1em;
   }
@@ -39,13 +39,13 @@
 
 
 /*------------------------------------*\
-  $EM2PIXEL
+  $EM2PX
 \*------------------------------------*/
 /**
  * Convert a em value to px
  * based on $font-base-size
  */
-@function avalanche-em2pixel($em, $base: $font-base-size) {
+@function avalanche-em2px($em, $base: $font-base-size) {
   @if unit($em) == em {
     @return (avalanche-strip-units($em) * avalanche-strip-units($base)) * 1px;
   }
