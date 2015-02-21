@@ -361,161 +361,167 @@ select[multiple], select[size] {
 textarea {
   height: auto; }
 
-/*------------------------------------*\
-  LAYOUT
-\*------------------------------------*/
 /**
- * CONTENTS
- * CONTAINER...........
- * BOX-SIZING-RESET....
+ * @name Layout
+ * @level 3.3.
  */
-/*------------------------------------*\
-  $CONTAINER
-\*------------------------------------*/
-/* line 16, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/layout */
+/**
+ * @name Container
+ * @level 3.3.1.
+ * @description
+ *   Basic container to limit the max-width  
+ *   of the layout and add some padding
+ */
+/* line 12, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/layout */
 .container {
   margin: 0 auto;
   padding: 0 1em;
   max-width: 62em; }
 
-/*------------------------------------*\
-  $BOX-SIZING-RESET
-\*------------------------------------*/
-/* line 29, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/layout */
+/**
+ * @name Box sizing reset
+ * @level 3.3.2.
+ * @description
+ *   Better box model  
+ *   [Paul Irish - * { Box-sizing: Border-box } FTW](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
+ */
+/* line 28, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/layout */
 html {
   box-sizing: border-box; }
 
-/* line 35, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/layout */
+/* line 34, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/layout */
 *, *:before, *:after {
   box-sizing: inherit; }
 
-/*------------------------------------*\
-  TYPOGRAPHY
-\*------------------------------------*/
 /**
- * CONTENTS
- * HEADLINES...........
- * ANCHORS.............
- * WHITESPACE..........
+ * @name Typography
+ * @level 3.4.
  */
-/*------------------------------------*\
-  $HEADLINES
-\*------------------------------------*/
 /**
- * Reset margin on headlines
+ * @name Headlines
+ * @level 3.4.1.
+ * @description
+ *   <h1>Headline 1</h1>
+ *   <h2>Headline 2</h2>
+ *   <h3>Headline 3</h3>
+ *   <h4>Headline 4</h4>
+ *   <h5>Headline 5</h5>
+ *   <h6>Headline 6</h6>
  */
-/* line 22, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
+/* line 19, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 h1, h2, h3, h4 {
-  margin-top: 0;
-  margin-bottom: 0.5em;
   color: #16193B;
   font-weight: 700;
   font-family: Futura, 'Trebuchet MS', sans-serif;
-  line-height: 1.25; }
+  line-height: 1.35; }
 
-/* line 31, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
+/* line 26, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 h1 {
   font-size: 2.25em; }
 
-/* line 35, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
+/* line 30, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 h2 {
   font-size: 1.875em; }
 
-/* line 39, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
+/* line 34, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 h3 {
   font-size: 1.5em; }
 
-/* line 43, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
+/* line 38, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 h4 {
   font-size: 1.25em; }
 
-/* line 47, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
+/* line 42, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 h5 {
-  margin: 0;
+  font-weight: 700;
   font-size: 1em; }
 
-/* line 52, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
+/* line 47, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 h6 {
-  margin: 0;
+  font-weight: 400;
   font-size: 1em; }
 
-/*------------------------------------*\
-  $ANCHORS
-\*------------------------------------*/
 /**
- * <span class="a">readmore...</span>
+ * @name Anchors
+ * @level 3.4.2.
+ * @markup
+ *   <a href="#">readmore...</a>
+ *   <span class="a">readmore...</span>
+ *   <a href="#" class="a a--reversed">reversed hover behaviour</a>
  */
-/* line 66, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
+/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 a, .a {
   color: #16193B;
-  text-decoration: underline; }
-  /* line 69, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
+  text-decoration: underline;
+  cursor: pointer; }
+  /* line 67, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
   a:visited, .a:visited {
     color: #16193B; }
-  /* line 73, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
+  /* line 71, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
   a:hover, a:focus, .a:hover, .a:focus {
     color: #16193B;
     text-decoration: none; }
 
-/**
- * Reversed link behaviour
- */
-/* line 82, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
+/* line 77, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 .a--reversed {
   text-decoration: none; }
-  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
+  /* line 80, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
   .a--reversed:hover, .a--reversed:focus {
     text-decoration: underline; }
 
 /**
- * Style tel anchors like normal text on big screens
- * (big screen most likely not mobile)
+ * @name Whitespace
+ * @level 3.4.3.
+ * @markup
+ *   <h2>Lorem Ipsum</h2>
+ *   <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+ *   tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+ *   <ul>
+ *     <li>Lorem Ipsum dolor</li>
+ *     <li>Lorem Ipsum dolor</li>
+ *   </ul>
+ *   <h3>Lorem Ipsum</h3>
+ *   <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+ *   tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
  */
-@media (min-width: 30em) {
-  /* line 98, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
-  a[href^='tel'], a[href^='tel']:hover, a[href^='tel']:focus {
-    color: #222;
-    text-decoration: none;
-    cursor: default; }
- }
+/* line 123, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
+h1, h2, h3, h4, h5, h6, h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6, p, ul, ol, dl, pre, form, table, figure, address, fieldset, blockquote {
+  margin: 0; }
 
-/*------------------------------------*\
-  $WHITESPACE
-\*------------------------------------*/
-/**
- * Add whitespace around some block elements
- */
-/* line 124, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
-p, ul, ol, dl, pre, form, table, figure, address, fieldset, blockquote {
-  margin-top: 0;
-  margin-bottom: 1.5em; }
+/* line 132, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
+* + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
+  margin-top: 1em; }
 
-/* line 131, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
+/* line 146, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
+* + p, * + ul, * + ol, * + dl, * + pre, * + form, * + table, * + figure, * + address, * + fieldset, * + blockquote {
+  margin-top: 1.5em; }
+
+/* line 152, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 ul, ol, dl {
   padding-left: 1.5em; }
 
 /**
- * no margin for nested lists
+ * No margin top for nested lists
  */
-/* line 141, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
+/* line 162, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 li ul, li ol, li dl {
-  margin-bottom: 0; }
+  margin-top: 0; }
 
 /**
- * no margin for nested tables
+ * No margin top for nested tables
  */
-/* line 150, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
+/* line 171, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 table table {
-  margin-bottom: 0; }
+  margin-top: 0; }
 
 /**
  * Normalize default font related tags
  */
-/* line 159, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
+/* line 180, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 b, strong {
   font-weight: 700; }
 
-/* line 163, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
+/* line 184, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 small {
   font-size: 0.85em; }
 

@@ -1,31 +1,26 @@
-/*------------------------------------*\
-  TYPOGRAPHY
-\*------------------------------------*/
 /**
- * CONTENTS
- * HEADLINES...........
- * ANCHORS.............
- * WHITESPACE..........
+ * @name Typography
+ * @level 3.4.
  */
-
-
-
-/*------------------------------------*\
-  $HEADLINES
-\*------------------------------------*/
 /**
- * Reset margin on headlines
+ * @name Headlines
+ * @level 3.4.1.
+ * @description
+ *   <h1>Headline 1</h1>
+ *   <h2>Headline 2</h2>
+ *   <h3>Headline 3</h3>
+ *   <h4>Headline 4</h4>
+ *   <h5>Headline 5</h5>
+ *   <h6>Headline 6</h6>
  */
 h1,
 h2,
 h3,
 h4 {
-  margin-top: 0;
-  margin-bottom: $spacing-xs;
   color: $cs-a;
   font-weight: $font-b-weight-bold;
   font-family: $font-b-family;
-  line-height: 1.25;
+  line-height: 1.35;
 }
 
 h1 {
@@ -45,27 +40,30 @@ h4 {
 }
 
 h5 {
-  margin: 0;
+  font-weight: $font-a-weight-bold;
   font-size: $font-size-h5;
 }
 
 h6 {
-  margin: 0;
+  font-weight: $font-a-weight-normal;
   font-size: $font-size-h6;
 }
 
 
 
-/*------------------------------------*\
-  $ANCHORS
-\*------------------------------------*/
 /**
- * <span class="a">readmore...</span>
+ * @name Anchors
+ * @level 3.4.2.
+ * @markup
+ *   <a href="#">readmore...</a>
+ *   <span class="a">readmore...</span>
+ *   <a href="#" class="a a--reversed">reversed hover behaviour</a>
  */
 a,
 .a {
   color: $a-color;
   text-decoration: $a-text-decoration;
+  cursor: pointer;
   &:visited {
     color: $a-color-visited;
   }
@@ -76,9 +74,6 @@ a,
   }
 }
 
-/**
- * Reversed link behaviour
- */
 .a--reversed {
   text-decoration: $a-text-decoration-hover;
   &:hover,
@@ -87,30 +82,34 @@ a,
   }
 }
 
+
+
 /**
- * Style tel anchors like normal text on big screens
- * (big screen most likely not mobile)
+ * @name Whitespace
+ * @level 3.4.3.
+ * @markup
+ *   <h2>Lorem Ipsum</h2>
+ *   <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+ *   tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+ *   <ul>
+ *     <li>Lorem Ipsum dolor</li>
+ *     <li>Lorem Ipsum dolor</li>
+ *   </ul>
+ *   <h3>Lorem Ipsum</h3>
+ *   <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+ *   tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
  */
-@media (min-width: $breakpoint-s) {
-  a[href^='tel'] {
-    &,
-    &:hover,
-    &:focus {
-      color: $font-base-color;
-      text-decoration: none;
-      cursor: default;
-    }
-  }
-}
-
-
-
-/*------------------------------------*\
-  $WHITESPACE
-\*------------------------------------*/
-/**
- * Add whitespace around some block elements
- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 + h2,
+h2 + h3,
+h3 + h4,
+h4 + h5,
+h5 + h6,
 p,
 ul,
 ol,
@@ -122,8 +121,30 @@ figure,
 address,
 fieldset,
 blockquote {
-  margin-top: 0;
-  margin-bottom: (($font-base-line-height / $font-base-size) * 1em);
+  margin: 0;
+}
+
+* + h1,
+* + h2,
+* + h3,
+* + h4,
+* + h5,
+* + h6 {
+  margin-top: 1em;
+}
+
+* + p,
+* + ul,
+* + ol,
+* + dl,
+* + pre,
+* + form,
+* + table,
+* + figure,
+* + address,
+* + fieldset,
+* + blockquote {
+  margin-top: $spacing-m;
 }
 
 ul,
@@ -133,22 +154,22 @@ dl {
 }
 
 /**
- * no margin for nested lists
+ * No margin top for nested lists
  */
 li {
   ul,
   ol,
   dl {
-    margin-bottom: 0;
+    margin-top: 0;
   }
 }
 
 /**
- * no margin for nested tables
+ * No margin top for nested tables
  */
 table {
   table {
-    margin-bottom: 0;
+    margin-top: 0;
   }
 }
 
