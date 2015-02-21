@@ -179,7 +179,7 @@
  */
 /**
  * @variables
- *   $spacing-xs|0.5em $spacing-s|1em $spacing-m|1.25em $spacing-l|2em $spacing-xl|3em $spacing-xxl|4em $spacing-xxxl|5em
+ *   $spacing-xs|0.5em $spacing-s|1em $spacing-m|1.5em $spacing-l|2em $spacing-xl|3em $spacing-xxl|4em $spacing-xxxl|5em
  */
 /**
  * @name Layout
@@ -548,7 +548,7 @@ small {
 
 /* line 61, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/utility */
 .u-spacing--bottom--m {
-  margin-bottom: 1.25em; }
+  margin-bottom: 1.5em; }
 
 /* line 65, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/utility */
 .u-spacing--bottom--l {
@@ -585,8 +585,8 @@ small {
 
 /* line 98, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/utility */
 .u-spacing--inner--both--m {
-  padding-top: 1.25em;
-  padding-bottom: 1.25em; }
+  padding-top: 1.5em;
+  padding-bottom: 1.5em; }
 
 /* line 103, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/utility */
 .u-spacing--inner--both--l {
@@ -823,11 +823,11 @@ small {
 @media (min-width: 45em) {
   /* line 100, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid {
-    margin-left: -1.25em; }
+    margin-left: -1.5em; }
 
   /* line 104, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   [class*='grid__item'] {
-    padding-left: 1.25em; }
+    padding-left: 1.5em; }
 
   /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--1 {
@@ -895,11 +895,11 @@ small {
 @media (min-width: 60em) {
   /* line 134, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid {
-    margin-left: -1.25em; }
+    margin-left: -1.5em; }
 
   /* line 138, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   [class*='grid__item'] {
-    padding-left: 1.25em; }
+    padding-left: 1.5em; }
 
   /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--1 {
@@ -967,11 +967,11 @@ small {
 @media (min-width: 75em) {
   /* line 168, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid {
-    margin-left: -1.25em; }
+    margin-left: -1.5em; }
 
   /* line 172, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   [class*='grid__item'] {
-    padding-left: 1.25em; }
+    padding-left: 1.5em; }
 
   /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--1 {
@@ -1079,7 +1079,7 @@ small {
    */
 /* line 88, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--l {
-  padding: 1em 1.25em; }
+  padding: 1em 1.5em; }
 
 /**
    * @name X-Large
@@ -1089,7 +1089,7 @@ small {
    */
 /* line 100, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--xl {
-  padding: 1.25em 2em; }
+  padding: 1.5em 2em; }
 
 /**
    * @name Full
@@ -1475,7 +1475,7 @@ html {
 /* line 35, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island {
   display: block;
-  padding: 1.25em;
+  padding: 1.5em;
   background: #efefef; }
   /* line 40, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
   .island > :last-child {
@@ -1665,7 +1665,7 @@ html {
 /* line 50, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/media */
 .media__img {
   float: left;
-  margin-right: 1.25em; }
+  margin-right: 1.5em; }
 
 /**
  * Reversed image location (right instead of left).
@@ -1673,7 +1673,7 @@ html {
 /* line 58, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/media */
 .media__img--rev {
   float: right;
-  margin-left: 1.25em; }
+  margin-left: 1.5em; }
 
 /* line 65, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/media */
 .media__img img, .media__img--rev img {
