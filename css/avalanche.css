@@ -686,63 +686,61 @@ small {
  *      <div class="grid__item--6">Grid Item</div>
  *    </div>
  */
-@media (max-width: 44.9375em) {
-  .grid {
-    margin-left: -1em; } }
+/* line 38, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+.grid {
+  margin-left: -1em; }
 
-/* line 48, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 43, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 [class*='grid__item'] {
   float: left;
+  padding-left: 1em;
   width: 100%; }
-  @media (max-width: 44.9375em) {
-    [class*='grid__item'] {
-      padding-left: 1em; } }
 
-/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--1 {
   width: 8.33333%; }
 
-/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--2 {
   width: 16.66667%; }
 
-/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--3 {
   width: 25%; }
 
-/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--4 {
   width: 33.33333%; }
 
-/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--5 {
   width: 41.66667%; }
 
-/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--6 {
   width: 50%; }
 
-/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--7 {
   width: 58.33333%; }
 
-/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--8 {
   width: 66.66667%; }
 
-/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--9 {
   width: 75%; }
 
-/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--10 {
   width: 83.33333%; }
 
-/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--11 {
   width: 91.66667%; }
 
-/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--12 {
   width: 100%; }
 
@@ -759,51 +757,51 @@ small {
    *    </div>
    */
 @media (min-width: 30em) {
-  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 75, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--1 {
     width: 8.33333%; }
 
-  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 75, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--2 {
     width: 16.66667%; }
 
-  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 75, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--3 {
     width: 25%; }
 
-  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 75, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--4 {
     width: 33.33333%; }
 
-  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 75, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--5 {
     width: 41.66667%; }
 
-  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 75, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--6 {
     width: 50%; }
 
-  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 75, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--7 {
     width: 58.33333%; }
 
-  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 75, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--8 {
     width: 66.66667%; }
 
-  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 75, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--9 {
     width: 75%; }
 
-  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 75, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--10 {
     width: 83.33333%; }
 
-  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 75, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--11 {
     width: 91.66667%; }
 
-  /* line 85, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 75, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--12 {
     width: 100%; }
  }
@@ -823,59 +821,59 @@ small {
    *    </div>
    */
 @media (min-width: 45em) {
-  /* line 110, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 100, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid {
     margin-left: -1.25em; }
 
-  /* line 114, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 104, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   [class*='grid__item'] {
     padding-left: 1.25em; }
 
-  /* line 119, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--1 {
     width: 8.33333%; }
 
-  /* line 119, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--2 {
     width: 16.66667%; }
 
-  /* line 119, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--3 {
     width: 25%; }
 
-  /* line 119, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--4 {
     width: 33.33333%; }
 
-  /* line 119, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--5 {
     width: 41.66667%; }
 
-  /* line 119, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--6 {
     width: 50%; }
 
-  /* line 119, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--7 {
     width: 58.33333%; }
 
-  /* line 119, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--8 {
     width: 66.66667%; }
 
-  /* line 119, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--9 {
     width: 75%; }
 
-  /* line 119, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--10 {
     width: 83.33333%; }
 
-  /* line 119, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--11 {
     width: 91.66667%; }
 
-  /* line 119, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--12 {
     width: 100%; }
  }
@@ -895,59 +893,59 @@ small {
    *    </div>
    */
 @media (min-width: 60em) {
-  /* line 144, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 134, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid {
     margin-left: -1.25em; }
 
-  /* line 148, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 138, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   [class*='grid__item'] {
     padding-left: 1.25em; }
 
-  /* line 153, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--1 {
     width: 8.33333%; }
 
-  /* line 153, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--2 {
     width: 16.66667%; }
 
-  /* line 153, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--3 {
     width: 25%; }
 
-  /* line 153, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--4 {
     width: 33.33333%; }
 
-  /* line 153, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--5 {
     width: 41.66667%; }
 
-  /* line 153, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--6 {
     width: 50%; }
 
-  /* line 153, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--7 {
     width: 58.33333%; }
 
-  /* line 153, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--8 {
     width: 66.66667%; }
 
-  /* line 153, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--9 {
     width: 75%; }
 
-  /* line 153, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--10 {
     width: 83.33333%; }
 
-  /* line 153, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--11 {
     width: 91.66667%; }
 
-  /* line 153, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--12 {
     width: 100%; }
  }
@@ -967,59 +965,59 @@ small {
    *    </div>
    */
 @media (min-width: 75em) {
-  /* line 178, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 168, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid {
     margin-left: -1.25em; }
 
-  /* line 182, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 172, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   [class*='grid__item'] {
     padding-left: 1.25em; }
 
-  /* line 187, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--1 {
     width: 8.33333%; }
 
-  /* line 187, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--2 {
     width: 16.66667%; }
 
-  /* line 187, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--3 {
     width: 25%; }
 
-  /* line 187, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--4 {
     width: 33.33333%; }
 
-  /* line 187, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--5 {
     width: 41.66667%; }
 
-  /* line 187, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--6 {
     width: 50%; }
 
-  /* line 187, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--7 {
     width: 58.33333%; }
 
-  /* line 187, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--8 {
     width: 66.66667%; }
 
-  /* line 187, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--9 {
     width: 75%; }
 
-  /* line 187, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--10 {
     width: 83.33333%; }
 
-  /* line 187, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--11 {
     width: 91.66667%; }
 
-  /* line 187, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
+  /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--12 {
     width: 100%; }
  }

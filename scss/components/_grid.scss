@@ -37,25 +37,15 @@ $cmp-grid-base-size: (100% / $cmp-grid-item-count);
 
 .grid {
   @extend .u-cf;
-  @if $cmp-grid-size-m == false {
-    margin-left: -$cmp-grid-spacing-m;
-  }
-  @media (max-width: $breakpoint-max-m) {
-    margin-left: -$cmp-grid-spacing-s;
-  }
+  margin-left: -$cmp-grid-spacing-s;
 }
 
 [class*='grid__item'] {
   float: left;
+  padding-left: $cmp-grid-spacing-s;
   width: 100%;
   @if $layout-box-sizing-reset == false {
     box-sizing: border-box;
-  }
-  @if $cmp-grid-size-m == false {
-    padding-left: $cmp-grid-spacing-m;
-  }
-  @media (max-width: $breakpoint-max-m) {
-    padding-left: $cmp-grid-spacing-s;
   }
 }
 
