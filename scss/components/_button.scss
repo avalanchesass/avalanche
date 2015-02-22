@@ -1,6 +1,6 @@
 /**
  * @name Button
- * @level 4.2.
+ * @level 5.2.
  */
 /**
  * Variables
@@ -28,7 +28,7 @@ $cmp-button-function-disabled: true;
 
 /**
  * @name Base
- * @level 4.2.1.
+ * @level 5.2.1.
  * @markup
  *   <a href="#" class="button">Button</a>
  *   <button class="button">Button</button>
@@ -64,12 +64,12 @@ $cmp-button-function-disabled: true;
 
 /**
  * @name Sizes
- * @level 4.2.2.
+ * @level 5.2.2.
  */
 @if $cmp-button-size-s {
   /**
    * @name Small
-   * @level 4.2.2.1.
+   * @level 5.2.2.1.
    * @markup
    *   <a href="#" class="button button--s">Button</a>
    */
@@ -81,7 +81,7 @@ $cmp-button-function-disabled: true;
 @if $cmp-button-size-l {
   /**
    * @name Large
-   * @level 4.2.2.2.
+   * @level 5.2.2.2.
    * @markup
    *   <a href="#" class="button button--l">Button</a>
    */
@@ -93,7 +93,7 @@ $cmp-button-function-disabled: true;
 @if $cmp-button-size-xl {
   /**
    * @name X-Large
-   * @level 4.2.2.3.
+   * @level 5.2.2.3.
    * @markup
    *   <a href="#" class="button button--xl">Button</a>
    */
@@ -105,7 +105,7 @@ $cmp-button-function-disabled: true;
 @if $cmp-button-size-full {
   /**
    * @name Full
-   * @level 4.2.2.4.
+   * @level 5.2.2.4.
    * @markup
    *   <a href="#" class="button button--full">Button</a>
    */
@@ -121,12 +121,12 @@ $cmp-button-function-disabled: true;
 
 /**
  * @name Font sizes
- * @level 4.2.3.
+ * @level 5.2.3.
  */
 @if $cmp-button-font-size-s {
   /**
    * @name Small
-   * @level 4.2.3.1.
+   * @level 5.2.3.1.
    * @markup
    *   <a href="#" class="button button--font--s">Button</a>
    */
@@ -138,7 +138,7 @@ $cmp-button-function-disabled: true;
 @if $cmp-button-font-size-l {
   /**
    * @name Large
-   * @level 4.2.3.2.
+   * @level 5.2.3.2.
    * @markup
    *   <a href="#" class="button button--font--l">Button</a>
    */
@@ -150,7 +150,7 @@ $cmp-button-function-disabled: true;
 @if $cmp-button-font-size-xl {
   /**
    * @name X-Large
-   * @level 4.2.3.3.
+   * @level 5.2.3.3.
    * @markup
    *   <a href="#" class="button button--font--xl">Button</a>
    */
@@ -163,12 +163,12 @@ $cmp-button-function-disabled: true;
 
 /**
  * @name Functions
- * @level 4.2.4.
+ * @level 5.2.4.
  */
 @if $cmp-button-function-positive {
   /**
    * @name Positive
-   * @level 4.2.4.1.
+   * @level 5.2.4.1.
    * @markup
    *   <a href="#" class="button button--positive">Button</a>
    */
@@ -186,7 +186,7 @@ $cmp-button-function-disabled: true;
 @if $cmp-button-function-neutral {
   /**
    * @name Neutral
-   * @level 4.2.4.2.
+   * @level 5.2.4.2.
    * @markup
    *   <a href="#" class="button button--neutral">Button</a>
    */
@@ -204,7 +204,7 @@ $cmp-button-function-disabled: true;
 @if $cmp-button-function-cautious {
   /**
    * @name Cautious
-   * @level 4.2.4.3.
+   * @level 5.2.4.3.
    * @markup
    *   <a href="#" class="button button--cautious">Button</a>
    */
@@ -222,7 +222,7 @@ $cmp-button-function-disabled: true;
 @if $cmp-button-function-negative {
   /**
    * @name Negative
-   * @level 4.2.4.4.
+   * @level 5.2.4.4.
    * @markup
    *   <a href="#" class="button button--negative">Button</a>
    */
@@ -240,7 +240,7 @@ $cmp-button-function-disabled: true;
 @if $cmp-button-function-inactive or $cmp-button-function-disabled {
   /**
    * @name Inactive / disabled
-   * @level 4.2.4.5.
+   * @level 5.2.4.5.
    * @markup
    *   <a href="#" class="button button--inactive">Button</a>
    *   <a href="#" class="button button--disabled">Button</a>

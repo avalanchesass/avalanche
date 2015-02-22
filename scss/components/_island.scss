@@ -1,6 +1,6 @@
 /**
  * @name Island
- * @level 4.4.
+ * @level 5.4.
  */
 /**
  * Variables
@@ -22,7 +22,7 @@ $cmp-island-cs-e: true;
 
 /**
  * @name Base
- * @level 4.4.1.
+ * @level 5.4.1.
  * @description
  *   A single class used to box off content, leaving it closed on all sides like, well, an island.  
  *   [Harry Roberts - The 'island' object](http://csswizardry.com/2011/10/the-island-object/)
@@ -33,7 +33,6 @@ $cmp-island-cs-e: true;
  *   </div>
  */
 .island {
-  @extend .u-cf;
   display: block;
   padding: $spacing-m;
   background: $cs-grey-a;
@@ -46,12 +45,12 @@ $cmp-island-cs-e: true;
 
 /**
  * @name Functions
- * @level 4.4.2.
+ * @level 5.4.2.
  */
 @if $cmp-island-function-positive {
   /**
    * @name Positive
-   * @level 4.4.2.1.
+   * @level 5.4.2.1.
    * @description
    *   Positive actions; e.g. sign in, purchase, submit, etc.
    *
@@ -69,7 +68,7 @@ $cmp-island-cs-e: true;
 @if $cmp-island-function-neutral {
   /**
    * @name Neutral
-   * @level 4.4.2.2.
+   * @level 5.4.2.2.
    *
    * @markup
    *   <div class="island island--neutral">
@@ -85,7 +84,7 @@ $cmp-island-cs-e: true;
 @if $cmp-island-function-cautious {
   /**
    * @name Cautious
-   * @level 4.4.2.3.
+   * @level 5.4.2.3.
    *
    * @markup
    *   <div class="island island--cautious">
@@ -101,7 +100,7 @@ $cmp-island-cs-e: true;
 @if $cmp-island-function-negative {
   /**
    * @name Negative
-   * @level 4.4.2.4.
+   * @level 5.4.2.4.
    * @description
    *   Negative actions; e.g. close account, delete photo, remove friend, etc.
    *
@@ -120,12 +119,12 @@ $cmp-island-cs-e: true;
 
 /**
  * @name Color scheme
- * @level 4.4.3.
+ * @level 5.4.3.
  */
 @if $cmp-island-cs-a {
   /**
    * @name cs-a
-   * @level 4.4.3.1.
+   * @level 5.4.3.1.
    *
    * @markup
    *   <div class="island island--cs-a">
@@ -141,7 +140,7 @@ $cmp-island-cs-e: true;
 @if $cmp-island-cs-b {
   /**
    * @name cs-b
-   * @level 4.4.3.2.
+   * @level 5.4.3.2.
    *
    * @markup
    *   <div class="island island--cs-b">
@@ -157,7 +156,7 @@ $cmp-island-cs-e: true;
 @if $cmp-island-cs-c {
   /**
    * @name cs-c
-   * @level 4.4.3.3.
+   * @level 5.4.3.3.
    *
    * @markup
    *   <div class="island island--cs-c">
@@ -173,7 +172,7 @@ $cmp-island-cs-e: true;
 @if $cmp-island-cs-d {
   /**
    * @name cs-d
-   * @level 4.4.3.4.
+   * @level 5.4.3.4.
    *
    * @markup
    *   <div class="island island--cs-d">
@@ -189,7 +188,7 @@ $cmp-island-cs-e: true;
 @if $cmp-island-cs-e {
   /**
    * @name cs-e
-   * @level 4.4.3.5.
+   * @level 5.4.3.5.
    *
    * @markup
    *   <div class="island island--cs-e">

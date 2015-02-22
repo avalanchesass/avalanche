@@ -1,10 +1,10 @@
 /**
  * @name Media
- * @level 4.5.
+ * @level 5.5.
  */
 /**
  * @name Base
- * @level 4.5.1.
+ * @level 5.5.1.
  * @description
  *   The media object is an image on one side, with descriptive content on the other side.  
  *   [Nicole Sullivan - The media object saves hundreds of lines of code](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code)
@@ -28,7 +28,7 @@
  *   </div>
  */
 .media {
-  @extend .u-cf;
+  @include clearfix();
 }
 
 /**

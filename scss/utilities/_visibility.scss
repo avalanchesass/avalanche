@@ -1,0 +1,66 @@
+/**
+ * @name Visibility
+ * @level 4.4.
+ */
+/**
+ * @name .hidden
+ * @level 4.4.1.
+ * @description
+ *   Hide from both screenreaders and browsers: h5bp.com/u
+ */
+@mixin hidden() {
+  display: none !important;
+  visibility: hidden;
+}
+
+.hidden {
+  @include hidden();
+}
+
+
+
+/**
+ * @name .visuallyhidden
+ * @level 4.4.2.
+ * @description
+ *   Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+@mixin visuallyhidden() {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  &.focusable:active,
+  &.focusable:focus {
+    position: static;
+    overflow: visible;
+    clip: auto;
+    margin: 0;
+    width: auto;
+    height: auto;
+  }
+}
+
+.visuallyhidden {
+  @include visuallyhidden();
+}
+
+
+
+/**
+ * @name .invisible
+ * @level 4.4.3.
+ * @description
+ *   Hide visually and from screenreaders, but maintain layout
+ */
+@mixin invisible() {
+  visibility: hidden;
+}
+
+.invisible {
+  @include invisible();
+}
