@@ -1,0 +1,51 @@
+<section id="{{ section.level }}" class="section section--level-{{ section.level }}">
+  <{{ section.htag }}><a href="#{{ section.level }}" class="section__anchor">#</a>{{ section.name }}</{{ section.htag }}>
+  {{ section.description|markdown }}
+
+  {% if section.markup %}
+    <div class="markup">
+      <div class="markup__rendered">
+        {{ section.markup|raw }}
+      </div>
+      <div class="markup__code">
+        <pre class="language-{{ section.markup_language }}"><code class="language-{{ section.markup_language }}">{{ section.markup }}</code></pre>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if section.colors %}
+    <div class="colors">
+      {% for colorset in section.colors %}
+        <ul class="colors__set">
+          {% for color in colorset %}
+            <li>
+              <div style="background:{{ color.value }};width:100px;height:100px;border:1px solid grey;"></div>
+              {% if color.name %}
+                <h5>{{ color.name }}</h5>
+              {% endif %}
+              <h6>{{ color.value }}</h6>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {% if section.variables %}
+    <div class="variables">
+      {{ section.variables|markdown }}
+    </div>
+  {% endif %}
+
+  {% if section.font %}
+    <div class="font">
+      <div style="font-family:{{ section.font_family }};">
+        {{ section.font|markdown }}
+      </div>
+    </div>
+  {% endif %}
+
+  {% for section in section.sub %}
+    {% include 'section.html' %}
+  {% endfor %}
+</section>
