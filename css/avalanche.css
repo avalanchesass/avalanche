@@ -1180,7 +1180,7 @@ small {
 .menu__list {
   padding-left: 0;
   list-style-type: none;
-  margin-bottom: 0;
+  margin: 0;
   background: #16193B; }
 
 /* line 34, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
@@ -1244,12 +1244,13 @@ html {
   top: 0;
   bottom: 0;
   left: 0;
+  z-index: 100;
   max-width: 20em;
   width: 70%;
   -webkit-transform: translate(-100%, 0);
       -ms-transform: translate(-100%, 0);
           transform: translate(-100%, 0); }
-/* line 105, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 106, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--off-canvas .menu__checkbox:checked + .menu__list--level1 {
   -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
@@ -1259,7 +1260,7 @@ html {
    * @name Horizontal
    * @level 5.3.2.
    */
-/* line 120, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 121, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--horizontal .menu__list--level1, .menu--horizontal-responsive .menu__list--level1 {
   *zoom: 1; }
   /* line 10, /Users/moberlehner/Sites/vagrant/avalanche/scss/utilities/clearfix */
@@ -1297,21 +1298,21 @@ html {
      *     </ul>
      *   </nav>
      */
-/* line 154, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 155, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--horizontal .menu__list--level1 .menu__list {
   position: absolute;
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.2s; }
-/* line 160, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 161, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--horizontal .menu__list--level1 .menu__list .menu__list {
   top: 0;
   left: 100%; }
-/* line 165, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 166, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--horizontal .menu__item:hover > .menu__list, .menu--horizontal .menu__item:focus > .menu__list {
   visibility: visible;
   opacity: 1; }
-/* line 169, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+/* line 170, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--horizontal .menu__item--level1 {
   float: left; }
 
@@ -1347,7 +1348,7 @@ html {
      *   </nav>
      */
 @media (max-width: 44.9375em) {
-  /* line 209, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 210, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__list--level1 {
     height: 0;
     -webkit-transform: scale(1, 0);
@@ -1357,36 +1358,36 @@ html {
         -ms-transform-origin: 0 0;
             transform-origin: 0 0; }
 
-  /* line 214, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 215, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__checkbox:checked + .menu__list--level1 {
     height: auto;
     -webkit-transform: scale(1, 1);
         -ms-transform: scale(1, 1);
             transform: scale(1, 1); }
 
-  /* line 218, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 219, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__item--level1 {
     float: none; }
  }
 @media (min-width: 45em) {
-  /* line 223, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 224, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__list--level1 .menu__list {
     position: absolute;
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.2s; }
 
-  /* line 229, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 230, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__list--level1 .menu__list .menu__list {
     top: 0;
     left: 100%; }
 
-  /* line 234, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 235, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__item:hover > .menu__list, .menu--horizontal-responsive .menu__item:focus > .menu__list {
     visibility: visible;
     opacity: 1; }
 
-  /* line 238, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  /* line 239, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__item--level1 {
     float: left; }
  }
