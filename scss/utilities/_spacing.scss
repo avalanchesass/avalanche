@@ -4,7 +4,7 @@
  */
 @mixin spacing-wrap($spacing: $spacing-m) {
   > * + * {
-    margin-top: $spacing-m;
+    margin-top: $spacing;
   }
 }
 
