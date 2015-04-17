@@ -1,9 +1,8 @@
 // Load plugins
 var gulp             = require('gulp');
 var autoprefixer     = require('gulp-autoprefixer');
-var cssshrink        = require('gulp-cssshrink');
+var csso             = require('gulp-csso');
 var livereload       = require('gulp-livereload');
-var minifyCSS        = require('gulp-minify-css');
 var rename           = require('gulp-rename');
 var sass             = require('gulp-sass');
 var sourcemaps       = require('gulp-sourcemaps');
@@ -19,10 +18,9 @@ gulp.task('styles', function () {
 });
 
 // Minify
-gulp.task('minify', function () {
+gulp.task('minify', ['styles'], function () {
   return gulp.src('css/avalanche.css')
-    .pipe(minifyCSS())
-    .pipe(cssshrink())
+    .pipe(csso())
     .pipe(rename(function (path) {
       path.basename += '.min';
     }))
