@@ -200,12 +200,10 @@
  *   Base styles: opinionated defaults  
  *   Adopted from the great https://html5boilerplate.com/
  */
-/* line 8, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/default */
 html {
   font-size: 100%;
   line-height: 1.5; }
 
-/* line 17, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/default */
 html, button, input, select, textarea {
   color: #222;
   font-family: 'Helvetica Neue', sans-serif; }
@@ -213,7 +211,6 @@ html, button, input, select, textarea {
 /*
  * A better looking default horizontal rule
  */
-/* line 25, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/default */
 hr {
   display: block;
   margin: 1em 0;
@@ -227,14 +224,12 @@ hr {
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
-/* line 44, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/default */
 audio, canvas, iframe, img, svg, video {
   vertical-align: middle; }
 
 /*
  * Remove default fieldset styles.
  */
-/* line 51, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/default */
 fieldset {
   margin: 0;
   padding: 0;
@@ -243,7 +238,6 @@ fieldset {
 /*
  * Allow only vertical resizing of textareas.
  */
-/* line 60, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/default */
 textarea {
   resize: vertical; }
 
@@ -251,7 +245,6 @@ textarea {
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
  */
-/* line 68, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/default */
 ::-moz-selection {
   background: #16193B;
   color: #fff;
@@ -300,58 +293,47 @@ textarea {
  *      </div>
  *   </form>
  */
-/* line 40, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/form */
 label {
   display: block; }
 
-/* line 46, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/form */
 button, input, textarea {
   padding: 0.5em;
   max-width: 100%;
   border: 1px solid #bcbcbc;
   line-height: inherit;
-  transition: border-color ease-in-out 0.1s, box-shadow ease-in-out 0.1s; }
-  /* line 52, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/form */
+  -webkit-transition: border-color ease-in-out 0.1s, box-shadow ease-in-out 0.1s;
+          transition: border-color ease-in-out 0.1s, box-shadow ease-in-out 0.1s; }
   button:focus, input:focus, textarea:focus {
     outline: none;
     border-color: #16193B;
     box-shadow: 0 0 0.375em #16193B; }
 
-/* line 60, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/form */
 button, input[type='submit'] {
   border: none; }
 
-/* line 67, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/form */
 input[type='radio'], input[type='checkbox'], input[type='file'], input[type='range'] {
   padding: 0;
   max-width: none;
   border: none; }
-  /* line 71, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/form */
   input[type='radio']:focus, input[type='checkbox']:focus, input[type='file']:focus, input[type='range']:focus {
     box-shadow: none; }
 
-/* line 78, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/form */
 input[type='radio'] + label, input[type='checkbox'] + label {
   display: inline-block; }
 
-/* line 84, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/form */
 input[type='file'] {
   display: block;
   line-height: normal; }
-  /* line 87, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/form */
   input[type='file']:focus {
     border: 0.1875em solid red; }
 
-/* line 93, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/form */
 input[type='range'] {
   display: block;
   width: 100%; }
 
-/* line 100, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/form */
 select[multiple], select[size] {
   height: auto; }
 
-/* line 105, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/form */
 textarea {
   height: auto; }
 
@@ -366,7 +348,6 @@ textarea {
  *   Basic container to limit the max-width  
  *   of the layout and add some padding
  */
-/* line 12, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/layout */
 .container {
   margin: 0 auto;
   padding: 0 1em;
@@ -379,11 +360,9 @@ textarea {
  *   Better box model  
  *   [Paul Irish - * { Box-sizing: Border-box } FTW](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
  */
-/* line 28, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/layout */
 html {
   box-sizing: border-box; }
 
-/* line 34, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/layout */
 *, *:before, *:after {
   box-sizing: inherit; }
 
@@ -402,35 +381,28 @@ html {
  *   <h5>Headline 5</h5>
  *   <h6>Headline 6</h6>
  */
-/* line 19, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 h1, h2, h3, h4 {
   color: #16193B;
   font-weight: 700;
   font-family: Futura, 'Trebuchet MS', sans-serif;
   line-height: 1.35; }
 
-/* line 26, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 h1 {
   font-size: 2.25em; }
 
-/* line 30, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 h2 {
   font-size: 1.875em; }
 
-/* line 34, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 h3 {
   font-size: 1.5em; }
 
-/* line 38, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 h4 {
   font-size: 1.25em; }
 
-/* line 42, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 h5 {
   font-weight: 700;
   font-size: 1em; }
 
-/* line 47, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 h6 {
   font-weight: 400;
   font-size: 1em; }
@@ -443,23 +415,18 @@ h6 {
  *   <span class="a">readmore...</span>
  *   <a href="#" class="a a--reversed">reversed hover behaviour</a>
  */
-/* line 63, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 a, .a {
   color: #16193B;
   text-decoration: underline;
   cursor: pointer; }
-  /* line 67, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
   a:visited, .a:visited {
     color: #16193B; }
-  /* line 71, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
   a:hover, a:focus, .a:hover, .a:focus {
     color: #16193B;
     text-decoration: none; }
 
-/* line 77, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 .a--reversed {
   text-decoration: none; }
-  /* line 80, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
   .a--reversed:hover, .a--reversed:focus {
     text-decoration: underline; }
 
@@ -478,44 +445,36 @@ a, .a {
  *   <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
  *   tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
  */
-/* line 123, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 h1, h2, h3, h4, h5, h6, h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6, p, ul, ol, dl, pre, form, table, figure, address, fieldset, blockquote {
   margin: 0; }
 
-/* line 132, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
   margin-top: 1em; }
 
-/* line 146, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 * + p, * + ul, * + ol, * + dl, * + pre, * + form, * + table, * + figure, * + address, * + fieldset, * + blockquote {
   margin-top: 1.5em; }
 
-/* line 152, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 ul, ol, dl {
   padding-left: 1.5em; }
 
 /**
  * No margin top for nested lists
  */
-/* line 162, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 li ul, li ol, li dl {
   margin-top: 0; }
 
 /**
  * No margin top for nested tables
  */
-/* line 171, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 table table {
   margin-top: 0; }
 
 /**
  * Normalize default font related tags
  */
-/* line 180, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 b, strong {
   font-weight: 700; }
 
-/* line 184, /Users/moberlehner/Sites/vagrant/avalanche/scss/base/typography */
 small {
   font-size: 0.85em; }
 
@@ -529,14 +488,11 @@ small {
  * @description
  *   Contain floats
  */
-/* line 19, /Users/moberlehner/Sites/vagrant/avalanche/scss/utilities/clearfix */
 .clearfix {
   *zoom: 1; }
-  /* line 10, /Users/moberlehner/Sites/vagrant/avalanche/scss/utilities/clearfix */
   .clearfix:before, .clearfix:after {
     display: table;
     content: ' '; }
-  /* line 14, /Users/moberlehner/Sites/vagrant/avalanche/scss/utilities/clearfix */
   .clearfix:after {
     clear: both; }
 
@@ -544,7 +500,6 @@ small {
  * @name List reset
  * @level 4.2.
  */
-/* line 10, /Users/moberlehner/Sites/vagrant/avalanche/scss/utilities/list_reset */
 .list-reset {
   padding-left: 0;
   list-style-type: none; }
@@ -553,7 +508,6 @@ small {
  * @name Spacing
  * @level 4.3.
  */
-/* line 6, /Users/moberlehner/Sites/vagrant/avalanche/scss/utilities/spacing */
 .spacing-wrap > * + * {
   margin-top: 1.5em; }
 
@@ -567,7 +521,6 @@ small {
  * @description
  *   Hide from both screenreaders and browsers: h5bp.com/u
  */
-/* line 16, /Users/moberlehner/Sites/vagrant/avalanche/scss/utilities/visibility */
 .hidden {
   display: none !important;
   visibility: hidden; }
@@ -578,7 +531,6 @@ small {
  * @description
  *   Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
-/* line 48, /Users/moberlehner/Sites/vagrant/avalanche/scss/utilities/visibility */
 .visuallyhidden {
   position: absolute;
   overflow: hidden;
@@ -588,7 +540,6 @@ small {
   width: 1px;
   height: 1px;
   border: 0; }
-  /* line 38, /Users/moberlehner/Sites/vagrant/avalanche/scss/utilities/visibility */
   .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
     position: static;
     overflow: visible;
@@ -603,7 +554,6 @@ small {
  * @description
  *   Hide visually and from screenreaders, but maintain layout
  */
-/* line 64, /Users/moberlehner/Sites/vagrant/avalanche/scss/utilities/visibility */
 .invisible {
   visibility: hidden; }
 
@@ -630,69 +580,53 @@ small {
  *     <div class="grid__item--6">Grid Item</div>
  *   </div>
  */
-/* line 38, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid {
   *zoom: 1;
   margin-left: -1em; }
-  /* line 10, /Users/moberlehner/Sites/vagrant/avalanche/scss/utilities/clearfix */
   .grid:before, .grid:after {
     display: table;
     content: ' '; }
-  /* line 14, /Users/moberlehner/Sites/vagrant/avalanche/scss/utilities/clearfix */
   .grid:after {
     clear: both; }
 
-/* line 43, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 [class*='grid__item'] {
   float: left;
   padding-left: 1em;
   width: 100%; }
 
-/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--1 {
   width: 8.33333%; }
 
-/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--2 {
   width: 16.66667%; }
 
-/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--3 {
   width: 25%; }
 
-/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--4 {
   width: 33.33333%; }
 
-/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--5 {
   width: 41.66667%; }
 
-/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--6 {
   width: 50%; }
 
-/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--7 {
   width: 58.33333%; }
 
-/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--8 {
   width: 66.66667%; }
 
-/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--9 {
   width: 75%; }
 
-/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--10 {
   width: 83.33333%; }
 
-/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--11 {
   width: 91.66667%; }
 
-/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
 .grid__item--12 {
   width: 100%; }
 
@@ -709,54 +643,30 @@ small {
    *    </div>
    */
 @media (min-width: 30em) {
-  /* line 75, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--1 {
     width: 8.33333%; }
-
-  /* line 75, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--2 {
     width: 16.66667%; }
-
-  /* line 75, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--3 {
     width: 25%; }
-
-  /* line 75, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--4 {
     width: 33.33333%; }
-
-  /* line 75, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--5 {
     width: 41.66667%; }
-
-  /* line 75, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--6 {
     width: 50%; }
-
-  /* line 75, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--7 {
     width: 58.33333%; }
-
-  /* line 75, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--8 {
     width: 66.66667%; }
-
-  /* line 75, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--9 {
     width: 75%; }
-
-  /* line 75, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--10 {
     width: 83.33333%; }
-
-  /* line 75, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--11 {
     width: 91.66667%; }
-
-  /* line 75, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--s--12 {
-    width: 100%; }
- }
+    width: 100%; } }
 
 /**
    * @name Medium
@@ -773,62 +683,34 @@ small {
    *    </div>
    */
 @media (min-width: 45em) {
-  /* line 100, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid {
     margin-left: -1.5em; }
-
-  /* line 104, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   [class*='grid__item'] {
     padding-left: 1.5em; }
-
-  /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--1 {
     width: 8.33333%; }
-
-  /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--2 {
     width: 16.66667%; }
-
-  /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--3 {
     width: 25%; }
-
-  /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--4 {
     width: 33.33333%; }
-
-  /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--5 {
     width: 41.66667%; }
-
-  /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--6 {
     width: 50%; }
-
-  /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--7 {
     width: 58.33333%; }
-
-  /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--8 {
     width: 66.66667%; }
-
-  /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--9 {
     width: 75%; }
-
-  /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--10 {
     width: 83.33333%; }
-
-  /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--11 {
     width: 91.66667%; }
-
-  /* line 109, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--m--12 {
-    width: 100%; }
- }
+    width: 100%; } }
 
 /**
    * @name Large
@@ -845,62 +727,34 @@ small {
    *    </div>
    */
 @media (min-width: 60em) {
-  /* line 134, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid {
     margin-left: -1.5em; }
-
-  /* line 138, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   [class*='grid__item'] {
     padding-left: 1.5em; }
-
-  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--1 {
     width: 8.33333%; }
-
-  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--2 {
     width: 16.66667%; }
-
-  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--3 {
     width: 25%; }
-
-  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--4 {
     width: 33.33333%; }
-
-  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--5 {
     width: 41.66667%; }
-
-  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--6 {
     width: 50%; }
-
-  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--7 {
     width: 58.33333%; }
-
-  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--8 {
     width: 66.66667%; }
-
-  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--9 {
     width: 75%; }
-
-  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--10 {
     width: 83.33333%; }
-
-  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--11 {
     width: 91.66667%; }
-
-  /* line 143, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--l--12 {
-    width: 100%; }
- }
+    width: 100%; } }
 
 /**
    * @name X-Large
@@ -917,62 +771,34 @@ small {
    *    </div>
    */
 @media (min-width: 75em) {
-  /* line 168, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid {
     margin-left: -1.5em; }
-
-  /* line 172, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   [class*='grid__item'] {
     padding-left: 1.5em; }
-
-  /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--1 {
     width: 8.33333%; }
-
-  /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--2 {
     width: 16.66667%; }
-
-  /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--3 {
     width: 25%; }
-
-  /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--4 {
     width: 33.33333%; }
-
-  /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--5 {
     width: 41.66667%; }
-
-  /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--6 {
     width: 50%; }
-
-  /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--7 {
     width: 58.33333%; }
-
-  /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--8 {
     width: 66.66667%; }
-
-  /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--9 {
     width: 75%; }
-
-  /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--10 {
     width: 83.33333%; }
-
-  /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--11 {
     width: 91.66667%; }
-
-  /* line 177, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/grid */
   .grid__item--xl--12 {
-    width: 100%; }
- }
+    width: 100%; } }
 
 /**
  * @name Button
@@ -988,7 +814,6 @@ small {
  *   <a href="#" class="button">Button</a>
  *   <button class="button">Button</button>
  */
-/* line 36, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button {
   display: inline-block;
   margin: 0;
@@ -1000,12 +825,10 @@ small {
   font-size: 100%;
   font-family: inherit;
   cursor: pointer; }
-  /* line 51, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
   .button, .button:hover, .button:focus, .button:active, .button:visited {
     outline: none;
     color: #fff;
     text-decoration: none; }
-  /* line 58, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
   .button:hover, .button:focus, .button:active {
     background: #5b5e75; }
 
@@ -1019,7 +842,6 @@ small {
    * @markup
    *   <a href="#" class="button button--s">Button</a>
    */
-/* line 76, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--s {
   padding: 0 0.5em; }
 
@@ -1029,7 +851,6 @@ small {
    * @markup
    *   <a href="#" class="button button--l">Button</a>
    */
-/* line 88, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--l {
   padding: 1em 1.5em; }
 
@@ -1039,7 +860,6 @@ small {
    * @markup
    *   <a href="#" class="button button--xl">Button</a>
    */
-/* line 100, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--xl {
   padding: 1.5em 2em; }
 
@@ -1049,10 +869,7 @@ small {
    * @markup
    *   <a href="#" class="button button--full">Button</a>
    */
-/* line 112, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--full {
-  padding-right: 0;
-  padding-left: 0;
   width: 100%;
   text-align: center; }
 
@@ -1066,7 +883,6 @@ small {
    * @markup
    *   <a href="#" class="button button--font--s">Button</a>
    */
-/* line 133, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--font--s {
   font-size: 0.85em; }
 
@@ -1076,7 +892,6 @@ small {
    * @markup
    *   <a href="#" class="button button--font--l">Button</a>
    */
-/* line 145, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--font--l {
   font-size: 1.25em; }
 
@@ -1086,7 +901,6 @@ small {
    * @markup
    *   <a href="#" class="button button--font--xl">Button</a>
    */
-/* line 157, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--font--xl {
   font-size: 1.5em; }
 
@@ -1100,11 +914,9 @@ small {
    * @markup
    *   <a href="#" class="button button--positive">Button</a>
    */
-/* line 175, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--positive {
   background: #468847;
   color: #fff; }
-  /* line 180, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
   .button--positive:hover, .button--positive:focus, .button--positive:active {
     background: #7dab7e; }
 
@@ -1114,11 +926,9 @@ small {
    * @markup
    *   <a href="#" class="button button--neutral">Button</a>
    */
-/* line 193, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--neutral {
   background: #3A87AD;
   color: #fff; }
-  /* line 198, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
   .button--neutral:hover, .button--neutral:focus, .button--neutral:active {
     background: #75abc5; }
 
@@ -1128,11 +938,9 @@ small {
    * @markup
    *   <a href="#" class="button button--cautious">Button</a>
    */
-/* line 211, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--cautious {
   background: #c09853;
   color: #fff; }
-  /* line 216, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
   .button--cautious:hover, .button--cautious:focus, .button--cautious:active {
     background: #d2b686; }
 
@@ -1142,11 +950,9 @@ small {
    * @markup
    *   <a href="#" class="button button--negative">Button</a>
    */
-/* line 229, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--negative {
   background: #b94a48;
   color: #fff; }
-  /* line 234, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
   .button--negative:hover, .button--negative:focus, .button--negative:active {
     background: #ce807e; }
 
@@ -1157,12 +963,10 @@ small {
    *   <a href="#" class="button button--inactive">Button</a>
    *   <a href="#" class="button button--disabled">Button</a>
    */
-/* line 253, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--inactive, .button--inactive:hover, .button--inactive:focus, .button--inactive:active, .button--disabled, .button--disabled:hover, .button--disabled:focus, .button--disabled:active {
   background-color: #efefef;
   color: #bcbcbc; }
 
-/* line 262, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/button */
 .button--disabled, .button--disabled:hover, .button--disabled:focus, .button--disabled:active {
   cursor: text; }
 
@@ -1176,31 +980,25 @@ small {
 /**
  * Defaults
  */
-/* line 28, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu__list {
   padding-left: 0;
   list-style-type: none;
   margin: 0;
   background: #16193B; }
 
-/* line 34, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu__list--level1 {
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s; }
+  -webkit-transition: -webkit-transform 0.2s;
+          transition: transform 0.2s; }
 
-/* line 38, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu__item {
   position: relative; }
 
-/* line 42, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu__link {
   display: block;
   text-decoration: none; }
-  /* line 48, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu__link, .menu__link:hover, .menu__link:focus, .menu__link:visited {
     color: #fff; }
 
-/* line 53, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu__checkbox {
   display: none; }
 
@@ -1231,14 +1029,11 @@ small {
    *     </ul>
    *   </nav>
    */
-/* line 89, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 html {
   position: relative; }
 
-/* line 93, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--off-canvas .menu__controls {
   display: block; }
-/* line 96, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--off-canvas .menu__list--level1 {
   position: fixed;
   top: 0;
@@ -1250,7 +1045,6 @@ html {
   -webkit-transform: translate(-100%, 0);
       -ms-transform: translate(-100%, 0);
           transform: translate(-100%, 0); }
-/* line 106, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--off-canvas .menu__checkbox:checked + .menu__list--level1 {
   -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
@@ -1260,14 +1054,11 @@ html {
    * @name Horizontal
    * @level 5.3.2.
    */
-/* line 121, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--horizontal .menu__list--level1, .menu--horizontal-responsive .menu__list--level1 {
   *zoom: 1; }
-  /* line 10, /Users/moberlehner/Sites/vagrant/avalanche/scss/utilities/clearfix */
   .menu--horizontal .menu__list--level1:before, .menu--horizontal .menu__list--level1:after, .menu--horizontal-responsive .menu__list--level1:before, .menu--horizontal-responsive .menu__list--level1:after {
     display: table;
     content: ' '; }
-  /* line 14, /Users/moberlehner/Sites/vagrant/avalanche/scss/utilities/clearfix */
   .menu--horizontal .menu__list--level1:after, .menu--horizontal-responsive .menu__list--level1:after {
     clear: both; }
 
@@ -1298,21 +1089,18 @@ html {
      *     </ul>
      *   </nav>
      */
-/* line 155, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--horizontal .menu__list--level1 .menu__list {
   position: absolute;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.2s; }
-/* line 161, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+  -webkit-transition: opacity 0.2s;
+          transition: opacity 0.2s; }
 .menu--horizontal .menu__list--level1 .menu__list .menu__list {
   top: 0;
   left: 100%; }
-/* line 166, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--horizontal .menu__item:hover > .menu__list, .menu--horizontal .menu__item:focus > .menu__list {
   visibility: visible;
   opacity: 1; }
-/* line 170, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
 .menu--horizontal .menu__item--level1 {
   float: left; }
 
@@ -1348,7 +1136,6 @@ html {
      *   </nav>
      */
 @media (max-width: 44.9375em) {
-  /* line 210, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__list--level1 {
     height: 0;
     -webkit-transform: scale(1, 0);
@@ -1357,40 +1144,28 @@ html {
     -webkit-transform-origin: 0 0;
         -ms-transform-origin: 0 0;
             transform-origin: 0 0; }
-
-  /* line 215, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__checkbox:checked + .menu__list--level1 {
     height: auto;
     -webkit-transform: scale(1, 1);
         -ms-transform: scale(1, 1);
             transform: scale(1, 1); }
-
-  /* line 219, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__item--level1 {
-    float: none; }
- }
+    float: none; } }
 @media (min-width: 45em) {
-  /* line 224, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__list--level1 .menu__list {
     position: absolute;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.2s; }
-
-  /* line 230, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
+    -webkit-transition: opacity 0.2s;
+            transition: opacity 0.2s; }
   .menu--horizontal-responsive .menu__list--level1 .menu__list .menu__list {
     top: 0;
     left: 100%; }
-
-  /* line 235, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__item:hover > .menu__list, .menu--horizontal-responsive .menu__item:focus > .menu__list {
     visibility: visible;
     opacity: 1; }
-
-  /* line 239, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/menu */
   .menu--horizontal-responsive .menu__item--level1 {
-    float: left; }
- }
+    float: left; } }
 
 /**
    * @name Vertical
@@ -1438,12 +1213,10 @@ html {
  *     Island
  *   </div>
  */
-/* line 35, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island {
   display: block;
   padding: 1.5em;
   background: #efefef; }
-  /* line 39, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
   .island > :last-child {
     margin-bottom: 0; }
 
@@ -1462,7 +1235,6 @@ html {
    *     Positive Island
    *   </div>
    */
-/* line 62, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--positive {
   background: #dae7da;
   color: #468847; }
@@ -1476,7 +1248,6 @@ html {
    *     Neutral Island
    *   </div>
    */
-/* line 78, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--neutral {
   background: #d7e7ee;
   color: #3A87AD; }
@@ -1490,7 +1261,6 @@ html {
    *     Cautious Island
    *   </div>
    */
-/* line 94, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cautious {
   background: #f2eadc;
   color: #c09853; }
@@ -1506,7 +1276,6 @@ html {
    *     Negative Island
    *   </div>
    */
-/* line 112, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--negative {
   background: #f1dada;
   color: #b94a48; }
@@ -1524,7 +1293,6 @@ html {
    *     cs-a Island
    *   </div>
    */
-/* line 134, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-a {
   background: #16193B;
   color: #fff; }
@@ -1538,7 +1306,6 @@ html {
    *     cs-b Island
    *   </div>
    */
-/* line 150, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-b {
   background: #35478C;
   color: #fff; }
@@ -1552,7 +1319,6 @@ html {
    *     cs-c Island
    *   </div>
    */
-/* line 166, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-c {
   background: #4E7AC7;
   color: #fff; }
@@ -1566,7 +1332,6 @@ html {
    *     cs-d Island
    *   </div>
    */
-/* line 182, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-d {
   background: #7FB2F0;
   color: #fff; }
@@ -1580,7 +1345,6 @@ html {
    *     cs-e Island
    *   </div>
    */
-/* line 198, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/island */
 .island--cs-e {
   background: #ADD5F7;
   color: #fff; }
@@ -1614,14 +1378,11 @@ html {
  *     </div>
  *   </div>
  */
-/* line 30, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/media */
 .media {
   *zoom: 1; }
-  /* line 10, /Users/moberlehner/Sites/vagrant/avalanche/scss/utilities/clearfix */
   .media:before, .media:after {
     display: table;
     content: ' '; }
-  /* line 14, /Users/moberlehner/Sites/vagrant/avalanche/scss/utilities/clearfix */
   .media:after {
     clear: both; }
 
@@ -1629,17 +1390,13 @@ html {
  * Reset media styling on small screens
  */
 @media (max-width: 44.9375em) {
-  /* line 39, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/media */
   .media--mobile-reset .media__img {
     float: none;
     margin-right: 0; }
-  /* line 43, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/media */
   .media--mobile-reset .media__img--rev {
     float: none;
-    margin-left: 0; }
- }
+    margin-left: 0; } }
 
-/* line 50, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/media */
 .media__img {
   float: left;
   margin-right: 1.5em; }
@@ -1647,16 +1404,13 @@ html {
 /**
  * Reversed image location (right instead of left).
  */
-/* line 58, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/media */
 .media__img--rev {
   float: right;
   margin-left: 1.5em; }
 
-/* line 65, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/media */
 .media__img img, .media__img--rev img {
   display: block; }
 
-/* line 70, /Users/moberlehner/Sites/vagrant/avalanche/scss/components/media */
 .media__body {
   overflow: hidden; }
 
