@@ -57,7 +57,7 @@ h6 {
  * @markup
  *   <a href="#">readmore...</a>
  *   <span class="a">readmore...</span>
- *   <a href="#" class="a a--reversed">reversed hover behaviour</a>
+ *   <a href="#" class="a a--rev">reversed hover behaviour</a>
  */
 a,
 .a {
@@ -74,7 +74,7 @@ a,
   }
 }
 
-.a--reversed {
+.a--rev {
   text-decoration: $a-text-decoration-hover;
   &:hover,
   &:focus {

@@ -19,7 +19,7 @@
  *     </div>
  *   </div>
  *   <div class="o-media">
- *     <div class="o-media__img--rev">
+ *     <div class="o-media__img-rev">
  *       <img src="http://placehold.it/70x70" alt="">
  *     </div>
  *     <div class="o-media__body">
@@ -40,7 +40,7 @@
       float: none;
       margin-right: 0;
     }
-    .o-media__img--rev {
+    .o-media__img-rev {
       float: none;
       margin-left: 0;
     }
@@ -55,13 +55,13 @@
 /**
  * Reversed image location (right instead of left).
  */
-.o-media__img--rev {
+.o-media__img-rev {
   float: right;
   margin-left: $spacing-m;
 }
 
 .o-media__img,
-.o-media__img--rev {
+.o-media__img-rev {
   img {
     display: block;
   }

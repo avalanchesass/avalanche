@@ -413,7 +413,7 @@ h6 {
  * @markup
  *   <a href="#">readmore...</a>
  *   <span class="a">readmore...</span>
- *   <a href="#" class="a a--reversed">reversed hover behaviour</a>
+ *   <a href="#" class="a a--rev">reversed hover behaviour</a>
  */
 a, .a {
   color: #16193B;
@@ -425,9 +425,9 @@ a, .a {
     color: #16193B;
     text-decoration: none; }
 
-.a--reversed {
+.a--rev {
   text-decoration: none; }
-  .a--reversed:hover, .a--reversed:focus {
+  .a--rev:hover, .a--rev:focus {
     text-decoration: underline; }
 
 /**
@@ -1370,7 +1370,7 @@ html {
  *     </div>
  *   </div>
  *   <div class="o-media">
- *     <div class="o-media__img--rev">
+ *     <div class="o-media__img-rev">
  *       <img src="http://placehold.it/70x70" alt="">
  *     </div>
  *     <div class="o-media__body">
@@ -1393,7 +1393,7 @@ html {
   .o-media--mobile-reset .o-media__img {
     float: none;
     margin-right: 0; }
-  .o-media--mobile-reset .o-media__img--rev {
+  .o-media--mobile-reset .o-media__img-rev {
     float: none;
     margin-left: 0; } }
 
@@ -1404,11 +1404,11 @@ html {
 /**
  * Reversed image location (right instead of left).
  */
-.o-media__img--rev {
+.o-media__img-rev {
   float: right;
   margin-left: 1.5em; }
 
-.o-media__img img, .o-media__img--rev img {
+.o-media__img img, .o-media__img-rev img {
   display: block; }
 
 .o-media__body {
