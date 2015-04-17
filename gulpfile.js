@@ -13,21 +13,13 @@ gulp.task('styles', function () {
   return gulp.src('scss/**/*.scss')
     .pipe(sourcemaps.init())
       .pipe(sass())
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('css'));
-});
-
-// Prefix
-gulp.task('prefix', ['styles'], function () {
-  return gulp.src('css/avalanche.css')
-    .pipe(sourcemaps.init({loadMaps: true}))
       .pipe(autoprefixer())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('css'));
 });
 
 // Minify
-gulp.task('minify', ['prefix'], function () {
+gulp.task('minify', function () {
   return gulp.src('css/avalanche.css')
     .pipe(minifyCSS())
     .pipe(cssshrink())
@@ -40,7 +32,7 @@ gulp.task('minify', ['prefix'], function () {
 
 // Watch
 gulp.task('watch', function () {
-  gulp.watch('scss/**/*', ['styles', 'prefix', 'minify']);
+  gulp.watch('scss/**/*', ['styles', 'minify']);
 });
 
 // Default
