@@ -595,37 +595,37 @@ small {
   width: 100%; }
 
 .o-grid__item--1 {
-  width: 8.33333%; }
+  width: 8.3333333%; }
 
 .o-grid__item--2 {
-  width: 16.66667%; }
+  width: 16.6666667%; }
 
 .o-grid__item--3 {
   width: 25%; }
 
 .o-grid__item--4 {
-  width: 33.33333%; }
+  width: 33.3333333%; }
 
 .o-grid__item--5 {
-  width: 41.66667%; }
+  width: 41.6666667%; }
 
 .o-grid__item--6 {
   width: 50%; }
 
 .o-grid__item--7 {
-  width: 58.33333%; }
+  width: 58.3333333%; }
 
 .o-grid__item--8 {
-  width: 66.66667%; }
+  width: 66.6666667%; }
 
 .o-grid__item--9 {
   width: 75%; }
 
 .o-grid__item--10 {
-  width: 83.33333%; }
+  width: 83.3333333%; }
 
 .o-grid__item--11 {
-  width: 91.66667%; }
+  width: 91.6666667%; }
 
 .o-grid__item--12 {
   width: 100%; }
@@ -644,27 +644,27 @@ small {
    */
 @media (min-width: 30em) {
   .o-grid__item--s--1 {
-    width: 8.33333%; }
+    width: 8.3333333%; }
   .o-grid__item--s--2 {
-    width: 16.66667%; }
+    width: 16.6666667%; }
   .o-grid__item--s--3 {
     width: 25%; }
   .o-grid__item--s--4 {
-    width: 33.33333%; }
+    width: 33.3333333%; }
   .o-grid__item--s--5 {
-    width: 41.66667%; }
+    width: 41.6666667%; }
   .o-grid__item--s--6 {
     width: 50%; }
   .o-grid__item--s--7 {
-    width: 58.33333%; }
+    width: 58.3333333%; }
   .o-grid__item--s--8 {
-    width: 66.66667%; }
+    width: 66.6666667%; }
   .o-grid__item--s--9 {
     width: 75%; }
   .o-grid__item--s--10 {
-    width: 83.33333%; }
+    width: 83.3333333%; }
   .o-grid__item--s--11 {
-    width: 91.66667%; }
+    width: 91.6666667%; }
   .o-grid__item--s--12 {
     width: 100%; } }
 
@@ -688,27 +688,27 @@ small {
   [class*='o-grid__item'] {
     padding-left: 1.5em; }
   .o-grid__item--m--1 {
-    width: 8.33333%; }
+    width: 8.3333333%; }
   .o-grid__item--m--2 {
-    width: 16.66667%; }
+    width: 16.6666667%; }
   .o-grid__item--m--3 {
     width: 25%; }
   .o-grid__item--m--4 {
-    width: 33.33333%; }
+    width: 33.3333333%; }
   .o-grid__item--m--5 {
-    width: 41.66667%; }
+    width: 41.6666667%; }
   .o-grid__item--m--6 {
     width: 50%; }
   .o-grid__item--m--7 {
-    width: 58.33333%; }
+    width: 58.3333333%; }
   .o-grid__item--m--8 {
-    width: 66.66667%; }
+    width: 66.6666667%; }
   .o-grid__item--m--9 {
     width: 75%; }
   .o-grid__item--m--10 {
-    width: 83.33333%; }
+    width: 83.3333333%; }
   .o-grid__item--m--11 {
-    width: 91.66667%; }
+    width: 91.6666667%; }
   .o-grid__item--m--12 {
     width: 100%; } }
 
@@ -732,27 +732,27 @@ small {
   [class*='o-grid__item'] {
     padding-left: 1.5em; }
   .o-grid__item--l--1 {
-    width: 8.33333%; }
+    width: 8.3333333%; }
   .o-grid__item--l--2 {
-    width: 16.66667%; }
+    width: 16.6666667%; }
   .o-grid__item--l--3 {
     width: 25%; }
   .o-grid__item--l--4 {
-    width: 33.33333%; }
+    width: 33.3333333%; }
   .o-grid__item--l--5 {
-    width: 41.66667%; }
+    width: 41.6666667%; }
   .o-grid__item--l--6 {
     width: 50%; }
   .o-grid__item--l--7 {
-    width: 58.33333%; }
+    width: 58.3333333%; }
   .o-grid__item--l--8 {
-    width: 66.66667%; }
+    width: 66.6666667%; }
   .o-grid__item--l--9 {
     width: 75%; }
   .o-grid__item--l--10 {
-    width: 83.33333%; }
+    width: 83.3333333%; }
   .o-grid__item--l--11 {
-    width: 91.66667%; }
+    width: 91.6666667%; }
   .o-grid__item--l--12 {
     width: 100%; } }
 
@@ -776,27 +776,27 @@ small {
   [class*='o-grid__item'] {
     padding-left: 1.5em; }
   .o-grid__item--xl--1 {
-    width: 8.33333%; }
+    width: 8.3333333%; }
   .o-grid__item--xl--2 {
-    width: 16.66667%; }
+    width: 16.6666667%; }
   .o-grid__item--xl--3 {
     width: 25%; }
   .o-grid__item--xl--4 {
-    width: 33.33333%; }
+    width: 33.3333333%; }
   .o-grid__item--xl--5 {
-    width: 41.66667%; }
+    width: 41.6666667%; }
   .o-grid__item--xl--6 {
     width: 50%; }
   .o-grid__item--xl--7 {
-    width: 58.33333%; }
+    width: 58.3333333%; }
   .o-grid__item--xl--8 {
-    width: 66.66667%; }
+    width: 66.6666667%; }
   .o-grid__item--xl--9 {
     width: 75%; }
   .o-grid__item--xl--10 {
-    width: 83.33333%; }
+    width: 83.3333333%; }
   .o-grid__item--xl--11 {
-    width: 91.66667%; }
+    width: 91.6666667%; }
   .o-grid__item--xl--12 {
     width: 100%; } }
 
