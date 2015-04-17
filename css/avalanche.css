@@ -971,6 +971,70 @@ small {
   cursor: text; }
 
 /**
+ * @name Color scheme
+ * @level 5.2.5.
+ */
+/**
+   * @name cs-a
+   * @level 5.2.5.1.
+   * @markup
+   *   <a href="#" class="o-button o-button--cs-a">Button</a>
+   */
+.o-button--cs-a {
+  background: #16193B;
+  color: #fff; }
+  .o-button--cs-a:hover, .o-button--cs-a:focus, .o-button--cs-a:active {
+    background: #5b5e75; }
+
+/**
+   * @name cs-b
+   * @level 5.2.5.2.
+   * @markup
+   *   <a href="#" class="o-button o-button--cs-b">Button</a>
+   */
+.o-button--cs-b {
+  background: #35478C;
+  color: #fff; }
+  .o-button--cs-b:hover, .o-button--cs-b:focus, .o-button--cs-b:active {
+    background: #717eae; }
+
+/**
+   * @name cs-c
+   * @level 5.2.5.3.
+   * @markup
+   *   <a href="#" class="o-button o-button--cs-c">Button</a>
+   */
+.o-button--cs-c {
+  background: #4E7AC7;
+  color: #fff; }
+  .o-button--cs-c:hover, .o-button--cs-c:focus, .o-button--cs-c:active {
+    background: #83a1d7; }
+
+/**
+   * @name cs-d
+   * @level 5.2.5.4.
+   * @markup
+   *   <a href="#" class="o-button o-button--cs-d">Button</a>
+   */
+.o-button--cs-d {
+  background: #7FB2F0;
+  color: #fff; }
+  .o-button--cs-d:hover, .o-button--cs-d:focus, .o-button--cs-d:active {
+    background: #a5c9f4; }
+
+/**
+   * @name cs-e
+   * @level 5.2.5.5.
+   * @markup
+   *   <a href="#" class="o-button o-button--cs-e">Button</a>
+   */
+.o-button--cs-e {
+  background: #ADD5F7;
+  color: #fff; }
+  .o-button--cs-e:hover, .o-button--cs-e:focus, .o-button--cs-e:active {
+    background: #c5e1f9; }
+
+/**
  * @name Menu
  * @level 5.3.
  */
