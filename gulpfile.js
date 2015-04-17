@@ -53,7 +53,7 @@ gulp.task('default', function () {
  *
  * Usage:
  * gulp avalanche-extend --utility name
- * gulp avalanche-extend --component name
+ * gulp avalanche-extend --object name
  */
 var download  = require('gulp-download');
 var httpcheck = require('httpcheck');
@@ -88,14 +88,14 @@ gulp.task('avalanche-extend', function () {
   if (args.utility) {
     utilityName = args.utility;
     utilityUrl = baseUrl.replace('{type}', 'utility').replace(/\{arg\}/g, utilityName);
-    getExtension('Utility', utilityName, utilityUrl, 'scss/utilities/');
+    getExtension('Utility', utilityName, utilityUrl, 'scss/utility/');
   }
 
-  var componentName;
-  var componentUrl;
-  if (args.component) {
-    componentName = args.component;
-    componentUrl = baseUrl.replace('{type}', 'component').replace(/\{arg\}/g, componentName);
-    getExtension('Utility', componentName, componentUrl, 'scss/components/');
+  var objectName;
+  var objectUrl;
+  if (args.object) {
+    objectName = args.object;
+    objectUrl = baseUrl.replace('{type}', 'object').replace(/\{arg\}/g, objectName);
+    getExtension('Utility', objectName, objectUrl, 'scss/object/');
   }
 });
