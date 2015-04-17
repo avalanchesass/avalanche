@@ -47,3 +47,55 @@ gulp.task('watch', function () {
 gulp.task('default', function () {
   gulp.start('watch');
 });
+
+/**
+ * Component loading
+ *
+ * Usage:
+ * gulp avalanche-extend --utility name
+ * gulp avalanche-extend --component name
+ */
+var download  = require('gulp-download');
+var httpcheck = require('httpcheck');
+var args      = require('yargs').argv;
+
+gulp.task('avalanche-extend', function () {
+  var branch = 'release-1.5';
+  var baseUrl = 'https://cdn.rawgit.com/maoberlehner/avalanche_{type}_{arg}/' + branch + '/_{arg}.scss';
+
+  var getExtension = function (extensionType, extensionName, extensionUrl, extensionDestination) {
+    httpcheck({
+      url: extensionUrl,
+      log: function () {},
+      check: function(res) {
+        if (res && res.statusCode === 404) {
+          console.error(extensionType + ' "' + extensionName + '" not found');
+          return true;
+        }
+        download(extensionUrl).pipe(gulp.dest(extensionDestination));
+        return false;
+      }
+    },
+    function (err) {
+      if (err) {
+        throw err;
+      }
+    });
+  };
+
+  var utilityName;
+  var utilityUrl;
+  if (args.utility) {
+    utilityName = args.utility;
+    utilityUrl = baseUrl.replace('{type}', 'utility').replace(/\{arg\}/g, utilityName);
+    getExtension('Utility', utilityName, utilityUrl, 'scss/utilities/');
+  }
+
+  var componentName;
+  var componentUrl;
+  if (args.component) {
+    componentName = args.component;
+    componentUrl = baseUrl.replace('{type}', 'component').replace(/\{arg\}/g, componentName);
+    getExtension('Utility', componentName, componentUrl, 'scss/components/');
+  }
+});
