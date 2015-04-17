@@ -636,11 +636,11 @@ small {
    * @description
    *   Screen sizes 30em (480px) and up
    *
-   *  @markup
-   *    <div class="o-grid">
-   *      <div class="o-grid__item--12 o-grid__item--s--6">Grid Item</div>
-   *      <div class="o-grid__item--12 o-grid__item--s--6">Grid Item</div>
-   *    </div>
+   * @markup
+   *   <div class="o-grid">
+   *     <div class="o-grid__item--12 o-grid__item--s--6">Grid Item</div>
+   *     <div class="o-grid__item--12 o-grid__item--s--6">Grid Item</div>
+   *   </div>
    */
 @media (min-width: 30em) {
   .o-grid__item--s--1 {
@@ -674,13 +674,13 @@ small {
    * @description
    *   Screen sizes 45em (720px) and up
    *
-   *  @markup
-   *    <div class="o-grid">
-   *      <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
-   *      <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
-   *      <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
-   *      <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
-   *    </div>
+   * @markup
+   *   <div class="o-grid">
+   *     <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
+   *     <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
+   *     <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
+   *     <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
+   *   </div>
    */
 @media (min-width: 45em) {
   .o-grid {
@@ -718,13 +718,13 @@ small {
    * @description
    *   Screen sizes 60em (960px) and up
    *
-   *  @markup
-   *    <div class="o-grid">
-   *      <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
-   *      <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
-   *      <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
-   *      <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
-   *    </div>
+   * @markup
+   *   <div class="o-grid">
+   *     <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
+   *     <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
+   *     <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
+   *     <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
+   *   </div>
    */
 @media (min-width: 60em) {
   .o-grid {
@@ -762,13 +762,13 @@ small {
    * @description
    *   Screen sizes 75em (1200px) and up
    *
-   *  @markup
-   *    <div class="o-grid">
-   *      <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
-   *      <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
-   *      <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
-   *      <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
-   *    </div>
+   * @markup
+   *   <div class="o-grid">
+   *     <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
+   *     <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
+   *     <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
+   *     <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
+   *   </div>
    */
 @media (min-width: 75em) {
   .o-grid {
