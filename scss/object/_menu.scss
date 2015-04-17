@@ -25,21 +25,21 @@ $cmp-menu-off-canvas: true;
 /**
  * Defaults
  */
-.menu__list {
-  @include list-reset();
+.o-menu__list {
+  @include u-list-reset();
   margin: 0;
   background: $cs-a;
 }
 
-.menu__list--level1 {
+.o-menu__list--level1 {
   transition: transform 0.2s;
 }
 
-.menu__item {
+.o-menu__item {
   position: relative;
 }
 
-.menu__link {
+.o-menu__link {
   display: block;
   text-decoration: none;
   &,
@@ -50,11 +50,11 @@ $cmp-menu-off-canvas: true;
   }
 }
 
-.menu__checkbox {
+.o-menu__checkbox {
   display: none;
 }
 
-.menu__controls {
+.o-menu__controls {
   @media (min-width: $cmp-menu-mobile-breakpoint) {
     display: none;
   }
@@ -68,20 +68,20 @@ $cmp-menu-off-canvas: true;
    * @level 5.3.1.
    *
    * @markup
-   *   <nav class="menu menu--off-canvas">
-   *     <div class="menu__controls">
-   *       <label for="menu__checkbox" class="menu__toggle button button--s">&#9776; Menu</label>
+   *   <nav class="o-menu o-menu--off-canvas">
+   *     <div class="o-menu__controls">
+   *       <label for="o-menu__checkbox" class="o-menu__toggle button button--s">&#9776; Menu</label>
    *     </div>
-   *     <input id="menu__checkbox" class="menu__checkbox" name="menu__checkbox" type="checkbox">
-   *     <ul class="menu__list menu__list--level1">
-   *       <li class="menu__item menu__item--level1">
-   *         <a href="#" class="menu__link menu__link--level1">Link 1</a>
+   *     <input id="o-menu__checkbox" class="o-menu__checkbox" name="o-menu__checkbox" type="checkbox">
+   *     <ul class="o-menu__list o-menu__list--level1">
+   *       <li class="o-menu__item o-menu__item--level1">
+   *         <a href="#" class="o-menu__link o-menu__link--level1">Link 1</a>
    *       </li>
-   *       <li class="menu__item menu__item--level1">
-   *         <a href="#" class="menu__link menu__link--level1">Link 2</a>
+   *       <li class="o-menu__item o-menu__item--level1">
+   *         <a href="#" class="o-menu__link o-menu__link--level1">Link 2</a>
    *       </li>
-   *       <li class="menu__item menu__item--level1">
-   *         <a href="#" class="menu__link menu__link--level1">Link 3</a>
+   *       <li class="o-menu__item o-menu__item--level1">
+   *         <a href="#" class="o-menu__link o-menu__link--level1">Link 3</a>
    *       </li>
    *     </ul>
    *   </nav>
@@ -89,11 +89,11 @@ $cmp-menu-off-canvas: true;
   html {
     position: relative;
   }
-  .menu--off-canvas {
-    .menu__controls {
+  .o-menu--off-canvas {
+    .o-menu__controls {
       display: block;
     }
-    .menu__list--level1 {
+    .o-menu__list--level1 {
       position: fixed;
       top: 0;
       bottom: 0;
@@ -103,7 +103,7 @@ $cmp-menu-off-canvas: true;
       width: 70%;
       transform: translate(-100%, 0);
     }
-    .menu__checkbox:checked + .menu__list--level1 {
+    .o-menu__checkbox:checked + .o-menu__list--level1 {
       transform: translate(0, 0);
     }
   }
@@ -116,10 +116,10 @@ $cmp-menu-off-canvas: true;
    * @name Horizontal
    * @level 5.3.2.
    */
-  .menu--horizontal,
-  .menu--horizontal-responsive {
-    .menu__list--level1 {
-      @include clearfix();
+  .o-menu--horizontal,
+  .o-menu--horizontal-responsive {
+    .o-menu__list--level1 {
+      @include u-clearfix();
     }
   }
 
@@ -129,45 +129,45 @@ $cmp-menu-off-canvas: true;
      * @level 5.3.2.1.
      *
      * @markup
-     *   <nav class="menu menu--horizontal">
-     *     <ul class="menu__list menu__list--level1">
-     *       <li class="menu__item menu__item--level1">
-     *         <a href="#" class="menu__link menu__link--level1">Link 1</a>
-     *         <ul class="menu__list menu__list--level2">
-     *           <li class="menu__item menu__item--level2">
-     *             <a href="#" class="menu__link menu__link--level2">Link 1.1</a>
+     *   <nav class="o-menu o-menu--horizontal">
+     *     <ul class="o-menu__list o-menu__list--level1">
+     *       <li class="o-menu__item o-menu__item--level1">
+     *         <a href="#" class="o-menu__link o-menu__link--level1">Link 1</a>
+     *         <ul class="o-menu__list o-menu__list--level2">
+     *           <li class="o-menu__item o-menu__item--level2">
+     *             <a href="#" class="o-menu__link o-menu__link--level2">Link 1.1</a>
      *           </li>
-     *           <li class="menu__item menu__item--level2">
-     *             <a href="#" class="menu__link menu__link--level2">Link 1.2</a>
+     *           <li class="o-menu__item o-menu__item--level2">
+     *             <a href="#" class="o-menu__link o-menu__link--level2">Link 1.2</a>
      *           </li>
      *         </ul>
      *       </li>
-     *       <li class="menu__item menu__item--level1">
-     *         <a href="#" class="menu__link menu__link--level1">Link 2</a>
+     *       <li class="o-menu__item o-menu__item--level1">
+     *         <a href="#" class="o-menu__link o-menu__link--level1">Link 2</a>
      *       </li>
-     *       <li class="menu__item menu__item--level1">
-     *         <a href="#" class="menu__link menu__link--level1">Link 3</a>
+     *       <li class="o-menu__item o-menu__item--level1">
+     *         <a href="#" class="o-menu__link o-menu__link--level1">Link 3</a>
      *       </li>
      *     </ul>
      *   </nav>
      */
-    .menu--horizontal {
-      .menu__list--level1 .menu__list {
+    .o-menu--horizontal {
+      .o-menu__list--level1 .o-menu__list {
         position: absolute;
         visibility: hidden;
         opacity: 0;
         transition: opacity 0.2s;
       }
-      .menu__list--level1 .menu__list .menu__list {
+      .o-menu__list--level1 .o-menu__list .o-menu__list {
         top: 0;
         left: 100%;
       }
-      .menu__item:hover > .menu__list,
-      .menu__item:focus > .menu__list {
+      .o-menu__item:hover > .o-menu__list,
+      .o-menu__item:focus > .o-menu__list {
         visibility: visible;
         opacity: 1;
       }
-      .menu__item--level1 {
+      .o-menu__item--level1 {
         float: left;
       }
     }
@@ -179,64 +179,64 @@ $cmp-menu-off-canvas: true;
      * @level 5.3.2.2.
      *
      * @markup
-     *   <nav class="menu menu--horizontal-responsive">
-     *     <div class="menu__controls">
-     *       <label for="menu__checkbox-horizontal" class="menu__toggle button button--s">&#9776; Menu</label>
+     *   <nav class="o-menu o-menu--horizontal-responsive">
+     *     <div class="o-menu__controls">
+     *       <label for="o-menu__checkbox-horizontal" class="o-menu__toggle button button--s">&#9776; Menu</label>
      *     </div>
-     *     <input id="menu__checkbox-horizontal" class="menu__checkbox" name="menu__checkbox-horizontal" type="checkbox">
-     *     <ul class="menu__list menu__list--level1">
-     *       <li class="menu__item menu__item--level1">
-     *         <a href="#" class="menu__link menu__link--level1">Link 1</a>
-     *         <ul class="menu__list menu__list--level2">
-     *           <li class="menu__item menu__item--level2">
-     *             <a href="#" class="menu__link menu__link--level2">Link 1.1</a>
+     *     <input id="o-menu__checkbox-horizontal" class="o-menu__checkbox" name="o-menu__checkbox-horizontal" type="checkbox">
+     *     <ul class="o-menu__list o-menu__list--level1">
+     *       <li class="o-menu__item o-menu__item--level1">
+     *         <a href="#" class="o-menu__link o-menu__link--level1">Link 1</a>
+     *         <ul class="o-menu__list o-menu__list--level2">
+     *           <li class="o-menu__item o-menu__item--level2">
+     *             <a href="#" class="o-menu__link o-menu__link--level2">Link 1.1</a>
      *           </li>
-     *           <li class="menu__item menu__item--level2">
-     *             <a href="#" class="menu__link menu__link--level2">Link 1.2</a>
+     *           <li class="o-menu__item o-menu__item--level2">
+     *             <a href="#" class="o-menu__link o-menu__link--level2">Link 1.2</a>
      *           </li>
      *         </ul>
      *       </li>
-     *       <li class="menu__item menu__item--level1">
-     *         <a href="#" class="menu__link menu__link--level1">Link 2</a>
+     *       <li class="o-menu__item o-menu__item--level1">
+     *         <a href="#" class="o-menu__link o-menu__link--level1">Link 2</a>
      *       </li>
-     *       <li class="menu__item menu__item--level1">
-     *         <a href="#" class="menu__link menu__link--level1">Link 3</a>
+     *       <li class="o-menu__item o-menu__item--level1">
+     *         <a href="#" class="o-menu__link o-menu__link--level1">Link 3</a>
      *       </li>
      *     </ul>
      *   </nav>
      */
-    .menu--horizontal-responsive {
+    .o-menu--horizontal-responsive {
       @media (max-width: avalanche-breakpointmax($cmp-menu-mobile-breakpoint)) {
-        .menu__list--level1 {
+        .o-menu__list--level1 {
           height: 0;
           transform: scale(1, 0);
           transform-origin: 0 0;
         }
-        .menu__checkbox:checked + .menu__list--level1 {
+        .o-menu__checkbox:checked + .o-menu__list--level1 {
           height: auto;
           transform: scale(1, 1);
         }
-        .menu__item--level1 {
+        .o-menu__item--level1 {
           float: none;
         }
       }
       @media (min-width: $cmp-menu-mobile-breakpoint) {
-        .menu__list--level1 .menu__list {
+        .o-menu__list--level1 .o-menu__list {
           position: absolute;
           visibility: hidden;
           opacity: 0;
           transition: opacity 0.2s;
         }
-        .menu__list--level1 .menu__list .menu__list {
+        .o-menu__list--level1 .o-menu__list .o-menu__list {
           top: 0;
           left: 100%;
         }
-        .menu__item:hover > .menu__list,
-        .menu__item:focus > .menu__list {
+        .o-menu__item:hover > .o-menu__list,
+        .o-menu__item:focus > .o-menu__list {
           visibility: visible;
           opacity: 1;
         }
-        .menu__item--level1 {
+        .o-menu__item--level1 {
           float: left;
         }
       }
@@ -252,29 +252,29 @@ $cmp-menu-off-canvas: true;
    * @level 5.3.3.
    *
    * @markup
-   *   <nav class="menu menu--vertical">
-   *     <ul class="menu__list menu__list--level1">
-   *       <li class="menu__item menu__item--level1">
-   *         <a href="#" class="menu__link menu__link--level1">Link 1</a>
-   *         <ul class="menu__list menu__list--level2">
-   *           <li class="menu__item menu__item--level2">
-   *             <a href="#" class="menu__link menu__link--level2">Link 1.1</a>
+   *   <nav class="o-menu o-menu--vertical">
+   *     <ul class="o-menu__list o-menu__list--level1">
+   *       <li class="o-menu__item o-menu__item--level1">
+   *         <a href="#" class="o-menu__link o-menu__link--level1">Link 1</a>
+   *         <ul class="o-menu__list o-menu__list--level2">
+   *           <li class="o-menu__item o-menu__item--level2">
+   *             <a href="#" class="o-menu__link o-menu__link--level2">Link 1.1</a>
    *           </li>
-   *           <li class="menu__item menu__item--level2">
-   *             <a href="#" class="menu__link menu__link--level2">Link 1.2</a>
+   *           <li class="o-menu__item o-menu__item--level2">
+   *             <a href="#" class="o-menu__link o-menu__link--level2">Link 1.2</a>
    *           </li>
    *         </ul>
    *       </li>
-   *       <li class="menu__item menu__item--level1">
-   *         <a href="#" class="menu__link menu__link--level1">Link 2</a>
+   *       <li class="o-menu__item o-menu__item--level1">
+   *         <a href="#" class="o-menu__link o-menu__link--level1">Link 2</a>
    *       </li>
-   *       <li class="menu__item menu__item--level1">
-   *         <a href="#" class="menu__link menu__link--level1">Link 3</a>
+   *       <li class="o-menu__item o-menu__item--level1">
+   *         <a href="#" class="o-menu__link o-menu__link--level1">Link 3</a>
    *       </li>
    *     </ul>
    *   </nav>
    */
-  .menu--vertical {
+  .o-menu--vertical {
     // no styling necessary
     // use this class to add your own stylings
   }

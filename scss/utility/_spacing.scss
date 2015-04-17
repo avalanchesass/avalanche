@@ -2,12 +2,12 @@
  * @name Spacing
  * @level 4.3.
  */
-@mixin spacing-wrap($spacing: $spacing-m) {
+@mixin u-spacing-wrap($spacing: $spacing-m) {
   > * + * {
     margin-top: $spacing;
   }
 }
 
-.spacing-wrap {
-  @include spacing-wrap();
+.u-spacing-wrap {
+  @include u-spacing-wrap();
 }

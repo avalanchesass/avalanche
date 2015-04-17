@@ -8,13 +8,13 @@
  * @description
  *   Hide from both screenreaders and browsers: h5bp.com/u
  */
-@mixin hidden() {
+@mixin u-hidden() {
   display: none !important;
   visibility: hidden;
 }
 
-.hidden {
-  @include hidden();
+.u-hidden {
+  @include u-hidden();
 }
 
 
@@ -25,7 +25,7 @@
  * @description
  *   Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
-@mixin visuallyhidden() {
+@mixin u-visuallyhidden() {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -34,8 +34,8 @@
   width: 1px;
   height: 1px;
   border: 0;
-  &.focusable:active,
-  &.focusable:focus {
+  &.is-focusable:active,
+  &.is-focusable:focus {
     position: static;
     overflow: visible;
     clip: auto;
@@ -45,8 +45,8 @@
   }
 }
 
-.visuallyhidden {
-  @include visuallyhidden();
+.u-visuallyhidden {
+  @include u-visuallyhidden();
 }
 
 
@@ -57,10 +57,10 @@
  * @description
  *   Hide visually and from screenreaders, but maintain layout
  */
-@mixin invisible() {
+@mixin u-invisible() {
   visibility: hidden;
 }
 
-.invisible {
-  @include invisible();
+.u-invisible {
+  @include u-invisible();
 }

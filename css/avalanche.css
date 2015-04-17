@@ -488,19 +488,19 @@ small {
  * @description
  *   Contain floats
  */
-.clearfix {
+.u-clearfix {
   *zoom: 1; }
-  .clearfix:before, .clearfix:after {
+  .u-clearfix:before, .u-clearfix:after {
     display: table;
     content: ' '; }
-  .clearfix:after {
+  .u-clearfix:after {
     clear: both; }
 
 /**
  * @name List reset
  * @level 4.2.
  */
-.list-reset {
+.u-list-reset {
   padding-left: 0;
   list-style-type: none; }
 
@@ -508,7 +508,7 @@ small {
  * @name Spacing
  * @level 4.3.
  */
-.spacing-wrap > * + * {
+.u-spacing-wrap > * + * {
   margin-top: 1.5em; }
 
 /**
@@ -521,7 +521,7 @@ small {
  * @description
  *   Hide from both screenreaders and browsers: h5bp.com/u
  */
-.hidden {
+.u-hidden {
   display: none !important;
   visibility: hidden; }
 
@@ -531,7 +531,7 @@ small {
  * @description
  *   Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
-.visuallyhidden {
+.u-visuallyhidden {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -540,7 +540,7 @@ small {
   width: 1px;
   height: 1px;
   border: 0; }
-  .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  .u-visuallyhidden.is-focusable:active, .u-visuallyhidden.is-focusable:focus {
     position: static;
     overflow: visible;
     clip: auto;
@@ -554,7 +554,7 @@ small {
  * @description
  *   Hide visually and from screenreaders, but maintain layout
  */
-.invisible {
+.u-invisible {
   visibility: hidden; }
 
 /**
@@ -575,59 +575,59 @@ small {
  *   Mobile first styles for all screen sizes
  *
  * @markup
- *   <div class="grid">
- *     <div class="grid__item--6">Grid Item</div>
- *     <div class="grid__item--6">Grid Item</div>
+ *   <div class="o-grid">
+ *     <div class="o-grid__item--6">Grid Item</div>
+ *     <div class="o-grid__item--6">Grid Item</div>
  *   </div>
  */
-.grid {
+.o-grid {
   *zoom: 1;
   margin-left: -1em; }
-  .grid:before, .grid:after {
+  .o-grid:before, .o-grid:after {
     display: table;
     content: ' '; }
-  .grid:after {
+  .o-grid:after {
     clear: both; }
 
-[class*='grid__item'] {
+[class*='o-grid__item'] {
   float: left;
   padding-left: 1em;
   width: 100%; }
 
-.grid__item--1 {
+.o-grid__item--1 {
   width: 8.33333%; }
 
-.grid__item--2 {
+.o-grid__item--2 {
   width: 16.66667%; }
 
-.grid__item--3 {
+.o-grid__item--3 {
   width: 25%; }
 
-.grid__item--4 {
+.o-grid__item--4 {
   width: 33.33333%; }
 
-.grid__item--5 {
+.o-grid__item--5 {
   width: 41.66667%; }
 
-.grid__item--6 {
+.o-grid__item--6 {
   width: 50%; }
 
-.grid__item--7 {
+.o-grid__item--7 {
   width: 58.33333%; }
 
-.grid__item--8 {
+.o-grid__item--8 {
   width: 66.66667%; }
 
-.grid__item--9 {
+.o-grid__item--9 {
   width: 75%; }
 
-.grid__item--10 {
+.o-grid__item--10 {
   width: 83.33333%; }
 
-.grid__item--11 {
+.o-grid__item--11 {
   width: 91.66667%; }
 
-.grid__item--12 {
+.o-grid__item--12 {
   width: 100%; }
 
 /**
@@ -637,35 +637,35 @@ small {
    *   Screen sizes 30em (480px) and up
    *
    *  @markup
-   *    <div class="grid">
-   *      <div class="grid__item--12 grid__item--s--6">Grid Item</div>
-   *      <div class="grid__item--12 grid__item--s--6">Grid Item</div>
+   *    <div class="o-grid">
+   *      <div class="o-grid__item--12 o-grid__item--s--6">Grid Item</div>
+   *      <div class="o-grid__item--12 o-grid__item--s--6">Grid Item</div>
    *    </div>
    */
 @media (min-width: 30em) {
-  .grid__item--s--1 {
+  .o-grid__item--s--1 {
     width: 8.33333%; }
-  .grid__item--s--2 {
+  .o-grid__item--s--2 {
     width: 16.66667%; }
-  .grid__item--s--3 {
+  .o-grid__item--s--3 {
     width: 25%; }
-  .grid__item--s--4 {
+  .o-grid__item--s--4 {
     width: 33.33333%; }
-  .grid__item--s--5 {
+  .o-grid__item--s--5 {
     width: 41.66667%; }
-  .grid__item--s--6 {
+  .o-grid__item--s--6 {
     width: 50%; }
-  .grid__item--s--7 {
+  .o-grid__item--s--7 {
     width: 58.33333%; }
-  .grid__item--s--8 {
+  .o-grid__item--s--8 {
     width: 66.66667%; }
-  .grid__item--s--9 {
+  .o-grid__item--s--9 {
     width: 75%; }
-  .grid__item--s--10 {
+  .o-grid__item--s--10 {
     width: 83.33333%; }
-  .grid__item--s--11 {
+  .o-grid__item--s--11 {
     width: 91.66667%; }
-  .grid__item--s--12 {
+  .o-grid__item--s--12 {
     width: 100%; } }
 
 /**
@@ -675,41 +675,41 @@ small {
    *   Screen sizes 45em (720px) and up
    *
    *  @markup
-   *    <div class="grid">
-   *      <div class="grid__item--12 grid__item--s--6 grid__item--m--3">Grid Item</div>
-   *      <div class="grid__item--12 grid__item--s--6 grid__item--m--3">Grid Item</div>
-   *      <div class="grid__item--12 grid__item--s--6 grid__item--m--3">Grid Item</div>
-   *      <div class="grid__item--12 grid__item--s--6 grid__item--m--3">Grid Item</div>
+   *    <div class="o-grid">
+   *      <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
+   *      <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
+   *      <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
+   *      <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
    *    </div>
    */
 @media (min-width: 45em) {
-  .grid {
+  .o-grid {
     margin-left: -1.5em; }
-  [class*='grid__item'] {
+  [class*='o-grid__item'] {
     padding-left: 1.5em; }
-  .grid__item--m--1 {
+  .o-grid__item--m--1 {
     width: 8.33333%; }
-  .grid__item--m--2 {
+  .o-grid__item--m--2 {
     width: 16.66667%; }
-  .grid__item--m--3 {
+  .o-grid__item--m--3 {
     width: 25%; }
-  .grid__item--m--4 {
+  .o-grid__item--m--4 {
     width: 33.33333%; }
-  .grid__item--m--5 {
+  .o-grid__item--m--5 {
     width: 41.66667%; }
-  .grid__item--m--6 {
+  .o-grid__item--m--6 {
     width: 50%; }
-  .grid__item--m--7 {
+  .o-grid__item--m--7 {
     width: 58.33333%; }
-  .grid__item--m--8 {
+  .o-grid__item--m--8 {
     width: 66.66667%; }
-  .grid__item--m--9 {
+  .o-grid__item--m--9 {
     width: 75%; }
-  .grid__item--m--10 {
+  .o-grid__item--m--10 {
     width: 83.33333%; }
-  .grid__item--m--11 {
+  .o-grid__item--m--11 {
     width: 91.66667%; }
-  .grid__item--m--12 {
+  .o-grid__item--m--12 {
     width: 100%; } }
 
 /**
@@ -719,41 +719,41 @@ small {
    *   Screen sizes 60em (960px) and up
    *
    *  @markup
-   *    <div class="grid">
-   *      <div class="grid__item--12 grid__item--m--6 grid__item--l--3">Grid Item</div>
-   *      <div class="grid__item--12 grid__item--m--6 grid__item--l--3">Grid Item</div>
-   *      <div class="grid__item--12 grid__item--m--6 grid__item--l--3">Grid Item</div>
-   *      <div class="grid__item--12 grid__item--m--6 grid__item--l--3">Grid Item</div>
+   *    <div class="o-grid">
+   *      <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
+   *      <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
+   *      <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
+   *      <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
    *    </div>
    */
 @media (min-width: 60em) {
-  .grid {
+  .o-grid {
     margin-left: -1.5em; }
-  [class*='grid__item'] {
+  [class*='o-grid__item'] {
     padding-left: 1.5em; }
-  .grid__item--l--1 {
+  .o-grid__item--l--1 {
     width: 8.33333%; }
-  .grid__item--l--2 {
+  .o-grid__item--l--2 {
     width: 16.66667%; }
-  .grid__item--l--3 {
+  .o-grid__item--l--3 {
     width: 25%; }
-  .grid__item--l--4 {
+  .o-grid__item--l--4 {
     width: 33.33333%; }
-  .grid__item--l--5 {
+  .o-grid__item--l--5 {
     width: 41.66667%; }
-  .grid__item--l--6 {
+  .o-grid__item--l--6 {
     width: 50%; }
-  .grid__item--l--7 {
+  .o-grid__item--l--7 {
     width: 58.33333%; }
-  .grid__item--l--8 {
+  .o-grid__item--l--8 {
     width: 66.66667%; }
-  .grid__item--l--9 {
+  .o-grid__item--l--9 {
     width: 75%; }
-  .grid__item--l--10 {
+  .o-grid__item--l--10 {
     width: 83.33333%; }
-  .grid__item--l--11 {
+  .o-grid__item--l--11 {
     width: 91.66667%; }
-  .grid__item--l--12 {
+  .o-grid__item--l--12 {
     width: 100%; } }
 
 /**
@@ -763,41 +763,41 @@ small {
    *   Screen sizes 75em (1200px) and up
    *
    *  @markup
-   *    <div class="grid">
-   *      <div class="grid__item--12 grid__item--l--6 grid__item--xl--3">Grid Item</div>
-   *      <div class="grid__item--12 grid__item--l--6 grid__item--xl--3">Grid Item</div>
-   *      <div class="grid__item--12 grid__item--l--6 grid__item--xl--3">Grid Item</div>
-   *      <div class="grid__item--12 grid__item--l--6 grid__item--xl--3">Grid Item</div>
+   *    <div class="o-grid">
+   *      <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
+   *      <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
+   *      <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
+   *      <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
    *    </div>
    */
 @media (min-width: 75em) {
-  .grid {
+  .o-grid {
     margin-left: -1.5em; }
-  [class*='grid__item'] {
+  [class*='o-grid__item'] {
     padding-left: 1.5em; }
-  .grid__item--xl--1 {
+  .o-grid__item--xl--1 {
     width: 8.33333%; }
-  .grid__item--xl--2 {
+  .o-grid__item--xl--2 {
     width: 16.66667%; }
-  .grid__item--xl--3 {
+  .o-grid__item--xl--3 {
     width: 25%; }
-  .grid__item--xl--4 {
+  .o-grid__item--xl--4 {
     width: 33.33333%; }
-  .grid__item--xl--5 {
+  .o-grid__item--xl--5 {
     width: 41.66667%; }
-  .grid__item--xl--6 {
+  .o-grid__item--xl--6 {
     width: 50%; }
-  .grid__item--xl--7 {
+  .o-grid__item--xl--7 {
     width: 58.33333%; }
-  .grid__item--xl--8 {
+  .o-grid__item--xl--8 {
     width: 66.66667%; }
-  .grid__item--xl--9 {
+  .o-grid__item--xl--9 {
     width: 75%; }
-  .grid__item--xl--10 {
+  .o-grid__item--xl--10 {
     width: 83.33333%; }
-  .grid__item--xl--11 {
+  .o-grid__item--xl--11 {
     width: 91.66667%; }
-  .grid__item--xl--12 {
+  .o-grid__item--xl--12 {
     width: 100%; } }
 
 /**
@@ -811,10 +811,10 @@ small {
  * @name Base
  * @level 5.2.1.
  * @markup
- *   <a href="#" class="button">Button</a>
- *   <button class="button">Button</button>
+ *   <a href="#" class="o-button">Button</a>
+ *   <button class="o-button">Button</button>
  */
-.button {
+.o-button {
   display: inline-block;
   margin: 0;
   padding: 0.5em 1em;
@@ -825,11 +825,11 @@ small {
   font-size: 100%;
   font-family: inherit;
   cursor: pointer; }
-  .button, .button:hover, .button:focus, .button:active, .button:visited {
+  .o-button, .o-button:hover, .o-button:focus, .o-button:active, .o-button:visited {
     outline: none;
     color: #fff;
     text-decoration: none; }
-  .button:hover, .button:focus, .button:active {
+  .o-button:hover, .o-button:focus, .o-button:active {
     background: #5b5e75; }
 
 /**
@@ -840,36 +840,36 @@ small {
    * @name Small
    * @level 5.2.2.1.
    * @markup
-   *   <a href="#" class="button button--s">Button</a>
+   *   <a href="#" class="o-button o-button--s">Button</a>
    */
-.button--s {
+.o-button--s {
   padding: 0 0.5em; }
 
 /**
    * @name Large
    * @level 5.2.2.2.
    * @markup
-   *   <a href="#" class="button button--l">Button</a>
+   *   <a href="#" class="o-button o-button--l">Button</a>
    */
-.button--l {
+.o-button--l {
   padding: 1em 1.5em; }
 
 /**
    * @name X-Large
    * @level 5.2.2.3.
    * @markup
-   *   <a href="#" class="button button--xl">Button</a>
+   *   <a href="#" class="o-button o-button--xl">Button</a>
    */
-.button--xl {
+.o-button--xl {
   padding: 1.5em 2em; }
 
 /**
    * @name Full
    * @level 5.2.2.4.
    * @markup
-   *   <a href="#" class="button button--full">Button</a>
+   *   <a href="#" class="o-button o-button--full">Button</a>
    */
-.button--full {
+.o-button--full {
   width: 100%;
   text-align: center; }
 
@@ -881,27 +881,27 @@ small {
    * @name Small
    * @level 5.2.3.1.
    * @markup
-   *   <a href="#" class="button button--font--s">Button</a>
+   *   <a href="#" class="o-button o-button--font--s">Button</a>
    */
-.button--font--s {
+.o-button--font--s {
   font-size: 0.85em; }
 
 /**
    * @name Large
    * @level 5.2.3.2.
    * @markup
-   *   <a href="#" class="button button--font--l">Button</a>
+   *   <a href="#" class="o-button o-button--font--l">Button</a>
    */
-.button--font--l {
+.o-button--font--l {
   font-size: 1.25em; }
 
 /**
    * @name X-Large
    * @level 5.2.3.3.
    * @markup
-   *   <a href="#" class="button button--font--xl">Button</a>
+   *   <a href="#" class="o-button o-button--font--xl">Button</a>
    */
-.button--font--xl {
+.o-button--font--xl {
   font-size: 1.5em; }
 
 /**
@@ -912,62 +912,62 @@ small {
    * @name Positive
    * @level 5.2.4.1.
    * @markup
-   *   <a href="#" class="button button--positive">Button</a>
+   *   <a href="#" class="o-button o-button--positive">Button</a>
    */
-.button--positive {
+.o-button--positive {
   background: #468847;
   color: #fff; }
-  .button--positive:hover, .button--positive:focus, .button--positive:active {
+  .o-button--positive:hover, .o-button--positive:focus, .o-button--positive:active {
     background: #7dab7e; }
 
 /**
    * @name Neutral
    * @level 5.2.4.2.
    * @markup
-   *   <a href="#" class="button button--neutral">Button</a>
+   *   <a href="#" class="o-button o-button--neutral">Button</a>
    */
-.button--neutral {
+.o-button--neutral {
   background: #3A87AD;
   color: #fff; }
-  .button--neutral:hover, .button--neutral:focus, .button--neutral:active {
+  .o-button--neutral:hover, .o-button--neutral:focus, .o-button--neutral:active {
     background: #75abc5; }
 
 /**
    * @name Cautious
    * @level 5.2.4.3.
    * @markup
-   *   <a href="#" class="button button--cautious">Button</a>
+   *   <a href="#" class="o-button o-button--cautious">Button</a>
    */
-.button--cautious {
+.o-button--cautious {
   background: #c09853;
   color: #fff; }
-  .button--cautious:hover, .button--cautious:focus, .button--cautious:active {
+  .o-button--cautious:hover, .o-button--cautious:focus, .o-button--cautious:active {
     background: #d2b686; }
 
 /**
    * @name Negative
    * @level 5.2.4.4.
    * @markup
-   *   <a href="#" class="button button--negative">Button</a>
+   *   <a href="#" class="o-button o-button--negative">Button</a>
    */
-.button--negative {
+.o-button--negative {
   background: #b94a48;
   color: #fff; }
-  .button--negative:hover, .button--negative:focus, .button--negative:active {
+  .o-button--negative:hover, .o-button--negative:focus, .o-button--negative:active {
     background: #ce807e; }
 
 /**
    * @name Inactive / disabled
    * @level 5.2.4.5.
    * @markup
-   *   <a href="#" class="button button--inactive">Button</a>
-   *   <a href="#" class="button button--disabled">Button</a>
+   *   <a href="#" class="o-button o-button--inactive">Button</a>
+   *   <a href="#" class="o-button o-button--disabled">Button</a>
    */
-.button--inactive, .button--inactive:hover, .button--inactive:focus, .button--inactive:active, .button--disabled, .button--disabled:hover, .button--disabled:focus, .button--disabled:active {
+.o-button--inactive, .o-button--inactive:hover, .o-button--inactive:focus, .o-button--inactive:active, .o-button--disabled, .o-button--disabled:hover, .o-button--disabled:focus, .o-button--disabled:active {
   background-color: #efefef;
   color: #bcbcbc; }
 
-.button--disabled, .button--disabled:hover, .button--disabled:focus, .button--disabled:active {
+.o-button--disabled, .o-button--disabled:hover, .o-button--disabled:focus, .o-button--disabled:active {
   cursor: text; }
 
 /**
@@ -980,30 +980,30 @@ small {
 /**
  * Defaults
  */
-.menu__list {
+.o-menu__list {
   padding-left: 0;
   list-style-type: none;
   margin: 0;
   background: #16193B; }
 
-.menu__list--level1 {
+.o-menu__list--level1 {
   -webkit-transition: -webkit-transform 0.2s;
           transition: transform 0.2s; }
 
-.menu__item {
+.o-menu__item {
   position: relative; }
 
-.menu__link {
+.o-menu__link {
   display: block;
   text-decoration: none; }
-  .menu__link, .menu__link:hover, .menu__link:focus, .menu__link:visited {
+  .o-menu__link, .o-menu__link:hover, .o-menu__link:focus, .o-menu__link:visited {
     color: #fff; }
 
-.menu__checkbox {
+.o-menu__checkbox {
   display: none; }
 
 @media (min-width: 45em) {
-  .menu__controls {
+  .o-menu__controls {
     display: none; } }
 
 /**
@@ -1011,20 +1011,20 @@ small {
    * @level 5.3.1.
    *
    * @markup
-   *   <nav class="menu menu--off-canvas">
-   *     <div class="menu__controls">
-   *       <label for="menu__checkbox" class="menu__toggle button button--s">&#9776; Menu</label>
+   *   <nav class="o-menu o-menu--off-canvas">
+   *     <div class="o-menu__controls">
+   *       <label for="o-menu__checkbox" class="o-menu__toggle button button--s">&#9776; Menu</label>
    *     </div>
-   *     <input id="menu__checkbox" class="menu__checkbox" name="menu__checkbox" type="checkbox">
-   *     <ul class="menu__list menu__list--level1">
-   *       <li class="menu__item menu__item--level1">
-   *         <a href="#" class="menu__link menu__link--level1">Link 1</a>
+   *     <input id="o-menu__checkbox" class="o-menu__checkbox" name="o-menu__checkbox" type="checkbox">
+   *     <ul class="o-menu__list o-menu__list--level1">
+   *       <li class="o-menu__item o-menu__item--level1">
+   *         <a href="#" class="o-menu__link o-menu__link--level1">Link 1</a>
    *       </li>
-   *       <li class="menu__item menu__item--level1">
-   *         <a href="#" class="menu__link menu__link--level1">Link 2</a>
+   *       <li class="o-menu__item o-menu__item--level1">
+   *         <a href="#" class="o-menu__link o-menu__link--level1">Link 2</a>
    *       </li>
-   *       <li class="menu__item menu__item--level1">
-   *         <a href="#" class="menu__link menu__link--level1">Link 3</a>
+   *       <li class="o-menu__item o-menu__item--level1">
+   *         <a href="#" class="o-menu__link o-menu__link--level1">Link 3</a>
    *       </li>
    *     </ul>
    *   </nav>
@@ -1032,9 +1032,9 @@ small {
 html {
   position: relative; }
 
-.menu--off-canvas .menu__controls {
+.o-menu--off-canvas .o-menu__controls {
   display: block; }
-.menu--off-canvas .menu__list--level1 {
+.o-menu--off-canvas .o-menu__list--level1 {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -1045,7 +1045,7 @@ html {
   -webkit-transform: translate(-100%, 0);
       -ms-transform: translate(-100%, 0);
           transform: translate(-100%, 0); }
-.menu--off-canvas .menu__checkbox:checked + .menu__list--level1 {
+.o-menu--off-canvas .o-menu__checkbox:checked + .o-menu__list--level1 {
   -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
           transform: translate(0, 0); }
@@ -1054,12 +1054,12 @@ html {
    * @name Horizontal
    * @level 5.3.2.
    */
-.menu--horizontal .menu__list--level1, .menu--horizontal-responsive .menu__list--level1 {
+.o-menu--horizontal .o-menu__list--level1, .o-menu--horizontal-responsive .o-menu__list--level1 {
   *zoom: 1; }
-  .menu--horizontal .menu__list--level1:before, .menu--horizontal .menu__list--level1:after, .menu--horizontal-responsive .menu__list--level1:before, .menu--horizontal-responsive .menu__list--level1:after {
+  .o-menu--horizontal .o-menu__list--level1:before, .o-menu--horizontal .o-menu__list--level1:after, .o-menu--horizontal-responsive .o-menu__list--level1:before, .o-menu--horizontal-responsive .o-menu__list--level1:after {
     display: table;
     content: ' '; }
-  .menu--horizontal .menu__list--level1:after, .menu--horizontal-responsive .menu__list--level1:after {
+  .o-menu--horizontal .o-menu__list--level1:after, .o-menu--horizontal-responsive .o-menu__list--level1:after {
     clear: both; }
 
 /**
@@ -1067,41 +1067,41 @@ html {
      * @level 5.3.2.1.
      *
      * @markup
-     *   <nav class="menu menu--horizontal">
-     *     <ul class="menu__list menu__list--level1">
-     *       <li class="menu__item menu__item--level1">
-     *         <a href="#" class="menu__link menu__link--level1">Link 1</a>
-     *         <ul class="menu__list menu__list--level2">
-     *           <li class="menu__item menu__item--level2">
-     *             <a href="#" class="menu__link menu__link--level2">Link 1.1</a>
+     *   <nav class="o-menu o-menu--horizontal">
+     *     <ul class="o-menu__list o-menu__list--level1">
+     *       <li class="o-menu__item o-menu__item--level1">
+     *         <a href="#" class="o-menu__link o-menu__link--level1">Link 1</a>
+     *         <ul class="o-menu__list o-menu__list--level2">
+     *           <li class="o-menu__item o-menu__item--level2">
+     *             <a href="#" class="o-menu__link o-menu__link--level2">Link 1.1</a>
      *           </li>
-     *           <li class="menu__item menu__item--level2">
-     *             <a href="#" class="menu__link menu__link--level2">Link 1.2</a>
+     *           <li class="o-menu__item o-menu__item--level2">
+     *             <a href="#" class="o-menu__link o-menu__link--level2">Link 1.2</a>
      *           </li>
      *         </ul>
      *       </li>
-     *       <li class="menu__item menu__item--level1">
-     *         <a href="#" class="menu__link menu__link--level1">Link 2</a>
+     *       <li class="o-menu__item o-menu__item--level1">
+     *         <a href="#" class="o-menu__link o-menu__link--level1">Link 2</a>
      *       </li>
-     *       <li class="menu__item menu__item--level1">
-     *         <a href="#" class="menu__link menu__link--level1">Link 3</a>
+     *       <li class="o-menu__item o-menu__item--level1">
+     *         <a href="#" class="o-menu__link o-menu__link--level1">Link 3</a>
      *       </li>
      *     </ul>
      *   </nav>
      */
-.menu--horizontal .menu__list--level1 .menu__list {
+.o-menu--horizontal .o-menu__list--level1 .o-menu__list {
   position: absolute;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: opacity 0.2s;
           transition: opacity 0.2s; }
-.menu--horizontal .menu__list--level1 .menu__list .menu__list {
+.o-menu--horizontal .o-menu__list--level1 .o-menu__list .o-menu__list {
   top: 0;
   left: 100%; }
-.menu--horizontal .menu__item:hover > .menu__list, .menu--horizontal .menu__item:focus > .menu__list {
+.o-menu--horizontal .o-menu__item:hover > .o-menu__list, .o-menu--horizontal .o-menu__item:focus > .o-menu__list {
   visibility: visible;
   opacity: 1; }
-.menu--horizontal .menu__item--level1 {
+.o-menu--horizontal .o-menu__item--level1 {
   float: left; }
 
 /**
@@ -1109,34 +1109,34 @@ html {
      * @level 5.3.2.2.
      *
      * @markup
-     *   <nav class="menu menu--horizontal-responsive">
-     *     <div class="menu__controls">
-     *       <label for="menu__checkbox-horizontal" class="menu__toggle button button--s">&#9776; Menu</label>
+     *   <nav class="o-menu o-menu--horizontal-responsive">
+     *     <div class="o-menu__controls">
+     *       <label for="o-menu__checkbox-horizontal" class="o-menu__toggle button button--s">&#9776; Menu</label>
      *     </div>
-     *     <input id="menu__checkbox-horizontal" class="menu__checkbox" name="menu__checkbox-horizontal" type="checkbox">
-     *     <ul class="menu__list menu__list--level1">
-     *       <li class="menu__item menu__item--level1">
-     *         <a href="#" class="menu__link menu__link--level1">Link 1</a>
-     *         <ul class="menu__list menu__list--level2">
-     *           <li class="menu__item menu__item--level2">
-     *             <a href="#" class="menu__link menu__link--level2">Link 1.1</a>
+     *     <input id="o-menu__checkbox-horizontal" class="o-menu__checkbox" name="o-menu__checkbox-horizontal" type="checkbox">
+     *     <ul class="o-menu__list o-menu__list--level1">
+     *       <li class="o-menu__item o-menu__item--level1">
+     *         <a href="#" class="o-menu__link o-menu__link--level1">Link 1</a>
+     *         <ul class="o-menu__list o-menu__list--level2">
+     *           <li class="o-menu__item o-menu__item--level2">
+     *             <a href="#" class="o-menu__link o-menu__link--level2">Link 1.1</a>
      *           </li>
-     *           <li class="menu__item menu__item--level2">
-     *             <a href="#" class="menu__link menu__link--level2">Link 1.2</a>
+     *           <li class="o-menu__item o-menu__item--level2">
+     *             <a href="#" class="o-menu__link o-menu__link--level2">Link 1.2</a>
      *           </li>
      *         </ul>
      *       </li>
-     *       <li class="menu__item menu__item--level1">
-     *         <a href="#" class="menu__link menu__link--level1">Link 2</a>
+     *       <li class="o-menu__item o-menu__item--level1">
+     *         <a href="#" class="o-menu__link o-menu__link--level1">Link 2</a>
      *       </li>
-     *       <li class="menu__item menu__item--level1">
-     *         <a href="#" class="menu__link menu__link--level1">Link 3</a>
+     *       <li class="o-menu__item o-menu__item--level1">
+     *         <a href="#" class="o-menu__link o-menu__link--level1">Link 3</a>
      *       </li>
      *     </ul>
      *   </nav>
      */
 @media (max-width: 44.9375em) {
-  .menu--horizontal-responsive .menu__list--level1 {
+  .o-menu--horizontal-responsive .o-menu__list--level1 {
     height: 0;
     -webkit-transform: scale(1, 0);
         -ms-transform: scale(1, 0);
@@ -1144,27 +1144,27 @@ html {
     -webkit-transform-origin: 0 0;
         -ms-transform-origin: 0 0;
             transform-origin: 0 0; }
-  .menu--horizontal-responsive .menu__checkbox:checked + .menu__list--level1 {
+  .o-menu--horizontal-responsive .o-menu__checkbox:checked + .o-menu__list--level1 {
     height: auto;
     -webkit-transform: scale(1, 1);
         -ms-transform: scale(1, 1);
             transform: scale(1, 1); }
-  .menu--horizontal-responsive .menu__item--level1 {
+  .o-menu--horizontal-responsive .o-menu__item--level1 {
     float: none; } }
 @media (min-width: 45em) {
-  .menu--horizontal-responsive .menu__list--level1 .menu__list {
+  .o-menu--horizontal-responsive .o-menu__list--level1 .o-menu__list {
     position: absolute;
     visibility: hidden;
     opacity: 0;
     -webkit-transition: opacity 0.2s;
             transition: opacity 0.2s; }
-  .menu--horizontal-responsive .menu__list--level1 .menu__list .menu__list {
+  .o-menu--horizontal-responsive .o-menu__list--level1 .o-menu__list .o-menu__list {
     top: 0;
     left: 100%; }
-  .menu--horizontal-responsive .menu__item:hover > .menu__list, .menu--horizontal-responsive .menu__item:focus > .menu__list {
+  .o-menu--horizontal-responsive .o-menu__item:hover > .o-menu__list, .o-menu--horizontal-responsive .o-menu__item:focus > .o-menu__list {
     visibility: visible;
     opacity: 1; }
-  .menu--horizontal-responsive .menu__item--level1 {
+  .o-menu--horizontal-responsive .o-menu__item--level1 {
     float: left; } }
 
 /**
@@ -1172,24 +1172,24 @@ html {
    * @level 5.3.3.
    *
    * @markup
-   *   <nav class="menu menu--vertical">
-   *     <ul class="menu__list menu__list--level1">
-   *       <li class="menu__item menu__item--level1">
-   *         <a href="#" class="menu__link menu__link--level1">Link 1</a>
-   *         <ul class="menu__list menu__list--level2">
-   *           <li class="menu__item menu__item--level2">
-   *             <a href="#" class="menu__link menu__link--level2">Link 1.1</a>
+   *   <nav class="o-menu o-menu--vertical">
+   *     <ul class="o-menu__list o-menu__list--level1">
+   *       <li class="o-menu__item o-menu__item--level1">
+   *         <a href="#" class="o-menu__link o-menu__link--level1">Link 1</a>
+   *         <ul class="o-menu__list o-menu__list--level2">
+   *           <li class="o-menu__item o-menu__item--level2">
+   *             <a href="#" class="o-menu__link o-menu__link--level2">Link 1.1</a>
    *           </li>
-   *           <li class="menu__item menu__item--level2">
-   *             <a href="#" class="menu__link menu__link--level2">Link 1.2</a>
+   *           <li class="o-menu__item o-menu__item--level2">
+   *             <a href="#" class="o-menu__link o-menu__link--level2">Link 1.2</a>
    *           </li>
    *         </ul>
    *       </li>
-   *       <li class="menu__item menu__item--level1">
-   *         <a href="#" class="menu__link menu__link--level1">Link 2</a>
+   *       <li class="o-menu__item o-menu__item--level1">
+   *         <a href="#" class="o-menu__link o-menu__link--level1">Link 2</a>
    *       </li>
-   *       <li class="menu__item menu__item--level1">
-   *         <a href="#" class="menu__link menu__link--level1">Link 3</a>
+   *       <li class="o-menu__item o-menu__item--level1">
+   *         <a href="#" class="o-menu__link o-menu__link--level1">Link 3</a>
    *       </li>
    *     </ul>
    *   </nav>
@@ -1209,15 +1209,15 @@ html {
  *   [Harry Roberts - The 'island' object](http://csswizardry.com/2011/10/the-island-object/)
  *
  * @markup
- *   <div class="island">
+ *   <div class="o-island">
  *     Island
  *   </div>
  */
-.island {
+.o-island {
   display: block;
   padding: 1.5em;
   background: #efefef; }
-  .island > :last-child {
+  .o-island > :last-child {
     margin-bottom: 0; }
 
 /**
@@ -1231,11 +1231,11 @@ html {
    *   Positive actions; e.g. sign in, purchase, submit, etc.
    *
    * @markup
-   *   <div class="island island--positive">
+   *   <div class="o-island o-island--positive">
    *     Positive Island
    *   </div>
    */
-.island--positive {
+.o-island--positive {
   background: #dae7da;
   color: #468847; }
 
@@ -1244,11 +1244,11 @@ html {
    * @level 5.4.2.2.
    *
    * @markup
-   *   <div class="island island--neutral">
+   *   <div class="o-island o-island--neutral">
    *     Neutral Island
    *   </div>
    */
-.island--neutral {
+.o-island--neutral {
   background: #d7e7ee;
   color: #3A87AD; }
 
@@ -1257,11 +1257,11 @@ html {
    * @level 5.4.2.3.
    *
    * @markup
-   *   <div class="island island--cautious">
+   *   <div class="o-island o-island--cautious">
    *     Cautious Island
    *   </div>
    */
-.island--cautious {
+.o-island--cautious {
   background: #f2eadc;
   color: #c09853; }
 
@@ -1272,11 +1272,11 @@ html {
    *   Negative actions; e.g. close account, delete photo, remove friend, etc.
    *
    * @markup
-   *   <div class="island island--negative">
+   *   <div class="o-island o-island--negative">
    *     Negative Island
    *   </div>
    */
-.island--negative {
+.o-island--negative {
   background: #f1dada;
   color: #b94a48; }
 
@@ -1289,11 +1289,11 @@ html {
    * @level 5.4.3.1.
    *
    * @markup
-   *   <div class="island island--cs-a">
+   *   <div class="o-island o-island--cs-a">
    *     cs-a Island
    *   </div>
    */
-.island--cs-a {
+.o-island--cs-a {
   background: #16193B;
   color: #fff; }
 
@@ -1302,11 +1302,11 @@ html {
    * @level 5.4.3.2.
    *
    * @markup
-   *   <div class="island island--cs-b">
+   *   <div class="o-island o-island--cs-b">
    *     cs-b Island
    *   </div>
    */
-.island--cs-b {
+.o-island--cs-b {
   background: #35478C;
   color: #fff; }
 
@@ -1315,11 +1315,11 @@ html {
    * @level 5.4.3.3.
    *
    * @markup
-   *   <div class="island island--cs-c">
+   *   <div class="o-island o-island--cs-c">
    *     cs-c Island
    *   </div>
    */
-.island--cs-c {
+.o-island--cs-c {
   background: #4E7AC7;
   color: #fff; }
 
@@ -1328,11 +1328,11 @@ html {
    * @level 5.4.3.4.
    *
    * @markup
-   *   <div class="island island--cs-d">
+   *   <div class="o-island o-island--cs-d">
    *     cs-d Island
    *   </div>
    */
-.island--cs-d {
+.o-island--cs-d {
   background: #7FB2F0;
   color: #fff; }
 
@@ -1341,11 +1341,11 @@ html {
    * @level 5.4.3.5.
    *
    * @markup
-   *   <div class="island island--cs-e">
+   *   <div class="o-island o-island--cs-e">
    *     cs-e Island
    *   </div>
    */
-.island--cs-e {
+.o-island--cs-e {
   background: #ADD5F7;
   color: #fff; }
 
@@ -1361,57 +1361,57 @@ html {
  *   [Nicole Sullivan - The media object saves hundreds of lines of code](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code)
  *
  * @markup
- *   <div class="media">
- *     <div class="media__img">
+ *   <div class="o-media">
+ *     <div class="o-media__img">
  *       <img src="http://placehold.it/70x70" alt="">
  *     </div>
- *     <div class="media__body">
+ *     <div class="o-media__body">
  *       Lorem ipsum dolor sit...
  *     </div>
  *   </div>
- *   <div class="media">
- *     <div class="media__img--rev">
+ *   <div class="o-media">
+ *     <div class="o-media__img--rev">
  *       <img src="http://placehold.it/70x70" alt="">
  *     </div>
- *     <div class="media__body">
+ *     <div class="o-media__body">
  *       Lorem ipsum dolor sit...
  *     </div>
  *   </div>
  */
-.media {
+.o-media {
   *zoom: 1; }
-  .media:before, .media:after {
+  .o-media:before, .o-media:after {
     display: table;
     content: ' '; }
-  .media:after {
+  .o-media:after {
     clear: both; }
 
 /**
  * Reset media styling on small screens
  */
 @media (max-width: 44.9375em) {
-  .media--mobile-reset .media__img {
+  .o-media--mobile-reset .o-media__img {
     float: none;
     margin-right: 0; }
-  .media--mobile-reset .media__img--rev {
+  .o-media--mobile-reset .o-media__img--rev {
     float: none;
     margin-left: 0; } }
 
-.media__img {
+.o-media__img {
   float: left;
   margin-right: 1.5em; }
 
 /**
  * Reversed image location (right instead of left).
  */
-.media__img--rev {
+.o-media__img--rev {
   float: right;
   margin-left: 1.5em; }
 
-.media__img img, .media__img--rev img {
+.o-media__img img, .o-media__img--rev img {
   display: block; }
 
-.media__body {
+.o-media__body {
   overflow: hidden; }
 
 

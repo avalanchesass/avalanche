@@ -2,11 +2,11 @@
  * @name List reset
  * @level 4.2.
  */
-@mixin list-reset() {
+@mixin u-list-reset() {
   padding-left: 0;
   list-style-type: none;
 }
 
-.list-reset {
-  @include list-reset();
+.u-list-reset {
+  @include u-list-reset();
 }

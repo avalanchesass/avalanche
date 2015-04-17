@@ -10,44 +10,44 @@
  *   [Nicole Sullivan - The media object saves hundreds of lines of code](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code)
  *
  * @markup
- *   <div class="media">
- *     <div class="media__img">
+ *   <div class="o-media">
+ *     <div class="o-media__img">
  *       <img src="http://placehold.it/70x70" alt="">
  *     </div>
- *     <div class="media__body">
+ *     <div class="o-media__body">
  *       Lorem ipsum dolor sit...
  *     </div>
  *   </div>
- *   <div class="media">
- *     <div class="media__img--rev">
+ *   <div class="o-media">
+ *     <div class="o-media__img--rev">
  *       <img src="http://placehold.it/70x70" alt="">
  *     </div>
- *     <div class="media__body">
+ *     <div class="o-media__body">
  *       Lorem ipsum dolor sit...
  *     </div>
  *   </div>
  */
-.media {
-  @include clearfix();
+.o-media {
+  @include u-clearfix();
 }
 
 /**
  * Reset media styling on small screens
  */
 @media (max-width: $breakpoint-max-m) {
-  .media--mobile-reset {
-    .media__img {
+  .o-media--mobile-reset {
+    .o-media__img {
       float: none;
       margin-right: 0;
     }
-    .media__img--rev {
+    .o-media__img--rev {
       float: none;
       margin-left: 0;
     }
   }
 }
 
-.media__img {
+.o-media__img {
   float: left;
   margin-right: $spacing-m;
 }
@@ -55,18 +55,18 @@
 /**
  * Reversed image location (right instead of left).
  */
-.media__img--rev {
+.o-media__img--rev {
   float: right;
   margin-left: $spacing-m;
 }
 
-.media__img,
-.media__img--rev {
+.o-media__img,
+.o-media__img--rev {
   img {
     display: block;
   }
 }
 
-.media__body {
+.o-media__body {
   overflow: hidden;
 }

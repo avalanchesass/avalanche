@@ -28,11 +28,11 @@ $cmp-island-cs-e: true;
  *   [Harry Roberts - The 'island' object](http://csswizardry.com/2011/10/the-island-object/)
  *
  * @markup
- *   <div class="island">
+ *   <div class="o-island">
  *     Island
  *   </div>
  */
-.island {
+.o-island {
   display: block;
   padding: $spacing-m;
   background: $cs-grey-a;
@@ -55,11 +55,11 @@ $cmp-island-cs-e: true;
    *   Positive actions; e.g. sign in, purchase, submit, etc.
    *
    * @markup
-   *   <div class="island island--positive">
+   *   <div class="o-island o-island--positive">
    *     Positive Island
    *   </div>
    */
-  .island--positive {
+  .o-island--positive {
     background: mix($cs-positive, #fff, 20%);
     color: $cs-positive;
   }
@@ -71,11 +71,11 @@ $cmp-island-cs-e: true;
    * @level 5.4.2.2.
    *
    * @markup
-   *   <div class="island island--neutral">
+   *   <div class="o-island o-island--neutral">
    *     Neutral Island
    *   </div>
    */
-  .island--neutral {
+  .o-island--neutral {
     background: mix($cs-neutral, #fff, 20%);
     color: $cs-neutral;
   }
@@ -87,11 +87,11 @@ $cmp-island-cs-e: true;
    * @level 5.4.2.3.
    *
    * @markup
-   *   <div class="island island--cautious">
+   *   <div class="o-island o-island--cautious">
    *     Cautious Island
    *   </div>
    */
-  .island--cautious {
+  .o-island--cautious {
     background: mix($cs-cautious, #fff, 20%);
     color: $cs-cautious;
   }
@@ -105,11 +105,11 @@ $cmp-island-cs-e: true;
    *   Negative actions; e.g. close account, delete photo, remove friend, etc.
    *
    * @markup
-   *   <div class="island island--negative">
+   *   <div class="o-island o-island--negative">
    *     Negative Island
    *   </div>
    */
-  .island--negative {
+  .o-island--negative {
     background: mix($cs-negative, #fff, 20%);
     color: $cs-negative;
   }
@@ -127,11 +127,11 @@ $cmp-island-cs-e: true;
    * @level 5.4.3.1.
    *
    * @markup
-   *   <div class="island island--cs-a">
+   *   <div class="o-island o-island--cs-a">
    *     cs-a Island
    *   </div>
    */
-  .island--cs-a {
+  .o-island--cs-a {
     background: $cs-a;
     color: $cs-a-contrast;
   }
@@ -143,11 +143,11 @@ $cmp-island-cs-e: true;
    * @level 5.4.3.2.
    *
    * @markup
-   *   <div class="island island--cs-b">
+   *   <div class="o-island o-island--cs-b">
    *     cs-b Island
    *   </div>
    */
-  .island--cs-b {
+  .o-island--cs-b {
     background: $cs-b;
     color: $cs-b-contrast;
   }
@@ -159,11 +159,11 @@ $cmp-island-cs-e: true;
    * @level 5.4.3.3.
    *
    * @markup
-   *   <div class="island island--cs-c">
+   *   <div class="o-island o-island--cs-c">
    *     cs-c Island
    *   </div>
    */
-  .island--cs-c {
+  .o-island--cs-c {
     background: $cs-c;
     color: $cs-c-contrast;
   }
@@ -175,11 +175,11 @@ $cmp-island-cs-e: true;
    * @level 5.4.3.4.
    *
    * @markup
-   *   <div class="island island--cs-d">
+   *   <div class="o-island o-island--cs-d">
    *     cs-d Island
    *   </div>
    */
-  .island--cs-d {
+  .o-island--cs-d {
     background: $cs-d;
     color: $cs-d-contrast;
   }
@@ -191,11 +191,11 @@ $cmp-island-cs-e: true;
    * @level 5.4.3.5.
    *
    * @markup
-   *   <div class="island island--cs-e">
+   *   <div class="o-island o-island--cs-e">
    *     cs-e Island
    *   </div>
    */
-  .island--cs-e {
+  .o-island--cs-e {
     background: $cs-e;
     color: $cs-e-contrast;
   }

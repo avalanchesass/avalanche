@@ -4,7 +4,7 @@
  * @description
  *   Contain floats
  */
-@mixin clearfix() {
+@mixin u-clearfix() {
   *zoom: 1;
   &:before,
   &:after {
@@ -16,6 +16,6 @@
   }
 }
 
-.clearfix {
-  @include clearfix();
+.u-clearfix {
+  @include u-clearfix();
 }

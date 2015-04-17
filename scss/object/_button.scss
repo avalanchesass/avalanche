@@ -30,10 +30,10 @@ $cmp-button-function-disabled: true;
  * @name Base
  * @level 5.2.1.
  * @markup
- *   <a href="#" class="button">Button</a>
- *   <button class="button">Button</button>
+ *   <a href="#" class="o-button">Button</a>
+ *   <button class="o-button">Button</button>
  */
-.button {
+.o-button {
   display: inline-block;
   margin: 0;
   padding: $spacing-xs $spacing-s;
@@ -71,9 +71,9 @@ $cmp-button-function-disabled: true;
    * @name Small
    * @level 5.2.2.1.
    * @markup
-   *   <a href="#" class="button button--s">Button</a>
+   *   <a href="#" class="o-button o-button--s">Button</a>
    */
-  .button--s {
+  .o-button--s {
     padding: 0 $spacing-xs;
   }
 }
@@ -83,9 +83,9 @@ $cmp-button-function-disabled: true;
    * @name Large
    * @level 5.2.2.2.
    * @markup
-   *   <a href="#" class="button button--l">Button</a>
+   *   <a href="#" class="o-button o-button--l">Button</a>
    */
-  .button--l {
+  .o-button--l {
     padding: $spacing-s $spacing-m;
   }
 }
@@ -95,9 +95,9 @@ $cmp-button-function-disabled: true;
    * @name X-Large
    * @level 5.2.2.3.
    * @markup
-   *   <a href="#" class="button button--xl">Button</a>
+   *   <a href="#" class="o-button o-button--xl">Button</a>
    */
-  .button--xl {
+  .o-button--xl {
     padding: $spacing-m $spacing-l;
   }
 }
@@ -107,9 +107,9 @@ $cmp-button-function-disabled: true;
    * @name Full
    * @level 5.2.2.4.
    * @markup
-   *   <a href="#" class="button button--full">Button</a>
+   *   <a href="#" class="o-button o-button--full">Button</a>
    */
-  .button--full {
+  .o-button--full {
     width: 100%;
     text-align: center;
   }
@@ -126,9 +126,9 @@ $cmp-button-function-disabled: true;
    * @name Small
    * @level 5.2.3.1.
    * @markup
-   *   <a href="#" class="button button--font--s">Button</a>
+   *   <a href="#" class="o-button o-button--font--s">Button</a>
    */
-  .button--font--s {
+  .o-button--font--s {
     font-size: $font-size-s;
   }
 }
@@ -138,9 +138,9 @@ $cmp-button-function-disabled: true;
    * @name Large
    * @level 5.2.3.2.
    * @markup
-   *   <a href="#" class="button button--font--l">Button</a>
+   *   <a href="#" class="o-button o-button--font--l">Button</a>
    */
-  .button--font--l {
+  .o-button--font--l {
     font-size: $font-size-l;
   }
 }
@@ -150,9 +150,9 @@ $cmp-button-function-disabled: true;
    * @name X-Large
    * @level 5.2.3.3.
    * @markup
-   *   <a href="#" class="button button--font--xl">Button</a>
+   *   <a href="#" class="o-button o-button--font--xl">Button</a>
    */
-  .button--font--xl {
+  .o-button--font--xl {
     font-size: $font-size-xl;
   }
 }
@@ -168,9 +168,9 @@ $cmp-button-function-disabled: true;
    * @name Positive
    * @level 5.2.4.1.
    * @markup
-   *   <a href="#" class="button button--positive">Button</a>
+   *   <a href="#" class="o-button o-button--positive">Button</a>
    */
-  .button--positive {
+  .o-button--positive {
     background: $cs-positive;
     color: #fff;
     &:hover,
@@ -186,9 +186,9 @@ $cmp-button-function-disabled: true;
    * @name Neutral
    * @level 5.2.4.2.
    * @markup
-   *   <a href="#" class="button button--neutral">Button</a>
+   *   <a href="#" class="o-button o-button--neutral">Button</a>
    */
-  .button--neutral {
+  .o-button--neutral {
     background: $cs-neutral;
     color: #fff;
     &:hover,
@@ -204,9 +204,9 @@ $cmp-button-function-disabled: true;
    * @name Cautious
    * @level 5.2.4.3.
    * @markup
-   *   <a href="#" class="button button--cautious">Button</a>
+   *   <a href="#" class="o-button o-button--cautious">Button</a>
    */
-  .button--cautious {
+  .o-button--cautious {
     background: $cs-cautious;
     color: #fff;
     &:hover,
@@ -222,9 +222,9 @@ $cmp-button-function-disabled: true;
    * @name Negative
    * @level 5.2.4.4.
    * @markup
-   *   <a href="#" class="button button--negative">Button</a>
+   *   <a href="#" class="o-button o-button--negative">Button</a>
    */
-  .button--negative {
+  .o-button--negative {
     background: $cs-negative;
     color: #fff;
     &:hover,
@@ -240,11 +240,11 @@ $cmp-button-function-disabled: true;
    * @name Inactive / disabled
    * @level 5.2.4.5.
    * @markup
-   *   <a href="#" class="button button--inactive">Button</a>
-   *   <a href="#" class="button button--disabled">Button</a>
+   *   <a href="#" class="o-button o-button--inactive">Button</a>
+   *   <a href="#" class="o-button o-button--disabled">Button</a>
    */
-  .button--inactive,
-  .button--disabled {
+  .o-button--inactive,
+  .o-button--disabled {
     &,
     &:hover,
     &:focus,
@@ -253,7 +253,7 @@ $cmp-button-function-disabled: true;
       color: $cs-grey-c;
     }
   }
-  .button--disabled {
+  .o-button--disabled {
     &,
     &:hover,
     &:focus,
