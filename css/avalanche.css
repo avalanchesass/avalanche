@@ -1362,7 +1362,7 @@ html {
  *
  * @markup
  *   <div class="o-media">
- *     <div class="o-media__img">
+ *     <div class="o-media__figure">
  *       <img src="http://placehold.it/70x70" alt="">
  *     </div>
  *     <div class="o-media__body">
@@ -1370,7 +1370,7 @@ html {
  *     </div>
  *   </div>
  *   <div class="o-media">
- *     <div class="o-media__img-rev">
+ *     <div class="o-media__figure-rev">
  *       <img src="http://placehold.it/70x70" alt="">
  *     </div>
  *     <div class="o-media__body">
@@ -1386,33 +1386,33 @@ html {
   .o-media:after {
     clear: both; }
 
-/**
- * Reset media styling on small screens
- */
-@media (max-width: 44.9375em) {
-  .o-media--mobile-reset .o-media__img {
-    float: none;
-    margin-right: 0; }
-  .o-media--mobile-reset .o-media__img-rev {
-    float: none;
-    margin-left: 0; } }
+.o-media__figure img, .o-media__figure-rev img {
+  display: block; }
 
-.o-media__img {
+.o-media__figure {
   float: left;
   margin-right: 1.5em; }
+
+.o-media__body {
+  overflow: hidden; }
 
 /**
  * Reversed image location (right instead of left).
  */
-.o-media__img-rev {
+.o-media__figure-rev {
   float: right;
   margin-left: 1.5em; }
 
-.o-media__img img, .o-media__img-rev img {
-  display: block; }
-
-.o-media__body {
-  overflow: hidden; }
+/**
+ * Reset media styling on small screens
+ */
+@media (max-width: 44.9375em) {
+  .o-media--mobile-reset .o-media__figure {
+    float: none;
+    margin-right: 0; }
+  .o-media--mobile-reset .o-media__figure-rev {
+    float: none;
+    margin-left: 0; } }
 
 
 /*# sourceMappingURL=avalanche.css.map */

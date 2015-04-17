@@ -11,7 +11,7 @@
  *
  * @markup
  *   <div class="o-media">
- *     <div class="o-media__img">
+ *     <div class="o-media__figure">
  *       <img src="http://placehold.it/70x70" alt="">
  *     </div>
  *     <div class="o-media__body">
@@ -19,7 +19,7 @@
  *     </div>
  *   </div>
  *   <div class="o-media">
- *     <div class="o-media__img-rev">
+ *     <div class="o-media__figure-rev">
  *       <img src="http://placehold.it/70x70" alt="">
  *     </div>
  *     <div class="o-media__body">
@@ -31,42 +31,42 @@
   @include u-clearfix();
 }
 
-/**
- * Reset media styling on small screens
- */
-@media (max-width: $breakpoint-max-m) {
-  .o-media--mobile-reset {
-    .o-media__img {
-      float: none;
-      margin-right: 0;
-    }
-    .o-media__img-rev {
-      float: none;
-      margin-left: 0;
-    }
-  }
-}
-
-.o-media__img {
-  float: left;
-  margin-right: $spacing-m;
-}
-
-/**
- * Reversed image location (right instead of left).
- */
-.o-media__img-rev {
-  float: right;
-  margin-left: $spacing-m;
-}
-
-.o-media__img,
-.o-media__img-rev {
+.o-media__figure,
+.o-media__figure-rev {
   img {
     display: block;
   }
 }
 
+.o-media__figure {
+  float: left;
+  margin-right: $spacing-m;
+}
+
 .o-media__body {
   overflow: hidden;
+}
+
+/**
+ * Reversed image location (right instead of left).
+ */
+.o-media__figure-rev {
+  float: right;
+  margin-left: $spacing-m;
+}
+
+/**
+ * Reset media styling on small screens
+ */
+@media (max-width: $breakpoint-max-m) {
+  .o-media--mobile-reset {
+    .o-media__figure {
+      float: none;
+      margin-right: 0;
+    }
+    .o-media__figure-rev {
+      float: none;
+      margin-left: 0;
+    }
+  }
 }
