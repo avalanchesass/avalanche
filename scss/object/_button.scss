@@ -6,30 +6,30 @@
  * Variables
  */
 // Sizes
-$cmp-button-size-s:    true;
-$cmp-button-size-l:    true;
-$cmp-button-size-xl:   true;
-$cmp-button-size-full: true;
+$o-button-size-s:    true;
+$o-button-size-l:    true;
+$o-button-size-xl:   true;
+$o-button-size-full: true;
 
 // Font sizes
-$cmp-button-font-size-s:  true;
-$cmp-button-font-size-l:  true;
-$cmp-button-font-size-xl: true;
+$o-button-font-size-s:  true;
+$o-button-font-size-l:  true;
+$o-button-font-size-xl: true;
 
 // Functions
-$cmp-button-function-positive: true;
-$cmp-button-function-neutral:  true;
-$cmp-button-function-cautious: true;
-$cmp-button-function-negative: true;
-$cmp-button-function-inactive: true;
-$cmp-button-function-disabled: true;
+$o-button-function-positive: true;
+$o-button-function-neutral:  true;
+$o-button-function-cautious: true;
+$o-button-function-negative: true;
+$o-button-function-inactive: true;
+$o-button-function-disabled: true;
 
 // Color scheme
-$cmp-button-cs-a: true;
-$cmp-button-cs-b: true;
-$cmp-button-cs-c: true;
-$cmp-button-cs-d: true;
-$cmp-button-cs-e: true;
+$o-button-cs-a: true;
+$o-button-cs-b: true;
+$o-button-cs-c: true;
+$o-button-cs-d: true;
+$o-button-cs-e: true;
 
 
 
@@ -73,7 +73,7 @@ $cmp-button-cs-e: true;
  * @name Sizes
  * @level 5.2.2.
  */
-@if $cmp-button-size-s {
+@if $o-button-size-s {
   /**
    * @name Small
    * @level 5.2.2.1.
@@ -85,7 +85,7 @@ $cmp-button-cs-e: true;
   }
 }
 
-@if $cmp-button-size-l {
+@if $o-button-size-l {
   /**
    * @name Large
    * @level 5.2.2.2.
@@ -97,7 +97,7 @@ $cmp-button-cs-e: true;
   }
 }
 
-@if $cmp-button-size-xl {
+@if $o-button-size-xl {
   /**
    * @name X-Large
    * @level 5.2.2.3.
@@ -109,7 +109,7 @@ $cmp-button-cs-e: true;
   }
 }
 
-@if $cmp-button-size-full {
+@if $o-button-size-full {
   /**
    * @name Full
    * @level 5.2.2.4.
@@ -128,7 +128,7 @@ $cmp-button-cs-e: true;
  * @name Font sizes
  * @level 5.2.3.
  */
-@if $cmp-button-font-size-s {
+@if $o-button-font-size-s {
   /**
    * @name Small
    * @level 5.2.3.1.
@@ -140,7 +140,7 @@ $cmp-button-cs-e: true;
   }
 }
 
-@if $cmp-button-font-size-l {
+@if $o-button-font-size-l {
   /**
    * @name Large
    * @level 5.2.3.2.
@@ -152,7 +152,7 @@ $cmp-button-cs-e: true;
   }
 }
 
-@if $cmp-button-font-size-xl {
+@if $o-button-font-size-xl {
   /**
    * @name X-Large
    * @level 5.2.3.3.
@@ -170,7 +170,7 @@ $cmp-button-cs-e: true;
  * @name Functions
  * @level 5.2.4.
  */
-@if $cmp-button-function-positive {
+@if $o-button-function-positive {
   /**
    * @name Positive
    * @level 5.2.4.1.
@@ -188,7 +188,7 @@ $cmp-button-cs-e: true;
   }
 }
 
-@if $cmp-button-function-neutral {
+@if $o-button-function-neutral {
   /**
    * @name Neutral
    * @level 5.2.4.2.
@@ -206,7 +206,7 @@ $cmp-button-cs-e: true;
   }
 }
 
-@if $cmp-button-function-cautious {
+@if $o-button-function-cautious {
   /**
    * @name Cautious
    * @level 5.2.4.3.
@@ -224,7 +224,7 @@ $cmp-button-cs-e: true;
   }
 }
 
-@if $cmp-button-function-negative {
+@if $o-button-function-negative {
   /**
    * @name Negative
    * @level 5.2.4.4.
@@ -242,7 +242,7 @@ $cmp-button-cs-e: true;
   }
 }
 
-@if $cmp-button-function-inactive or $cmp-button-function-disabled {
+@if $o-button-function-inactive or $o-button-function-disabled {
   /**
    * @name Inactive / disabled
    * @level 5.2.4.5.
@@ -276,7 +276,7 @@ $cmp-button-cs-e: true;
  * @name Color scheme
  * @level 5.2.5.
  */
-@if $cmp-button-cs-a {
+@if $o-button-cs-a {
   /**
    * @name cs-a
    * @level 5.2.5.1.
@@ -294,7 +294,7 @@ $cmp-button-cs-e: true;
   }
 }
 
-@if $cmp-button-cs-b {
+@if $o-button-cs-b {
   /**
    * @name cs-b
    * @level 5.2.5.2.
@@ -312,7 +312,7 @@ $cmp-button-cs-e: true;
   }
 }
 
-@if $cmp-button-cs-c {
+@if $o-button-cs-c {
   /**
    * @name cs-c
    * @level 5.2.5.3.
@@ -330,7 +330,7 @@ $cmp-button-cs-e: true;
   }
 }
 
-@if $cmp-button-cs-d {
+@if $o-button-cs-d {
   /**
    * @name cs-d
    * @level 5.2.5.4.
@@ -348,7 +348,7 @@ $cmp-button-cs-e: true;
   }
 }
 
-@if $cmp-button-cs-e {
+@if $o-button-cs-e {
   /**
    * @name cs-e
    * @level 5.2.5.5.

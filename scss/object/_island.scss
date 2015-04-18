@@ -6,17 +6,17 @@
  * Variables
  */
 // Functions
-$cmp-island-function-positive: true;
-$cmp-island-function-neutral:  true;
-$cmp-island-function-cautious: true;
-$cmp-island-function-negative: true;
+$o-island-function-positive: true;
+$o-island-function-neutral:  true;
+$o-island-function-cautious: true;
+$o-island-function-negative: true;
 
 // Color scheme
-$cmp-island-cs-a: true;
-$cmp-island-cs-b: true;
-$cmp-island-cs-c: true;
-$cmp-island-cs-d: true;
-$cmp-island-cs-e: true;
+$o-island-cs-a: true;
+$o-island-cs-b: true;
+$o-island-cs-c: true;
+$o-island-cs-d: true;
+$o-island-cs-e: true;
 
 
 
@@ -47,7 +47,7 @@ $cmp-island-cs-e: true;
  * @name Functions
  * @level 5.4.2.
  */
-@if $cmp-island-function-positive {
+@if $o-island-function-positive {
   /**
    * @name Positive
    * @level 5.4.2.1.
@@ -65,7 +65,7 @@ $cmp-island-cs-e: true;
   }
 }
 
-@if $cmp-island-function-neutral {
+@if $o-island-function-neutral {
   /**
    * @name Neutral
    * @level 5.4.2.2.
@@ -81,7 +81,7 @@ $cmp-island-cs-e: true;
   }
 }
 
-@if $cmp-island-function-cautious {
+@if $o-island-function-cautious {
   /**
    * @name Cautious
    * @level 5.4.2.3.
@@ -97,7 +97,7 @@ $cmp-island-cs-e: true;
   }
 }
 
-@if $cmp-island-function-negative {
+@if $o-island-function-negative {
   /**
    * @name Negative
    * @level 5.4.2.4.
@@ -121,7 +121,7 @@ $cmp-island-cs-e: true;
  * @name Color scheme
  * @level 5.4.3.
  */
-@if $cmp-island-cs-a {
+@if $o-island-cs-a {
   /**
    * @name cs-a
    * @level 5.4.3.1.
@@ -137,7 +137,7 @@ $cmp-island-cs-e: true;
   }
 }
 
-@if $cmp-island-cs-b {
+@if $o-island-cs-b {
   /**
    * @name cs-b
    * @level 5.4.3.2.
@@ -153,7 +153,7 @@ $cmp-island-cs-e: true;
   }
 }
 
-@if $cmp-island-cs-c {
+@if $o-island-cs-c {
   /**
    * @name cs-c
    * @level 5.4.3.3.
@@ -169,7 +169,7 @@ $cmp-island-cs-e: true;
   }
 }
 
-@if $cmp-island-cs-d {
+@if $o-island-cs-d {
   /**
    * @name cs-d
    * @level 5.4.3.4.
@@ -185,7 +185,7 @@ $cmp-island-cs-e: true;
   }
 }
 
-@if $cmp-island-cs-e {
+@if $o-island-cs-e {
   /**
    * @name cs-e
    * @level 5.4.3.5.

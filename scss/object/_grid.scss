@@ -5,19 +5,19 @@
 /**
  * Variables
  */
-$cmp-grid-item-count: 12;
+$o-grid-item-count: 12;
 
 // Sizes
-$cmp-grid-size-s:  true;
-$cmp-grid-size-m:  true;
-$cmp-grid-size-l:  true;
-$cmp-grid-size-xl: true;
+$o-grid-size-s:  true;
+$o-grid-size-m:  true;
+$o-grid-size-l:  true;
+$o-grid-size-xl: true;
 
 // Spacing between items
-$cmp-grid-spacing-s:  $spacing-s;
-$cmp-grid-spacing-m:  $spacing-m;
-$cmp-grid-spacing-l:  $spacing-m;
-$cmp-grid-spacing-xl: $spacing-m;
+$o-grid-spacing-s:  $spacing-s;
+$o-grid-spacing-m:  $spacing-m;
+$o-grid-spacing-l:  $spacing-m;
+$o-grid-spacing-xl: $spacing-m;
 
 
 
@@ -33,31 +33,31 @@ $cmp-grid-spacing-xl: $spacing-m;
  *     <div class="o-grid__item--6">Grid Item</div>
  *   </div>
  */
-$cmp-grid-base-size: (100% / $cmp-grid-item-count);
+$o-grid-base-size: (100% / $o-grid-item-count);
 
 .o-grid {
   @include u-clearfix();
-  margin-left: -$cmp-grid-spacing-s;
+  margin-left: -$o-grid-spacing-s;
 }
 
 [class*='o-grid__item'] {
   float: left;
-  padding-left: $cmp-grid-spacing-s;
+  padding-left: $o-grid-spacing-s;
   width: 100%;
   @if $layout-box-sizing-reset == false {
     box-sizing: border-box;
   }
 }
 
-@for $i from 1 through $cmp-grid-item-count {
+@for $i from 1 through $o-grid-item-count {
   .o-grid__item--#{$i} {
-    width: ($cmp-grid-base-size * $i);
+    width: ($o-grid-base-size * $i);
   }
 }
 
 
 
-@if $cmp-grid-size-s {
+@if $o-grid-size-s {
   /**
    * @name Small
    * @level 5.1.2.
@@ -71,9 +71,9 @@ $cmp-grid-base-size: (100% / $cmp-grid-item-count);
    *   </div>
    */
   @media (min-width: $breakpoint-s) {
-    @for $i from 1 through $cmp-grid-item-count {
+    @for $i from 1 through $o-grid-item-count {
       .o-grid__item--s--#{$i} {
-        width: ($cmp-grid-base-size * $i);
+        width: ($o-grid-base-size * $i);
       }
     }
   }
@@ -81,7 +81,7 @@ $cmp-grid-base-size: (100% / $cmp-grid-item-count);
 
 
 
-@if $cmp-grid-size-m {
+@if $o-grid-size-m {
   /**
    * @name Medium
    * @level 5.1.3.
@@ -98,16 +98,16 @@ $cmp-grid-base-size: (100% / $cmp-grid-item-count);
    */
   @media (min-width: $breakpoint-m) {
     .o-grid {
-      margin-left: -$cmp-grid-spacing-m;
+      margin-left: -$o-grid-spacing-m;
     }
 
     [class*='o-grid__item'] {
-      padding-left: $cmp-grid-spacing-m;
+      padding-left: $o-grid-spacing-m;
     }
 
-    @for $i from 1 through $cmp-grid-item-count {
+    @for $i from 1 through $o-grid-item-count {
       .o-grid__item--m--#{$i} {
-        width: ($cmp-grid-base-size * $i);
+        width: ($o-grid-base-size * $i);
       }
     }
   }
@@ -115,7 +115,7 @@ $cmp-grid-base-size: (100% / $cmp-grid-item-count);
 
 
 
-@if $cmp-grid-size-l {
+@if $o-grid-size-l {
   /**
    * @name Large
    * @level 5.1.4.
@@ -132,16 +132,16 @@ $cmp-grid-base-size: (100% / $cmp-grid-item-count);
    */
   @media (min-width: $breakpoint-l) {
     .o-grid {
-      margin-left: -$cmp-grid-spacing-l;
+      margin-left: -$o-grid-spacing-l;
     }
 
     [class*='o-grid__item'] {
-      padding-left: $cmp-grid-spacing-l;
+      padding-left: $o-grid-spacing-l;
     }
 
-    @for $i from 1 through $cmp-grid-item-count {
+    @for $i from 1 through $o-grid-item-count {
       .o-grid__item--l--#{$i} {
-        width: ($cmp-grid-base-size * $i);
+        width: ($o-grid-base-size * $i);
       }
     }
   }
@@ -149,7 +149,7 @@ $cmp-grid-base-size: (100% / $cmp-grid-item-count);
 
 
 
-@if $cmp-grid-size-xl {
+@if $o-grid-size-xl {
   /**
    * @name X-Large
    * @level 5.1.5.
@@ -166,16 +166,16 @@ $cmp-grid-base-size: (100% / $cmp-grid-item-count);
    */
   @media (min-width: $breakpoint-xl) {
     .o-grid {
-      margin-left: -$cmp-grid-spacing-xl;
+      margin-left: -$o-grid-spacing-xl;
     }
 
     [class*='o-grid__item'] {
-      padding-left: $cmp-grid-spacing-xl;
+      padding-left: $o-grid-spacing-xl;
     }
 
-    @for $i from 1 through $cmp-grid-item-count {
+    @for $i from 1 through $o-grid-item-count {
       .o-grid__item--xl--#{$i} {
-        width: ($cmp-grid-base-size * $i);
+        width: ($o-grid-base-size * $i);
       }
     }
   }
