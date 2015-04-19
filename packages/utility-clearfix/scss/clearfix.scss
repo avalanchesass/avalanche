@@ -1,11 +1,5 @@
 /**
- * @name Clearfix
- * @level 4.1.
- * @description
- *   Contain floats
- */
-/**
- * Includes
+ * Dependencies
  */
 // System
 @import 'system/function';
@@ -13,18 +7,29 @@
 
 
 
-@mixin u-clearfix() {
-  *zoom: 1;
-  &:before,
-  &:after {
-    display: table;
-    content: ' ';
-  }
-  &:after {
-    clear: both;
-  }
-}
+@if variable-exists(u-clearfix-imported) == false {
+  /**
+   * @name Clearfix
+   * @level 4.1.
+   * @description
+   *   Contain floats
+   */
 
-.u-clearfix {
-  @include u-clearfix();
+  @mixin u-clearfix() {
+    *zoom: 1;
+    &:before,
+    &:after {
+      display: table;
+      content: ' ';
+    }
+    &:after {
+      clear: both;
+    }
+  }
+
+  .u-clearfix {
+    @include u-clearfix();
+  }
+
+  $u-clearfix-imported: true;
 }
