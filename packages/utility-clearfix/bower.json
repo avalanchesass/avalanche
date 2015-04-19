@@ -21,6 +21,6 @@
     "tests"
   ],
   "devDependencies": {
-    "avalanche": "dev"
+    "avalanche": "bowerpackaging"
   }
 }
