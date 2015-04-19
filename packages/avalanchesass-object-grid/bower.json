@@ -21,9 +21,9 @@
     "tests"
   ],
   "dependencies": {
-    "avalanche_utility_clearfix": "~2.0"
+    "avalanche_utility_clearfix": "dev"
   },
   "devDependencies": {
-    "avalanche": "~2.0"
+    "avalanche": "bowerpackaging"
   }
 }
