@@ -20,6 +20,7 @@
     "tests"
   ],
   "dependencies": {
+    "avalanche_object_grid": "dev",
     "normalize.css": "~3.0.3"
   }
 }

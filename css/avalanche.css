@@ -483,11 +483,194 @@ small {
  * @level 4.
  */
 /**
- * @name Clearfix
- * @level 4.1.
- * @description
- *   Contain floats
+ * Dependencies
  */
+/**
+ * @name Function
+ * @level 2.2.
+ */
+/**
+ * @name strip-units
+ * @level 2.2.1.
+ * @description
+ *   avalanche-strip-units($number)
+ */
+/**
+ * @name px2em
+ * @level 2.2.2.
+ * @description
+ *   Convert a px value to em  
+ *   based on $font-base-size  
+ *   avalanche-px2em($px, $base: $font-base-size)
+ */
+/**
+ * @name em2px
+ * @level 2.2.3.
+ * @description
+ *   Convert a em value to px  
+ *   based on $font-base-size  
+ *   avalanche-em2px($em, $base: $font-base-size)
+ */
+/**
+ * @name em2rem
+ * @level 2.2.4.
+ * @description
+ *   Convert a em value to rem  
+ *   avalanche-em2rem($em)
+ */
+/**
+ * @name breakpointmax
+ * @level 2.2.5.
+ * @description
+ *   Get the max-width value of a breakpoint  
+ *   avalanche-breakpointmax($breakpoint, $base: $font-base-size)
+ */
+/**
+ * @name Variable
+ * @level 2.1.
+ */
+/**
+ * @name Color Scheme
+ * @level 2.1.1.
+ * @description Fancy generator: http://coolors.co/
+ */
+/**
+ * @name Basic colors
+ * @level 2.1.1.1.
+ */
+/**
+ * @colors
+ *   $cs-a|#16193B $cs-b|#35478C $cs-c|#4E7AC7 $cs-d|#7FB2F0 $cs-e|#ADD5F7
+ *   $cs-a-contrast|#fff $cs-b-contrast|#fff $cs-c-contrast|#fff $cs-d-contrast|#fff $cs-e-contrast|#fff
+ */
+/**
+ * @name Colors for alerts
+ * @level 2.1.1.2.
+ * @description e.g. success, error, info,...
+ */
+/**
+ * @colors
+ *   $cs-positive|#468847 $cs-neutral|#3A87AD $cs-cautious|#c09853 $cs-negative|#b94a48
+ */
+/**
+ * @name Grey
+ * @level 2.1.1.3.
+ */
+/**
+ * @colors
+ *   $cs-grey-a|#efefef $cs-grey-b|#d5d5d5 $cs-grey-c|#bcbcbc
+ */
+/**
+ * @name Typography
+ * @level 2.1.2.
+ * @description
+ *   Set the font weight variables according to the font  
+ *   e.g. http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700  
+ *   In this case set the font weights to 200, 400 and 700  
+ *   If you set a font weight in your css you must use this variables!  
+ *   e.g. font-weight: $font-a-weight-normal;
+ */
+/**
+ * @name Basic configuration
+ * @level 2.1.2.1.
+ *
+ * 1. must be in px, do not use in your styles
+ */
+/* [1] */
+/* [1] */
+/**
+ * @variables
+ *   $font-base-size|16px $font-base-line-height|24px $font-base-color|#222
+ */
+/**
+ * @name Font sizes
+ * @level 2.1.2.2.
+ */
+/**
+ * @name System fonts
+ * @level 2.1.2.3.
+ */
+/**
+ * @name Font A
+ * @level 2.1.2.3.1.
+ */
+/**
+ * @font ['Helvetica Neue', sans-serif]
+ *   ABCDEFGHIJKLMNOPQRSTUVWXYZ  
+ *   abcdefghijklmnopqrstuvwxyz  
+ *   0123456789  
+ *   !&/()$=@;:,.
+ */
+/**
+ * @name Font B
+ * @level 2.1.2.3.2.
+ */
+/**
+ * @font [Futura, 'Trebuchet MS', sans-serif]
+ *   ABCDEFGHIJKLMNOPQRSTUVWXYZ  
+ *   abcdefghijklmnopqrstuvwxyz  
+ *   0123456789  
+ *   !&/()$=@;:,.
+ */
+/**
+ * @name Anchors
+ * @level 2.1.2.4.
+ * @markup
+ *   <a href="#">Anchor</a>
+ */
+/**
+ * @name Text selection
+ * @level 2.1.2.5.
+ * @description
+ *   Select some text to see it in action
+ */
+/**
+ * @name Breakpoints
+ * @level 2.1.3.
+ * @description
+ *   More infos about media queries:  
+ *   [Brad Frost - 7 Habits of highly effective media queries](http://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/)
+ */
+/**
+ * @name min Breakpoints
+ * @level 2.1.3.1.
+ */
+/**
+ * @variables
+ *   $breakpoint-s|30em $breakpoint-m|45em $breakpoint-l|60em $breakpoint-xl|75em
+ */
+/**
+ * @name max Breakpoints
+ * @level 2.1.3.2.
+ * @description
+ *   Use with care, min-width breakpoints should be preferred!
+ */
+/**
+ * @variables
+ *   $breakpoint-max-s|29.9375em $breakpoint-max-m|44.9375em $breakpoint-max-l|59.9375em $breakpoint-max-xl|74.9375em
+ */
+/**
+ * @name Spacing
+ * @level 2.1.4.
+ */
+/**
+ * @variables
+ *   $spacing-xs|0.5em $spacing-s|1em $spacing-m|1.5em $spacing-l|2em $spacing-xl|3em $spacing-xxl|4em $spacing-xxxl|5em
+ */
+/**
+ * @name Layout
+ * @level 2.1.5.
+ */
+/**
+ * @variables
+ *   $layout-max-width|62em $layout-box-sizing-reset|true
+ */
+/**
+   * @name Clearfix
+   * @level 4.1.
+   * @description
+   *   Contain floats
+   */
 .u-clearfix {
   *zoom: 1; }
   .u-clearfix:before, .u-clearfix:after {
@@ -497,89 +680,394 @@ small {
     clear: both; }
 
 /**
- * @name List reset
- * @level 4.2.
- */
-.u-list-reset {
-  padding-left: 0;
-  list-style-type: none; }
-
-/**
- * @name Spacing
- * @level 4.3.
- */
-.u-spacing-wrap > * + * {
-  margin-top: 1.5em; }
-
-/**
- * @name Visibility
- * @level 4.4.
- */
-/**
- * @name .hidden
- * @level 4.4.1.
- * @description
- *   Hide from both screenreaders and browsers: h5bp.com/u
- */
-.u-hidden {
-  display: none !important;
-  visibility: hidden; }
-
-/**
- * @name .visuallyhidden
- * @level 4.4.2.
- * @description
- *   Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-.u-visuallyhidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  margin: -1px;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  border: 0; }
-  .u-visuallyhidden.is-focusable:active, .u-visuallyhidden.is-focusable:focus {
-    position: static;
-    overflow: visible;
-    clip: auto;
-    margin: 0;
-    width: auto;
-    height: auto; }
-
-/**
- * @name .invisible
- * @level 4.4.3.
- * @description
- *   Hide visually and from screenreaders, but maintain layout
- */
-.u-invisible {
-  visibility: hidden; }
-
-/**
  * @name Object
  * @level 5.
  */
 /**
- * @name Grid
- * @level 5.1.
+ * Dependencies
  */
 /**
- * Variables
+ * @name Function
+ * @level 2.2.
  */
 /**
- * @name Base
- * @level 5.1.1.
+ * @name strip-units
+ * @level 2.2.1.
  * @description
- *   Mobile first styles for all screen sizes
- *
- * @markup
- *   <div class="o-grid">
- *     <div class="o-grid__item--6">Grid Item</div>
- *     <div class="o-grid__item--6">Grid Item</div>
- *   </div>
+ *   avalanche-strip-units($number)
  */
+/**
+ * @name px2em
+ * @level 2.2.2.
+ * @description
+ *   Convert a px value to em  
+ *   based on $font-base-size  
+ *   avalanche-px2em($px, $base: $font-base-size)
+ */
+/**
+ * @name em2px
+ * @level 2.2.3.
+ * @description
+ *   Convert a em value to px  
+ *   based on $font-base-size  
+ *   avalanche-em2px($em, $base: $font-base-size)
+ */
+/**
+ * @name em2rem
+ * @level 2.2.4.
+ * @description
+ *   Convert a em value to rem  
+ *   avalanche-em2rem($em)
+ */
+/**
+ * @name breakpointmax
+ * @level 2.2.5.
+ * @description
+ *   Get the max-width value of a breakpoint  
+ *   avalanche-breakpointmax($breakpoint, $base: $font-base-size)
+ */
+/**
+ * @name Variable
+ * @level 2.1.
+ */
+/**
+ * @name Color Scheme
+ * @level 2.1.1.
+ * @description Fancy generator: http://coolors.co/
+ */
+/**
+ * @name Basic colors
+ * @level 2.1.1.1.
+ */
+/**
+ * @colors
+ *   $cs-a|#16193B $cs-b|#35478C $cs-c|#4E7AC7 $cs-d|#7FB2F0 $cs-e|#ADD5F7
+ *   $cs-a-contrast|#fff $cs-b-contrast|#fff $cs-c-contrast|#fff $cs-d-contrast|#fff $cs-e-contrast|#fff
+ */
+/**
+ * @name Colors for alerts
+ * @level 2.1.1.2.
+ * @description e.g. success, error, info,...
+ */
+/**
+ * @colors
+ *   $cs-positive|#468847 $cs-neutral|#3A87AD $cs-cautious|#c09853 $cs-negative|#b94a48
+ */
+/**
+ * @name Grey
+ * @level 2.1.1.3.
+ */
+/**
+ * @colors
+ *   $cs-grey-a|#efefef $cs-grey-b|#d5d5d5 $cs-grey-c|#bcbcbc
+ */
+/**
+ * @name Typography
+ * @level 2.1.2.
+ * @description
+ *   Set the font weight variables according to the font  
+ *   e.g. http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700  
+ *   In this case set the font weights to 200, 400 and 700  
+ *   If you set a font weight in your css you must use this variables!  
+ *   e.g. font-weight: $font-a-weight-normal;
+ */
+/**
+ * @name Basic configuration
+ * @level 2.1.2.1.
+ *
+ * 1. must be in px, do not use in your styles
+ */
+/* [1] */
+/* [1] */
+/**
+ * @variables
+ *   $font-base-size|16px $font-base-line-height|24px $font-base-color|#222
+ */
+/**
+ * @name Font sizes
+ * @level 2.1.2.2.
+ */
+/**
+ * @name System fonts
+ * @level 2.1.2.3.
+ */
+/**
+ * @name Font A
+ * @level 2.1.2.3.1.
+ */
+/**
+ * @font ['Helvetica Neue', sans-serif]
+ *   ABCDEFGHIJKLMNOPQRSTUVWXYZ  
+ *   abcdefghijklmnopqrstuvwxyz  
+ *   0123456789  
+ *   !&/()$=@;:,.
+ */
+/**
+ * @name Font B
+ * @level 2.1.2.3.2.
+ */
+/**
+ * @font [Futura, 'Trebuchet MS', sans-serif]
+ *   ABCDEFGHIJKLMNOPQRSTUVWXYZ  
+ *   abcdefghijklmnopqrstuvwxyz  
+ *   0123456789  
+ *   !&/()$=@;:,.
+ */
+/**
+ * @name Anchors
+ * @level 2.1.2.4.
+ * @markup
+ *   <a href="#">Anchor</a>
+ */
+/**
+ * @name Text selection
+ * @level 2.1.2.5.
+ * @description
+ *   Select some text to see it in action
+ */
+/**
+ * @name Breakpoints
+ * @level 2.1.3.
+ * @description
+ *   More infos about media queries:  
+ *   [Brad Frost - 7 Habits of highly effective media queries](http://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/)
+ */
+/**
+ * @name min Breakpoints
+ * @level 2.1.3.1.
+ */
+/**
+ * @variables
+ *   $breakpoint-s|30em $breakpoint-m|45em $breakpoint-l|60em $breakpoint-xl|75em
+ */
+/**
+ * @name max Breakpoints
+ * @level 2.1.3.2.
+ * @description
+ *   Use with care, min-width breakpoints should be preferred!
+ */
+/**
+ * @variables
+ *   $breakpoint-max-s|29.9375em $breakpoint-max-m|44.9375em $breakpoint-max-l|59.9375em $breakpoint-max-xl|74.9375em
+ */
+/**
+ * @name Spacing
+ * @level 2.1.4.
+ */
+/**
+ * @variables
+ *   $spacing-xs|0.5em $spacing-s|1em $spacing-m|1.5em $spacing-l|2em $spacing-xl|3em $spacing-xxl|4em $spacing-xxxl|5em
+ */
+/**
+ * @name Layout
+ * @level 2.1.5.
+ */
+/**
+ * @variables
+ *   $layout-max-width|62em $layout-box-sizing-reset|true
+ */
+/**
+ * Dependencies
+ */
+/**
+ * @name Function
+ * @level 2.2.
+ */
+/**
+ * @name strip-units
+ * @level 2.2.1.
+ * @description
+ *   avalanche-strip-units($number)
+ */
+/**
+ * @name px2em
+ * @level 2.2.2.
+ * @description
+ *   Convert a px value to em  
+ *   based on $font-base-size  
+ *   avalanche-px2em($px, $base: $font-base-size)
+ */
+/**
+ * @name em2px
+ * @level 2.2.3.
+ * @description
+ *   Convert a em value to px  
+ *   based on $font-base-size  
+ *   avalanche-em2px($em, $base: $font-base-size)
+ */
+/**
+ * @name em2rem
+ * @level 2.2.4.
+ * @description
+ *   Convert a em value to rem  
+ *   avalanche-em2rem($em)
+ */
+/**
+ * @name breakpointmax
+ * @level 2.2.5.
+ * @description
+ *   Get the max-width value of a breakpoint  
+ *   avalanche-breakpointmax($breakpoint, $base: $font-base-size)
+ */
+/**
+ * @name Variable
+ * @level 2.1.
+ */
+/**
+ * @name Color Scheme
+ * @level 2.1.1.
+ * @description Fancy generator: http://coolors.co/
+ */
+/**
+ * @name Basic colors
+ * @level 2.1.1.1.
+ */
+/**
+ * @colors
+ *   $cs-a|#16193B $cs-b|#35478C $cs-c|#4E7AC7 $cs-d|#7FB2F0 $cs-e|#ADD5F7
+ *   $cs-a-contrast|#fff $cs-b-contrast|#fff $cs-c-contrast|#fff $cs-d-contrast|#fff $cs-e-contrast|#fff
+ */
+/**
+ * @name Colors for alerts
+ * @level 2.1.1.2.
+ * @description e.g. success, error, info,...
+ */
+/**
+ * @colors
+ *   $cs-positive|#468847 $cs-neutral|#3A87AD $cs-cautious|#c09853 $cs-negative|#b94a48
+ */
+/**
+ * @name Grey
+ * @level 2.1.1.3.
+ */
+/**
+ * @colors
+ *   $cs-grey-a|#efefef $cs-grey-b|#d5d5d5 $cs-grey-c|#bcbcbc
+ */
+/**
+ * @name Typography
+ * @level 2.1.2.
+ * @description
+ *   Set the font weight variables according to the font  
+ *   e.g. http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700  
+ *   In this case set the font weights to 200, 400 and 700  
+ *   If you set a font weight in your css you must use this variables!  
+ *   e.g. font-weight: $font-a-weight-normal;
+ */
+/**
+ * @name Basic configuration
+ * @level 2.1.2.1.
+ *
+ * 1. must be in px, do not use in your styles
+ */
+/* [1] */
+/* [1] */
+/**
+ * @variables
+ *   $font-base-size|16px $font-base-line-height|24px $font-base-color|#222
+ */
+/**
+ * @name Font sizes
+ * @level 2.1.2.2.
+ */
+/**
+ * @name System fonts
+ * @level 2.1.2.3.
+ */
+/**
+ * @name Font A
+ * @level 2.1.2.3.1.
+ */
+/**
+ * @font ['Helvetica Neue', sans-serif]
+ *   ABCDEFGHIJKLMNOPQRSTUVWXYZ  
+ *   abcdefghijklmnopqrstuvwxyz  
+ *   0123456789  
+ *   !&/()$=@;:,.
+ */
+/**
+ * @name Font B
+ * @level 2.1.2.3.2.
+ */
+/**
+ * @font [Futura, 'Trebuchet MS', sans-serif]
+ *   ABCDEFGHIJKLMNOPQRSTUVWXYZ  
+ *   abcdefghijklmnopqrstuvwxyz  
+ *   0123456789  
+ *   !&/()$=@;:,.
+ */
+/**
+ * @name Anchors
+ * @level 2.1.2.4.
+ * @markup
+ *   <a href="#">Anchor</a>
+ */
+/**
+ * @name Text selection
+ * @level 2.1.2.5.
+ * @description
+ *   Select some text to see it in action
+ */
+/**
+ * @name Breakpoints
+ * @level 2.1.3.
+ * @description
+ *   More infos about media queries:  
+ *   [Brad Frost - 7 Habits of highly effective media queries](http://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/)
+ */
+/**
+ * @name min Breakpoints
+ * @level 2.1.3.1.
+ */
+/**
+ * @variables
+ *   $breakpoint-s|30em $breakpoint-m|45em $breakpoint-l|60em $breakpoint-xl|75em
+ */
+/**
+ * @name max Breakpoints
+ * @level 2.1.3.2.
+ * @description
+ *   Use with care, min-width breakpoints should be preferred!
+ */
+/**
+ * @variables
+ *   $breakpoint-max-s|29.9375em $breakpoint-max-m|44.9375em $breakpoint-max-l|59.9375em $breakpoint-max-xl|74.9375em
+ */
+/**
+ * @name Spacing
+ * @level 2.1.4.
+ */
+/**
+ * @variables
+ *   $spacing-xs|0.5em $spacing-s|1em $spacing-m|1.5em $spacing-l|2em $spacing-xl|3em $spacing-xxl|4em $spacing-xxxl|5em
+ */
+/**
+ * @name Layout
+ * @level 2.1.5.
+ */
+/**
+ * @variables
+ *   $layout-max-width|62em $layout-box-sizing-reset|true
+ */
+/**
+   * @name Grid
+   * @level 5.1.
+   */
+/**
+   * Variables
+   */
+/**
+   * @name Base
+   * @level 5.1.1.
+   * @description
+   *   Mobile first styles for all screen sizes
+   *
+   * @markup
+   *   <div class="o-grid">
+   *     <div class="o-grid__item--6">Grid Item</div>
+   *     <div class="o-grid__item--6">Grid Item</div>
+   *   </div>
+   */
 .o-grid {
   *zoom: 1;
   margin-left: -1em; }
@@ -629,854 +1117,6 @@ small {
 
 .o-grid__item--12 {
   width: 100%; }
-
-/**
-   * @name Small
-   * @level 5.1.2.
-   * @description
-   *   Screen sizes 30em (480px) and up
-   *
-   * @markup
-   *   <div class="o-grid">
-   *     <div class="o-grid__item--12 o-grid__item--s--6">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--s--6">Grid Item</div>
-   *   </div>
-   */
-@media (min-width: 30em) {
-  .o-grid__item--s--1 {
-    width: 8.3333333%; }
-  .o-grid__item--s--2 {
-    width: 16.6666667%; }
-  .o-grid__item--s--3 {
-    width: 25%; }
-  .o-grid__item--s--4 {
-    width: 33.3333333%; }
-  .o-grid__item--s--5 {
-    width: 41.6666667%; }
-  .o-grid__item--s--6 {
-    width: 50%; }
-  .o-grid__item--s--7 {
-    width: 58.3333333%; }
-  .o-grid__item--s--8 {
-    width: 66.6666667%; }
-  .o-grid__item--s--9 {
-    width: 75%; }
-  .o-grid__item--s--10 {
-    width: 83.3333333%; }
-  .o-grid__item--s--11 {
-    width: 91.6666667%; }
-  .o-grid__item--s--12 {
-    width: 100%; } }
-
-/**
-   * @name Medium
-   * @level 5.1.3.
-   * @description
-   *   Screen sizes 45em (720px) and up
-   *
-   * @markup
-   *   <div class="o-grid">
-   *     <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
-   *   </div>
-   */
-@media (min-width: 45em) {
-  .o-grid {
-    margin-left: -1.5em; }
-  [class*='o-grid__item'] {
-    padding-left: 1.5em; }
-  .o-grid__item--m--1 {
-    width: 8.3333333%; }
-  .o-grid__item--m--2 {
-    width: 16.6666667%; }
-  .o-grid__item--m--3 {
-    width: 25%; }
-  .o-grid__item--m--4 {
-    width: 33.3333333%; }
-  .o-grid__item--m--5 {
-    width: 41.6666667%; }
-  .o-grid__item--m--6 {
-    width: 50%; }
-  .o-grid__item--m--7 {
-    width: 58.3333333%; }
-  .o-grid__item--m--8 {
-    width: 66.6666667%; }
-  .o-grid__item--m--9 {
-    width: 75%; }
-  .o-grid__item--m--10 {
-    width: 83.3333333%; }
-  .o-grid__item--m--11 {
-    width: 91.6666667%; }
-  .o-grid__item--m--12 {
-    width: 100%; } }
-
-/**
-   * @name Large
-   * @level 5.1.4.
-   * @description
-   *   Screen sizes 60em (960px) and up
-   *
-   * @markup
-   *   <div class="o-grid">
-   *     <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
-   *   </div>
-   */
-@media (min-width: 60em) {
-  .o-grid {
-    margin-left: -1.5em; }
-  [class*='o-grid__item'] {
-    padding-left: 1.5em; }
-  .o-grid__item--l--1 {
-    width: 8.3333333%; }
-  .o-grid__item--l--2 {
-    width: 16.6666667%; }
-  .o-grid__item--l--3 {
-    width: 25%; }
-  .o-grid__item--l--4 {
-    width: 33.3333333%; }
-  .o-grid__item--l--5 {
-    width: 41.6666667%; }
-  .o-grid__item--l--6 {
-    width: 50%; }
-  .o-grid__item--l--7 {
-    width: 58.3333333%; }
-  .o-grid__item--l--8 {
-    width: 66.6666667%; }
-  .o-grid__item--l--9 {
-    width: 75%; }
-  .o-grid__item--l--10 {
-    width: 83.3333333%; }
-  .o-grid__item--l--11 {
-    width: 91.6666667%; }
-  .o-grid__item--l--12 {
-    width: 100%; } }
-
-/**
-   * @name X-Large
-   * @level 5.1.5.
-   * @description
-   *   Screen sizes 75em (1200px) and up
-   *
-   * @markup
-   *   <div class="o-grid">
-   *     <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
-   *   </div>
-   */
-@media (min-width: 75em) {
-  .o-grid {
-    margin-left: -1.5em; }
-  [class*='o-grid__item'] {
-    padding-left: 1.5em; }
-  .o-grid__item--xl--1 {
-    width: 8.3333333%; }
-  .o-grid__item--xl--2 {
-    width: 16.6666667%; }
-  .o-grid__item--xl--3 {
-    width: 25%; }
-  .o-grid__item--xl--4 {
-    width: 33.3333333%; }
-  .o-grid__item--xl--5 {
-    width: 41.6666667%; }
-  .o-grid__item--xl--6 {
-    width: 50%; }
-  .o-grid__item--xl--7 {
-    width: 58.3333333%; }
-  .o-grid__item--xl--8 {
-    width: 66.6666667%; }
-  .o-grid__item--xl--9 {
-    width: 75%; }
-  .o-grid__item--xl--10 {
-    width: 83.3333333%; }
-  .o-grid__item--xl--11 {
-    width: 91.6666667%; }
-  .o-grid__item--xl--12 {
-    width: 100%; } }
-
-/**
- * @name Button
- * @level 5.2.
- */
-/**
- * Variables
- */
-/**
- * @name Base
- * @level 5.2.1.
- * @markup
- *   <a href="#" class="o-button">Button</a>
- *   <button class="o-button">Button</button>
- */
-.o-button {
-  display: inline-block;
-  margin: 0;
-  padding: 0.5em 1em;
-  border: none;
-  background: #16193B;
-  vertical-align: top;
-  white-space: nowrap;
-  font-size: 100%;
-  font-family: inherit;
-  cursor: pointer; }
-  .o-button, .o-button:hover, .o-button:focus, .o-button:active, .o-button:visited {
-    outline: none;
-    color: #fff;
-    text-decoration: none; }
-  .o-button:hover, .o-button:focus, .o-button:active {
-    background: #5b5e75; }
-
-/**
- * @name Sizes
- * @level 5.2.2.
- */
-/**
-   * @name Small
-   * @level 5.2.2.1.
-   * @markup
-   *   <a href="#" class="o-button o-button--s">Button</a>
-   */
-.o-button--s {
-  padding: 0 0.5em; }
-
-/**
-   * @name Large
-   * @level 5.2.2.2.
-   * @markup
-   *   <a href="#" class="o-button o-button--l">Button</a>
-   */
-.o-button--l {
-  padding: 1em 1.5em; }
-
-/**
-   * @name X-Large
-   * @level 5.2.2.3.
-   * @markup
-   *   <a href="#" class="o-button o-button--xl">Button</a>
-   */
-.o-button--xl {
-  padding: 1.5em 2em; }
-
-/**
-   * @name Full
-   * @level 5.2.2.4.
-   * @markup
-   *   <a href="#" class="o-button o-button--full">Button</a>
-   */
-.o-button--full {
-  width: 100%;
-  text-align: center; }
-
-/**
- * @name Font sizes
- * @level 5.2.3.
- */
-/**
-   * @name Small
-   * @level 5.2.3.1.
-   * @markup
-   *   <a href="#" class="o-button o-button--font--s">Button</a>
-   */
-.o-button--font--s {
-  font-size: 0.85em; }
-
-/**
-   * @name Large
-   * @level 5.2.3.2.
-   * @markup
-   *   <a href="#" class="o-button o-button--font--l">Button</a>
-   */
-.o-button--font--l {
-  font-size: 1.25em; }
-
-/**
-   * @name X-Large
-   * @level 5.2.3.3.
-   * @markup
-   *   <a href="#" class="o-button o-button--font--xl">Button</a>
-   */
-.o-button--font--xl {
-  font-size: 1.5em; }
-
-/**
- * @name Functions
- * @level 5.2.4.
- */
-/**
-   * @name Positive
-   * @level 5.2.4.1.
-   * @markup
-   *   <a href="#" class="o-button o-button--positive">Button</a>
-   */
-.o-button--positive {
-  background: #468847;
-  color: #fff; }
-  .o-button--positive:hover, .o-button--positive:focus, .o-button--positive:active {
-    background: #7dab7e; }
-
-/**
-   * @name Neutral
-   * @level 5.2.4.2.
-   * @markup
-   *   <a href="#" class="o-button o-button--neutral">Button</a>
-   */
-.o-button--neutral {
-  background: #3A87AD;
-  color: #fff; }
-  .o-button--neutral:hover, .o-button--neutral:focus, .o-button--neutral:active {
-    background: #75abc5; }
-
-/**
-   * @name Cautious
-   * @level 5.2.4.3.
-   * @markup
-   *   <a href="#" class="o-button o-button--cautious">Button</a>
-   */
-.o-button--cautious {
-  background: #c09853;
-  color: #fff; }
-  .o-button--cautious:hover, .o-button--cautious:focus, .o-button--cautious:active {
-    background: #d2b686; }
-
-/**
-   * @name Negative
-   * @level 5.2.4.4.
-   * @markup
-   *   <a href="#" class="o-button o-button--negative">Button</a>
-   */
-.o-button--negative {
-  background: #b94a48;
-  color: #fff; }
-  .o-button--negative:hover, .o-button--negative:focus, .o-button--negative:active {
-    background: #ce807e; }
-
-/**
-   * @name Inactive / disabled
-   * @level 5.2.4.5.
-   * @markup
-   *   <a href="#" class="o-button o-button--inactive">Button</a>
-   *   <a href="#" class="o-button o-button--disabled">Button</a>
-   */
-.o-button--inactive, .o-button--inactive:hover, .o-button--inactive:focus, .o-button--inactive:active, .o-button--disabled, .o-button--disabled:hover, .o-button--disabled:focus, .o-button--disabled:active {
-  background-color: #efefef;
-  color: #bcbcbc; }
-
-.o-button--disabled, .o-button--disabled:hover, .o-button--disabled:focus, .o-button--disabled:active {
-  cursor: text; }
-
-/**
- * @name Color scheme
- * @level 5.2.5.
- */
-/**
-   * @name cs-a
-   * @level 5.2.5.1.
-   * @markup
-   *   <a href="#" class="o-button o-button--cs-a">Button</a>
-   */
-.o-button--cs-a {
-  background: #16193B;
-  color: #fff; }
-  .o-button--cs-a:hover, .o-button--cs-a:focus, .o-button--cs-a:active {
-    background: #5b5e75; }
-
-/**
-   * @name cs-b
-   * @level 5.2.5.2.
-   * @markup
-   *   <a href="#" class="o-button o-button--cs-b">Button</a>
-   */
-.o-button--cs-b {
-  background: #35478C;
-  color: #fff; }
-  .o-button--cs-b:hover, .o-button--cs-b:focus, .o-button--cs-b:active {
-    background: #717eae; }
-
-/**
-   * @name cs-c
-   * @level 5.2.5.3.
-   * @markup
-   *   <a href="#" class="o-button o-button--cs-c">Button</a>
-   */
-.o-button--cs-c {
-  background: #4E7AC7;
-  color: #fff; }
-  .o-button--cs-c:hover, .o-button--cs-c:focus, .o-button--cs-c:active {
-    background: #83a1d7; }
-
-/**
-   * @name cs-d
-   * @level 5.2.5.4.
-   * @markup
-   *   <a href="#" class="o-button o-button--cs-d">Button</a>
-   */
-.o-button--cs-d {
-  background: #7FB2F0;
-  color: #fff; }
-  .o-button--cs-d:hover, .o-button--cs-d:focus, .o-button--cs-d:active {
-    background: #a5c9f4; }
-
-/**
-   * @name cs-e
-   * @level 5.2.5.5.
-   * @markup
-   *   <a href="#" class="o-button o-button--cs-e">Button</a>
-   */
-.o-button--cs-e {
-  background: #ADD5F7;
-  color: #fff; }
-  .o-button--cs-e:hover, .o-button--cs-e:focus, .o-button--cs-e:active {
-    background: #c5e1f9; }
-
-/**
- * @name Menu
- * @level 5.3.
- */
-/**
- * Variables
- */
-/**
- * Defaults
- */
-.o-menu__list {
-  padding-left: 0;
-  list-style-type: none;
-  margin: 0;
-  background: #16193B; }
-
-.o-menu__list--level1 {
-  -webkit-transition: -webkit-transform 0.2s;
-          transition: transform 0.2s; }
-
-.o-menu__item {
-  position: relative; }
-
-.o-menu__link {
-  display: block;
-  text-decoration: none; }
-  .o-menu__link, .o-menu__link:hover, .o-menu__link:focus, .o-menu__link:visited {
-    color: #fff; }
-
-.o-menu__checkbox {
-  display: none; }
-
-@media (min-width: 45em) {
-  .o-menu__controls {
-    display: none; } }
-
-/**
-   * @name Off canvas
-   * @level 5.3.1.
-   *
-   * @markup
-   *   <nav class="o-menu o-menu--off-canvas">
-   *     <div class="o-menu__controls">
-   *       <label for="o-menu__checkbox" class="o-menu__toggle button button--s">&#9776; Menu</label>
-   *     </div>
-   *     <input id="o-menu__checkbox" class="o-menu__checkbox" name="o-menu__checkbox" type="checkbox">
-   *     <ul class="o-menu__list o-menu__list--level1">
-   *       <li class="o-menu__item o-menu__item--level1">
-   *         <a href="#" class="o-menu__link o-menu__link--level1">Link 1</a>
-   *       </li>
-   *       <li class="o-menu__item o-menu__item--level1">
-   *         <a href="#" class="o-menu__link o-menu__link--level1">Link 2</a>
-   *       </li>
-   *       <li class="o-menu__item o-menu__item--level1">
-   *         <a href="#" class="o-menu__link o-menu__link--level1">Link 3</a>
-   *       </li>
-   *     </ul>
-   *   </nav>
-   */
-html {
-  position: relative; }
-
-.o-menu--off-canvas .o-menu__controls {
-  display: block; }
-.o-menu--off-canvas .o-menu__list--level1 {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100;
-  max-width: 20em;
-  width: 70%;
-  -webkit-transform: translate(-100%, 0);
-      -ms-transform: translate(-100%, 0);
-          transform: translate(-100%, 0); }
-.o-menu--off-canvas .o-menu__checkbox:checked + .o-menu__list--level1 {
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0); }
-
-/**
-   * @name Horizontal
-   * @level 5.3.2.
-   */
-.o-menu--horizontal .o-menu__list--level1, .o-menu--horizontal-responsive .o-menu__list--level1 {
-  *zoom: 1; }
-  .o-menu--horizontal .o-menu__list--level1:before, .o-menu--horizontal .o-menu__list--level1:after, .o-menu--horizontal-responsive .o-menu__list--level1:before, .o-menu--horizontal-responsive .o-menu__list--level1:after {
-    display: table;
-    content: ' '; }
-  .o-menu--horizontal .o-menu__list--level1:after, .o-menu--horizontal-responsive .o-menu__list--level1:after {
-    clear: both; }
-
-/**
-     * @name Horizontal (non responsiv)
-     * @level 5.3.2.1.
-     *
-     * @markup
-     *   <nav class="o-menu o-menu--horizontal">
-     *     <ul class="o-menu__list o-menu__list--level1">
-     *       <li class="o-menu__item o-menu__item--level1">
-     *         <a href="#" class="o-menu__link o-menu__link--level1">Link 1</a>
-     *         <ul class="o-menu__list o-menu__list--level2">
-     *           <li class="o-menu__item o-menu__item--level2">
-     *             <a href="#" class="o-menu__link o-menu__link--level2">Link 1.1</a>
-     *           </li>
-     *           <li class="o-menu__item o-menu__item--level2">
-     *             <a href="#" class="o-menu__link o-menu__link--level2">Link 1.2</a>
-     *           </li>
-     *         </ul>
-     *       </li>
-     *       <li class="o-menu__item o-menu__item--level1">
-     *         <a href="#" class="o-menu__link o-menu__link--level1">Link 2</a>
-     *       </li>
-     *       <li class="o-menu__item o-menu__item--level1">
-     *         <a href="#" class="o-menu__link o-menu__link--level1">Link 3</a>
-     *       </li>
-     *     </ul>
-     *   </nav>
-     */
-.o-menu--horizontal .o-menu__list--level1 .o-menu__list {
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: opacity 0.2s;
-          transition: opacity 0.2s; }
-.o-menu--horizontal .o-menu__list--level1 .o-menu__list .o-menu__list {
-  top: 0;
-  left: 100%; }
-.o-menu--horizontal .o-menu__item:hover > .o-menu__list, .o-menu--horizontal .o-menu__item:focus > .o-menu__list {
-  visibility: visible;
-  opacity: 1; }
-.o-menu--horizontal .o-menu__item--level1 {
-  float: left; }
-
-/**
-     * @name Horizontal responsiv
-     * @level 5.3.2.2.
-     *
-     * @markup
-     *   <nav class="o-menu o-menu--horizontal-responsive">
-     *     <div class="o-menu__controls">
-     *       <label for="o-menu__checkbox-horizontal" class="o-menu__toggle button button--s">&#9776; Menu</label>
-     *     </div>
-     *     <input id="o-menu__checkbox-horizontal" class="o-menu__checkbox" name="o-menu__checkbox-horizontal" type="checkbox">
-     *     <ul class="o-menu__list o-menu__list--level1">
-     *       <li class="o-menu__item o-menu__item--level1">
-     *         <a href="#" class="o-menu__link o-menu__link--level1">Link 1</a>
-     *         <ul class="o-menu__list o-menu__list--level2">
-     *           <li class="o-menu__item o-menu__item--level2">
-     *             <a href="#" class="o-menu__link o-menu__link--level2">Link 1.1</a>
-     *           </li>
-     *           <li class="o-menu__item o-menu__item--level2">
-     *             <a href="#" class="o-menu__link o-menu__link--level2">Link 1.2</a>
-     *           </li>
-     *         </ul>
-     *       </li>
-     *       <li class="o-menu__item o-menu__item--level1">
-     *         <a href="#" class="o-menu__link o-menu__link--level1">Link 2</a>
-     *       </li>
-     *       <li class="o-menu__item o-menu__item--level1">
-     *         <a href="#" class="o-menu__link o-menu__link--level1">Link 3</a>
-     *       </li>
-     *     </ul>
-     *   </nav>
-     */
-@media (max-width: 44.9375em) {
-  .o-menu--horizontal-responsive .o-menu__list--level1 {
-    height: 0;
-    -webkit-transform: scale(1, 0);
-        -ms-transform: scale(1, 0);
-            transform: scale(1, 0);
-    -webkit-transform-origin: 0 0;
-        -ms-transform-origin: 0 0;
-            transform-origin: 0 0; }
-  .o-menu--horizontal-responsive .o-menu__checkbox:checked + .o-menu__list--level1 {
-    height: auto;
-    -webkit-transform: scale(1, 1);
-        -ms-transform: scale(1, 1);
-            transform: scale(1, 1); }
-  .o-menu--horizontal-responsive .o-menu__item--level1 {
-    float: none; } }
-@media (min-width: 45em) {
-  .o-menu--horizontal-responsive .o-menu__list--level1 .o-menu__list {
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transition: opacity 0.2s;
-            transition: opacity 0.2s; }
-  .o-menu--horizontal-responsive .o-menu__list--level1 .o-menu__list .o-menu__list {
-    top: 0;
-    left: 100%; }
-  .o-menu--horizontal-responsive .o-menu__item:hover > .o-menu__list, .o-menu--horizontal-responsive .o-menu__item:focus > .o-menu__list {
-    visibility: visible;
-    opacity: 1; }
-  .o-menu--horizontal-responsive .o-menu__item--level1 {
-    float: left; } }
-
-/**
-   * @name Vertical
-   * @level 5.3.3.
-   *
-   * @markup
-   *   <nav class="o-menu o-menu--vertical">
-   *     <ul class="o-menu__list o-menu__list--level1">
-   *       <li class="o-menu__item o-menu__item--level1">
-   *         <a href="#" class="o-menu__link o-menu__link--level1">Link 1</a>
-   *         <ul class="o-menu__list o-menu__list--level2">
-   *           <li class="o-menu__item o-menu__item--level2">
-   *             <a href="#" class="o-menu__link o-menu__link--level2">Link 1.1</a>
-   *           </li>
-   *           <li class="o-menu__item o-menu__item--level2">
-   *             <a href="#" class="o-menu__link o-menu__link--level2">Link 1.2</a>
-   *           </li>
-   *         </ul>
-   *       </li>
-   *       <li class="o-menu__item o-menu__item--level1">
-   *         <a href="#" class="o-menu__link o-menu__link--level1">Link 2</a>
-   *       </li>
-   *       <li class="o-menu__item o-menu__item--level1">
-   *         <a href="#" class="o-menu__link o-menu__link--level1">Link 3</a>
-   *       </li>
-   *     </ul>
-   *   </nav>
-   */
-/**
- * @name Island
- * @level 5.4.
- */
-/**
- * Variables
- */
-/**
- * @name Base
- * @level 5.4.1.
- * @description
- *   A single class used to box off content, leaving it closed on all sides like, well, an island.  
- *   [Harry Roberts - The 'island' object](http://csswizardry.com/2011/10/the-island-object/)
- *
- * @markup
- *   <div class="o-island">
- *     Island
- *   </div>
- */
-.o-island {
-  display: block;
-  padding: 1.5em;
-  background: #efefef; }
-  .o-island > :last-child {
-    margin-bottom: 0; }
-
-/**
- * @name Functions
- * @level 5.4.2.
- */
-/**
-   * @name Positive
-   * @level 5.4.2.1.
-   * @description
-   *   Positive actions; e.g. sign in, purchase, submit, etc.
-   *
-   * @markup
-   *   <div class="o-island o-island--positive">
-   *     Positive Island
-   *   </div>
-   */
-.o-island--positive {
-  background: #dae7da;
-  color: #468847; }
-
-/**
-   * @name Neutral
-   * @level 5.4.2.2.
-   *
-   * @markup
-   *   <div class="o-island o-island--neutral">
-   *     Neutral Island
-   *   </div>
-   */
-.o-island--neutral {
-  background: #d7e7ee;
-  color: #3A87AD; }
-
-/**
-   * @name Cautious
-   * @level 5.4.2.3.
-   *
-   * @markup
-   *   <div class="o-island o-island--cautious">
-   *     Cautious Island
-   *   </div>
-   */
-.o-island--cautious {
-  background: #f2eadc;
-  color: #c09853; }
-
-/**
-   * @name Negative
-   * @level 5.4.2.4.
-   * @description
-   *   Negative actions; e.g. close account, delete photo, remove friend, etc.
-   *
-   * @markup
-   *   <div class="o-island o-island--negative">
-   *     Negative Island
-   *   </div>
-   */
-.o-island--negative {
-  background: #f1dada;
-  color: #b94a48; }
-
-/**
- * @name Color scheme
- * @level 5.4.3.
- */
-/**
-   * @name cs-a
-   * @level 5.4.3.1.
-   *
-   * @markup
-   *   <div class="o-island o-island--cs-a">
-   *     cs-a Island
-   *   </div>
-   */
-.o-island--cs-a {
-  background: #16193B;
-  color: #fff; }
-
-/**
-   * @name cs-b
-   * @level 5.4.3.2.
-   *
-   * @markup
-   *   <div class="o-island o-island--cs-b">
-   *     cs-b Island
-   *   </div>
-   */
-.o-island--cs-b {
-  background: #35478C;
-  color: #fff; }
-
-/**
-   * @name cs-c
-   * @level 5.4.3.3.
-   *
-   * @markup
-   *   <div class="o-island o-island--cs-c">
-   *     cs-c Island
-   *   </div>
-   */
-.o-island--cs-c {
-  background: #4E7AC7;
-  color: #fff; }
-
-/**
-   * @name cs-d
-   * @level 5.4.3.4.
-   *
-   * @markup
-   *   <div class="o-island o-island--cs-d">
-   *     cs-d Island
-   *   </div>
-   */
-.o-island--cs-d {
-  background: #7FB2F0;
-  color: #fff; }
-
-/**
-   * @name cs-e
-   * @level 5.4.3.5.
-   *
-   * @markup
-   *   <div class="o-island o-island--cs-e">
-   *     cs-e Island
-   *   </div>
-   */
-.o-island--cs-e {
-  background: #ADD5F7;
-  color: #fff; }
-
-/**
- * @name Media
- * @level 5.5.
- */
-/**
- * @name Base
- * @level 5.5.1.
- * @description
- *   The media object is an image on one side, with descriptive content on the other side.  
- *   [Nicole Sullivan - The media object saves hundreds of lines of code](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code)
- *
- * @markup
- *   <div class="o-media">
- *     <div class="o-media__figure">
- *       <img src="http://placehold.it/70x70" alt="">
- *     </div>
- *     <div class="o-media__body">
- *       Lorem ipsum dolor sit...
- *     </div>
- *   </div>
- *   <div class="o-media">
- *     <div class="o-media__figure-rev">
- *       <img src="http://placehold.it/70x70" alt="">
- *     </div>
- *     <div class="o-media__body">
- *       Lorem ipsum dolor sit...
- *     </div>
- *   </div>
- */
-.o-media {
-  *zoom: 1; }
-  .o-media:before, .o-media:after {
-    display: table;
-    content: ' '; }
-  .o-media:after {
-    clear: both; }
-
-.o-media__figure img, .o-media__figure-rev img {
-  display: block; }
-
-.o-media__figure {
-  float: left;
-  margin-right: 1.5em; }
-
-.o-media__body {
-  overflow: hidden; }
-
-/**
- * Reversed image location (right instead of left).
- */
-.o-media__figure-rev {
-  float: right;
-  margin-left: 1.5em; }
-
-/**
- * Reset media styling on small screens
- */
-@media (max-width: 44.9375em) {
-  .o-media--mobile-reset .o-media__figure {
-    float: none;
-    margin-right: 0; }
-  .o-media--mobile-reset .o-media__figure-rev {
-    float: none;
-    margin-left: 0; } }
 
 
 /*# sourceMappingURL=avalanche.css.map */
