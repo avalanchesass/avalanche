@@ -1,3 +1,4 @@
 .DS_Store
 .sass-cache
 styleguide/vendor
+bower_components

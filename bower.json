@@ -1,0 +1,25 @@
+{
+  "name": "avalanche",
+  "version": "2.0",
+  "homepage": "https://github.com/maoberlehner/avalanche",
+  "authors": [
+    "Markus Oberlehner"
+  ],
+  "description": "SASS / CSS Framework",
+  "main": "scss/avalanche.scss",
+  "keywords": [
+    "SASS",
+    "CSS"
+  ],
+  "license": "GPL v2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "~3.0.3"
+  }
+}
