@@ -1,9 +1,5 @@
 /**
- * @name Grid
- * @level 5.1.
- */
-/**
- * Includes
+ * Dependencies
  */
 // System
 @import 'system/function';
@@ -14,181 +10,189 @@
 
 
 
-/**
- * Variables
- */
-$o-grid-item-count: 12 !default;
-
-// Sizes
-$o-grid-size-s:  false !default;
-$o-grid-size-m:  false !default;
-$o-grid-size-l:  false !default;
-$o-grid-size-xl: false !default;
-
-// Spacing between items
-$o-grid-spacing-s:  $spacing-s !default;
-$o-grid-spacing-m:  $spacing-m !default;
-$o-grid-spacing-l:  $spacing-m !default;
-$o-grid-spacing-xl: $spacing-m !default;
-
-
-
-/**
- * @name Base
- * @level 5.1.1.
- * @description
- *   Mobile first styles for all screen sizes
- *
- * @markup
- *   <div class="o-grid">
- *     <div class="o-grid__item--6">Grid Item</div>
- *     <div class="o-grid__item--6">Grid Item</div>
- *   </div>
- */
-$o-grid-base-size: (100% / $o-grid-item-count);
-
-.o-grid {
-  @include u-clearfix();
-  margin-left: -$o-grid-spacing-s;
-}
-
-[class*='o-grid__item'] {
-  float: left;
-  padding-left: $o-grid-spacing-s;
-  width: 100%;
-  @if $layout-box-sizing-reset == false {
-    box-sizing: border-box;
-  }
-}
-
-@for $i from 1 through $o-grid-item-count {
-  .o-grid__item--#{$i} {
-    width: ($o-grid-base-size * $i);
-  }
-}
-
-
-
-@if $o-grid-size-s {
+@if variable-exists(o-grid-imported) == false {
   /**
-   * @name Small
-   * @level 5.1.2.
+   * @name Grid
+   * @level 5.1.
+   */
+  /**
+   * Variables
+   */
+  $o-grid-item-count: 12 !default;
+
+  // Sizes
+  $o-grid-size-s:  false !default;
+  $o-grid-size-m:  false !default;
+  $o-grid-size-l:  false !default;
+  $o-grid-size-xl: false !default;
+
+  // Spacing between items
+  $o-grid-spacing-s:  $spacing-s !default;
+  $o-grid-spacing-m:  $spacing-m !default;
+  $o-grid-spacing-l:  $spacing-m !default;
+  $o-grid-spacing-xl: $spacing-m !default;
+
+
+
+  /**
+   * @name Base
+   * @level 5.1.1.
    * @description
-   *   Screen sizes #{$breakpoint-s} (#{avalanche-strip-units($breakpoint-s) * $font-base-size}) and up
+   *   Mobile first styles for all screen sizes
    *
    * @markup
    *   <div class="o-grid">
-   *     <div class="o-grid__item--12 o-grid__item--s--6">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--s--6">Grid Item</div>
+   *     <div class="o-grid__item--6">Grid Item</div>
+   *     <div class="o-grid__item--6">Grid Item</div>
    *   </div>
    */
-  @media (min-width: $breakpoint-s) {
-    @for $i from 1 through $o-grid-item-count {
-      .o-grid__item--s--#{$i} {
-        width: ($o-grid-base-size * $i);
+  $o-grid-base-size: (100% / $o-grid-item-count);
+
+  .o-grid {
+    @include u-clearfix();
+    margin-left: -$o-grid-spacing-s;
+  }
+
+  [class*='o-grid__item'] {
+    float: left;
+    padding-left: $o-grid-spacing-s;
+    width: 100%;
+    @if $layout-box-sizing-reset == false {
+      box-sizing: border-box;
+    }
+  }
+
+  @for $i from 1 through $o-grid-item-count {
+    .o-grid__item--#{$i} {
+      width: ($o-grid-base-size * $i);
+    }
+  }
+
+
+
+  @if $o-grid-size-s {
+    /**
+     * @name Small
+     * @level 5.1.2.
+     * @description
+     *   Screen sizes #{$breakpoint-s} (#{avalanche-strip-units($breakpoint-s) * $font-base-size}) and up
+     *
+     * @markup
+     *   <div class="o-grid">
+     *     <div class="o-grid__item--12 o-grid__item--s--6">Grid Item</div>
+     *     <div class="o-grid__item--12 o-grid__item--s--6">Grid Item</div>
+     *   </div>
+     */
+    @media (min-width: $breakpoint-s) {
+      @for $i from 1 through $o-grid-item-count {
+        .o-grid__item--s--#{$i} {
+          width: ($o-grid-base-size * $i);
+        }
       }
     }
   }
-}
 
 
 
-@if $o-grid-size-m {
-  /**
-   * @name Medium
-   * @level 5.1.3.
-   * @description
-   *   Screen sizes #{$breakpoint-m} (#{avalanche-strip-units($breakpoint-m) * $font-base-size}) and up
-   *
-   * @markup
-   *   <div class="o-grid">
-   *     <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
-   *   </div>
-   */
-  @media (min-width: $breakpoint-m) {
-    .o-grid {
-      margin-left: -$o-grid-spacing-m;
-    }
+  @if $o-grid-size-m {
+    /**
+     * @name Medium
+     * @level 5.1.3.
+     * @description
+     *   Screen sizes #{$breakpoint-m} (#{avalanche-strip-units($breakpoint-m) * $font-base-size}) and up
+     *
+     * @markup
+     *   <div class="o-grid">
+     *     <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
+     *     <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
+     *     <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
+     *     <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
+     *   </div>
+     */
+    @media (min-width: $breakpoint-m) {
+      .o-grid {
+        margin-left: -$o-grid-spacing-m;
+      }
 
-    [class*='o-grid__item'] {
-      padding-left: $o-grid-spacing-m;
-    }
+      [class*='o-grid__item'] {
+        padding-left: $o-grid-spacing-m;
+      }
 
-    @for $i from 1 through $o-grid-item-count {
-      .o-grid__item--m--#{$i} {
-        width: ($o-grid-base-size * $i);
+      @for $i from 1 through $o-grid-item-count {
+        .o-grid__item--m--#{$i} {
+          width: ($o-grid-base-size * $i);
+        }
       }
     }
   }
-}
 
 
 
-@if $o-grid-size-l {
-  /**
-   * @name Large
-   * @level 5.1.4.
-   * @description
-   *   Screen sizes #{$breakpoint-l} (#{avalanche-strip-units($breakpoint-l) * $font-base-size}) and up
-   *
-   * @markup
-   *   <div class="o-grid">
-   *     <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
-   *   </div>
-   */
-  @media (min-width: $breakpoint-l) {
-    .o-grid {
-      margin-left: -$o-grid-spacing-l;
-    }
+  @if $o-grid-size-l {
+    /**
+     * @name Large
+     * @level 5.1.4.
+     * @description
+     *   Screen sizes #{$breakpoint-l} (#{avalanche-strip-units($breakpoint-l) * $font-base-size}) and up
+     *
+     * @markup
+     *   <div class="o-grid">
+     *     <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
+     *     <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
+     *     <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
+     *     <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
+     *   </div>
+     */
+    @media (min-width: $breakpoint-l) {
+      .o-grid {
+        margin-left: -$o-grid-spacing-l;
+      }
 
-    [class*='o-grid__item'] {
-      padding-left: $o-grid-spacing-l;
-    }
+      [class*='o-grid__item'] {
+        padding-left: $o-grid-spacing-l;
+      }
 
-    @for $i from 1 through $o-grid-item-count {
-      .o-grid__item--l--#{$i} {
-        width: ($o-grid-base-size * $i);
+      @for $i from 1 through $o-grid-item-count {
+        .o-grid__item--l--#{$i} {
+          width: ($o-grid-base-size * $i);
+        }
       }
     }
   }
-}
 
 
 
-@if $o-grid-size-xl {
-  /**
-   * @name X-Large
-   * @level 5.1.5.
-   * @description
-   *   Screen sizes #{$breakpoint-xl} (#{avalanche-strip-units($breakpoint-xl) * $font-base-size}) and up
-   *
-   * @markup
-   *   <div class="o-grid">
-   *     <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
-   *   </div>
-   */
-  @media (min-width: $breakpoint-xl) {
-    .o-grid {
-      margin-left: -$o-grid-spacing-xl;
-    }
+  @if $o-grid-size-xl {
+    /**
+     * @name X-Large
+     * @level 5.1.5.
+     * @description
+     *   Screen sizes #{$breakpoint-xl} (#{avalanche-strip-units($breakpoint-xl) * $font-base-size}) and up
+     *
+     * @markup
+     *   <div class="o-grid">
+     *     <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
+     *     <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
+     *     <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
+     *     <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
+     *   </div>
+     */
+    @media (min-width: $breakpoint-xl) {
+      .o-grid {
+        margin-left: -$o-grid-spacing-xl;
+      }
 
-    [class*='o-grid__item'] {
-      padding-left: $o-grid-spacing-xl;
-    }
+      [class*='o-grid__item'] {
+        padding-left: $o-grid-spacing-xl;
+      }
 
-    @for $i from 1 through $o-grid-item-count {
-      .o-grid__item--xl--#{$i} {
-        width: ($o-grid-base-size * $i);
+      @for $i from 1 through $o-grid-item-count {
+        .o-grid__item--xl--#{$i} {
+          width: ($o-grid-base-size * $i);
+        }
       }
     }
   }
+
+  $o-grid-imported: true;
 }
