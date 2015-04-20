@@ -1,16 +1,16 @@
 {
-  "name": "Avalanche Grid",
+  "name": "avalanche: Utility clearfix",
   "version": "2.0",
-  "homepage": "https://github.com/avalanchesass/avalanche_object_grid",
+  "homepage": "https://github.com/avalanchesass/avalanche_utility_clearfix",
   "authors": [
     "Markus Oberlehner"
   ],
-  "description": "A grid system for the avalanche framework",
-  "main": "css/grid.css",
+  "description": "CSS clearfix",
+  "main": "css/clearfix.css",
   "keywords": [
     "SASS",
     "CSS",
-    "Grid"
+    "Clearfix"
   ],
   "license": "GPL v2",
   "ignore": [
