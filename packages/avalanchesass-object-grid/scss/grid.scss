@@ -2,8 +2,10 @@
  * Dependencies
  */
 // System
-@import 'system/function';
 @import 'system/variable';
+
+// Function
+@import 'avalanche_function_strip_unit/scss/strip_unit';
 
 // Utility
 @import 'avalanche_utility_clearfix/scss/clearfix';
