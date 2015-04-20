@@ -21,6 +21,7 @@
     "tests"
   ],
   "dependencies": {
+    "avalanche_function_strip_unit": "dev",
     "avalanche_utility_clearfix": "dev"
   },
   "devDependencies": {

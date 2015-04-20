@@ -75,7 +75,7 @@
      * @name Small
      * @level 5.1.2.
      * @description
-     *   Screen sizes #{$breakpoint-s} (#{avalanche-strip-units($breakpoint-s) * $font-base-size}) and up
+     *   Screen sizes #{$breakpoint-s} (#{avalanche-strip-unit($breakpoint-s) * $font-base-size}) and up
      *
      * @markup
      *   <div class="o-grid">
@@ -99,7 +99,7 @@
      * @name Medium
      * @level 5.1.3.
      * @description
-     *   Screen sizes #{$breakpoint-m} (#{avalanche-strip-units($breakpoint-m) * $font-base-size}) and up
+     *   Screen sizes #{$breakpoint-m} (#{avalanche-strip-unit($breakpoint-m) * $font-base-size}) and up
      *
      * @markup
      *   <div class="o-grid">
@@ -133,7 +133,7 @@
      * @name Large
      * @level 5.1.4.
      * @description
-     *   Screen sizes #{$breakpoint-l} (#{avalanche-strip-units($breakpoint-l) * $font-base-size}) and up
+     *   Screen sizes #{$breakpoint-l} (#{avalanche-strip-unit($breakpoint-l) * $font-base-size}) and up
      *
      * @markup
      *   <div class="o-grid">
@@ -167,7 +167,7 @@
      * @name X-Large
      * @level 5.1.5.
      * @description
-     *   Screen sizes #{$breakpoint-xl} (#{avalanche-strip-units($breakpoint-xl) * $font-base-size}) and up
+     *   Screen sizes #{$breakpoint-xl} (#{avalanche-strip-unit($breakpoint-xl) * $font-base-size}) and up
      *
      * @markup
      *   <div class="o-grid">
