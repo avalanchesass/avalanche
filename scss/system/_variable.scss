@@ -218,7 +218,7 @@ $breakpoint-max-xl: avalanche-breakpointmax($breakpoint-xl);
  */
 $spacing-xs:   0.5em;
 $spacing-s:    1em;
-$spacing-m:    avalanche-strip-units($font-base-line-height / $font-base-size) * 1em;
+$spacing-m:    avalanche-strip-unit($font-base-line-height / $font-base-size) * 1em;
 $spacing-l:    2em;
 $spacing-xl:   3em;
 $spacing-xxl:  4em;

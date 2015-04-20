@@ -10,44 +10,26 @@
  * @level 2.
  */
 /**
- * @name Function
- * @level 2.2.
+ * Dependencies
  */
 /**
- * @name strip-units
- * @level 2.2.1.
- * @description
- *   avalanche-strip-units($number)
+ * Dependencies
  */
 /**
- * @name px2em
- * @level 2.2.2.
- * @description
- *   Convert a px value to em  
- *   based on $font-base-size  
- *   avalanche-px2em($px, $base: $font-base-size)
- */
+   * @name strip-unit
+   * @level 2.2.1.
+   * @description
+   *   avalanche-strip-unit($number)
+   */
 /**
- * @name em2px
- * @level 2.2.3.
- * @description
- *   Convert a em value to px  
- *   based on $font-base-size  
- *   avalanche-em2px($em, $base: $font-base-size)
- */
+   * @name breakpointmax
+   * @level 2.2.5.
+   * @description
+   *   Get the max-width value of a breakpoint  
+   *   avalanche-breakpointmax($breakpoint, $base: $font-base-size)
+   */
 /**
- * @name em2rem
- * @level 2.2.4.
- * @description
- *   Convert a em value to rem  
- *   avalanche-em2rem($em)
- */
-/**
- * @name breakpointmax
- * @level 2.2.5.
- * @description
- *   Get the max-width value of a breakpoint  
- *   avalanche-breakpointmax($breakpoint, $base: $font-base-size)
+ * Dependencies
  */
 /**
  * @name Variable
@@ -486,46 +468,6 @@ small {
  * Dependencies
  */
 /**
- * @name Function
- * @level 2.2.
- */
-/**
- * @name strip-units
- * @level 2.2.1.
- * @description
- *   avalanche-strip-units($number)
- */
-/**
- * @name px2em
- * @level 2.2.2.
- * @description
- *   Convert a px value to em  
- *   based on $font-base-size  
- *   avalanche-px2em($px, $base: $font-base-size)
- */
-/**
- * @name em2px
- * @level 2.2.3.
- * @description
- *   Convert a em value to px  
- *   based on $font-base-size  
- *   avalanche-em2px($em, $base: $font-base-size)
- */
-/**
- * @name em2rem
- * @level 2.2.4.
- * @description
- *   Convert a em value to rem  
- *   avalanche-em2rem($em)
- */
-/**
- * @name breakpointmax
- * @level 2.2.5.
- * @description
- *   Get the max-width value of a breakpoint  
- *   avalanche-breakpointmax($breakpoint, $base: $font-base-size)
- */
-/**
  * @name Variable
  * @level 2.1.
  */
@@ -687,46 +629,6 @@ small {
  * Dependencies
  */
 /**
- * @name Function
- * @level 2.2.
- */
-/**
- * @name strip-units
- * @level 2.2.1.
- * @description
- *   avalanche-strip-units($number)
- */
-/**
- * @name px2em
- * @level 2.2.2.
- * @description
- *   Convert a px value to em  
- *   based on $font-base-size  
- *   avalanche-px2em($px, $base: $font-base-size)
- */
-/**
- * @name em2px
- * @level 2.2.3.
- * @description
- *   Convert a em value to px  
- *   based on $font-base-size  
- *   avalanche-em2px($em, $base: $font-base-size)
- */
-/**
- * @name em2rem
- * @level 2.2.4.
- * @description
- *   Convert a em value to rem  
- *   avalanche-em2rem($em)
- */
-/**
- * @name breakpointmax
- * @level 2.2.5.
- * @description
- *   Get the max-width value of a breakpoint  
- *   avalanche-breakpointmax($breakpoint, $base: $font-base-size)
- */
-/**
  * @name Variable
  * @level 2.1.
  */
@@ -870,44 +772,7 @@ small {
  * Dependencies
  */
 /**
- * @name Function
- * @level 2.2.
- */
-/**
- * @name strip-units
- * @level 2.2.1.
- * @description
- *   avalanche-strip-units($number)
- */
-/**
- * @name px2em
- * @level 2.2.2.
- * @description
- *   Convert a px value to em  
- *   based on $font-base-size  
- *   avalanche-px2em($px, $base: $font-base-size)
- */
-/**
- * @name em2px
- * @level 2.2.3.
- * @description
- *   Convert a em value to px  
- *   based on $font-base-size  
- *   avalanche-em2px($em, $base: $font-base-size)
- */
-/**
- * @name em2rem
- * @level 2.2.4.
- * @description
- *   Convert a em value to rem  
- *   avalanche-em2rem($em)
- */
-/**
- * @name breakpointmax
- * @level 2.2.5.
- * @description
- *   Get the max-width value of a breakpoint  
- *   avalanche-breakpointmax($breakpoint, $base: $font-base-size)
+ * Dependencies
  */
 /**
  * @name Variable

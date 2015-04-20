@@ -6,8 +6,8 @@
  *   Adopted from the great https://html5boilerplate.com/
  */
 html {
-  font-size: avalanche-strip-units($font-base-size) / (16 / 100) * 1%;
-  line-height: avalanche-strip-units($font-base-line-height / $font-base-size);
+  font-size: avalanche-strip-unit($font-base-size) / (16 / 100) * 1%;
+  line-height: avalanche-strip-unit($font-base-line-height / $font-base-size);
 }
 
 html,

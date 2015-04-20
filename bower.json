@@ -20,7 +20,8 @@
     "tests"
   ],
   "dependencies": {
-    "avalanche_object_grid": "dev",
-    "normalize.css": "~3.0.3"
+    "avalanche_function_breakpointmax": "dev",
+    "avalanche_function_strip_unit": "dev",
+    "avalanche_object_grid": "dev"
   }
 }

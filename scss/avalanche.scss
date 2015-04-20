@@ -9,7 +9,8 @@
  * @name System
  * @level 2.
  */
-@import 'system/function';
+@import 'avalanche_function_breakpointmax/scss/breakpointmax';
+@import 'avalanche_function_strip_unit/scss/strip_unit';
 @import 'system/variable';
 
 
@@ -29,10 +30,6 @@
  * @name Utility
  * @level 4.
  */
-//@import 'utility/clearfix';
-//@import 'utility/list_reset';
-//@import 'utility/spacing';
-//@import 'utility/visibility';
 @import 'avalanche_utility_clearfix/scss/clearfix';
 
 
@@ -41,9 +38,4 @@
  * @name Object
  * @level 5.
  */
-//@import 'object/grid';
-//@import 'object/button';
-//@import 'object/menu';
-//@import 'object/island';
-//@import 'object/media';
 @import 'avalanche_object_grid/scss/grid';
