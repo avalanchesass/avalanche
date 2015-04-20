@@ -11,7 +11,7 @@ var sourcemaps       = require('gulp-sourcemaps');
 gulp.task('styles', function () {
   return gulp.src('scss/**/*.scss')
     .pipe(sourcemaps.init())
-      .pipe(sass({ precision: 7, includePaths: ['bower_components/avalanche/scss'], errLogToConsole: true }))
+      .pipe(sass({ precision: 7, includePaths: ['bower_components', 'bower_components/avalanche/scss'], errLogToConsole: true }))
       .pipe(autoprefixer())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('css'));
