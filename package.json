@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "Markus Oberlehner",
   "license": "GPL v2",
-  "devDependencies": {
+  "dependencies": {
     "gulp": "^3.8.10",
     "gulp-autoprefixer": "^2.1.0",
     "gulp-csso": "^1.0.0",
