@@ -1,11 +1,11 @@
 /**
  * Dependencies
  */
-// System
-@import 'system/variable';
-
 // Function
 @import 'avalanche_function_strip_unit/scss/strip_unit';
+
+// System
+@import 'system/variable';
 
 // Utility
 @import 'avalanche_utility_clearfix/scss/clearfix';
@@ -15,7 +15,7 @@
 @if variable-exists(o-grid-imported) == false {
   /**
    * @name Grid
-   * @level 5.1.
+   * @level X.X.
    */
   /**
    * Variables
@@ -38,7 +38,7 @@
 
   /**
    * @name Base
-   * @level 5.1.1.
+   * @level X.X.X.
    * @description
    *   Mobile first styles for all screen sizes
    *
@@ -75,7 +75,7 @@
   @if $o-grid-size-s {
     /**
      * @name Small
-     * @level 5.1.2.
+     * @level X.X.X.
      * @description
      *   Screen sizes #{$breakpoint-s} (#{avalanche-strip-unit($breakpoint-s) * $font-base-size}) and up
      *
@@ -99,7 +99,7 @@
   @if $o-grid-size-m {
     /**
      * @name Medium
-     * @level 5.1.3.
+     * @level X.X.X.
      * @description
      *   Screen sizes #{$breakpoint-m} (#{avalanche-strip-unit($breakpoint-m) * $font-base-size}) and up
      *
@@ -133,7 +133,7 @@
   @if $o-grid-size-l {
     /**
      * @name Large
-     * @level 5.1.4.
+     * @level X.X.X.
      * @description
      *   Screen sizes #{$breakpoint-l} (#{avalanche-strip-unit($breakpoint-l) * $font-base-size}) and up
      *
@@ -167,7 +167,7 @@
   @if $o-grid-size-xl {
     /**
      * @name X-Large
-     * @level 5.1.5.
+     * @level X.X.X.
      * @description
      *   Screen sizes #{$breakpoint-xl} (#{avalanche-strip-unit($breakpoint-xl) * $font-base-size}) and up
      *
