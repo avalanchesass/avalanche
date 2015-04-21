@@ -1,7 +1,9 @@
 // Load plugins
 var gulp             = require('gulp');
 var autoprefixer     = require('gulp-autoprefixer');
+var bower            = require('gulp-bower');
 var csso             = require('gulp-csso');
+var inject           = require('gulp-inject');
 var livereload       = require('gulp-livereload');
 var rename           = require('gulp-rename');
 var sass             = require('gulp-sass');
@@ -11,7 +13,7 @@ var sourcemaps       = require('gulp-sourcemaps');
 gulp.task('styles', function () {
   return gulp.src('scss/**/*.scss')
     .pipe(sourcemaps.init())
-      .pipe(sass({ 'precision': 7 }))
+      .pipe(sass({ precision: 7, errLogToConsole: true }))
       .pipe(autoprefixer())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('css'));
@@ -28,6 +30,52 @@ gulp.task('minify', ['styles'], function () {
     .pipe(livereload());
 });
 
+// Bower
+gulp.task('bower', function () {
+  gulp.start('inject');
+  return bower();
+});
+
+// Inject
+gulp.task('inject', ['bower'], function () {
+  // Inject packages in avalanche.scss
+  var functions  = gulp.src('bower_components/avalanche_function_*/scss/*.scss', { read: false });
+  var utilities  = gulp.src('bower_components/avalanche_utility_*/scss/*.scss', { read: false });
+  var objects    = gulp.src('bower_components/avalanche_object_*/scss/*.scss', { read: false });
+  var components = gulp.src('bower_components/avalanche_component_*/scss/*.scss', { read: false });
+
+  return gulp.src('scss/avalanche.scss')
+    .pipe(inject(functions, {
+      starttag: '/** bower:function **/',
+      endtag: '/** endbower **/',
+      transform: function (filepath, file, i, length) {
+        return '@import \'' + filepath.substring(1) + '\';';
+      }
+    }))
+    .pipe(inject(utilities, {
+      starttag: '/** bower:utility **/',
+      endtag: '/** endbower **/',
+      transform: function (filepath, file, i, length) {
+        return '@import \'' + filepath.substring(1) + '\';';
+      }
+    }))
+    .pipe(inject(objects, {
+      starttag: '/** bower:object **/',
+      endtag: '/** endbower **/',
+      transform: function (filepath, file, i, length) {
+        return '@import \'' + filepath.substring(1) + '\';';
+      }
+    }))
+    .pipe(inject(components, {
+      starttag: '/** bower:component **/',
+      endtag: '/** endbower **/',
+      transform: function (filepath, file, i, length) {
+        return '@import \'' + filepath.substring(1) + '\';';
+      }
+    }))
+    .pipe(gulp.dest('scss'));
+});
+
 // Watch
 gulp.task('watch', function () {
   gulp.watch('scss/**/*', ['styles', 'minify']);
@@ -36,56 +84,4 @@ gulp.task('watch', function () {
 // Default
 gulp.task('default', function () {
   gulp.start('watch');
-});
-
-/**
- * Component loading
- *
- * Usage:
- * gulp avalanche-extend --utility name
- * gulp avalanche-extend --object name
- */
-var download  = require('gulp-download');
-var httpcheck = require('httpcheck');
-var args      = require('yargs').argv;
-
-gulp.task('avalanche-extend', function () {
-  var branch = 'release-1.5';
-  var baseUrl = 'https://cdn.rawgit.com/maoberlehner/avalanche_{type}_{arg}/' + branch + '/_{arg}.scss';
-
-  var getExtension = function (extensionType, extensionName, extensionUrl, extensionDestination) {
-    httpcheck({
-      url: extensionUrl,
-      log: function () {},
-      check: function(res) {
-        if (res && res.statusCode === 404) {
-          console.error(extensionType + ' "' + extensionName + '" not found');
-          return true;
-        }
-        download(extensionUrl).pipe(gulp.dest(extensionDestination));
-        return false;
-      }
-    },
-    function (err) {
-      if (err) {
-        throw err;
-      }
-    });
-  };
-
-  var utilityName;
-  var utilityUrl;
-  if (args.utility) {
-    utilityName = args.utility;
-    utilityUrl = baseUrl.replace('{type}', 'utility').replace(/\{arg\}/g, utilityName);
-    getExtension('Utility', utilityName, utilityUrl, 'scss/utility/');
-  }
-
-  var objectName;
-  var objectUrl;
-  if (args.object) {
-    objectName = args.object;
-    objectUrl = baseUrl.replace('{type}', 'object').replace(/\{arg\}/g, objectName);
-    getExtension('Utility', objectName, objectUrl, 'scss/object/');
-  }
 });

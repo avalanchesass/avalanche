@@ -6,17 +6,27 @@
  *   The framework is easy extendable and intended to be edited as needed.
  */
 /**
- * @name System
+ * @name Function
  * @level 2.
  */
-@import 'system/function';
+/** bower:function **/
+@import 'bower_components/avalanche_function_breakpointmax/scss/breakpointmax.scss';
+@import 'bower_components/avalanche_function_strip_unit/scss/strip_unit.scss';
+/** endbower **/
+
+
+
+/**
+ * @name System
+ * @level 3.
+ */
 @import 'system/variable';
 
 
 
 /**
  * @name Base
- * @level 3.
+ * @level 4.
  */
 @import 'base/default';
 @import 'base/form';
@@ -27,21 +37,27 @@
 
 /**
  * @name Utility
- * @level 4.
+ * @level 5.
  */
-@import 'utility/clearfix';
-@import 'utility/list_reset';
-@import 'utility/spacing';
-@import 'utility/visibility';
+/** bower:utility **/
+@import 'bower_components/avalanche_utility_clearfix/scss/clearfix.scss';
+/** endbower **/
 
 
 
 /**
  * @name Object
- * @level 5.
+ * @level 6.
  */
-@import 'object/grid';
-@import 'object/button';
-@import 'object/menu';
-@import 'object/island';
-@import 'object/media';
+/** bower:object **/
+@import 'bower_components/avalanche_object_grid/scss/grid.scss';
+/** endbower **/
+
+
+
+/**
+ * @name Component
+ * @level 7.
+ */
+/** bower:component **/
+/** endbower **/
