@@ -1,25 +1,21 @@
-@if variable-exists(u-clearfix-imported) == false {
-  /**
-   * @name Clearfix
-   * @level X.X.
-   * @description
-   *   Contain floats
-   */
-  @mixin u-clearfix() {
-    *zoom: 1;
-    &:before,
-    &:after {
-      display: table;
-      content: ' ';
-    }
-    &:after {
-      clear: both;
-    }
+/**
+ * @name Clearfix
+ * @level X.X.
+ * @description
+ *   Contain floats
+ */
+@mixin u-clearfix() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: ' ';
   }
-
-  .u-clearfix {
-    @include u-clearfix();
+  &:after {
+    clear: both;
   }
+}
 
-  $u-clearfix-imported: true;
+.u-clearfix {
+  @include u-clearfix();
 }
