@@ -9,7 +9,7 @@
  * @name Function
  * @level 2.
  */
-/** inject:function **/
+/** bower:function **/
 /**
  * @name breakpointmax
  * @level X.X.X.
@@ -23,7 +23,7 @@
  * @description
  *   avalanche-strip-unit($number)
  */
-/** endinject **/
+/** endbower **/
 /**
  * @name System
  * @level 3.
@@ -461,7 +461,7 @@ small {
  * @name Utility
  * @level 5.
  */
-/** inject:utility **/
+/** bower:utility **/
 /**
  * @name Clearfix
  * @level X.X.
@@ -476,12 +476,12 @@ small {
   .u-clearfix:after {
     clear: both; }
 
-/** endinject **/
+/** endbower **/
 /**
  * @name Object
  * @level 6.
  */
-/** inject:object **/
+/** bower:object **/
 /**
  * @name Grid
  * @level X.X.
@@ -551,12 +551,12 @@ small {
 .o-grid__item--12 {
   width: 100%; }
 
-/** endinject **/
+/** endbower **/
 /**
  * @name Component
  * @level 7.
  */
-/** inject:component **/
-/** endinject **/
+/** bower:component **/
+/** endbower **/
 
 /*# sourceMappingURL=avalanche.css.map */

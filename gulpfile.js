@@ -46,29 +46,29 @@ gulp.task('inject', ['bower'], function () {
 
   return gulp.src('scss/avalanche.scss')
     .pipe(inject(functions, {
-      starttag: '/** inject:function **/',
-      endtag: '/** endinject **/',
+      starttag: '/** bower:function **/',
+      endtag: '/** endbower **/',
       transform: function (filepath, file, i, length) {
         return '@import \'' + filepath.substring(1) + '\';';
       }
     }))
     .pipe(inject(utilities, {
-      starttag: '/** inject:utility **/',
-      endtag: '/** endinject **/',
+      starttag: '/** bower:utility **/',
+      endtag: '/** endbower **/',
       transform: function (filepath, file, i, length) {
         return '@import \'' + filepath.substring(1) + '\';';
       }
     }))
     .pipe(inject(objects, {
-      starttag: '/** inject:object **/',
-      endtag: '/** endinject **/',
+      starttag: '/** bower:object **/',
+      endtag: '/** endbower **/',
       transform: function (filepath, file, i, length) {
         return '@import \'' + filepath.substring(1) + '\';';
       }
     }))
     .pipe(inject(components, {
-      starttag: '/** inject:component **/',
-      endtag: '/** endinject **/',
+      starttag: '/** bower:component **/',
+      endtag: '/** endbower **/',
       transform: function (filepath, file, i, length) {
         return '@import \'' + filepath.substring(1) + '\';';
       }
