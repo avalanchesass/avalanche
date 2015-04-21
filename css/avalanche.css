@@ -6,30 +6,27 @@
  *   The framework is easy extendable and intended to be edited as needed.
  */
 /**
- * @name System
+ * @name Function
  * @level 2.
  */
+/** inject:function **/
 /**
- * Dependencies
+ * @name breakpointmax
+ * @level X.X.X.
+ * @description
+ *   Get the max-width value of a breakpoint  
+ *   avalanche-breakpointmax($breakpoint, $base: $font-base-size)
  */
 /**
- * Dependencies
+ * @name strip-unit
+ * @level X.X.X.
+ * @description
+ *   avalanche-strip-unit($number)
  */
+/** endinject **/
 /**
-   * @name strip-unit
-   * @level 2.2.1.
-   * @description
-   *   avalanche-strip-unit($number)
-   */
-/**
-   * @name breakpointmax
-   * @level 2.2.5.
-   * @description
-   *   Get the max-width value of a breakpoint  
-   *   avalanche-breakpointmax($breakpoint, $base: $font-base-size)
-   */
-/**
- * Dependencies
+ * @name System
+ * @level 3.
  */
 /**
  * @name Variable
@@ -173,7 +170,7 @@
  */
 /**
  * @name Base
- * @level 3.
+ * @level 4.
  */
 /**
  * @name Default
@@ -462,157 +459,15 @@ small {
 
 /**
  * @name Utility
- * @level 4.
+ * @level 5.
  */
+/** inject:utility **/
 /**
- * Dependencies
- */
-/**
- * @name Variable
- * @level 2.1.
- */
-/**
- * @name Color Scheme
- * @level 2.1.1.
- * @description Fancy generator: http://coolors.co/
- */
-/**
- * @name Basic colors
- * @level 2.1.1.1.
- */
-/**
- * @colors
- *   $cs-a|#16193B $cs-b|#35478C $cs-c|#4E7AC7 $cs-d|#7FB2F0 $cs-e|#ADD5F7
- *   $cs-a-contrast|#fff $cs-b-contrast|#fff $cs-c-contrast|#fff $cs-d-contrast|#fff $cs-e-contrast|#fff
- */
-/**
- * @name Colors for alerts
- * @level 2.1.1.2.
- * @description e.g. success, error, info,...
- */
-/**
- * @colors
- *   $cs-positive|#468847 $cs-neutral|#3A87AD $cs-cautious|#c09853 $cs-negative|#b94a48
- */
-/**
- * @name Grey
- * @level 2.1.1.3.
- */
-/**
- * @colors
- *   $cs-grey-a|#efefef $cs-grey-b|#d5d5d5 $cs-grey-c|#bcbcbc
- */
-/**
- * @name Typography
- * @level 2.1.2.
+ * @name Clearfix
+ * @level X.X.
  * @description
- *   Set the font weight variables according to the font  
- *   e.g. http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700  
- *   In this case set the font weights to 200, 400 and 700  
- *   If you set a font weight in your css you must use this variables!  
- *   e.g. font-weight: $font-a-weight-normal;
+ *   Contain floats
  */
-/**
- * @name Basic configuration
- * @level 2.1.2.1.
- *
- * 1. must be in px, do not use in your styles
- */
-/* [1] */
-/* [1] */
-/**
- * @variables
- *   $font-base-size|16px $font-base-line-height|24px $font-base-color|#222
- */
-/**
- * @name Font sizes
- * @level 2.1.2.2.
- */
-/**
- * @name System fonts
- * @level 2.1.2.3.
- */
-/**
- * @name Font A
- * @level 2.1.2.3.1.
- */
-/**
- * @font ['Helvetica Neue', sans-serif]
- *   ABCDEFGHIJKLMNOPQRSTUVWXYZ  
- *   abcdefghijklmnopqrstuvwxyz  
- *   0123456789  
- *   !&/()$=@;:,.
- */
-/**
- * @name Font B
- * @level 2.1.2.3.2.
- */
-/**
- * @font [Futura, 'Trebuchet MS', sans-serif]
- *   ABCDEFGHIJKLMNOPQRSTUVWXYZ  
- *   abcdefghijklmnopqrstuvwxyz  
- *   0123456789  
- *   !&/()$=@;:,.
- */
-/**
- * @name Anchors
- * @level 2.1.2.4.
- * @markup
- *   <a href="#">Anchor</a>
- */
-/**
- * @name Text selection
- * @level 2.1.2.5.
- * @description
- *   Select some text to see it in action
- */
-/**
- * @name Breakpoints
- * @level 2.1.3.
- * @description
- *   More infos about media queries:  
- *   [Brad Frost - 7 Habits of highly effective media queries](http://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/)
- */
-/**
- * @name min Breakpoints
- * @level 2.1.3.1.
- */
-/**
- * @variables
- *   $breakpoint-s|30em $breakpoint-m|45em $breakpoint-l|60em $breakpoint-xl|75em
- */
-/**
- * @name max Breakpoints
- * @level 2.1.3.2.
- * @description
- *   Use with care, min-width breakpoints should be preferred!
- */
-/**
- * @variables
- *   $breakpoint-max-s|29.9375em $breakpoint-max-m|44.9375em $breakpoint-max-l|59.9375em $breakpoint-max-xl|74.9375em
- */
-/**
- * @name Spacing
- * @level 2.1.4.
- */
-/**
- * @variables
- *   $spacing-xs|0.5em $spacing-s|1em $spacing-m|1.5em $spacing-l|2em $spacing-xl|3em $spacing-xxl|4em $spacing-xxxl|5em
- */
-/**
- * @name Layout
- * @level 2.1.5.
- */
-/**
- * @variables
- *   $layout-max-width|62em $layout-box-sizing-reset|true
- */
-/**
-   * @name Clearfix
-   * @level 4.1.
-   * @description
-   *   Contain floats
-   */
 .u-clearfix {
   *zoom: 1; }
   .u-clearfix:before, .u-clearfix:after {
@@ -621,318 +476,31 @@ small {
   .u-clearfix:after {
     clear: both; }
 
+/** endinject **/
 /**
  * @name Object
- * @level 5.
+ * @level 6.
+ */
+/** inject:object **/
+/**
+ * @name Grid
+ * @level X.X.
  */
 /**
- * Dependencies
+ * Variables
  */
 /**
- * @name Variable
- * @level 2.1.
- */
-/**
- * @name Color Scheme
- * @level 2.1.1.
- * @description Fancy generator: http://coolors.co/
- */
-/**
- * @name Basic colors
- * @level 2.1.1.1.
- */
-/**
- * @colors
- *   $cs-a|#16193B $cs-b|#35478C $cs-c|#4E7AC7 $cs-d|#7FB2F0 $cs-e|#ADD5F7
- *   $cs-a-contrast|#fff $cs-b-contrast|#fff $cs-c-contrast|#fff $cs-d-contrast|#fff $cs-e-contrast|#fff
- */
-/**
- * @name Colors for alerts
- * @level 2.1.1.2.
- * @description e.g. success, error, info,...
- */
-/**
- * @colors
- *   $cs-positive|#468847 $cs-neutral|#3A87AD $cs-cautious|#c09853 $cs-negative|#b94a48
- */
-/**
- * @name Grey
- * @level 2.1.1.3.
- */
-/**
- * @colors
- *   $cs-grey-a|#efefef $cs-grey-b|#d5d5d5 $cs-grey-c|#bcbcbc
- */
-/**
- * @name Typography
- * @level 2.1.2.
+ * @name Base
+ * @level X.X.X.
  * @description
- *   Set the font weight variables according to the font  
- *   e.g. http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700  
- *   In this case set the font weights to 200, 400 and 700  
- *   If you set a font weight in your css you must use this variables!  
- *   e.g. font-weight: $font-a-weight-normal;
- */
-/**
- * @name Basic configuration
- * @level 2.1.2.1.
+ *   Mobile first styles for all screen sizes
  *
- * 1. must be in px, do not use in your styles
- */
-/* [1] */
-/* [1] */
-/**
- * @variables
- *   $font-base-size|16px $font-base-line-height|24px $font-base-color|#222
- */
-/**
- * @name Font sizes
- * @level 2.1.2.2.
- */
-/**
- * @name System fonts
- * @level 2.1.2.3.
- */
-/**
- * @name Font A
- * @level 2.1.2.3.1.
- */
-/**
- * @font ['Helvetica Neue', sans-serif]
- *   ABCDEFGHIJKLMNOPQRSTUVWXYZ  
- *   abcdefghijklmnopqrstuvwxyz  
- *   0123456789  
- *   !&/()$=@;:,.
- */
-/**
- * @name Font B
- * @level 2.1.2.3.2.
- */
-/**
- * @font [Futura, 'Trebuchet MS', sans-serif]
- *   ABCDEFGHIJKLMNOPQRSTUVWXYZ  
- *   abcdefghijklmnopqrstuvwxyz  
- *   0123456789  
- *   !&/()$=@;:,.
- */
-/**
- * @name Anchors
- * @level 2.1.2.4.
  * @markup
- *   <a href="#">Anchor</a>
+ *   <div class="o-grid">
+ *     <div class="o-grid__item--6">Grid Item</div>
+ *     <div class="o-grid__item--6">Grid Item</div>
+ *   </div>
  */
-/**
- * @name Text selection
- * @level 2.1.2.5.
- * @description
- *   Select some text to see it in action
- */
-/**
- * @name Breakpoints
- * @level 2.1.3.
- * @description
- *   More infos about media queries:  
- *   [Brad Frost - 7 Habits of highly effective media queries](http://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/)
- */
-/**
- * @name min Breakpoints
- * @level 2.1.3.1.
- */
-/**
- * @variables
- *   $breakpoint-s|30em $breakpoint-m|45em $breakpoint-l|60em $breakpoint-xl|75em
- */
-/**
- * @name max Breakpoints
- * @level 2.1.3.2.
- * @description
- *   Use with care, min-width breakpoints should be preferred!
- */
-/**
- * @variables
- *   $breakpoint-max-s|29.9375em $breakpoint-max-m|44.9375em $breakpoint-max-l|59.9375em $breakpoint-max-xl|74.9375em
- */
-/**
- * @name Spacing
- * @level 2.1.4.
- */
-/**
- * @variables
- *   $spacing-xs|0.5em $spacing-s|1em $spacing-m|1.5em $spacing-l|2em $spacing-xl|3em $spacing-xxl|4em $spacing-xxxl|5em
- */
-/**
- * @name Layout
- * @level 2.1.5.
- */
-/**
- * @variables
- *   $layout-max-width|62em $layout-box-sizing-reset|true
- */
-/**
- * Dependencies
- */
-/**
- * Dependencies
- */
-/**
- * @name Variable
- * @level 2.1.
- */
-/**
- * @name Color Scheme
- * @level 2.1.1.
- * @description Fancy generator: http://coolors.co/
- */
-/**
- * @name Basic colors
- * @level 2.1.1.1.
- */
-/**
- * @colors
- *   $cs-a|#16193B $cs-b|#35478C $cs-c|#4E7AC7 $cs-d|#7FB2F0 $cs-e|#ADD5F7
- *   $cs-a-contrast|#fff $cs-b-contrast|#fff $cs-c-contrast|#fff $cs-d-contrast|#fff $cs-e-contrast|#fff
- */
-/**
- * @name Colors for alerts
- * @level 2.1.1.2.
- * @description e.g. success, error, info,...
- */
-/**
- * @colors
- *   $cs-positive|#468847 $cs-neutral|#3A87AD $cs-cautious|#c09853 $cs-negative|#b94a48
- */
-/**
- * @name Grey
- * @level 2.1.1.3.
- */
-/**
- * @colors
- *   $cs-grey-a|#efefef $cs-grey-b|#d5d5d5 $cs-grey-c|#bcbcbc
- */
-/**
- * @name Typography
- * @level 2.1.2.
- * @description
- *   Set the font weight variables according to the font  
- *   e.g. http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700  
- *   In this case set the font weights to 200, 400 and 700  
- *   If you set a font weight in your css you must use this variables!  
- *   e.g. font-weight: $font-a-weight-normal;
- */
-/**
- * @name Basic configuration
- * @level 2.1.2.1.
- *
- * 1. must be in px, do not use in your styles
- */
-/* [1] */
-/* [1] */
-/**
- * @variables
- *   $font-base-size|16px $font-base-line-height|24px $font-base-color|#222
- */
-/**
- * @name Font sizes
- * @level 2.1.2.2.
- */
-/**
- * @name System fonts
- * @level 2.1.2.3.
- */
-/**
- * @name Font A
- * @level 2.1.2.3.1.
- */
-/**
- * @font ['Helvetica Neue', sans-serif]
- *   ABCDEFGHIJKLMNOPQRSTUVWXYZ  
- *   abcdefghijklmnopqrstuvwxyz  
- *   0123456789  
- *   !&/()$=@;:,.
- */
-/**
- * @name Font B
- * @level 2.1.2.3.2.
- */
-/**
- * @font [Futura, 'Trebuchet MS', sans-serif]
- *   ABCDEFGHIJKLMNOPQRSTUVWXYZ  
- *   abcdefghijklmnopqrstuvwxyz  
- *   0123456789  
- *   !&/()$=@;:,.
- */
-/**
- * @name Anchors
- * @level 2.1.2.4.
- * @markup
- *   <a href="#">Anchor</a>
- */
-/**
- * @name Text selection
- * @level 2.1.2.5.
- * @description
- *   Select some text to see it in action
- */
-/**
- * @name Breakpoints
- * @level 2.1.3.
- * @description
- *   More infos about media queries:  
- *   [Brad Frost - 7 Habits of highly effective media queries](http://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/)
- */
-/**
- * @name min Breakpoints
- * @level 2.1.3.1.
- */
-/**
- * @variables
- *   $breakpoint-s|30em $breakpoint-m|45em $breakpoint-l|60em $breakpoint-xl|75em
- */
-/**
- * @name max Breakpoints
- * @level 2.1.3.2.
- * @description
- *   Use with care, min-width breakpoints should be preferred!
- */
-/**
- * @variables
- *   $breakpoint-max-s|29.9375em $breakpoint-max-m|44.9375em $breakpoint-max-l|59.9375em $breakpoint-max-xl|74.9375em
- */
-/**
- * @name Spacing
- * @level 2.1.4.
- */
-/**
- * @variables
- *   $spacing-xs|0.5em $spacing-s|1em $spacing-m|1.5em $spacing-l|2em $spacing-xl|3em $spacing-xxl|4em $spacing-xxxl|5em
- */
-/**
- * @name Layout
- * @level 2.1.5.
- */
-/**
- * @variables
- *   $layout-max-width|62em $layout-box-sizing-reset|true
- */
-/**
-   * @name Grid
-   * @level 5.1.
-   */
-/**
-   * Variables
-   */
-/**
-   * @name Base
-   * @level 5.1.1.
-   * @description
-   *   Mobile first styles for all screen sizes
-   *
-   * @markup
-   *   <div class="o-grid">
-   *     <div class="o-grid__item--6">Grid Item</div>
-   *     <div class="o-grid__item--6">Grid Item</div>
-   *   </div>
-   */
 .o-grid {
   *zoom: 1;
   margin-left: -1em; }
@@ -983,5 +551,12 @@ small {
 .o-grid__item--12 {
   width: 100%; }
 
+/** endinject **/
+/**
+ * @name Component
+ * @level 7.
+ */
+/** inject:component **/
+/** endinject **/
 
 /*# sourceMappingURL=avalanche.css.map */
