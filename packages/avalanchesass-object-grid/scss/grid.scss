@@ -62,7 +62,7 @@ $o-grid-base-size: (100% / $o-grid-item-count);
    * @name Small
    * @level X.X.X.
    * @description
-   *   Screen sizes #{$breakpoint-s} (#{avalanche-strip-unit($breakpoint-s) * $font-base-size}) and up
+   *   Screen sizes #{$breakpoint-s} (#{strip-unit($breakpoint-s) * $font-base-size}) and up
    *
    * @markup
    *   <div class="o-grid">
@@ -86,7 +86,7 @@ $o-grid-base-size: (100% / $o-grid-item-count);
    * @name Medium
    * @level X.X.X.
    * @description
-   *   Screen sizes #{$breakpoint-m} (#{avalanche-strip-unit($breakpoint-m) * $font-base-size}) and up
+   *   Screen sizes #{$breakpoint-m} (#{strip-unit($breakpoint-m) * $font-base-size}) and up
    *
    * @markup
    *   <div class="o-grid">
@@ -120,7 +120,7 @@ $o-grid-base-size: (100% / $o-grid-item-count);
    * @name Large
    * @level X.X.X.
    * @description
-   *   Screen sizes #{$breakpoint-l} (#{avalanche-strip-unit($breakpoint-l) * $font-base-size}) and up
+   *   Screen sizes #{$breakpoint-l} (#{strip-unit($breakpoint-l) * $font-base-size}) and up
    *
    * @markup
    *   <div class="o-grid">
@@ -154,7 +154,7 @@ $o-grid-base-size: (100% / $o-grid-item-count);
    * @name X-Large
    * @level X.X.X.
    * @description
-   *   Screen sizes #{$breakpoint-xl} (#{avalanche-strip-unit($breakpoint-xl) * $font-base-size}) and up
+   *   Screen sizes #{$breakpoint-xl} (#{strip-unit($breakpoint-xl) * $font-base-size}) and up
    *
    * @markup
    *   <div class="o-grid">
