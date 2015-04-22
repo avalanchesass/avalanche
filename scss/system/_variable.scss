@@ -201,10 +201,10 @@ $breakpoint-xl: 75em;
  * @description
  *   Use with care, min-width breakpoints should be preferred!
  */
-$breakpoint-max-s:  avalanche-breakpointmax($breakpoint-s);
-$breakpoint-max-m:  avalanche-breakpointmax($breakpoint-m);
-$breakpoint-max-l:  avalanche-breakpointmax($breakpoint-l);
-$breakpoint-max-xl: avalanche-breakpointmax($breakpoint-xl);
+$breakpoint-max-s:  breakpointmax($breakpoint-s);
+$breakpoint-max-m:  breakpointmax($breakpoint-m);
+$breakpoint-max-l:  breakpointmax($breakpoint-l);
+$breakpoint-max-xl: breakpointmax($breakpoint-xl);
 /**
  * @variables
  *   $breakpoint-max-s|#{$breakpoint-max-s} $breakpoint-max-m|#{$breakpoint-max-m} $breakpoint-max-l|#{$breakpoint-max-l} $breakpoint-max-xl|#{$breakpoint-max-xl}
@@ -218,7 +218,7 @@ $breakpoint-max-xl: avalanche-breakpointmax($breakpoint-xl);
  */
 $spacing-xs:   0.5em;
 $spacing-s:    1em;
-$spacing-m:    avalanche-strip-unit($font-base-line-height / $font-base-size) * 1em;
+$spacing-m:    strip-unit($font-base-line-height / $font-base-size) * 1em;
 $spacing-l:    2em;
 $spacing-xl:   3em;
 $spacing-xxl:  4em;
