@@ -12,14 +12,14 @@
 /** bower:function **/
 /**
  * @name breakpointmax
- * @level X.X.X.
+ * @level X.X.
  * @description
  *   Get the max-width value of a breakpoint  
  *   breakpointmax($breakpoint, $base: $font-base-size)
  */
 /**
  * @name strip-unit
- * @level X.X.X.
+ * @level X.X.
  * @description
  *   strip-unit($number)
  */
@@ -30,16 +30,16 @@
  */
 /**
  * @name Variable
- * @level 2.1.
+ * @level X.X.
  */
 /**
  * @name Color Scheme
- * @level 2.1.1.
+ * @level X.X.X.
  * @description Fancy generator: http://coolors.co/
  */
 /**
  * @name Basic colors
- * @level 2.1.1.1.
+ * @level X.X.X.X.
  */
 /**
  * @colors
@@ -48,7 +48,7 @@
  */
 /**
  * @name Colors for alerts
- * @level 2.1.1.2.
+ * @level X.X.X.X.
  * @description e.g. success, error, info,...
  */
 /**
@@ -57,7 +57,7 @@
  */
 /**
  * @name Grey
- * @level 2.1.1.3.
+ * @level X.X.X.X.
  */
 /**
  * @colors
@@ -65,7 +65,7 @@
  */
 /**
  * @name Typography
- * @level 2.1.2.
+ * @level X.X.X.
  * @description
  *   Set the font weight variables according to the font  
  *   e.g. http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700  
@@ -75,7 +75,7 @@
  */
 /**
  * @name Basic configuration
- * @level 2.1.2.1.
+ * @level X.X.X.X.
  *
  * 1. must be in px, do not use in your styles
  */
@@ -87,15 +87,15 @@
  */
 /**
  * @name Font sizes
- * @level 2.1.2.2.
+ * @level X.X.X.X.
  */
 /**
  * @name System fonts
- * @level 2.1.2.3.
+ * @level X.X.X.X.
  */
 /**
  * @name Font A
- * @level 2.1.2.3.1.
+ * @level X.X.X.X.X.
  */
 /**
  * @font ['Helvetica Neue', sans-serif]
@@ -106,7 +106,7 @@
  */
 /**
  * @name Font B
- * @level 2.1.2.3.2.
+ * @level X.X.X.X.X.
  */
 /**
  * @font [Futura, 'Trebuchet MS', sans-serif]
@@ -117,26 +117,26 @@
  */
 /**
  * @name Anchors
- * @level 2.1.2.4.
+ * @level X.X.X.X.
  * @markup
  *   <a href="#">Anchor</a>
  */
 /**
  * @name Text selection
- * @level 2.1.2.5.
+ * @level X.X.X.X.
  * @description
  *   Select some text to see it in action
  */
 /**
  * @name Breakpoints
- * @level 2.1.3.
+ * @level X.X.X.
  * @description
  *   More infos about media queries:  
  *   [Brad Frost - 7 Habits of highly effective media queries](http://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/)
  */
 /**
  * @name min Breakpoints
- * @level 2.1.3.1.
+ * @level X.X.X.X.
  */
 /**
  * @variables
@@ -144,7 +144,7 @@
  */
 /**
  * @name max Breakpoints
- * @level 2.1.3.2.
+ * @level X.X.X.X.
  * @description
  *   Use with care, min-width breakpoints should be preferred!
  */
@@ -154,7 +154,7 @@
  */
 /**
  * @name Spacing
- * @level 2.1.4.
+ * @level X.X.X.
  */
 /**
  * @variables
@@ -162,7 +162,7 @@
  */
 /**
  * @name Layout
- * @level 2.1.5.
+ * @level X.X.X.
  */
 /**
  * @variables
@@ -174,7 +174,7 @@
  */
 /**
  * @name Default
- * @level 3.1.
+ * @level X.X.
  * @description
  *   Base styles: opinionated defaults  
  *   Adopted from the great https://html5boilerplate.com/
@@ -235,7 +235,7 @@ textarea {
 
 /**
  * @name Form
- * @level 3.2.
+ * @level X.X.
  * @markup
  *   <form>
  *     <div>
@@ -318,11 +318,11 @@ textarea {
 
 /**
  * @name Layout
- * @level 3.3.
+ * @level X.X.
  */
 /**
  * @name Container
- * @level 3.3.1.
+ * @level X.X.X.
  * @description
  *   Basic container to limit the max-width  
  *   of the layout and add some padding
@@ -334,7 +334,7 @@ textarea {
 
 /**
  * @name Box sizing reset
- * @level 3.3.2.
+ * @level X.X.X.
  * @description
  *   Better box model  
  *   [Paul Irish - * { Box-sizing: Border-box } FTW](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
@@ -347,11 +347,11 @@ html {
 
 /**
  * @name Typography
- * @level 3.4.
+ * @level X.X.
  */
 /**
  * @name Headlines
- * @level 3.4.1.
+ * @level X.X.X.
  * @description
  *   <h1>Headline 1</h1>
  *   <h2>Headline 2</h2>
@@ -388,7 +388,7 @@ h6 {
 
 /**
  * @name Anchors
- * @level 3.4.2.
+ * @level X.X.X.
  * @markup
  *   <a href="#">readmore...</a>
  *   <span class="a">readmore...</span>
@@ -411,7 +411,7 @@ a, .a {
 
 /**
  * @name Whitespace
- * @level 3.4.3.
+ * @level X.X.X.
  * @markup
  *   <h2>Lorem Ipsum</h2>
  *   <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
