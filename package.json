@@ -10,6 +10,7 @@
     "gulp-csso": "^1.0.0",
     "gulp-inject": "^1.2.0",
     "gulp-livereload": "^3.8.0",
+    "gulp-pixrem": "^0.1.4",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^1.3.3",
     "gulp-sourcemaps": "^1.5.2"

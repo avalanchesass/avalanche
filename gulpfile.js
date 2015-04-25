@@ -5,6 +5,7 @@ var bower            = require('gulp-bower');
 var csso             = require('gulp-csso');
 var inject           = require('gulp-inject');
 var livereload       = require('gulp-livereload');
+var pixrem           = require('gulp-pixrem');
 var rename           = require('gulp-rename');
 var sass             = require('gulp-sass');
 var sourcemaps       = require('gulp-sourcemaps');
@@ -26,6 +27,7 @@ gulp.task('minify', ['styles'], function () {
     .pipe(rename(function (path) {
       path.basename += '.min';
     }))
+    .pipe(pixrem())
     .pipe(gulp.dest('css'))
     .pipe(livereload());
 });
