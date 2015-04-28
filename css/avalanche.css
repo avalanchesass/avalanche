@@ -182,6 +182,12 @@
 html {
   font-size: 100%;
   line-height: 1.5; }
+  @media (max-width: 44.9375em) {
+    html {
+      font-size: 87.5%; } }
+  @media (max-width: 29.9375em) {
+    html {
+      font-size: 75%; } }
 
 html, button, input, select, textarea {
   color: #222;
