@@ -10,6 +10,16 @@ var rename           = require('gulp-rename');
 var sass             = require('gulp-sass');
 var sourcemaps       = require('gulp-sourcemaps');
 
+// Define package types
+var packageTypes = [
+  'function',
+  'system',
+  'base',
+  'utility',
+  'object',
+  'component'
+];
+
 // Styles
 gulp.task('styles', function () {
   return gulp.src('scss/**/*.scss')
@@ -40,42 +50,22 @@ gulp.task('bower', function () {
 
 // Inject
 gulp.task('inject', ['bower'], function () {
-  // Inject packages in avalanche.scss
-  var functions  = gulp.src('bower_components/avalanche_function_*/scss/*.scss', { read: false });
-  var utilities  = gulp.src('bower_components/avalanche_utility_*/scss/*.scss', { read: false });
-  var objects    = gulp.src('bower_components/avalanche_object_*/scss/*.scss', { read: false });
-  var components = gulp.src('bower_components/avalanche_component_*/scss/*.scss', { read: false });
+  var src = gulp.src('scss/avalanche.scss');
+  var packageSrc;
 
-  return gulp.src('scss/avalanche.scss')
-    .pipe(inject(functions, {
-      starttag: '/** bower:function **/',
+  packageTypes.forEach(function (packageType) {
+    packageSrc = gulp.src('bower_components/avalanche_' + packageType + '_*/scss/*.scss', { read: false });
+
+    src.pipe(inject(packageSrc, {
+      starttag: '/** bower:' + packageType + ' **/',
       endtag: '/** endbower **/',
       transform: function (filepath, file, i, length) {
         return '@import \'' + filepath.substring(1) + '\';';
       }
-    }))
-    .pipe(inject(utilities, {
-      starttag: '/** bower:utility **/',
-      endtag: '/** endbower **/',
-      transform: function (filepath, file, i, length) {
-        return '@import \'' + filepath.substring(1) + '\';';
-      }
-    }))
-    .pipe(inject(objects, {
-      starttag: '/** bower:object **/',
-      endtag: '/** endbower **/',
-      transform: function (filepath, file, i, length) {
-        return '@import \'' + filepath.substring(1) + '\';';
-      }
-    }))
-    .pipe(inject(components, {
-      starttag: '/** bower:component **/',
-      endtag: '/** endbower **/',
-      transform: function (filepath, file, i, length) {
-        return '@import \'' + filepath.substring(1) + '\';';
-      }
-    }))
-    .pipe(gulp.dest('scss'));
+    }));
+  });
+
+  return src.pipe(gulp.dest('scss'));
 });
 
 // Watch
