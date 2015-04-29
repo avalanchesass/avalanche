@@ -10,8 +10,6 @@
  * @level 2.
  */
 /** inject:function **/
-@import 'function/breakpointmax';
-@import 'function/strip_unit';
 /** endinject **/
 
 
@@ -21,7 +19,6 @@
  * @level 3.
  */
 /** inject:system **/
-@import 'system/variable';
 /** endinject **/
 
 
@@ -31,10 +28,6 @@
  * @level 4.
  */
 /** inject:base **/
-@import 'base/default';
-@import 'base/form';
-@import 'base/layout';
-@import 'base/typography';
 /** endinject **/
 
 
