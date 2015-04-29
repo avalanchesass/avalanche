@@ -2,3 +2,4 @@
 .sass-cache
 vendor
 scss/*/*.scss
+css/*
