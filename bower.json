@@ -21,6 +21,12 @@
   ],
   "dependencies": {
     "avalanche_function_breakpointmax": "dev",
-    "avalanche_function_strip_unit": "dev"
+    "avalanche_function_strip_unit": "dev",
+    "avalanche_system_variable": "dev",
+    "avalanche_base_default": "dev",
+    "avalanche_base_form": "dev",
+    "avalanche_base_layout": "dev",
+    "avalanche_base_typography": "dev",
+    "normalize.css": "~3.0.3"
   }
 }

@@ -1,4 +1,5 @@
 // Load plugins
+var del              = require('del');
 var gulp             = require('gulp');
 var autoprefixer     = require('gulp-autoprefixer');
 var bower            = require('gulp-bower');
@@ -54,16 +55,29 @@ gulp.task('inject', ['bower'], function () {
   var packageSrc;
 
   packageTypes.forEach(function (packageType) {
-    packageSrc = gulp.src('bower_components/avalanche_' + packageType + '_*/scss/*.scss', { read: false });
+    // Move package files to the scss directory
+    gulp.src('vendor/avalanche_' + packageType + '_*/scss/*.scss')
+      .pipe(rename(function (path) {
+        path.dirname = '/' + packageType;
+      }))
+      .pipe(gulp.dest('scss'));
+
+    // Inject files into avalanche.scss
+    packageSrc = gulp.src('scss/' + packageType + '/*.scss', { read: false });
 
     src.pipe(inject(packageSrc, {
-      starttag: '/** bower:' + packageType + ' **/',
-      endtag: '/** endbower **/',
+      starttag: '/** inject:' + packageType + ' **/',
+      endtag: '/** endinject **/',
       transform: function (filepath, file, i, length) {
-        return '@import \'' + filepath.substring(1) + '\';';
+        return '@import \'' + filepath.substring(1).replace('scss/', '').replace('/_', '/').replace('.scss', '') + '\';';
       }
     }));
   });
+
+  // Remove avalanche packages from the vendor folder
+  del([
+    'vendor/avalanche_*'
+  ]);
 
   return src.pipe(gulp.dest('scss'));
 });

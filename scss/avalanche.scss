@@ -9,10 +9,10 @@
  * @name Function
  * @level 2.
  */
-/** bower:function **/
-@import 'bower_components/avalanche_function_breakpointmax/scss/_breakpointmax.scss';
-@import 'bower_components/avalanche_function_strip_unit/scss/_strip_unit.scss';
-/** endbower **/
+/** inject:function **/
+@import 'function/breakpointmax';
+@import 'function/strip_unit';
+/** endinject **/
 
 
 
@@ -20,7 +20,9 @@
  * @name System
  * @level 3.
  */
+/** inject:system **/
 @import 'system/variable';
+/** endinject **/
 
 
 
@@ -28,10 +30,12 @@
  * @name Base
  * @level 4.
  */
+/** inject:base **/
 @import 'base/default';
 @import 'base/form';
 @import 'base/layout';
 @import 'base/typography';
+/** endinject **/
 
 
 
@@ -39,8 +43,8 @@
  * @name Utility
  * @level 5.
  */
-/** bower:utility **/
-/** endbower **/
+/** inject:utility **/
+/** endinject **/
 
 
 
@@ -48,8 +52,8 @@
  * @name Object
  * @level 6.
  */
-/** bower:object **/
-/** endbower **/
+/** inject:object **/
+/** endinject **/
 
 
 
@@ -57,5 +61,5 @@
  * @name Component
  * @level 7.
  */
-/** bower:component **/
-/** endbower **/
+/** inject:component **/
+/** endinject **/
