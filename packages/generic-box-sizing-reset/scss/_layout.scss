@@ -1,0 +1,38 @@
+/**
+ * @name Layout
+ * @level X.X.
+ */
+/**
+ * @name Container
+ * @level X.X.X.
+ * @description
+ *   Basic container to limit the max-width  
+ *   of the layout and add some padding
+ */
+.container {
+  margin: 0 auto;
+  padding: 0 1em;
+  max-width: $layout-max-width;
+}
+
+
+
+/**
+ * @name Box sizing reset
+ * @level X.X.X.
+ * @description
+ *   Better box model  
+ *   [Paul Irish - * { Box-sizing: Border-box } FTW](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
+ */
+@if $layout-box-sizing-reset {
+  html {
+    box-sizing: border-box;
+  }
+  * {
+    &,
+    &:before,
+    &:after {
+      box-sizing: inherit;
+    }
+  }
+}
