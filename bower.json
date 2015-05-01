@@ -20,7 +20,6 @@
     "tests"
   ],
   "dependencies": {
-    "avalanche_system_variable": "dev",
     "avalanche_base_default": "dev",
     "avalanche_base_form": "dev",
     "avalanche_base_layout": "dev",
