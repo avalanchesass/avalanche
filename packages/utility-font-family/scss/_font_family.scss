@@ -3,21 +3,21 @@
  * @level X.X.
  */
 @function font-family-find-normal-weight($font-family) {
-  @if variable-exists($font-a-family) and $font-family == $font-a-family {
+  @if variable-exists(font-a-family) and $font-family == $font-a-family {
     @return $font-a-weight-normal;
-  }  @else if variable-exists($font-b-family) and $font-family == $font-b-family {
+  }  @else if variable-exists(font-b-family) and $font-family == $font-b-family {
     @return $font-b-weight-normal;
-  }  @else if variable-exists($font-c-family) and $font-family == $font-c-family {
+  }  @else if variable-exists(font-c-family) and $font-family == $font-c-family {
     @return $font-c-weight-normal;
-  }  @else if variable-exists($font-d-family) and $font-family == $font-d-family {
+  }  @else if variable-exists(font-d-family) and $font-family == $font-d-family {
     @return $font-d-weight-normal;
-  }  @else if variable-exists($font-e-family) and $font-family == $font-e-family {
+  }  @else if variable-exists(font-e-family) and $font-family == $font-e-family {
     @return $font-e-weight-normal;
   }
   @return 400;
 }
 
-@if variable-exists($font-a-family) {
+@if variable-exists(font-a-family) {
   @mixin u-font-family($font-family: $font-a-family, $font-weight: 0) {
     font-family: $font-family;
     @if $font-weight == 0 {
@@ -29,7 +29,7 @@
     @include u-font-family();
   }
 
-  @if variable-exists($font-b-family) {
+  @if variable-exists(font-b-family) {
     .u-font-family-b {
       @include u-font-family($font-b-family);
     }
