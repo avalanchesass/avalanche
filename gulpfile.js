@@ -74,12 +74,17 @@ gulp.task('inject', ['bower'], function () {
     }));
   });
 
+  gulp.start('clean:vendor');
+
+  return src.pipe(gulp.dest('scss'));
+});
+
+// Clean:vendor
+gulp.task('clean:vendor', ['inject'], function () {
   // Remove avalanche packages from the vendor folder
   del([
     'vendor/avalanche_*'
   ]);
-
-  return src.pipe(gulp.dest('scss'));
 });
 
 // Watch
