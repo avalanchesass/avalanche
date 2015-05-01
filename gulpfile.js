@@ -45,28 +45,32 @@ gulp.task('minify', ['styles'], function () {
 
 // Bower
 gulp.task('bower', function () {
-  gulp.start('inject');
+  gulp.start('move');
   return bower();
 });
 
 // Inject
-gulp.task('inject', ['bower'], function () {
+gulp.task('move', ['bower'], function () {
+  gulp.start('inject');
+  gulp.start('clean:vendor');
+  return gulp.src('vendor/avalanche_*/scss/*.scss')
+    .pipe(rename(function (path) {
+      var packageType = path.dirname
+        .replace('avalanche_', '')
+        .replace(path.basename, '')
+        .replace('/scss', '');
+      path.dirname = '/' + packageType;
+    }))
+    .pipe(gulp.dest('scss'));
+});
+
+// Inject
+gulp.task('inject', ['move'], function () {
   var src = gulp.src('scss/avalanche.scss');
-  var packageSrc;
 
   packageTypes.forEach(function (packageType) {
-    // Move package files to the scss directory
-    gulp.src('vendor/avalanche_' + packageType + '_*/scss/*.scss')
-      .pipe(rename(function (path) {
-        path.dirname = '/' + packageType;
-      }))
-      .pipe(gulp.dest('scss'));
-
-    // Inject files into avalanche.scss
-    packageSrc = gulp.src('scss/' + packageType + '/*.scss', { read: false });
-
-    src.pipe(inject(packageSrc, {
-      starttag: '/** inject:' + packageType + ' **/',
+    src.pipe(inject(gulp.src('scss/' + packageType + '/*.scss', { read: false }), {
+      starttag: '/** inject: ' + packageType + ' **/',
       endtag: '/** endinject **/',
       transform: function (filepath, file, i, length) {
         return '@import \'' + filepath.substring(1).replace('scss/', '').replace('/_', '/').replace('.scss', '') + '\';';
@@ -74,13 +78,11 @@ gulp.task('inject', ['bower'], function () {
     }));
   });
 
-  gulp.start('clean:vendor');
-
   return src.pipe(gulp.dest('scss'));
 });
 
 // Clean:vendor
-gulp.task('clean:vendor', ['inject'], function () {
+gulp.task('clean:vendor', ['move'], function () {
   // Remove avalanche packages from the vendor folder
   del([
     'vendor/avalanche_*'
