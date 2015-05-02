@@ -1,1 +1,1 @@
-Place your functions here
+Place your custom functions in this directory.

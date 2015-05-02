@@ -1,1 +1,1 @@
-Place your system packages here
+Place system relevant stuff in this directory.
