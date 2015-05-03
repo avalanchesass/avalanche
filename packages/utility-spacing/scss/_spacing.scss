@@ -1,0 +1,13 @@
+/**
+ * @name Spacing
+ * @level X.X.
+ */
+@mixin u-spacing-wrap($spacing: $spacing-m) {
+  > * + * {
+    margin-top: $spacing;
+  }
+}
+
+.u-spacing-wrap {
+  @include u-spacing-wrap();
+}
