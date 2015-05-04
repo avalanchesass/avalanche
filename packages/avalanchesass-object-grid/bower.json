@@ -22,6 +22,7 @@
   "dependencies": {
     "avalanche_function_strip_unit": "dev",
     "avalanche_system_variable": "dev",
-    "avalanche_utility_clearfix": "dev"
+    "avalanche_utility_clearfix": "dev",
+    "avalanche_utility_width": "dev"
   }
 }

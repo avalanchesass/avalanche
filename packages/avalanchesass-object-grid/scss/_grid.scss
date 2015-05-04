@@ -28,30 +28,25 @@ $o-grid-spacing-xl: $spacing-m !default;
  *   Mobile first styles for all screen sizes
  *
  * @markup
- *   <div class="o-grid">
- *     <div class="o-grid__item--6">Grid Item</div>
- *     <div class="o-grid__item--6">Grid Item</div>
+ *   <div class="o-grid o-grid--spaced">
+ *     <div class="o-grid__item u-width--6">Grid Item</div>
+ *     <div class="o-grid__item u-width--6">Grid Item</div>
  *   </div>
  */
-$o-grid-base-size: (100% / $o-grid-item-count);
-
 .o-grid {
   @include u-clearfix();
-  margin-left: -$o-grid-spacing-s;
-}
-
-[class*='o-grid__item'] {
-  float: left;
-  padding-left: $o-grid-spacing-s;
-  width: 100%;
-  @if $layout-box-sizing-reset == false {
-    box-sizing: border-box;
+  &.o-grid--spaced {
+    margin-left: -$o-grid-spacing-s;
   }
 }
 
-@for $i from 1 through $o-grid-item-count {
-  .o-grid__item--#{$i} {
-    width: ($o-grid-base-size * $i);
+.o-grid__item {
+  float: left;
+  @if $layout-box-sizing-reset == false {
+    box-sizing: border-box;
+  }
+  .o-grid--spaced & {
+    padding-left: $o-grid-spacing-s;
   }
 }
 
@@ -65,18 +60,11 @@ $o-grid-base-size: (100% / $o-grid-item-count);
    *   Screen sizes #{$breakpoint-s} (#{strip-unit($breakpoint-s) * $font-base-size}) and up
    *
    * @markup
-   *   <div class="o-grid">
-   *     <div class="o-grid__item--12 o-grid__item--s--6">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--s--6">Grid Item</div>
+   *   <div class="o-grid o-grid--spaced">
+   *     <div class="o-grid__item u-width--s--6">Grid Item</div>
+   *     <div class="o-grid__item u-width--s--6">Grid Item</div>
    *   </div>
    */
-  @media (min-width: $breakpoint-s) {
-    @for $i from 1 through $o-grid-item-count {
-      .o-grid__item--s--#{$i} {
-        width: ($o-grid-base-size * $i);
-      }
-    }
-  }
 }
 
 
@@ -89,25 +77,23 @@ $o-grid-base-size: (100% / $o-grid-item-count);
    *   Screen sizes #{$breakpoint-m} (#{strip-unit($breakpoint-m) * $font-base-size}) and up
    *
    * @markup
-   *   <div class="o-grid">
-   *     <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3">Grid Item</div>
+   *   <div class="o-grid o-grid--spaced">
+   *     <div class="o-grid__item u-width--s--6 u-width--m--3">Grid Item</div>
+   *     <div class="o-grid__item u-width--s--6 u-width--m--3">Grid Item</div>
+   *     <div class="o-grid__item u-width--s--6 u-width--m--3">Grid Item</div>
+   *     <div class="o-grid__item u-width--s--6 u-width--m--3">Grid Item</div>
    *   </div>
    */
   @media (min-width: $breakpoint-m) {
     .o-grid {
-      margin-left: -$o-grid-spacing-m;
+      &.o-grid--spaced {
+        margin-left: -$o-grid-spacing-m;
+      }
     }
 
-    [class*='o-grid__item'] {
-      padding-left: $o-grid-spacing-m;
-    }
-
-    @for $i from 1 through $o-grid-item-count {
-      .o-grid__item--m--#{$i} {
-        width: ($o-grid-base-size * $i);
+    .o-grid__item {
+      .o-grid--spaced & {
+        padding-left: $o-grid-spacing-m;
       }
     }
   }
@@ -123,25 +109,23 @@ $o-grid-base-size: (100% / $o-grid-item-count);
    *   Screen sizes #{$breakpoint-l} (#{strip-unit($breakpoint-l) * $font-base-size}) and up
    *
    * @markup
-   *   <div class="o-grid">
-   *     <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3">Grid Item</div>
+   *   <div class="o-grid o-grid--spaced">
+   *     <div class="o-grid__item u-width--m--6 u-width--l--3">Grid Item</div>
+   *     <div class="o-grid__item u-width--m--6 u-width--l--3">Grid Item</div>
+   *     <div class="o-grid__item u-width--m--6 u-width--l--3">Grid Item</div>
+   *     <div class="o-grid__item u-width--m--6 u-width--l--3">Grid Item</div>
    *   </div>
    */
   @media (min-width: $breakpoint-l) {
     .o-grid {
-      margin-left: -$o-grid-spacing-l;
+      &.o-grid--spaced {
+        margin-left: -$o-grid-spacing-l;
+      }
     }
 
-    [class*='o-grid__item'] {
-      padding-left: $o-grid-spacing-l;
-    }
-
-    @for $i from 1 through $o-grid-item-count {
-      .o-grid__item--l--#{$i} {
-        width: ($o-grid-base-size * $i);
+    .o-grid__item {
+      .o-grid--spaced & {
+        padding-left: $o-grid-spacing-l;
       }
     }
   }
@@ -158,24 +142,22 @@ $o-grid-base-size: (100% / $o-grid-item-count);
    *
    * @markup
    *   <div class="o-grid">
-   *     <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
-   *     <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3">Grid Item</div>
+   *     <div class="o-grid__item--12 u-width--l--6 u-width--xl--3">Grid Item</div>
+   *     <div class="o-grid__item--12 u-width--l--6 u-width--xl--3">Grid Item</div>
+   *     <div class="o-grid__item--12 u-width--l--6 u-width--xl--3">Grid Item</div>
+   *     <div class="o-grid__item--12 u-width--l--6 u-width--xl--3">Grid Item</div>
    *   </div>
    */
   @media (min-width: $breakpoint-xl) {
     .o-grid {
-      margin-left: -$o-grid-spacing-xl;
+      &.o-grid--spaced {
+        margin-left: -$o-grid-spacing-xl;
+      }
     }
 
-    [class*='o-grid__item'] {
-      padding-left: $o-grid-spacing-xl;
-    }
-
-    @for $i from 1 through $o-grid-item-count {
-      .o-grid__item--xl--#{$i} {
-        width: ($o-grid-base-size * $i);
+    .o-grid__item {
+      .o-grid--spaced & {
+        padding-left: $o-grid-spacing-xl;
       }
     }
   }
