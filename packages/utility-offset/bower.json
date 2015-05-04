@@ -1,0 +1,27 @@
+{
+  "name": "avalanche: Utility offset",
+  "version": "2.0.0",
+  "homepage": "https://github.com/avalanchesass/avalanche_utility_offset",
+  "authors": [
+    "Markus Oberlehner"
+  ],
+  "description": "Offset classes",
+  "keywords": [
+    "SASS",
+    "CSS",
+    "Grid"
+  ],
+  "license": "GPL v2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "avalanche_function_strip_unit": "dev",
+    "avalanche_system_variable": "dev",
+    "avalanche_object_grid": "dev"
+  }
+}

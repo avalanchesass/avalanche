@@ -1,0 +1,136 @@
+/**
+ * @name Offset
+ * @level X.X.
+ */
+/**
+ * Variables
+ */
+$u-offset-item-count: 12 !default;
+
+// Sizes
+$u-offset-size-s:  true !default;
+$u-offset-size-m:  true !default;
+$u-offset-size-l:  true !default;
+$u-offset-size-xl: true !default;
+
+// Spacing between items
+/*$o-grid-spacing-s:  $spacing-s !default;
+$o-grid-spacing-m:  $spacing-m !default;
+$o-grid-spacing-l:  $spacing-m !default;
+$o-grid-spacing-xl: $spacing-m !default;*/
+
+
+
+/**
+ * @name Base
+ * @level X.X.X.
+ * @description
+ *   Mobile first styles for all screen sizes
+ *
+ * @markup
+ *   <div class="o-grid">
+ *     <div class="o-grid__item--6 u-offset--6">Grid Item with offset</div>
+ *   </div>
+ */
+$u-offset-base-size: (100% / $o-offset-item-count);
+
+@for $i from 1 through $u-offset-item-count {
+  .u-offset--#{$i} {
+    margin-left: ($u-offset-base-size * $i);
+  }
+}
+
+
+
+@if $u-offset-size-s {
+  /**
+   * @name Small
+   * @level X.X.X.
+   * @description
+   *   Screen sizes #{$breakpoint-s} (#{strip-unit($breakpoint-s) * $font-base-size}) and up
+   *
+   * @markup
+   *   <div class="o-grid">
+   *     <div class="o-grid__item--12 o-grid__item--s--6 u-offset--s--6">Grid Item with offset</div>
+   *   </div>
+   */
+  @media (min-width: $breakpoint-s) {
+    @for $i from 1 through $u-offset-item-count {
+      .u-offset--s--#{$i} {
+        margin-left: ($u-offset-base-size * $i);
+      }
+    }
+  }
+}
+
+
+
+@if $u-offset-size-m {
+  /**
+   * @name Medium
+   * @level X.X.X.
+   * @description
+   *   Screen sizes #{$breakpoint-m} (#{strip-unit($breakpoint-m) * $font-base-size}) and up
+   *
+   * @markup
+   *   <div class="o-grid">
+   *     <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3 u-offset--m--3">Grid Item with offset</div>
+   *     <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3 u-offset--m--3">Grid Item with offset</div>
+   *   </div>
+   */
+  @media (min-width: $breakpoint-m) {
+    @for $i from 1 through $u-offset-item-count {
+      .u-offset--m--#{$i} {
+        margin-left: ($u-offset-base-size * $i);
+      }
+    }
+  }
+}
+
+
+
+@if $u-offset-size-l {
+  /**
+   * @name Large
+   * @level X.X.X.
+   * @description
+   *   Screen sizes #{$breakpoint-l} (#{strip-unit($breakpoint-l) * $font-base-size}) and up
+   *
+   * @markup
+   *   <div class="o-grid">
+   *     <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3 u-offset--l--3">Grid Item with offset</div>
+   *     <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3 u-offset--l--3">Grid Item with offset</div>
+   *   </div>
+   */
+  @media (min-width: $breakpoint-l) {
+    @for $i from 1 through $u-offset-item-count {
+      .u-offset--l--#{$i} {
+        margin-left: ($u-offset-base-size * $i);
+      }
+    }
+  }
+}
+
+
+
+@if $u-offset-size-xl {
+  /**
+   * @name X-Large
+   * @level X.X.X.
+   * @description
+   *   Screen sizes #{$breakpoint-xl} (#{strip-unit($breakpoint-xl) * $font-base-size}) and up
+   *
+   * @markup
+   *   <div class="o-grid">
+   *     <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3 u-offset--xl--3">Grid Item with offset</div>
+   *     <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3 u-offset--xl--3">Grid Item with offset</div>
+   *   </div>
+   */
+  @media (min-width: $breakpoint-xl) {
+    @for $i from 1 through $u-offset-item-count {
+      .u-offset--xl--#{$i} {
+        margin-left: ($u-offset-base-size * $i);
+      }
+    }
+  }
+}
