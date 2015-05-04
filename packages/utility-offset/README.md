@@ -1,6 +1,6 @@
-# avalanche: Object grid
-CSS grid system  
-https://github.com/avalanchesass/avalanche_object_grid
+# avalanche: Utility offset
+Offset classes  
+https://github.com/avalanchesass/avalanche_utility_offset
 
 ### Author
 Markus Oberlehner  
