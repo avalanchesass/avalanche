@@ -1,6 +1,6 @@
-# avalanche: Utility offset
-Offset classes  
-https://github.com/avalanchesass/avalanche_utility_offset
+# avalanche: Utility width
+Width classes  
+https://github.com/avalanchesass/avalanche_utility_width
 
 ### Author
 Markus Oberlehner  
