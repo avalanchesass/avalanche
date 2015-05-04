@@ -32,7 +32,7 @@ $o-grid-spacing-xl: $spacing-m !default;*/
  *     <div class="o-grid__item--6 u-offset--6">Grid Item with offset</div>
  *   </div>
  */
-$u-offset-base-size: (100% / $o-offset-item-count);
+$u-offset-base-size: (100% / $u-offset-item-count);
 
 @for $i from 1 through $u-offset-item-count {
   .u-offset--#{$i} {
