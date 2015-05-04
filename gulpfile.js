@@ -84,9 +84,12 @@ gulp.task('inject', ['move'], function () {
 // Clean:vendor
 gulp.task('clean:vendor', ['move'], function () {
   // Remove avalanche packages from the vendor folder
-  del([
-    'vendor/avalanche_*'
-  ]);
+  // the timeput function is a ugly hack to prevent to early deleting of the package files
+  setTimeout(function () {
+    del([
+      'vendor/avalanche_*'
+    ]);
+  }, 200);
 });
 
 // Watch
