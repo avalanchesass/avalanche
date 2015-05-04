@@ -23,7 +23,7 @@ $u-offset-size-xl: true !default;
  *
  * @markup
  *   <div class="o-grid">
- *     <div class="o-grid__item--6 u-offset--6">Grid Item with offset</div>
+ *     <div class="o-grid__item u-width--6 u-offset--6">Grid Item with offset</div>
  *   </div>
  */
 $u-offset-base-size: (100% / $u-offset-item-count);
@@ -45,7 +45,7 @@ $u-offset-base-size: (100% / $u-offset-item-count);
    *
    * @markup
    *   <div class="o-grid">
-   *     <div class="o-grid__item--12 o-grid__item--s--6 u-offset--s--6">Grid Item with offset</div>
+   *     <div class="o-grid__item u-width--12 u-width--s--6 u-offset--s--6">Grid Item with offset</div>
    *   </div>
    */
   @media (min-width: $breakpoint-s) {
@@ -68,8 +68,8 @@ $u-offset-base-size: (100% / $u-offset-item-count);
    *
    * @markup
    *   <div class="o-grid">
-   *     <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3 u-offset--m--3">Grid Item with offset</div>
-   *     <div class="o-grid__item--12 o-grid__item--s--6 o-grid__item--m--3 u-offset--m--3">Grid Item with offset</div>
+   *     <div class="o-grid__item u-width--12 u-width--s--6 u-width--m--3 u-offset--m--3">Grid Item with offset</div>
+   *     <div class="o-grid__item u-width--12 u-width--s--6 u-width--m--3 u-offset--m--3">Grid Item with offset</div>
    *   </div>
    */
   @media (min-width: $breakpoint-m) {
@@ -92,8 +92,8 @@ $u-offset-base-size: (100% / $u-offset-item-count);
    *
    * @markup
    *   <div class="o-grid">
-   *     <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3 u-offset--l--3">Grid Item with offset</div>
-   *     <div class="o-grid__item--12 o-grid__item--m--6 o-grid__item--l--3 u-offset--l--3">Grid Item with offset</div>
+   *     <div class="o-grid__item u-width--12 u-width--m--6 u-width--l--3 u-offset--l--3">Grid Item with offset</div>
+   *     <div class="o-grid__item u-width--12 u-width--m--6 u-width--l--3 u-offset--l--3">Grid Item with offset</div>
    *   </div>
    */
   @media (min-width: $breakpoint-l) {
@@ -116,8 +116,8 @@ $u-offset-base-size: (100% / $u-offset-item-count);
    *
    * @markup
    *   <div class="o-grid">
-   *     <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3 u-offset--xl--3">Grid Item with offset</div>
-   *     <div class="o-grid__item--12 o-grid__item--l--6 o-grid__item--xl--3 u-offset--xl--3">Grid Item with offset</div>
+   *     <div class="o-grid__item u-width--12 u-width--l--6 u-width--xl--3 u-offset--xl--3">Grid Item with offset</div>
+   *     <div class="o-grid__item u-width--12 u-width--l--6 u-width--xl--3 u-offset--xl--3">Grid Item with offset</div>
    *   </div>
    */
   @media (min-width: $breakpoint-xl) {
