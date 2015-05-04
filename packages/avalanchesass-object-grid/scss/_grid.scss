@@ -8,10 +8,10 @@
 $o-grid-item-count: 12 !default;
 
 // Sizes
-$o-grid-size-s:  false !default;
-$o-grid-size-m:  false !default;
-$o-grid-size-l:  false !default;
-$o-grid-size-xl: false !default;
+$o-grid-size-s:  true !default;
+$o-grid-size-m:  true !default;
+$o-grid-size-l:  true !default;
+$o-grid-size-xl: true !default;
 
 // Spacing between items
 $o-grid-spacing-s:  $spacing-s !default;
