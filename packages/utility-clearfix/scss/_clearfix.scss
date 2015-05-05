@@ -1,18 +1,9 @@
 /**
  * @name Clearfix
- * @level 4.1.
+ * @level X.X.
  * @description
  *   Contain floats
  */
-/**
- * Includes
- */
-// System
-@import 'system/function';
-@import 'system/variable';
-
-
-
 @mixin u-clearfix() {
   *zoom: 1;
   &:before,
