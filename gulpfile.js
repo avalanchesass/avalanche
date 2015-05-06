@@ -3,6 +3,7 @@ var del              = require('del');
 var gulp             = require('gulp');
 var autoprefixer     = require('gulp-autoprefixer');
 var bower            = require('gulp-bower');
+var conflict         = require('gulp-conflict');
 var csso             = require('gulp-csso');
 var inject           = require('gulp-inject');
 var livereload       = require('gulp-livereload');
@@ -61,6 +62,7 @@ gulp.task('move', ['bower'], function () {
         .replace('/scss', '');
       path.dirname = '/' + packageType;
     }))
+    .pipe(conflict('scss'))
     .pipe(gulp.dest('scss'));
 });
 
