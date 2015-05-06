@@ -89,7 +89,7 @@ gulp.task('clean:vendor', ['move'], function () {
     del([
       'vendor/avalanche_*'
     ]);
-  }, 200);
+  }, 2000);
 });
 
 // Watch
