@@ -17,9 +17,9 @@ var packageTypes = [
   'function',
   'system',
   'base',
-  'utility',
   'object',
-  'component'
+  'component',
+  'utility'
 ];
 
 // Styles
