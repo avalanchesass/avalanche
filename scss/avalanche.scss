@@ -33,8 +33,17 @@
 
 
 /**
- * @name Object
+ * @name Utility
  * @level 5.
+ */
+/** inject:utility **/
+/** endinject **/
+
+
+
+/**
+ * @name Object
+ * @level 6.
  */
 /** inject:object **/
 /** endinject **/
@@ -43,16 +52,7 @@
 
 /**
  * @name Component
- * @level 6.
- */
-/** inject:component **/
-/** endinject **/
-
-
-
-/**
- * @name Utility
  * @level 7.
  */
-/** inject:utility **/
+/** inject:component **/
 /** endinject **/
