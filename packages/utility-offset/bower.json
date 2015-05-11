@@ -1,6 +1,6 @@
 {
   "name": "avalanche: Utility offset",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "homepage": "https://github.com/avalanchesass/avalanche_utility_offset",
   "authors": [
     "Markus Oberlehner"
@@ -20,9 +20,9 @@
     "tests"
   ],
   "dependencies": {
-    "avalanche_function_strip_unit": "dev",
-    "avalanche_system_variable": "dev",
-    "avalanche_object_grid": "dev",
-    "avalanche_utility_width": "dev"
+    "avalanche_function_strip_unit": "^2.0.0",
+    "avalanche_system_variable": "^2.0.0",
+    "avalanche_object_grid": "^2.0.0",
+    "avalanche_utility_width": "^2.0.0"
   }
 }
