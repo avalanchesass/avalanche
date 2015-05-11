@@ -1,0 +1,202 @@
+/**
+ * @name Island
+ * @level X.X.
+ */
+/**
+ * Variables
+ */
+// Functions
+$o-island-function-positive: true;
+$o-island-function-neutral:  true;
+$o-island-function-cautious: true;
+$o-island-function-negative: true;
+
+// Color scheme
+$o-island-cs-a: true;
+$o-island-cs-b: true;
+$o-island-cs-c: true;
+$o-island-cs-d: true;
+$o-island-cs-e: true;
+
+
+
+/**
+ * @name Base
+ * @level X.X.X.
+ * @description
+ *   A single class used to box off content, leaving it closed on all sides like, well, an island.  
+ *   [Harry Roberts - The 'island' object](http://csswizardry.com/2011/10/the-island-object/)
+ *
+ * @markup
+ *   <div class="o-island">
+ *     Island
+ *   </div>
+ */
+.o-island {
+  display: block;
+  padding: $spacing-m;
+  background: $cs-grey-a;
+  & > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+
+/**
+ * @name Functions
+ * @level X.X.X.
+ */
+@if $o-island-function-positive {
+  /**
+   * @name Positive
+   * @level X.X.X.X.
+   * @description
+   *   Positive actions; e.g. sign in, purchase, submit, etc.
+   *
+   * @markup
+   *   <div class="o-island o-island--positive">
+   *     Positive Island
+   *   </div>
+   */
+  .o-island--positive {
+    background: mix($cs-positive, #fff, 20%);
+    color: $cs-positive;
+  }
+}
+
+@if $o-island-function-neutral {
+  /**
+   * @name Neutral
+   * @level X.X.X.X.
+   *
+   * @markup
+   *   <div class="o-island o-island--neutral">
+   *     Neutral Island
+   *   </div>
+   */
+  .o-island--neutral {
+    background: mix($cs-neutral, #fff, 20%);
+    color: $cs-neutral;
+  }
+}
+
+@if $o-island-function-cautious {
+  /**
+   * @name Cautious
+   * @level X.X.X.X.
+   *
+   * @markup
+   *   <div class="o-island o-island--cautious">
+   *     Cautious Island
+   *   </div>
+   */
+  .o-island--cautious {
+    background: mix($cs-cautious, #fff, 20%);
+    color: $cs-cautious;
+  }
+}
+
+@if $o-island-function-negative {
+  /**
+   * @name Negative
+   * @level X.X.X.X.
+   * @description
+   *   Negative actions; e.g. close account, delete photo, remove friend, etc.
+   *
+   * @markup
+   *   <div class="o-island o-island--negative">
+   *     Negative Island
+   *   </div>
+   */
+  .o-island--negative {
+    background: mix($cs-negative, #fff, 20%);
+    color: $cs-negative;
+  }
+}
+
+
+
+/**
+ * @name Color scheme
+ * @level X.X.X.
+ */
+@if $o-island-cs-a {
+  /**
+   * @name cs-a
+   * @level X.X.X.X.
+   *
+   * @markup
+   *   <div class="o-island o-island--cs-a">
+   *     cs-a Island
+   *   </div>
+   */
+  .o-island--cs-a {
+    background: $cs-a;
+    color: $cs-a-contrast;
+  }
+}
+
+@if $o-island-cs-b {
+  /**
+   * @name cs-b
+   * @level X.X.X.X.
+   *
+   * @markup
+   *   <div class="o-island o-island--cs-b">
+   *     cs-b Island
+   *   </div>
+   */
+  .o-island--cs-b {
+    background: $cs-b;
+    color: $cs-b-contrast;
+  }
+}
+
+@if $o-island-cs-c {
+  /**
+   * @name cs-c
+   * @level X.X.X.X.
+   *
+   * @markup
+   *   <div class="o-island o-island--cs-c">
+   *     cs-c Island
+   *   </div>
+   */
+  .o-island--cs-c {
+    background: $cs-c;
+    color: $cs-c-contrast;
+  }
+}
+
+@if $o-island-cs-d {
+  /**
+   * @name cs-d
+   * @level X.X.X.X.
+   *
+   * @markup
+   *   <div class="o-island o-island--cs-d">
+   *     cs-d Island
+   *   </div>
+   */
+  .o-island--cs-d {
+    background: $cs-d;
+    color: $cs-d-contrast;
+  }
+}
+
+@if $o-island-cs-e {
+  /**
+   * @name cs-e
+   * @level X.X.X.X.
+   *
+   * @markup
+   *   <div class="o-island o-island--cs-e">
+   *     cs-e Island
+   *   </div>
+   */
+  .o-island--cs-e {
+    background: $cs-e;
+    color: $cs-e-contrast;
+  }
+}
