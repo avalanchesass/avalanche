@@ -1,38 +1,102 @@
 // Load plugins
-var gulp         = require('gulp');
-var autoprefixer = require('gulp-autoprefixer');
-var cssshrink    = require('gulp-cssshrink');
-var livereload   = require('gulp-livereload');
-var minifyCSS    = require('gulp-minify-css');
-var rename       = require('gulp-rename');
-var sass         = require('gulp-ruby-sass');
-var gutil        = require('gulp-util');
+var del              = require('del');
+var gulp             = require('gulp');
+var autoprefixer     = require('gulp-autoprefixer');
+var bower            = require('gulp-bower');
+var conflict         = require('gulp-conflict');
+var csso             = require('gulp-csso');
+var inject           = require('gulp-inject');
+var livereload       = require('gulp-livereload');
+var pixrem           = require('gulp-pixrem');
+var rename           = require('gulp-rename');
+var sass             = require('gulp-sass');
+var sourcemaps       = require('gulp-sourcemaps');
+
+// Define package types
+var packageTypes = [
+  'function',
+  'system',
+  'base',
+  'object',
+  'component',
+  'utility'
+];
 
 // Styles
 gulp.task('styles', function () {
-  return gulp.src('src/**/*.scss')
-    .pipe(sass({ style: 'compact', precision: 7, sourcemap: true }))
-    .on('error', gutil.log)
-    .pipe(autoprefixer('last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'ios 6', 'android 4'))
-    .on('error', gutil.log)
-    .pipe(gulp.dest('dist'));
+  return gulp.src('scss/**/*.scss')
+    .pipe(sourcemaps.init())
+      .pipe(sass({ precision: 7, errLogToConsole: true }))
+      .pipe(autoprefixer())
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest('css'));
 });
 
 // Minify
 gulp.task('minify', ['styles'], function () {
-  return gulp.src('dist/avalanche.css')
-    .pipe(minifyCSS())
-    .pipe(cssshrink())
+  return gulp.src('css/avalanche.css')
+    .pipe(csso())
     .pipe(rename(function (path) {
       path.basename += '.min';
     }))
-    .pipe(gulp.dest('dist'))
+    .pipe(pixrem())
+    .pipe(gulp.dest('css'))
     .pipe(livereload());
+});
+
+// Bower
+gulp.task('bower', function () {
+  gulp.start('move');
+  return bower();
+});
+
+// Inject
+gulp.task('move', ['bower'], function () {
+  gulp.start('inject');
+  gulp.start('clean:vendor');
+  return gulp.src('vendor/avalanche_*/scss/*.scss')
+    .pipe(rename(function (path) {
+      var packageType = path.dirname
+        .replace('avalanche_', '')
+        .replace(path.basename, '')
+        .replace('/scss', '');
+      path.dirname = '/' + packageType;
+    }))
+    .pipe(conflict('scss'))
+    .pipe(gulp.dest('scss'));
+});
+
+// Inject
+gulp.task('inject', ['move'], function () {
+  var src = gulp.src('scss/avalanche.scss');
+
+  packageTypes.forEach(function (packageType) {
+    src.pipe(inject(gulp.src('scss/' + packageType + '/*.scss', { read: false }), {
+      starttag: '/** inject: ' + packageType + ' **/',
+      endtag: '/** endinject **/',
+      transform: function (filepath, file, i, length) {
+        return '@import \'' + filepath.substring(1).replace('scss/', '').replace('/_', '/').replace('.scss', '') + '\';';
+      }
+    }));
+  });
+
+  return src.pipe(gulp.dest('scss'));
+});
+
+// Clean:vendor
+gulp.task('clean:vendor', ['move'], function () {
+  // Remove avalanche packages from the vendor folder
+  // the timeput function is a ugly hack to prevent to early deleting of the package files
+  setTimeout(function () {
+    del([
+      'vendor/avalanche_*'
+    ]);
+  }, 2000);
 });
 
 // Watch
 gulp.task('watch', function () {
-  gulp.watch('src/**/*.scss', ['styles', 'minify']);
+  gulp.watch('scss/**/*', ['styles', 'minify']);
 });
 
 // Default
