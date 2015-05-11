@@ -4,27 +4,24 @@ var gulp             = require('gulp');
 var autoprefixer     = require('gulp-autoprefixer');
 var bower            = require('gulp-bower');
 var conflict         = require('gulp-conflict');
+var cssGlobbing      = require('gulp-css-globbing');
 var csso             = require('gulp-csso');
-var inject           = require('gulp-inject');
 var livereload       = require('gulp-livereload');
 var pixrem           = require('gulp-pixrem');
 var rename           = require('gulp-rename');
 var sass             = require('gulp-sass');
 var sourcemaps       = require('gulp-sourcemaps');
 
-// Define package types
-var packageTypes = [
-  'function',
-  'system',
-  'base',
-  'object',
-  'component',
-  'utility'
-];
-
 // Styles
 gulp.task('styles', function () {
   return gulp.src('scss/**/*.scss')
+    .pipe(cssGlobbing({
+      extensions: ['.scss'],
+      scssImportPath: {
+        leading_underscore: false,
+        filename_extension: false
+      }
+    }))
     .pipe(sourcemaps.init())
       .pipe(sass({ precision: 7, errLogToConsole: true }))
       .pipe(autoprefixer())
@@ -52,7 +49,6 @@ gulp.task('bower', function () {
 
 // Inject
 gulp.task('move', ['bower'], function () {
-  gulp.start('inject');
   gulp.start('clean:vendor');
   return gulp.src('vendor/avalanche_*/scss/*.scss')
     .pipe(rename(function (path) {
@@ -64,23 +60,6 @@ gulp.task('move', ['bower'], function () {
     }))
     .pipe(conflict('scss'))
     .pipe(gulp.dest('scss'));
-});
-
-// Inject
-gulp.task('inject', ['move'], function () {
-  var src = gulp.src('scss/avalanche.scss');
-
-  packageTypes.forEach(function (packageType) {
-    src.pipe(inject(gulp.src('scss/' + packageType + '/*.scss', { read: false }), {
-      starttag: '/** inject: ' + packageType + ' **/',
-      endtag: '/** endinject **/',
-      transform: function (filepath, file, i, length) {
-        return '@import \'' + filepath.substring(1).replace('scss/', '').replace('/_', '/').replace('.scss', '') + '\';';
-      }
-    }));
-  });
-
-  return src.pipe(gulp.dest('scss'));
 });
 
 // Clean:vendor
