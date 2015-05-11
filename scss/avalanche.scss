@@ -9,8 +9,7 @@
  * @name Function
  * @level 2.
  */
-/** inject:function **/
-/** endinject **/
+@import 'function/*';
 
 
 
@@ -18,8 +17,7 @@
  * @name System
  * @level 3.
  */
-/** inject:system **/
-/** endinject **/
+@import 'system/*';
 
 
 
@@ -27,8 +25,7 @@
  * @name Base
  * @level 4.
  */
-/** inject:base **/
-/** endinject **/
+@import 'base/*';
 
 
 
@@ -36,8 +33,7 @@
  * @name Utility
  * @level 5.
  */
-/** inject:utility **/
-/** endinject **/
+@import 'utility/*';
 
 
 
@@ -45,8 +41,7 @@
  * @name Object
  * @level 6.
  */
-/** inject:object **/
-/** endinject **/
+@import 'object/*';
 
 
 
@@ -54,5 +49,4 @@
  * @name Component
  * @level 7.
  */
-/** inject:component **/
-/** endinject **/
+@import 'component/*';

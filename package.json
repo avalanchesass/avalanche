@@ -1,6 +1,6 @@
 {
   "name": "avalanche",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "author": "Markus Oberlehner",
   "license": "GPL v2",
   "dependencies": {
@@ -9,8 +9,8 @@
     "gulp-autoprefixer": "^2.1.0",
     "gulp-bower": "0.0.10",
     "gulp-conflict": "^0.4.0",
+    "gulp-css-globbing": "^0.1.7",
     "gulp-csso": "^1.0.0",
-    "gulp-inject": "^1.2.0",
     "gulp-livereload": "^3.8.0",
     "gulp-pixrem": "^0.1.4",
     "gulp-rename": "^1.2.2",
@@ -21,10 +21,10 @@
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/maoberlehner/avalanche"
+    "url": "https://github.com/avalanchesass/avalanche"
   },
   "bugs": {
-    "url": "https://github.com/maoberlehner/avalanche/issues"
+    "url": "https://github.com/avalanchesass/avalanche/issues"
   },
-  "homepage": "https://github.com/maoberlehner/avalanche"
+  "homepage": "https://github.com/avalanchesass/avalanche"
 }
