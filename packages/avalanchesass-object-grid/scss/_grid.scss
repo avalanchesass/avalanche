@@ -142,10 +142,10 @@ $o-grid-spacing-xl: $spacing-m !default;
    *
    * @markup
    *   <div class="o-grid">
-   *     <div class="o-grid__item--12 u-width--l--6 u-width--xl--3">Grid Item</div>
-   *     <div class="o-grid__item--12 u-width--l--6 u-width--xl--3">Grid Item</div>
-   *     <div class="o-grid__item--12 u-width--l--6 u-width--xl--3">Grid Item</div>
-   *     <div class="o-grid__item--12 u-width--l--6 u-width--xl--3">Grid Item</div>
+   *     <div class="o-grid__item u-width--l--6 u-width--xl--3">Grid Item</div>
+   *     <div class="o-grid__item u-width--l--6 u-width--xl--3">Grid Item</div>
+   *     <div class="o-grid__item u-width--l--6 u-width--xl--3">Grid Item</div>
+   *     <div class="o-grid__item u-width--l--6 u-width--xl--3">Grid Item</div>
    *   </div>
    */
   @media (min-width: $breakpoint-xl) {
