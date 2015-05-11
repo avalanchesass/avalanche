@@ -19,6 +19,6 @@
     "tests"
   ],
   "dependencies": {
-    "avalanche_system_variable": "dev"
+    "avalanche_system_variable": "^2.0.0"
   }
 }
