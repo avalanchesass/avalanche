@@ -1,6 +1,6 @@
 {
   "name": "avalanche: Utility spacing",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "homepage": "https://github.com/avalanchesass/avalanche_utility_spacing",
   "authors": [
     "Markus Oberlehner"
@@ -19,6 +19,6 @@
     "tests"
   ],
   "dependencies": {
-    "avalanche_system_variable": "dev"
+    "avalanche_system_variable": "^2.0.0"
   }
 }
