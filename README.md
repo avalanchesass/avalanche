@@ -1,5 +1,5 @@
 # avalanche
-SASS / CSS Framework  
+a modular SASS framework  
 https://github.com/avalanchesass/avalanche
 
 ### Author

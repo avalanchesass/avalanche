@@ -5,7 +5,7 @@
   "authors": [
     "Markus Oberlehner"
   ],
-  "description": "SASS / CSS Framework",
+  "description": "a modular SASS framework",
   "main": "css/avalanche.css",
   "keywords": [
     "SASS",
