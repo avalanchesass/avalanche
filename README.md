@@ -22,7 +22,7 @@ The main avalanche package doesn’t define a single CSS selector. The high modu
 - **Component:** concrete, implementation-specific piece of UI
 
 You can find various available packages on [GitHub](https://github.com/avalanchesass?tab=repositories)  
-To extend your installation with a preconfigured package open your bower.json file and add the package to your *dependencies* and run `gulp bower` afterwards.
+To extend your installation with a preconfigured package open your bower.json file, add the package to your *dependencies* and run `gulp bower` afterwards.
 
 ```json
 "dependencies": {
