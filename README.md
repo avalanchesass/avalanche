@@ -30,6 +30,7 @@ To extend your installation with a preconfigured package open your bower.json fi
   "avalanche_base_form": "^2.0.0",
   "avalanche_base_layout": "^2.0.0",
   "avalanche_base_typography": "^2.0.0",
+  "avalanche_object_media": "^2.0.0",
   "normalize.css": "~3.0.3"
 }
 ```
