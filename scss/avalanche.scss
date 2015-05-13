@@ -11,6 +11,8 @@
 /**
  * @name Function
  * @level 2.
+ * @description
+ *   Custom SASS functions
  */
 @import 'function/*';
 
@@ -19,6 +21,8 @@
 /**
  * @name System
  * @level 3.
+ * @description
+ *   Everything system relevant (e.g. variables)
  */
 @import 'system/*';
 
@@ -27,6 +31,8 @@
 /**
  * @name Base
  * @level 4.
+ * @description
+ *   Base styles like typography and other global default styles (mostly unclassed HTML elements)
  */
 @import 'base/*';
 
@@ -35,6 +41,8 @@
 /**
  * @name Utility
  * @level 5.
+ * @description
+ *   Utility classes that do very specific things (e.g. clearfix)
  */
 @import 'utility/*';
 
@@ -43,6 +51,8 @@
 /**
  * @name Object
  * @level 6.
+ * @description
+ *   Non-cosmetic styles (e.g. the famous media object)
  */
 @import 'object/*';
 
@@ -51,5 +61,7 @@
 /**
  * @name Component
  * @level 7.
+ * @description
+ *   Concrete, implementation-specific piece of UI
  */
 @import 'component/*';

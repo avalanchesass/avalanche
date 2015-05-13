@@ -16,7 +16,7 @@ The main avalanche package doesn’t define a single CSS selector. The high modu
 
 - **Function:** custom SASS functions
 - **System:** everything system relevant (e.g. variables)
-- **Base:** base styles like typography and other global default styles
+- **Base:** base styles like typography and other global default styles (mostly unclassed HTML elements)
 - **Utility:** utility classes that do very specific things (e.g. clearfix)
 - **Object:** non-cosmetic styles (e.g. the famous media object)
 - **Component:** concrete, implementation-specific piece of UI
