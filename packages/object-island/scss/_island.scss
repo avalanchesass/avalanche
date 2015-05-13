@@ -27,7 +27,7 @@ $o-island-cs-e: true;
  *   A single class used to box off content, leaving it closed on all sides like, well, an island.  
  *   [Harry Roberts - The 'island' object](http://csswizardry.com/2011/10/the-island-object/)
  *
- * @markup
+ * @code
  *   <div class="o-island">
  *     Island
  *   </div>
@@ -54,7 +54,7 @@ $o-island-cs-e: true;
    * @description
    *   Positive actions; e.g. sign in, purchase, submit, etc.
    *
-   * @markup
+   * @code
    *   <div class="o-island o-island--positive">
    *     Positive Island
    *   </div>
@@ -70,7 +70,7 @@ $o-island-cs-e: true;
    * @name Neutral
    * @level X.X.X.X.
    *
-   * @markup
+   * @code
    *   <div class="o-island o-island--neutral">
    *     Neutral Island
    *   </div>
@@ -86,7 +86,7 @@ $o-island-cs-e: true;
    * @name Cautious
    * @level X.X.X.X.
    *
-   * @markup
+   * @code
    *   <div class="o-island o-island--cautious">
    *     Cautious Island
    *   </div>
@@ -104,7 +104,7 @@ $o-island-cs-e: true;
    * @description
    *   Negative actions; e.g. close account, delete photo, remove friend, etc.
    *
-   * @markup
+   * @code
    *   <div class="o-island o-island--negative">
    *     Negative Island
    *   </div>
@@ -126,7 +126,7 @@ $o-island-cs-e: true;
    * @name cs-a
    * @level X.X.X.X.
    *
-   * @markup
+   * @code
    *   <div class="o-island o-island--cs-a">
    *     cs-a Island
    *   </div>
@@ -142,7 +142,7 @@ $o-island-cs-e: true;
    * @name cs-b
    * @level X.X.X.X.
    *
-   * @markup
+   * @code
    *   <div class="o-island o-island--cs-b">
    *     cs-b Island
    *   </div>
@@ -158,7 +158,7 @@ $o-island-cs-e: true;
    * @name cs-c
    * @level X.X.X.X.
    *
-   * @markup
+   * @code
    *   <div class="o-island o-island--cs-c">
    *     cs-c Island
    *   </div>
@@ -174,7 +174,7 @@ $o-island-cs-e: true;
    * @name cs-d
    * @level X.X.X.X.
    *
-   * @markup
+   * @code
    *   <div class="o-island o-island--cs-d">
    *     cs-d Island
    *   </div>
@@ -190,7 +190,7 @@ $o-island-cs-e: true;
    * @name cs-e
    * @level X.X.X.X.
    *
-   * @markup
+   * @code
    *   <div class="o-island o-island--cs-e">
    *     cs-e Island
    *   </div>
