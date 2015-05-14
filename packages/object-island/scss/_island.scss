@@ -36,9 +36,6 @@ $o-island-cs-e: true;
   display: block;
   padding: $spacing-m;
   background: $cs-grey-a;
-  & > :last-child {
-    margin-bottom: 0;
-  }
 }
 
 
