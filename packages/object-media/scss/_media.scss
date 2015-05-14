@@ -1,15 +1,14 @@
 /**
  * @name Media
  * @level X.X.
+ * @description
+ *   The media object is an image on one side, with descriptive content on the other side.  
+ *   [Nicole Sullivan - The media object saves hundreds of lines of code](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code)
  */
 /**
  * @name Base
  * @level X.X.X.
- * @description
- *   The media object is an image on one side, with descriptive content on the other side.  
- *   [Nicole Sullivan - The media object saves hundreds of lines of code](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code)
- *
- * @markup
+ * @code
  *   <div class="o-media">
  *     <div class="o-media__figure">
  *       <img src="http://placehold.it/70x70" alt="">
