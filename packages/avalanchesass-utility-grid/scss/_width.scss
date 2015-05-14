@@ -1,6 +1,8 @@
 /**
  * @name Width
  * @level X.X.
+ * @description
+ *   Width classes mainly (but not exclusively) to be used in grids
  */
 /**
  * Variables
@@ -23,8 +25,8 @@ $u-width-size-xl: true !default;
  *
  * @code
  *   <div class="o-grid">
- *     <div class="o-grid__item u-width--6">Grid Item</div>
- *     <div class="o-grid__item u-width--6">Grid Item</div>
+ *     <div class="o-grid__item u-width--6"><span class="o-grid__inner">Width item</span></div>
+ *     <div class="o-grid__item u-width--6"><span class="o-grid__inner">Width item</span></div>
  *   </div>
  */
 $u-width-base-size: (100% / $u-width-item-count);
@@ -46,8 +48,8 @@ $u-width-base-size: (100% / $u-width-item-count);
    *
    * @code
    *   <div class="o-grid">
-   *     <div class="o-grid__item u-width--s--6">Grid Item</div>
-   *     <div class="o-grid__item u-width--s--6">Grid Item</div>
+   *     <div class="o-grid__item u-width--s--6"><span class="o-grid__inner">Width item</span></div>
+   *     <div class="o-grid__item u-width--s--6"><span class="o-grid__inner">Width item</span></div>
    *   </div>
    */
   @media (min-width: $breakpoint-s) {
@@ -70,10 +72,10 @@ $u-width-base-size: (100% / $u-width-item-count);
    *
    * @code
    *   <div class="o-grid">
-   *     <div class="o-grid__item u-width--s--6 u-width--m--3">Grid Item</div>
-   *     <div class="o-grid__item u-width--s--6 u-width--m--3">Grid Item</div>
-   *     <div class="o-grid__item u-width--s--6 u-width--m--3">Grid Item</div>
-   *     <div class="o-grid__item u-width--s--6 u-width--m--3">Grid Item</div>
+   *     <div class="o-grid__item u-width--s--6 u-width--m--3"><span class="o-grid__inner">Width item</span></div>
+   *     <div class="o-grid__item u-width--s--6 u-width--m--3"><span class="o-grid__inner">Width item</span></div>
+   *     <div class="o-grid__item u-width--s--6 u-width--m--3"><span class="o-grid__inner">Width item</span></div>
+   *     <div class="o-grid__item u-width--s--6 u-width--m--3"><span class="o-grid__inner">Width item</span></div>
    *   </div>
    */
   @media (min-width: $breakpoint-m) {
@@ -96,10 +98,10 @@ $u-width-base-size: (100% / $u-width-item-count);
    *
    * @code
    *   <div class="o-grid">
-   *     <div class="o-grid__item u-width--m--6 u-width--l--3">Grid Item</div>
-   *     <div class="o-grid__item u-width--m--6 u-width--l--3">Grid Item</div>
-   *     <div class="o-grid__item u-width--m--6 u-width--l--3">Grid Item</div>
-   *     <div class="o-grid__item u-width--m--6 u-width--l--3">Grid Item</div>
+   *     <div class="o-grid__item u-width--m--6 u-width--l--3"><span class="o-grid__inner">Width item</span></div>
+   *     <div class="o-grid__item u-width--m--6 u-width--l--3"><span class="o-grid__inner">Width item</span></div>
+   *     <div class="o-grid__item u-width--m--6 u-width--l--3"><span class="o-grid__inner">Width item</span></div>
+   *     <div class="o-grid__item u-width--m--6 u-width--l--3"><span class="o-grid__inner">Width item</span></div>
    *   </div>
    */
   @media (min-width: $breakpoint-l) {
@@ -122,10 +124,10 @@ $u-width-base-size: (100% / $u-width-item-count);
    *
    * @code
    *   <div class="o-grid">
-   *     <div class="o-grid__item u-width--l--6 u-width--xl--3">Grid Item</div>
-   *     <div class="o-grid__item u-width--l--6 u-width--xl--3">Grid Item</div>
-   *     <div class="o-grid__item u-width--l--6 u-width--xl--3">Grid Item</div>
-   *     <div class="o-grid__item u-width--l--6 u-width--xl--3">Grid Item</div>
+   *     <div class="o-grid__item u-width--l--6 u-width--xl--3"><span class="o-grid__inner">Width item</span></div>
+   *     <div class="o-grid__item u-width--l--6 u-width--xl--3"><span class="o-grid__inner">Width item</span></div>
+   *     <div class="o-grid__item u-width--l--6 u-width--xl--3"><span class="o-grid__inner">Width item</span></div>
+   *     <div class="o-grid__item u-width--l--6 u-width--xl--3"><span class="o-grid__inner">Width item</span></div>
    *   </div>
    */
   @media (min-width: $breakpoint-xl) {
