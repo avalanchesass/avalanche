@@ -1,6 +1,8 @@
 /**
  * @name Button
  * @level X.X.
+ * @description
+ *   Basic button styles
  */
 /**
  * Variables
@@ -16,6 +18,13 @@ $c-button-font-size-s:  true;
 $c-button-font-size-l:  true;
 $c-button-font-size-xl: true;
 
+// Color scheme
+$c-button-cs-a: true;
+$c-button-cs-b: true;
+$c-button-cs-c: true;
+$c-button-cs-d: true;
+$c-button-cs-e: true;
+
 // Functions
 $c-button-function-positive: true;
 $c-button-function-neutral:  true;
@@ -23,13 +32,6 @@ $c-button-function-cautious: true;
 $c-button-function-negative: true;
 $c-button-function-inactive: true;
 $c-button-function-disabled: true;
-
-// Color scheme
-$c-button-cs-a: true;
-$c-button-cs-b: true;
-$c-button-cs-c: true;
-$c-button-cs-d: true;
-$c-button-cs-e: true;
 
 
 
@@ -72,6 +74,8 @@ $c-button-cs-e: true;
 /**
  * @name Sizes
  * @level X.X.X.
+ * @description
+ *   Various sizes using the global spacing variables
  */
 @if $c-button-size-s {
   /**
@@ -127,6 +131,8 @@ $c-button-cs-e: true;
 /**
  * @name Font sizes
  * @level X.X.X.
+ * @description
+ *   Various sizes using the global font-size variables
  */
 @if $c-button-font-size-s {
   /**
@@ -167,8 +173,108 @@ $c-button-cs-e: true;
 
 
 /**
+ * @name Color scheme
+ * @level X.X.X.
+ * @description
+ *   Various color variations using the base color scheme
+ */
+@if $c-button-cs-a {
+  /**
+   * @name cs-a
+   * @level X.X.X.X.
+   * @code
+   *   <a href="#" class="c-button c-button--cs-a">Button</a>
+   */
+  .c-button--cs-a {
+    background: $cs-a;
+    color: $cs-a-contrast;
+    &:hover,
+    &:focus,
+    &:active {
+      background: mix($cs-a, $cs-a-contrast, 70%);
+    }
+  }
+}
+
+@if $c-button-cs-b {
+  /**
+   * @name cs-b
+   * @level X.X.X.X.
+   * @code
+   *   <a href="#" class="c-button c-button--cs-b">Button</a>
+   */
+  .c-button--cs-b {
+    background: $cs-b;
+    color: $cs-b-contrast;
+    &:hover,
+    &:focus,
+    &:active {
+      background: mix($cs-b, $cs-b-contrast, 70%);
+    }
+  }
+}
+
+@if $c-button-cs-c {
+  /**
+   * @name cs-c
+   * @level X.X.X.X.
+   * @code
+   *   <a href="#" class="c-button c-button--cs-c">Button</a>
+   */
+  .c-button--cs-c {
+    background: $cs-c;
+    color: $cs-c-contrast;
+    &:hover,
+    &:focus,
+    &:active {
+      background: mix($cs-c, $cs-c-contrast, 70%);
+    }
+  }
+}
+
+@if $c-button-cs-d {
+  /**
+   * @name cs-d
+   * @level X.X.X.X.
+   * @code
+   *   <a href="#" class="c-button c-button--cs-d">Button</a>
+   */
+  .c-button--cs-d {
+    background: $cs-d;
+    color: $cs-d-contrast;
+    &:hover,
+    &:focus,
+    &:active {
+      background: mix($cs-d, $cs-d-contrast, 70%);
+    }
+  }
+}
+
+@if $c-button-cs-e {
+  /**
+   * @name cs-e
+   * @level X.X.X.X.
+   * @code
+   *   <a href="#" class="c-button c-button--cs-e">Button</a>
+   */
+  .c-button--cs-e {
+    background: $cs-e;
+    color: $cs-e-contrast;
+    &:hover,
+    &:focus,
+    &:active {
+      background: mix($cs-e, $cs-e-contrast, 70%);
+    }
+  }
+}
+
+
+
+/**
  * @name Functions
  * @level X.X.X.
+ * @description
+ *   Various color variations using the function color scheme
  */
 @if $c-button-function-positive {
   /**
@@ -266,102 +372,6 @@ $c-button-cs-e: true;
     &:focus,
     &:active {
       cursor: text;
-    }
-  }
-}
-
-
-
-/**
- * @name Color scheme
- * @level X.X.X.
- */
-@if $c-button-cs-a {
-  /**
-   * @name cs-a
-   * @level X.X.X.X.
-   * @code
-   *   <a href="#" class="c-button c-button--cs-a">Button</a>
-   */
-  .c-button--cs-a {
-    background: $cs-a;
-    color: $cs-a-contrast;
-    &:hover,
-    &:focus,
-    &:active {
-      background: mix($cs-a, $cs-a-contrast, 70%);
-    }
-  }
-}
-
-@if $c-button-cs-b {
-  /**
-   * @name cs-b
-   * @level X.X.X.X.
-   * @code
-   *   <a href="#" class="c-button c-button--cs-b">Button</a>
-   */
-  .c-button--cs-b {
-    background: $cs-b;
-    color: $cs-b-contrast;
-    &:hover,
-    &:focus,
-    &:active {
-      background: mix($cs-b, $cs-b-contrast, 70%);
-    }
-  }
-}
-
-@if $c-button-cs-c {
-  /**
-   * @name cs-c
-   * @level X.X.X.X.
-   * @code
-   *   <a href="#" class="c-button c-button--cs-c">Button</a>
-   */
-  .c-button--cs-c {
-    background: $cs-c;
-    color: $cs-c-contrast;
-    &:hover,
-    &:focus,
-    &:active {
-      background: mix($cs-c, $cs-c-contrast, 70%);
-    }
-  }
-}
-
-@if $c-button-cs-d {
-  /**
-   * @name cs-d
-   * @level X.X.X.X.
-   * @code
-   *   <a href="#" class="c-button c-button--cs-d">Button</a>
-   */
-  .c-button--cs-d {
-    background: $cs-d;
-    color: $cs-d-contrast;
-    &:hover,
-    &:focus,
-    &:active {
-      background: mix($cs-d, $cs-d-contrast, 70%);
-    }
-  }
-}
-
-@if $c-button-cs-e {
-  /**
-   * @name cs-e
-   * @level X.X.X.X.
-   * @code
-   *   <a href="#" class="c-button c-button--cs-e">Button</a>
-   */
-  .c-button--cs-e {
-    background: $cs-e;
-    color: $cs-e-contrast;
-    &:hover,
-    &:focus,
-    &:active {
-      background: mix($cs-e, $cs-e-contrast, 70%);
     }
   }
 }
