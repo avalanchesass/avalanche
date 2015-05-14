@@ -1,5 +1,6 @@
 {
   "name": "avalanche: Component button",
+  "version": "2.0.1",
   "homepage": "https://github.com/avalanchesass/avalanche_component_button",
   "authors": [
     "Markus Oberlehner"
