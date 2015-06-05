@@ -1,6 +1,6 @@
 {
   "name": "avalanche",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "Markus Oberlehner",
   "license": "GPL v2",
   "dependencies": {
@@ -17,7 +17,7 @@
     "gulp-sass": "^1.3.3",
     "gulp-sourcemaps": "^1.5.2"
   },
-  "description": "SASS / CSS Framework",
+  "description": "a modular SASS framework",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",

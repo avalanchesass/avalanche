@@ -1,13 +1,18 @@
 /**
- * @name avalanche
+ * avalanche
+ * a modular SASS framework
+ */
+/**
+ * @name About
  * @level 1.
  * @description
- *   avalanche is a SCSS framework designed to be a minimal starting point.  
- *   The framework is easy extendable and intended to be edited as needed.
+ *   avalanche is a highly modular SASS framework. The goal of this framework is to be a minimal starting point that doesn’t make assumptions how things should look. avalanche provides a solid directory structure and a well thought through CSS methodology.
  */
 /**
  * @name Function
  * @level 2.
+ * @description
+ *   Custom SASS functions
  */
 @import 'function/*';
 
@@ -16,6 +21,8 @@
 /**
  * @name System
  * @level 3.
+ * @description
+ *   Everything system relevant (e.g. variables)
  */
 @import 'system/*';
 
@@ -24,6 +31,8 @@
 /**
  * @name Base
  * @level 4.
+ * @description
+ *   Base styles like typography and other global default styles (mostly unclassed HTML elements)
  */
 @import 'base/*';
 
@@ -32,6 +41,8 @@
 /**
  * @name Utility
  * @level 5.
+ * @description
+ *   Utility classes that do very specific things (e.g. clearfix)
  */
 @import 'utility/*';
 
@@ -40,6 +51,8 @@
 /**
  * @name Object
  * @level 6.
+ * @description
+ *   Non-cosmetic styles (e.g. the famous media object)
  */
 @import 'object/*';
 
@@ -48,5 +61,7 @@
 /**
  * @name Component
  * @level 7.
+ * @description
+ *   Concrete, implementation-specific piece of UI
  */
 @import 'component/*';
