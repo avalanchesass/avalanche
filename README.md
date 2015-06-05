@@ -35,6 +35,20 @@ To extend your installation with a preconfigured package open your bower.json fi
 }
 ```
 
+### BEM
+avalanche uses the [BEM syntax](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/). To make the meaning of the classes more transparent every BEM class name is [namespaced](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/). The BEM syntax helps to prevent [side effects in CSS](http://philipwalton.com/articles/side-effects-in-css/) and the informative nature of the naming convention makes it ideal for teams and larger projects.
+
+```css
+.c-block {}
+.c-block__element {}
+.c-block--modifier {}
+
+.c-car {}
+.c-car__engine {}
+.c-car--rally {}
+.c-car__engine--electric {}
+```
+
 ## About
 ### Author
 Markus Oberlehner  
