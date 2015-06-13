@@ -3,65 +3,72 @@
  * a modular SASS framework
  */
 /**
- * @name About
+ * About
+ * 
+ * avalanche is a highly modular SASS framework. The goal of this framework is to be a minimal starting point that doesn’t make assumptions how things should look. avalanche provides a solid directory structure and a well thought through CSS methodology.
+ *
  * @level 1.
- * @description
- *   avalanche is a highly modular SASS framework. The goal of this framework is to be a minimal starting point that doesn’t make assumptions how things should look. avalanche provides a solid directory structure and a well thought through CSS methodology.
  */
 /**
- * @name Function
+ * Function
+ * 
+ * Custom SASS functions
+ *
  * @level 2.
- * @description
- *   Custom SASS functions
  */
-@import 'function/*';
+//@import 'function/*';
 
 
 
 /**
- * @name System
+ * System
+ * 
+ * Everything system relevant (e.g. variables)
+ *
  * @level 3.
- * @description
- *   Everything system relevant (e.g. variables)
  */
-@import 'system/*';
+//@import 'system/*';
 
 
 
 /**
- * @name Base
+ * Base
+ * 
+ * Base styles like typography and other global default styles (mostly unclassed HTML elements)
+ *
  * @level 4.
- * @description
- *   Base styles like typography and other global default styles (mostly unclassed HTML elements)
  */
-@import 'base/*';
+//@import 'base/*';
 
 
 
 /**
- * @name Utility
+ * Utility
+ * 
+ * Utility classes that do very specific things (e.g. clearfix)
+ *
  * @level 5.
- * @description
- *   Utility classes that do very specific things (e.g. clearfix)
  */
-@import 'utility/*';
+//@import 'utility/*';
 
 
 
 /**
- * @name Object
+ * Object
+ * 
+ * Non-cosmetic styles (e.g. the famous media object)
+ *
  * @level 6.
- * @description
- *   Non-cosmetic styles (e.g. the famous media object)
  */
-@import 'object/*';
+//@import 'object/*';
 
 
 
 /**
- * @name Component
+ * Component
+ * 
+ * Concrete, implementation-specific piece of UI
+ *
  * @level 7.
- * @description
- *   Concrete, implementation-specific piece of UI
  */
-@import 'component/*';
+//@import 'component/*';
