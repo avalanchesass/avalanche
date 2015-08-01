@@ -1,19 +1,20 @@
 /**
- * @name Visibility
+ * Visibility
+ *
+ * Classes to hide content with accessibility in mind
+ *
  * @level X.X.
- * @description
- *   Classes to hide content with accessibility in mind
  */
 /**
- * @name .u-hidden
- * @level X.X.X.
- * @description
- *   Hide from both screenreaders and browsers: [h5bp.com/u](http://h5bp.com/u)
+ * hidden
  *
- * @code
- *   <div class="u-hidden">
- *     Nobody can see me
- *   </div>
+ * Hide from both screenreaders and browsers: [h5bp.com/u](http://h5bp.com/u)
+ *
+ * @level X.X.X.
+ * @markup
+ * <div class="u-hidden">
+ *   Nobody can see me
+ * </div>
  */
 @mixin u-hidden() {
   display: none !important;
@@ -27,15 +28,15 @@
 
 
 /**
- * @name .u-visuallyhidden
- * @level X.X.X.
- * @description
- *   Hide only visually, but have it available for screenreaders: [h5bp.com/v](http://h5bp.com/v)
+ * visuallyhidden
  *
- * @code
- *   <div class="u-visuallyhidden">
- *     Only screenreader users will notice me
- *   </div>
+ * Hide only visually, but have it available for screenreaders: [h5bp.com/v](http://h5bp.com/v)
+ *
+ * @level X.X.X.
+ * @markup
+ * <div class="u-visuallyhidden">
+ *   Only screenreader users will notice me
+ * </div>
  */
 @mixin u-visuallyhidden() {
   position: absolute;
@@ -64,15 +65,15 @@
 
 
 /**
- * @name .u-invisible
- * @level X.X.X.
- * @description
- *   Hide visually and from screenreaders, but maintain layout
+ * invisible
  *
- * @code
- *   <div class="u-invisible">
- *     Nobody can see my contents but im still here, somehow
- *   </div>
+ * Hide visually and from screenreaders, but maintain layout
+ *
+ * @level X.X.X.
+ * @markup
+ * <div class="u-invisible">
+ *   Nobody can see my contents but im still here, somehow
+ * </div>
  */
 @mixin u-invisible() {
   visibility: hidden;
