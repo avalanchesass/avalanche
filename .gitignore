@@ -3,5 +3,5 @@
 vendor
 scss/*/*.scss
 css/*
-package_dev/*
-styleguide/*
+package_dev
+styleguide
