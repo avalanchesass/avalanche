@@ -1,15 +1,15 @@
 /**
- * @name Spacing
- * @level X.X.
- * @description
- *   Let elements "breath" with some spacing
+ * Spacing
  *
- * @code
- *   <div class="u-spacing-wrap">
- *     <div>No spacing top because I'm the first element</div>
- *     <div>I have spacing top</div>
- *     <div>Me too</div>
- *   </div>
+ * Let elements "breath" with some spacing
+ *
+ * @level X.X.
+ * @markup
+ * <div class="u-spacing-wrap">
+ *   <div>No spacing top because I'm the first element</div>
+ *   <div>I have spacing top</div>
+ *   <div>Me too</div>
+ * </div>
  */
 @mixin u-spacing-wrap($spacing: $spacing-m) {
   > * + * {
