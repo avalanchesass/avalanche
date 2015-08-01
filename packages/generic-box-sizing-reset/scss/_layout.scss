@@ -1,15 +1,17 @@
 /**
- * @name Layout
+ * Layout
+ *
+ * Styles that influence basic layout
+ *
  * @level X.X.
- * @description
- *   Styles that influence basic layout
  */
 /**
- * @name Box sizing reset
+ * Box sizing reset
+ *
+ * Better box model<br>
+ * [Paul Irish - * { Box-sizing: Border-box } FTW](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
+ *
  * @level X.X.X.
- * @description
- *   Better box model  
- *   [Paul Irish - * { Box-sizing: Border-box } FTW](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
  */
 @if $layout-box-sizing-reset {
   html {
