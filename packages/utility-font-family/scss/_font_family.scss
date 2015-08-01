@@ -1,8 +1,9 @@
 /**
- * @name Font family
+ * Font family
+ *
+ * Font family classes
+ *
  * @level X.X.
- * @description
- *   Font family classes
  */
 @function font-family-find-normal-weight($font-family) {
   @if variable-exists(font-a-family) and $font-family == $font-a-family {
@@ -35,10 +36,10 @@
   }
 
   /**
-   * @code
-   *   <div class="u-font-family-a">
-   *     Lorem ipsum dolor (#{$font-a-family})
-   *   </div>
+   * @markup
+   * <div class="u-font-family-a">
+   *   Lorem ipsum dolor (#{$font-a-family})
+   * </div>
    */
   .u-font-family-a {
     @include u-font-family();
@@ -46,10 +47,10 @@
 
   @if variable-exists(font-b-family) {
       /**
-       * @code
-       *   <div class="u-font-family-b">
-       *     Lorem ipsum dolor (#{$font-b-family})
-       *   </div>
+       * @markup
+       * <div class="u-font-family-b">
+       *   Lorem ipsum dolor (#{$font-b-family})
+       * </div>
        */
     .u-font-family-b {
       @include u-font-family($font-b-family);
