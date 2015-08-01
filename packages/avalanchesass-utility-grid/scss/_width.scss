@@ -1,12 +1,11 @@
 /**
- * @name Width
+ * Width
+ *
+ * Width classes mainly (but not exclusively) to be used in grids
+ *
  * @level X.X.
- * @description
- *   Width classes mainly (but not exclusively) to be used in grids
  */
-/**
- * Variables
- */
+// Variables
 $u-width-item-count: 12 !default;
 
 // Sizes
@@ -18,16 +17,16 @@ $u-width-size-xl: true !default;
 
 
 /**
- * @name Base
- * @level X.X.X.
- * @description
- *   Mobile first styles for all screen sizes
+ * Base
  *
- * @code
- *   <div class="o-grid">
- *     <div class="o-grid__item u-width--6"><span class="o-grid__inner">Width item</span></div>
- *     <div class="o-grid__item u-width--6"><span class="o-grid__inner">Width item</span></div>
- *   </div>
+ * Mobile first styles for all screen sizes
+ *
+ * @level X.X.X.
+ * @markup
+ * <div class="o-grid">
+ *   <div class="o-grid__item u-width--6"><span class="o-grid__inner">Width item</span></div>
+ *   <div class="o-grid__item u-width--6"><span class="o-grid__inner">Width item</span></div>
+ * </div>
  */
 $u-width-base-size: (100% / $u-width-item-count);
 
@@ -41,16 +40,16 @@ $u-width-base-size: (100% / $u-width-item-count);
 
 @if $u-width-size-s {
   /**
-   * @name Small
-   * @level X.X.X.
-   * @description
-   *   Screen sizes #{$breakpoint-s} (#{strip-unit($breakpoint-s) * $font-base-size}) and up
+   * Small
    *
-   * @code
-   *   <div class="o-grid">
-   *     <div class="o-grid__item u-width--s--6"><span class="o-grid__inner">Width item</span></div>
-   *     <div class="o-grid__item u-width--s--6"><span class="o-grid__inner">Width item</span></div>
-   *   </div>
+   * Screen sizes #{$breakpoint-s} (#{strip-unit($breakpoint-s) * $font-base-size}) and up
+   *
+   * @level X.X.X.
+   * @markup
+   * <div class="o-grid">
+   *   <div class="o-grid__item u-width--s--6"><span class="o-grid__inner">Width item</span></div>
+   *   <div class="o-grid__item u-width--s--6"><span class="o-grid__inner">Width item</span></div>
+   * </div>
    */
   @media (min-width: $breakpoint-s) {
     @for $i from 1 through $u-width-item-count {
@@ -65,18 +64,18 @@ $u-width-base-size: (100% / $u-width-item-count);
 
 @if $u-width-size-m {
   /**
-   * @name Medium
-   * @level X.X.X.
-   * @description
-   *   Screen sizes #{$breakpoint-m} (#{strip-unit($breakpoint-m) * $font-base-size}) and up
+   * Medium
    *
-   * @code
-   *   <div class="o-grid">
-   *     <div class="o-grid__item u-width--s--6 u-width--m--3"><span class="o-grid__inner">Width item</span></div>
-   *     <div class="o-grid__item u-width--s--6 u-width--m--3"><span class="o-grid__inner">Width item</span></div>
-   *     <div class="o-grid__item u-width--s--6 u-width--m--3"><span class="o-grid__inner">Width item</span></div>
-   *     <div class="o-grid__item u-width--s--6 u-width--m--3"><span class="o-grid__inner">Width item</span></div>
-   *   </div>
+   * Screen sizes #{$breakpoint-m} (#{strip-unit($breakpoint-m) * $font-base-size}) and up
+   *
+   * @level X.X.X.
+   * @markup
+   * <div class="o-grid">
+   *   <div class="o-grid__item u-width--s--6 u-width--m--3"><span class="o-grid__inner">Width item</span></div>
+   *   <div class="o-grid__item u-width--s--6 u-width--m--3"><span class="o-grid__inner">Width item</span></div>
+   *   <div class="o-grid__item u-width--s--6 u-width--m--3"><span class="o-grid__inner">Width item</span></div>
+   *   <div class="o-grid__item u-width--s--6 u-width--m--3"><span class="o-grid__inner">Width item</span></div>
+   * </div>
    */
   @media (min-width: $breakpoint-m) {
     @for $i from 1 through $u-width-item-count {
@@ -91,18 +90,18 @@ $u-width-base-size: (100% / $u-width-item-count);
 
 @if $u-width-size-l {
   /**
-   * @name Large
-   * @level X.X.X.
-   * @description
-   *   Screen sizes #{$breakpoint-l} (#{strip-unit($breakpoint-l) * $font-base-size}) and up
+   * Large
    *
-   * @code
-   *   <div class="o-grid">
-   *     <div class="o-grid__item u-width--m--6 u-width--l--3"><span class="o-grid__inner">Width item</span></div>
-   *     <div class="o-grid__item u-width--m--6 u-width--l--3"><span class="o-grid__inner">Width item</span></div>
-   *     <div class="o-grid__item u-width--m--6 u-width--l--3"><span class="o-grid__inner">Width item</span></div>
-   *     <div class="o-grid__item u-width--m--6 u-width--l--3"><span class="o-grid__inner">Width item</span></div>
-   *   </div>
+   * Screen sizes #{$breakpoint-l} (#{strip-unit($breakpoint-l) * $font-base-size}) and up
+   *
+   * @level X.X.X.
+   * @markup
+   * <div class="o-grid">
+   *   <div class="o-grid__item u-width--m--6 u-width--l--3"><span class="o-grid__inner">Width item</span></div>
+   *   <div class="o-grid__item u-width--m--6 u-width--l--3"><span class="o-grid__inner">Width item</span></div>
+   *   <div class="o-grid__item u-width--m--6 u-width--l--3"><span class="o-grid__inner">Width item</span></div>
+   *   <div class="o-grid__item u-width--m--6 u-width--l--3"><span class="o-grid__inner">Width item</span></div>
+   * </div>
    */
   @media (min-width: $breakpoint-l) {
     @for $i from 1 through $u-width-item-count {
@@ -117,18 +116,18 @@ $u-width-base-size: (100% / $u-width-item-count);
 
 @if $u-width-size-xl {
   /**
-   * @name X-Large
-   * @level X.X.X.
-   * @description
-   *   Screen sizes #{$breakpoint-xl} (#{strip-unit($breakpoint-xl) * $font-base-size}) and up
+   * X-Large
    *
-   * @code
-   *   <div class="o-grid">
-   *     <div class="o-grid__item u-width--l--6 u-width--xl--3"><span class="o-grid__inner">Width item</span></div>
-   *     <div class="o-grid__item u-width--l--6 u-width--xl--3"><span class="o-grid__inner">Width item</span></div>
-   *     <div class="o-grid__item u-width--l--6 u-width--xl--3"><span class="o-grid__inner">Width item</span></div>
-   *     <div class="o-grid__item u-width--l--6 u-width--xl--3"><span class="o-grid__inner">Width item</span></div>
-   *   </div>
+   * Screen sizes #{$breakpoint-xl} (#{strip-unit($breakpoint-xl) * $font-base-size}) and up
+   *
+   * @level X.X.X.
+   * @markup
+   * <div class="o-grid">
+   *   <div class="o-grid__item u-width--l--6 u-width--xl--3"><span class="o-grid__inner">Width item</span></div>
+   *   <div class="o-grid__item u-width--l--6 u-width--xl--3"><span class="o-grid__inner">Width item</span></div>
+   *   <div class="o-grid__item u-width--l--6 u-width--xl--3"><span class="o-grid__inner">Width item</span></div>
+   *   <div class="o-grid__item u-width--l--6 u-width--xl--3"><span class="o-grid__inner">Width item</span></div>
+   * </div>
    */
   @media (min-width: $breakpoint-xl) {
     @for $i from 1 through $u-width-item-count {
