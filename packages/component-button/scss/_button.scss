@@ -1,12 +1,11 @@
 /**
- * @name Button
+ * Button
+ *
+ * Basic button styles
+ *
  * @level X.X.
- * @description
- *   Basic button styles
  */
-/**
- * Variables
- */
+// Variables
 // Sizes
 $c-button-size-s:    true;
 $c-button-size-l:    true;
@@ -36,11 +35,12 @@ $c-button-function-disabled: true;
 
 
 /**
- * @name Base
+ * Base
+ *
  * @level X.X.X.
- * @code
- *   <a href="#" class="c-button">Button</a>
- *   <button class="c-button">Button</button>
+ * @markup
+ * <a href="#" class="c-button">Button</a>
+ * <button class="c-button">Button</button>
  */
 .c-button {
   display: inline-block;
@@ -72,17 +72,19 @@ $c-button-function-disabled: true;
 
 
 /**
- * @name Sizes
+ * Sizes
+ *
+ * Various sizes using the global spacing variables
+ *
  * @level X.X.X.
- * @description
- *   Various sizes using the global spacing variables
  */
 @if $c-button-size-s {
   /**
-   * @name Small
+   * Small
+   *
    * @level X.X.X.X.
-   * @code
-   *   <a href="#" class="c-button c-button--s">Button</a>
+   * @markup
+   * <a href="#" class="c-button c-button--s">Button</a>
    */
   .c-button--s {
     padding: 0 $spacing-xs;
@@ -91,10 +93,11 @@ $c-button-function-disabled: true;
 
 @if $c-button-size-l {
   /**
-   * @name Large
+   * Large
+   *
    * @level X.X.X.X.
-   * @code
-   *   <a href="#" class="c-button c-button--l">Button</a>
+   * @markup
+   * <a href="#" class="c-button c-button--l">Button</a>
    */
   .c-button--l {
     padding: $spacing-s $spacing-m;
@@ -103,10 +106,11 @@ $c-button-function-disabled: true;
 
 @if $c-button-size-xl {
   /**
-   * @name X-Large
+   * X-Large
+   *
    * @level X.X.X.X.
-   * @code
-   *   <a href="#" class="c-button c-button--xl">Button</a>
+   * @markup
+   * <a href="#" class="c-button c-button--xl">Button</a>
    */
   .c-button--xl {
     padding: $spacing-m $spacing-l;
@@ -115,10 +119,11 @@ $c-button-function-disabled: true;
 
 @if $c-button-size-full {
   /**
-   * @name Full
+   * Full
+   *
    * @level X.X.X.X.
-   * @code
-   *   <a href="#" class="c-button c-button--full">Button</a>
+   * @markup
+   * <a href="#" class="c-button c-button--full">Button</a>
    */
   .c-button--full {
     width: 100%;
@@ -129,17 +134,19 @@ $c-button-function-disabled: true;
 
 
 /**
- * @name Font sizes
+ * Font sizes
+ *
+ * Various font sizes using the global font-size variables
+ *
  * @level X.X.X.
- * @description
- *   Various sizes using the global font-size variables
  */
 @if $c-button-font-size-s {
   /**
-   * @name Small
+   * Small
+   *
    * @level X.X.X.X.
-   * @code
-   *   <a href="#" class="c-button c-button--font--s">Button</a>
+   * @markup
+   * <a href="#" class="c-button c-button--font--s">Button</a>
    */
   .c-button--font--s {
     font-size: $font-size-s;
@@ -148,10 +155,11 @@ $c-button-function-disabled: true;
 
 @if $c-button-font-size-l {
   /**
-   * @name Large
+   * Large
+   *
    * @level X.X.X.X.
-   * @code
-   *   <a href="#" class="c-button c-button--font--l">Button</a>
+   * @markup
+   * <a href="#" class="c-button c-button--font--l">Button</a>
    */
   .c-button--font--l {
     font-size: $font-size-l;
@@ -160,10 +168,11 @@ $c-button-function-disabled: true;
 
 @if $c-button-font-size-xl {
   /**
-   * @name X-Large
+   * X-Large
+   *
    * @level X.X.X.X.
-   * @code
-   *   <a href="#" class="c-button c-button--font--xl">Button</a>
+   * @markup
+   * <a href="#" class="c-button c-button--font--xl">Button</a>
    */
   .c-button--font--xl {
     font-size: $font-size-xl;
@@ -173,17 +182,19 @@ $c-button-function-disabled: true;
 
 
 /**
- * @name Color scheme
+ * Color scheme
+ *
+ * Various color variations using the base color scheme
+ *
  * @level X.X.X.
- * @description
- *   Various color variations using the base color scheme
  */
 @if $c-button-cs-a {
   /**
-   * @name cs-a
+   * cs-a
+   *
    * @level X.X.X.X.
-   * @code
-   *   <a href="#" class="c-button c-button--cs-a">Button</a>
+   * @markup
+   * <a href="#" class="c-button c-button--cs-a">Button</a>
    */
   .c-button--cs-a {
     background: $cs-a;
@@ -198,10 +209,11 @@ $c-button-function-disabled: true;
 
 @if $c-button-cs-b {
   /**
-   * @name cs-b
+   * cs-b
+   *
    * @level X.X.X.X.
-   * @code
-   *   <a href="#" class="c-button c-button--cs-b">Button</a>
+   * @markup
+   * <a href="#" class="c-button c-button--cs-b">Button</a>
    */
   .c-button--cs-b {
     background: $cs-b;
@@ -216,10 +228,11 @@ $c-button-function-disabled: true;
 
 @if $c-button-cs-c {
   /**
-   * @name cs-c
+   * cs-c
+   *
    * @level X.X.X.X.
-   * @code
-   *   <a href="#" class="c-button c-button--cs-c">Button</a>
+   * @markup
+   * <a href="#" class="c-button c-button--cs-c">Button</a>
    */
   .c-button--cs-c {
     background: $cs-c;
@@ -234,10 +247,11 @@ $c-button-function-disabled: true;
 
 @if $c-button-cs-d {
   /**
-   * @name cs-d
+   * cs-d
+   *
    * @level X.X.X.X.
-   * @code
-   *   <a href="#" class="c-button c-button--cs-d">Button</a>
+   * @markup
+   * <a href="#" class="c-button c-button--cs-d">Button</a>
    */
   .c-button--cs-d {
     background: $cs-d;
@@ -252,10 +266,11 @@ $c-button-function-disabled: true;
 
 @if $c-button-cs-e {
   /**
-   * @name cs-e
+   * cs-e
+   *
    * @level X.X.X.X.
-   * @code
-   *   <a href="#" class="c-button c-button--cs-e">Button</a>
+   * @markup
+   * <a href="#" class="c-button c-button--cs-e">Button</a>
    */
   .c-button--cs-e {
     background: $cs-e;
@@ -271,17 +286,19 @@ $c-button-function-disabled: true;
 
 
 /**
- * @name Functions
+ * Functions
+ *
+ * Various color variations using the function color scheme
+ *
  * @level X.X.X.
- * @description
- *   Various color variations using the function color scheme
  */
 @if $c-button-function-positive {
   /**
-   * @name Positive
+   * Positive
+   *
    * @level X.X.X.X.
-   * @code
-   *   <a href="#" class="c-button c-button--positive">Button</a>
+   * @markup
+   * <a href="#" class="c-button c-button--positive">Button</a>
    */
   .c-button--positive {
     background: $cs-positive;
@@ -296,10 +313,11 @@ $c-button-function-disabled: true;
 
 @if $c-button-function-neutral {
   /**
-   * @name Neutral
+   * Neutral
+   *
    * @level X.X.X.X.
-   * @code
-   *   <a href="#" class="c-button c-button--neutral">Button</a>
+   * @markup
+   * <a href="#" class="c-button c-button--neutral">Button</a>
    */
   .c-button--neutral {
     background: $cs-neutral;
@@ -314,10 +332,11 @@ $c-button-function-disabled: true;
 
 @if $c-button-function-cautious {
   /**
-   * @name Cautious
+   * Cautious
+   *
    * @level X.X.X.X.
-   * @code
-   *   <a href="#" class="c-button c-button--cautious">Button</a>
+   * @markup
+   * <a href="#" class="c-button c-button--cautious">Button</a>
    */
   .c-button--cautious {
     background: $cs-cautious;
@@ -332,10 +351,11 @@ $c-button-function-disabled: true;
 
 @if $c-button-function-negative {
   /**
-   * @name Negative
+   * Negative
+   *
    * @level X.X.X.X.
-   * @code
-   *   <a href="#" class="c-button c-button--negative">Button</a>
+   * @markup
+   * <a href="#" class="c-button c-button--negative">Button</a>
    */
   .c-button--negative {
     background: $cs-negative;
@@ -350,11 +370,12 @@ $c-button-function-disabled: true;
 
 @if $c-button-function-inactive or $c-button-function-disabled {
   /**
-   * @name Inactive / disabled
+   * Inactive / disabled
+   *
    * @level X.X.X.X.
-   * @code
-   *   <a href="#" class="c-button c-button--inactive">Button</a>
-   *   <a href="#" class="c-button c-button--disabled">Button</a>
+   * @markup
+   * <a href="#" class="c-button c-button--inactive">Button</a>
+   * <a href="#" class="c-button c-button--disabled">Button</a>
    */
   .c-button--inactive,
   .c-button--disabled {
