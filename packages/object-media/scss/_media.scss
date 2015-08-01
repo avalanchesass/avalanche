@@ -1,30 +1,24 @@
 /**
- * @name Media
+ * Media
+ *
+ * The media object is an image on one side, with descriptive content on the other side.<br>
+ * [Nicole Sullivan - The media object saves hundreds of lines of code](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code)
+ *
  * @level X.X.
- * @description
- *   The media object is an image on one side, with descriptive content on the other side.  
- *   [Nicole Sullivan - The media object saves hundreds of lines of code](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code)
  */
 /**
- * @name Base
+ * Base
+ *
  * @level X.X.X.
- * @code
- *   <div class="o-media">
- *     <div class="o-media__figure">
- *       <img src="http://placehold.it/70x70" alt="">
- *     </div>
- *     <div class="o-media__body">
- *       Lorem ipsum dolor sit...
- *     </div>
+ * @markup
+ * <div class="o-media">
+ *   <div class="o-media__figure">
+ *     <img src="http://placehold.it/70x70" alt="">
  *   </div>
- *   <div class="o-media">
- *     <div class="o-media__figure-rev">
- *       <img src="http://placehold.it/70x70" alt="">
- *     </div>
- *     <div class="o-media__body">
- *       Lorem ipsum dolor sit...
- *     </div>
+ *   <div class="o-media__body">
+ *     Lorem ipsum dolor sit...
  *   </div>
+ * </div>
  */
 .o-media {
   @include u-clearfix();
@@ -46,16 +40,42 @@
   overflow: hidden;
 }
 
+
+
 /**
- * Reversed image location (right instead of left).
+ * Reversed figure location
+ *
+ * @level X.X.X.
+ * @markup
+ * <div class="o-media">
+ *   <div class="o-media__figure-rev">
+ *     <img src="http://placehold.it/70x70" alt="">
+ *   </div>
+ *   <div class="o-media__body">
+ *     Lorem ipsum dolor sit...
+ *   </div>
+ * </div>
  */
 .o-media__figure-rev {
   float: right;
   margin-left: $spacing-m;
 }
 
+
+
 /**
  * Reset media styling on small screens
+ *
+ * @level X.X.X.
+ * @markup
+ * <div class="o-media o-media--mobile-reset">
+ *   <div class="o-media__figure">
+ *     <img src="http://placehold.it/70x70" alt="">
+ *   </div>
+ *   <div class="o-media__body">
+ *     Lorem ipsum dolor sit...
+ *   </div>
+ * </div>
  */
 @media (max-width: $breakpoint-max-m) {
   .o-media--mobile-reset {
