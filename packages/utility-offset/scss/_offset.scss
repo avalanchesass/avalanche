@@ -1,12 +1,11 @@
 /**
- * @name Offset
+ * Offset
+ *
+ * Offset classes mainly (but not exclusively) to be used in grids
+ *
  * @level X.X.
- * @description
- *   Offset classes mainly (but not exclusively) to be used in grids
  */
-/**
- * Variables
- */
+// Variables
 $u-offset-item-count: 12 !default;
 
 // Sizes
@@ -18,15 +17,15 @@ $u-offset-size-xl: true !default;
 
 
 /**
- * @name Base
- * @level X.X.X.
- * @description
- *   Mobile first styles for all screen sizes
+ * Base
  *
- * @code
- *   <div class="o-grid">
- *     <div class="o-grid__item u-width--6 u-offset--6"><span class="o-grid__inner">Grid item with offset</span></div>
- *   </div>
+ * Mobile first styles for all screen sizes
+ *
+ * @level X.X.X.
+ * @markup
+ * <div class="o-grid">
+ *   <div class="o-grid__item u-width--6 u-offset--6"><span class="o-grid__inner">Grid item with offset</span></div>
+ * </div>
  */
 $u-offset-base-size: (100% / $u-offset-item-count);
 
@@ -40,15 +39,15 @@ $u-offset-base-size: (100% / $u-offset-item-count);
 
 @if $u-offset-size-s {
   /**
-   * @name Small
-   * @level X.X.X.
-   * @description
-   *   Screen sizes #{$breakpoint-s} (#{strip-unit($breakpoint-s) * $font-base-size}) and up
+   * Small
    *
-   * @code
-   *   <div class="o-grid">
-   *     <div class="o-grid__item u-width--12 u-width--s--6 u-offset--s--6"><span class="o-grid__inner">Grid item with offset</span></div>
-   *   </div>
+   * Screen sizes #{$breakpoint-s} (#{strip-unit($breakpoint-s) * $font-base-size}) and up
+   *
+   * @level X.X.X.
+   * @markup
+   * <div class="o-grid">
+   *   <div class="o-grid__item u-width--12 u-width--s--6 u-offset--s--6"><span class="o-grid__inner">Grid item with offset</span></div>
+   * </div>
    */
   @media (min-width: $breakpoint-s) {
     @for $i from 1 through $u-offset-item-count {
@@ -63,16 +62,16 @@ $u-offset-base-size: (100% / $u-offset-item-count);
 
 @if $u-offset-size-m {
   /**
-   * @name Medium
-   * @level X.X.X.
-   * @description
-   *   Screen sizes #{$breakpoint-m} (#{strip-unit($breakpoint-m) * $font-base-size}) and up
+   * Medium
    *
-   * @code
-   *   <div class="o-grid">
-   *     <div class="o-grid__item u-width--12 u-width--s--6 u-width--m--3 u-offset--m--3"><span class="o-grid__inner">Grid item with offset</span></div>
-   *     <div class="o-grid__item u-width--12 u-width--s--6 u-width--m--3 u-offset--m--3"><span class="o-grid__inner">Grid item with offset</span></div>
-   *   </div>
+   * Screen sizes #{$breakpoint-m} (#{strip-unit($breakpoint-m) * $font-base-size}) and up
+   *
+   * @level X.X.X.
+   * @markup
+   * <div class="o-grid">
+   *   <div class="o-grid__item u-width--12 u-width--s--6 u-width--m--3 u-offset--m--3"><span class="o-grid__inner">Grid item with offset</span></div>
+   *   <div class="o-grid__item u-width--12 u-width--s--6 u-width--m--3 u-offset--m--3"><span class="o-grid__inner">Grid item with offset</span></div>
+   * </div>
    */
   @media (min-width: $breakpoint-m) {
     @for $i from 1 through $u-offset-item-count {
@@ -87,16 +86,16 @@ $u-offset-base-size: (100% / $u-offset-item-count);
 
 @if $u-offset-size-l {
   /**
-   * @name Large
-   * @level X.X.X.
-   * @description
-   *   Screen sizes #{$breakpoint-l} (#{strip-unit($breakpoint-l) * $font-base-size}) and up
+   * Large
    *
-   * @code
-   *   <div class="o-grid">
-   *     <div class="o-grid__item u-width--12 u-width--m--6 u-width--l--3 u-offset--l--3"><span class="o-grid__inner">Grid item with offset</span></div>
-   *     <div class="o-grid__item u-width--12 u-width--m--6 u-width--l--3 u-offset--l--3"><span class="o-grid__inner">Grid item with offset</span></div>
-   *   </div>
+   * Screen sizes #{$breakpoint-l} (#{strip-unit($breakpoint-l) * $font-base-size}) and up
+   *
+   * @level X.X.X.
+   * @markup
+   * <div class="o-grid">
+   *   <div class="o-grid__item u-width--12 u-width--m--6 u-width--l--3 u-offset--l--3"><span class="o-grid__inner">Grid item with offset</span></div>
+   *   <div class="o-grid__item u-width--12 u-width--m--6 u-width--l--3 u-offset--l--3"><span class="o-grid__inner">Grid item with offset</span></div>
+   * </div>
    */
   @media (min-width: $breakpoint-l) {
     @for $i from 1 through $u-offset-item-count {
@@ -111,16 +110,16 @@ $u-offset-base-size: (100% / $u-offset-item-count);
 
 @if $u-offset-size-xl {
   /**
-   * @name X-Large
-   * @level X.X.X.
-   * @description
-   *   Screen sizes #{$breakpoint-xl} (#{strip-unit($breakpoint-xl) * $font-base-size}) and up
+   * X-Large
    *
-   * @code
-   *   <div class="o-grid">
-   *     <div class="o-grid__item u-width--12 u-width--l--6 u-width--xl--3 u-offset--xl--3"><span class="o-grid__inner">Grid item with offset</span></div>
-   *     <div class="o-grid__item u-width--12 u-width--l--6 u-width--xl--3 u-offset--xl--3"><span class="o-grid__inner">Grid item with offset</span></div>
-   *   </div>
+   * Screen sizes #{$breakpoint-xl} (#{strip-unit($breakpoint-xl) * $font-base-size}) and up
+   *
+   * @level X.X.X.
+   * @markup
+   * <div class="o-grid">
+   *   <div class="o-grid__item u-width--12 u-width--l--6 u-width--xl--3 u-offset--xl--3"><span class="o-grid__inner">Grid item with offset</span></div>
+   *   <div class="o-grid__item u-width--12 u-width--l--6 u-width--xl--3 u-offset--xl--3"><span class="o-grid__inner">Grid item with offset</span></div>
+   * </div>
    */
   @media (min-width: $breakpoint-xl) {
     @for $i from 1 through $u-offset-item-count {
