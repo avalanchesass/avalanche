@@ -1,13 +1,13 @@
 /**
- * @name Clearfix
- * @level X.X.
- * @description
- *   Contain floats
+ * Clearfix
  *
- * @code
- *   <div class="u-clearfix">
- *     <div class="stuff-that-floats"></div>
- *   </div>
+ * Contain floats
+ *
+ * @level X.X.
+ * @markup
+ * <div class="u-clearfix">
+ *   <div class="stuff-that-floats"></div>
+ * </div>
  */
 @mixin u-clearfix() {
   *zoom: 1;
