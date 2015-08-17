@@ -26,7 +26,8 @@ gulp.task('styles', function () {
       .pipe(sass({ precision: 7, errLogToConsole: true }))
       .pipe(autoprefixer())
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('css'));
+    .pipe(gulp.dest('css'))
+    .pipe(livereload());
 });
 
 // Minify
@@ -80,5 +81,6 @@ gulp.task('watch', function () {
 
 // Default
 gulp.task('default', function () {
+  livereload.listen();
   gulp.start('watch');
 });
