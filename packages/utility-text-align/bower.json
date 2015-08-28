@@ -1,0 +1,24 @@
+{
+  "name": "avalanche: Utility text align",
+  "version": "2.0.0",
+  "homepage": "https://github.com/avalanchesass/avalanche_utility_text_align",
+  "authors": [
+    "Markus Oberlehner"
+  ],
+  "description": "Text align utility classes",
+  "keywords": [
+    "SASS",
+    "CSS"
+  ],
+  "license": "GPL v2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "avalanche_system_variable": "^2.0.0"
+  }
+}
