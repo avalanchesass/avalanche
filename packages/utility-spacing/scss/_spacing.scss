@@ -4,19 +4,153 @@
  * Let elements "breath" with some spacing
  *
  * @level X.X.
- * @markup
- * <div class="u-spacing-wrap">
- *   <div>No spacing top because I'm the first element</div>
- *   <div>I have spacing top</div>
- *   <div>Me too</div>
- * </div>
  */
+// Variables
+$u-spacing-wrap-xs:   false;
+$u-spacing-wrap-s:    false;
+$u-spacing-wrap-m:    true;
+$u-spacing-wrap-l:    false;
+$u-spacing-wrap-xl:   false;
+$u-spacing-wrap-xxl:  false;
+$u-spacing-wrap-xxxl: false;
+
+
+
 @mixin u-spacing-wrap($spacing: $spacing-m) {
   > * + * {
     margin-top: $spacing;
   }
 }
 
-.u-spacing-wrap {
-  @include u-spacing-wrap();
+
+
+@if $u-spacing-wrap-xs {
+  /**
+   * XS
+   *
+   * @level X.X.X.
+   * @markup
+   * <div class="u-spacing-wrap-xs">
+   *   <div>No spacing top because I'm the first element</div>
+   *   <div>I have spacing top</div>
+   *   <div>Me too</div>
+   * </div>
+   */
+  .u-spacing-wrap-xs {
+    @include u-spacing-wrap($spacing-xs);
+  }
+}
+
+
+
+@if $u-spacing-wrap-s {
+  /**
+   * S
+   *
+   * @level X.X.X.
+   * @markup
+   * <div class="u-spacing-wrap-s">
+   *   <div>No spacing top because I'm the first element</div>
+   *   <div>I have spacing top</div>
+   *   <div>Me too</div>
+   * </div>
+   */
+  .u-spacing-wrap-s {
+    @include u-spacing-wrap($spacing-s);
+  }
+}
+
+
+
+@if $u-spacing-wrap-m {
+  /**
+   * M
+   *
+   * @level X.X.X.
+   * @markup
+   * <div class="u-spacing-wrap">
+   *   <div>No spacing top because I'm the first element</div>
+   *   <div>I have spacing top</div>
+   *   <div>Me too</div>
+   * </div>
+   */
+  .u-spacing-wrap {
+    @include u-spacing-wrap();
+  }
+}
+
+
+
+@if $u-spacing-wrap-l {
+  /**
+   * L
+   *
+   * @level X.X.X.
+   * @markup
+   * <div class="u-spacing-wrap-l">
+   *   <div>No spacing top because I'm the first element</div>
+   *   <div>I have spacing top</div>
+   *   <div>Me too</div>
+   * </div>
+   */
+  .u-spacing-wrap-l {
+    @include u-spacing-wrap($spacing-l);
+  }
+}
+
+
+
+@if $u-spacing-wrap-xl {
+  /**
+   * XL
+   *
+   * @level X.X.X.
+   * @markup
+   * <div class="u-spacing-wrap-xl">
+   *   <div>No spacing top because I'm the first element</div>
+   *   <div>I have spacing top</div>
+   *   <div>Me too</div>
+   * </div>
+   */
+  .u-spacing-wrap-xl {
+    @include u-spacing-wrap($spacing-xl);
+  }
+}
+
+
+
+@if $u-spacing-wrap-xxl {
+  /**
+   * XXL
+   *
+   * @level X.X.X.
+   * @markup
+   * <div class="u-spacing-wrap-xxl">
+   *   <div>No spacing top because I'm the first element</div>
+   *   <div>I have spacing top</div>
+   *   <div>Me too</div>
+   * </div>
+   */
+  .u-spacing-wrap-xxl {
+    @include u-spacing-wrap($spacing-xxl);
+  }
+}
+
+
+
+@if $u-spacing-wrap-xxxl {
+  /**
+   * XXXL
+   *
+   * @level X.X.X.
+   * @markup
+   * <div class="u-spacing-wrap-xxxl">
+   *   <div>No spacing top because I'm the first element</div>
+   *   <div>I have spacing top</div>
+   *   <div>Me too</div>
+   * </div>
+   */
+  .u-spacing-wrap-xxxl {
+    @include u-spacing-wrap($spacing-xxxl);
+  }
 }
