@@ -6,29 +6,43 @@
  * @level X.X.
  */
 // Variables
-$u-spacing-wrap-xs:   false;
-$u-spacing-wrap-s:    false;
-$u-spacing-wrap-m:    true;
-$u-spacing-wrap-l:    false;
-$u-spacing-wrap-xl:   false;
-$u-spacing-wrap-xxl:  false;
-$u-spacing-wrap-xxxl: false;
+$u-spacing-wrap-xs:   false !default;
+$u-spacing-wrap-s:    false !default;
+$u-spacing-wrap-m:    true !default;
+$u-spacing-wrap-l:    false !default;
+$u-spacing-wrap-xl:   false !default;
+$u-spacing-wrap-xxl:  false !default;
+$u-spacing-wrap-xxxl: false !default;
+
+$u-spacing-top-xs:   false !default;
+$u-spacing-top-s:    false !default;
+$u-spacing-top-m:    false !default;
+$u-spacing-top-l:    false !default;
+$u-spacing-top-xl:   false !default;
+$u-spacing-top-xxl:  false !default;
+$u-spacing-top-xxxl: false !default;
 
 
 
+/**
+ * Wrap
+ *
+ * Give a set of elements wrapped in a container a top margin
+ * the first element gets no margin top.
+ *
+ * @level X.X.X.
+ */
 @mixin u-spacing-wrap($spacing: $spacing-m) {
   > * + * {
     margin-top: $spacing;
   }
 }
 
-
-
 @if $u-spacing-wrap-xs {
   /**
    * XS
    *
-   * @level X.X.X.
+   * @level X.X.X.X.
    * @markup
    * <div class="u-spacing-wrap-xs">
    *   <div>No spacing top because I'm the first element</div>
@@ -41,13 +55,11 @@ $u-spacing-wrap-xxxl: false;
   }
 }
 
-
-
 @if $u-spacing-wrap-s {
   /**
    * S
    *
-   * @level X.X.X.
+   * @level X.X.X.X.
    * @markup
    * <div class="u-spacing-wrap-s">
    *   <div>No spacing top because I'm the first element</div>
@@ -60,13 +72,11 @@ $u-spacing-wrap-xxxl: false;
   }
 }
 
-
-
 @if $u-spacing-wrap-m {
   /**
    * M
    *
-   * @level X.X.X.
+   * @level X.X.X.X.
    * @markup
    * <div class="u-spacing-wrap">
    *   <div>No spacing top because I'm the first element</div>
@@ -79,13 +89,11 @@ $u-spacing-wrap-xxxl: false;
   }
 }
 
-
-
 @if $u-spacing-wrap-l {
   /**
    * L
    *
-   * @level X.X.X.
+   * @level X.X.X.X.
    * @markup
    * <div class="u-spacing-wrap-l">
    *   <div>No spacing top because I'm the first element</div>
@@ -98,13 +106,11 @@ $u-spacing-wrap-xxxl: false;
   }
 }
 
-
-
 @if $u-spacing-wrap-xl {
   /**
    * XL
    *
-   * @level X.X.X.
+   * @level X.X.X.X.
    * @markup
    * <div class="u-spacing-wrap-xl">
    *   <div>No spacing top because I'm the first element</div>
@@ -117,13 +123,11 @@ $u-spacing-wrap-xxxl: false;
   }
 }
 
-
-
 @if $u-spacing-wrap-xxl {
   /**
    * XXL
    *
-   * @level X.X.X.
+   * @level X.X.X.X.
    * @markup
    * <div class="u-spacing-wrap-xxl">
    *   <div>No spacing top because I'm the first element</div>
@@ -135,8 +139,6 @@ $u-spacing-wrap-xxxl: false;
     @include u-spacing-wrap($spacing-xxl);
   }
 }
-
-
 
 @if $u-spacing-wrap-xxxl {
   /**
@@ -152,5 +154,123 @@ $u-spacing-wrap-xxxl: false;
    */
   .u-spacing-wrap-xxxl {
     @include u-spacing-wrap($spacing-xxxl);
+  }
+}
+
+
+
+/**
+ * Top
+ *
+ * Add top margin to an element.
+ *
+ * @level X.X.X.
+ */
+@mixin u-spacing-top($spacing: $spacing-m) {
+  margin-top: $spacing;
+}
+
+@if $u-spacing-top-xs {
+  /**
+   * XS
+   *
+   * @level X.X.X.X.
+   * @markup
+   * <div class="u-spacing-top-xs">
+   *   Lorem ipsum
+   * </div>
+   */
+  .u-spacing-top-xs {
+    @include u-spacing-top($spacing-xs);
+  }
+}
+
+@if $u-spacing-top-s {
+  /**
+   * S
+   *
+   * @level X.X.X.X.
+   * @markup
+   * <div class="u-spacing-top-s">
+   *   Lorem ipsum
+   * </div>
+   */
+  .u-spacing-top-s {
+    @include u-spacing-top($spacing-s);
+  }
+}
+
+@if $u-spacing-top-m {
+  /**
+   * M
+   *
+   * @level X.X.X.X.
+   * @markup
+   * <div class="u-spacing-top-m">
+   *   Lorem ipsum
+   * </div>
+   */
+  .u-spacing-top-m {
+    @include u-spacing-top();
+  }
+}
+
+@if $u-spacing-top-l {
+  /**
+   * L
+   *
+   * @level X.X.X.X.
+   * @markup
+   * <div class="u-spacing-top-l">
+   *   Lorem ipsum
+   * </div>
+   */
+  .u-spacing-top-l {
+    @include u-spacing-top($spacing-l);
+  }
+}
+
+@if $u-spacing-top-xl {
+  /**
+   * XL
+   *
+   * @level X.X.X.X.
+   * @markup
+   * <div class="u-spacing-top-xl">
+   *   Lorem ipsum
+   * </div>
+   */
+  .u-spacing-top-xl {
+    @include u-spacing-top($spacing-xl);
+  }
+}
+
+@if $u-spacing-top-xxl {
+  /**
+   * XXL
+   *
+   * @level X.X.X.X.
+   * @markup
+   * <div class="u-spacing-top-xxl">
+   *   Lorem ipsum
+   * </div>
+   */
+  .u-spacing-top-xxl {
+    @include u-spacing-top($spacing-xxl);
+  }
+}
+
+@if $u-spacing-top-xxxl {
+  /**
+   * XXXL
+   *
+   * @level X.X.X.X.
+   * @markup
+   * <div class="u-spacing-top-xxxl">
+   *   Lorem ipsum
+   * </div>
+   */
+  .u-spacing-top-xxxl {
+    @include u-spacing-top($spacing-xxxl);
   }
 }
