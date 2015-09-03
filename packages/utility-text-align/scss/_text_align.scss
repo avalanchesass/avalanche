@@ -9,8 +9,6 @@
   text-align: $align;
 }
 
-
-
 /**
  * Right
  *
@@ -24,8 +22,6 @@
   @include u-text-align();
 }
 
-
-
 /**
  * Left
  *
@@ -38,8 +34,6 @@
 .u-text-align-left {
   @include u-text-align(left);
 }
-
-
 
 /**
  * Center
