@@ -6,7 +6,7 @@
  * @level X.X.
  */
 @mixin u-text-align($align: right) {
-  text-align: $align;
+  text-align: $align !important;
 }
 
 /**
