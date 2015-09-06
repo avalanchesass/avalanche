@@ -91,7 +91,6 @@ $c-button-function-disabled: false !default;
       padding: 0 $spacing-xs;
     }
   }
-
   @if $c-button-size-l {
     /**
      * Large
@@ -104,7 +103,6 @@ $c-button-function-disabled: false !default;
       padding: $spacing-s $spacing-m;
     }
   }
-
   @if $c-button-size-xl {
     /**
      * X-Large
@@ -117,7 +115,6 @@ $c-button-function-disabled: false !default;
       padding: $spacing-m $spacing-l;
     }
   }
-
   @if $c-button-size-full {
     /**
      * Full
@@ -155,7 +152,6 @@ $c-button-function-disabled: false !default;
       font-size: $font-size-s;
     }
   }
-
   @if $c-button-font-size-l {
     /**
      * Large
@@ -168,7 +164,6 @@ $c-button-function-disabled: false !default;
       font-size: $font-size-l;
     }
   }
-
   @if $c-button-font-size-xl {
     /**
      * X-Large
@@ -211,7 +206,6 @@ $c-button-function-disabled: false !default;
       }
     }
   }
-
   @if $c-button-cs-b {
     /**
      * cs-b
@@ -230,7 +224,6 @@ $c-button-function-disabled: false !default;
       }
     }
   }
-
   @if $c-button-cs-c {
     /**
      * cs-c
@@ -249,7 +242,6 @@ $c-button-function-disabled: false !default;
       }
     }
   }
-
   @if $c-button-cs-d {
     /**
      * cs-d
@@ -268,7 +260,6 @@ $c-button-function-disabled: false !default;
       }
     }
   }
-
   @if $c-button-cs-e {
     /**
      * cs-e
@@ -318,7 +309,6 @@ $c-button-function-disabled: false !default;
       }
     }
   }
-
   @if $c-button-function-neutral {
     /**
      * Neutral
@@ -337,7 +327,6 @@ $c-button-function-disabled: false !default;
       }
     }
   }
-
   @if $c-button-function-cautious {
     /**
      * Cautious
@@ -356,7 +345,6 @@ $c-button-function-disabled: false !default;
       }
     }
   }
-
   @if $c-button-function-negative {
     /**
      * Negative
@@ -375,7 +363,6 @@ $c-button-function-disabled: false !default;
       }
     }
   }
-
   @if $c-button-function-inactive or $c-button-function-disabled {
     /**
      * Inactive / disabled
