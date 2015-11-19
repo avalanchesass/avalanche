@@ -6,6 +6,7 @@
  * @level X.X.
  */
 // Variables
+$o-grid-flex: true !default;
 $o-grid-item-count: 12 !default;
 
 // Sizes
@@ -35,14 +36,21 @@ $o-grid-spacing-xl: $spacing-m !default;
  * </div>
  */
 .o-grid {
-  @include u-clearfix();
+  @if $o-grid-flex {
+    display: flex;
+    flex-wrap: wrap;
+  } @else {
+    @include u-clearfix();
+  }
   &.o-grid--spaced {
     margin-left: -$o-grid-spacing-s;
   }
 }
 
 .o-grid__item {
-  float: left;
+  @if $o-grid-flex != true {
+    float: left;
+  }
   @if $layout-box-sizing-reset == false {
     box-sizing: border-box;
   }
