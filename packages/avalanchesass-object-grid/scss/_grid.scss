@@ -171,3 +171,51 @@ $o-grid-spacing-xl: $spacing-m !default;
     }
   }
 }
+
+
+
+
+
+/**
+ * Order MOVE THIS TO A UTILITY PACKAGE
+ * DISPLAY WARNING IF FLEX GRID IS DISABLED
+ *
+ * Reorder flex items
+ *
+ * @level X.X.
+ * @markup
+ * <div class="o-grid o-grid--spaced">
+ *   <div class="o-grid__item u-width--6 u-order-end@m"><span class="o-grid__inner">Grid item 1</span></div>
+ *   <div class="o-grid__item u-width--6"><span class="o-grid__inner">Grid item 2</span></div>
+ *   <div class="o-grid__item u-width--6 u-order-start@m"><span class="o-grid__inner">Grid item 3</span></div>
+ *   <div class="o-grid__item u-width--6"><span class="o-grid__inner">Grid item 4</span></div>
+ *   <div class="o-grid__item u-width--6 u-order-1@m"><span class="o-grid__inner">Grid item 5</span></div>
+ *   <div class="o-grid__item u-width--6"><span class="o-grid__inner">Grid item 6</span></div>
+ *   <div class="o-grid__item u-width--6 u-order-2@m"><span class="o-grid__inner">Grid item 7</span></div>
+ *   <div class="o-grid__item u-width--6 u-order-3@m"><span class="o-grid__inner">Grid item 8</span></div>
+ *   <div class="o-grid__item u-width--6 u-order-4@m"><span class="o-grid__inner">Grid item 9</span></div>
+ *   <div class="o-grid__item u-width--6"><span class="o-grid__inner">Grid item 10</span></div>
+ *   <div class="o-grid__item u-width--6"><span class="o-grid__inner">Grid item 11</span></div>
+ *   <div class="o-grid__item u-width--6"><span class="o-grid__inner">Grid item 12</span></div>
+ *   <div class="o-grid__item u-width--6"><span class="o-grid__inner">Grid item 13</span></div>
+ * </div>
+ */
+@media (min-width: $breakpoint-m) {
+  .u-order-start\@m {
+    order: -9999;
+  }
+}
+$u-order-max: 8;
+@for $i from 1 through $u-order-max {
+  @media (min-width: $breakpoint-m) {
+    .u-order-#{$i}\@m {
+      order: $i - $u-order-max;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-m) {
+  .u-order-end\@m {
+    order: 9999;
+  }
+}
