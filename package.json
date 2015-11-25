@@ -7,6 +7,9 @@
     "normalize.css": "^3.0.3"
   },
   "devDependencies": {
+    //"avalanche_base_default": "avalanchesass/avalanche_base_default",
+    //"avalanche_base_layout": "avalanchesass/avalanche_base_layout",
+    //"avalanche_base_typography": "avalanchesass/avalanche_base_typography",
     "gulp": "^3.8.10",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-css-globbing": "^0.1.7",
