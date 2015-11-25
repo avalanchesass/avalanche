@@ -1,22 +1,44 @@
 // Load plugins
-var del              = require('del');
-var gulp             = require('gulp');
-var autoprefixer     = require('gulp-autoprefixer');
-var bower            = require('gulp-bower');
-var conflict         = require('gulp-conflict');
-var cssGlobbing      = require('gulp-css-globbing');
-var csso             = require('gulp-csso');
-var livereload       = require('gulp-livereload');
-var pixrem           = require('gulp-pixrem');
-var rename           = require('gulp-rename');
-var sass             = require('gulp-sass');
-var sourcemaps       = require('gulp-sourcemaps');
+var fs           = require('fs');
+var gulp         = require('gulp');
+var autoprefixer = require('gulp-autoprefixer');
+var cssGlobbing  = require('gulp-css-globbing');
+var csso         = require('gulp-csso');
+var livereload   = require('gulp-livereload');
+var pixrem       = require('gulp-pixrem');
+var rename       = require('gulp-rename');
+var sass         = require('gulp-sass');
+var sourcemaps   = require('gulp-sourcemaps');
 
 // Styles
 gulp.task('styles', function () {
+  // Find avalanche packages inside the npm dependencies folder which are
+  // overriden by custom implementations inside the project scss directory
+  // and exclude those packages from the build process.
+  var folderFilters = [];
+  var packageTypes = fs.readdirSync('scss');
+  // Find package types.
+  for (var key in packageTypes) {
+    var packageType = packageTypes[key];
+    if (packageType.indexOf('.scss') === -1) {
+      // Find packages.
+      var packages = fs.readdirSync('scss/' + packageType);
+      for (var key in packages) {
+        var packageName = packages[key];
+        if (packageName.indexOf('.scss') !== -1) {
+          packageName = packageName.replace(/^_/, '').replace('.scss', '');
+          // Add found packages to a list of npm packages that should be ignored
+          // because they are overriden by custom implementations.
+          folderFilters.push('../node_modules/avalanche_' + packageType + '_' + packageName + '/scss');
+        }
+      }
+    }
+  }
+
   return gulp.src('scss/**/*.scss')
     .pipe(cssGlobbing({
       extensions: ['.scss'],
+      ignoreFolders: folderFilters,
       scssImportPath: {
         leading_underscore: false,
         filename_extension: false
@@ -42,41 +64,9 @@ gulp.task('minify', ['styles'], function () {
     .pipe(livereload());
 });
 
-// Bower
-gulp.task('bower', function () {
-  gulp.start('move');
-  return bower();
-});
-
-// Inject
-gulp.task('move', ['bower'], function () {
-  gulp.start('clean:vendor');
-  return gulp.src('vendor/avalanche_*/scss/*.scss')
-    .pipe(rename(function (path) {
-      var packageType = path.dirname
-        .replace('avalanche_', '')
-        .replace(path.basename, '')
-        .replace('/scss', '');
-      path.dirname = '/' + packageType;
-    }))
-    .pipe(conflict('scss'))
-    .pipe(gulp.dest('scss'));
-});
-
-// Clean:vendor
-gulp.task('clean:vendor', ['move'], function () {
-  // Remove avalanche packages from the vendor folder
-  // the timeput function is a ugly hack to prevent to early deleting of the package files
-  setTimeout(function () {
-    del([
-      'vendor/avalanche_*'
-    ]);
-  }, 2000);
-});
-
 // Watch
 gulp.task('watch', function () {
-  gulp.watch('scss/**/*', ['styles', 'minify']);
+  gulp.watch(['scss/**/*', 'node_modules/avalanche_*/**/*'], ['styles', 'minify']);
 });
 
 // Default

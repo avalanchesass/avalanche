@@ -16,6 +16,7 @@
  *
  * @level 2.
  */
+@import '../node_modules/avalanche_function_*/**/*';
 @import 'function/*';
 
 
@@ -27,6 +28,7 @@
  *
  * @level 3.
  */
+@import '../node_modules/avalanche_system_*/**/*';
 @import 'system/*';
 
 
@@ -38,6 +40,7 @@
  *
  * @level 4.
  */
+@import '../node_modules/avalanche_base_*/**/*';
 @import 'base/*';
 
 
@@ -49,6 +52,7 @@
  *
  * @level 5.
  */
+@import '../node_modules/avalanche_utility_*/**/*';
 @import 'utility/*';
 
 
@@ -60,6 +64,7 @@
  *
  * @level 6.
  */
+@import '../node_modules/avalanche_object_*/**/*';
 @import 'object/*';
 
 
@@ -71,4 +76,5 @@
  *
  * @level 7.
  */
+@import '../node_modules/avalanche_component_*/**/*';
 @import 'component/*';
