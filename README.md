@@ -5,10 +5,9 @@ avalanche is a highly modular SASS framework. The goal of this framework is to b
 
 ## Getting started
 ### Quick start
-- Install [git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [npm](https://docs.npmjs.com/getting-started/installing-node), [gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) and [bower](http://bower.io/) on your system (if not already installed)
+- Install [git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [npm](https://docs.npmjs.com/getting-started/installing-node) and [gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) (if not already installed)
 - Clone the repo: `git clone https://github.com/avalanchesass/avalanche.git`
 - Run `npm install` to install build dependencies
-- Run `gulp bower` to install frontend dependencies
 - Run `gulp` to start the build process, the gulp default task detects changes to your SASS files and generates the CSS code
 
 ### Extend
@@ -22,10 +21,10 @@ The main avalanche package doesn’t define a single CSS selector. The high modu
 - **Component:** concrete, implementation-specific piece of UI
 
 You can find various available packages on [GitHub](https://github.com/avalanchesass?tab=repositories)  
-To extend your installation with a preconfigured package open your bower.json file, add the package to your *dependencies* and run `gulp bower` afterwards.
+To extend your installation with a preconfigured package open your package.json file, add the package to your *devDependencies* and run `npm install` afterwards.
 
 ```json
-"dependencies": {
+"devDependencies": {
   "avalanche_base_default": "^2.0.0",
   "avalanche_base_form": "^2.0.0",
   "avalanche_base_layout": "^2.0.0",
