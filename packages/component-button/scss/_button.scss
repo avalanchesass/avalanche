@@ -59,13 +59,13 @@ $c-button-function-disabled: false !default;
   &:active,
   &:visited {
     outline: none;
-    color: #fff;
+    color: $cs-a-contrast;
     text-decoration: none;
   }
   &:hover,
   &:focus,
   &:active {
-    background: mix($cs-a, #fff, 70%);
+    background: mix($cs-a, $cs-a-contrast, 70%);
   }
 }
 
