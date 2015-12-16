@@ -18,7 +18,7 @@
  */
 @mixin u-hidden() {
   display: none !important;
-  visibility: hidden;
+  visibility: hidden !important;
 }
 
 .u-hidden {
@@ -76,7 +76,7 @@
  * </div>
  */
 @mixin u-invisible() {
-  visibility: hidden;
+  visibility: hidden !important;
 }
 
 .u-invisible {
