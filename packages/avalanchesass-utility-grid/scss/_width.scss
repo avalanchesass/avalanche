@@ -32,7 +32,7 @@ $u-width-base-size: (100% / $u-width-item-count);
 
 @for $i from 1 through $u-width-item-count {
   .u-width--#{$i} {
-    width: ($u-width-base-size * $i);
+    width: ($u-width-base-size * $i) !important;
   }
 }
 
@@ -54,7 +54,7 @@ $u-width-base-size: (100% / $u-width-item-count);
   @media (min-width: $breakpoint-s) {
     @for $i from 1 through $u-width-item-count {
       .u-width--s--#{$i} {
-        width: ($u-width-base-size * $i);
+        width: ($u-width-base-size * $i) !important;
       }
     }
   }
@@ -80,7 +80,7 @@ $u-width-base-size: (100% / $u-width-item-count);
   @media (min-width: $breakpoint-m) {
     @for $i from 1 through $u-width-item-count {
       .u-width--m--#{$i} {
-        width: ($u-width-base-size * $i);
+        width: ($u-width-base-size * $i) !important;
       }
     }
   }
@@ -106,7 +106,7 @@ $u-width-base-size: (100% / $u-width-item-count);
   @media (min-width: $breakpoint-l) {
     @for $i from 1 through $u-width-item-count {
       .u-width--l--#{$i} {
-        width: ($u-width-base-size * $i);
+        width: ($u-width-base-size * $i) !important;
       }
     }
   }
@@ -132,7 +132,7 @@ $u-width-base-size: (100% / $u-width-item-count);
   @media (min-width: $breakpoint-xl) {
     @for $i from 1 through $u-width-item-count {
       .u-width--xl--#{$i} {
-        width: ($u-width-base-size * $i);
+        width: ($u-width-base-size * $i) !important;
       }
     }
   }
