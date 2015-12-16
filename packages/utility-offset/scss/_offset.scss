@@ -31,7 +31,7 @@ $u-offset-base-size: (100% / $u-offset-item-count);
 
 @for $i from 1 through $u-offset-item-count {
   .u-offset--#{$i} {
-    margin-left: ($u-offset-base-size * $i);
+    margin-left: ($u-offset-base-size * $i) !important;
   }
 }
 
@@ -52,7 +52,7 @@ $u-offset-base-size: (100% / $u-offset-item-count);
   @media (min-width: $breakpoint-s) {
     @for $i from 1 through $u-offset-item-count {
       .u-offset--s--#{$i} {
-        margin-left: ($u-offset-base-size * $i);
+        margin-left: ($u-offset-base-size * $i) !important;
       }
     }
   }
@@ -76,7 +76,7 @@ $u-offset-base-size: (100% / $u-offset-item-count);
   @media (min-width: $breakpoint-m) {
     @for $i from 1 through $u-offset-item-count {
       .u-offset--m--#{$i} {
-        margin-left: ($u-offset-base-size * $i);
+        margin-left: ($u-offset-base-size * $i) !important;
       }
     }
   }
@@ -100,7 +100,7 @@ $u-offset-base-size: (100% / $u-offset-item-count);
   @media (min-width: $breakpoint-l) {
     @for $i from 1 through $u-offset-item-count {
       .u-offset--l--#{$i} {
-        margin-left: ($u-offset-base-size * $i);
+        margin-left: ($u-offset-base-size * $i) !important;
       }
     }
   }
@@ -124,7 +124,7 @@ $u-offset-base-size: (100% / $u-offset-item-count);
   @media (min-width: $breakpoint-xl) {
     @for $i from 1 through $u-offset-item-count {
       .u-offset--xl--#{$i} {
-        margin-left: ($u-offset-base-size * $i);
+        margin-left: ($u-offset-base-size * $i) !important;
       }
     }
   }
