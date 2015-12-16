@@ -26,7 +26,7 @@
 
 @if variable-exists(font-a-family) {
   @mixin u-font-family($font-family: $font-a-family, $font-weight: 0) {
-    font-family: $font-family;
+    font-family: $font-family !important;
     @if $font-weight > 0 {
       font-weight: $font-weight;
     }
