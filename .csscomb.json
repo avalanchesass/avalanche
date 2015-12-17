@@ -25,7 +25,7 @@
   "strip-spaces": true,
   "tab-size": true,
   "unitless-zero": true,
-  "eof-newline": true,
+  "eof-newline": false,
   "sort-order": [[
     "position",
     "top",
