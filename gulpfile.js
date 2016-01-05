@@ -58,7 +58,7 @@ gulp.task('styles', function () {
 gulp.task('minify', ['styles'], function () {
   return gulp.src('css/avalanche.css')
     .pipe(minifyCss())
-    .pipe(replace(/[^;\{]+:[^;\{]+\/\*\!remove\*\//g, ''))
+    .pipe(replace(/[^;\{]+:[^;\}]+;?\/\*\!remove\*\//g, ''))
     .pipe(cssnano())
     .pipe(rename(function (path) {
       path.basename += '.min';
