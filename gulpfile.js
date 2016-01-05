@@ -8,6 +8,7 @@ var livereload   = require('gulp-livereload');
 var minifyCss    = require('gulp-minify-css');
 var pixrem       = require('gulp-pixrem');
 var rename       = require('gulp-rename');
+var replace      = require('gulp-replace');
 var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 
@@ -57,6 +58,7 @@ gulp.task('styles', function () {
 gulp.task('minify', ['styles'], function () {
   return gulp.src('css/avalanche.css')
     .pipe(minifyCss())
+    .pipe(replace(/[^;\{]+:[^;\{]+\/\*\!remove\*\//g, ''))
     .pipe(cssnano())
     .pipe(rename(function (path) {
       path.basename += '.min';

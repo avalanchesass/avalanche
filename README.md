@@ -10,7 +10,7 @@ avalanche is a highly modular SASS framework. The goal of this framework is to b
 - Run `npm install` to install build dependencies
 - Run `gulp` to start the build process, the gulp default task detects changes to your SASS files and generates the CSS code
 
-### Extend
+### Extend avalanche
 The main avalanche package doesn’t define a single CSS selector. The high modularity of avalanche requires that every part of the system is a distinct package. There are multiple package types:
 
 - **Function:** custom SASS functions
@@ -33,6 +33,26 @@ To extend your installation with a preconfigured package open your package.json 
   "normalize.css": "~3.0.3"
 }
 ```
+
+### Extend packages
+If you wan’t to make changes to a class defined by a package it is recommended to create a custom package with the name `_PACKAGE_NAME_extend.scss` in the scss directory of your project.
+
+#### Example
+
+Extending the `.c-button` class of the button component:
+
+- Create a file `_button_extend.scss` in `scss/component`
+- Define the `.c-button` class and override or modify it’s properties
+- You can also remove properties by setting their value to `initial` and adding a `/*!remove*/` comment at the end of the line
+
+```scss
+.c-button {
+  padding: initial;/*!remove*/
+  text-transform: uppercase;
+}
+```
+
+**Attention:** removing properties and merging extended classes, will only happen in the minified version of the CSS code. But the styling of your site will be the same: setting a property value to `initial` has the same effect as removing the property from the original class and extending the original class by defining it a second time, uses the default cascading behavior of CSS.
 
 ### BEM
 avalanche uses the [BEM syntax](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/). To make the meaning of the classes more transparent every BEM class name is [namespaced](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/). The BEM syntax helps to prevent [side effects in CSS](http://philipwalton.com/articles/side-effects-in-css/) and the informative nature of the naming convention makes it ideal for teams and larger projects.
