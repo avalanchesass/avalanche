@@ -3,8 +3,9 @@ var fs           = require('fs');
 var gulp         = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
 var cssGlobbing  = require('gulp-css-globbing');
-var csso         = require('gulp-csso');
+var cssnano      = require('gulp-cssnano');
 var livereload   = require('gulp-livereload');
+var minifyCss    = require('gulp-minify-css');
 var pixrem       = require('gulp-pixrem');
 var rename       = require('gulp-rename');
 var sass         = require('gulp-sass');
@@ -55,7 +56,8 @@ gulp.task('styles', function () {
 // Minify
 gulp.task('minify', ['styles'], function () {
   return gulp.src('css/avalanche.css')
-    .pipe(csso())
+    .pipe(minifyCss())
+    .pipe(cssnano())
     .pipe(rename(function (path) {
       path.basename += '.min';
     }))
