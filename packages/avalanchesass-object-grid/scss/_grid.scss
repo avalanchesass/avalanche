@@ -1,35 +1,37 @@
+/*---
+section: Grid
+---
+
+Fluid width, responsive grid system.
+
+*/
 /**
- * Grid
- *
- * Fluid width, responsive grid system
- *
- * @level X.X.
+ * Variables
  */
-// Variables
+// Flexbox grid system.
 $o-grid-flex: true !default;
 
-// Spaced
-$o-grid-spaced-s:  false !default;
-$o-grid-spaced-m:  false !default;
-$o-grid-spaced-l:  false !default;
-$o-grid-spaced-xl: false !default;
-
+// Vertical spacing between items.
 $o-grid-spaced-vertical-s:  false !default;
 $o-grid-spaced-vertical-m:  false !default;
 $o-grid-spaced-vertical-l:  false !default;
 $o-grid-spaced-vertical-xl: false !default;
 
+// Horizontal spacing between items.
 $o-grid-spaced-horizontal-s:  false !default;
 $o-grid-spaced-horizontal-m:  false !default;
 $o-grid-spaced-horizontal-l:  false !default;
 $o-grid-spaced-horizontal-xl: false !default;
 
-// Spacing between items
+// Spacing size between items.
 $o-grid-spacing-s:  $spacing-m !default;
 $o-grid-spacing-m:  $spacing-m !default;
 $o-grid-spacing-l:  $spacing-m !default;
 $o-grid-spacing-xl: $spacing-m !default;
 
+/**
+ * Mixins
+ */
 @mixin o-grid($flex: $o-grid-flex) {
   @if $o-grid-flex {
     display: flex;
@@ -62,91 +64,112 @@ $o-grid-spacing-xl: $spacing-m !default;
   }
 }
 
-/**
- * Base
- *
- * Mobile first styles for all screen sizes
- *
- * @level X.X.X.
- * @markup
- * <div class="o-grid o-grid--spaced">
- *   <div class="o-grid__item u-width--6"><span class="o-grid__inner">Grid item</span></div>
- *   <div class="o-grid__item u-width--6"><span class="o-grid__inner">Grid item</span></div>
- * </div>
- */
+
+
+/*---
+title:   Default
+section: Grid
+---
+
+Default responsive grid without spacing between items.
+
+```example:html
+<div class="o-grid">
+  <div class="o-grid__item u-width--6"><div style="background: grey; padding: 0.5em;">.u-width--6</div></div>
+  <div class="o-grid__item u-width--6"><div style="background: grey; padding: 0.5em;">.u-width--6</div></div>
+</div>
+```
+*/
 .o-grid {
   @include o-grid();
 }
 
-.o-grid--spaced {
-  @if $o-grid-spaced-s {
-    @include o-grid-spaced-vertical($o-grid-spacing-s);
-    @include o-grid-spaced-horizontal($o-grid-spacing-s);
-  }
-  @if $o-grid-spaced-m and $o-grid-spacing-s != $o-grid-spacing-m {
-    @media (min-width: $breakpoint-m) {
-      @include o-grid-spaced-vertical($o-grid-spacing-m);
-      @include o-grid-spaced-horizontal($o-grid-spacing-m);
-    }
-  }
-  @if $o-grid-spaced-l and $o-grid-spacing-s != $o-grid-spacing-l {
-    @media (min-width: $breakpoint-l) {
-      @include o-grid-spaced-vertical($o-grid-spacing-l);
-      @include o-grid-spaced-horizontal($o-grid-spacing-l);
-    }
-  }
-  @if $o-grid-spaced-xl and $o-grid-spacing-s != $o-grid-spacing-xl {
-    @media (min-width: $breakpoint-xl) {
-      @include o-grid-spaced-vertical($o-grid-spacing-xl);
-      @include o-grid-spaced-horizontal($o-grid-spacing-xl);
-    }
-  }
-}
-
-.o-grid--spaced-vertical {
-  @if $o-grid-spaced-vertical-s {
-    @include o-grid-spaced-vertical($o-grid-spacing-s);
-  }
-  @if $o-grid-spaced-vertical-m and $o-grid-spacing-s != $o-grid-spacing-m {
-    @media (min-width: $breakpoint-m) {
-      @include o-grid-spaced-vertical($o-grid-spacing-m);
-    }
-  }
-  @if $o-grid-spaced-vertical-l and $o-grid-spacing-s != $o-grid-spacing-l {
-    @media (min-width: $breakpoint-l) {
-      @include o-grid-spaced-vertical($o-grid-spacing-l);
-    }
-  }
-  @if $o-grid-spaced-vertical-xl and $o-grid-spacing-s != $o-grid-spacing-xl {
-    @media (min-width: $breakpoint-xl) {
-      @include o-grid-spaced-vertical($o-grid-spacing-xl);
-    }
-  }
-}
-
-.o-grid--spaced-horizontal {
-  @if $o-grid-spaced-horizontal-s {
-    @include o-grid-spaced-horizontal($o-grid-spacing-s);
-  }
-  @if $o-grid-spaced-horizontal-m and $o-grid-spacing-s != $o-grid-spacing-m {
-    @media (min-width: $breakpoint-m) {
-      @include o-grid-spaced-horizontal($o-grid-spacing-m);
-    }
-  }
-  @if $o-grid-spaced-horizontal-l and $o-grid-spacing-s != $o-grid-spacing-l {
-    @media (min-width: $breakpoint-l) {
-      @include o-grid-spaced-horizontal($o-grid-spacing-l);
-    }
-  }
-  @if $o-grid-spaced-horizontal-xl and $o-grid-spacing-s != $o-grid-spacing-xl {
-    @media (min-width: $breakpoint-xl) {
-      @include o-grid-spaced-horizontal($o-grid-spacing-xl);
-    }
-  }
-}
-
 .o-grid__item {
   @include o-grid-item();
+}
+
+
+
+@if $o-grid-spaced-vertical-s or $o-grid-spaced-vertical-m or $o-grid-spaced-vertical-l or $o-grid-spaced-vertical-xl or
+    $o-grid-spaced-horizontal-s or $o-grid-spaced-horizontal-m or $o-grid-spaced-horizontal-l or $o-grid-spaced-horizontal-xl {
+  /*---
+  title:   Spaced
+  section: Grid
+  ---
+  */
+}
+@if $o-grid-spaced-vertical-s or $o-grid-spaced-vertical-m or $o-grid-spaced-vertical-l or $o-grid-spaced-vertical-xl {
+  /*---
+  title:   Vertical
+  section: Spaced
+  ---
+
+  Vertical spacing between grid items.
+
+  ```example:html
+  <div class="o-grid o-grid--spaced-vertical">
+    <div class="o-grid__item u-width--12"><div style="background: grey; padding: 0.5em;">.u-width--12</div></div>
+    <div class="o-grid__item u-width--12"><div style="background: grey; padding: 0.5em;">.u-width--12</div></div>
+  </div>
+  ```
+  */
+  .o-grid--spaced-vertical {
+    @if $o-grid-spaced-vertical-s {
+      @include o-grid-spaced-vertical($o-grid-spacing-s);
+    }
+    @if $o-grid-spaced-vertical-m and $o-grid-spacing-s != $o-grid-spacing-m {
+      @media (min-width: $breakpoint-m) {
+        @include o-grid-spaced-vertical($o-grid-spacing-m);
+      }
+    }
+    @if $o-grid-spaced-vertical-l and $o-grid-spacing-s != $o-grid-spacing-l {
+      @media (min-width: $breakpoint-l) {
+        @include o-grid-spaced-vertical($o-grid-spacing-l);
+      }
+    }
+    @if $o-grid-spaced-vertical-xl and $o-grid-spacing-s != $o-grid-spacing-xl {
+      @media (min-width: $breakpoint-xl) {
+        @include o-grid-spaced-vertical($o-grid-spacing-xl);
+      }
+    }
+  }
+}
+
+@if $o-grid-spaced-horizontal-s or $o-grid-spaced-horizontal-m or $o-grid-spaced-horizontal-l or $o-grid-spaced-horizontal-xl {
+  /*---
+  title:   Horizontal
+  section: Spaced
+  ---
+
+  Horizontal spacing between grid items.
+
+  ```example:html
+  <div class="o-grid o-grid--spaced-horizontal">
+    <div class="o-grid__item u-width--6"><div style="background: grey; padding: 0.5em;">.u-width--6</div></div>
+    <div class="o-grid__item u-width--6"><div style="background: grey; padding: 0.5em;">.u-width--6</div></div>
+  </div>
+  ```
+  */
+  .o-grid--spaced-horizontal {
+    @if $o-grid-spaced-horizontal-s {
+      @include o-grid-spaced-horizontal($o-grid-spacing-s);
+    }
+    @if $o-grid-spaced-horizontal-m and $o-grid-spacing-s != $o-grid-spacing-m {
+      @media (min-width: $breakpoint-m) {
+        @include o-grid-spaced-horizontal($o-grid-spacing-m);
+      }
+    }
+    @if $o-grid-spaced-horizontal-l and $o-grid-spacing-s != $o-grid-spacing-l {
+      @media (min-width: $breakpoint-l) {
+        @include o-grid-spaced-horizontal($o-grid-spacing-l);
+      }
+    }
+    @if $o-grid-spaced-horizontal-xl and $o-grid-spacing-s != $o-grid-spacing-xl {
+      @media (min-width: $breakpoint-xl) {
+        @include o-grid-spaced-horizontal($o-grid-spacing-xl);
+      }
+    }
+  }
 }
 
 
