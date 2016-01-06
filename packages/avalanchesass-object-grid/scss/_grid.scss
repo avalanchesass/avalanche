@@ -7,21 +7,60 @@
  */
 // Variables
 $o-grid-flex: true !default;
-$o-grid-item-count: 12 !default;
 
-// Sizes
-$o-grid-size-s:  false !default;
-$o-grid-size-m:  false !default;
-$o-grid-size-l:  false !default;
-$o-grid-size-xl: false !default;
+// Spaced
+$o-grid-spaced-s:  false !default;
+$o-grid-spaced-m:  false !default;
+$o-grid-spaced-l:  false !default;
+$o-grid-spaced-xl: false !default;
+
+$o-grid-spaced-vertical-s:  false !default;
+$o-grid-spaced-vertical-m:  false !default;
+$o-grid-spaced-vertical-l:  false !default;
+$o-grid-spaced-vertical-xl: false !default;
+
+$o-grid-spaced-horizontal-s:  false !default;
+$o-grid-spaced-horizontal-m:  false !default;
+$o-grid-spaced-horizontal-l:  false !default;
+$o-grid-spaced-horizontal-xl: false !default;
 
 // Spacing between items
-$o-grid-spacing-s:  $spacing-s !default;
+$o-grid-spacing-s:  $spacing-m !default;
 $o-grid-spacing-m:  $spacing-m !default;
 $o-grid-spacing-l:  $spacing-m !default;
 $o-grid-spacing-xl: $spacing-m !default;
 
+@mixin o-grid($flex: $o-grid-flex) {
+  @if $o-grid-flex {
+    display: flex;
+    flex-wrap: wrap;
+  } @else {
+    @include u-clearfix();
+  }
+}
 
+@mixin o-grid-spaced-vertical($spacing: $o-grid-spacing-m, $item-selector: '.o-grid__item') {
+  margin-top: -$spacing;
+  > #{$item-selector} {
+    margin-top: $spacing;
+  }
+}
+
+@mixin o-grid-spaced-horizontal($spacing: $o-grid-spacing-m, $item-selector: '.o-grid__item') {
+  margin-left: -$spacing;
+  > #{$item-selector} {
+    padding-left: $spacing;
+  }
+}
+
+@mixin o-grid-item($flex: $o-grid-flex) {
+  @if $o-grid-flex != true {
+    float: left;
+  }
+  @if $layout-box-sizing-reset == false {
+    box-sizing: border-box;
+  }
+}
 
 /**
  * Base
@@ -36,140 +75,78 @@ $o-grid-spacing-xl: $spacing-m !default;
  * </div>
  */
 .o-grid {
-  @if $o-grid-flex {
-    display: flex;
-    flex-wrap: wrap;
-  } @else {
-    @include u-clearfix();
+  @include o-grid();
+}
+
+.o-grid--spaced {
+  @if $o-grid-spaced-s {
+    @include o-grid-spaced-vertical($o-grid-spacing-s);
+    @include o-grid-spaced-horizontal($o-grid-spacing-s);
   }
-  &.o-grid--spaced {
-    margin-left: -$o-grid-spacing-s;
+  @if $o-grid-spaced-m and $o-grid-spacing-s != $o-grid-spacing-m {
+    @media (min-width: $breakpoint-m) {
+      @include o-grid-spaced-vertical($o-grid-spacing-m);
+      @include o-grid-spaced-horizontal($o-grid-spacing-m);
+    }
+  }
+  @if $o-grid-spaced-l and $o-grid-spacing-s != $o-grid-spacing-l {
+    @media (min-width: $breakpoint-l) {
+      @include o-grid-spaced-vertical($o-grid-spacing-l);
+      @include o-grid-spaced-horizontal($o-grid-spacing-l);
+    }
+  }
+  @if $o-grid-spaced-xl and $o-grid-spacing-s != $o-grid-spacing-xl {
+    @media (min-width: $breakpoint-xl) {
+      @include o-grid-spaced-vertical($o-grid-spacing-xl);
+      @include o-grid-spaced-horizontal($o-grid-spacing-xl);
+    }
+  }
+}
+
+.o-grid--spaced-vertical {
+  @if $o-grid-spaced-vertical-s {
+    @include o-grid-spaced-vertical($o-grid-spacing-s);
+  }
+  @if $o-grid-spaced-vertical-m and $o-grid-spacing-s != $o-grid-spacing-m {
+    @media (min-width: $breakpoint-m) {
+      @include o-grid-spaced-vertical($o-grid-spacing-m);
+    }
+  }
+  @if $o-grid-spaced-vertical-l and $o-grid-spacing-s != $o-grid-spacing-l {
+    @media (min-width: $breakpoint-l) {
+      @include o-grid-spaced-vertical($o-grid-spacing-l);
+    }
+  }
+  @if $o-grid-spaced-vertical-xl and $o-grid-spacing-s != $o-grid-spacing-xl {
+    @media (min-width: $breakpoint-xl) {
+      @include o-grid-spaced-vertical($o-grid-spacing-xl);
+    }
+  }
+}
+
+.o-grid--spaced-horizontal {
+  @if $o-grid-spaced-horizontal-s {
+    @include o-grid-spaced-horizontal($o-grid-spacing-s);
+  }
+  @if $o-grid-spaced-horizontal-m and $o-grid-spacing-s != $o-grid-spacing-m {
+    @media (min-width: $breakpoint-m) {
+      @include o-grid-spaced-horizontal($o-grid-spacing-m);
+    }
+  }
+  @if $o-grid-spaced-horizontal-l and $o-grid-spacing-s != $o-grid-spacing-l {
+    @media (min-width: $breakpoint-l) {
+      @include o-grid-spaced-horizontal($o-grid-spacing-l);
+    }
+  }
+  @if $o-grid-spaced-horizontal-xl and $o-grid-spacing-s != $o-grid-spacing-xl {
+    @media (min-width: $breakpoint-xl) {
+      @include o-grid-spaced-horizontal($o-grid-spacing-xl);
+    }
   }
 }
 
 .o-grid__item {
-  @if $o-grid-flex != true {
-    float: left;
-  }
-  @if $layout-box-sizing-reset == false {
-    box-sizing: border-box;
-  }
-  .o-grid--spaced & {
-    padding-left: $o-grid-spacing-s;
-  }
-}
-
-
-
-@if $o-grid-size-s {
-  /**
-   * Small
-   *
-   * Screen sizes #{$breakpoint-s} (#{strip-unit($breakpoint-s) * $font-base-size}) and up
-   *
-   * @level X.X.X.
-   * @markup
-   * <div class="o-grid o-grid--spaced">
-   *   <div class="o-grid__item u-width--s--6"><span class="o-grid__inner">Grid item</span></div>
-   *   <div class="o-grid__item u-width--s--6"><span class="o-grid__inner">Grid item</span></div>
-   * </div>
-   */
-}
-
-
-
-@if $o-grid-size-m {
-  /**
-   * Medium
-   *
-   * Screen sizes #{$breakpoint-m} (#{strip-unit($breakpoint-m) * $font-base-size}) and up
-   *
-   * @level X.X.X.
-   * @markup
-   * <div class="o-grid o-grid--spaced">
-   *   <div class="o-grid__item u-width--s--6 u-width--m--3"><span class="o-grid__inner">Grid item</span></div>
-   *   <div class="o-grid__item u-width--s--6 u-width--m--3"><span class="o-grid__inner">Grid item</span></div>
-   *   <div class="o-grid__item u-width--s--6 u-width--m--3"><span class="o-grid__inner">Grid item</span></div>
-   *   <div class="o-grid__item u-width--s--6 u-width--m--3"><span class="o-grid__inner">Grid item</span></div>
-   * </div>
-   */
-  @media (min-width: $breakpoint-m) {
-    .o-grid {
-      &.o-grid--spaced {
-        margin-left: -$o-grid-spacing-m;
-      }
-    }
-
-    .o-grid__item {
-      .o-grid--spaced & {
-        padding-left: $o-grid-spacing-m;
-      }
-    }
-  }
-}
-
-
-
-@if $o-grid-size-l {
-  /**
-   * Large
-   *
-   * Screen sizes #{$breakpoint-l} (#{strip-unit($breakpoint-l) * $font-base-size}) and up
-   *
-   * @level X.X.X.
-   * @markup
-   * <div class="o-grid o-grid--spaced">
-   *   <div class="o-grid__item u-width--m--6 u-width--l--3"><span class="o-grid__inner">Grid item</span></div>
-   *   <div class="o-grid__item u-width--m--6 u-width--l--3"><span class="o-grid__inner">Grid item</span></div>
-   *   <div class="o-grid__item u-width--m--6 u-width--l--3"><span class="o-grid__inner">Grid item</span></div>
-   *   <div class="o-grid__item u-width--m--6 u-width--l--3"><span class="o-grid__inner">Grid item</span></div>
-   * </div>
-   */
-  @media (min-width: $breakpoint-l) {
-    .o-grid {
-      &.o-grid--spaced {
-        margin-left: -$o-grid-spacing-l;
-      }
-    }
-
-    .o-grid__item {
-      .o-grid--spaced & {
-        padding-left: $o-grid-spacing-l;
-      }
-    }
-  }
-}
-
-
-
-@if $o-grid-size-xl {
-  /**
-   * X-Large
-   *
-   * Screen sizes #{$breakpoint-xl} (#{strip-unit($breakpoint-xl) * $font-base-size}) and up
-   *
-   * @level X.X.X.
-   * @markup
-   * <div class="o-grid o-grid--spaced">
-   *   <div class="o-grid__item u-width--l--6 u-width--xl--3"><span class="o-grid__inner">Grid item</span></div>
-   *   <div class="o-grid__item u-width--l--6 u-width--xl--3"><span class="o-grid__inner">Grid item</span></div>
-   *   <div class="o-grid__item u-width--l--6 u-width--xl--3"><span class="o-grid__inner">Grid item</span></div>
-   *   <div class="o-grid__item u-width--l--6 u-width--xl--3"><span class="o-grid__inner">Grid item</span></div>
-   * </div>
-   */
-  @media (min-width: $breakpoint-xl) {
-    .o-grid {
-      &.o-grid--spaced {
-        margin-left: -$o-grid-spacing-xl;
-      }
-    }
-
-    .o-grid__item {
-      .o-grid--spaced & {
-        padding-left: $o-grid-spacing-xl;
-      }
-    }
-  }
+  @include o-grid-item();
 }
 
 
