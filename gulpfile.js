@@ -7,6 +7,7 @@ var cssnano      = require('gulp-cssnano');
 var livereload   = require('gulp-livereload');
 var minifyCss    = require('gulp-minify-css');
 var pixrem       = require('gulp-pixrem');
+var postcss      = require('gulp-postcss');
 var rename       = require('gulp-rename');
 var replace      = require('gulp-replace');
 var sass         = require('gulp-sass');
@@ -66,6 +67,24 @@ gulp.task('minify', ['styles'], function () {
     .pipe(pixrem())
     .pipe(gulp.dest('css'))
     .pipe(livereload());
+});
+
+// Styleguide
+gulp.task('styleguide', function () {
+  return gulp.src('css/avalanche.css')
+    .pipe(postcss([
+      require('mdcss')({
+        theme: require('mdcss-theme-github')({
+          logo: '../../avalanche-logo.svg',
+          examples: {
+            css: ['../../node_modules/normalize.css/normalize.css', '../../css/avalanche.css'],
+            htmlcss: '',
+            bodycss: ''
+          }
+        }),
+        destination: 'styleguide/mdcss'
+      })
+    ]));
 });
 
 // Watch
