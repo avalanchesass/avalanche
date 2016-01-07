@@ -1,0 +1,22 @@
+{
+  "name": "avalanche_object_grid",
+  "description": "Grid system",
+  "version": "3.0.0",
+  "authors": [
+    "Markus Oberlehner"
+  ],
+  "homepage": "https://github.com/avalanchesass/avalanche",
+  "license": "GPL v2",
+  "dependencies": {
+    "avalanche_base_layout": "avalanchesass/avalanche_base_layout#dev-3.0.0",
+    "avalanche_utility_clearfix": "avalanchesass/avalanche_utility_clearfix#dev-3.0.0"
+  },
+  "main": "scss/avalanche.scss",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
