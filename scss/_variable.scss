@@ -1,0 +1,237 @@
+/*---
+title:   Variable
+section: System
+---
+
+Basic system variables.
+*/
+/*---
+title:   Color scheme
+section: Variable
+---
+
+It's mandatory to use color scheme variables whenever you use colors in your styles.  
+Generator: [coolors.co](http://coolors.co/).
+*/
+$cs-a: #16193B;
+$cs-a-contrast: #fff;
+
+$cs-b: #35478C;
+$cs-b-contrast: #fff;
+
+$cs-c: #4E7AC7;
+$cs-c-contrast: #fff;
+
+$cs-d: #7FB2F0;
+$cs-d-contrast: #fff;
+
+$cs-e: #ADD5F7;
+$cs-e-contrast: #fff;
+/*---
+title:   Basic
+section: Color scheme
+---
+
+```example:color
+@color: #{$cs-a} @name: $cs-a
+@color: #{$cs-b} @name: $cs-b
+@color: #{$cs-c} @name: $cs-c
+@color: #{$cs-d} @name: $cs-d
+@color: #{$cs-e} @name: $cs-e
+```
+
+```example:color
+@color: #{$cs-a-contrast} @name: $cs-a-contrast
+@color: #{$cs-b-contrast} @name: $cs-b-contrast
+@color: #{$cs-c-contrast} @name: $cs-c-contrast
+@color: #{$cs-d-contrast} @name: $cs-d-contrast
+@color: #{$cs-e-contrast} @name: $cs-e-contrast
+```
+*/
+
+/**
+ * Alerts
+ */
+$cs-positive: #468847;
+$cs-neutral:  #3A87AD;
+$cs-cautious: #c09853;
+$cs-negative: #b94a48;
+/*---
+title:   Alerts
+section: Color scheme
+---
+
+```example:color
+@color: #{$cs-positive} @name: $cs-positive
+@color: #{$cs-neutral} @name: $cs-neutraul
+@color: #{$cs-cautious} @name: $cs-cautious
+@color: #{$cs-negative} @name: $cs-negative
+```
+*/
+
+/**
+ * Grey
+ */
+$cs-grey-a: #efefef;
+$cs-grey-b: darken($cs-grey-a, 10%);
+$cs-grey-c: darken($cs-grey-b, 10%);
+/*---
+title:   Grey
+section: Color scheme
+---
+
+```example:color
+@color: #{$cs-grey-a} @name: $cs-grey-a
+@color: #{$cs-grey-b} @name: $cs-grey-b
+@color: #{$cs-grey-c} @name: $cs-grey-c
+```
+*/
+
+
+
+/*---
+title:   Typography
+section: Variable
+---
+*/
+/**
+ * 1. Must be in px, do not use in your styles.
+ * 2. Do not use directly in your styles!
+ */
+$font-base-size:        16px; // [1][2]
+$font-base-line-height: 24px; // [1][2]
+$font-base-color:       #222;
+
+/**
+ * Font sizes
+ */
+$font-size-xs:   0.75em;
+$font-size-s:    0.85em;
+$font-size-m:    1em;
+$font-size-l:    1.25em;
+$font-size-xl:   1.5em;
+$font-size-xxl:  1.875em;
+$font-size-xxxl: 2.25em;
+/*---
+title:   Font sizes
+section: Typography
+---
+
+<div style="font-size: #{$font-size-xs};">$font-size-xs</div>
+<div style="font-size: #{$font-size-s};">$font-size-s</div>
+<div style="font-size: #{$font-size-m};">$font-size-m</div>
+<div style="font-size: #{$font-size-l};">$font-size-l</div>
+<div style="font-size: #{$font-size-xl};">$font-size-xl</div>
+<div style="font-size: #{$font-size-xxl};">$font-size-xxl</div>
+<div style="font-size: #{$font-size-xxxl};">$font-size-xxxl</div>
+*/
+
+$font-size-h1: $font-size-xxxl;
+$font-size-h2: $font-size-xxl;
+$font-size-h3: $font-size-xl;
+$font-size-h4: $font-size-l;
+$font-size-h5: $font-size-m;
+$font-size-h6: $font-size-m;
+
+/*---
+title:   Fonts
+section: Typography
+---
+
+Font sizes and weights are defined globally to ensure a consistent look.
+*/
+/**
+ * If you use webfonts set the font weight variables according to the font weights the font provides.
+ * E.g. you use a Google font like http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700
+ * In this case set the font weights to 200, 400 and 700.
+ * If you set a font weight in your css you must use this variables!
+ */
+/**
+ * Font A
+ */
+$font-a-family: 'Helvetica Neue', sans-serif;
+
+$font-a-weight-thin:        100;
+$font-a-weight-extra-light: 200;
+$font-a-weight-light:       300;
+$font-a-weight-normal:      400;
+$font-a-weight-medium:      500;
+$font-a-weight-semi-bold:   600;
+$font-a-weight-bold:        700;
+$font-a-weight-extra-bold:  800;
+$font-a-weight-ultra-bold:  900;
+/*---
+title:   Font A
+section: Fonts
+---
+
+<p style="font-family: #{$font-a-family};">
+**#{$font-a-family}**  
+ABCDEFGHIJKLMNOPQRSTUVWXYZ  
+abcdefghijklmnopqrstuvwxyz  
+0123456789!?#%&$@*{(/|\)}</p>
+*/
+
+/**
+ * Font B
+ */
+$font-b-family: Futura, 'Trebuchet MS', sans-serif;
+
+$font-b-weight-thin:        100;
+$font-b-weight-extra-light: 200;
+$font-b-weight-light:       300;
+$font-b-weight-normal:      400;
+$font-b-weight-medium:      500;
+$font-b-weight-semi-bold:   600;
+$font-b-weight-bold:        700;
+$font-b-weight-extra-bold:  800;
+$font-b-weight-ultra-bold:  900;
+/*---
+title:   Font B
+section: Fonts
+---
+
+<p style="font-family: #{$font-b-family};">
+**#{$font-b-family}**  
+ABCDEFGHIJKLMNOPQRSTUVWXYZ  
+abcdefghijklmnopqrstuvwxyz  
+0123456789!?#%&$@*{(/|\)}</p>
+*/
+
+
+
+/**
+ * Breakpoints
+ *
+ * Infos about media queries: [Brad Frost - 7 Habits of highly effective media queries](http://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/)
+ */
+/**
+ * min Breakpoints
+ */
+$breakpoint-s:  30em;
+$breakpoint-m:  45em;
+$breakpoint-l:  60em;
+$breakpoint-xl: 75em;
+
+/**
+ * max Breakpoints
+ *
+ * Use with care, min-width breakpoints should be preferred!
+ */
+$breakpoint-max-s:  breakpointmax($breakpoint-s);
+$breakpoint-max-m:  breakpointmax($breakpoint-m);
+$breakpoint-max-l:  breakpointmax($breakpoint-l);
+$breakpoint-max-xl: breakpointmax($breakpoint-xl);
+
+
+
+/**
+ * Spacing
+ */
+$spacing-xs:   0.5em;
+$spacing-s:    1em;
+$spacing-m:    1.5em;
+$spacing-l:    2em;
+$spacing-xl:   3em;
+$spacing-xxl:  4em;
+$spacing-xxxl: 5em;

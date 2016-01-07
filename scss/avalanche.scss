@@ -28,6 +28,7 @@ title: System
 
 Everything system relevant (e.g. variables).
 */
+@import 'variable';
 @import '../node_modules/avalanche_system_*/**/*';
 @import 'system/*';
 
