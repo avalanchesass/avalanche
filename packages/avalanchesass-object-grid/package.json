@@ -1,0 +1,19 @@
+{
+  "name": "avalanche_object_grid",
+  "version": "3.0.0",
+  "description": "CSS grid system",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avalanchesass/avalanche_object_grid.git"
+  },
+  "author": "Markus Oberlehner",
+  "license": "GPL v2",
+  "bugs": {
+    "url": "https://github.com/avalanchesass/avalanche_object_grid/issues"
+  },
+  "homepage": "https://github.com/avalanchesass/avalanche_object_grid",
+  "dependencies": {
+    "avalanche_system_variable": "^3.0.0",
+    "avalanche_utility_clearfix": "^3.0.0"
+  }
+}
