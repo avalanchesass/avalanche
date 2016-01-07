@@ -1,5 +1,6 @@
 .DS_Store
 .sass-cache
+npm-shrinkwrap.json
 scss/*/*.scss
 css/*
 package_dev
