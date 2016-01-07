@@ -32,7 +32,7 @@ gulp.task('styles', function () {
           packageName = packageName.replace(/^_/, '').replace('.scss', '');
           // Add found packages to a list of npm packages that should be ignored
           // because they are overriden by custom implementations.
-          folderFilters.push('../node_modules/avalanche_' + packageType + '_' + packageName + '/scss');
+          folderFilters.push('../vendor/avalanche_' + packageType + '_' + packageName + '/scss');
         }
       }
     }
@@ -77,7 +77,7 @@ gulp.task('styleguide', function () {
         theme: require('mdcss-theme-github')({
           logo: '../avalanche-logo.svg',
           examples: {
-            css: ['../node_modules/normalize.css/normalize.css', '../css/avalanche.css'],
+            css: ['../vendor/normalize.css/normalize.css', '../css/avalanche.css'],
             htmlcss: '',
             bodycss: ''
           }
@@ -89,7 +89,7 @@ gulp.task('styleguide', function () {
 
 // Watch
 gulp.task('watch', function () {
-  gulp.watch(['scss/**/*', 'node_modules/avalanche_*/**/*'], ['styles', 'minify']);
+  gulp.watch(['scss/**/*', 'vendor/avalanche_*/**/*'], ['styles', 'minify']);
 });
 
 gulp.task('watch_styleguide', function () {

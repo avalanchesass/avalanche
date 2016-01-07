@@ -17,7 +17,7 @@ title: Function
 
 Custom SASS functions.
 */
-@import '../node_modules/avalanche_function_*/**/*';
+@import '../vendor/avalanche_function_*/**/*';
 @import 'function/*';
 
 
@@ -29,7 +29,7 @@ title: System
 Everything system relevant (e.g. variables).
 */
 @import 'variable';
-@import '../node_modules/avalanche_system_*/**/*';
+@import '../vendor/avalanche_system_*/**/*';
 @import 'system/*';
 
 
@@ -40,7 +40,7 @@ title: Base
 
 Base styles like typography and other global default styles (mostly unclassed HTML elements).
 */
-@import '../node_modules/avalanche_base_*/**/*';
+@import '../vendor/avalanche_base_*/**/*';
 @import 'base/*';
 
 
@@ -51,7 +51,7 @@ title: Utility
 
 Utility classes that do very specific things (e.g. clearfix).
 */
-@import '../node_modules/avalanche_utility_*/**/*';
+@import '../vendor/avalanche_utility_*/**/*';
 @import 'utility/*';
 
 
@@ -62,7 +62,7 @@ title: Object
 
 Non-cosmetic styles (e.g. the famous media object).
 */
-@import '../node_modules/avalanche_object_*/**/*';
+@import '../vendor/avalanche_object_*/**/*';
 @import 'object/*';
 
 
@@ -73,5 +73,5 @@ title: Component
 
 Concrete, implementation-specific piece of UI.
 */
-@import '../node_modules/avalanche_component_*/**/*';
+@import '../vendor/avalanche_component_*/**/*';
 @import 'component/*';
