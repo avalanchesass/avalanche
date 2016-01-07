@@ -1,25 +1,20 @@
-/**
- * Layout
- *
- * @level X.X.
- */
+/*---
+title:   Layout
+section: Base
+---
+*/
 /**
  * Box sizing reset
  *
- * Better box model<br>
- * [Paul Irish - * { Box-sizing: Border-box } FTW](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
- *
- * @level X.X.X.
+ * Better box model: [Paul Irish - * { Box-sizing: Border-box } FTW](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
  */
-@if $layout-box-sizing-reset {
-  html {
-    box-sizing: border-box;
-  }
-  * {
-    &,
-    &:before,
-    &:after {
-      box-sizing: inherit;
-    }
+html {
+  box-sizing: border-box;
+}
+* {
+  &,
+  &:before,
+  &:after {
+    box-sizing: inherit;
   }
 }
