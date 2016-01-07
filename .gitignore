@@ -1,6 +1,5 @@
 .DS_Store
 .sass-cache
-vendor
 scss/*/*.scss
 css/*
 package_dev
