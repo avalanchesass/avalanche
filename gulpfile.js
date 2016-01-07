@@ -75,14 +75,14 @@ gulp.task('styleguide', function () {
     .pipe(postcss([
       require('mdcss')({
         theme: require('mdcss-theme-github')({
-          logo: '../../avalanche-logo.svg',
+          logo: '../avalanche-logo.svg',
           examples: {
-            css: ['../../node_modules/normalize.css/normalize.css', '../../css/avalanche.css'],
+            css: ['../node_modules/normalize.css/normalize.css', '../css/avalanche.css'],
             htmlcss: '',
             bodycss: ''
           }
         }),
-        destination: 'styleguide/mdcss'
+        destination: 'styleguide'
       })
     ]));
 });
