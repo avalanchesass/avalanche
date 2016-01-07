@@ -1,14 +1,16 @@
-/**
- * Clearfix
- *
- * Contain floats
- *
- * @level X.X.
- * @markup
- * <div class="u-clearfix">
- *   <div class="stuff-that-floats"></div>
- * </div>
- */
+/*---
+title:   Clearfix
+section: Utility
+---
+
+Contain floats.
+
+```example:html
+<div class="u-clearfix">
+  <div class="stuff-that-floats"></div>
+</div>
+```
+*/
 @mixin u-clearfix() {
   *zoom: 1;
   &:before,
