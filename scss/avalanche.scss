@@ -1,80 +1,76 @@
-/**
- * avalanche
- * a modular SASS framework
- */
-/**
- * About
- * 
- * avalanche is a highly modular SASS framework. The goal of this framework is to be a minimal starting point that doesn’t make assumptions how things should look. avalanche provides a solid directory structure and a well thought through CSS methodology.
- *
- * @level 1.
- */
-/**
- * Function
- * 
- * Custom SASS functions
- *
- * @level 2.
- */
+/*---
+title: avalanche
+---
+
+A modular SASS framework.
+*/
+/*---
+title:   About
+section: avalanche
+---
+
+avalanche is a highly modular SASS framework. The goal of this framework is to be a minimal starting point that doesn’t make assumptions how things should look. avalanche provides a solid directory structure and a thoroughly thought through CSS methodology.
+*/
+/*---
+title: Function
+---
+
+Custom SASS functions.
+*/
 @import '../node_modules/avalanche_function_*/**/*';
 @import 'function/*';
 
 
 
-/**
- * System
- * 
- * Everything system relevant (e.g. variables)
- *
- * @level 3.
- */
+/*---
+title: System
+---
+
+Everything system relevant (e.g. variables).
+*/
 @import '../node_modules/avalanche_system_*/**/*';
 @import 'system/*';
 
 
 
-/**
- * Base
- * 
- * Base styles like typography and other global default styles (mostly unclassed HTML elements)
- *
- * @level 4.
- */
+/*---
+title: Base
+---
+
+Base styles like typography and other global default styles (mostly unclassed HTML elements).
+*/
 @import '../node_modules/avalanche_base_*/**/*';
 @import 'base/*';
 
 
 
-/**
- * Utility
- * 
- * Utility classes that do very specific things (e.g. clearfix)
- *
- * @level 5.
- */
+/*---
+title: Utility
+---
+
+Utility classes that do very specific things (e.g. clearfix).
+*/
 @import '../node_modules/avalanche_utility_*/**/*';
 @import 'utility/*';
 
 
 
-/**
- * Object
- * 
- * Non-cosmetic styles (e.g. the famous media object)
- *
- * @level 6.
- */
+/*---
+title: Object
+---
+
+Non-cosmetic styles (e.g. the famous media object).
+*/
 @import '../node_modules/avalanche_object_*/**/*';
 @import 'object/*';
 
 
 
-/**
- * Component
- * 
- * Concrete, implementation-specific piece of UI
- *
- * @level 7.
- */
+/*---
+title: Component
+---
+
+Concrete, implementation-specific piece of UI.
+*/
 @import '../node_modules/avalanche_component_*/**/*';
 @import 'component/*';
