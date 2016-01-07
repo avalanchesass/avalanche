@@ -61,9 +61,6 @@ $o-grid-spacing-xl: $spacing-m !default;
   @if $o-grid-flex != true {
     float: left;
   }
-  @if $layout-box-sizing-reset == false {
-    box-sizing: border-box;
-  }
 }
 
 
