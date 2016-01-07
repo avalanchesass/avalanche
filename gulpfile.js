@@ -92,6 +92,12 @@ gulp.task('watch', function () {
   gulp.watch(['scss/**/*', 'node_modules/avalanche_*/**/*'], ['styles', 'minify']);
 });
 
+gulp.task('watch_styleguide', function () {
+  livereload.listen();
+  gulp.start('watch');
+  gulp.watch(['css/avalanche.css'], ['styleguide']);
+});
+
 // Default
 gulp.task('default', function () {
   livereload.listen();
