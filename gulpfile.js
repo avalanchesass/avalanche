@@ -56,7 +56,7 @@ gulp.task('styles:build', ['clean:styles'], function () {
     .pipe(livereload());
 });
 
-gulp.task('styles:extract', ['clean:styles:extract'], function () {
+gulp.task('styles:extract', ['clean:styles:extract', 'styles:minify'], function () {
   fs.readFile('css/avalanche.css', 'utf8', function (err, data) {
     if (err) throw err;
 
@@ -156,6 +156,11 @@ gulp.task('clean:styles:extract', function () {
 gulp.task('watch', function () {
   livereload.listen();
   gulp.watch(['scss/**/*', 'vendor/avalanche_*/**/*'], ['styles:minify']);
+});
+
+gulp.task('watch:extract', function () {
+  livereload.listen();
+  gulp.watch(['scss/**/*', 'vendor/avalanche_*/**/*'], ['styles:extract']);
 });
 
 gulp.task('watch:style_guide', function () {

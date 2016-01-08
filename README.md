@@ -73,7 +73,30 @@ avalanche uses [mdcss](https://github.com/jonathantneal/mdcss) to automatically 
 
 Please follow the [official mdcss documentation](https://github.com/jonathantneal/mdcss#writing-documentation) on how to format comments in your SCSS code for the style guide.
 
-To generate the style guide run `gulp style_guide`. You can also run `gulp watch_style_guide` instead of the default `gulp` task to start the build process. This automatically generates the style guide on every change you make to your code base.
+To generate the style guide run `gulp style_guide`. You can also run `gulp watch:style_guide` instead of the default `gulp` task to start the build process. This automatically generates the style guide on every change you make to your code base.
+
+### CSS extraction
+[HTTP/2](https://en.wikipedia.org/wiki/HTTP/2) is coming and changes the way [how we should build websites](https://mattwilcox.net/web-development/http2-for-front-end-web-developers). With HTTP/2 it can be faster to load multiple small files (but only those which are really needed) instead of one big file (with a potential overhead). E.g. the pager component isn’t used on most of your pages but the styles are loaded on every request because they are concatenated into one big file.
+
+With CSS extraction you can split your styles into multiple separate CSS files. This makes it possible to load just the styles you need. Amongst other things there are the following advantages using this technique:
+
+- Increased cache granularity (avoids invalidating a whole sprite or concatenated bundle when just a single part changes)
+- Parallel downloading of files that were previously bundled into one file
+- Less energy/memory usage in the client
+
+By default every avalanche package is prepared for CSS extraction. Run `gulp styles:extract` to create the CSS files - you can find them in `css/extract`. Alternatively you can start a watch task with CSS extraction enabled: `gulp watch:extract`.
+
+To make your custom packages CSS extraction ready, you have to add special placeholder comments.
+
+```css
+/* extract=component_PACKAGE_NAME.css */
+.c-PACKAGE_NAME { … }
+/* end extract */
+```
+
+To prevent naming collisions it is recommended to add the package type as a prefix to the name of the desired resulting CSS file. If you define two or more extraction sections with the same name, those are combined into one file.
+
+
 
 ## About
 ### Author
