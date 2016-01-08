@@ -15,7 +15,7 @@ var sourcemaps   = require('gulp-sourcemaps');
 
 // Styles
 gulp.task('styles', function () {
-  // Find avalanche packages inside the npm dependencies folder which are
+  // Find avalanche packages inside the bower dependencies folder which are
   // overriden by custom implementations inside the project scss directory
   // and exclude those packages from the build process.
   var folderFilters = [];
@@ -30,8 +30,8 @@ gulp.task('styles', function () {
         var packageName = packages[key];
         if (packageName.indexOf('.scss') !== -1) {
           packageName = packageName.replace(/^_/, '').replace('.scss', '');
-          // Add found packages to a list of npm packages that should be ignored
-          // because they are overriden by custom implementations.
+          // Add found packages to a list of bower packages that should be
+          // ignored because they are overriden by custom implementations.
           folderFilters.push('../vendor/avalanche_' + packageType + '_' + packageName + '/scss');
         }
       }
