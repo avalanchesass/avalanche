@@ -1,4 +1,4 @@
-# avalanche: Utility clearfix
+# avalanche_utility_clearfix
 CSS clearfix  
 https://github.com/avalanchesass/avalanche_utility_clearfix
 
