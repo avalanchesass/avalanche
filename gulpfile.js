@@ -1,5 +1,5 @@
-// Load plugins
 var fs           = require('fs');
+var del          = require('del');
 var gulp         = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
 var cssGlobbing  = require('gulp-css-globbing');
@@ -13,8 +13,10 @@ var replace      = require('gulp-replace');
 var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 
-// Styles
-gulp.task('styles', function () {
+/**
+ * Styles
+ */
+gulp.task('styles:build', ['clean:styles'], function () {
   // Find avalanche packages inside the bower dependencies folder which are
   // overriden by custom implementations inside the project scss directory
   // and exclude those packages from the build process.
@@ -55,9 +57,47 @@ gulp.task('styles', function () {
     .pipe(livereload());
 });
 
-// Minify
-gulp.task('minify', ['styles'], function () {
-  return gulp.src('css/avalanche.css')
+gulp.task('styles:extract', ['clean:styles:extract'], function () {
+  fs.readFile('css/avalanche.css', 'utf8', function (err, data) {
+    if (err) throw err;
+
+    var files = {};
+    var extractRegExp = /\/\* extract\=(.*?) \*\/((.|\n)*?)\/\* end extract \*\//g;
+
+    // Find extract placeholders in the CSS file.
+    while (match = extractRegExp.exec(data)) {
+      var extractFileName = match[1];
+      var extractFileData = match[0];
+      if (!files[extractFileName]) {
+        files[extractFileName] = '';
+      }
+      // Append the file data if it already exists.
+      files[extractFileName] += extractFileData;
+    }
+
+    for (var fileName in files) {
+      var fileData = files[fileName];
+      var fileDir = 'css/extract';
+      var filePath = fileDir + '/' + fileName;
+      // Create directory if it doesn't exist.
+      if (!fs.existsSync(fileDir)){
+        fs.mkdirSync(fileDir);
+      }
+      // Create the file.
+      fs.openSync(filePath, 'w');
+      fs.writeFileSync(filePath, fileData);
+      // Create a minified version of the file.
+      stylesMinify(filePath, fileDir);
+    }
+  });
+});
+
+gulp.task('styles:minify', ['styles:build'], function () {
+  stylesMinify('css/avalanche.css', 'css');
+});
+
+function stylesMinify(files, dest) {
+  return gulp.src(files)
     .pipe(minifyCss())
     .pipe(replace(/[^;\{]+:[^;\}]+;?\/\*\!remove\*\//g, ''))
     .pipe(cssnano())
@@ -65,12 +105,16 @@ gulp.task('minify', ['styles'], function () {
       path.basename += '.min';
     }))
     .pipe(pixrem())
-    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest(dest))
     .pipe(livereload());
-});
+}
 
-// Style guide
-gulp.task('style_guide', function () {
+/**
+ * Style guide
+ *
+ * Create an mdcss style guide.
+ */
+gulp.task('style_guide', ['styles:minify'], function () {
   return gulp.src('css/avalanche.css')
     .pipe(postcss([
       require('mdcss')({
@@ -87,19 +131,45 @@ gulp.task('style_guide', function () {
     ]));
 });
 
-// Watch
+/**
+ * Clean
+ *
+ * Remove compiled files before regenerating them.
+ */
+gulp.task('clean:styles', function () {
+  return del([
+    // Remove everything inside the `css` directory, except ...
+    'css/**/*',
+    // ... the `extract` directory.
+    '!css/extract',
+    '!css/extract/**/*'
+  ]);
+});
+
+gulp.task('clean:styles:extract', function () {
+  return del([
+    'css/extract/**/*'
+  ]);
+});
+
+/**
+ * Watch
+ */
 gulp.task('watch', function () {
-  gulp.watch(['scss/**/*', 'vendor/avalanche_*/**/*'], ['styles', 'minify']);
-});
-
-gulp.task('watch_style_guide', function () {
   livereload.listen();
-  gulp.start('watch');
-  gulp.watch(['css/avalanche.css'], ['style_guide']);
+  gulp.watch(['scss/**/*', 'vendor/avalanche_*/**/*'], ['styles:minify']);
 });
 
-// Default
+gulp.task('watch:style_guide', function () {
+  livereload.listen();
+  gulp.watch(['scss/**/*', 'vendor/avalanche_*/**/*'], ['style_guide']);
+});
+
+/**
+ * Default task
+ *
+ * Run this task with `gulp`.
+ */
 gulp.task('default', function () {
-  livereload.listen();
   gulp.start('watch');
 });
