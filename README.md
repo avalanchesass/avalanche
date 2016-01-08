@@ -63,10 +63,9 @@ avalanche uses the [BEM syntax](http://csswizardry.com/2013/01/mindbemding-getti
 .c-block__element {}
 .c-block--modifier {}
 
-.c-car {}
-.c-car__engine {}
-.c-car--rally {}
-.c-car__engine--electric {}
+.c-menu {}
+.c-menu__link {}
+.c-menu--horizontal {}
 ```
 
 ## About
