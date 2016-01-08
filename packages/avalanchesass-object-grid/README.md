@@ -1,4 +1,4 @@
-# avalanche: Object grid
+# avalanche_object_grid
 CSS grid system  
 https://github.com/avalanchesass/avalanche_object_grid
 
