@@ -1,13 +1,13 @@
 {
-  "name": "avalanche_base_layout",
-  "description": "Basic layout",
+  "name": "avalanche_base_box_sizing_reset",
+  "description": "Box sizing reset",
   "version": "3.0.0",
   "authors": [
     "Markus Oberlehner"
   ],
-  "homepage": "https://github.com/avalanchesass/avalanche_base_layout",
+  "homepage": "https://github.com/avalanchesass/avalanche_base_box_sizing_reset",
   "license": "GPL v2",
-  "main": "scss/_layout.scss",
+  "main": "scss/_box_sizing_reset.scss",
   "ignore": [
     "**/.*",
     "node_modules",
