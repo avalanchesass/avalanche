@@ -6,7 +6,6 @@ var cssGlobbing  = require('gulp-css-globbing');
 var cssnano      = require('gulp-cssnano');
 var livereload   = require('gulp-livereload');
 var minifyCss    = require('gulp-minify-css');
-var pixrem       = require('gulp-pixrem');
 var postcss      = require('gulp-postcss');
 var rename       = require('gulp-rename');
 var replace      = require('gulp-replace');
@@ -104,7 +103,6 @@ function stylesMinify(files, dest) {
     .pipe(rename(function (path) {
       path.basename += '.min';
     }))
-    .pipe(pixrem())
     .pipe(gulp.dest(dest))
     .pipe(livereload());
 }
