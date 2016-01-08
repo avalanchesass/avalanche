@@ -69,8 +69,8 @@ gulp.task('minify', ['styles'], function () {
     .pipe(livereload());
 });
 
-// Styleguide
-gulp.task('styleguide', function () {
+// Style guide
+gulp.task('style_guide', function () {
   return gulp.src('css/avalanche.css')
     .pipe(postcss([
       require('mdcss')({
@@ -82,7 +82,7 @@ gulp.task('styleguide', function () {
             bodycss: ''
           }
         }),
-        destination: 'styleguide'
+        destination: 'style-guide'
       })
     ]));
 });
@@ -92,10 +92,10 @@ gulp.task('watch', function () {
   gulp.watch(['scss/**/*', 'vendor/avalanche_*/**/*'], ['styles', 'minify']);
 });
 
-gulp.task('watch_styleguide', function () {
+gulp.task('watch_style_guide', function () {
   livereload.listen();
   gulp.start('watch');
-  gulp.watch(['css/avalanche.css'], ['styleguide']);
+  gulp.watch(['css/avalanche.css'], ['style_guide']);
 });
 
 // Default

@@ -4,5 +4,5 @@ css/*
 scss/*/*.scss
 node_modules
 vendor
-styleguide
+style-guide
 package_dev
