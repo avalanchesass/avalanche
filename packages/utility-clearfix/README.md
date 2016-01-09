@@ -1,5 +1,5 @@
 # avalanche_utility_clearfix
-CSS clearfix  
+Clearfix  
 https://github.com/avalanchesass/avalanche_utility_clearfix
 
 ### Author
