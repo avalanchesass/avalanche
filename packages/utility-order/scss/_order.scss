@@ -1,0 +1,40 @@
+/* extract=utility_order.css */
+/*---
+title:   Order
+section: Utility
+---
+
+Reorder elements.
+
+```example:html
+<div style="display: flex;">
+  <div style="background: grey; padding: 0.5em;">Item 1</div>
+  <div style="background: grey; padding: 0.5em;">Item 2</div>
+  <div class="u-order-start@m" style="background: grey; padding: 0.5em;">Item 3</div>
+  <div class="u-order-1@m" style="background: grey; padding: 0.5em;">Item 4</div>
+  <div class="u-order-end@m" style="background: grey; padding: 0.5em;">Item 5</div>
+  <div style="background: grey; padding: 0.5em;">Item 6</div>
+  <div style="background: grey; padding: 0.5em;">Item 7</div>
+</div>
+```
+*/
+@media (min-width: $breakpoint-m) {
+  .u-order-start\@m {
+    order: -9999;
+  }
+}
+$u-order-max: 8;
+@for $i from 1 through $u-order-max {
+  @media (min-width: $breakpoint-m) {
+    .u-order-#{$i}\@m {
+      order: $i - $u-order-max;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-m) {
+  .u-order-end\@m {
+    order: 9999;
+  }
+}
+/* end extract */

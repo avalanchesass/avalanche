@@ -1,0 +1,18 @@
+{
+  "name": "avalanche_utility_order",
+  "description": "Order",
+  "version": "3.0.0",
+  "authors": [
+    "Markus Oberlehner"
+  ],
+  "homepage": "https://github.com/avalanchesass/avalanche_utility_order",
+  "license": "GPL v2",
+  "main": "scss/_order.scss",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
