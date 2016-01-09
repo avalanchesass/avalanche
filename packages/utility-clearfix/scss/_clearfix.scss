@@ -14,12 +14,12 @@ Contain floats.
 */
 @mixin u-clearfix() {
   *zoom: 1;
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     display: table;
     content: ' ';
   }
-  &:after {
+  &::after {
     clear: both;
   }
 }
