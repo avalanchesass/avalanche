@@ -18,23 +18,50 @@ Reorder elements.
 </div>
 ```
 */
-@media (min-width: $breakpoint-m) {
-  .u-order-start\@m {
-    order: -9999;
-  }
-}
-$u-order-max: 8;
-@for $i from 1 through $u-order-max {
-  @media (min-width: $breakpoint-m) {
-    .u-order-#{$i}\@m {
-      order: $i - $u-order-max;
-    }
-  }
+/**
+ * Variables
+ */
+$u-order-max: 8 !default;
+
+// Breakpoints
+$u-order-breakpoints: ('m') !default;
+
+/**
+ * Mixins
+ */
+@mixin u-order($order: 1, $order-max: $u-order-max) {
+  order: $order - $order-max;
 }
 
-@media (min-width: $breakpoint-m) {
-  .u-order-end\@m {
-    order: 9999;
+@mixin u-order-start($order: -9999) {
+  order: $order;
+}
+
+@mixin u-order-end($order: 9999) {
+  order: $order;
+}
+
+
+
+@each $breakpoint-key in $u-order-breakpoints {
+  @for $i from 1 through $u-order-max {
+    @media (min-width: map-get($breakpoints, $breakpoint-key)) {
+      .u-order-#{$i}\@#{$breakpoint-key} {
+        @include u-order($i);
+      }
+    }
+  }
+
+  @media (min-width: map-get($breakpoints, $breakpoint-key)) {
+    .u-order-start\@#{$breakpoint-key} {
+      @include u-order-start();
+    }
+  }
+
+  @media (min-width: map-get($breakpoints, $breakpoint-key)) {
+    .u-order-end\@#{$breakpoint-key} {
+      @include u-order-end();
+    }
   }
 }
 /* end extract */
