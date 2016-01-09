@@ -1,3 +1,25 @@
+/**
+ * Configuration
+ */
+var config = {
+  packageNamespaces: ['avalanche', 'roromedia'],
+  packageTypes: ['function', 'system', 'base', 'utility', 'object', 'component'],
+  stylesDestination: 'css',
+  stylesFileName: 'avalanche.css',
+  stylesExtractDestination: 'css/extract',
+  stylesWatchDirectories: ['scss/**/*'],
+  styleGuideDestination: 'style-guide',
+  vendorDirectory: 'vendor'
+};
+
+for (var key in config.packageNamespaces) {
+  var packageNamespace = config.packageNamespaces[key];
+  config.stylesWatchDirectories.push(config.vendorDirectory + '/' + packageNamespace + '_*/**/*');
+}
+
+/**
+ * Plugins
+ */
 var fs           = require('fs');
 var del          = require('del');
 var gulp         = require('gulp');
@@ -19,21 +41,20 @@ gulp.task('styles:build', ['clean:styles'], function () {
   // Find avalanche packages inside the bower dependencies folder which are
   // overriden by custom implementations inside the project scss directory
   // and exclude those packages from the build process.
-  var folderFilters = [];
-  var packageTypes = fs.readdirSync('scss');
-  // Find package types.
-  for (var key in packageTypes) {
-    var packageType = packageTypes[key];
-    if (packageType.indexOf('.scss') === -1) {
-      // Find packages.
-      var packages = fs.readdirSync('scss/' + packageType);
-      for (var key in packages) {
-        var packageName = packages[key];
-        if (packageName.indexOf('.scss') !== -1) {
-          packageName = packageName.replace(/^_/, '').replace('.scss', '');
-          // Add found packages to a list of bower packages that should be
-          // ignored because they are overriden by custom implementations.
-          folderFilters.push('../vendor/avalanche_' + packageType + '_' + packageName + '/scss');
+  var ignoreFolders = [];
+  // Find packages of the various types.
+  for (var key in config.packageTypes) {
+    var packageType = config.packageTypes[key];
+    var packages = fs.readdirSync('scss/' + packageType);
+    for (var key in packages) {
+      var packageName = packages[key];
+      if (packageName.indexOf('.scss') !== -1) {
+        packageName = packageName.replace(/^_/, '').replace('.scss', '');
+        // Add found packages to a list of bower packages that should be
+        // ignored because they are overriden by custom implementations.
+        for (var key in config.packageNamespaces) {
+          var packageNamespace = config.packageNamespaces[key];
+          ignoreFolders.push('../' + config.vendorDirectory + '/' + packageNamespace + '_' + packageType + '_' + packageName + '/scss');
         }
       }
     }
@@ -42,7 +63,7 @@ gulp.task('styles:build', ['clean:styles'], function () {
   return gulp.src('scss/**/*.scss')
     .pipe(cssGlobbing({
       extensions: ['.scss'],
-      ignoreFolders: folderFilters,
+      ignoreFolders: ignoreFolders,
       scssImportPath: {
         leading_underscore: false,
         filename_extension: false
@@ -52,12 +73,12 @@ gulp.task('styles:build', ['clean:styles'], function () {
       .pipe(sass({ precision: 7, errLogToConsole: true }))
       .pipe(autoprefixer())
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest(config.stylesDestination))
     .pipe(livereload());
 });
 
 gulp.task('styles:extract', ['clean:styles:extract', 'styles:minify'], function () {
-  fs.readFile('css/avalanche.css', 'utf8', function (err, data) {
+  fs.readFile(config.stylesDestination + '/' + config.stylesFileName, 'utf8', function (err, data) {
     if (err) throw err;
 
     var files = {};
@@ -76,7 +97,7 @@ gulp.task('styles:extract', ['clean:styles:extract', 'styles:minify'], function 
 
     for (var fileName in files) {
       var fileData = files[fileName];
-      var fileDir = 'css/extract';
+      var fileDir = config.stylesExtractDestination;
       var filePath = fileDir + '/' + fileName;
       // Create directory if it doesn't exist.
       if (!fs.existsSync(fileDir)){
@@ -92,7 +113,7 @@ gulp.task('styles:extract', ['clean:styles:extract', 'styles:minify'], function 
 });
 
 gulp.task('styles:minify', ['styles:build'], function () {
-  stylesMinify('css/avalanche.css', 'css');
+  stylesMinify(config.stylesDestination + '/' + config.stylesFileName, config.stylesDestination);
 });
 
 function stylesMinify(files, dest) {
@@ -113,18 +134,18 @@ function stylesMinify(files, dest) {
  * Create an mdcss style guide.
  */
 gulp.task('style_guide', ['styles:minify'], function () {
-  return gulp.src('css/avalanche.css')
+  return gulp.src(config.stylesDestination + '/' + config.stylesFileName)
     .pipe(postcss([
       require('mdcss')({
         theme: require('mdcss-theme-github')({
           logo: '../avalanche-logo.svg',
           examples: {
-            css: ['../vendor/normalize.css/normalize.css', '../css/avalanche.css'],
+            css: ['../' + config.vendorDirectory + '/normalize.css/normalize.css', '../' + config.stylesDestination + '/' + config.stylesFileName],
             htmlcss: '',
             bodycss: ''
           }
         }),
-        destination: 'style-guide'
+        destination: config.styleGuideDestination
       })
     ]));
 });
@@ -137,16 +158,16 @@ gulp.task('style_guide', ['styles:minify'], function () {
 gulp.task('clean:styles', function () {
   return del([
     // Remove everything inside the `css` directory, except ...
-    'css/**/*',
+    config.stylesDestination + '/**/*',
     // ... the `extract` directory.
-    '!css/extract',
-    '!css/extract/**/*'
+    '!' + config.stylesExtractDestination,
+    '!' + config.stylesExtractDestination + '/**/*'
   ]);
 });
 
 gulp.task('clean:styles:extract', function () {
   return del([
-    'css/extract/**/*'
+    config.stylesExtractDestination + '/**/*'
   ]);
 });
 
@@ -155,17 +176,17 @@ gulp.task('clean:styles:extract', function () {
  */
 gulp.task('watch', function () {
   livereload.listen();
-  gulp.watch(['scss/**/*', 'vendor/avalanche_*/**/*'], ['styles:minify']);
+  gulp.watch(config.stylesWatchDirectories, ['styles:minify']);
 });
 
 gulp.task('watch:extract', function () {
   livereload.listen();
-  gulp.watch(['scss/**/*', 'vendor/avalanche_*/**/*'], ['styles:extract']);
+  gulp.watch(config.stylesWatchDirectories, ['styles:extract']);
 });
 
 gulp.task('watch:style_guide', function () {
   livereload.listen();
-  gulp.watch(['scss/**/*', 'vendor/avalanche_*/**/*'], ['style_guide']);
+  gulp.watch(config.stylesWatchDirectories, ['style_guide']);
 });
 
 /**
