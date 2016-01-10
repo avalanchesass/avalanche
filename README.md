@@ -89,9 +89,9 @@ By default every avalanche package is prepared for CSS extraction. Run `gulp sty
 To make your custom packages CSS extraction ready, you have to add special placeholder comments.
 
 ```css
-/* extract=component_PACKAGE_NAME.css */
+/* extract component_PACKAGE_NAME.css */
 .c-PACKAGE_NAME { … }
-/* end extract */
+/* end extract component_PACKAGE_NAME.css */
 ```
 
 To prevent naming collisions it is recommended to add the package type as a prefix to the name of the desired resulting CSS file. If you define two or more extraction sections with the same name, those are combined into one file.

@@ -81,19 +81,7 @@ gulp.task('styles:extract', ['clean:styles:extract', 'styles:minify'], function 
   fs.readFile(config.stylesDestination + '/' + config.stylesFileName, 'utf8', function (err, data) {
     if (err) throw err;
 
-    var files = {};
-    var extractRegExp = /\/\* extract\=(.*?) \*\/((.|\n)*?)\/\* end extract \*\//g;
-
-    // Find extract placeholders in the CSS file.
-    while (match = extractRegExp.exec(data)) {
-      var extractFileName = match[1];
-      var extractFileData = match[0];
-      if (!files[extractFileName]) {
-        files[extractFileName] = '';
-      }
-      // Append the file data if it already exists.
-      files[extractFileName] += extractFileData;
-    }
+    var files = stylesExtractFiles(data);
 
     for (var fileName in files) {
       var fileData = files[fileName];
@@ -115,6 +103,34 @@ gulp.task('styles:extract', ['clean:styles:extract', 'styles:minify'], function 
 gulp.task('styles:minify', ['styles:build'], function () {
   stylesMinify(config.stylesDestination + '/' + config.stylesFileName, config.stylesDestination);
 });
+
+function stylesExtractFiles(data) {
+  var files = {};
+  var extractRegExp = /\/\* extract (.*?) \*\/((.|\n)*?)\/\* end extract \1 \*\//g;
+
+  // Find extract placeholders in the CSS file.
+  while (match = extractRegExp.exec(data)) {
+    var extractFileName = match[1];
+    var extractFileData = match[0].replace('/* extract ' + extractFileName + ' */', '').replace('/* end extract ' + extractFileName + ' */', '');
+    if (!files[extractFileName]) {
+      files[extractFileName] = '';
+    }
+    // Append the file data if it already exists.
+    files[extractFileName] += extractFileData;
+
+    // Find nested extraction placeholders.
+    var nestedFiles = stylesExtractFiles(extractFileData);
+    for (var nestedFileName in nestedFiles) {
+      var nestedFileData = nestedFiles[nestedFileName];
+      if (!files[nestedFileName]) {
+        files[nestedFileName] = '';
+      }
+      files[nestedFileName] += nestedFileData;
+    }
+  }
+
+  return files;
+}
 
 function stylesMinify(files, dest) {
   return gulp.src(files)
