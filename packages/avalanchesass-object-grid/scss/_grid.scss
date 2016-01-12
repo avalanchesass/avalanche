@@ -22,10 +22,10 @@ $o-grid-spaced-horizontal-breakpoints: () !default;
 
 // Spacing size between items.
 $o-grid-spacing-sizes: (
-  s: map-get($spacing, 'm'),
-  m: map-get($spacing, 'm'),
-  l: map-get($spacing, 'm'),
-  xl: map-get($spacing, 'm')
+  s: map-get($spacing, m),
+  m: map-get($spacing, m),
+  l: map-get($spacing, m),
+  xl: map-get($spacing, m)
 ) !default;
 
 /**
@@ -123,11 +123,11 @@ Default responsive grid without spacing between items.
   ```
   */
   .o-grid--spaced-vertical {
-    @if index($o-grid-spaced-vertical-breakpoints, 's') {
-      @include o-grid-spaced-vertical(map-get($o-grid-spacing-sizes, 's'));
+    @if index($o-grid-spaced-vertical-breakpoints, s) {
+      @include o-grid-spaced-vertical(map-get($o-grid-spacing-sizes, s));
     }
     @each $breakpoint-key in $o-grid-spaced-vertical-breakpoints {
-      @if map-get($o-grid-spacing-sizes, 's') != map-get($o-grid-spacing-sizes, $breakpoint-key) {
+      @if map-get($o-grid-spacing-sizes, s) != map-get($o-grid-spacing-sizes, $breakpoint-key) {
         @media (min-width: map-get($breakpoints, $breakpoint-key)) {
           @include o-grid-spaced-vertical(map-get($o-grid-spacing-sizes, $breakpoint-key));
         }
@@ -162,11 +162,11 @@ Default responsive grid without spacing between items.
   ```
   */
   .o-grid--spaced-horizontal {
-    @if index($o-grid-spaced-horizontal-breakpoints, 's') {
-      @include o-grid-spaced-horizontal(map-get($o-grid-spacing-sizes, 's'));
+    @if index($o-grid-spaced-horizontal-breakpoints, s) {
+      @include o-grid-spaced-horizontal(map-get($o-grid-spacing-sizes, s));
     }
     @each $breakpoint-key in $o-grid-spaced-horizontal-breakpoints {
-      @if map-get($o-grid-spacing-sizes, 's') != map-get($o-grid-spacing-sizes, $breakpoint-key) {
+      @if map-get($o-grid-spacing-sizes, s) != map-get($o-grid-spacing-sizes, $breakpoint-key) {
         @media (min-width: map-get($breakpoints, $breakpoint-key)) {
           @include o-grid-spaced-horizontal(map-get($o-grid-spacing-sizes, $breakpoint-key));
         }
