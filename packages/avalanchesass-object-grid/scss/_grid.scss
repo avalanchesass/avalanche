@@ -11,54 +11,11 @@ Fluid width, responsive grid system.
 /**
  * Variables
  */
-// Flexbox grid system.
-$o-grid-flex: true !default;
-
 // Vertical spacing between items.
 $o-grid-spaced-vertical-breakpoints: () !default;
 
 // Horizontal spacing between items.
 $o-grid-spaced-horizontal-breakpoints: () !default;
-
-// Spacing size between items.
-$o-grid-spacing-sizes: (
-  s: map-get($spacing, m),
-  m: map-get($spacing, m),
-  l: map-get($spacing, m),
-  xl: map-get($spacing, m)
-) !default;
-
-/**
- * Mixins
- */
-@mixin o-grid($flex: $o-grid-flex) {
-  @if $o-grid-flex {
-    display: flex;
-    flex-wrap: wrap;
-  } @else {
-    @include u-clearfix();
-  }
-}
-
-@mixin o-grid-spaced-vertical($spacing: $o-grid-spacing-m, $item-selector: '.o-grid__item') {
-  margin-top: -$spacing;
-  > #{$item-selector} {
-    margin-top: $spacing;
-  }
-}
-
-@mixin o-grid-spaced-horizontal($spacing: $o-grid-spacing-m, $item-selector: '.o-grid__item') {
-  margin-left: -$spacing;
-  > #{$item-selector} {
-    padding-left: $spacing;
-  }
-}
-
-@mixin o-grid-item($flex: $o-grid-flex) {
-  @if $o-grid-flex != true {
-    float: left;
-  }
-}
 
 
 
