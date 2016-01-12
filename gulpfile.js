@@ -6,7 +6,7 @@ var config = {
   packageTypes: ['function', 'system', 'base', 'utility', 'object', 'component'],
   stylesDestination: 'css',
   stylesFileName: 'avalanche.css',
-  stylesExtractDestination: 'css/extract',
+  stylesExtractDestination: 'css-extract',
   stylesWatchDirectories: ['scss/**/*'],
   styleGuideDestination: 'style-guide',
   vendorDirectory: 'vendor'
