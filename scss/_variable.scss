@@ -34,19 +34,19 @@ section: Color scheme
 ---
 
 ```example:color
-@color: #{map-get($cs, 'a')} @name: map-get($cs, 'a')
-@color: #{map-get($cs, 'b')} @name: map-get($cs, 'b')
-@color: #{map-get($cs, 'c')} @name: map-get($cs, 'c')
-@color: #{map-get($cs, 'd')} @name: map-get($cs, 'd')
-@color: #{map-get($cs, 'e')} @name: map-get($cs, 'e')
+@color: #{map-get($cs, a)} @name: map-get($cs, a)
+@color: #{map-get($cs, b)} @name: map-get($cs, b)
+@color: #{map-get($cs, c)} @name: map-get($cs, c)
+@color: #{map-get($cs, d)} @name: map-get($cs, d)
+@color: #{map-get($cs, e)} @name: map-get($cs, e)
 ```
 
 ```example:color
-@color: #{map-get($cs-contrast, 'a')} @name: map-get($cs-contrast, 'a')
-@color: #{map-get($cs-contrast, 'b')} @name: map-get($cs-contrast, 'b')
-@color: #{map-get($cs-contrast, 'c')} @name: map-get($cs-contrast, 'c')
-@color: #{map-get($cs-contrast, 'd')} @name: map-get($cs-contrast, 'd')
-@color: #{map-get($cs-contrast, 'e')} @name: map-get($cs-contrast, 'e')
+@color: #{map-get($cs-contrast, a)} @name: map-get($cs-contrast, a)
+@color: #{map-get($cs-contrast, b)} @name: map-get($cs-contrast, b)
+@color: #{map-get($cs-contrast, c)} @name: map-get($cs-contrast, c)
+@color: #{map-get($cs-contrast, d)} @name: map-get($cs-contrast, d)
+@color: #{map-get($cs-contrast, e)} @name: map-get($cs-contrast, e)
 ```
 */
 
@@ -65,10 +65,10 @@ section: Color scheme
 ---
 
 ```example:color
-@color: #{map-get($cs-alerts, 'positive')} @name: map-get($cs-alerts, 'positive')
-@color: #{map-get($cs-alerts, 'neutral')} @name: map-get($cs-alerts, 'neutral')
-@color: #{map-get($cs-alerts, 'cautious')} @name: map-get($cs-alerts, 'cautious')
-@color: #{map-get($cs-alerts, 'negative')} @name: map-get($cs-alerts, 'negative')
+@color: #{map-get($cs-alerts, positive)} @name: map-get($cs-alerts, positive)
+@color: #{map-get($cs-alerts, neutral)} @name: map-get($cs-alerts, neutral)
+@color: #{map-get($cs-alerts, cautious)} @name: map-get($cs-alerts, cautious)
+@color: #{map-get($cs-alerts, negative)} @name: map-get($cs-alerts, negative)
 ```
 */
 
@@ -89,9 +89,9 @@ section: Color scheme
 ---
 
 ```example:color
-@color: #{map-get($cs-grey, 'a')} @name: map-get($cs-grey, 'a')
-@color: #{map-get($cs-grey, 'b')} @name: map-get($cs-grey, 'b')
-@color: #{map-get($cs-grey, 'c')} @name: map-get($cs-grey, 'c')
+@color: #{map-get($cs-grey, a)} @name: map-get($cs-grey, a)
+@color: #{map-get($cs-grey, b)} @name: map-get($cs-grey, b)
+@color: #{map-get($cs-grey, c)} @name: map-get($cs-grey, c)
 ```
 */
 
@@ -237,10 +237,10 @@ $breakpoints: (
  * Use with care, min-width breakpoints should be preferred!
  */
 $breakpoints-max: (
-  s:  breakpointmax(map-get($breakpoints, 's')),
-  m:  breakpointmax(map-get($breakpoints, 'm')),
-  l:  breakpointmax(map-get($breakpoints, 'l')),
-  xl: breakpointmax(map-get($breakpoints, 'xl'))
+  s:  breakpointmax(map-get($breakpoints, s)),
+  m:  breakpointmax(map-get($breakpoints, m)),
+  l:  breakpointmax(map-get($breakpoints, l)),
+  xl: breakpointmax(map-get($breakpoints, xl))
 );
 
 
