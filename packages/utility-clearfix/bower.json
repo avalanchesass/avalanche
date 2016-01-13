@@ -1,6 +1,6 @@
 {
   "name": "avalanche_utility_clearfix",
-  "description": "Clearfix",
+  "description": "Contain floats",
   "version": "3.0.0",
   "authors": [
     "Markus Oberlehner"

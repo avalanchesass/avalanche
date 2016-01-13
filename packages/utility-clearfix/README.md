@@ -1,5 +1,5 @@
 # avalanche_utility_clearfix
-Clearfix  
+Contain floats.  
 https://github.com/avalanchesass/avalanche_utility_clearfix
 
 ### Author
