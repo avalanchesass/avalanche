@@ -21,7 +21,7 @@ The main avalanche package doesn’t define a single CSS selector. The high modu
 - **Object:** non-cosmetic styles (e.g. the famous media object)
 - **Component:** concrete, implementation-specific piece of UI
 
-You can find various available packages on [GitHub](https://github.com/avalanchesass?tab=repositories)  
+You can find various available packages on [GitHub](https://github.com/avalanchesass)  
 To extend your installation with a preconfigured package open your bower.json file, add the package to your *dependencies* and run `bower install` afterwards.
 
 ```json
