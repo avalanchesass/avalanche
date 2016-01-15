@@ -1,5 +1,5 @@
 # avalanche_utility_order
-Order  
+Reorder elements.  
 https://github.com/avalanchesass/avalanche_utility_order
 
 ### Author

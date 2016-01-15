@@ -1,6 +1,6 @@
 {
   "name": "avalanche_utility_order",
-  "description": "Order",
+  "description": "Reorder elements",
   "version": "3.0.0",
   "authors": [
     "Markus Oberlehner"
