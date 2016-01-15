@@ -12,12 +12,12 @@ Fluid width, responsive grid system.
  * Variables
  */
 $o-grid-spaced-vertical-sizes: (m) !default;
-$o-grid-spaced-vertical-sizes-breakpoints: (
+$o-grid-spaced-vertical-sizes-with-breakpoints: (
   m: ()
 ) !default;
 
 $o-grid-spaced-horizontal-sizes: (m) !default;
-$o-grid-spaced-horizontal-sizes-breakpoints: (
+$o-grid-spaced-horizontal-sizes-with-breakpoints: (
   m: ()
 ) !default;
 
@@ -72,15 +72,16 @@ Default responsive grid without spacing between items.
 
   Vertical spacing between grid items.
   */
-  $o-grid-spaced-vertical-selector: '.o-grid--spaced-vertical';
-  @each $o-grid-spaced-size in $o-grid-spaced-vertical-sizes {
+  $-class-name: 'o-grid--spaced-vertical';
+  $-selector: '.#{$-class-name}';
+  @each $-size in $o-grid-spaced-vertical-sizes {
     /*---
-    title:   Size: #{$o-grid-spaced-size}
+    title:   Size: #{$-size}
     section: Vertical
     ---
 
 ```example:html
-<div class="o-grid o-grid--spaced-vertical--#{$o-grid-spaced-size}">
+<div class="o-grid #{$-class-name}--#{$-size}">
   <div class="o-grid__item" style="width: 100%;">
     <div style="background: grey; padding: 0.5em;">width: 100%</div>
   </div>
@@ -90,22 +91,22 @@ Default responsive grid without spacing between items.
 </div>
 ```
     */
-    #{$o-grid-spaced-vertical-selector}--#{$o-grid-spaced-size} {
-      @include o-grid-spaced-vertical(map-get($spacing, $o-grid-spaced-size));
+    #{$-selector}--#{$-size} {
+      @include o-grid-spaced-vertical(map-get($spacing, $-size));
     }
   }
-  @each $o-grid-spaced-breakpoints in $o-grid-spaced-vertical-sizes-breakpoints {
-    $o-grid-spaced-size: nth($o-grid-spaced-breakpoints, 1);
-    $o-grid-spaced-breakpoints: nth($o-grid-spaced-breakpoints, 2);
+  @each $-size-and-breakpoints in $o-grid-spaced-vertical-sizes-with-breakpoints {
+    $-size: nth($-size-and-breakpoints, 1);
+    $-breakpoints: nth($-size-and-breakpoints, 2);
 
-    @each $breakpoint-key in $o-grid-spaced-breakpoints {
+    @each $-breakpoint in $-breakpoints {
       /*---
-      title:   Size: #{$o-grid-spaced-size}@#{$breakpoint-key}
+      title:   Size: #{$-size}@#{$-breakpoint}
       section: Vertical
       ---
 
 ```example:html
-<div class="o-grid o-grid--spaced-vertical--#{$o-grid-spaced-size}@#{$breakpoint-key}">
+<div class="o-grid #{$-class-name}--#{$-size}@#{$-breakpoint}">
   <div class="o-grid__item" style="width: 100%;">
     <div style="background: grey; padding: 0.5em;">width: 100%</div>
   </div>
@@ -115,9 +116,9 @@ Default responsive grid without spacing between items.
 </div>
 ```
       */
-      @media (min-width: map-get($breakpoints, $breakpoint-key)) {
-        #{$o-grid-spaced-vertical-selector}--#{$o-grid-spaced-size}\@#{$breakpoint-key} {
-          @include o-grid-spaced-vertical(map-get($spacing, $o-grid-spaced-size));
+      @media (min-width: map-get($breakpoints, $-breakpoint)) {
+        #{$-selector}--#{$-size}\@#{$-breakpoint} {
+          @include o-grid-spaced-vertical(map-get($spacing, $-size));
         }
       }
     }
@@ -132,15 +133,16 @@ Default responsive grid without spacing between items.
 
   Horizontal spacing between grid items.
   */
-  $o-grid-spaced-horizontal-selector: '.o-grid--spaced-horizontal';
-  @each $o-grid-spaced-size in $o-grid-spaced-horizontal-sizes {
+  $-class-name: 'o-grid--spaced-horizontal';
+  $-selector: '.#{$-class-name}';
+  @each $-size in $o-grid-spaced-horizontal-sizes {
     /*---
-    title:   Size: #{$o-grid-spaced-size}
+    title:   Size: #{$-size}
     section: Horizontal
     ---
 
 ```example:html
-<div class="o-grid o-grid--spaced-horizontal--#{$o-grid-spaced-size}">
+<div class="o-grid #{$-class-name}--#{$-size}">
   <div class="o-grid__item" style="width: 50%;">
     <div style="background: grey; padding: 0.5em;">width: 50%</div>
   </div>
@@ -150,22 +152,22 @@ Default responsive grid without spacing between items.
 </div>
 ```
     */
-    #{$o-grid-spaced-horizontal-selector}--#{$o-grid-spaced-size} {
-      @include o-grid-spaced-horizontal(map-get($spacing, $o-grid-spaced-size));
+    #{$-selector}--#{$-size} {
+      @include o-grid-spaced-horizontal(map-get($spacing, $-size));
     }
   }
-  @each $o-grid-spaced-breakpoints in $o-grid-spaced-horizontal-sizes-breakpoints {
-    $o-grid-spaced-size: nth($o-grid-spaced-breakpoints, 1);
-    $o-grid-spaced-breakpoints: nth($o-grid-spaced-breakpoints, 2);
+  @each $-size-and-breakpoints in $o-grid-spaced-horizontal-sizes-with-breakpoints {
+    $-size: nth($-size-and-breakpoints, 1);
+    $-breakpoints: nth($-size-and-breakpoints, 2);
 
-    @each $breakpoint-key in $o-grid-spaced-breakpoints {
+    @each $-breakpoint in $-breakpoints {
       /*---
-      title:   Size: #{$o-grid-spaced-size}@#{$breakpoint-key}
+      title:   Size: #{$-size}@#{$-breakpoint}
       section: Horizontal
       ---
 
 ```example:html
-<div class="o-grid o-grid--spaced-horizontal--#{$o-grid-spaced-size}@#{$breakpoint-key}">
+<div class="o-grid #{$-class-name}--#{$-size}@#{$-breakpoint}">
   <div class="o-grid__item" style="width: 50%;">
     <div style="background: grey; padding: 0.5em;">width: 50%</div>
   </div>
@@ -175,9 +177,9 @@ Default responsive grid without spacing between items.
 </div>
 ```
       */
-      @media (min-width: map-get($breakpoints, $breakpoint-key)) {
-        #{$o-grid-spaced-horizontal-selector}--#{$o-grid-spaced-size}\@#{$breakpoint-key} {
-          @include o-grid-spaced-horizontal(map-get($spacing, $o-grid-spaced-size));
+      @media (min-width: map-get($breakpoints, $-breakpoint)) {
+        #{$-selector}--#{$-size}\@#{$-breakpoint} {
+          @include o-grid-spaced-horizontal(map-get($spacing, $-size));
         }
       }
     }
