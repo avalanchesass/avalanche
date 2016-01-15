@@ -7,6 +7,9 @@
   ],
   "homepage": "https://github.com/avalanchesass/avalanche_utility_order",
   "license": "GPL v2",
+  "dependencies": {
+    "avalanche_mixin_utility_order": "avalanchesass/avalanche_mixin_utility_order#dev-3.0.0"
+  },
   "main": "scss/_order.scss",
   "ignore": [
     "**/.*",
