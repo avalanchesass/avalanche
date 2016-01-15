@@ -10,9 +10,9 @@ Reorder elements.
 <div style="display: flex;">
   <div style="background: grey; padding: 0.5em;">Item 1</div>
   <div style="background: grey; padding: 0.5em;">Item 2</div>
-  <div class="u-order-start@m" style="background: grey; padding: 0.5em;">Item 3</div>
+  <div class="u-order-first@m" style="background: grey; padding: 0.5em;">Item 3</div>
   <div class="u-order-1@m" style="background: grey; padding: 0.5em;">Item 4</div>
-  <div class="u-order-end@m" style="background: grey; padding: 0.5em;">Item 5</div>
+  <div class="u-order-last@m" style="background: grey; padding: 0.5em;">Item 5</div>
   <div style="background: grey; padding: 0.5em;">Item 6</div>
   <div style="background: grey; padding: 0.5em;">Item 7</div>
 </div>
@@ -21,30 +21,15 @@ Reorder elements.
 /**
  * Variables
  */
-$u-order-steps: 8 !default;
+$u-order-max-elements: 8 !default;
 
 // Breakpoints
 $u-order-breakpoints: (m) !default;
 
-/**
- * Mixins
- */
-@mixin u-order($-order: 1, $-order-steps: $u-order-steps) {
-  order: $-order - $-order-steps;
-}
-
-@mixin u-order-start($-order: -9999) {
-  order: $-order;
-}
-
-@mixin u-order-end($-order: 9999) {
-  order: $-order;
-}
-
 
 
 @each $-breakpoint in $u-order-breakpoints {
-  @for $-i from 1 through $u-order-steps {
+  @for $-i from 1 through $u-order-max-elements {
     @media (min-width: map-get($breakpoints, $-breakpoint)) {
       .u-order-#{$-i}\@#{$-breakpoint} {
         @include u-order($-i);
@@ -53,14 +38,14 @@ $u-order-breakpoints: (m) !default;
   }
 
   @media (min-width: map-get($breakpoints, $-breakpoint)) {
-    .u-order-start\@#{$-breakpoint} {
-      @include u-order-start();
+    .u-order-first\@#{$-breakpoint} {
+      @include u-order-first();
     }
   }
 
   @media (min-width: map-get($breakpoints, $-breakpoint)) {
-    .u-order-end\@#{$-breakpoint} {
-      @include u-order-end();
+    .u-order-last\@#{$-breakpoint} {
+      @include u-order-last();
     }
   }
 }
