@@ -2,8 +2,8 @@
  * Configuration
  */
 var config = {
-  packageNamespaces: ['avalanche', 'roromedia'],
-  packageTypes: ['function', 'system', 'base', 'utility', 'object', 'component'],
+  packageNamespaces: ['avalanche'],
+  packageTypes: ['function', 'system', 'mixin', 'base', 'utility', 'object', 'component'],
   stylesDestination: 'css',
   stylesFileName: 'avalanche.css',
   stylesExtractDestination: 'css-extract',
