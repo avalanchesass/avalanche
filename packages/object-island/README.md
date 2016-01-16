@@ -1,5 +1,5 @@
-# avalanche: Object island
-Island object for boxed-off content  
+# avalanche_object_island
+Box off content  
 https://github.com/avalanchesass/avalanche_object_island
 
 ### Author
