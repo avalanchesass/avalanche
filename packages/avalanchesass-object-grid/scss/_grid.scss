@@ -93,7 +93,7 @@ Default responsive grid without spacing between items.
     ---
 
 ```example:html
-<div class="o-grid #{$-class-name}--#{$-size}">
+<div class="o-grid #{$-class-name}-#{$-size}">
   <div class="o-grid__item" style="width: 100%;">
     <div style="background: grey; padding: 0.5em;">width: 100%</div>
   </div>
@@ -103,7 +103,7 @@ Default responsive grid without spacing between items.
 </div>
 ```
     */
-    #{$-selector}--#{$-size} {
+    #{$-selector}-#{$-size} {
       @include o-grid-spaced-vertical(map-get($spacing, $-size));
     }
   }
@@ -118,7 +118,7 @@ Default responsive grid without spacing between items.
       ---
 
 ```example:html
-<div class="o-grid #{$-class-name}--#{$-size}@#{$-breakpoint}">
+<div class="o-grid #{$-class-name}-#{$-size}@#{$-breakpoint}">
   <div class="o-grid__item" style="width: 100%;">
     <div style="background: grey; padding: 0.5em;">width: 100%</div>
   </div>
@@ -129,7 +129,7 @@ Default responsive grid without spacing between items.
 ```
       */
       @media (min-width: map-get($breakpoints, $-breakpoint)) {
-        #{$-selector}--#{$-size}\@#{$-breakpoint} {
+        #{$-selector}-#{$-size}\@#{$-breakpoint} {
           @include o-grid-spaced-vertical(map-get($spacing, $-size));
         }
       }
@@ -154,7 +154,7 @@ Default responsive grid without spacing between items.
     ---
 
 ```example:html
-<div class="o-grid #{$-class-name}--#{$-size}">
+<div class="o-grid #{$-class-name}-#{$-size}">
   <div class="o-grid__item" style="width: 50%;">
     <div style="background: grey; padding: 0.5em;">width: 50%</div>
   </div>
@@ -164,7 +164,7 @@ Default responsive grid without spacing between items.
 </div>
 ```
     */
-    #{$-selector}--#{$-size} {
+    #{$-selector}-#{$-size} {
       @include o-grid-spaced-horizontal(map-get($spacing, $-size));
     }
   }
@@ -179,7 +179,7 @@ Default responsive grid without spacing between items.
       ---
 
 ```example:html
-<div class="o-grid #{$-class-name}--#{$-size}@#{$-breakpoint}">
+<div class="o-grid #{$-class-name}-#{$-size}@#{$-breakpoint}">
   <div class="o-grid__item" style="width: 50%;">
     <div style="background: grey; padding: 0.5em;">width: 50%</div>
   </div>
@@ -190,7 +190,7 @@ Default responsive grid without spacing between items.
 ```
       */
       @media (min-width: map-get($breakpoints, $-breakpoint)) {
-        #{$-selector}--#{$-size}\@#{$-breakpoint} {
+        #{$-selector}-#{$-size}\@#{$-breakpoint} {
           @include o-grid-spaced-horizontal(map-get($spacing, $-size));
         }
       }
