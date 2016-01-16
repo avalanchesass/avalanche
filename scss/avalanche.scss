@@ -35,6 +35,21 @@ Everything system relevant (e.g. variables).
 
 
 /*---
+title: Mixin
+---
+*/
+@import '../vendor/avalanche_mixin_base_*/**/*';
+@import '../vendor/avalanche_mixin_utility_*/**/*';
+@import '../vendor/avalanche_mixin_object_*/**/*';
+@import '../vendor/avalanche_mixin_component_*/**/*';
+@import 'mixin/base/*';
+@import 'mixin/utility/*';
+@import 'mixin/object/*';
+@import 'mixin/component/*';
+
+
+
+/*---
 title: Base
 ---
 
