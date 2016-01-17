@@ -1,6 +1,7 @@
 /* extract object_island.css */
 /*---
 title:   Island
+name:    object_island
 section: Object
 ---
 
@@ -24,7 +25,8 @@ $o-island-sizes: (m) !default;
   }
   /*---
   title:   Size: #{$-size}#{$-default-text}
-  section: Island
+  name:    object_island_size_#{$-size}
+  section: object_island
   ---
 
 ```example:html
