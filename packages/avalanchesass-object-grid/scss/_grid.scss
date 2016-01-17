@@ -1,6 +1,7 @@
 /* extract object_grid.css */
 /*---
 title:   Grid
+name:    object_grid
 section: Object
 ---
 
@@ -37,7 +38,8 @@ $o-grid-spaced-horizontal-sizes-with-breakpoints: (
 
 /*---
 title:   Default
-section: Grid
+name:    object_grid_default
+section: object_grid
 ---
 
 Default responsive grid without spacing between items.
@@ -72,14 +74,16 @@ Default responsive grid without spacing between items.
 @if length($o-grid-spaced-vertical-sizes) >= 1 or length($o-grid-spaced-horizontal-sizes) >= 1 {
   /*---
   title:   Spaced
-  section: Grid
+  name:    object_grid_spaced
+  section: object_grid
   ---
   */
 }
 @if length($o-grid-spaced-vertical-sizes) >= 1 {
   /*---
   title:   Vertical
-  section: Spaced
+  name:    object_grid_spaced_vertical
+  section: object_grid_spaced
   ---
 
   Vertical spacing between grid items.
@@ -97,7 +101,8 @@ Default responsive grid without spacing between items.
     }
     /*---
     title:   Size: #{$-size}#{$-default-text}
-    section: Vertical
+    name:    object_grid_spaced_vertical_size_#{$-size}
+    section: object_grid_spaced_vertical
     ---
 
 ```example:html
@@ -130,7 +135,8 @@ Default responsive grid without spacing between items.
       }
       /*---
       title:   Size: #{$-size}@#{$-breakpoint}#{$-default-text}
-      section: Vertical
+      name:    object_grid_spaced_vertical_size_#{$-size}_at_#{$-breakpoint}
+      section: object_grid_spaced_vertical
       ---
 
 ```example:html
@@ -156,7 +162,8 @@ Default responsive grid without spacing between items.
 @if length($o-grid-spaced-horizontal-sizes) >= 1 {
   /*---
   title:   Horizontal
-  section: Spaced
+  name:    object_grid_spaced_horizontal
+  section: object_grid_spaced
   ---
 
   Horizontal spacing between grid items.
@@ -174,7 +181,8 @@ Default responsive grid without spacing between items.
     }
     /*---
     title:   Size: #{$-size}#{$-default-text}
-    section: Horizontal
+    name:    object_grid_spaced_horizontal_size_#{$-size}
+    section: object_grid_spaced_horizontal
     ---
 
 ```example:html
@@ -207,7 +215,8 @@ Default responsive grid without spacing between items.
       }
       /*---
       title:   Size: #{$-size}@#{$-breakpoint}#{$-default-text}
-      section: Horizontal
+      name:    object_grid_spaced_horizontal_size_#{$-size}_at_#{$-breakpoint}
+      section: object_grid_spaced_horizontal
       ---
 
 ```example:html
