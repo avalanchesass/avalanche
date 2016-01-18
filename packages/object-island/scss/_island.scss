@@ -11,14 +11,21 @@ Box off content - [Harry Roberts - The 'island' object](http://csswizardry.com/2
  * Variables
  */
 $o-island-sizes: (m) !default;
+// The key of the associative map defines the size of the padding, the value is
+// a map with breakpoint sizes for which island classes should be generated.
+$o-island-sizes-with-breakpoints: (
+  m: ()
+) !default;
 
 
 
 @each $-size in $o-island-sizes {
-  $-size-ext: '-#{$-size}';
+  $-size-ext: '\\[#{$-size}\\]';
+  $-size-ext-plain: '[#{$-size}]';
   $-default-text: '';
   @if $-size == m {
     $-size-ext: '';
+    $-size-ext-plain: '';
     @if length($o-island-sizes) > 1 {
       $-default-text: ' (default)';
     }
@@ -30,7 +37,7 @@ $o-island-sizes: (m) !default;
   ---
 
 ```example:html
-<div class="o-island#{$-size-ext}">
+<div class="o-island#{$-size-ext-plain}">
   Island
 </div>
 ```
@@ -39,4 +46,39 @@ $o-island-sizes: (m) !default;
     @include o-island(map-get($spacing, $-size));
   }
 }
+
+@each $-size-and-breakpoints in $o-island-sizes-with-breakpoints {
+    $-size: nth($-size-and-breakpoints, 1);
+    $-breakpoints: nth($-size-and-breakpoints, 2);
+
+    @each $-breakpoint in $-breakpoints {
+      $-size-ext: '\\[#{$-size}\\]';
+      $-size-ext-plain: '[#{$-size}]';
+      $-default-text: '';
+      @if $-size == m {
+        $-size-ext: '';
+        $-size-ext-plain: '';
+        @if length($o-island-sizes-with-breakpoints) > 1 {
+          $-default-text: ' (default)';
+        }
+      }
+      /*---
+      title:   Size: #{$-size}@#{$-breakpoint}#{$-default-text}
+      name:    object_island_size_#{$-size}_at_#{$-breakpoint}
+      section: object_island
+      ---
+
+```example:html
+<div class="o-island#{$-size-ext-plain}@#{$-breakpoint}">
+  Island
+</div>
+```
+      */
+      @media (min-width: map-get($breakpoints, $-breakpoint)) {
+        .o-island#{$-size-ext}\@#{$-breakpoint} {
+          @include o-island(map-get($spacing, $-size));
+        }
+      }
+    }
+  }
 /* end extract object_island.css */
