@@ -51,7 +51,7 @@ gulp.task('styles:build', ['clean:styles'], function () {
       if (packageName.indexOf('.scss') !== -1) {
         packageName = packageName.replace(/^_/, '').replace('.scss', '');
         // Add found packages to a list of bower packages that should be
-        // ignored because they are overriden by custom implementations.
+        // ignored because they are overridden by custom implementations.
         for (var key in config.packageNamespaces) {
           var packageNamespace = config.packageNamespaces[key];
           ignoreFolders.push('../' + config.vendorDirectory + '/' + packageNamespace + '_' + packageType + '_' + packageName + '/scss');
