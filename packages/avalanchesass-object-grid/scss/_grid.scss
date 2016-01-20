@@ -14,7 +14,8 @@ Fluid width, responsive grid system.
  * Variables
  */
 // Flexbox grid system.
-$o-grid-flex: true !default;
+$o-grid-flex:          true !default;
+$o-grid-flex-fallback: false !default;
 
 // Vertical spacing sizes.
 $o-grid-spaced-vertical-sizes: (m) !default;
@@ -63,11 +64,11 @@ Default responsive grid without spacing between items.
 ```
 */
 .o-grid {
-  @include o-grid($o-grid-flex);
+  @include o-grid($o-grid-flex, $o-grid-flex-fallback);
 }
 
 .o-grid__item {
-  @include o-grid-item($o-grid-flex);
+  @include o-grid-item($o-grid-flex, $o-grid-flex-fallback);
 }
 
 
