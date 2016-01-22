@@ -9,6 +9,7 @@
   "license": "GPL v2",
   "dependencies": {
     "avalanche_function_breakpointmax": "avalanchesass/avalanche_function_breakpointmax#dev-3.0.0",
+    "avalanche_function_map_get_deep": "avalanchesass/avalanche_function_map_get_deep#dev-3.0.0",
     "normalize.css": "~3.0.3"
   },
   "main": "scss/avalanche.scss",

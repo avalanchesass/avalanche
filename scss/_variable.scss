@@ -10,7 +10,8 @@ title:   Color scheme
 section: Variable
 ---
 
-It's mandatory to use color scheme variables whenever you use colors in your styles.  
+It's mandatory to use color scheme variables
+whenever you use colors in your styles.  
 Generator: [coolors.co](http://coolors.co/).
 */
 $cs: (
@@ -158,61 +159,51 @@ Font sizes and weights are defined globally to ensure a consistent look.
  * In this case set the font weights to 200, 400 and 700.
  * If you set a font weight in your css you must use this variables!
  */
-/**
- * Font A
- */
-$font-a-family: 'Helvetica Neue', sans-serif;
-
-$font-a-weights: (
-  thin:        100,
-  extra-light: 200,
-  light:       300,
-  normal:      400,
-  medium:      500,
-  semi-bold:   600,
-  bold:        700,
-  extra-bold:  800,
-  ultra-bold:  900,
+$fonts: (
+  a: (
+    family: "'Helvetica Neue', sans-serif",
+    weights: (
+      thin:        100,
+      extra-light: 200,
+      light:       300,
+      normal:      400,
+      medium:      500,
+      semi-bold:   600,
+      bold:        700,
+      extra-bold:  800,
+      ultra-bold:  900,
+    ),
+  ),
+  b: (
+    family: "Futura, 'Trebuchet MS', sans-serif",
+    weights: (
+      thin:        100,
+      extra-light: 200,
+      light:       300,
+      normal:      400,
+      medium:      500,
+      semi-bold:   600,
+      bold:        700,
+      extra-bold:  800,
+      ultra-bold:  900,
+    ),
+  ),
 );
-/*---
-title:   Font A
-section: Fonts
----
 
-<p style="font-family: #{$font-a-family};">
-**#{$font-a-family}**  
-ABCDEFGHIJKLMNOPQRSTUVWXYZ  
-abcdefghijklmnopqrstuvwxyz  
-0123456789!?#%&$@*{(/|\)}</p>
-*/
+@each $-font-data in $fonts {
+  $-font: nth($-font-data, 1);
+  /*---
+  title:   Font #{to-upper-case($-font)}
+  section: Fonts
+  ---
 
-/**
- * Font B
- */
-$font-b-family: Futura, 'Trebuchet MS', sans-serif;
-
-$font-b-weights: (
-  thin:        100,
-  extra-light: 200,
-  light:       300,
-  normal:      400,
-  medium:      500,
-  semi-bold:   600,
-  bold:        700,
-  extra-bold:  800,
-  ultra-bold:  900,
-);
-/*---
-title:   Font B
-section: Fonts
----
-
-<p style="font-family: #{$font-b-family};">
-**#{$font-b-family}**  
-ABCDEFGHIJKLMNOPQRSTUVWXYZ  
-abcdefghijklmnopqrstuvwxyz  
-0123456789!?#%&$@*{(/|\)}</p>
-*/
+  <p style="font-family: #{map-get-deep($fonts, $-font, family)};">
+  **#{map-get-deep($fonts, $-font, family)}**  
+  ABCDEFGHIJKLMNOPQRSTUVWXYZ  
+  abcdefghijklmnopqrstuvwxyz  
+  0123456789!?#%&$@*{(/|\)}</p>
+  */
+}
 
 
 
