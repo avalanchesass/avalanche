@@ -7,13 +7,6 @@ section: Utility
 
 Font family utility classes.
 */
-@mixin u-font-family($-font, $-font-weight: normal, $-set-weight: true) {
-  font-family: unquote(map-get-deep($fonts, $-font, family)) !important;
-  @if $-set-weight {
-    font-weight: map-get-deep($fonts, $-font, weights, $-font-weight);
-  }
-}
-
 @each $-font-data in $fonts {
   $-font: nth($-font-data, 1);
   .u-font-family-#{$-font} {
