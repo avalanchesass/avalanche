@@ -1,4 +1,4 @@
-# avalanche: Utility font family
+# avalanche_utility_font_family
 Font family utility classes  
 https://github.com/avalanchesass/avalanche_utility_font_family
 

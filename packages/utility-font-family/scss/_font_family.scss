@@ -1,59 +1,23 @@
-/**
- * Font family
- *
- * Font family classes
- *
- * @level X.X.
- */
-@function font-family-find-normal-weight($font-family) {
-  @if variable-exists(font-a-family) and $font-family == $font-a-family {
-    @return $font-a-weight-normal;
+/* extract utility_font_family.css */
+/*---
+title:   Font family
+name:    utility_font_family
+section: Utility
+---
+
+Font family utility classes.
+*/
+@mixin u-font-family($-font, $-font-weight: normal, $-set-weight: true) {
+  font-family: unquote(map-get-deep($fonts, $-font, family)) !important;
+  @if $-set-weight {
+    font-weight: map-get-deep($fonts, $-font, weights, $-font-weight);
   }
-  @else if variable-exists(font-b-family) and $font-family == $font-b-family {
-    @return $font-b-weight-normal;
-  }
-  @else if variable-exists(font-c-family) and $font-family == $font-c-family {
-    @return $font-c-weight-normal;
-  }
-  @else if variable-exists(font-d-family) and $font-family == $font-d-family {
-    @return $font-d-weight-normal;
-  }
-  @else if variable-exists(font-e-family) and $font-family == $font-e-family {
-    @return $font-e-weight-normal;
-  }
-  @return 400;
 }
 
-@if variable-exists(font-a-family) {
-  @mixin u-font-family($font-family: $font-a-family, $font-weight: 0) {
-    font-family: $font-family !important;
-    @if $font-weight > 0 {
-      font-weight: $font-weight;
-    }
-    @else {
-      font-weight: font-family-find-normal-weight($font-family);
-    }
-  }
-
-  /**
-   * @markup
-   * <div class="u-font-family-a">
-   *   Lorem ipsum dolor (#{$font-a-family})
-   * </div>
-   */
-  .u-font-family-a {
-    @include u-font-family();
-  }
-
-  @if variable-exists(font-b-family) {
-      /**
-       * @markup
-       * <div class="u-font-family-b">
-       *   Lorem ipsum dolor (#{$font-b-family})
-       * </div>
-       */
-    .u-font-family-b {
-      @include u-font-family($font-b-family);
-    }
+@each $-font-data in $fonts {
+  $-font: nth($-font-data, 1);
+  .u-font-family-#{$-font} {
+    @include u-font-family($-font);
   }
 }
+/* end extract utility_font_family.css */
