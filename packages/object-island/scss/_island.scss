@@ -14,7 +14,7 @@ $o-island-sizes: (m) !default;
 // The key of the associative map defines the size of the padding, the value is
 // a map with breakpoint sizes for which island classes should be generated.
 $o-island-sizes-with-breakpoints: (
-  m: ()
+  m: (),
 ) !default;
 
 
