@@ -1,5 +1,6 @@
 /*---
 title:   Variable
+name:    system_variable
 section: System
 ---
 
@@ -7,7 +8,8 @@ Basic system variables.
 */
 /*---
 title:   Color scheme
-section: Variable
+name:    system_variable_color_scheme
+section: system_variable
 ---
 
 It's mandatory to use color scheme variables
@@ -31,7 +33,8 @@ $cs-contrast: (
 );
 /*---
 title:   Basic
-section: Color scheme
+name:    system_variable_color_scheme_basic
+section: system_variable_color_scheme
 ---
 
 ```example:color
@@ -62,7 +65,8 @@ $cs-alerts: (
 );
 /*---
 title:   Alerts
-section: Color scheme
+name:    system_variable_color_scheme_alerts
+section: system_variable_color_scheme
 ---
 
 ```example:color
@@ -86,7 +90,8 @@ $cs-grey: (
 );
 /*---
 title:   Grey
-section: Color scheme
+name:    system_variable_color_scheme_grey
+section: system_variable_color_scheme
 ---
 
 ```example:color
@@ -100,7 +105,8 @@ section: Color scheme
 
 /*---
 title:   Typography
-section: Variable
+name:    system_variable_typography
+section: system_variable
 ---
 */
 /**
@@ -125,7 +131,8 @@ $font-sizes: (
 );
 /*---
 title:   Font sizes
-section: Typography
+name:    system_variable_typography_font_sizes
+section: system_variable_typography
 ---
 
 <div style="font-size: #{map-get($font-sizes, xs)};">map-get($font-sizes, xs)</div>
@@ -148,7 +155,8 @@ $font-sizes: map-merge($font-sizes, (
 
 /*---
 title:   Fonts
-section: Typography
+name:    system_variable_typography_fonts
+section: system_variable_typography
 ---
 
 Font sizes and weights are defined globally to ensure a consistent look.
@@ -194,7 +202,8 @@ $fonts: (
   $-font: nth($-font-data, 1);
   /*---
   title:   Font #{to-upper-case($-font)}
-  section: Fonts
+  name:    system_variable_typography_fonts_font_#{$-font}
+  section: system_variable_typography_fonts
   ---
 
   <p style="font-family: #{map-get-deep($fonts, $-font, family)};">
