@@ -21,7 +21,7 @@ $cs: (
   b: #35478C,
   c: #4E7AC7,
   d: #7FB2F0,
-  e: #ADD5F7
+  e: #ADD5F7,
 );
 
 $cs-contrast: (
@@ -29,7 +29,7 @@ $cs-contrast: (
   b: #fff,
   c: #fff,
   d: #fff,
-  e: #fff
+  e: #fff,
 );
 /*---
 title:   Basic
@@ -61,7 +61,7 @@ $cs-alerts: (
   positive: #468847,
   neutral:  #3A87AD,
   cautious: #c09853,
-  negative: #b94a48
+  negative: #b94a48,
 );
 /*---
 title:   Alerts
@@ -86,7 +86,7 @@ $cs-grey-base: #efefef; // [1]
 $cs-grey: (
   a: $cs-grey-base,
   b: darken($cs-grey-base, 20%),
-  c: darken($cs-grey-base, 40%)
+  c: darken($cs-grey-base, 40%),
 );
 /*---
 title:   Grey
@@ -127,7 +127,7 @@ $font-sizes: (
   l:    1.25em,
   xl:   1.563em,
   xxl:  1.953em,
-  xxxl: 2.441em
+  xxxl: 2.441em,
 );
 /*---
 title:   Font sizes
@@ -228,7 +228,7 @@ $breakpoints: (
   s:  30em,
   m:  45em,
   l:  60em,
-  xl: 75em
+  xl: 75em,
 );
 
 /**
@@ -240,7 +240,7 @@ $breakpoints-max: (
   s:  breakpointmax(map-get($breakpoints, s)),
   m:  breakpointmax(map-get($breakpoints, m)),
   l:  breakpointmax(map-get($breakpoints, l)),
-  xl: breakpointmax(map-get($breakpoints, xl))
+  xl: breakpointmax(map-get($breakpoints, xl)),
 );
 
 
@@ -255,5 +255,5 @@ $spacing: (
   l:    2em,
   xl:   3em,
   xxl:  4em,
-  xxxl: 5em
+  xxxl: 5em,
 );
