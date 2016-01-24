@@ -23,7 +23,7 @@ $o-grid-spaced-vertical-sizes: (m) !default;
 // The key of the associative map defines the spacing size, the value is a map
 // with breakpoint sizes for which vertical spacing classes should be generated.
 $o-grid-spaced-vertical-sizes-with-breakpoints: (
-  m: ()
+  m: (),
 ) !default;
 
 // Horizontal spacing sizes.
@@ -33,7 +33,7 @@ $o-grid-spaced-horizontal-sizes: (m) !default;
 // with breakpoint sizes for which horizontal spacing classes should be
 // generated.
 $o-grid-spaced-horizontal-sizes-with-breakpoints: (
-  m: ()
+  m: (),
 ) !default;
 
 
