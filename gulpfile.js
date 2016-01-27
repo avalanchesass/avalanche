@@ -9,7 +9,10 @@ var config = {
   stylesExtractDestination: 'css-extract',
   stylesWatchDirectories: ['scss/**/*'],
   styleGuideDestination: 'style-guide',
-  vendorDirectory: 'vendor'
+  vendorDirectory: 'vendor',
+  sassOptions: {
+    precision: 7
+  }
 };
 
 for (var key in config.packageNamespaces) {
@@ -22,6 +25,7 @@ for (var key in config.packageNamespaces) {
  */
 var fs           = require('fs');
 var del          = require('del');
+var eyeglass     = require('eyeglass');
 var gulp         = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
 var cssGlobbing  = require('gulp-css-globbing');
@@ -70,16 +74,16 @@ gulp.task('styles:build', ['clean:styles'], function () {
       }
     }))
     .pipe(sourcemaps.init())
-      .pipe(sass({ precision: 7, errLogToConsole: true }))
-      .pipe(autoprefixer())
+    .pipe(sass(eyeglass(config.sassOptions)).on('error', sass.logError))
+    .pipe(autoprefixer())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.stylesDestination))
     .pipe(livereload());
 });
 
 gulp.task('styles:extract', ['clean:styles:extract', 'styles:minify'], function () {
-  fs.readFile(config.stylesDestination + '/' + config.stylesFileName, 'utf8', function (err, data) {
-    if (err) throw err;
+  fs.readFile(config.stylesDestination + '/' + config.stylesFileName, 'utf8', function (error, data) {
+    if (error) throw error;
 
     var files = stylesExtractFiles(data);
 
