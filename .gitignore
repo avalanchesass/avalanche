@@ -1,9 +1,12 @@
 .DS_Store
-.sass-cache
-css/*
-css-extract/*
-scss/*/*.scss
+
+/css
+/css-extract
+/scss/*/*.scss
+/style-guide
+
 node_modules
-vendor
-style-guide
-package_dev
+
+# DEPRECATED
+/package_dev
+/vendor

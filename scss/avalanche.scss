@@ -17,8 +17,8 @@ title: Function
 
 Custom SASS functions.
 */
-@import '../vendor/avalanche_function_*/**/*';
-@import 'function/*';
+// @import 'avalanche_function_*/**/*';
+// @import 'function/*';
 
 
 
@@ -29,7 +29,6 @@ title: System
 Everything system relevant (e.g. variables).
 */
 @import 'variable';
-@import '../vendor/avalanche_system_*/**/*';
 @import 'system/*';
 
 
@@ -38,10 +37,6 @@ Everything system relevant (e.g. variables).
 title: Mixin
 ---
 */
-@import '../vendor/avalanche_mixin_base_*/**/*';
-@import '../vendor/avalanche_mixin_utility_*/**/*';
-@import '../vendor/avalanche_mixin_object_*/**/*';
-@import '../vendor/avalanche_mixin_component_*/**/*';
 @import 'mixin/base/*';
 @import 'mixin/utility/*';
 @import 'mixin/object/*';
@@ -56,7 +51,6 @@ title: Base
 Base styles like typography and other global default styles (mostly unclassed HTML elements).
 */
 /* extract base.css */
-@import '../vendor/avalanche_base_*/**/*';
 @import 'base/*';
 /* end extract base.css */
 
@@ -69,7 +63,6 @@ title: Utility
 Utility classes that do very specific things (e.g. clearfix).
 */
 /* extract utility.css */
-@import '../vendor/avalanche_utility_*/**/*';
 @import 'utility/*';
 /* end extract utility.css */
 
@@ -82,7 +75,7 @@ title: Object
 Non-cosmetic styles (e.g. the famous media object).
 */
 /* extract object.css */
-@import '../vendor/avalanche_object_*/**/*';
+@import 'avalanche_object_grid';
 @import 'object/*';
 /* end extract object.css */
 
@@ -95,6 +88,5 @@ title: Component
 Concrete, implementation-specific piece of UI.
 */
 /* extract component.css */
-@import '../vendor/avalanche_component_*/**/*';
 @import 'component/*';
 /* end extract component.css */
