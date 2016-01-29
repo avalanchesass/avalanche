@@ -11,5 +11,13 @@
   },
   "bugs": {
     "url": "https://github.com/avalanchesass/avalanche/issues"
+  },
+  "bin": {
+    "avalanche": "index.js"
+  },
+  "dependencies": {
+    "command-line-args": "^2.1.4",
+    "ncp": "^2.0.0",
+    "replace": "^0.3.0"
   }
 }

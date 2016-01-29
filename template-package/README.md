@@ -1,6 +1,6 @@
-# avalanche_PACKAGE-TYPE_PACKAGE-NAME
+# avalanche_PACKAGE-TYPE-LOWER_PACKAGE-NAME-LOWER
 Description  
-https://github.com/avalanchesass/avalanche_PACKAGE-TYPE_PACKAGE-NAME
+https://github.com/avalanchesass/avalanche_PACKAGE-TYPE-LOWER_PACKAGE-NAME-LOWER
 
 ### Author
 Your Name  
