@@ -23,7 +23,7 @@
     "gulp-sass": "^2.1.0",
     "gulp-sourcemaps": "^1.5.2",
     "mdcss": "^1.3.0",
-    "mdcss-theme-github": "^2.0.1"
+    "mdcss-theme-github": "^2.2.0"
   },
   "main": "gulpfile.js"
 }
