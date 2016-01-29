@@ -160,7 +160,7 @@ gulp.task('style_guide', ['styles:minify'], function () {
         theme: require('mdcss-theme-github')({
           logo: '../avalanche-logo.svg',
           examples: {
-            css: ['../' + config.vendorDirectory + '/normalize.css/normalize.css', '../' + config.stylesDestination + '/' + config.stylesFileName],
+            css: ['../' + config.stylesDestination + '/' + config.stylesFileName],
             htmlcss: '',
             bodycss: ''
           }
