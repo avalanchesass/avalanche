@@ -2,23 +2,19 @@
  * Configuration
  */
 var config = {
-  packageNamespaces: ['avalanche'],
-  packageTypes: ['function', 'system', 'mixin', 'base', 'utility', 'object', 'component'],
-  stylesDestination: 'css',
-  stylesFileName: 'avalanche.css',
-  stylesExtractDestination: 'css-extract',
-  stylesWatchDirectories: ['scss/**/*'],
-  styleGuideDestination: 'style-guide',
-  vendorDirectory: 'vendor',
+  styles: {
+    destination: 'css',
+    fileName: 'avalanche.css',
+    extractDestination: 'css-extract',
+    watchDirectories: ['scss/**/*']
+  },
+  styleGuide: {
+    destination: 'style-guide'
+  },
   sassOptions: {
     precision: 7
   }
 };
-
-for (var key in config.packageNamespaces) {
-  var packageNamespace = config.packageNamespaces[key];
-  config.stylesWatchDirectories.push(config.vendorDirectory + '/' + packageNamespace + '_*/**/*');
-}
 
 /**
  * Plugins
@@ -42,32 +38,9 @@ var sourcemaps   = require('gulp-sourcemaps');
  * Styles
  */
 gulp.task('styles:build', ['clean:styles'], function () {
-  // Find avalanche packages inside the bower dependencies folder which are
-  // overriden by custom implementations inside the project scss directory
-  // and exclude those packages from the build process.
-  var ignoreFolders = [];
-  // Find packages of the various types.
-  for (var key in config.packageTypes) {
-    var packageType = config.packageTypes[key];
-    var packages = fs.readdirSync('scss/' + packageType);
-    for (var key in packages) {
-      var packageName = packages[key];
-      if (packageName.indexOf('.scss') !== -1) {
-        packageName = packageName.replace(/^_/, '').replace('.scss', '');
-        // Add found packages to a list of bower packages that should be
-        // ignored because they are overridden by custom implementations.
-        for (var key in config.packageNamespaces) {
-          var packageNamespace = config.packageNamespaces[key];
-          ignoreFolders.push('../' + config.vendorDirectory + '/' + packageNamespace + '_' + packageType + '_' + packageName + '/scss');
-        }
-      }
-    }
-  }
-
   return gulp.src('scss/**/*.scss')
     .pipe(cssGlobbing({
       extensions: ['.scss'],
-      ignoreFolders: ignoreFolders,
       scssImportPath: {
         leading_underscore: false,
         filename_extension: false
@@ -77,19 +50,19 @@ gulp.task('styles:build', ['clean:styles'], function () {
     .pipe(sass(eyeglass(config.sassOptions)).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(config.stylesDestination))
+    .pipe(gulp.dest(config.styles.destination))
     .pipe(livereload());
 });
 
 gulp.task('styles:extract', ['clean:styles:extract', 'styles:minify'], function () {
-  fs.readFile(config.stylesDestination + '/' + config.stylesFileName, 'utf8', function (error, data) {
+  fs.readFile(config.styles.destination + '/' + config.styles.fileName, 'utf8', function (error, data) {
     if (error) throw error;
 
     var files = stylesExtractFiles(data);
 
     for (var fileName in files) {
       var fileData = files[fileName];
-      var fileDir = config.stylesExtractDestination;
+      var fileDir = config.styles.extractDestination;
       var filePath = fileDir + '/' + fileName;
       // Create directory if it doesn't exist.
       if (!fs.existsSync(fileDir)){
@@ -105,7 +78,7 @@ gulp.task('styles:extract', ['clean:styles:extract', 'styles:minify'], function 
 });
 
 gulp.task('styles:minify', ['styles:build'], function () {
-  stylesMinify(config.stylesDestination + '/' + config.stylesFileName, config.stylesDestination);
+  stylesMinify(config.styles.destination + '/' + config.styles.fileName, config.styles.destination);
 });
 
 function stylesExtractFiles(data) {
@@ -154,18 +127,18 @@ function stylesMinify(files, dest) {
  * Create an mdcss style guide.
  */
 gulp.task('style_guide', ['styles:minify'], function () {
-  return gulp.src(config.stylesDestination + '/' + config.stylesFileName)
+  return gulp.src(config.styles.destination + '/' + config.styles.fileName)
     .pipe(postcss([
       require('mdcss')({
         theme: require('mdcss-theme-github')({
           logo: '../avalanche-logo.svg',
           examples: {
-            css: ['../' + config.stylesDestination + '/' + config.stylesFileName],
+            css: ['../' + config.styles.destination + '/' + config.styles.fileName],
             htmlcss: '',
             bodycss: ''
           }
         }),
-        destination: config.styleGuideDestination
+        destination: config.styleGuide.destination
       })
     ]));
 });
@@ -178,16 +151,16 @@ gulp.task('style_guide', ['styles:minify'], function () {
 gulp.task('clean:styles', function () {
   return del([
     // Remove everything inside the `css` directory, except ...
-    config.stylesDestination + '/**/*',
+    config.styles.destination + '/**/*',
     // ... the `extract` directory.
-    '!' + config.stylesExtractDestination,
-    '!' + config.stylesExtractDestination + '/**/*'
+    '!' + config.styles.extractDestination,
+    '!' + config.styles.extractDestination + '/**/*'
   ]);
 });
 
 gulp.task('clean:styles:extract', function () {
   return del([
-    config.stylesExtractDestination + '/**/*'
+    config.styles.extractDestination + '/**/*'
   ]);
 });
 
@@ -196,17 +169,17 @@ gulp.task('clean:styles:extract', function () {
  */
 gulp.task('watch', function () {
   livereload.listen();
-  gulp.watch(config.stylesWatchDirectories, ['styles:minify']);
+  gulp.watch(config.styles.watchDirectories, ['styles:minify']);
 });
 
 gulp.task('watch:extract', function () {
   livereload.listen();
-  gulp.watch(config.stylesWatchDirectories, ['styles:extract']);
+  gulp.watch(config.styles.watchDirectories, ['styles:extract']);
 });
 
 gulp.task('watch:style_guide', function () {
   livereload.listen();
-  gulp.watch(config.stylesWatchDirectories, ['style_guide']);
+  gulp.watch(config.styles.watchDirectories, ['style_guide']);
 });
 
 /**
