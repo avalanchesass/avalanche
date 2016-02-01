@@ -5,10 +5,11 @@ avalanche is a highly modular SASS framework. The goal of this framework is to b
 
 ## Getting started
 ### Quick start
-- Install [git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [npm](https://docs.npmjs.com/getting-started/installing-node) and [gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) on your system (if not already installed)
-- Clone the repo: `git clone https://github.com/avalanchesass/avalanche.git`
-- Run `npm install` to install dependencies
-- Run `gulp` to start the build process, the gulp default task detects changes to your SASS files and generates the CSS code
+- Install [git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [npm](https://docs.npmjs.com/getting-started/installing-node) and [gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) on your system (if not already installed).
+- Install avalanche globally `npm install -g avalanchesass`.
+- Run `avalanchesass --template="project" --name="Your project name"` to create a new avalanche project in the current directory.
+- Run `npm install` inside your newly created project directory.
+- Run `gulp` to start the build process, the gulp default task detects changes to your SASS files and generates the CSS code.
 
 ### Extend avalanche
 The main avalanche package doesn’t define a single CSS selector. The high modularity of avalanche requires that every part of the system is a distinct package. There are multiple package types:
@@ -21,16 +22,15 @@ The main avalanche package doesn’t define a single CSS selector. The high modu
 - **Component:** concrete, implementation-specific piece of UI
 
 You can find various available packages on [GitHub](https://github.com/avalanchesass)  
-To extend your installation with a preconfigured package open your package.json file, add the package to your *dependencies* and run `npm install` afterwards.
+To extend your installation with a preconfigured package open your `package.json` file, add the package to your *dependencies* and run `npm install` afterwards.
 
 ```json
 "dependencies": {
   "avalanche_base_default": "^3.0.0",
   "avalanche_base_form": "^3.0.0",
-  "avalanche_base_layout": "^3.0.0",
   "avalanche_base_typography": "^3.0.0",
   "avalanche_object_media": "^3.0.0",
-  "normalize.css": "~3.0.3"
+  "normalize-scss": "^4.0.3"
 }
 ```
 
@@ -38,12 +38,11 @@ To extend your installation with a preconfigured package open your package.json 
 If you wan’t to make changes to a class defined by a package it is recommended to create a custom package with the name `_PACKAGE_NAME_extend.scss` in the scss directory of your project.
 
 #### Example
-
 Extending the `.c-button` class of the button component:
 
-- Create a file `_button_extend.scss` in `scss/component`
-- Define the `.c-button` class and override or modify it’s properties
-- You can also remove properties by setting their value to `initial` and adding a `/*!remove*/` comment at the end of the line
+- Create a file `_button_extend.scss` in `scss/component`.
+- Define the `.c-button` class and override or modify it’s properties.
+- You can also remove properties by setting their value to `initial` and adding a `/*!remove*/` comment at the end of the line.
 
 ```scss
 .c-button {
@@ -94,8 +93,6 @@ To make your custom packages CSS extraction ready, you have to add special place
 ```
 
 To prevent naming collisions it is recommended to add the package type as a prefix to the name of the desired resulting CSS file. If you define two or more extraction sections with the same name, those are combined into one file.
-
-
 
 ## About
 ### Author
