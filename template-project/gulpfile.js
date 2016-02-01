@@ -124,7 +124,7 @@ function stylesMinify(files, dest) {
 /**
  * Style guide
  *
- * Create an mdcss style guide.
+ * Create a mdcss style guide.
  */
 gulp.task('style_guide', ['styles:minify'], function () {
   return gulp.src(config.styles.destination + '/' + config.styles.fileName)
