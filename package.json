@@ -1,5 +1,5 @@
 {
-  "name": "avalanche",
+  "name": "avalanchesass",
   "description": "A modular SASS framework",
   "version": "3.0.0",
   "author": "Markus Oberlehner",
@@ -13,7 +13,7 @@
     "url": "https://github.com/avalanchesass/avalanche/issues"
   },
   "bin": {
-    "avalanche": "index.js"
+    "avalanchesass": "index.js"
   },
   "dependencies": {
     "command-line-args": "^2.1.4",
