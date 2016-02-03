@@ -51,6 +51,7 @@ title: Base
 Base styles like typography and other global default styles (mostly unclassed HTML elements).
 */
 /* extract base.css */
+@import 'normalize/import-now';
 @import 'base/*';
 /* end extract base.css */
 
