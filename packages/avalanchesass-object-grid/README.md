@@ -2,6 +2,7 @@
 Fluid width, responsive grid system  
 https://github.com/avalanchesass/avalanche_object_grid
 
+## About
 ### Author
 Markus Oberlehner  
 Twitter: https://twitter.com/MaOberlehner
