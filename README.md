@@ -96,7 +96,7 @@ defining it a second time, uses the default cascading behavior of CSS.
 `avalanchesass --template="project" --name="Project Name"`
 
 **Create a `Component` package**  
-`avalanchesass --template="package" --name="Package Name" --path="scss/"`
+`avalanchesass --template="package" --name="Package Name"`
 
 **Create a custom `Object` package** *assuming you are currently in your project
 diretory*  
