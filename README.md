@@ -82,7 +82,7 @@ defining it a second time, uses the default cascading behavior of CSS.
 - `--template` *mandatory*  
   possible values: project | package | package-custom
 - `--type` *optional*  
-  possible values: Base | Component | Function | Mixin | Object | System | Utility  
+  possible values: Base | Component | Function | Object | System | Utility  
   default value: Component
 - `--name` *optional*  
   possible values: "Your Project Name"  
