@@ -48,6 +48,7 @@ To extend your installation with a preconfigured package open your
 }
 ```
 
+## Working with avalanche
 ### Extend packages
 If you wan’t to make changes to a class defined by a package it is recommended
 to create a custom package with the name `_PACKAGE_NAME_extend.scss` in the scss
@@ -73,6 +74,33 @@ happen in the minified version of the CSS code. But the styling of your site
 will be the same: setting a property value to `initial` has the same effect as
 removing the property from the original class. Extending the original class by
 defining it a second time, uses the default cascading behavior of CSS.
+
+### CLI
+`avalanchesass --template="" [--type=""] [--name=""] [--path=""]`
+
+#### Options
+- `--template` *mandatory*  
+  possible values: project | package | package-custom
+- `--type` *optional*  
+  possible values: Base | Component | Function | Mixin | Object | System | Utility  
+  default value: Component
+- `--name` *optional*  
+  possible values: "Your Project Name"  
+  default value: "Avalanche Project"
+- `--path` *optional*  
+  possible values: /path/to/somewhere  
+  default value: current working directory
+
+#### Examples
+**Create a project**  
+`avalanchesass --template="project" --name="Project Name"`
+
+**Create a `Component` package**  
+`avalanchesass --template="package" --name="Package Name" --path="scss/"`
+
+**Create a custom `Object` package** *assuming you are currently in your project
+diretory*  
+`avalanchesass --template="package-custom" --type="Object" --name="Package Name" --path="scss/object"`
 
 ### BEM
 avalanche uses the [BEM syntax](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/).
