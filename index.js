@@ -18,6 +18,35 @@ var name = options.name ? options.name : 'Avalanche Project';
 var nameLower = name.toLowerCase().replace(/ /g, '_');
 var path = options.path ? options.path : process.cwd();
 
+var projectReplacements = [
+  {
+    regex: 'PROJECT-NAME-LOWER',
+    replacement: nameLower
+  },
+  {
+    regex: 'PROJECT-NAME',
+    replacement: name
+  }
+];
+var packageReplacements = [
+  {
+    regex: 'PACKAGE-NAME-LOWER',
+    replacement: nameLower
+  },
+  {
+    regex: 'PACKAGE-NAME',
+    replacement: name
+  },
+  {
+    regex: 'PACKAGE-TYPE-LOWER',
+    replacement: typeLower
+  },
+  {
+    regex: 'PACKAGE-TYPE',
+    replacement: type
+  }
+];
+
 switch (options.template) {
   case 'project':
     var source = avalanchePath + '/template-project';
@@ -26,21 +55,8 @@ switch (options.template) {
       if (err) {
         return console.error(err);
       }
-      replace({
-        regex: 'PROJECT-NAME-LOWER',
-        replacement: nameLower,
-        paths: [destination],
-        recursive: true,
-        silent: true
-      });
-      replace({
-        regex: 'PROJECT-NAME',
-        replacement: name,
-        paths: [destination],
-        recursive: true,
-        silent: true
-      });
-      console.log('Created a new project "' + name + '" in ' + destination + '');
+      runReplacements(projectReplacements, destination);
+      console.log('Created a new project "' + name + '" in ' + destination + '.');
     });
     break;
 
@@ -51,39 +67,36 @@ switch (options.template) {
       if (err) {
         return console.error(err);
       }
-      replace({
-        regex: 'PACKAGE-NAME-LOWER',
-        replacement: nameLower,
-        paths: [destination],
-        recursive: true,
-        silent: true
-      });
-      replace({
-        regex: 'PACKAGE-NAME',
-        replacement: name,
-        paths: [destination],
-        recursive: true,
-        silent: true
-      });
-      replace({
-        regex: 'PACKAGE-TYPE-LOWER',
-        replacement: typeLower,
-        paths: [destination],
-        recursive: true,
-        silent: true
-      });
-      replace({
-        regex: 'PACKAGE-TYPE',
-        replacement: type,
-        paths: [destination],
-        recursive: true,
-        silent: true
-      });
-      console.log('Created a new package "' + name + '" in ' + destination + '');
+      runReplacements(packageReplacements, destination);
+      console.log('Created a new package "' + name + '" in ' + destination + '.');
+    });
+    break;
+
+  case 'package-custom':
+    var source = avalanchePath + '/template-package/scss/_index.scss';
+    var destination = path + '/_' + nameLower + '.scss';
+    ncp(source, destination, function (err) {
+      if (err) {
+        return console.error(err);
+      }
+      runReplacements(packageReplacements, destination);
+      console.log('Created a new custom package "' + name + '" in ' + destination + '.');
     });
     break;
 
   default:
     console.log('Invalid template type. Choose either "project" or "package".');
     break;
+}
+
+function runReplacements(replacements, path) {
+  replacements.forEach(function (replaceDate) {
+    replace({
+      regex: replaceDate.regex,
+      replacement: replaceDate.replacement,
+      paths: [path],
+      recursive: true,
+      silent: true
+    });
+  });
 }
