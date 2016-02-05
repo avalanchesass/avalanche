@@ -25,7 +25,6 @@ modularity of avalanche requires that every part of the system is a distinct
 package. There are multiple package types:
 
 - **Function:** custom SASS functions
-- **System:** everything system relevant (e.g. variables)
 - **Base:** base styles like typography and other global default styles (mostly
 unclassed HTML elements)
 - **Utility:** utility classes that do very specific things (e.g. clearfix)
@@ -75,6 +74,17 @@ will be the same: setting a property value to `initial` has the same effect as
 removing the property from the original class. Extending the original class by
 defining it a second time, uses the default cascading behavior of CSS.
 
+### Override package variables
+Most packages define there own default variables which you can override to
+modify the CSS output. There are two ways how to override variables of external
+and custom packages:
+
+1. Similar to the extending of packages, you can create a separate file in which
+you define the variables you want to override e.g. `_button_variable.scss`.
+2. If you prefer to have one big file with all the variables inside, you can
+also override package variables inside the `_variable.scss` file in your
+projects `scss` directory.
+
 ### CLI
 `avalanchesass --template="" [--type=""] [--name=""] [--path=""]`
 
@@ -82,7 +92,7 @@ defining it a second time, uses the default cascading behavior of CSS.
 - `--template` *mandatory*  
   possible values: project | package | package-custom
 - `--type` *optional*  
-  possible values: Base | Component | Function | Object | System | Utility  
+  possible values: Base | Component | Function | Object | Utility  
   default value: Component
 - `--name` *optional*  
   possible values: "Your Project Name"  

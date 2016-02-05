@@ -9,7 +9,10 @@ title:   About
 section: avalanche
 ---
 
-avalanche is a highly modular SASS framework. The goal of this framework is to be a minimal starting point that doesn’t make assumptions how things should look. avalanche provides a solid directory structure and a thoroughly thought through CSS methodology.
+avalanche is a highly modular SASS framework. The goal of this framework is to
+be a minimal starting point that doesn’t make assumptions how things should
+look. avalanche provides a solid directory structure and a thoroughly thought
+through CSS methodology.
 */
 /*---
 title: Function
@@ -23,14 +26,10 @@ Custom SASS functions.
 
 
 
-/*---
-title: System
----
-
-Everything system relevant (e.g. variables).
-*/
+/**
+ * System variables
+ */
 @import 'variable';
-@import 'system/*';
 
 
 
@@ -38,9 +37,13 @@ Everything system relevant (e.g. variables).
 title: Base
 ---
 
-Base styles like typography and other global default styles (mostly unclassed HTML elements).
+Base styles like typography and other global default styles
+(mostly unclassed HTML elements).
 */
 /* extract base.css */
+@import 'base/*variable.scss';
+// Import your dependencies here.
+// e.g. @import 'avalanche_base_typography';
 @import 'normalize/import-now';
 @import 'base/*';
 /* end extract base.css */
@@ -54,6 +57,9 @@ title: Utility
 Utility classes that do very specific things (e.g. clearfix).
 */
 /* extract utility.css */
+@import 'utility/*variable.scss';
+// Import your dependencies here.
+// e.g. @import 'avalanche_object_grid';
 @import 'utility/*';
 /* end extract utility.css */
 
@@ -66,6 +72,9 @@ title: Object
 Non-cosmetic styles (e.g. the famous media object).
 */
 /* extract object.css */
+@import 'object/*variable.scss';
+// Import your dependencies here.
+// e.g. @import 'avalanche_object_grid';
 @import 'object/*';
 /* end extract object.css */
 
@@ -78,5 +87,8 @@ title: Component
 Concrete, implementation-specific piece of UI.
 */
 /* extract component.css */
+@import 'component/*variable.scss';
+// Import your dependencies here.
+// e.g. @import 'avalanche_component_button';
 @import 'component/*';
 /* end extract component.css */
