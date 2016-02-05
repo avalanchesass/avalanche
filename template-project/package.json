@@ -7,7 +7,6 @@
   "dependencies": {
     "avalanche_function_breakpointmax": "avalanchesass/avalanche_function_breakpointmax#dev-3.0.0",
     "avalanche_function_map_get_deep": "avalanchesass/avalanche_function_map_get_deep#dev-3.0.0",
-    "avalanche_object_grid": "avalanchesass/avalanche_object_grid#dev-3.0.0",
     "normalize-scss": "^4.0.3"
   },
   "devDependencies": {

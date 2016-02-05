@@ -17,8 +17,9 @@ title: Function
 
 Custom SASS functions.
 */
-// @import 'avalanche_function_*/**/*';
-// @import 'function/*';
+@import 'avalanche_function_breakpointmax';
+@import 'avalanche_function_map_get_deep';
+@import 'function/*';
 
 
 
@@ -30,17 +31,6 @@ Everything system relevant (e.g. variables).
 */
 @import 'variable';
 @import 'system/*';
-
-
-
-/*---
-title: Mixin
----
-*/
-@import 'mixin/base/*';
-@import 'mixin/utility/*';
-@import 'mixin/object/*';
-@import 'mixin/component/*';
 
 
 
@@ -76,7 +66,6 @@ title: Object
 Non-cosmetic styles (e.g. the famous media object).
 */
 /* extract object.css */
-@import 'avalanche_object_grid';
 @import 'object/*';
 /* end extract object.css */
 
