@@ -1,4 +1,3 @@
-@import 'avalanche_base_box_sizing_reset';
 @import 'avalanche_utility_clearfix/mixin';
 
 /*---
@@ -53,6 +52,10 @@ o-grid-item([$-flex: true[, $-flex-fallback: false]])
 }
 
 @mixin o-grid-item($-flex: true, $-flex-fallback: false) {
+  $base-box-sizing-reset: false !default;
+  @if not $base-box-sizing-reset {
+    box-sizing: border-box;
+  }
   @if not $-flex or $-flex-fallback {
     float: left;
   }
