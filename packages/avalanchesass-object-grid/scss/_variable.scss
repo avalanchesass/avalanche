@@ -1,3 +1,5 @@
+$o-grid-class: 'o-grid' !default;
+
 // Flexbox grid system.
 $o-grid-flex:          true !default;
 $o-grid-flex-fallback: false !default;
@@ -10,6 +12,8 @@ $o-grid-spaced-vertical-sizes: (m) !default;
 $o-grid-spaced-vertical-sizes-with-breakpoints: (
   m: (),
 ) !default;
+// Vertical collapsed grid.
+$o-grid-collapsed-vertical: false !default;
 
 // Horizontal spacing sizes.
 $o-grid-spaced-horizontal-sizes: (m) !default;
@@ -20,3 +24,5 @@ $o-grid-spaced-horizontal-sizes: (m) !default;
 $o-grid-spaced-horizontal-sizes-with-breakpoints: (
   m: (),
 ) !default;
+// Horizontal collapsed grid.
+$o-grid-collapsed-horizontal: false !default;
