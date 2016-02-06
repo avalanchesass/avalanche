@@ -42,9 +42,9 @@ Base styles like typography and other global default styles
 */
 /* extract base.css */
 @import 'base/*variable.scss';
+@import 'normalize/import-now';
 // Import your dependencies here.
 // e.g. @import 'avalanche_base_typography';
-@import 'normalize/import-now';
 @import 'base/*';
 /* end extract base.css */
 
@@ -59,7 +59,7 @@ Utility classes that do very specific things (e.g. clearfix).
 /* extract utility.css */
 @import 'utility/*variable.scss';
 // Import your dependencies here.
-// e.g. @import 'avalanche_object_grid';
+// e.g. @import 'avalanche_utility_clearfix';
 @import 'utility/*';
 /* end extract utility.css */
 
