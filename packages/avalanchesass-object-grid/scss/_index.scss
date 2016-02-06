@@ -22,27 +22,27 @@ section: object_grid
 Default responsive grid with vertical and horizontal spacing between items.
 
 ```example:html
-<div class="#{$o-grid-class}">
-  <div class="#{$o-grid-class}__item" style="width: 50%;">
+<div class="#{$o-grid-namespace}">
+  <div class="#{$o-grid-namespace}__item" style="width: 50%;">
     <div style="background: grey; padding: 0.5em;">width: 50%</div>
   </div>
-  <div class="#{$o-grid-class}__item" style="width: 50%;">
+  <div class="#{$o-grid-namespace}__item" style="width: 50%;">
     <div style="background: grey; padding: 0.5em;">width: 50%</div>
   </div>
-  <div class="#{$o-grid-class}__item" style="width: 50%;">
+  <div class="#{$o-grid-namespace}__item" style="width: 50%;">
     <div style="background: grey; padding: 0.5em;">width: 50%</div>
   </div>
-  <div class="#{$o-grid-class}__item" style="width: 50%;">
+  <div class="#{$o-grid-namespace}__item" style="width: 50%;">
     <div style="background: grey; padding: 0.5em;">width: 50%</div>
   </div>
 </div>
 ```
 */
-.#{$o-grid-class} {
+.#{$o-grid-namespace} {
   @include o-grid($o-grid-flex, $o-grid-flex-fallback);
 }
 
-.#{$o-grid-class}__item {
+.#{$o-grid-namespace}__item {
   @include o-grid-item($o-grid-flex, $o-grid-flex-fallback);
 }
 
@@ -66,13 +66,13 @@ Default responsive grid with vertical and horizontal spacing between items.
   Vertical spacing between grid items.
   */
   @each $-size in $o-grid-spaced-vertical-sizes {
-    $-block-class: '#{$o-grid-class} ';
-    $-class-name: '#{$o-grid-class}--vertical';
+    $-block-class: '#{$o-grid-namespace} ';
+    $-class-name: '#{$o-grid-namespace}--vertical';
     $-size-ext: '-#{$-size}';
     $-default-text: '';
     @if $-size == m {
       $-block-class: '';
-      $-class-name: '#{$o-grid-class}';
+      $-class-name: '#{$o-grid-namespace}';
       $-size-ext: '';
       @if length($o-grid-spaced-vertical-sizes) > 1 {
         $-default-text: ' (default)';
@@ -87,22 +87,22 @@ Default responsive grid with vertical and horizontal spacing between items.
 
 ```example:html
 <div class="#{$-block-class}#{$-class-name}#{$-size-ext}">
-  <div class="#{$o-grid-class}__item" style="width: 100%;">
+  <div class="#{$o-grid-namespace}__item" style="width: 100%;">
     <div style="background: grey; padding: 0.5em;">width: 100%</div>
   </div>
-  <div class="#{$o-grid-class}__item" style="width: 100%;">
+  <div class="#{$o-grid-namespace}__item" style="width: 100%;">
     <div style="background: grey; padding: 0.5em;">width: 100%</div>
   </div>
 </div>
 ```
     */
     #{$-selector}#{$-size-ext} {
-      @include o-grid-spaced-vertical(map-get($spacing, $-size), '.#{$o-grid-class}__item');
+      @include o-grid-spaced-vertical(map-get($spacing, $-size), '.#{$o-grid-namespace}__item');
     }
   }
   @each $-size-and-breakpoints in $o-grid-spaced-vertical-sizes-with-breakpoints {
-    $-block-class: '#{$o-grid-class} ';
-    $-class-name: '#{$o-grid-class}--vertical';
+    $-block-class: '#{$o-grid-namespace} ';
+    $-class-name: '#{$o-grid-namespace}--vertical';
     $-size: nth($-size-and-breakpoints, 1);
     $-breakpoints: nth($-size-and-breakpoints, 2);
 
@@ -116,10 +116,10 @@ Default responsive grid with vertical and horizontal spacing between items.
 
 ```example:html
 <div class="#{$-block-class}#{$-class-name}#{$-size-ext}@#{$-breakpoint}">
-  <div class="#{$o-grid-class}__item" style="width: 100%;">
+  <div class="#{$o-grid-namespace}__item" style="width: 100%;">
     <div style="background: grey; padding: 0.5em;">width: 100%</div>
   </div>
-  <div class="#{$o-grid-class}__item" style="width: 100%;">
+  <div class="#{$o-grid-namespace}__item" style="width: 100%;">
     <div style="background: grey; padding: 0.5em;">width: 100%</div>
   </div>
 </div>
@@ -127,7 +127,7 @@ Default responsive grid with vertical and horizontal spacing between items.
       */
       @media (min-width: map-get($breakpoints, $-breakpoint)) {
         #{$-selector}#{$-size-ext}\@#{$-breakpoint} {
-          @include o-grid-spaced-vertical(map-get($spacing, $-size), '.#{$o-grid-class}__item');
+          @include o-grid-spaced-vertical(map-get($spacing, $-size), '.#{$o-grid-namespace}__item');
         }
       }
     }
@@ -144,13 +144,13 @@ Default responsive grid with vertical and horizontal spacing between items.
   Horizontal spacing between grid items.
   */
   @each $-size in $o-grid-spaced-horizontal-sizes {
-    $-block-class: '#{$o-grid-class} ';
-    $-class-name: '#{$o-grid-class}--horizontal';
+    $-block-class: '#{$o-grid-namespace} ';
+    $-class-name: '#{$o-grid-namespace}--horizontal';
     $-size-ext: '-#{$-size}';
     $-default-text: '';
     @if $-size == m {
       $-block-class: '';
-      $-class-name: '#{$o-grid-class}';
+      $-class-name: '#{$o-grid-namespace}';
       $-size-ext: '';
       @if length($o-grid-spaced-horizontal-sizes) > 1 {
         $-default-text: ' (default)';
@@ -165,22 +165,22 @@ Default responsive grid with vertical and horizontal spacing between items.
 
 ```example:html
 <div class="#{$-block-class}#{$-class-name}#{$-size-ext}">
-  <div class="#{$o-grid-class}__item" style="width: 50%;">
+  <div class="#{$o-grid-namespace}__item" style="width: 50%;">
     <div style="background: grey; padding: 0.5em;">width: 50%</div>
   </div>
-  <div class="#{$o-grid-class}__item" style="width: 50%;">
+  <div class="#{$o-grid-namespace}__item" style="width: 50%;">
     <div style="background: grey; padding: 0.5em;">width: 50%</div>
   </div>
 </div>
 ```
     */
     #{$-selector}#{$-size-ext} {
-      @include o-grid-spaced-horizontal(map-get($spacing, $-size), '.#{$o-grid-class}__item');
+      @include o-grid-spaced-horizontal(map-get($spacing, $-size), '.#{$o-grid-namespace}__item');
     }
   }
   @each $-size-and-breakpoints in $o-grid-spaced-horizontal-sizes-with-breakpoints {
-    $-block-class: '#{$o-grid-class} ';
-    $-class-name: '#{$o-grid-class}--horizontal';
+    $-block-class: '#{$o-grid-namespace} ';
+    $-class-name: '#{$o-grid-namespace}--horizontal';
     $-size: nth($-size-and-breakpoints, 1);
     $-breakpoints: nth($-size-and-breakpoints, 2);
 
@@ -194,10 +194,10 @@ Default responsive grid with vertical and horizontal spacing between items.
 
 ```example:html
 <div class="#{$-block-class}#{$-class-name}#{$-size-ext}@#{$-breakpoint}">
-  <div class="#{$o-grid-class}__item" style="width: 50%;">
+  <div class="#{$o-grid-namespace}__item" style="width: 50%;">
     <div style="background: grey; padding: 0.5em;">width: 50%</div>
   </div>
-  <div class="#{$o-grid-class}__item" style="width: 50%;">
+  <div class="#{$o-grid-namespace}__item" style="width: 50%;">
     <div style="background: grey; padding: 0.5em;">width: 50%</div>
   </div>
 </div>
@@ -205,7 +205,7 @@ Default responsive grid with vertical and horizontal spacing between items.
       */
       @media (min-width: map-get($breakpoints, $-breakpoint)) {
         #{$-selector}#{$-size-ext}\@#{$-breakpoint} {
-          @include o-grid-spaced-horizontal(map-get($spacing, $-size), '.#{$o-grid-class}__item');
+          @include o-grid-spaced-horizontal(map-get($spacing, $-size), '.#{$o-grid-namespace}__item');
         }
       }
     }
@@ -222,18 +222,18 @@ Default responsive grid with vertical and horizontal spacing between items.
   ---
 
 ```example:html
-<div class="#{$o-grid-class} #{$o-grid-class}--vertical-collapsed">
-  <div class="#{$o-grid-class}__item" style="width: 100%;">
+<div class="#{$o-grid-namespace} #{$o-grid-namespace}--vertical-collapsed">
+  <div class="#{$o-grid-namespace}__item" style="width: 100%;">
     <div style="background: grey; padding: 0.5em;">width: 100%</div>
   </div>
-  <div class="#{$o-grid-class}__item" style="width: 100%;">
+  <div class="#{$o-grid-namespace}__item" style="width: 100%;">
     <div style="background: grey; padding: 0.5em;">width: 100%</div>
   </div>
 </div>
 ```
   */
-  .#{$o-grid-class}--vertical-collapsed {
-    @include o-grid-spaced-vertical(0, '.#{$o-grid-class}__item');
+  .#{$o-grid-namespace}--vertical-collapsed {
+    @include o-grid-spaced-vertical(0, '.#{$o-grid-namespace}__item');
   }
 }
 
@@ -245,18 +245,18 @@ Default responsive grid with vertical and horizontal spacing between items.
   ---
 
 ```example:html
-<div class="#{$o-grid-class} #{$o-grid-class}--horizontal-collapsed">
-  <div class="#{$o-grid-class}__item" style="width: 50%;">
+<div class="#{$o-grid-namespace} #{$o-grid-namespace}--horizontal-collapsed">
+  <div class="#{$o-grid-namespace}__item" style="width: 50%;">
     <div style="background: grey; padding: 0.5em;">width: 50%</div>
   </div>
-  <div class="#{$o-grid-class}__item" style="width: 50%;">
+  <div class="#{$o-grid-namespace}__item" style="width: 50%;">
     <div style="background: grey; padding: 0.5em;">width: 50%</div>
   </div>
 </div>
 ```
   */
-  .#{$o-grid-class}--horizontal-collapsed {
-    @include o-grid-spaced-horizontal(0, '.#{$o-grid-class}__item');
+  .#{$o-grid-namespace}--horizontal-collapsed {
+    @include o-grid-spaced-horizontal(0, '.#{$o-grid-namespace}__item');
   }
 }
 /* end extract object_grid.css */

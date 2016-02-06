@@ -1,4 +1,4 @@
-$o-grid-class: 'o-grid' !default;
+$o-grid-namespace: '#{map-get($namespace, object)}grid' !default;
 
 // Flexbox grid system.
 $o-grid-flex:          true !default;
