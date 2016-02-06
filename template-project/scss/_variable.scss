@@ -1,15 +1,14 @@
 /*---
 title:   Variable
-name:    system_variable
-section: System
+name:    variable
 ---
 
 Basic system variables.
 */
 /*---
 title:   Color scheme
-name:    system_variable_color_scheme
-section: system_variable
+name:    variable_color_scheme
+section: variable
 ---
 
 It's mandatory to use color scheme variables
@@ -33,8 +32,8 @@ $cs-contrast: (
 );
 /*---
 title:   Basic
-name:    system_variable_color_scheme_basic
-section: system_variable_color_scheme
+name:    variable_color_scheme_basic
+section: variable_color_scheme
 ---
 
 ```example:color
@@ -65,8 +64,8 @@ $cs-alerts: (
 );
 /*---
 title:   Alerts
-name:    system_variable_color_scheme_alerts
-section: system_variable_color_scheme
+name:    variable_color_scheme_alerts
+section: variable_color_scheme
 ---
 
 ```example:color
@@ -90,8 +89,8 @@ $cs-grey: (
 );
 /*---
 title:   Grey
-name:    system_variable_color_scheme_grey
-section: system_variable_color_scheme
+name:    variable_color_scheme_grey
+section: variable_color_scheme
 ---
 
 ```example:color
@@ -105,8 +104,8 @@ section: system_variable_color_scheme
 
 /*---
 title:   Typography
-name:    system_variable_typography
-section: system_variable
+name:    variable_typography
+section: variable
 ---
 */
 /**
@@ -131,8 +130,8 @@ $font-sizes: (
 );
 /*---
 title:   Font sizes
-name:    system_variable_typography_font_sizes
-section: system_variable_typography
+name:    variable_typography_font_sizes
+section: variable_typography
 ---
 
 <div style="font-size: #{map-get($font-sizes, xs)};">map-get($font-sizes, xs)</div>
@@ -155,8 +154,8 @@ $font-sizes: map-merge($font-sizes, (
 
 /*---
 title:   Fonts
-name:    system_variable_typography_fonts
-section: system_variable_typography
+name:    variable_typography_fonts
+section: variable_typography
 ---
 
 Font sizes and weights are defined globally to ensure a consistent look.
@@ -202,8 +201,8 @@ $fonts: (
   $-font: nth($-font-data, 1);
   /*---
   title:   Font #{to-upper-case($-font)}
-  name:    system_variable_typography_fonts_font_#{$-font}
-  section: system_variable_typography_fonts
+  name:    variable_typography_fonts_font_#{$-font}
+  section: variable_typography_fonts
   ---
 
   <p style="font-family: #{map-get-deep($fonts, $-font, family)};">
