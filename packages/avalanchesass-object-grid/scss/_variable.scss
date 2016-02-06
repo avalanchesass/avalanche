@@ -1,0 +1,22 @@
+// Flexbox grid system.
+$o-grid-flex:          true !default;
+$o-grid-flex-fallback: false !default;
+
+// Vertical spacing sizes.
+$o-grid-spaced-vertical-sizes: (m) !default;
+// Vertical spacing sizes at defined breakpoints.
+// The key of the associative map defines the spacing size, the value is a map
+// with breakpoint sizes for which vertical spacing classes should be generated.
+$o-grid-spaced-vertical-sizes-with-breakpoints: (
+  m: (),
+) !default;
+
+// Horizontal spacing sizes.
+$o-grid-spaced-horizontal-sizes: (m) !default;
+// Horizontal spacing sizes at defined breakpoints.
+// The key of the associative map defines the spacing size, the value is a map
+// with breakpoint sizes for which horizontal spacing classes should be
+// generated.
+$o-grid-spaced-horizontal-sizes-with-breakpoints: (
+  m: (),
+) !default;
