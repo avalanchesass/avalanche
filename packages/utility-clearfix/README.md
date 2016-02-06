@@ -2,6 +2,7 @@
 Contain floats  
 https://github.com/avalanchesass/avalanche_utility_clearfix
 
+## About
 ### Author
 Markus Oberlehner  
 Twitter: https://twitter.com/MaOberlehner

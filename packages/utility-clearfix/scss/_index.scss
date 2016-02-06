@@ -1,3 +1,6 @@
+@import 'avalanche_utility_clearfix/variable';
+@import 'avalanche_utility_clearfix/mixin';
+
 /* extract utility_clearfix.css */
 /*---
 title:   Clearfix
@@ -8,12 +11,12 @@ section: Utility
 Contain floats.
 
 ```example:html
-<div class="u-clearfix">
+<div class="#{$u-clearfix-namespace}">
   <div class="stuff-that-floats"></div>
 </div>
 ```
 */
-.u-clearfix {
+.#{$u-clearfix-namespace} {
   @include u-clearfix();
 }
 /* end extract utility_clearfix.css */

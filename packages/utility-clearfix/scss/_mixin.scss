@@ -1,0 +1,23 @@
+/*---
+title:   Mixin
+name:    utility_clearfix_mixin
+section: utility_clearfix
+---
+
+```css
+u-clearfix()
+```
+
+```css
+.foo {
+  @include u-clearfix();
+}
+```
+*/
+@mixin u-clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: ' ';
+  }
+}
