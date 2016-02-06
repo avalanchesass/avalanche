@@ -1,3 +1,6 @@
+@import 'avalanche_object_island/variable';
+@import 'avalanche_object_island/mixin';
+
 /* extract object_island.css */
 /*---
 title:   Island
@@ -7,23 +10,12 @@ section: Object
 
 Box off content - [Harry Roberts - The 'island' object](http://csswizardry.com/2011/10/the-island-object/).
 */
-/**
- * Variables
- */
-$o-island-sizes: (m) !default;
-// The key of the associative map defines the size of the padding, the value is
-// a map with breakpoint sizes for which island classes should be generated.
-$o-island-sizes-with-breakpoints: (
-  m: (),
-) !default;
-
-
-
 @each $-size in $o-island-sizes {
-  $-size-ext: '\\[#{$-size}\\]';
-  $-size-ext-plain: '[#{$-size}]';
+  $-block-class: '#{$o-island-namespace} ';
+  $-size-ext: '--#{$-size}';
   $-default-text: '';
   @if $-size == m {
+    $-block-class: '';
     $-size-ext: '';
     $-size-ext-plain: '';
     @if length($o-island-sizes) > 1 {
@@ -37,12 +29,12 @@ $o-island-sizes-with-breakpoints: (
   ---
 
 ```example:html
-<div class="o-island#{$-size-ext-plain}">
+<div class="#{$-block-class}#{$o-island-namespace}#{$-size-ext}">
   Island
 </div>
 ```
   */
-  .o-island#{$-size-ext} {
+  .#{$o-island-namespace}#{$-size-ext} {
     @include o-island(map-get($spacing, $-size));
   }
 }
@@ -52,16 +44,15 @@ $o-island-sizes-with-breakpoints: (
     $-breakpoints: nth($-size-and-breakpoints, 2);
 
     @each $-breakpoint in $-breakpoints {
-      $-size-ext: '\\[#{$-size}\\]';
-      $-size-ext-plain: '[#{$-size}]';
+      $-size-ext: '--#{$-size}';
       $-default-text: '';
-      @if $-size == m {
-        $-size-ext: '';
-        $-size-ext-plain: '';
-        @if length($o-island-sizes-with-breakpoints) > 1 {
-          $-default-text: ' (default)';
-        }
-      }
+      // @if $-size == m {
+      //   $-size-ext: '';
+      //   $-size-ext-plain: '';
+      //   @if length($o-island-sizes-with-breakpoints) > 1 {
+      //     $-default-text: ' (default)';
+      //   }
+      // }
       /*---
       title:   Size: #{$-size}@#{$-breakpoint}#{$-default-text}
       name:    object_island_size_#{$-size}_at_#{$-breakpoint}
@@ -69,13 +60,13 @@ $o-island-sizes-with-breakpoints: (
       ---
 
 ```example:html
-<div class="o-island#{$-size-ext-plain}@#{$-breakpoint}">
+<div class="#{$o-island-namespace} #{$o-island-namespace}#{$-size-ext}@#{$-breakpoint}">
   Island
 </div>
 ```
       */
       @media (min-width: map-get($breakpoints, $-breakpoint)) {
-        .o-island#{$-size-ext}\@#{$-breakpoint} {
+        .#{$o-island-namespace}#{$-size-ext}\@#{$-breakpoint} {
           @include o-island(map-get($spacing, $-size));
         }
       }
