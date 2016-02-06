@@ -1,0 +1,24 @@
+@import 'avalanche_base_box_sizing_reset/variable';
+
+@if $base-box-sizing-reset {
+  /* extract base_box_sizing_reset.css */
+  /*---
+  title:   Box sizing reset
+  name:    base_box_sizing_reset
+  section: Base
+  ---
+
+  Better box model: [Paul Irish - * { Box-sizing: Border-box } FTW](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
+  */
+  html {
+    box-sizing: border-box;
+  }
+  * {
+    &,
+    &::before,
+    &::after {
+      box-sizing: inherit;
+    }
+  }
+  /* end extract base_box_sizing_reset.css */
+}

@@ -2,6 +2,7 @@
 Box sizing reset  
 https://github.com/avalanchesass/avalanche_base_box_sizing_reset
 
+## About
 ### Author
 Markus Oberlehner  
 Twitter: https://twitter.com/MaOberlehner
