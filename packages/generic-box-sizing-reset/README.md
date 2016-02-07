@@ -1,4 +1,4 @@
-# avalanche_base_box_sizing_reset
+# avalanchesass_base_box_sizing_reset
 Box sizing reset  
 https://github.com/avalanchesass/avalanche_base_box_sizing_reset
 
