@@ -1,4 +1,4 @@
-# avalanche_object_island
+# avalanchesass_object_island
 Box off content  
 https://github.com/avalanchesass/avalanche_object_island
 
