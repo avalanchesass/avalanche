@@ -1,4 +1,4 @@
-# avalanche_utility_clearfix
+# avalanchesass_utility_clearfix
 Contain floats  
 https://github.com/avalanchesass/avalanche_utility_clearfix
 
