@@ -8,8 +8,7 @@ through CSS methodology.
 
 ## Getting started
 ### Quick start
-- Install [git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git),
-[npm](https://docs.npmjs.com/getting-started/installing-node) and
+- Install [npm](https://docs.npmjs.com/getting-started/installing-node) and
 [gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) on
 your system (if not already installed).
 - Install avalanche globally `npm install -g avalanchesass`.
