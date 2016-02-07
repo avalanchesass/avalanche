@@ -84,11 +84,11 @@ section: variable_color_scheme
  *
  * 1. You must not use this directly in your styles!
  */
-$cs-grey-base: #efefef; // [1]
+$-cs-grey-base: #efefef; // [1]
 $cs-grey: (
-  a: $cs-grey-base,
-  b: darken($cs-grey-base, 20%),
-  c: darken($cs-grey-base, 40%),
+  a: $-cs-grey-base,
+  b: darken($-cs-grey-base, 20%),
+  c: darken($-cs-grey-base, 40%),
 );
 /*---
 title:   Grey
