@@ -1,13 +1,12 @@
+@import 'avalanchesass_utility_clearfix/style_guide';
+
 /*---
-title:   Mixin
-name:    utility_clearfix_mixin
-section: utility_clearfix
+section: utility_clearfix_mixin
 ---
 
 ```css
 u-clearfix()
 ```
-
 ```css
 .foo {
   @include u-clearfix();

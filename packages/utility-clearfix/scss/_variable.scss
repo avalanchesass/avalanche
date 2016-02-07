@@ -1,1 +1,11 @@
+@import 'avalanchesass_utility_clearfix/style_guide';
+
 $u-clearfix-namespace: '#{map-get($namespace, utility)}clearfix' !default;
+/*---
+section: utility_clearfix_variable
+---
+
+```css
+$u-clearfix-namespace: #{$u-clearfix-namespace};
+```
+*/
