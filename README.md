@@ -38,10 +38,10 @@ To extend your installation with a preconfigured package open your
 
 ```json
 "dependencies": {
-  "avalanche_base_default": "^3.0.0",
-  "avalanche_base_form": "^3.0.0",
-  "avalanche_base_typography": "^3.0.0",
-  "avalanche_object_media": "^3.0.0",
+  "avalanchesass_base_default": "^3.0.0",
+  "avalanchesass_base_form": "^3.0.0",
+  "avalanchesass_base_typography": "^3.0.0",
+  "avalanchesass_object_media": "^3.0.0",
   "normalize-scss": "^4.0.3"
 }
 ```

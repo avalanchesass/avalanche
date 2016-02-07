@@ -1,4 +1,4 @@
-# avalanche_PACKAGE-TYPE-LOWER_PACKAGE-NAME-LOWER
+# avalanchesass_PACKAGE-TYPE-LOWER_PACKAGE-NAME-LOWER
 Description  
 https://github.com/avalanchesass/avalanche_PACKAGE-TYPE-LOWER_PACKAGE-NAME-LOWER
 

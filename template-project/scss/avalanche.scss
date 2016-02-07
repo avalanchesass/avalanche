@@ -42,7 +42,7 @@ Base styles like typography and other global default styles
 @import 'base/*variable.scss';
 @import 'normalize/import-now';
 // Import your dependencies here.
-// e.g. @import 'avalanche_base_typography';
+// e.g. @import 'avalanchesass_base_typography';
 @import 'base/*';
 /* end extract base.css */
 
@@ -57,7 +57,7 @@ Utility classes that do very specific things (e.g. clearfix).
 /* extract utility.css */
 @import 'utility/*variable.scss';
 // Import your dependencies here.
-// e.g. @import 'avalanche_utility_clearfix';
+// e.g. @import 'avalanchesass_utility_clearfix';
 @import 'utility/*';
 /* end extract utility.css */
 
@@ -72,7 +72,7 @@ Non-cosmetic styles (e.g. the famous media object).
 /* extract object.css */
 @import 'object/*variable.scss';
 // Import your dependencies here.
-// e.g. @import 'avalanche_object_grid';
+// e.g. @import 'avalanchesass_object_grid';
 @import 'object/*';
 /* end extract object.css */
 
@@ -87,6 +87,6 @@ Concrete, implementation-specific piece of UI.
 /* extract component.css */
 @import 'component/*variable.scss';
 // Import your dependencies here.
-// e.g. @import 'avalanche_component_button';
+// e.g. @import 'avalanchesass_component_button';
 @import 'component/*';
 /* end extract component.css */
