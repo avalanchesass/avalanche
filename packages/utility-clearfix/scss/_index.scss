@@ -2,6 +2,7 @@
 @import 'avalanchesass_utility_clearfix/variable';
 @import 'avalanchesass_utility_clearfix/mixin';
 
+/* extract utility.css */
 /* extract utility_clearfix.css */
 /*---
 section: utility_clearfix_example
@@ -17,3 +18,4 @@ section: utility_clearfix_example
   @include u-clearfix();
 }
 /* end extract utility_clearfix.css */
+/* end extract utility.css */
