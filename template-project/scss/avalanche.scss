@@ -38,13 +38,11 @@ title: Base
 Base styles like typography and other global default styles
 (mostly unclassed HTML elements).
 */
-/* extract base.css */
 @import 'base/*variable.scss';
 @import 'normalize/import-now';
 // Import your dependencies here.
 // e.g. @import 'avalanchesass_base_typography';
 @import 'base/*';
-/* end extract base.css */
 
 
 
@@ -54,12 +52,10 @@ title: Utility
 
 Utility classes that do very specific things (e.g. clearfix).
 */
-/* extract utility.css */
 @import 'utility/*variable.scss';
 // Import your dependencies here.
 // e.g. @import 'avalanchesass_utility_clearfix';
 @import 'utility/*';
-/* end extract utility.css */
 
 
 
@@ -69,12 +65,10 @@ title: Object
 
 Non-cosmetic styles (e.g. the famous media object).
 */
-/* extract object.css */
 @import 'object/*variable.scss';
 // Import your dependencies here.
 // e.g. @import 'avalanchesass_object_grid';
 @import 'object/*';
-/* end extract object.css */
 
 
 
@@ -84,9 +78,7 @@ title: Component
 
 Concrete, implementation-specific piece of UI.
 */
-/* extract component.css */
 @import 'component/*variable.scss';
 // Import your dependencies here.
 // e.g. @import 'avalanchesass_component_button';
 @import 'component/*';
-/* end extract component.css */
