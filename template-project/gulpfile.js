@@ -131,7 +131,7 @@ gulp.task('style_guide', ['styles:minify'], function () {
     .pipe(postcss([
       require('mdcss')({
         theme: require('mdcss-theme-github')({
-          logo: '../avalanche-logo.svg',
+          logo: '../logo.svg',
           examples: {
             css: ['../' + config.styles.destination + '/' + config.styles.fileName],
             htmlcss: '',
