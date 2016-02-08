@@ -105,7 +105,7 @@ projects `scss` directory.
 `avalanchesass --template="project" --name="Project Name"`
 
 **Create a `Component` package**  
-`avalanchesass --template="package" --name="Package Name"`
+`avalanchesass --template="package" --type="Component" --name="Package Name"`
 
 **Create a custom `Object` package** *assuming you are currently in your project
 diretory*  
