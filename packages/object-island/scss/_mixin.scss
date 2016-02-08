@@ -1,13 +1,12 @@
+@import 'avalanchesass_object_island/style_guide';
+
 /*---
-title:   Mixin
-name:    object_island_mixin
-section: object_island
+section: object_island_mixin
 ---
 
 ```css
 o-island([$-spacing: 1.5em])
 ```
-
 ```css
 .foo {
   @include o-island();

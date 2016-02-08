@@ -1,16 +1,9 @@
+@import 'avalanchesass_object_island/style_guide';
 @import 'avalanchesass_object_island/variable';
 @import 'avalanchesass_object_island/mixin';
 
 /* extract object.css */
 /* extract object_island.css */
-/*---
-title:   Island
-name:    object_island
-section: Object
----
-
-Box off content - [Harry Roberts - The 'island' object](http://csswizardry.com/2011/10/the-island-object/).
-*/
 @each $-size in $o-island-sizes {
   $-block-class: '#{$o-island-namespace} ';
   $-size-ext: '--#{$-size}';
@@ -25,8 +18,8 @@ Box off content - [Harry Roberts - The 'island' object](http://csswizardry.com/2
   }
   /*---
   title:   Size: #{$-size}#{$-default-text}
-  name:    object_island_size_#{$-size}
-  section: object_island
+  name:    object_island_example_size_#{$-size}
+  section: object_island_example
   ---
 
 ```example:html
@@ -47,17 +40,10 @@ Box off content - [Harry Roberts - The 'island' object](http://csswizardry.com/2
     @each $-breakpoint in $-breakpoints {
       $-size-ext: '--#{$-size}';
       $-default-text: '';
-      // @if $-size == m {
-      //   $-size-ext: '';
-      //   $-size-ext-plain: '';
-      //   @if length($o-island-sizes-with-breakpoints) > 1 {
-      //     $-default-text: ' (default)';
-      //   }
-      // }
       /*---
       title:   Size: #{$-size}@#{$-breakpoint}#{$-default-text}
-      name:    object_island_size_#{$-size}_at_#{$-breakpoint}
-      section: object_island
+      name:    object_island_example_size_#{$-size}_at_#{$-breakpoint}
+      section: object_island_example
       ---
 
 ```example:html

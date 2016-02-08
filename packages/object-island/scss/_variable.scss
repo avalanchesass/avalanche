@@ -1,3 +1,5 @@
+@import 'avalanchesass_object_island/style_guide';
+
 $o-island-namespace: '#{map-get($namespace, object)}island' !default;
 
 $o-island-sizes: (m) !default;
@@ -6,3 +8,13 @@ $o-island-sizes: (m) !default;
 $o-island-sizes-with-breakpoints: (
   m: (),
 ) !default;
+/*---
+section: object_island_variable
+---
+
+```css
+$o-island-namespace: '#{$o-island-namespace}';
+$o-island-sizes: ('#{$o-island-sizes}');
+$o-island-sizes-with-breakpoints: (nested-map);
+```
+*/
