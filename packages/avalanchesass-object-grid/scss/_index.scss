@@ -1,23 +1,20 @@
+@import 'avalanchesass_object_grid/style_guide';
 @import 'avalanchesass_object_grid/variable';
 @import 'avalanchesass_object_grid/mixin';
 
 /* extract object.css */
 /* extract object_grid.css */
 /*---
-title:   Grid
-name:    object_grid
-section: Object
+title:   Example
+name:    object_grid_example
+section: object_grid
+sort:    1
 ---
-
-Fluid width, responsive grid system.
-
-**TIP:** Most likely you want to use this package in combination with the
-[width utility package](https://github.com/avalanchesass/avalanche_utility_width).
 */
 /*---
 title:   Default
-name:    object_grid_default
-section: object_grid
+name:    object_grid_example_default
+section: object_grid_example
 ---
 
 Default responsive grid with vertical and horizontal spacing between items.
@@ -52,16 +49,16 @@ Default responsive grid with vertical and horizontal spacing between items.
 @if length($o-grid-spaced-vertical-sizes) >= 1 or length($o-grid-spaced-horizontal-sizes) >= 1 {
   /*---
   title:   Spacing
-  name:    object_grid_spacing
-  section: object_grid
+  name:    object_grid_example_spacing
+  section: object_grid_example
   ---
   */
 }
 @if length($o-grid-spaced-vertical-sizes) >= 1 {
   /*---
   title:   Vertical
-  name:    object_grid_spacing_vertical
-  section: object_grid_spacing
+  name:    object_grid_example_spacing_vertical
+  section: object_grid_example_spacing
   ---
 
   Vertical spacing between grid items.
@@ -82,8 +79,8 @@ Default responsive grid with vertical and horizontal spacing between items.
     $-selector: '.#{$-class-name}';
     /*---
     title:   Size: #{$-size}#{$-default-text}
-    name:    object_grid_spacing_vertical_size_#{$-size}
-    section: object_grid_spacing_vertical
+    name:    object_grid_example_spacing_vertical_size_#{$-size}
+    section: object_grid_example_spacing_vertical
     ---
 
 ```example:html
@@ -111,8 +108,8 @@ Default responsive grid with vertical and horizontal spacing between items.
       $-size-ext: '-#{$-size}';
       /*---
       title:   Size: #{$-size}@#{$-breakpoint}
-      name:    object_grid_spacing_vertical_size_#{$-size}_at_#{$-breakpoint}
-      section: object_grid_spacing_vertical
+      name:    object_grid_example_spacing_vertical_size_#{$-size}_at_#{$-breakpoint}
+      section: object_grid_example_spacing_vertical
       ---
 
 ```example:html
@@ -138,8 +135,8 @@ Default responsive grid with vertical and horizontal spacing between items.
 @if length($o-grid-spaced-horizontal-sizes) >= 1 {
   /*---
   title:   Horizontal
-  name:    object_grid_spacing_horizontal
-  section: object_grid_spacing
+  name:    object_grid_example_spacing_horizontal
+  section: object_grid_example_spacing
   ---
 
   Horizontal spacing between grid items.
@@ -160,8 +157,8 @@ Default responsive grid with vertical and horizontal spacing between items.
     $-selector: '.#{$-class-name}';
     /*---
     title:   Size: #{$-size}#{$-default-text}
-    name:    object_grid_spacing_horizontal_size_#{$-size}
-    section: object_grid_spacing_horizontal
+    name:    object_grid_example_spacing_horizontal_size_#{$-size}
+    section: object_grid_example_spacing_horizontal
     ---
 
 ```example:html
@@ -189,8 +186,8 @@ Default responsive grid with vertical and horizontal spacing between items.
       $-size-ext: '-#{$-size}';
       /*---
       title:   Size: #{$-size}@#{$-breakpoint}
-      name:    object_grid_spacing_horizontal_size_#{$-size}_at_#{$-breakpoint}
-      section: object_grid_spacing_horizontal
+      name:    object_grid_example_spacing_horizontal_size_#{$-size}_at_#{$-breakpoint}
+      section: object_grid_example_spacing_horizontal
       ---
 
 ```example:html
@@ -218,8 +215,8 @@ Default responsive grid with vertical and horizontal spacing between items.
 @if $o-grid-collapsed-vertical {
   /*---
   title:   Vertical collapsed
-  name:    object_grid_collapsed_vertical
-  section: object_grid
+  name:    object_grid_example_collapsed_vertical
+  section: object_grid_example
   ---
 
 ```example:html
@@ -241,8 +238,8 @@ Default responsive grid with vertical and horizontal spacing between items.
 @if $o-grid-collapsed-horizontal {
   /*---
   title:   Horizontal collapsed
-  name:    object_grid_collapsed_horizontal
-  section: object_grid
+  name:    object_grid_example_collapsed_horizontal
+  section: object_grid_example
   ---
 
 ```example:html

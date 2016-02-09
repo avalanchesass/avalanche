@@ -1,3 +1,5 @@
+@import 'avalanchesass_object_grid/style_guide';
+
 $o-grid-namespace: '#{map-get($namespace, object)}grid' !default;
 
 // Flexbox grid system.
@@ -26,3 +28,22 @@ $o-grid-spaced-horizontal-sizes-with-breakpoints: (
 ) !default;
 // Horizontal collapsed grid.
 $o-grid-collapsed-horizontal: false !default;
+/*---
+title:   Variable
+name:    oobject_grid_variable
+section: object_grid
+sort:    3
+---
+
+```css
+$o-grid-namespace: '#{$o-grid-namespace}';
+$o-grid-flex: #{$o-grid-flex};
+$o-grid-flex-fallback: #{$o-grid-flex-fallback};
+$o-grid-spaced-vertical-sizes: (#{$o-grid-spaced-vertical-sizes});
+$o-grid-spaced-vertical-sizes-with-breakpoints: (nested-map);
+$o-grid-collapsed-vertical: #{$o-grid-collapsed-vertical};
+$o-grid-spaced-horizontal-sizes: (#{$o-grid-spaced-horizontal-sizes});
+$o-grid-spaced-horizontal-sizes-with-breakpoints: (nested-map);
+$o-grid-collapsed-horizontal: #{$o-grid-collapsed-horizontal};
+```
+*/
