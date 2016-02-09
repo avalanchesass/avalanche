@@ -4,6 +4,13 @@
 
 /* extract object.css */
 /* extract object_island.css */
+/*---
+title:   Example
+name:    object_island_example
+section: object_island
+sort:    1
+---
+*/
 @each $-size in $o-island-sizes {
   $-block-class: '#{$o-island-namespace} ';
   $-size-ext: '--#{$-size}';
