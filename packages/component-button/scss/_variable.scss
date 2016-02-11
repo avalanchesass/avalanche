@@ -1,0 +1,32 @@
+@import 'avalanchesass_component_button/style_guide';
+
+$c-button-namespace: '#{map-get($namespace, component)}button' !default;
+
+// Sizes.
+$c-button-sizes: (m) !default;
+$c-button-full-width: false !default;
+
+// Font sizes.
+$c-button-font-sizes: () !default;
+
+// Color scheme.
+$c-button-cs: () !default;
+$c-button-cs-alerts: () !default;
+$c-button-cs-grey: () !default;
+/*---
+title:   Variable
+name:    component_button_variable
+section: component_button
+sort:    3
+---
+
+```css
+$c-button-namespace: '#{$c-button-namespace}';
+$c-button-sizes: (#{$c-button-sizes});
+$c-button-full-width: #{$c-button-full-width};
+$c-button-font-sizes: (#{$c-button-font-sizes});
+$c-button-cs: (#{$c-button-cs});
+$c-button-cs-alerts: (#{$c-button-cs-alerts});
+$c-button-cs-grey: (#{$c-button-cs-grey});
+```
+*/

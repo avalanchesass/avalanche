@@ -1,7 +1,8 @@
-# avalanche: Component button
-CSS buttons  
+# avalanchesass_component_button
+Buttons  
 https://github.com/avalanchesass/avalanche_component_button
 
+## About
 ### Author
 Markus Oberlehner  
 Twitter: https://twitter.com/MaOberlehner
