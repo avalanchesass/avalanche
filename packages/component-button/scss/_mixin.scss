@@ -18,7 +18,7 @@ c-button-font-size($-font-size)
 // Color.
 c-button-color($-color, $-contrast-color)
 c-button-cs([$-cs: a])
-c-button-cs-alert([$-cs-alert: a])
+c-button-cs-alert([$-cs-alert: neutral])
 c-button-cs-grey([$-cs-grey: a])
 ```
 */
@@ -55,7 +55,7 @@ c-button-cs-grey([$-cs-grey: a])
   @include c-button-color(map-get($cs, $-cs), map-get($cs-contrast, $-cs))
 }
 
-@mixin c-button-cs-alert($-cs-alert: a) {
+@mixin c-button-cs-alert($-cs-alert: neutral) {
   @include c-button-color(map-get($cs-alerts, $-cs-alert), #fff);
 }
 
