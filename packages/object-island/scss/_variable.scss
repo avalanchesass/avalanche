@@ -17,7 +17,7 @@ sort:    3
 
 ```css
 $o-island-namespace: '#{$o-island-namespace}';
-$o-island-sizes: ('#{$o-island-sizes}');
+$o-island-sizes: (#{$o-island-sizes});
 $o-island-sizes-with-breakpoints: (nested-map);
 ```
 */
