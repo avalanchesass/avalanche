@@ -41,30 +41,30 @@ sort:    1
 }
 
 @each $-size-and-breakpoints in $o-island-sizes-with-breakpoints {
-    $-size: nth($-size-and-breakpoints, 1);
-    $-breakpoints: nth($-size-and-breakpoints, 2);
+  $-size: nth($-size-and-breakpoints, 1);
+  $-breakpoints: nth($-size-and-breakpoints, 2);
 
-    @each $-breakpoint in $-breakpoints {
-      $-size-ext: '--#{$-size}';
-      $-default-text: '';
-      /*---
-      title:   Size: #{$-size}@#{$-breakpoint}#{$-default-text}
-      name:    object_island_example_size_#{$-size}_at_#{$-breakpoint}
-      section: object_island_example
-      ---
+  @each $-breakpoint in $-breakpoints {
+    $-size-ext: '--#{$-size}';
+    $-default-text: '';
+    /*---
+    title:   Size: #{$-size}@#{$-breakpoint}#{$-default-text}
+    name:    object_island_example_size_#{$-size}_at_#{$-breakpoint}
+    section: object_island_example
+    ---
 
 ```example:html
 <div class="#{$o-island-namespace} #{$o-island-namespace}#{$-size-ext}@#{$-breakpoint}">
-  Island
+Island
 </div>
 ```
-      */
-      @media (min-width: map-get($breakpoints, $-breakpoint)) {
-        .#{$o-island-namespace}#{$-size-ext}\@#{$-breakpoint} {
-          @include o-island(map-get($spacing, $-size));
-        }
+    */
+    @media (min-width: map-get($breakpoints, $-breakpoint)) {
+      .#{$o-island-namespace}#{$-size-ext}\@#{$-breakpoint} {
+        @include o-island(map-get($spacing, $-size));
       }
     }
   }
+}
 /* end extract object_island.css */
 /* end extract object.css */
