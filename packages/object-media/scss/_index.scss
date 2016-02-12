@@ -121,6 +121,33 @@ sort:    1
   }
 }
 
+@if $o-media-collapsed {
+  /*---
+  title:   Collapsed
+  name:    object_media_example_collapsed
+  section: object_media_example
+  ---
+
+```example:html
+<div class="#{$o-media-namespace} #{$o-media-namespace}--collapsed">
+  <div class="#{$o-media-namespace}__figure">
+    <img src="http://placehold.it/70x70" alt="">
+  </div>
+  <div class="#{$o-media-namespace}__body">
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+    voluptua. At vero eos et accusam et</p>
+  </div>
+</div>
+```
+  */
+  .#{$o-media-namespace}--collapsed {
+    > :last-child {
+      margin-left: 0;
+    }
+  }
+}
+
 .u-align-self-center {
   align-self: auto;
 }
