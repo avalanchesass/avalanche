@@ -1,0 +1,131 @@
+@import 'avalanchesass_object_media/style_guide';
+@import 'avalanchesass_object_media/variable';
+
+/* extract object.css */
+/* extract object_media.css */
+/*---
+title:   Example
+name:    object_media_example
+section: object_media
+sort:    1
+---
+
+```example:html
+<div class="#{$o-media-namespace}">
+  <div class="#{$o-media-namespace}__figure">
+    <img src="http://placehold.it/70x70" alt="">
+  </div>
+  <div class="#{$o-media-namespace}__body">
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+    voluptua. At vero eos et accusam et</p>
+  </div>
+</div>
+<div class="#{$o-media-namespace}" style="margin-top: 1.5em;">
+  <div class="#{$o-media-namespace}__body">
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+    voluptua. At vero eos et accusam et</p>
+  </div>
+  <div class="#{$o-media-namespace}__figure">
+    <img src="http://placehold.it/70x70" alt="">
+  </div>
+</div>
+```
+*/
+.#{$o-media-namespace} {
+  display: flex;
+}
+
+.#{$o-media-namespace}__body {
+  flex: 1;
+}
+
+.#{$o-media-namespace}__figure {
+  img,
+  video {
+    display: block;
+  }
+}
+
+@each $-size in $o-media-sizes {
+  $-block-class: '#{$o-media-namespace} ';
+  $-size-ext: '--#{$-size}';
+  $-default-text: '';
+  @if $-size == s {
+    $-block-class: '';
+    $-size-ext: '';
+    $-size-ext-plain: '';
+    @if length($o-media-sizes) > 1 {
+      $-default-text: ' (default)';
+    }
+  }
+  /*---
+  title:   Size: #{$-size}#{$-default-text}
+  name:    object_media_example_size_#{$-size}
+  section: object_media_example
+  ---
+
+```example:html
+<div class="#{$-block-class}#{$o-media-namespace}#{$-size-ext}">
+  <div class="#{$o-media-namespace}__figure">
+    <img src="http://placehold.it/70x70" alt="">
+  </div>
+  <div class="#{$o-media-namespace}__body">
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+    voluptua. At vero eos et accusam et</p>
+  </div>
+</div>
+```
+  */
+  .#{$o-media-namespace}#{$-size-ext} {
+    > :last-child {
+      margin-left: map-get($spacing, $-size);
+    }
+  }
+}
+
+@each $-breakpoint in $o-media-stacked-breakpoints {
+  /*---
+  title:   Stacked up to breakpoint: #{$-breakpoint}
+  name:    object_media_example_stacked_to_#{$-breakpoint}
+  section: object_media_example
+  ---
+
+```example:html
+<div class="#{$o-media-namespace} #{$o-media-namespace}--stacked2#{$-breakpoint}">
+  <div class="#{$o-media-namespace}__figure">
+    <img src="http://placehold.it/70x70" alt="">
+  </div>
+  <div class="#{$o-media-namespace}__body">
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+    voluptua. At vero eos et accusam et</p>
+  </div>
+</div>
+```
+  */
+  @media (max-width: map-get($breakpoints-max, $-breakpoint)) {
+    .#{$o-media-namespace}--stacked2#{$-breakpoint} {
+      &,
+      .#{$o-media-namespace}__figure img,
+      .#{$o-media-namespace}__figure video {
+        display: initial;
+      }        
+      > :last-child {
+        margin-top: map-get($spacing, s);
+        margin-left: initial;
+      }
+    }
+  }
+}
+
+.u-align-self-center {
+  align-self: auto;
+}
+.u-align-self-bottom {
+  align-self: flex-end;
+}
+/* end extract object_media.css */
+/* end extract object.css */

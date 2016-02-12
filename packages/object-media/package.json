@@ -1,0 +1,25 @@
+{
+  "name": "avalanchesass_object_media",
+  "description": "Media object - image on left/right, text next to it",
+  "keywords": [
+    "avalanche-package",
+    "eyeglass-module",
+    "sass"
+  ],
+  "version": "3.0.0",
+  "author": "Markus Oberlehner",
+  "homepage": "https://github.com/avalanchesass/avalanche_object_media",
+  "license": "GPL v2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avalanchesass/avalanche_object_media"
+  },
+  "bugs": {
+    "url": "https://github.com/avalanchesass/avalanche_object_media/issues"
+  },
+  "eyeglass": {
+    "sassDir": "scss",
+    "exports": false,
+    "needs": "^0.8.2"
+  }
+}

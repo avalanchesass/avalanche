@@ -1,7 +1,8 @@
-# avalanche: Object media
-Image on one side, with descriptive content on the other side  
+# avalanchesass_object_media
+Media object - image on left/right, text next to it  
 https://github.com/avalanchesass/avalanche_object_media
 
+## About
 ### Author
 Markus Oberlehner  
 Twitter: https://twitter.com/MaOberlehner

@@ -1,0 +1,19 @@
+@import 'avalanchesass_object_media/style_guide';
+
+$o-media-namespace: '#{map-get($namespace, object)}media' !default;
+
+$o-media-sizes: (s) !default;
+$o-media-stacked-breakpoints: () !default;
+/*---
+title:   Variable
+name:    object_media_variable
+section: object_media
+sort:    2
+---
+
+```css
+$o-media-namespace: '#{$o-media-namespace}';
+$o-media-sizes: (#{$o-media-sizes});
+$o-media-stacked-breakpoints: (#{$o-media-stacked-breakpoints});
+```
+*/
