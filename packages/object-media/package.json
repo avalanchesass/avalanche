@@ -2,7 +2,7 @@
   "name": "avalanchesass_object_media",
   "description": "Media object - image on left/right, text next to it",
   "keywords": [
-    "avalanche-package",
+    "avalanchesass-package",
     "eyeglass-module",
     "sass"
   ],
