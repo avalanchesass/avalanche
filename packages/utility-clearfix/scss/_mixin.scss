@@ -10,11 +10,6 @@ sort:    2
 ```css
 u-clearfix()
 ```
-```css
-.foo {
-  @include u-clearfix();
-}
-```
 */
 @mixin u-clearfix() {
   &::after {
