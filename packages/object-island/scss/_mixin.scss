@@ -10,11 +10,6 @@ sort:    2
 ```css
 o-island([$-spacing: 1.5em])
 ```
-```css
-.foo {
-  @include o-island();
-}
-```
 */
 @mixin o-island($-spacing: 1.5em) {
   padding: $-spacing;
