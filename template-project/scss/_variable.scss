@@ -46,7 +46,6 @@ section: variable_color_scheme
 @color: #{map-get($cs, d)} @name: map-get($cs, d)
 @color: #{map-get($cs, e)} @name: map-get($cs, e)
 ```
-
 ```example:color
 @color: #{map-get($cs-contrast, a)} @name: map-get($cs-contrast, a)
 @color: #{map-get($cs-contrast, b)} @name: map-get($cs-contrast, b)
