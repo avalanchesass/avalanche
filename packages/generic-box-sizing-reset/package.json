@@ -2,7 +2,7 @@
   "name": "avalanchesass_base_box_sizing_reset",
   "description": "Box sizing reset",
   "keywords": [
-    "avalanche-package",
+    "avalanchesass-package",
     "eyeglass-module",
     "sass"
   ],
