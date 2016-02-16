@@ -3,10 +3,16 @@
  */
 var config = {
   styles: {
-    destination: 'css',
+    destination: 'dist',
     fileName: 'avalanche.css',
-    extractDestination: 'css-extract',
+    extractDestination: 'dist-extract',
     watchDirectories: ['scss/**/*']
+  },
+  scripts: {
+    destination: 'dist',
+    fileName: 'avalanche.js',
+    extractDestination: 'dist-extract',
+    watchDirectories: ['js/**/*']
   },
   styleGuide: {
     destination: 'style-guide'
@@ -19,9 +25,10 @@ var config = {
 /**
  * Plugins
  */
-var fs           = require('fs');
+var browserify   = require('browserify');
 var del          = require('del');
 var eyeglass     = require('eyeglass');
+var fs           = require('fs');
 var gulp         = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
 var cssGlobbing  = require('gulp-css-globbing');
@@ -33,6 +40,9 @@ var rename       = require('gulp-rename');
 var replace      = require('gulp-replace');
 var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
+var uglify       = require('gulp-uglify');
+var buffer       = require('vinyl-buffer');
+var source       = require('vinyl-source-stream');
 
 /**
  * Styles
@@ -122,6 +132,25 @@ function stylesMinify(files, dest) {
 }
 
 /**
+ * Scripts
+ */
+gulp.task('scripts:build', ['clean:scripts'], function () {
+  // set up the browserify instance on a task basis
+  var b = browserify({
+    entries: './js/avalanche.js',
+    debug: true
+  });
+
+  return b.bundle()
+    .pipe(source('avalanche.js'))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(uglify())
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(config.scripts.destination));
+});
+
+/**
  * Style guide
  *
  * Create a mdcss style guide.
@@ -134,6 +163,7 @@ gulp.task('style_guide', ['styles:minify'], function () {
           logo: '../logo.svg',
           examples: {
             css: ['../' + config.styles.destination + '/' + config.styles.fileName],
+            bodyjs: ['../dist/avalanche.js'],
             htmlcss: '',
             bodycss: ''
           }
@@ -150,17 +180,31 @@ gulp.task('style_guide', ['styles:minify'], function () {
  */
 gulp.task('clean:styles', function () {
   return del([
-    // Remove everything inside the `css` directory, except ...
-    config.styles.destination + '/**/*',
-    // ... the `extract` directory.
-    '!' + config.styles.extractDestination,
-    '!' + config.styles.extractDestination + '/**/*'
+    // Remove everything inside the destination direcotry.
+    config.styles.destination + '/**/*.css',
+    config.styles.destination + '/**/*.css.map'
+  ]);
+});
+
+gulp.task('clean:scripts', function () {
+  return del([
+    // Remove everything inside the destination direcotry.
+    config.styles.destination + '/**/*.js',
+    config.styles.destination + '/**/*.js.map'
   ]);
 });
 
 gulp.task('clean:styles:extract', function () {
   return del([
-    config.styles.extractDestination + '/**/*'
+    config.styles.extractDestination + '/**/*.css',
+    config.styles.extractDestination + '/**/*.css.map'
+  ]);
+});
+
+gulp.task('clean:scripts:extract', function () {
+  return del([
+    config.styles.extractDestination + '/**/*.js',
+    config.styles.extractDestination + '/**/*.js.map'
   ]);
 });
 
