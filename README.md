@@ -1,10 +1,7 @@
 # avalanche
-A modular SASS framework
-
-avalanche is a highly modular SASS framework. The goal of this framework is to
-be a minimal starting point that doesn’t make assumptions how things should
-look. avalanche provides a solid directory structure and a thoroughly thought
-through CSS methodology.
+avalanche is a modular front-end framework which can be extended with npm
+packages. The goal is to provide a workflow to manage the complexity of big
+front-end projects.
 
 ## Getting started
 ### Quick start
