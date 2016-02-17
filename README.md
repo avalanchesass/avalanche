@@ -156,7 +156,7 @@ concatenated bundle when just a single part changes)
 
 By default every avalanche package is prepared for CSS extraction.
 Run `gulp styles:extract` to create the CSS files - you can find them in
-`css/extract`. Alternatively you can start a watch task with CSS extraction
+`dist-extract`. Alternatively you can start a watch task with CSS extraction
 enabled: `gulp watch:extract`.
 
 To make your custom packages CSS extraction ready, you have to add special
@@ -171,6 +171,18 @@ placeholder comments.
 To prevent naming collisions it is recommended to add the package type as a
 prefix to the name of the desired resulting CSS file. If you define two or more
 extraction sections with the same name, those are combined into one file.
+
+It is recommended to also add placeholder comments for the package type. Because
+extraction sections with the same name are combined you end up with separate
+files per package type.
+
+```css
+/* extract component.css */
+/* extract component_PACKAGE_NAME.css */
+.c-PACKAGE_NAME { … }
+/* end extract component_PACKAGE_NAME.css */
+/* end extract component.css */
+```
 
 ## About
 ### Author
