@@ -4,14 +4,14 @@
 var config = {
   styles: {
     destination: 'dist',
-    fileName: 'avalanche.css',
+    destinationFileName: 'avalanche.css',
     extractDestination: 'dist-extract',
     watchDirectories: ['scss/**/*']
   },
   scripts: {
     destination: 'dist',
-    fileName: 'avalanche.js',
-    extractDestination: 'dist-extract',
+    destinationFileName: 'avalanche.js',
+    browserifyEntries: ['js/avalanche.js'],
     watchDirectories: ['js/**/*']
   },
   styleGuide: {
@@ -65,7 +65,7 @@ gulp.task('styles:build', ['clean:styles'], function () {
 });
 
 gulp.task('styles:extract', ['clean:styles:extract', 'styles:minify'], function () {
-  fs.readFile(config.styles.destination + '/' + config.styles.fileName, 'utf8', function (error, data) {
+  fs.readFile(config.styles.destination + '/' + config.styles.destinationFileName, 'utf8', function (error, data) {
     if (error) throw error;
 
     var files = stylesExtractFiles(data);
@@ -88,7 +88,7 @@ gulp.task('styles:extract', ['clean:styles:extract', 'styles:minify'], function 
 });
 
 gulp.task('styles:minify', ['styles:build'], function () {
-  stylesMinify(config.styles.destination + '/' + config.styles.fileName, config.styles.destination);
+  stylesMinify(config.styles.destination + '/' + config.styles.destinationFileName, config.styles.destination);
 });
 
 function stylesExtractFiles(data) {
@@ -135,14 +135,14 @@ function stylesMinify(files, dest) {
  * Scripts
  */
 gulp.task('scripts:build', ['clean:scripts'], function () {
-  // set up the browserify instance on a task basis
+  // Set up the browserify instance.
   var b = browserify({
-    entries: './js/avalanche.js',
+    entries: config.scripts.browserifyEntries,
     debug: true
   });
 
   return b.bundle()
-    .pipe(source('avalanche.js'))
+    .pipe(source(config.scripts.destinationFileName))
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(uglify())
@@ -156,13 +156,13 @@ gulp.task('scripts:build', ['clean:scripts'], function () {
  * Create a mdcss style guide.
  */
 gulp.task('style_guide', ['styles:minify'], function () {
-  return gulp.src(config.styles.destination + '/' + config.styles.fileName)
+  return gulp.src(config.styles.destination + '/' + config.styles.destinationFileName)
     .pipe(postcss([
       require('mdcss')({
         theme: require('mdcss-theme-github')({
           logo: '../logo.svg',
           examples: {
-            css: ['../' + config.styles.destination + '/' + config.styles.fileName],
+            css: ['../' + config.styles.destination + '/' + config.styles.destinationFileName],
             bodyjs: ['../dist/avalanche.js'],
             htmlcss: '',
             bodycss: ''
@@ -201,19 +201,13 @@ gulp.task('clean:styles:extract', function () {
   ]);
 });
 
-gulp.task('clean:scripts:extract', function () {
-  return del([
-    config.styles.extractDestination + '/**/*.js',
-    config.styles.extractDestination + '/**/*.js.map'
-  ]);
-});
-
 /**
  * Watch
  */
 gulp.task('watch', function () {
   livereload.listen();
   gulp.watch(config.styles.watchDirectories, ['styles:minify']);
+  gulp.watch(config.scripts.watchDirectories, ['scripts:build']);
 });
 
 gulp.task('watch:extract', function () {
@@ -224,6 +218,7 @@ gulp.task('watch:extract', function () {
 gulp.task('watch:style_guide', function () {
   livereload.listen();
   gulp.watch(config.styles.watchDirectories, ['style_guide']);
+  gulp.watch(config.scripts.watchDirectories, ['scripts:build']);
 });
 
 /**
