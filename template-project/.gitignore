@@ -2,7 +2,6 @@
 
 /dist
 /dist-extract
-/scss/*/*.scss
 /style-guide
 
 node_modules
