@@ -12,13 +12,11 @@ your system (if not already installed).
 - Run `avalanchesass --template="project" --name="Your project name"` to create
 a new avalanche project in the current directory.
 - Run `npm install` inside your newly created project directory.
-- Run `gulp` to start the build process, the gulp default task detects changes
-to your SASS files and generates the CSS code.
+- Run `gulp` to start the build process.
 
 ### Extend avalanche
-The main avalanche package doesn’t define a single CSS selector. The high
-modularity of avalanche requires that every part of the system is a distinct
-package. There are multiple package types:
+The high modularity of avalanche requires that every part of the system is a
+distinct package. There are multiple package types:
 
 - **Function:** custom SASS functions
 - **Base:** base styles like typography and other global default styles (mostly
