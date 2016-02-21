@@ -60,6 +60,7 @@ gulp.task('styles:build', ['clean:styles'], function () {
     .pipe(sass(eyeglass(config.sassOptions)).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write('./'))
+    .pipe(rename(config.styles.destinationFileName))
     .pipe(gulp.dest(config.styles.destination))
     .pipe(livereload());
 });
@@ -163,7 +164,7 @@ gulp.task('style_guide', ['styles:minify'], function () {
           logo: '../logo.svg',
           examples: {
             css: ['../' + config.styles.destination + '/' + config.styles.destinationFileName],
-            bodyjs: ['../dist/avalanche.js'],
+            bodyjs: ['../' + config.scripts.destination + '/' + config.scripts.destinationFileName],
             htmlcss: '',
             bodycss: ''
           }
