@@ -10,6 +10,7 @@
     "normalize-scss": "^4.0.3"
   },
   "devDependencies": {
+    "browser-sync": "^2.11.1",
     "browserify": "^13.0.0",
     "del": "^2.2.0",
     "eyeglass": "^0.8.2",
@@ -17,7 +18,6 @@
     "gulp-autoprefixer": "^3.1.0",
     "gulp-css-globbing": "^0.1.7",
     "gulp-cssnano": "^2.0.1",
-    "gulp-livereload": "^3.8.0",
     "gulp-minify-css": "^1.2.3",
     "gulp-postcss": "^6.0.1",
     "gulp-rename": "^1.2.2",

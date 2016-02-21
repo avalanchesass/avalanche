@@ -25,6 +25,7 @@ var config = {
 /**
  * Plugins
  */
+var browserSync  = require('browser-sync').create();
 var browserify   = require('browserify');
 var del          = require('del');
 var eyeglass     = require('eyeglass');
@@ -33,7 +34,6 @@ var gulp         = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
 var cssGlobbing  = require('gulp-css-globbing');
 var cssnano      = require('gulp-cssnano');
-var livereload   = require('gulp-livereload');
 var minifyCss    = require('gulp-minify-css');
 var postcss      = require('gulp-postcss');
 var rename       = require('gulp-rename');
@@ -62,7 +62,7 @@ gulp.task('styles:build', ['clean:styles'], function () {
     .pipe(sourcemaps.write('./'))
     .pipe(rename(config.styles.destinationFileName))
     .pipe(gulp.dest(config.styles.destination))
-    .pipe(livereload());
+    .pipe(browserSync.stream());
 });
 
 gulp.task('styles:extract', ['clean:styles:extract', 'styles:minify'], function () {
@@ -129,7 +129,7 @@ function stylesMinify(files, dest) {
       path.basename += '.min';
     }))
     .pipe(gulp.dest(dest))
-    .pipe(livereload());
+    .pipe(browserSync.stream());
 }
 
 /**
@@ -148,7 +148,8 @@ gulp.task('scripts:build', ['clean:scripts'], function () {
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(uglify())
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(config.scripts.destination));
+    .pipe(gulp.dest(config.scripts.destination))
+    .pipe(browserSync.stream());
 });
 
 /**
@@ -206,20 +207,27 @@ gulp.task('clean:styles:extract', function () {
  * Watch
  */
 gulp.task('watch', function () {
-  livereload.listen();
+  browserSync.init({
+    proxy: 'devbox.dev/avalanche/template-project/style-guide'
+  });
   gulp.watch(config.styles.watchDirectories, ['styles:minify']);
   gulp.watch(config.scripts.watchDirectories, ['scripts:build']);
 });
 
 gulp.task('watch:extract', function () {
-  livereload.listen();
+  browserSync.init({
+    proxy: 'devbox.dev/avalanche/template-project/style-guide'
+  });
   gulp.watch(config.styles.watchDirectories, ['styles:extract']);
 });
 
 gulp.task('watch:style_guide', function () {
-  livereload.listen();
+  browserSync.init({
+    proxy: 'devbox.dev/avalanche/template-project/style-guide'
+  });
   gulp.watch(config.styles.watchDirectories, ['style_guide']);
   gulp.watch(config.scripts.watchDirectories, ['scripts:build']);
+  gulp.watch(config.styleGuide.destination + '/*.html').on('change', browserSync.reload);
 });
 
 /**
