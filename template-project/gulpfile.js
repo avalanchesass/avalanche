@@ -163,7 +163,7 @@ gulp.task('style_guide', ['styles:minify'], function () {
   return gulp.src(config.styles.destination + '/' + config.styles.destinationFileName)
     .pipe(postcss([
       require('mdcss')({
-        theme: require('mdcss-theme-github')({
+        theme: require('avalanchesass_mdcss_theme')({
           logo: '../logo.svg',
           examples: {
             css: ['../' + config.styles.destination + '/' + config.styles.destinationFileName],
