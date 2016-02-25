@@ -61,7 +61,7 @@ gulp.task('styles:build', ['clean:styles'], function () {
     .pipe(sourcemaps.init())
     .pipe(sass(eyeglass(config.sassOptions)).on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(sourcemaps.write('./'))
+    .pipe(sourcemaps.write())
     .pipe(rename(config.styles.destinationFileName))
     .pipe(gulp.dest(config.styles.destination))
     .pipe(browserSync.stream());
@@ -147,9 +147,7 @@ gulp.task('scripts:build', ['clean:scripts'], function () {
   return b.bundle()
     .pipe(source(config.scripts.destinationFileName))
     .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(uglify())
-    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.scripts.destination))
     .pipe(browserSync.stream());
 });
