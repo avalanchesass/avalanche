@@ -183,23 +183,20 @@ gulp.task('style_guide', ['styles:minify'], function () {
 gulp.task('clean:styles', function () {
   return del([
     // Remove everything inside the destination direcotry.
-    config.styles.destination + '/**/*.css',
-    config.styles.destination + '/**/*.css.map'
+    config.styles.destination + '/**/*.css'
   ]);
 });
 
 gulp.task('clean:scripts', function () {
   return del([
     // Remove everything inside the destination direcotry.
-    config.styles.destination + '/**/*.js',
-    config.styles.destination + '/**/*.js.map'
+    config.styles.destination + '/**/*.js'
   ]);
 });
 
 gulp.task('clean:styles:extract', function () {
   return del([
-    config.styles.extractDestination + '/**/*.css',
-    config.styles.extractDestination + '/**/*.css.map'
+    config.styles.extractDestination + '/**/*.css'
   ]);
 });
 
