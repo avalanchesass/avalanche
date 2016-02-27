@@ -3,7 +3,7 @@
  */
 var config = {
   host: 'devbox.dev',
-  directory: 'avalanche/template-project',
+  subdirectory: '/avalanche/template-project',
   styles: {
     destination: 'dist',
     destinationFileName: 'avalanche.css',
@@ -205,7 +205,7 @@ gulp.task('clean:styles:extract', function () {
  */
 gulp.task('watch', function () {
   browserSync.init({
-    proxy: config.host + '/' + config.directory
+    proxy: config.host + config.subdirectory
   });
   gulp.watch(config.styles.watchDirectories, ['styles:minify']);
   gulp.watch(config.scripts.watchDirectories, ['scripts:build']);
@@ -213,14 +213,14 @@ gulp.task('watch', function () {
 
 gulp.task('watch:extract', function () {
   browserSync.init({
-    proxy: config.host + '/' + config.directory
+    proxy: config.host + config.subdirectory
   });
   gulp.watch(config.styles.watchDirectories, ['styles:extract']);
 });
 
 gulp.task('watch:style_guide', function () {
   browserSync.init({
-    proxy: config.host + '/' + config.directory + '/' + config.styleGuide.destination
+    proxy: config.host + config.subdirectory + '/' + config.styleGuide.destination
   });
   gulp.watch(config.styles.watchDirectories, ['style_guide']);
   gulp.watch(config.scripts.watchDirectories, ['scripts:build']);
