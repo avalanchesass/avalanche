@@ -167,8 +167,8 @@ gulp.task('scripts:build', ['clean:scripts'], function () {
  * Style guide
  */
 // Create the mdcss style guide.
-gulp.task('style_guide', ['styles:minify'], function () {
-  return gulp.src(config.styles.destination + '/' + config.styles.destinationFileName)
+gulp.task('style_guide', function () {
+  gulp.src(config.styles.destination + '/' + config.styles.destinationFileName)
     .pipe(postcss([
       require('mdcss')({
         theme: require(config.styleGuide.theme)({
@@ -229,11 +229,16 @@ gulp.task('watch:extract', function () {
 });
 
 gulp.task('watch:style_guide', function () {
+  var assetWatchDirectories = [
+    config.styles.destination + '/' + config.styles.destinationFileName,
+    config.scripts.destination + '/' + config.scripts.destinationFileName,
+  ];
   browserSync.init({
     proxy: config.host + config.subdirectory + '/' + config.styleGuide.destination
   });
-  gulp.watch(config.styles.watchDirectories, ['style_guide']);
+  gulp.watch(config.styles.watchDirectories, ['styles:minify']);
   gulp.watch(config.scripts.watchDirectories, ['scripts:build']);
+  gulp.watch(assetWatchDirectories, ['style_guide']);
   gulp.watch(config.styleGuide.destination + '/*.html').on('change', browserSync.reload);
 });
 
