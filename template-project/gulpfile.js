@@ -50,7 +50,12 @@ var source       = require('vinyl-source-stream');
  * Styles
  */
 gulp.task('styles:build', ['clean:styles'], function () {
-  return gulp.src('scss/**/*.scss')
+  var srcDirectories = [];
+  config.styles.watchDirectories.forEach(function (value) {
+    srcDirectories.push(value + '.scss');
+  });
+
+  return gulp.src(srcDirectories)
     .pipe(cssGlobbing({
       extensions: ['.scss'],
       scssImportPath: {
