@@ -12,7 +12,7 @@ title: Function
 
 Custom SASS functions.
 */
-@import 'function/*';
+@import 'function/*.scss';
 
 
 
@@ -63,7 +63,7 @@ Base styles like typography and other global default styles
 @import 'normalize/import-now';
 // Import your dependencies here.
 // e.g. @import 'avalanchesass_base_typography';
-@import 'base/*';
+@import 'base/*.scss';
 
 
 
@@ -75,7 +75,7 @@ Non-cosmetic styles (e.g. the famous media object).
 */
 // Import your dependencies here.
 // e.g. @import 'avalanchesass_object_grid';
-@import 'object/*';
+@import 'object/*.scss';
 
 
 
@@ -87,7 +87,7 @@ Concrete, implementation-specific piece of UI.
 */
 // Import your dependencies here.
 // e.g. @import 'avalanchesass_component_button';
-@import 'component/*';
+@import 'component/*.scss';
 
 
 
@@ -99,4 +99,4 @@ Utility classes that do very specific things (e.g. clearfix).
 */
 // Import your dependencies here.
 // e.g. @import 'avalanchesass_utility_clearfix';
-@import 'utility/*';
+@import 'utility/*.scss';
