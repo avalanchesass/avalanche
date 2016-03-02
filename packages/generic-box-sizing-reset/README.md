@@ -1,6 +1,16 @@
 # avalanchesass_base_box_sizing_reset
-Box sizing reset  
-https://github.com/avalanchesass/avalanche_base_box_sizing_reset
+Box sizing reset.
+
+## Install
+```
+npm install avalanchesass_base_box_sizing_reset --save
+```
+
+## Basic usage
+```css
+/* Import the main file. */
+@import 'avalanchesass_base_box_sizing_reset';
+```
 
 ## About
 ### Author
