@@ -174,7 +174,7 @@ gulp.task('style_guide', function () {
         theme: require(config.styleGuide.theme)({
           logo: config.styleGuide.logo,
           title: 'avalanche - a modular front-end framework',
-          description: 'A modular front-end framework which can be extended with npm packages. The goal is to provide a workflow to manage the complexity of big front-end projects.',
+          description: 'a modular front-end framework',
           examples: {
             css: ['../' + config.styles.destination + '/' + config.styles.destinationFileName],
             bodyjs: ['../' + config.scripts.destination + '/' + config.scripts.destinationFileName],
