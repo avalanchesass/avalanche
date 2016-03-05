@@ -21,9 +21,9 @@ distinct package. There are multiple package types:
 - **Function:** custom SASS functions
 - **Base:** base styles like typography and other global default styles (mostly
 unclassed HTML elements)
-- **Utility:** utility classes that do very specific things (e.g. clearfix)
 - **Object:** non-cosmetic styles (e.g. the famous media object)
 - **Component:** concrete, implementation-specific piece of UI
+- **Utility:** utility classes that do very specific things (e.g. clearfix)
 
 You can find various available packages on
 [GitHub](https://github.com/avalanchesass)  
@@ -86,7 +86,7 @@ projects `scss` directory.
 - `--template` *mandatory*  
   possible values: project | package | package-custom
 - `--type` *optional*  
-  possible values: Base | Component | Function | Object | Utility  
+  possible values: Function | Base | Object | Component | Utility  
   default value: Component
 - `--name` *optional*  
   possible values: "Your Project Name"  
