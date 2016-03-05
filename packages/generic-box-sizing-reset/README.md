@@ -1,7 +1,18 @@
-# avalanche: Base layout
-Basic layout  
-https://github.com/avalanchesass/avalanche_base_layout
+# avalanchesass_base_box_sizing_reset
+Box sizing reset.
 
+## Install
+```
+npm install avalanchesass_base_box_sizing_reset --save
+```
+
+## Basic usage
+```css
+/* Import the main file. */
+@import 'avalanchesass_base_box_sizing_reset';
+```
+
+## About
 ### Author
 Markus Oberlehner  
 Twitter: https://twitter.com/MaOberlehner

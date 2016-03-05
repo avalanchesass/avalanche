@@ -1,0 +1,13 @@
+@import 'avalanchesass_base_box_sizing_reset/style_guide';
+
+$base-box-sizing-reset: true !default;
+/*---
+title:   Variable
+name:    base_box_sizing_reset_variable
+section: base_box_sizing_reset
+---
+
+```css
+$base-box-sizing-reset: #{$base-box-sizing-reset};
+```
+*/
