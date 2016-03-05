@@ -21,9 +21,9 @@ distinct package. There are multiple package types:
 - **Function:** custom SASS functions
 - **Base:** base styles like typography and other global default styles (mostly
 unclassed HTML elements)
-- **Object:** non-cosmetic styles (e.g. the famous media object)
+- **Object:** non-cosmetic styles (such as the famous media object)
 - **Component:** concrete, implementation-specific piece of UI
-- **Utility:** utility classes that do very specific things (e.g. clearfix)
+- **Utility:** utility classes that do specific things (for example clearfix)
 
 You can find various available packages on
 [GitHub](https://github.com/avalanchesass)  
@@ -51,7 +51,7 @@ directory of your project.
 Extending the `.c-button` class of the button component:
 
 - Create a file `_button_extend.scss` in `scss/component`.
-- Define the `.c-button` class and override or modify it’s properties.
+- Define the `.c-button` class and override or change it’s properties.
 - You can also remove properties by setting their value to `initial` and adding
 a `/*!remove*/` comment at the end of the line.
 
@@ -70,11 +70,12 @@ defining it a second time, uses the default cascading behavior of CSS.
 
 ### Override package variables
 Most packages define there own default variables which you can override to
-modify the CSS output. There are two ways how to override variables of external
+change the CSS output. There are two ways how to override variables of external
 and custom packages:
 
 1. Similar to the extending of packages, you can create a separate file in which
-you define the variables you want to override e.g. `_button_variable.scss`.
+you define the variables you want to override (for example
+`_button_variable.scss`).
 2. If you prefer to have one big file with all the variables inside, you can
 also override package variables inside the `_variable.scss` file in your
 projects `scss` directory.
@@ -102,8 +103,7 @@ projects `scss` directory.
 **Create a `Component` package**  
 `avalanchesass --template="package" --type="Component" --name="Package Name"`
 
-**Create a custom `Object` package** *assuming you are currently in your project
-diretory*  
+**Create a custom `Object` package** *assuming you are in the project diretory*  
 `avalanchesass --template="package-custom" --type="Object" --name="Package Name" --path="scss/object"`
 
 ### BEM
@@ -141,9 +141,9 @@ to your code base.
 [HTTP/2](https://en.wikipedia.org/wiki/HTTP/2) is coming and changes the way
 [how we should build websites](https://mattwilcox.net/web-development/http2-for-front-end-web-developers).
 With HTTP/2 it can be faster to load multiple small files (but only those which
-are really needed) instead of one big file (with a potential overhead). E.g. the
-pager component isn’t used on most of your pages but the styles are loaded on
-every request because they are concatenated into one big file.
+are really needed) instead of one big file (with a potential overhead). Example:
+the pager component isn’t used on most of your pages but the styles are loaded
+on every request because they are concatenated into one big file.
 
 With CSS extraction you can split your styles into multiple separate CSS files.
 This makes it possible to load just the styles you need. Amongst other things
@@ -151,13 +151,13 @@ there are the following advantages using this technique:
 
 - Increased cache granularity (avoids invalidating a whole sprite or
 concatenated bundle when just a single part changes)
-- Parallel downloading of files that were previously bundled into one file
+- Parallel downloading of files that before were bundled into one file
 - Less energy/memory usage in the client
 
 By default every avalanche package is prepared for CSS extraction.
 Run `gulp styles:extract` to create the CSS files - you can find them in
-`dist-extract`. Alternatively you can start a watch task with CSS extraction
-enabled: `gulp watch:extract`.
+`dist-extract`. Or you can start a watch task with CSS extraction enabled:
+`gulp watch:extract`.
 
 To make your custom packages CSS extraction ready, you have to add special
 placeholder comments.
