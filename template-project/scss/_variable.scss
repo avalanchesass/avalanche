@@ -145,15 +145,6 @@ section: variable_typography
 <div style="font-size: #{map-get($font-sizes, xxxl)};">map-get($font-sizes, xxxl)</div>
 */
 
-$font-sizes: map-merge($font-sizes, (
-  h1: map-get($font-sizes, xxxl),
-  h2: map-get($font-sizes, xxl),
-  h3: map-get($font-sizes, xl),
-  h4: map-get($font-sizes, l),
-  h5: map-get($font-sizes, m),
-  h6: map-get($font-sizes, m),
-));
-
 /*---
 title:   Fonts
 name:    variable_typography_fonts
