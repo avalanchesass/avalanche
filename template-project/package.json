@@ -5,9 +5,9 @@
   "author": "",
   "license": "GPL v2",
   "dependencies": {
-    "avalanchesass_function_breakpointmax": "avalanchesass/avalanche_function_breakpointmax#dev-3.0.0",
-    "avalanchesass_function_map_get_deep": "avalanchesass/avalanche_function_map_get_deep#dev-3.0.0",
-    "avalanchesass_mdcss_theme": "avalanchesass/avalanche_mdcss_theme#dev",
+    "avalanchesass_function_breakpointmax": "^3.0.0",
+    "avalanchesass_function_map_get_deep": "^3.0.0",
+    "avalanchesass_mdcss_theme": "^1.0.0",
     "browser-sync": "^2.11.1",
     "browserify": "^13.0.0",
     "del": "^2.2.0",
