@@ -1,6 +1,9 @@
 {
   "name": "avalanchesass",
   "description": "A modular SASS framework",
+  "keywords": [
+    "avalanchesass-package"
+  ],
   "version": "3.0.0",
   "author": "Markus Oberlehner",
   "homepage": "https://github.com/avalanchesass/avalanche",
