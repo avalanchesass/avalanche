@@ -85,7 +85,7 @@ switch (options.template) {
     break;
 
   default:
-    console.log('Invalid template type. Choose either "project" or "package".');
+    console.log('Invalid template type. Choose either "project", "package" or "package-custom".');
     break;
 }
 
