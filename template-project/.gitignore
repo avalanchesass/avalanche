@@ -1,0 +1,8 @@
+.DS_Store
+
+/dist
+/dist-extract
+/style-guide/*
+!/style-guide/README.md
+
+node_modules

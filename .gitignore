@@ -1,7 +1,9 @@
 .DS_Store
-.sass-cache
-vendor
-scss/*/*.scss
-css/*
-package_dev
-styleguide
+
+/template-project/scss/*/*.scss
+
+node_modules
+
+# DEPRECATED
+/package_dev
+/vendor

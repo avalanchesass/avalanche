@@ -1,0 +1,102 @@
+/*---
+title: avalanche
+---
+
+avalanche is a modular front-end framework which can be extended with npm
+packages. The goal is to provide a workflow to manage the complexity of big
+front-end projects.
+*/
+/*---
+title: Function
+---
+
+Custom SASS functions.
+*/
+@import 'function/*.scss';
+
+
+
+/**
+ * Variable
+ *
+ * If you want to **only** import the variables from a package import them here.
+ */
+@import 'variable';
+// Base
+// e.g. @import 'avalanchesass_base_typography/variable';
+@import 'base/*variable.scss';
+// Object
+// e.g. @import 'avalanchesass_object_grid/variable';
+@import 'object/*variable.scss';
+// Component
+// e.g. @import 'avalanchesass_component_button/variable';
+@import 'component/*variable.scss';
+// Utility
+// e.g. @import 'avalanchesass_utility_clearfix/variable';
+@import 'utility/*variable.scss';
+
+
+
+/**
+ * Mixin
+ *
+ * If you want to **only** import the mixins from a package import them here.
+ */
+// Base
+// e.g. @import 'avalanchesass_base_typography/mixin';
+// Object
+// e.g. @import 'avalanchesass_object_grid/mixin';
+// Component
+// e.g. @import 'avalanchesass_component_button/mixin';
+// Utility
+// e.g. @import 'avalanchesass_utility_clearfix/mixin';
+
+
+
+/*---
+title: Base
+---
+
+Base styles like typography and other global default styles
+(mostly unclassed HTML elements).
+*/
+@import 'normalize/import-now';
+// Import your dependencies here.
+// e.g. @import 'avalanchesass_base_typography';
+@import 'base/*.scss';
+
+
+
+/*---
+title: Object
+---
+
+Non-cosmetic styles (e.g. the famous media object).
+*/
+// Import your dependencies here.
+// e.g. @import 'avalanchesass_object_grid';
+@import 'object/*.scss';
+
+
+
+/*---
+title: Component
+---
+
+Concrete, implementation-specific piece of UI.
+*/
+// Import your dependencies here.
+// e.g. @import 'avalanchesass_component_button';
+@import 'component/*.scss';
+
+
+
+/*---
+title: Utility
+---
+
+Utility classes that do very specific things (e.g. clearfix).
+*/
+// Import your dependencies here.
+// e.g. @import 'avalanchesass_utility_clearfix';
+@import 'utility/*.scss';
