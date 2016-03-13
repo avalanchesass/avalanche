@@ -3,7 +3,7 @@
  */
 var config = {
   host: 'devbox.dev',
-  subdirectory: '/avalanche/template-project',
+  subdirectory: '',
   styles: {
     destination: 'dist',
     destinationFileName: 'avalanche.css',
@@ -17,8 +17,10 @@ var config = {
     watchDirectories: ['js/**/*']
   },
   styleGuide: {
-    theme: 'avalanchesass_mdcss_theme',
+    title: 'avalanche - a modular front-end framework',
+    description: 'a modular front-end framework',
     logo: '../logo.svg',
+    theme: 'avalanchesass_mdcss_theme',
     destination: 'style-guide'
   },
   sassOptions: {
@@ -173,8 +175,8 @@ gulp.task('style_guide', function () {
       require('mdcss')({
         theme: require(config.styleGuide.theme)({
           logo: config.styleGuide.logo,
-          title: 'avalanche - a modular front-end framework',
-          description: 'a modular front-end framework',
+          title: config.styleGuide.title,
+          description: config.styleGuide.description,
           examples: {
             css: ['../' + config.styles.destination + '/' + config.styles.destinationFileName],
             bodyjs: ['../' + config.scripts.destination + '/' + config.scripts.destinationFileName],
