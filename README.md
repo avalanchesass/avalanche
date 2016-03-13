@@ -26,7 +26,7 @@ unclassed HTML elements)
 - **Utility:** utility classes that do specific things (for example clearfix)
 
 You can find various available packages on
-[GitHub](https://github.com/avalanchesass)  
+[npm](https://www.npmjs.com/browse/keyword/avalanchesass-package)  
 To extend your installation with a preconfigured package open your
 `package.json` file, add the package to your *dependencies* and run
 `npm install` afterwards.
