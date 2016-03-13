@@ -16,7 +16,7 @@
     "avalanchesass": "index.js"
   },
   "dependencies": {
-    "command-line-args": "^2.1.4",
+    "command-line-args": "^2.1.6",
     "ncp": "^2.0.0",
     "replace": "^0.3.0"
   }
