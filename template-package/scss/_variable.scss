@@ -1,16 +1,14 @@
 @import 'avalanchesass_PACKAGE-TYPE-LOWER_PACKAGE-NAME-LOWER/style_guide';
 
+$VARIABLE: 'VALUE' !default;
 /*---
-title:   Mixin
-name:    PACKAGE-TYPE-LOWER_PACKAGE-NAME-LOWER_mixin
+title:   Variable
+name:    PACKAGE-TYPE-LOWER_PACKAGE-NAME-LOWER_variable
 section: PACKAGE-TYPE-LOWER_PACKAGE-NAME-LOWER
-order:   2
+order:   3
 ---
 
 ```css
-MIXIN()
+$VARIABLE: #{$VARIABLE};
 ```
 */
-@mixin MIXIN() {
-
-}

@@ -1,6 +1,19 @@
 # avalanchesass_PACKAGE-TYPE-LOWER_PACKAGE-NAME-LOWER
-Description  
-https://github.com/avalanchesass/avalanche_PACKAGE-TYPE-LOWER_PACKAGE-NAME-LOWER
+Description.
+
+## Install
+```
+npm install avalanchesass_PACKAGE-TYPE-LOWER_PACKAGE-NAME-LOWER --save
+```
+
+## Basic usage
+```css
+/* Import the main file. */
+@import 'avalanchesass_PACKAGE-TYPE-LOWER_PACKAGE-NAME-LOWER';
+
+/* Import just the mixin file. */
+@import 'avalanchesass_PACKAGE-TYPE-LOWER_PACKAGE-NAME-LOWER/mixin';
+```
 
 ## About
 ### Author

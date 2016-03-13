@@ -1,13 +1,13 @@
 {
   "name": "avalanchesass_PACKAGE-TYPE-LOWER_PACKAGE-NAME-LOWER",
-  "description": "",
+  "description": "Description",
   "keywords": [
-    "avalanche-package",
+    "avalanchesass-package",
     "eyeglass-module",
     "sass"
   ],
   "version": "3.0.0",
-  "author": "",
+  "author": "Your Name",
   "homepage": "https://github.com/avalanchesass/avalanche_PACKAGE-TYPE-LOWER_PACKAGE-NAME-LOWER",
   "license": "GPL v2",
   "dependencies": {

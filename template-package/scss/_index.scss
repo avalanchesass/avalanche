@@ -1,13 +1,21 @@
-@import '';
+@import 'avalanchesass_PACKAGE-TYPE-LOWER_PACKAGE-NAME-LOWER/style_guide';
+@import 'avalanchesass_PACKAGE-TYPE-LOWER_PACKAGE-NAME-LOWER/variable';
+@import 'avalanchesass_PACKAGE-TYPE-LOWER_PACKAGE-NAME-LOWER/mixin';
 
+/* extract PACKAGE-TYPE-LOWER.css */
 /* extract PACKAGE-TYPE-LOWER_PACKAGE-NAME-LOWER.css */
 /*---
-title:   PACKAGE-NAME
-name:    PACKAGE-TYPE-LOWER_PACKAGE-NAME-LOWER
-section: PACKAGE-TYPE
+title:   Example
+name:    PACKAGE-TYPE-LOWER_PACKAGE-NAME-LOWER_example
+section: PACKAGE-TYPE-LOWER_PACKAGE-NAME-LOWER
+order:   1
 ---
 
-Description.
+```example:html
+```
 */
-.your-code {}
+.your-styles {
+
+}
 /* end extract PACKAGE-TYPE-LOWER_PACKAGE-NAME-LOWER.css */
+/* end extract PACKAGE-TYPE-LOWER.css */
