@@ -1,0 +1,20 @@
+@import 'avalanchesass_utility_clearfix/style_guide';
+
+/*---
+title:   Mixin
+name:    utility_clearfix_mixin
+section: utility_clearfix
+order:   2
+---
+
+```css
+u-clearfix()
+```
+*/
+@mixin u-clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: ' ';
+  }
+}

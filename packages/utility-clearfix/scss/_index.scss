@@ -1,0 +1,24 @@
+@import 'avalanchesass_utility_clearfix/style_guide';
+@import 'avalanchesass_utility_clearfix/variable';
+@import 'avalanchesass_utility_clearfix/mixin';
+
+/* extract utility.css */
+/* extract utility_clearfix.css */
+/*---
+title:   Example
+name:    utility_clearfix_example
+section: utility_clearfix
+order:   1
+---
+
+```example:html
+<div class="#{$u-clearfix-namespace}">
+  <div class="stuff-that-floats"></div>
+</div>
+```
+*/
+.#{$u-clearfix-namespace} {
+  @include u-clearfix();
+}
+/* end extract utility_clearfix.css */
+/* end extract utility.css */
