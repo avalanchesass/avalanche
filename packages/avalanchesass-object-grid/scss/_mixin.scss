@@ -1,0 +1,57 @@
+@import 'avalanchesass_object_grid/style_guide';
+@import 'avalanchesass_utility_clearfix/mixin';
+
+/*---
+title:   Mixin
+name:    object_grid_mixin
+section: object_grid
+order:   2
+---
+
+```css
+// Basic grid.
+o-grid([$-flex: true[, $-flex-fallback: false]])
+
+// Vertical spacing between grid items.
+o-grid-spaced-vertical([$-spacing: map-get($spacing, m)[, $-item-selector: '.o-grid__item']])
+
+// Horizontal spacing between grid items.
+o-grid-spaced-horizontal([$-spacing: map-get($spacing, m)[, $-item-selector: '.o-grid__item']])
+
+// Basic grid item.
+o-grid-item([$-flex: true[, $-flex-fallback: false]])
+```
+*/
+@mixin o-grid($-flex: true, $-flex-fallback: false) {
+  @if $-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @if not $-flex or $-flex-fallback {
+    @include u-clearfix();
+  }
+}
+
+@mixin o-grid-spaced-vertical($-spacing: map-get($spacing, m), $-item-selector: '.o-grid__item') {
+  margin-top: -$-spacing;
+  > #{$-item-selector} {
+    margin-top: $-spacing;
+  }
+}
+
+@mixin o-grid-spaced-horizontal($-spacing: map-get($spacing, m), $-item-selector: '.o-grid__item') {
+  margin-left: -$-spacing;
+  > #{$-item-selector} {
+    padding-left: $-spacing;
+  }
+}
+
+@mixin o-grid-item($-flex: true, $-flex-fallback: false) {
+  $base-box-sizing-reset: false !default;
+  @if not $base-box-sizing-reset {
+    box-sizing: border-box;
+  }
+  @if not $-flex or $-flex-fallback {
+    float: left;
+  }
+}
