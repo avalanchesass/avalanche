@@ -1,5 +1,4 @@
 @import 'avalanchesass_object_grid/style_guide';
-
 @import 'avalanchesass_utility_clearfix/mixin';
 
 /*---
@@ -12,10 +11,13 @@ order:   2
 ```css
 // Basic grid.
 o-grid([$-flex: true[, $-flex-fallback: false]])
+
 // Vertical spacing between grid items.
 o-grid-spaced-vertical([$-spacing: map-get($spacing, m)[, $-item-selector: '.o-grid__item']])
+
 // Horizontal spacing between grid items.
 o-grid-spaced-horizontal([$-spacing: map-get($spacing, m)[, $-item-selector: '.o-grid__item']])
+
 // Basic grid item.
 o-grid-item([$-flex: true[, $-flex-fallback: false]])
 ```
