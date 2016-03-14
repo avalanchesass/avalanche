@@ -1,6 +1,19 @@
 # avalanchesass_object_grid
-Fluid width, responsive grid system  
-https://github.com/avalanchesass/avalanche_object_grid
+Fluid width, responsive grid system.
+
+## Install
+```
+npm install avalanchesass_object_grid --save
+```
+
+## Basic usage
+```css
+/* Import the main file. */
+@import 'avalanchesass_object_grid';
+
+/* Import just the mixin file. */
+@import 'avalanchesass_object_grid/mixin';
+```
 
 ## About
 ### Author
