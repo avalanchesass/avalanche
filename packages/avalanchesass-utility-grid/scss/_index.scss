@@ -1,0 +1,45 @@
+@import 'avalanchesass_utility_width/style_guide';
+@import 'avalanchesass_utility_width/variable';
+@import 'avalanchesass_utility_width/mixin';
+
+/* extract utility.css */
+/* extract utility_width.css */
+/*---
+title:   Example
+name:    utility_width_example
+section: utility_width
+order:   1
+---
+
+```example:html
+<div style="text-align: center;">
+  <div class="#{$u-width-namespace}-1" style="background: #fff;padding: 0.5em;">1</div>
+  <div class="#{$u-width-namespace}-2" style="background: #fff;padding: 0.5em;">2</div>
+  <div class="#{$u-width-namespace}-3" style="background: #fff;padding: 0.5em;">3</div>
+  <div class="#{$u-width-namespace}-4" style="background: #fff;padding: 0.5em;">4</div>
+  <div class="#{$u-width-namespace}-5" style="background: #fff;padding: 0.5em;">5</div>
+  <div class="#{$u-width-namespace}-6" style="background: #fff;padding: 0.5em;">6</div>
+  <div class="#{$u-width-namespace}-7" style="background: #fff;padding: 0.5em;">7</div>
+  <div class="#{$u-width-namespace}-8" style="background: #fff;padding: 0.5em;">8</div>
+  <div class="#{$u-width-namespace}-9" style="background: #fff;padding: 0.5em;">9</div>
+  <div class="#{$u-width-namespace}-10" style="background: #fff;padding: 0.5em;">10</div>
+  <div class="#{$u-width-namespace}-11" style="background: #fff;padding: 0.5em;">11</div>
+  <div class="#{$u-width-namespace}-12" style="background: #fff;padding: 0.5em;">12</div>
+</div>
+```
+*/
+@for $-size from 1 through $u-width-item-count {
+  .#{$u-width-namespace}-#{$-size} {
+    @include u-width($-size, $u-width-item-count);
+  }
+}
+
+@each $-breakpoint in $u-width-breakpoints {
+  @for $-size from 1 through $u-width-item-count {
+    .#{$u-width-namespace}-#{$-size}\@#{$-breakpoint} {
+      @include u-width($-size, $u-width-item-count);
+    }
+  }
+}
+/* end extract utility_width.css */
+/* end extract utility.css */

@@ -1,0 +1,17 @@
+@import 'avalanchesass_utility_width/style_guide';
+
+/*---
+title:   Mixin
+name:    utility_width_mixin
+section: utility_width
+order:   2
+---
+
+```css
+u-width($-size[, $-item-count: 12])
+```
+*/
+@mixin u-width($-size, $-item-count: 12) {
+  $-base-size: (100% / $-item-count);
+  width: ($-base-size * $-size) !important;
+}

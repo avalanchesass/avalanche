@@ -1,0 +1,19 @@
+@import 'avalanchesass_utility_width/style_guide';
+
+$u-width-namespace: '#{map-get($namespace, utility)}width' !default;
+
+$u-width-item-count: 12 !default;
+$u-width-breakpoints: (m) !default;
+/*---
+title:   Variable
+name:    utility_width_variable
+section: utility_width
+order:   3
+---
+
+```css
+$u-width-namespace: '#{$u-width-namespace}';
+$u-width-item-count: #{$u-width-item-count};
+$u-width-breakpoints: (#{$u-width-breakpoints});
+```
+*/
