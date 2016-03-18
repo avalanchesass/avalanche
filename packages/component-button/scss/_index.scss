@@ -1,0 +1,136 @@
+@import 'avalanchesass_component_button/style_guide';
+@import 'avalanchesass_component_button/variable';
+@import 'avalanchesass_component_button/mixin';
+
+/* extract component.css */
+/* extract component_button.css */
+/*---
+title:   Example
+name:    component_button_example
+section: component_button
+order:   1
+---
+*/
+/*---
+title:   Default
+name:    component_button_example_default
+section: component_button_example
+---
+
+```example:html
+<a href="#" class="#{$c-button-namespace}">Button</a>
+<button class="#{$c-button-namespace}">Button</button>
+```
+*/
+.#{$c-button-namespace} {
+  @include c-button();
+}
+
+@each $-size in $c-button-sizes {
+  $-size-class: '#{$c-button-namespace}--#{$-size}';
+  @if $-size != m {
+    /*---
+    title:   Size: #{$-size}
+    name:    component_button_example_size_#{$-size}
+    section: component_button_example
+    ---
+
+```example:html
+<a href="#" class="#{$c-button-namespace} #{$-size-class}">Button #{$-size}</a>
+```
+    */
+    .#{$-size-class} {
+      @include c-button-size($-size);
+    }
+  }
+}
+
+@if $c-button-full-width {
+  /*---
+  title:   Size: full width
+  name:    component_button_example_size_full_width
+  section: component_button_example
+  ---
+
+```example:html
+<a href="#" class="#{$c-button-namespace} #{$c-button-namespace}--full-width">Button full width</a>
+```
+  */
+  .#{$c-button-namespace}--full-width {
+    @include c-button-full-width();
+  }
+}
+
+@each $-font-size in $c-button-font-sizes {
+  $-font-size-class: '#{$c-button-namespace}--font-size-#{$-font-size}';
+  @if $-font-size != m {
+    /*---
+    title:   Font size: #{$-font-size}
+    name:    component_button_example_font_size_#{$-font-size}
+    section: component_button_example
+    ---
+
+```example:html
+<a href="#" class="#{$c-button-namespace} #{$-font-size-class}">Button font size #{$-font-size}</a>
+```
+    */
+    .#{$-font-size-class} {
+      @include c-button-font-size($-font-size);
+    }
+  }
+}
+
+@each $-cs in $c-button-cs {
+  $-cs-class: '#{$c-button-namespace}--cs-#{$-cs}';
+  @if $-cs != a {
+    /*---
+    title:   cs: #{$-cs}
+    name:    component_button_example_cs_#{$-cs}
+    section: component_button_example
+    ---
+
+```example:html
+<a href="#" class="#{$c-button-namespace} #{$-cs-class}">Button cs #{$-cs}</a>
+```
+    */
+    .#{$-cs-class} {
+      @include c-button-cs($-cs);
+    }
+  }
+}
+
+@each $-cs-alert in $c-button-cs-alerts {
+  $-cs-alert-class: '#{$c-button-namespace}--cs-alert-#{$-cs-alert}';
+  /*---
+  title:   cs-alert: #{$-cs-alert}
+  name:    component_button_example_cs_alert_#{$-cs-alert}
+  section: component_button_example
+  ---
+
+```example:html
+<a href="#" class="#{$c-button-namespace} #{$-cs-alert-class}">Button cs-alert #{$-cs-alert}</a>
+```
+  */
+  .#{$-cs-alert-class} {
+    @include c-button-cs-alert($-cs-alert);
+  }
+}
+
+@each $-cs-grey in $c-button-cs-grey {
+  $-cs-grey-class: '#{$c-button-namespace}--cs-grey-#{$-cs-grey}';
+  /*---
+  title:   cs-grey: #{$-cs-grey}
+  name:    component_button_example_cs_grey_#{$-cs-grey}
+  section: component_button_example
+  ---
+
+```example:html
+<a href="#" class="#{$c-button-namespace} #{$-cs-grey-class}">Button cs-grey #{$-cs-grey}</a>
+```
+  */
+  .#{$-cs-grey-class} {
+    @include c-button-cs-grey($-cs-grey);
+  }
+}
+/* end extract component_button.css */
+/* end extract component.css */

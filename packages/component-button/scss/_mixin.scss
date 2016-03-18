@@ -1,0 +1,89 @@
+@import 'avalanchesass_component_button/style_guide';
+
+/*---
+title:   Mixin
+name:    component_button_mixin
+section: component_button
+order:   2
+---
+
+```css
+// Default button.
+c-button([$-size: m[, $-cs: a]])
+
+// Size.
+c-button-size($-size)
+c-button-full-width()
+
+// Font size.
+c-button-font-size($-font-size)
+
+// Color.
+c-button-color($-color, $-contrast-color)
+c-button-cs([$-cs: a])
+c-button-cs-alert([$-cs-alert: neutral])
+c-button-cs-grey([$-cs-grey: a])
+```
+*/
+@mixin c-button-size($-size) {
+  padding: (map-get($spacing, $-size) / 3) (map-get($spacing, $-size) / 2);
+}
+
+@mixin c-button-full-width() {
+  width: 100%;
+  text-align: center;
+}
+
+@mixin c-button-font-size($-font-size) {
+  font-size: map-get($font-sizes, $-font-size);
+}
+
+@mixin c-button-color($-color, $-contrast-color) {
+  background: $-color;
+  &,
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    color: $-contrast-color;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    background: mix($-color, $-contrast-color, 70%);
+  }
+}
+
+@mixin c-button-cs($-cs: a) {
+  @include c-button-color(map-get($cs, $-cs), map-get($cs-contrast, $-cs))
+}
+
+@mixin c-button-cs-alert($-cs-alert: neutral) {
+  @include c-button-color(map-get($cs-alerts, $-cs-alert), #fff);
+}
+
+@mixin c-button-cs-grey($-cs-grey: a) {
+  $-color: map-get($cs-grey, $-cs-grey);
+  @include c-button-color($-color, darken($-color, 55%));
+}
+
+@mixin c-button($-size: m, $-cs: a) {
+  @include c-button-size($-size);
+  @include c-button-cs($-cs);
+  display: inline-block;
+  margin: 0;
+  border: none;
+  vertical-align: top;
+  white-space: nowrap;
+  font-size: 100%;
+  font-family: inherit;
+  cursor: pointer;
+  &,
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    outline: none;
+    text-decoration: none;
+  }
+}
