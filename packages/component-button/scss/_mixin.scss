@@ -10,11 +10,14 @@ order:   2
 ```css
 // Default button.
 c-button([$-size: m[, $-cs: a]])
+
 // Size.
 c-button-size($-size)
 c-button-full-width()
+
 // Font size.
 c-button-font-size($-font-size)
+
 // Color.
 c-button-color($-color, $-contrast-color)
 c-button-cs([$-cs: a])
