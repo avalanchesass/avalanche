@@ -1,0 +1,23 @@
+@import 'avalanchesass_object_island/style_guide';
+
+$o-island-namespace: '#{map-get($namespace, object)}island' !default;
+
+$o-island-sizes: (m) !default;
+// The key of the associative map defines the size of the padding, the value is
+// a map with breakpoint sizes for which island classes should be generated.
+$o-island-sizes-with-breakpoints: (
+  m: (),
+) !default;
+/*---
+title:   Variable
+name:    object_island_variable
+section: object_island
+order:   3
+---
+
+```css
+$o-island-namespace: '#{$o-island-namespace}';
+$o-island-sizes: (#{$o-island-sizes});
+$o-island-sizes-with-breakpoints: (nested-map);
+```
+*/
