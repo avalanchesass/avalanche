@@ -1,7 +1,21 @@
-# avalanche: Object island
-Island object for boxed-off content  
-https://github.com/avalanchesass/avalanche_object_island
+# avalanchesass_object_island
+Box off content.
 
+## Install
+```
+npm install avalanchesass_object_island --save
+```
+
+## Basic usage
+```css
+/* Import the main file. */
+@import 'avalanchesass_object_island';
+
+/* Import just the mixin file. */
+@import 'avalanchesass_object_island/mixin';
+```
+
+## About
 ### Author
 Markus Oberlehner  
 Twitter: https://twitter.com/MaOberlehner
