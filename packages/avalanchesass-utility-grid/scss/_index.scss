@@ -35,9 +35,11 @@ order:   1
 }
 
 @each $-breakpoint in $u-width-breakpoints {
-  @for $-size from 1 through $u-width-item-count {
-    .#{$u-width-namespace}-#{$-size}\@#{$-breakpoint} {
-      @include u-width($-size, $u-width-item-count);
+  @media (min-width: map-get($breakpoints, $-breakpoint)) {
+    @for $-size from 1 through $u-width-item-count {
+      .#{$u-width-namespace}-#{$-size}\@#{$-breakpoint} {
+        @include u-width($-size, $u-width-item-count);
+      }
     }
   }
 }
