@@ -38,6 +38,12 @@ Default responsive grid with vertical and horizontal spacing between items.
 */
 .#{$o-grid-namespace} {
   @include o-grid($o-grid-flex, $o-grid-flex-fallback);
+  @if $o-grid-spaced-vertical-default-size {
+    @include o-grid-spaced-vertical(map-get($spacing, $o-grid-spaced-vertical-default-size), '.#{$o-grid-namespace}__item');
+  }
+  @if $o-grid-spaced-horizontal-default-size {
+    @include o-grid-spaced-horizontal(map-get($spacing, $o-grid-spaced-horizontal-default-size), '.#{$o-grid-namespace}__item');
+  }
 }
 
 .#{$o-grid-namespace}__item {
@@ -67,18 +73,12 @@ Default responsive grid with vertical and horizontal spacing between items.
     $-block-class: '#{$o-grid-namespace} ';
     $-class-name: '#{$o-grid-namespace}--vertical';
     $-size-ext: '-#{$-size}';
-    $-default-text: '';
-    @if $-size == m {
-      $-block-class: '';
-      $-class-name: '#{$o-grid-namespace}';
-      $-size-ext: '';
-      @if length($o-grid-spaced-vertical-sizes) > 1 {
-        $-default-text: ' (default)';
-      }
-    }
     $-selector: '.#{$-class-name}';
+    @if $-size == $o-grid-spaced-vertical-default-size {
+      @warn 'Defining the same size in $o-grid-spaced-vertical-sizes as set for $o-grid-spaced-vertical-default-size is redundant, remove "#{$-size}" from $o-grid-spaced-vertical-sizes';
+    }
     /*---
-    title:   Size: #{$-size}#{$-default-text}
+    title:   Size: #{$-size}
     name:    object_grid_example_spacing_vertical_size_#{$-size}
     section: object_grid_example_spacing_vertical
     ---
@@ -145,18 +145,12 @@ Default responsive grid with vertical and horizontal spacing between items.
     $-block-class: '#{$o-grid-namespace} ';
     $-class-name: '#{$o-grid-namespace}--horizontal';
     $-size-ext: '-#{$-size}';
-    $-default-text: '';
-    @if $-size == m {
-      $-block-class: '';
-      $-class-name: '#{$o-grid-namespace}';
-      $-size-ext: '';
-      @if length($o-grid-spaced-horizontal-sizes) > 1 {
-        $-default-text: ' (default)';
-      }
-    }
     $-selector: '.#{$-class-name}';
+    @if $-size == $o-grid-spaced-horizontal-default-size {
+      @warn 'Defining the same size in $o-grid-spaced-horizontal-sizes as set for $o-grid-spaced-horizontal-default-size is redundant, remove "#{$-size}" from $o-grid-spaced-horizontal-sizes';
+    }
     /*---
-    title:   Size: #{$-size}#{$-default-text}
+    title:   Size: #{$-size}
     name:    object_grid_example_spacing_horizontal_size_#{$-size}
     section: object_grid_example_spacing_horizontal
     ---

@@ -7,7 +7,8 @@ $o-grid-flex:          true !default;
 $o-grid-flex-fallback: false !default;
 
 // Vertical spacing sizes.
-$o-grid-spaced-vertical-sizes: (m) !default;
+$o-grid-spaced-vertical-default-size: m !default;
+$o-grid-spaced-vertical-sizes: () !default;
 // Vertical spacing sizes at defined breakpoints.
 // The key of the associative map defines the spacing size, the value is a map
 // with breakpoint sizes for which vertical spacing classes should be generated.
@@ -18,7 +19,8 @@ $o-grid-spaced-vertical-sizes-with-breakpoints: (
 $o-grid-collapsed-vertical: false !default;
 
 // Horizontal spacing sizes.
-$o-grid-spaced-horizontal-sizes: (m) !default;
+$o-grid-spaced-horizontal-default-size: m !default;
+$o-grid-spaced-horizontal-sizes: () !default;
 // Horizontal spacing sizes at defined breakpoints.
 // The key of the associative map defines the spacing size, the value is a map
 // with breakpoint sizes for which horizontal spacing classes should be
