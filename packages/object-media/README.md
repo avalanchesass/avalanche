@@ -1,7 +1,18 @@
-# avalanche: Object media
-Image on one side, with descriptive content on the other side  
-https://github.com/avalanchesass/avalanche_object_media
+# avalanchesass_object_media
+Media object - image on left/right, text next to it.
 
+## Install
+```
+npm install avalanchesass_object_media --save
+```
+
+## Basic usage
+```css
+/* Import the main file. */
+@import 'avalanchesass_object_media';
+```
+
+## About
 ### Author
 Markus Oberlehner  
 Twitter: https://twitter.com/MaOberlehner
