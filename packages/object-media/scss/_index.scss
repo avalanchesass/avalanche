@@ -35,6 +35,9 @@ order:   1
 */
 .#{$o-media-namespace} {
   display: flex;
+  > :last-child {
+    margin-left: map-get($spacing, $o-media-default-size);
+  }
 }
 
 .#{$o-media-namespace}__body {
@@ -51,17 +54,11 @@ order:   1
 @each $-size in $o-media-sizes {
   $-block-class: '#{$o-media-namespace} ';
   $-size-ext: '--#{$-size}';
-  $-default-text: '';
-  @if $-size == s {
-    $-block-class: '';
-    $-size-ext: '';
-    $-size-ext-plain: '';
-    @if length($o-media-sizes) > 1 {
-      $-default-text: ' (default)';
-    }
+  @if $-size == $o-media-default-size {
+    @warn 'Defining the same size in $o-media-sizes as set for $o-media-default-size is redundant, remove "#{$-size}" from $o-media-sizes';
   }
   /*---
-  title:   Size: #{$-size}#{$-default-text}
+  title:   Size: #{$-size}
   name:    object_media_example_size_#{$-size}
   section: object_media_example
   ---
@@ -146,13 +143,6 @@ order:   1
       margin-left: 0;
     }
   }
-}
-
-.u-align-self-center {
-  align-self: auto;
-}
-.u-align-self-bottom {
-  align-self: flex-end;
 }
 /* end extract object_media.css */
 /* end extract object.css */

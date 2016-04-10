@@ -2,7 +2,8 @@
 
 $o-media-namespace: '#{map-get($namespace, object)}media' !default;
 
-$o-media-sizes: (s) !default;
+$o-media-default-size: s !default;
+$o-media-sizes: () !default;
 $o-media-stacked-breakpoints: () !default;
 $o-media-collapsed: false !default;
 /*---
@@ -14,7 +15,9 @@ order:   2
 
 ```css
 $o-media-namespace: '#{$o-media-namespace}';
+$o-media-default-size: #{$o-media-default-size};
 $o-media-sizes: (#{$o-media-sizes});
 $o-media-stacked-breakpoints: (#{$o-media-stacked-breakpoints});
+$o-media-collapsed: #{$o-media-collapsed};
 ```
 */
