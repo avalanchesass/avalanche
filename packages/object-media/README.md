@@ -1,6 +1,16 @@
 # avalanchesass_object_media
-Media object - image on left/right, text next to it  
-https://github.com/avalanchesass/avalanche_object_media
+Media object - image on left/right, text next to it.
+
+## Install
+```
+npm install avalanchesass_object_media --save
+```
+
+## Basic usage
+```css
+/* Import the main file. */
+@import 'avalanchesass_object_media';
+```
 
 ## About
 ### Author
