@@ -41,6 +41,7 @@ order:   3
 $o-grid-namespace: '#{$o-grid-namespace}';
 $o-grid-flex: #{$o-grid-flex};
 $o-grid-flex-fallback: #{$o-grid-flex-fallback};
+$o-grid-spaced-vertical-default-size: #{$o-grid-spaced-vertical-default-size};
 $o-grid-spaced-vertical-sizes: (#{$o-grid-spaced-vertical-sizes});
 $o-grid-spaced-vertical-sizes-with-breakpoints: (nested-map);
 $o-grid-collapsed-vertical: #{$o-grid-collapsed-vertical};
