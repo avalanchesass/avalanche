@@ -202,7 +202,7 @@ gulp.task('clean:styles', function () {
 
 gulp.task('clean:scripts', function () {
   return del([
-    config.styles.destination + '/**/*.js'
+    config.scripts.destination + '/**/*.js'
   ]);
 });
 
