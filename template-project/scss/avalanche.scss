@@ -63,6 +63,7 @@ Base styles like typography and other global default styles
 @import 'normalize/import-now';
 // Import your dependencies here.
 // e.g. @import 'avalanchesass_base_typography';
+@import 'avalanchesass_base_default';
 @import 'base/**/*.scss';
 
 
