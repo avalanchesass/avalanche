@@ -1,11 +1,15 @@
+@import 'avalanchesass_utility_order/style_guide';
+@import 'avalanchesass_utility_order/variable';
+@import 'avalanchesass_utility_order/mixin';
+
+/* extract utility.css */
 /* extract utility_order.css */
 /*---
-title:   Order
-name:    utility_order
-section: Utility
+title:   Example
+name:    utility_order_example
+section: utility_order
+order:   1
 ---
-
-Reorder elements.
 
 ```example:html
 <div style="display: flex;">
@@ -19,35 +23,26 @@ Reorder elements.
 </div>
 ```
 */
-/**
- * Variables
- */
-$u-order-max-elements: 4 !default;
-
-// Breakpoints.
-$u-order-breakpoints: (m) !default;
-
-
-
 @each $-breakpoint in $u-order-breakpoints {
   @for $-i from 1 through $u-order-max-elements {
     @media (min-width: map-get($breakpoints, $-breakpoint)) {
-      .u-order-#{$-i}\@#{$-breakpoint} {
+      .#{$u-order-namespace}-#{$-i}\@#{$-breakpoint} {
         @include u-order($-i);
       }
     }
   }
 
   @media (min-width: map-get($breakpoints, $-breakpoint)) {
-    .u-order-first\@#{$-breakpoint} {
+    .#{$u-order-namespace}-first\@#{$-breakpoint} {
       @include u-order-first();
     }
   }
 
   @media (min-width: map-get($breakpoints, $-breakpoint)) {
-    .u-order-last\@#{$-breakpoint} {
+    .#{$u-order-namespace}-last\@#{$-breakpoint} {
       @include u-order-last();
     }
   }
 }
 /* end extract utility_order.css */
+/* end extract utility.css */

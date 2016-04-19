@@ -1,0 +1,31 @@
+@import 'avalanchesass_utility_order/style_guide';
+
+/*---
+title:   Mixin
+name:    utility_order_mixin
+section: utility_order
+order:   2
+---
+
+```css
+// Display as Nth element.
+u-order([$-n: 1[, $-max-elements: 4]])
+
+// Display as first element.
+u-order-first()
+
+// Display as last element.
+u-order-last()
+```
+*/
+@mixin u-order($-n: 1, $-max-elements: 4) {
+  order: $-n - $-max-elements !important;
+}
+
+@mixin u-order-first() {
+  order: -9999 !important;
+}
+
+@mixin u-order-last() {
+  order: 9999 !important;
+}

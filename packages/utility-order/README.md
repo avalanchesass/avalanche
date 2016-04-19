@@ -1,7 +1,21 @@
-# avalanche_utility_order
-Reorder elements  
-https://github.com/avalanchesass/avalanche_utility_order
+# avalanchesass_utility_order
+Reorder flex items.
 
+## Install
+```
+npm install avalanchesass_utility_order --save
+```
+
+## Basic usage
+```css
+/* Import the main file. */
+@import 'avalanchesass_utility_order';
+
+/* Import just the mixin file. */
+@import 'avalanchesass_utility_order/mixin';
+```
+
+## About
 ### Author
 Markus Oberlehner  
 Twitter: https://twitter.com/MaOberlehner
