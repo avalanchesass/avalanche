@@ -8,9 +8,9 @@ order:   2
 ---
 
 ```css
-o-island([$-spacing: 1.5em])
+o-island([$-spacing: map-get($spacing, m)])
 ```
 */
-@mixin o-island($-spacing: 1.5em) {
+@mixin o-island($-spacing: map-get($spacing, m)) {
   padding: $-spacing;
 }
