@@ -5,6 +5,7 @@
   "author": "",
   "license": "GPL v2",
   "dependencies": {
+    "avalanchesass_base_default": "^3.0.0",
     "avalanchesass_function_breakpointmax": "^3.0.0",
     "avalanchesass_function_map_get_deep": "^3.0.0",
     "avalanchesass_mdcss_theme": "^1.0.0",

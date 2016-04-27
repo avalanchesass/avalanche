@@ -12,7 +12,7 @@ title: Function
 
 Custom SASS functions.
 */
-@import 'function/*.scss';
+@import 'function/**/*.scss';
 
 
 
@@ -24,16 +24,16 @@ Custom SASS functions.
 @import 'variable';
 // Base
 // e.g. @import 'avalanchesass_base_typography/variable';
-@import 'base/*variable.scss';
+@import 'base/**/*variable.scss';
 // Object
 // e.g. @import 'avalanchesass_object_grid/variable';
-@import 'object/*variable.scss';
+@import 'object/**/*variable.scss';
 // Component
 // e.g. @import 'avalanchesass_component_button/variable';
-@import 'component/*variable.scss';
+@import 'component/**/*variable.scss';
 // Utility
 // e.g. @import 'avalanchesass_utility_clearfix/variable';
-@import 'utility/*variable.scss';
+@import 'utility/**/*variable.scss';
 
 
 
@@ -63,7 +63,8 @@ Base styles like typography and other global default styles
 @import 'normalize/import-now';
 // Import your dependencies here.
 // e.g. @import 'avalanchesass_base_typography';
-@import 'base/*.scss';
+@import 'avalanchesass_base_default';
+@import 'base/**/*.scss';
 
 
 
@@ -75,7 +76,7 @@ Non-cosmetic styles (e.g. the famous media object).
 */
 // Import your dependencies here.
 // e.g. @import 'avalanchesass_object_grid';
-@import 'object/*.scss';
+@import 'object/**/*.scss';
 
 
 
@@ -87,7 +88,7 @@ Concrete, implementation-specific piece of UI.
 */
 // Import your dependencies here.
 // e.g. @import 'avalanchesass_component_button';
-@import 'component/*.scss';
+@import 'component/**/*.scss';
 
 
 
@@ -99,4 +100,4 @@ Utility classes that do very specific things (e.g. clearfix).
 */
 // Import your dependencies here.
 // e.g. @import 'avalanchesass_utility_clearfix';
-@import 'utility/*.scss';
+@import 'utility/**/*.scss';
