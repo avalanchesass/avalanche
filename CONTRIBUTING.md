@@ -45,8 +45,8 @@ Pull requests are the greatest contributions, so be sure they are focused in sco
 
 4. Now [open a pull request] with a clear title and description.
 
-[already been reported]: issues
-[fork this project]:     fork
+[already been reported]: https://github.com/avalanchesass/avalanche/issues
+[fork this project]:     https://github.com/avalanchesass/avalanche/fork
 [live example]:          http://codepen.io/pen
 [open a pull request]:   https://help.github.com/articles/using-pull-requests/
 [reduced test case]:     https://css-tricks.com/reduced-test-cases/
