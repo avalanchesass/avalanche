@@ -1,7 +1,21 @@
-# avalanche_utility_font_family
-Font family utility classes  
-https://github.com/avalanchesass/avalanche_utility_font_family
+# avalanchesass_utility_font_family
+Font family utility classes.
 
+## Install
+```
+npm install avalanchesass_utility_font_family --save
+```
+
+## Basic usage
+```css
+/* Import the main file. */
+@import 'avalanchesass_utility_font_family';
+
+/* Import just the mixin file. */
+@import 'avalanchesass_utility_font_family/mixin';
+```
+
+## About
 ### Author
 Markus Oberlehner  
 Twitter: https://twitter.com/MaOberlehner

@@ -1,0 +1,17 @@
+@import 'avalanchesass_utility_font_family/style_guide';
+
+/*---
+title:   Mixin
+name:    utility_font_family_mixin
+section: utility_font_family
+order:   2
+---
+
+```css
+// Set font family.
+u-font-family($-font-family)
+```
+*/
+@mixin u-font-family($-font-family) {
+  font-family: unquote(map-get-deep($fonts, $-font-family, family)) !important;
+}

@@ -1,0 +1,32 @@
+@import 'avalanchesass_utility_font_family/style_guide';
+@import 'avalanchesass_utility_font_family/variable';
+@import 'avalanchesass_utility_font_family/mixin';
+
+/* extract utility.css */
+/* extract utility_font_family.css */
+/*---
+title:   Example
+name:    utility_font_family_example
+section: utility_font_family
+order:   1
+---
+*/
+@each $-font-family in $u-font-family-font-families {
+  /*---
+  title:   Font family: #{$-font-family}
+  name:    utility_font_family_example_family_#{$-font-family}
+  section: utility_font_family_example
+  ---
+```example:html
+<div class="#{$u-font-family-namespace}-#{$-font-family}">
+  Font family: #{$-font-family}
+</div>
+```
+  */
+  .#{$u-font-family-namespace}-#{$-font-family} {
+    @include u-font-family($-font-family);
+  }
+}
+/* end extract utility_font_family.css */
+/* end extract utility.css */
+
