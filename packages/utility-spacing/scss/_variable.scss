@@ -1,0 +1,19 @@
+@import 'avalanchesass_utility_spacing/style_guide';
+
+$u-spacing-namespace: '#{map-get($namespace, utility)}spacing' !default;
+
+$u-spacing-top-sizes: (m) !default;
+$u-spacing-wrap-sizes: () !default;
+/*---
+title:   Variable
+name:    utility_spacing_variable
+section: utility_spacing
+order:   3
+---
+
+```css
+$u-spacing-namespace: '#{$u-spacing-namespace}';
+$u-spacing-top-sizes: (#{$u-spacing-top-sizes});
+$u-spacing-wrap-sizes: (#{$u-spacing-wrap-sizes});
+```
+*/

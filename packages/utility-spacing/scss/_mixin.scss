@@ -1,0 +1,26 @@
+@import 'avalanchesass_utility_spacing/style_guide';
+
+/*---
+title:   Mixin
+name:    utility_spacing_mixin
+section: utility_spacing
+order:   2
+---
+
+```css
+// Spacing top.
+u-spacing-top([$-spacing: m])
+
+// Spacing wrap.
+u-spacing-wrap([$-spacing: m])
+```
+*/
+@mixin u-spacing-top($-spacing: m) {
+  margin-top: map-get($spacing, $-spacing);
+}
+
+@mixin u-spacing-wrap($-spacing: m) {
+  > :not(:first-child) {
+    margin-top: map-get($spacing, $-spacing);
+  }
+}

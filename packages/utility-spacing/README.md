@@ -1,7 +1,21 @@
-# avalanche: Utility spacing
-Spacing utility classes  
-https://github.com/avalanchesass/avalanche_utility_spacing
+# avalanchesass_utility_spacing
+Spacing utility classes.
 
+## Install
+```
+npm install avalanchesass_utility_spacing --save
+```
+
+## Basic usage
+```css
+/* Import the main file. */
+@import 'avalanchesass_utility_spacing';
+
+/* Import just the mixin file. */
+@import 'avalanchesass_utility_spacing/mixin';
+```
+
+## About
 ### Author
 Markus Oberlehner  
 Twitter: https://twitter.com/MaOberlehner

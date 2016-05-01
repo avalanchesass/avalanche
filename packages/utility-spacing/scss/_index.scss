@@ -1,0 +1,68 @@
+@import 'avalanchesass_utility_spacing/style_guide';
+@import 'avalanchesass_utility_spacing/variable';
+@import 'avalanchesass_utility_spacing/mixin';
+
+/* extract utility.css */
+/* extract utility_spacing.css */
+/*---
+title:   Example
+name:    utility_spacing_example
+section: utility_spacing
+order:   1
+---
+*/
+@if length($u-spacing-top-sizes) >= 1 {
+  /*---
+  title:   Spacing top
+  name:    utility_spacing_example_top
+  section: utility_spacing_example
+  order:   1
+  ---
+  */
+  @each $-spacing in $u-spacing-top-sizes {
+    /*---
+    title:   Spacing top: #{$-spacing}
+    name:    utility_spacing_example_top_#{$-spacing}
+    section: utility_spacing_example_top
+    ---
+  ```example:html
+  <div class="#{$u-spacing-namespace}-top-#{$-spacing}">
+    Spacing top: #{$-spacing}
+  </div>
+  ```
+    */
+    .#{$u-spacing-namespace}-top-#{$-spacing} {
+      @include u-spacing-top($-spacing);
+    }
+  }
+}
+
+@if length($u-spacing-wrap-sizes) >= 1 {
+  /*---
+  title:   Spacing wrap
+  name:    utility_spacing_example_wrap
+  section: utility_spacing_example
+  order:   1
+  ---
+  */
+  @each $-spacing in $u-spacing-wrap-sizes {
+    /*---
+    title:   Spacing wrap: #{$-spacing}
+    name:    utility_spacing_example_wrap_#{$-spacing}
+    section: utility_spacing_example_wrap
+    ---
+  ```example:html
+  <div class="#{$u-spacing-namespace}-wrap-#{$-spacing}">
+    <div>Spacing item 1</div>
+    <div>Spacing item 2</div>
+    <div>Spacing item 3</div>
+  </div>
+  ```
+    */
+    .#{$u-spacing-namespace}-wrap-#{$-spacing} {
+      @include u-spacing-wrap($-spacing);
+    }
+  }
+}
+/* end extract utility_spacing.css */
+/* end extract utility.css */
