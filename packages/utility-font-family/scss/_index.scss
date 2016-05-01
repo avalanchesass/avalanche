@@ -14,7 +14,7 @@ order:   1
 @each $-font-family in $u-font-family-font-families {
   /*---
   title:   Font family: #{$-font-family}
-  name:    utility_font_family_example_family_#{$-font-family}
+  name:    utility_font_family_example_#{$-font-family}
   section: utility_font_family_example
   ---
 ```example:html
