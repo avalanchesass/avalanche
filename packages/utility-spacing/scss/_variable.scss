@@ -3,7 +3,20 @@
 $u-spacing-namespace: '#{map-get($namespace, utility)}spacing' !default;
 
 $u-spacing-top-sizes: (m) !default;
+// Spacing top sizes at defined breakpoints.
+// The key of the associative map defines the spacing size, the value is a map
+// with breakpoint sizes for which spacing top classes should be generated.
+$u-spacing-top-sizes-with-breakpoints: (
+  m: (),
+) !default;
 $u-spacing-wrap-sizes: () !default;
+// Wrap spacing sizes at defined breakpoints.
+// The key of the associative map defines the spacing size, the value is a map
+// with breakpoint sizes for which spacing wrap classes should be generated.
+$u-spacing-wrap-sizes-with-breakpoints: (
+  m: (s, m, l),
+  l: (s, m, l),
+) !default;
 /*---
 title:   Variable
 name:    utility_spacing_variable
@@ -14,6 +27,8 @@ order:   3
 ```css
 $u-spacing-namespace: '#{$u-spacing-namespace}';
 $u-spacing-top-sizes: (#{$u-spacing-top-sizes});
+$u-spacing-top-sizes-with-breakpoints: (nested-map);
 $u-spacing-wrap-sizes: (#{$u-spacing-wrap-sizes});
+$u-spacing-wrap-sizes-with-breakpoints: (nested-map);
 ```
 */

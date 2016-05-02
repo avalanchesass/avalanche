@@ -11,56 +11,108 @@ section: utility_spacing
 order:   1
 ---
 */
-@if length($u-spacing-top-sizes) >= 1 {
+@if length($u-spacing-top-sizes) >= 1 or length($u-spacing-top-sizes-with-breakpoints) >= 1 {
   /*---
   title:   Spacing top
   name:    utility_spacing_example_top
   section: utility_spacing_example
-  order:   1
   ---
   */
-  @each $-spacing in $u-spacing-top-sizes {
+}
+@if length($u-spacing-top-sizes) >= 1 {
+  @each $-size in $u-spacing-top-sizes {
     /*---
-    title:   Spacing top: #{$-spacing}
-    name:    utility_spacing_example_top_#{$-spacing}
+    title:   Spacing top: #{$-size}
+    name:    utility_spacing_example_top_#{$-size}
     section: utility_spacing_example_top
     ---
-  ```example:html
-  <div class="#{$u-spacing-namespace}-top-#{$-spacing}">
-    Spacing top: #{$-spacing}
-  </div>
-  ```
+```example:html
+<div class="#{$u-spacing-namespace}-top-#{$-size}">
+  Spacing top: #{$-size}
+</div>
+```
     */
-    .#{$u-spacing-namespace}-top-#{$-spacing} {
-      @include u-spacing-top($-spacing);
+    .#{$u-spacing-namespace}-top-#{$-size} {
+      @include u-spacing-top($-size);
+    }
+  }
+}
+@each $-size-and-breakpoints in $u-spacing-top-sizes-with-breakpoints {
+  $-size: nth($-size-and-breakpoints, 1);
+  $-breakpoints: nth($-size-and-breakpoints, 2);
+
+  @each $-breakpoint in $-breakpoints {
+    /*---
+    title:   Spacing top: #{$-size}@#{$-breakpoint}
+    name:    utility_spacing_example_top_#{$-size}_at_#{$-breakpoint}
+    section: utility_spacing_example_top
+    ---
+
+```example:html
+<div class="#{$u-spacing-namespace}-top-#{$-size}@#{$-breakpoint}">
+  Spacing top: #{$-size}@#{$-breakpoint}
+</div>
+```
+    */
+    @media (min-width: map-get($breakpoints, $-breakpoint)) {
+      .#{$u-spacing-namespace}-top-#{$-size}\@#{$-breakpoint} {
+        @include u-spacing-top($-size);
+      }
     }
   }
 }
 
-@if length($u-spacing-wrap-sizes) >= 1 {
+@if length($u-spacing-wrap-sizes) >= 1 or length($u-spacing-wrap-sizes-with-breakpoints) >= 1 {
   /*---
   title:   Spacing wrap
   name:    utility_spacing_example_wrap
   section: utility_spacing_example
-  order:   1
   ---
   */
-  @each $-spacing in $u-spacing-wrap-sizes {
+}
+@if length($u-spacing-wrap-sizes) >= 1 {
+  @each $-size in $u-spacing-wrap-sizes {
     /*---
-    title:   Spacing wrap: #{$-spacing}
-    name:    utility_spacing_example_wrap_#{$-spacing}
+    title:   Spacing wrap: #{$-size}
+    name:    utility_spacing_example_top_#{$-size}
+    section: utility_spacing_example_top
+    ---
+```example:html
+<div class="#{$u-spacing-namespace}-wrap-#{$-size}">
+  <div>Spacing item 1</div>
+  <div>Spacing item 2</div>
+  <div>Spacing item 3</div>
+</div>
+```
+    */
+    .#{$u-spacing-namespace}-wrap-#{$-size} {
+      @include u-spacing-wrap($-size);
+    }
+  }
+}
+@each $-size-and-breakpoints in $u-spacing-wrap-sizes-with-breakpoints {
+  $-size: nth($-size-and-breakpoints, 1);
+  $-breakpoints: nth($-size-and-breakpoints, 2);
+
+  @each $-breakpoint in $-breakpoints {
+    /*---
+    title:   Spacing wrap: #{$-size}@#{$-breakpoint}
+    name:    utility_spacing_example_wrap_#{$-size}_at_#{$-breakpoint}
     section: utility_spacing_example_wrap
     ---
-  ```example:html
-  <div class="#{$u-spacing-namespace}-wrap-#{$-spacing}">
-    <div>Spacing item 1</div>
-    <div>Spacing item 2</div>
-    <div>Spacing item 3</div>
-  </div>
-  ```
+
+```example:html
+<div class="#{$u-spacing-namespace}-wrap-#{$-size}@#{$-breakpoint}">
+  <div>Spacing item 1</div>
+  <div>Spacing item 2</div>
+  <div>Spacing item 3</div>
+</div>
+```
     */
-    .#{$u-spacing-namespace}-wrap-#{$-spacing} {
-      @include u-spacing-wrap($-spacing);
+    @media (min-width: map-get($breakpoints, $-breakpoint)) {
+      .#{$u-spacing-namespace}-wrap-#{$-size}\@#{$-breakpoint} {
+        @include u-spacing-wrap($-size);
+      }
     }
   }
 }
