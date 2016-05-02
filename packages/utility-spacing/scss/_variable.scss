@@ -14,8 +14,7 @@ $u-spacing-wrap-sizes: () !default;
 // The key of the associative map defines the spacing size, the value is a map
 // with breakpoint sizes for which spacing wrap classes should be generated.
 $u-spacing-wrap-sizes-with-breakpoints: (
-  m: (s, m, l),
-  l: (s, m, l),
+  m: (),
 ) !default;
 /*---
 title:   Variable
