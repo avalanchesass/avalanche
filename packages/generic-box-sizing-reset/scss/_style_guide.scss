@@ -1,12 +1,8 @@
-@import 'avalanchesass_base_box_sizing_reset/variable';
+/*---
+title:   Box sizing reset
+name:    base_box_sizing_reset
+section: Base
+---
 
-@if $base-box-sizing-reset {
-  /*---
-  title:   Box sizing reset
-  name:    base_box_sizing_reset
-  section: Base
-  ---
-
-  Better box model: [Paul Irish - * { Box-sizing: Border-box } FTW](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
-  */
-}
+Better box model: [Paul Irish - * { Box-sizing: Border-box } FTW](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
+*/
