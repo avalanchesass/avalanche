@@ -16,11 +16,11 @@ u-spacing-wrap([$-spacing: m])
 ```
 */
 @mixin u-spacing-top($-spacing: m) {
-  margin-top: map-get($spacing, $-spacing);
+  margin-top: map-get($spacing, $-spacing) !important;
 }
 
 @mixin u-spacing-wrap($-spacing: m) {
   > :not(:first-child) {
-    margin-top: map-get($spacing, $-spacing);
+    margin-top: map-get($spacing, $-spacing) !important;
   }
 }
