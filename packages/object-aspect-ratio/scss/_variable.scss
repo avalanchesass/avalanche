@@ -1,0 +1,23 @@
+@import 'avalanchesass_object_aspect_ratio/style_guide';
+
+$o-aspect-ratio-namespace: '#{map-get($namespace, object)}aspect-ratio' !default;
+
+$o-aspect-ratio-sizes: (
+  (
+    width: 16,
+    height: 9,
+  ),
+) !default;
+/*---
+title:   Variable
+name:    object_aspect_ratio_variable
+section: object_aspect_ratio
+order:   3
+---
+
+```css
+$o-aspect-ratio-namespace: '#{$o-aspect-ratio-namespace}';
+
+$o-aspect-ratio-sizes: (nested-map);
+```
+*/

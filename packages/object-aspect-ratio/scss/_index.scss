@@ -1,0 +1,38 @@
+@import 'avalanchesass_object_aspect_ratio/style_guide';
+@import 'avalanchesass_object_aspect_ratio/variable';
+@import 'avalanchesass_object_aspect_ratio/mixin';
+
+@if length($o-aspect-ratio-sizes) >= 1 {
+  /* extract object.css */
+  /* extract object_aspect_ratio.css */
+  /*---
+  title:   Example
+  name:    object_aspect_ratio_example
+  section: object_aspect_ratio
+  order:   1
+  ---
+  */
+  @each $-ratio in $o-aspect-ratio-sizes {
+    $-width: map-get($-ratio, width);
+    $-height: map-get($-ratio, height);
+    /*---
+    title:   Ratio: #{$-width}/#{$-height}
+    name:    object_aspect_ratio_example_#{$-width}_#{$-height}
+    section: object_aspect_ratio_example
+    ---
+
+  ```example:html
+  <div class="#{$o-aspect-ratio-namespace} #{$o-aspect-ratio-namespace}--#{$-width}-#{$-height}">
+    <div class="#{$o-aspect-ratio-namespace}__inner">
+      Ratio: #{$-width}/#{$-height}
+    </div>
+  </div>
+  ```
+    */
+    .#{$o-aspect-ratio-namespace}--#{$-width}-#{$-height} {
+      @include o-aspect-ratio($-width, $-height);
+    }
+  }
+  /* end extract object_aspect_ratio.css */
+  /* end extract object.css */
+}
