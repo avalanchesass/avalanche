@@ -1,0 +1,19 @@
+@import 'avalanchesass_utility_offset/style_guide';
+
+$u-offset-namespace: '#{map-get($namespace, utility)}offset' !default;
+
+$u-offset-item-count: 12 !default;
+$u-offset-breakpoints: (m) !default;
+/*---
+title:   Variable
+name:    utility_offset_variable
+section: utility_offset
+order:   3
+---
+
+```css
+$u-offset-namespace: '#{$u-offset-namespace}';
+$u-offset-item-count: #{$u-offset-item-count};
+$u-offset-breakpoints: (#{$u-offset-breakpoints});
+```
+*/

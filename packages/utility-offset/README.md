@@ -1,7 +1,21 @@
-# avalanche: Utility offset
-Offset classes  
-https://github.com/avalanchesass/avalanche_utility_offset
+# avalanchesass_utility_offset
+Offset classes.
 
+## Install
+```
+npm install avalanchesass_utility_offset --save
+```
+
+## Basic usage
+```css
+/* Import the main file. */
+@import 'avalanchesass_utility_offset';
+
+/* Import just the mixin file. */
+@import 'avalanchesass_utility_offset/mixin';
+```
+
+## About
 ### Author
 Markus Oberlehner  
 Twitter: https://twitter.com/MaOberlehner
