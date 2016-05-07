@@ -1,0 +1,62 @@
+@import 'avalanchesass_utility_text_align/style_guide';
+@import 'avalanchesass_utility_text_align/variable';
+@import 'avalanchesass_utility_text_align/mixin';
+
+/* extract utility.css */
+/* extract utility_text_align.css */
+/*---
+title:   Example
+name:    utility_text_align_example
+section: utility_text_align
+order:   1
+---
+*/
+/*---
+title:   Text align: right
+name:    utility_text_align_example_right
+section: utility_text_align_example
+---
+
+```example:html
+<div class="#{$u-text-align-namespace}-right">
+  Lorem Ipsum
+</div>
+```
+*/
+.#{$u-text-align-namespace}-right {
+  @include u-text-align(right);
+}
+
+/*---
+title:   Text align: left
+name:    utility_text_align_example_left
+section: utility_text_align_example
+---
+
+```example:html
+<div class="#{$u-text-align-namespace}-left">
+  Lorem Ipsum
+</div>
+```
+*/
+.#{$u-text-align-namespace}-left {
+  @include u-text-align(left);
+}
+
+/*---
+title:   Text align: center
+name:    utility_text_align_example_center
+section: utility_text_align_example
+---
+
+```example:html
+<div class="#{$u-text-align-namespace}-center">
+  Lorem Ipsum
+</div>
+```
+*/
+.#{$u-text-align-namespace}-center {
+  @include u-text-align(center);
+}
+/* end extract utility_text_align.css */
+/* end extract utility.css */

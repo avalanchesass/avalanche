@@ -1,0 +1,14 @@
+@import 'avalanchesass_utility_text_align/style_guide';
+
+$u-text-align-namespace: '#{map-get($namespace, utility)}text-align' !default;
+/*---
+title:   Variable
+name:    utility_text_align_variable
+section: utility_text_align
+order:   3
+---
+
+```css
+$u-text-align-namespace: '#{$u-text-align-namespace}';
+```
+*/

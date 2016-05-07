@@ -1,7 +1,21 @@
-# avalanche: Utility text align
-Text align utility classes  
-https://github.com/avalanchesass/avalanche_utility_text_align
+# avalanchesass_utility_text_align
+Text align utility classes.
 
+## Install
+```
+npm install avalanchesass_utility_text_align --save
+```
+
+## Basic usage
+```css
+/* Import the main file. */
+@import 'avalanchesass_utility_text_align';
+
+/* Import just the mixin file. */
+@import 'avalanchesass_utility_text_align/mixin';
+```
+
+## About
 ### Author
 Markus Oberlehner  
 Twitter: https://twitter.com/MaOberlehner

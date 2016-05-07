@@ -1,0 +1,25 @@
+{
+  "name": "avalanchesass_utility_text_align",
+  "description": "Text align utility classes",
+  "keywords": [
+    "avalanchesass-package",
+    "eyeglass-module",
+    "sass"
+  ],
+  "version": "3.0.0",
+  "author": "Markus Oberlehner",
+  "homepage": "https://github.com/avalanchesass/avalanche_utility_text_align",
+  "license": "GPL v2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avalanchesass/avalanche_utility_text_align"
+  },
+  "bugs": {
+    "url": "https://github.com/avalanchesass/avalanche_utility_text_align/issues"
+  },
+  "eyeglass": {
+    "sassDir": "scss",
+    "exports": false,
+    "needs": "^0.8.2"
+  }
+}
