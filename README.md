@@ -42,6 +42,19 @@ To extend your installation with a preconfigured package open your
 ```
 
 ## Working with avalanche
+### Gulp
+avalanche utilizes [gulp](http://gulpjs.com/) as build system. At the beginning
+of the `gulpfile.js`, inside your project directory you can find a config
+variable. Change the settings according to your needs.
+
+To start the build process, you can run `gulp` in your command line application
+of choice. This starts the default task which will watch for changes to files
+inside your project directory and builds the CSS and JS code.
+
+After the CSS and JS code is generated, the built in
+[browsersync](https://www.browsersync.io/) tool will automatically refresh the
+browser for you.
+
 ### Extend packages
 If you wan’t to make changes to a class defined by a package it is recommended
 to create a custom package with the name `_PACKAGE_NAME_extend.scss` in the scss
