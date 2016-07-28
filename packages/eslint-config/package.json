@@ -1,0 +1,42 @@
+{
+  "name": "eslint-config-modularis",
+  "description": "modularis ESLint config",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "javascript",
+    "styleguide"
+  ],
+  "main": "index.js",
+  "version": "0.0.1",
+  "author": "Markus Oberlehner",
+  "homepage": "https://github.com/modularis/eslint-config-modularis",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/modularis/eslint-config-modularis"
+  },
+  "bugs": {
+    "url": "https://github.com/modularis/eslint-config-modularis/issues"
+  },
+  "devDependencies": {
+    "eslint": "^3.1.1",
+    "eslint-find-rules": "^1.11.1",
+    "eslint-plugin-import": "^1.11.1",
+    "pre-git": "^3.10.0"
+  },
+  "engines": {
+    "node": ">= 4"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "config": {
+    "pre-git": {
+      "pre-commit": [
+        "npm run lint"
+      ]
+    }
+  }
+}
