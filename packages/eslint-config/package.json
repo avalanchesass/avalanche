@@ -9,7 +9,7 @@
     "styleguide"
   ],
   "main": "index.js",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "Markus Oberlehner",
   "homepage": "https://github.com/modularis/eslint-config-modularis",
   "license": "MIT",
