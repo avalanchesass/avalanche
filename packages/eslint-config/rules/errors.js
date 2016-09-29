@@ -1,10 +1,10 @@
 module.exports = {
   rules: {
     // require trailing commas in multiline object literals
-    'comma-dangle': [2, 'never'],
+    'comma-dangle': [2, `never`],
 
     // disallow assignment in conditional expressions
-    'no-cond-assign': [2, 'always'],
+    'no-cond-assign': [2, `always`],
 
     // disallow use of console
     'no-console': 1,
@@ -42,7 +42,7 @@ module.exports = {
 
     // disallow unnecessary parentheses
     // http://eslint.org/docs/rules/no-extra-parens
-    'no-extra-parens': [0, 'all', {
+    'no-extra-parens': [0, `all`, {
       conditionalAssign: true,
       nestedBinaryExpressions: false,
       returnAssign: false

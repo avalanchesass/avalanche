@@ -4,7 +4,7 @@ module.exports = {
   },
   parserOptions: {
     ecmaVersion: 6,
-    sourceType: 'module',
+    sourceType: `module`,
     ecmaFeatures: {
       generators: false,
       objectLiteralDuplicateProperties: false
@@ -14,7 +14,7 @@ module.exports = {
   rules: {
     // enforces no braces where they can be omitted
     // http://eslint.org/docs/rules/arrow-body-style
-    'arrow-body-style': [2, 'as-needed'],
+    'arrow-body-style': [2, `as-needed`],
 
     // require parens in arrow function arguments
     'arrow-parens': 0,
@@ -84,7 +84,7 @@ module.exports = {
 
     // require method and property shorthand syntax for object literals
     // http://eslint.org/docs/rules/object-shorthand
-    'object-shorthand': [2, 'always', {
+    'object-shorthand': [2, `always`, {
       ignoreConstructors: false,
       avoidQuotes: true
     }],
@@ -97,7 +97,7 @@ module.exports = {
 
     // suggest using of const declaration for variables that are never modified after declared
     'prefer-const': [2, {
-      destructuring: 'any',
+      destructuring: `any`,
       ignoreReadBeforeAssign: true
     }],
 
@@ -124,14 +124,14 @@ module.exports = {
 
     // enforce spacing between object rest-spread
     // http://eslint.org/docs/rules/rest-spread-spacing
-    'rest-spread-spacing': [2, 'never'],
+    'rest-spread-spacing': [2, `never`],
 
     // import sorting
     // http://eslint.org/docs/rules/sort-imports
     'sort-imports': [0, {
       ignoreCase: false,
       ignoreMemberSort: false,
-      memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
+      memberSyntaxSortOrder: [`none`, `all`, `multiple`, `single`]
     }],
 
     // enforce usage of spacing in template strings
@@ -140,6 +140,6 @@ module.exports = {
 
     // enforce spacing around the * in yield* expressions
     // http://eslint.org/docs/rules/yield-star-spacing
-    'yield-star-spacing': [2, 'after']
+    'yield-star-spacing': [2, `after`]
   }
 };

@@ -4,26 +4,26 @@ module.exports = {
   },
   parserOptions: {
     ecmaVersion: 6,
-    sourceType: 'module'
+    sourceType: `module`
   },
   plugins: [
-    'import'
+    `import`
   ],
 
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.js', '.json']
+        extensions: [`.js`, `.json`]
       }
     },
     'import/extensions': [
-      'node_modules'
+      `node_modules`
     ],
     'import/core-modules': [
     ],
     'import/ignore': [
-      'node_modules',
-      '\\.(coffee|scss|css|less|hbs|svg|json)$'
+      `node_modules`,
+      `\\.(coffee|scss|css|less|hbs|svg|json)$`
     ]
   },
 
@@ -93,7 +93,7 @@ module.exports = {
 
     // disallow non-import statements appearing before import statements
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/imports-first.md
-    'import/imports-first': [2, 'absolute-first'],
+    'import/imports-first': [2, `absolute-first`],
 
     // disallow duplicate imports
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
@@ -107,14 +107,14 @@ module.exports = {
     // Ensure consistent use of file extension within the import path
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
     // TODO: enable when https://github.com/benmosher/eslint-plugin-import/issues/390 is resolved
-    'import/extensions': [0, 'never'],
+    'import/extensions': [0, `never`],
 
     // Enforce a convention in module import order
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
     // TODO: enable?
     'import/order': [0, {
-      groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-      'newlines-between': 'never'
+      groups: [`builtin`, `external`, `internal`, `parent`, `sibling`, `index`],
+      'newlines-between': `never`
     }],
 
     // Require a newline after the last import/require in a group

@@ -17,21 +17,21 @@ module.exports = {
     'consistent-return': 2,
 
     // specify curly brace conventions for all control statements
-    curly: [2, 'multi-line'],
+    curly: [2, `multi-line`],
 
     // require default case in switch statements
-    'default-case': [2, { commentPattern: '^no default$' }],
+    'default-case': [2, { commentPattern: `^no default$` }],
 
     // encourages use of dot notation whenever possible
     'dot-notation': [2, { allowKeywords: true }],
 
     // enforces consistent newlines before or after dots
     // http://eslint.org/docs/rules/dot-location
-    'dot-location': [2, 'property'],
+    'dot-location': [2, `property`],
 
     // require the use of === and !==
     // http://eslint.org/docs/rules/eqeqeq
-    eqeqeq: [2, 'allow-null'],
+    eqeqeq: [2, `allow-null`],
 
     // make sure for-in loops have an if statement
     'guard-for-in': 2,
@@ -57,9 +57,9 @@ module.exports = {
     // http://eslint.org/docs/rules/no-empty-function
     'no-empty-function': [2, {
       allow: [
-        'arrowFunctions',
-        'functions',
-        'methods'
+        `arrowFunctions`,
+        `functions`,
+        `methods`
       ]
     }],
 
@@ -211,7 +211,7 @@ module.exports = {
     'no-void': 2,
 
     // disallow usage of configurable warning terms in comments: e.g. todo
-    'no-warning-comments': [0, { terms: ['todo', 'fixme', 'xxx'], location: 'start' }],
+    'no-warning-comments': [0, { terms: [`todo`, `fixme`, `xxx`], location: `start` }],
 
     // disallow use of the with statement
     'no-with': 2,
@@ -224,7 +224,7 @@ module.exports = {
 
     // require immediate function invocation to be wrapped in parentheses
     // http://eslint.org/docs/rules/wrap-iife.html
-    'wrap-iife': [2, 'outside'],
+    'wrap-iife': [2, `outside`],
 
     // require or disallow Yoda conditions
     yoda: 2
