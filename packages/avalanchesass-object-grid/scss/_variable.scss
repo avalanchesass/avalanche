@@ -3,6 +3,15 @@
 // @TODO: import default variables.
 $spacing-m: 1em !default;
 
-// Spacing.
+////
+/// @group Object: grid
+/// @author Markus Oberlehner
+////
+
+/// Vertical spacing.
+/// @type Number (Unit)
 $o-grid-spacing-vertical: $spacing-m !default;
+
+/// Horizontal spacing.
+/// @type Number (Unit)
 $o-grid-spacing-horizontal: $spacing-m !default;

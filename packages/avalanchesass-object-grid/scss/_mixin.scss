@@ -1,8 +1,31 @@
 @import 'variable';
 
-/**
- * Mixins
- */
+////
+/// Fluid width, responsive grid system.
+///
+/// @group Object: grid
+/// @author Markus Oberlehner
+////
+
+/// Grid wrapper.
+///
+/// @param {Number [unit]} $-spacing-vertical [$o-grid-spacing-vertical]
+///   Vertical spacing size.
+/// @param {Number [unit]} $-spacing-horizontal [$o-grid-spacing-horizontal]
+///   Horizontal spacing size.
+///
+/// @example scss - Usage
+///   .element {
+///     @include o-grid(1em, 1em);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     display: flex;
+///     flex-wrap: wrap;
+///     margin-top: -1em;
+///     margin-left: -1em;
+///   }
 @mixin o-grid($-spacing-vertical: $o-grid-spacing-vertical, $-spacing-horizontal: $o-grid-spacing-horizontal) {
   display: flex;
   flex-wrap: wrap;
@@ -14,6 +37,23 @@
   }
 }
 
+/// Grid item.
+///
+/// @param {Number [unit]} $-spacing-vertical [$o-grid-spacing-vertical]
+///   Vertical spacing size.
+/// @param {Number [unit]} $-spacing-horizontal [$o-grid-spacing-horizontal]
+///   Horizontal spacing size.
+///
+/// @example scss - Usage
+///   .element {
+///     @include o-grid-item(1em, 1em);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     padding-top: 1em;
+///     padding-left: 1em;
+///   }
 @mixin o-grid-item($-spacing-vertical: $o-grid-spacing-vertical, $-spacing-horizontal: $o-grid-spacing-horizontal) {
   $base-box-sizing-reset: false !default;
   @if not $base-box-sizing-reset {
