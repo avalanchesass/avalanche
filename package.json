@@ -16,7 +16,14 @@
     "url": "https://github.com/avalanchesass/avalanchesass/issues"
   },
   "devDependencies": {
+    "autoprefixer": "^6.5.0",
     "backstopjs": "^2.0.2",
-    "lerna": "2.0.0-beta.29"
+    "lerna": "2.0.0-beta.29",
+    "node-sass": "^3.10.1",
+    "node-sass-magic-importer": "^1.1.0",
+    "postcss-cli": "^2.6.0"
+  },
+  "scripts": {
+    "test": "sh scripts/test.sh"
   }
 }

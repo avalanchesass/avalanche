@@ -15,19 +15,5 @@
   },
   "bugs": {
     "url": "https://github.com/avalanchesass/avalanchesass/issues"
-  },
-  "devDependencies": {
-    "autoprefixer": "^6.5.0",
-    "backstopjs": "^2.0.2",
-    "node-sass": "^3.10.1",
-    "node-sass-magic-importer": "^1.1.0",
-    "postcss-cli": "^2.6.0"
-  },
-  "scripts": {
-    "test:buildcss": "node-sass --importer node_modules/node-sass-magic-importer test/test.scss | postcss -u autoprefixer -o test/tmp/test.css",
-    "test:buildhtml": "body=$(cat test/body.html | tr '\r\n' ' '); sed \"s~{{ body }}~${body}~g\" ../../test/test.html.template > test/tmp/test.html",
-    "test:cleanup": "rm -Rf test/tmp",
-    "test-reference": "npm run test:buildcss && npm run test:buildhtml && backstop reference --configPath=../../backstop.json && npm run test:cleanup",
-    "test": "npm run test:buildcss && npm run test:buildhtml && backstop test --configPath=../../backstop.json && npm run test:cleanup"
   }
 }
