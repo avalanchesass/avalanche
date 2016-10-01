@@ -22,5 +22,8 @@
     "command-line-args": "^2.1.6",
     "ncp": "^2.0.0",
     "replace": "^0.3.0"
+  },
+  "devDependencies": {
+    "lerna": "2.0.0-beta.29"
   }
 }
