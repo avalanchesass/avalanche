@@ -16,6 +16,7 @@
     "url": "https://github.com/avalanchesass/avalanchesass/issues"
   },
   "devDependencies": {
+    "backstopjs": "^2.0.2",
     "lerna": "2.0.0-beta.29"
   }
 }

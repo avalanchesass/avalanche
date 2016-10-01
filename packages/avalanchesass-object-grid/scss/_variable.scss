@@ -1,50 +1,8 @@
-$o-grid-namespace: '#{map-get($namespace, object)}grid' !default;
+// @TODO: may not use separate file?
 
-// Flexbox grid system.
-$o-grid-flex:          true !default;
-$o-grid-flex-fallback: false !default;
+// @TODO: import default variables.
+$spacing-m: 1em !default;
 
-// Vertical spacing sizes.
-$o-grid-spaced-vertical-default-size: m !default;
-$o-grid-spaced-vertical-sizes: () !default;
-// Vertical spacing sizes at defined breakpoints.
-// The key of the associative map defines the spacing size, the value is a map
-// with breakpoint sizes for which vertical spacing classes should be generated.
-$o-grid-spaced-vertical-sizes-with-breakpoints: (
-  m: (),
-) !default;
-// Vertical collapsed grid.
-$o-grid-collapsed-vertical: false !default;
-
-// Horizontal spacing sizes.
-$o-grid-spaced-horizontal-default-size: m !default;
-$o-grid-spaced-horizontal-sizes: () !default;
-// Horizontal spacing sizes at defined breakpoints.
-// The key of the associative map defines the spacing size, the value is a map
-// with breakpoint sizes for which horizontal spacing classes should be
-// generated.
-$o-grid-spaced-horizontal-sizes-with-breakpoints: (
-  m: (),
-) !default;
-// Horizontal collapsed grid.
-$o-grid-collapsed-horizontal: false !default;
-/*---
-title:   Variable
-name:    object_grid_variable
-section: object_grid
-order:   3
----
-
-```css
-$o-grid-namespace: '#{$o-grid-namespace}';
-$o-grid-flex: #{$o-grid-flex};
-$o-grid-flex-fallback: #{$o-grid-flex-fallback};
-$o-grid-spaced-vertical-default-size: #{$o-grid-spaced-vertical-default-size};
-$o-grid-spaced-vertical-sizes: (#{$o-grid-spaced-vertical-sizes});
-$o-grid-spaced-vertical-sizes-with-breakpoints: (nested-map);
-$o-grid-collapsed-vertical: #{$o-grid-collapsed-vertical};
-$o-grid-spaced-horizontal-sizes: (#{$o-grid-spaced-horizontal-sizes});
-$o-grid-spaced-horizontal-sizes-with-breakpoints: (nested-map);
-$o-grid-collapsed-horizontal: #{$o-grid-collapsed-horizontal};
-```
-*/
+// Spacing.
+$o-grid-spacing-vertical: $spacing-m !default;
+$o-grid-spacing-horizontal: $spacing-m !default;
