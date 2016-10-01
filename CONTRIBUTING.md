@@ -14,11 +14,11 @@ Pull requests are the greatest contributions, so be sure they are focused in sco
 1. To begin, [fork this project], clone your fork, and add our upstream.
    ```bash
    # Clone your fork of the repo into the current directory
-   git clone https://github.com/<your-username>/avalanche
+   git clone https://github.com/<your-username>/avalanchesass
    # Navigate to the newly cloned directory
-   cd avalanche
+   cd avalanchesass
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/avalanchesass/avalanche
+   git remote add upstream https://github.com/avalanchesass/avalanchesass
    # Install the tools necessary for development
    npm install
    ```
@@ -45,8 +45,8 @@ Pull requests are the greatest contributions, so be sure they are focused in sco
 
 4. Now [open a pull request] with a clear title and description.
 
-[already been reported]: https://github.com/avalanchesass/avalanche/issues
-[fork this project]:     https://github.com/avalanchesass/avalanche/fork
+[already been reported]: https://github.com/avalanchesass/avalanchesass/issues
+[fork this project]:     https://github.com/avalanchesass/avalanchesass/fork
 [live example]:          http://codepen.io/pen
 [open a pull request]:   https://help.github.com/articles/using-pull-requests/
 [reduced test case]:     https://css-tricks.com/reduced-test-cases/

@@ -2,26 +2,18 @@
   "name": "avalanchesass",
   "description": "A modular SASS framework",
   "keywords": [
-    "avalanchesass-package"
+    "avalanchesass"
   ],
-  "version": "3.0.5",
+  "version": "4.0.0-alpha.1",
   "author": "Markus Oberlehner",
   "homepage": "https://avalanche.oberlehner.net",
-  "license": "GPL v2",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/avalanchesass/avalanche"
+    "url": "https://github.com/avalanchesass/avalanchesass"
   },
   "bugs": {
-    "url": "https://github.com/avalanchesass/avalanche/issues"
-  },
-  "bin": {
-    "avalanchesass": "index.js"
-  },
-  "dependencies": {
-    "command-line-args": "^2.1.6",
-    "ncp": "^2.0.0",
-    "replace": "^0.3.0"
+    "url": "https://github.com/avalanchesass/avalanchesass/issues"
   },
   "devDependencies": {
     "lerna": "2.0.0-beta.29"
