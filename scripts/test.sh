@@ -24,7 +24,8 @@ for f in packages/*; do
     # Build CSS
     node_modules/node-sass/bin/node-sass --importer node_modules/node-sass-magic-importer "$f/test/test.scss" | node_modules/postcss-cli/bin/postcss -u autoprefixer -o "$f/test/tmp/test.css"
     # Build HTML
-    BODY=$(cat "$f/test/body.html" | tr '\r\n' ' '); sed "s~{{ body }}~${BODY}~g" test/test.html.template > "$f/test/tmp/test.html"
+    BODY=$(cat "$f/test/body.html")
+    echo $(cat test/test.html.template) | node_modules/handlebarsjs-cli/index.js --body "$BODY" > "$f/test/tmp/test.html"
     # Test
     ( cd "$f" && ../../node_modules/backstopjs/cli/index.js test --configPath=../../backstop.json )
     # Cleanup
