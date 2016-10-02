@@ -1,6 +1,6 @@
 {
   "name": "avalanchesass",
-  "description": "A modular SASS framework",
+  "description": "A modular SASS framework which can be extended with npm packages",
   "keywords": [
     "avalanchesass"
   ],

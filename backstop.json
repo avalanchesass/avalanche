@@ -23,7 +23,7 @@
   ],
   "scenarios": [
     {
-      "label": "avalanchesass",
+      "label": "avalanche",
       "url": "test/tmp/test.html",
       "selectors": [
         "document"
