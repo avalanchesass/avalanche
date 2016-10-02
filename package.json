@@ -27,7 +27,7 @@
     "stylelint-config-modularis": "1.0.0"
   },
   "scripts": {
-    "doc": "sassdoc packages/",
+    "doc": "sassdoc packages/**/*.scss",
     "lint": "stylelint packages/**/*.scss",
     "test": "sh scripts/test.sh"
   }
