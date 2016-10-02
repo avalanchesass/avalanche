@@ -1,6 +1,8 @@
 #!/bin/sh
 set -e
 
+TEMPLATE=$(cat website/demo.html.template)
+
 for f in packages/*; do
   if [ -n "$PACKAGE" ] && [ `basename $f` != "$PACKAGE" ]; then
     continue
@@ -13,7 +15,6 @@ for f in packages/*; do
     EXAMPLE=${EXAMPLE/'```'/}
     BODY=${BODY/'```html'/$EXAMPLE'```html'}
     BODY=$(echo "$BODY" | node_modules/marked/bin/marked)
-    TEMPLATE=$(cat website/demo.html.template)
     mkdir -p "website/dist/$f"
     # Build CSS
     node_modules/node-sass/bin/node-sass --importer node_modules/node-sass-magic-importer "$f/scss/index.scss" | node_modules/postcss-cli/bin/postcss -u autoprefixer -o "website/dist/$f/demo.css"
