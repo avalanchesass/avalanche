@@ -28,6 +28,7 @@ Thumbs.db
 backstop_data
 bitmaps_test
 bower_components
+dist
 node_modules
 sassdoc
 tmp
