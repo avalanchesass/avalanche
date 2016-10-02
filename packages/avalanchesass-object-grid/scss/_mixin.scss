@@ -55,10 +55,8 @@
 ///     padding-left: 1em;
 ///   }
 @mixin o-grid-item($-spacing-vertical: $o-grid-spacing-vertical, $-spacing-horizontal: $o-grid-spacing-horizontal) {
-  $base-box-sizing-reset: false !default;
-  @if not $base-box-sizing-reset {
-    box-sizing: border-box;
-  }
+  flex-grow: 1;
+  box-sizing: border-box;
   @if $-spacing-vertical > 0 {
     padding-top: $-spacing-vertical;
   }
