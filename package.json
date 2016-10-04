@@ -23,7 +23,8 @@
     "marked": "^0.3.6",
     "node-sass": "^3.10.1",
     "node-sass-magic-importer": "^1.1.0",
-    "postcss-cli": "^2.6.0",
+    "postcss": "^5.2.4",
+    "postcss-scss": "^0.3.1",
     "sassdoc": "^2.1.20",
     "stylelint": "^7.3.1",
     "stylelint-config-modularis": "1.0.0"
