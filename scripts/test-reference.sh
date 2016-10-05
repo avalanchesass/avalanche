@@ -1,19 +1,9 @@
 #!/bin/sh
 set -e
 
-while [[ $# -gt 1 ]]
-do
-key="$1"
-case $key in
-    -p|--package)
-    PACKAGE="$2"
-    shift
-    ;;
-    *)
-    ;;
-esac
-shift
-done
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+source "$DIR/_build-test-parameter.sh"
 
 for f in packages/*; do
   if [ -n "$PACKAGE" ] && [ `basename $f` != "$PACKAGE" ]; then
@@ -21,11 +11,11 @@ for f in packages/*; do
   fi
 
   if [ -d "$f/test" ]; then
-    # Build CSS
-    node_modules/node-sass/bin/node-sass --importer node_modules/node-sass-magic-importer "$f/test/test.scss" | node_modules/postcss-cli/bin/postcss -u autoprefixer -o "$f/test/tmp/test.css"
+    mkdir -p "$f/test/tmp"
     # Build HTML
-    BODY=$(cat "$f/test/body.html")
-    echo $(cat test/test.html.template) | node_modules/handlebarsjs-cli/index.js --body "$BODY" > "$f/test/tmp/test.html"
+    sh scripts/build-test-html.sh --package $(basename $f)
+    # Build CSS
+    sh scripts/build-test-css.sh --package $(basename $f)
     # Create test reference
     ( cd "$f" && ../../node_modules/backstopjs/cli/index.js reference --configPath=../../backstop.json )
     # Cleanup
