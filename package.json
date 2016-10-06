@@ -26,6 +26,7 @@
     "postcss": "^5.2.4",
     "postcss-scss": "^0.3.1",
     "sassdoc": "^2.1.20",
+    "static-server": "^2.0.3",
     "stylelint": "^7.3.1",
     "stylelint-config-modularis": "1.0.0"
   },
@@ -33,6 +34,7 @@
     "doc": "sassdoc packages/**/*.scss",
     "lint": "stylelint packages/**/*.scss",
     "build:website": "sh scripts/build-website.sh",
+    "server": "static-server website/dist",
     "test:reference": "sh scripts/test-reference.sh",
     "test": "sh scripts/test.sh"
   }
