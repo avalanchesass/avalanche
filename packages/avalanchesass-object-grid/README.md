@@ -44,22 +44,6 @@ npm install avalanchesass-object-grid --save
   @include o-grid-item(1em, 1em);
 }
 
-// Output.
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: -1em;
-  margin-left: -1em;
-}
-
-.grid__item {
-  flex-grow: 1;
-  box-sizing: border-box;
-  padding-top: 1em;
-  padding-left: 1em;
-}
-```
-
 ## About
 ### Author
 Markus Oberlehner  
