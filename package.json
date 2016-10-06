@@ -18,7 +18,7 @@
   "devDependencies": {
     "autoprefixer": "^6.5.0",
     "backstopjs": "^2.0.2",
-    "handlebarsjs-cli": "0.0.1",
+    "handlebars-cmd": "^0.1.4",
     "lerna": "2.0.0-beta.29",
     "marked": "^0.3.6",
     "node-sass": "^3.10.1",

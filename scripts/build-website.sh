@@ -1,7 +1,9 @@
 #!/bin/sh
 set -e
 
-TEMPLATE=$(cat website/demo.hbs)
+TEMPLATE=$(cat website/index.hbs)
+CSS='<link rel="stylesheet" href="demo.css"><link rel="stylesheet" href="/css/index.css">'
+CSS=${CSS//\"/\\\"}
 
 for f in packages/*; do
   if [ -n "$PACKAGE" ] && [ `basename $f` != "$PACKAGE" ]; then
@@ -19,6 +21,7 @@ for f in packages/*; do
     # Build CSS
     node_modules/node-sass/bin/node-sass --importer node_modules/node-sass-magic-importer "$f/scss/index.scss" | node_modules/postcss-cli/bin/postcss -u autoprefixer -o "website/dist/$f/demo.css"
     # Build HTML
-    echo "$TEMPLATE" | node_modules/handlebarsjs-cli/index.js --body "$BODY" > "website/dist/$f/index.html"
+    HEADER="{\"css\": \"$CSS\", \"title\": \"$(basename $f)\"}"
+    echo "$TEMPLATE" | node_modules/handlebars-cmd/index.js --header "$HEADER" --body "$BODY" > "website/dist/$f/index.html"
   fi
 done
