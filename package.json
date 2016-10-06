@@ -32,6 +32,7 @@
   "scripts": {
     "doc": "sassdoc packages/**/*.scss",
     "lint": "stylelint packages/**/*.scss",
+    "build:website": "sh scripts/build-website.sh",
     "test:reference": "sh scripts/test-reference.sh",
     "test": "sh scripts/test.sh"
   }

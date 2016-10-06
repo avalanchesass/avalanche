@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-TEMPLATE=$(cat website/demo.html.template)
+TEMPLATE=$(cat website/demo.hbs)
 
 for f in packages/*; do
   if [ -n "$PACKAGE" ] && [ `basename $f` != "$PACKAGE" ]; then
