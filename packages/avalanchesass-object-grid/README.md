@@ -43,6 +43,7 @@ npm install avalanchesass-object-grid --save
 .grid__item {
   @include o-grid-item(1em, 1em);
 }
+```
 
 ## About
 ### Author
