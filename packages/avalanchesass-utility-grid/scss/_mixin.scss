@@ -1,17 +1,26 @@
-@import 'avalanchesass_utility_width/style_guide';
+@import 'variable';
 
-/*---
-title:   Mixin
-name:    utility_width_mixin
-section: utility_width
-order:   2
----
-
-```css
-u-width($-size[, $-item-count: 12])
-```
-*/
-@mixin u-width($-size, $-item-count: 12) {
+////
+/// Width helper.
+///
+/// @group Utility: width
+/// @author Markus Oberlehner
+///
+/// @param {Number} $-size
+///   Width divisor.
+/// @param {Number} $-item-count [$u-width-item-count]
+///   Width base size.
+///
+/// @example scss - Usage
+///   .element {
+///     @include u-width(6, 12);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     width: 50%;
+///   }
+@mixin u-width($-size, $-item-count: $u-width-item-count) {
   $-base-size: (100% / $-item-count);
   width: ($-base-size * $-size) !important;
 }
