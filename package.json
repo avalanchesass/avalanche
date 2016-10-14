@@ -20,21 +20,16 @@
     "backstopjs": "^2.0.2",
     "handlebars-cmd": "^0.1.4",
     "lerna": "2.0.0-beta.29",
-    "marked": "^0.3.6",
     "node-sass": "^3.10.1",
     "node-sass-magic-importer": "^1.1.0",
-    "postcss": "^5.2.4",
-    "postcss-scss": "^0.3.1",
+    "postcss-cli": "^2.6.0",
     "sassdoc": "^2.1.20",
-    "static-server": "^2.0.3",
     "stylelint": "^7.3.1",
     "stylelint-config-modularis": "1.0.0"
   },
   "scripts": {
     "doc": "sassdoc packages/**/*.scss",
     "lint": "stylelint packages/**/*.scss",
-    "build:website": "sh scripts/build-website.sh",
-    "server": "static-server website/dist",
     "test:reference": "sh scripts/test-reference.sh",
     "test": "sh scripts/test.sh"
   }
