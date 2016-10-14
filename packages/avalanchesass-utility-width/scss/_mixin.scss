@@ -1,5 +1,3 @@
-@import 'variable';
-
 /// Width helper.
 ///
 /// @group Utility: width
@@ -7,8 +5,8 @@
 ///
 /// @param {Number} $-size
 ///   Width divisor.
-/// @param {Number} $-item-count [$u-width-item-count]
-///   Width base size.
+/// @param {Number} $-base [12]
+///   Width base.
 ///
 /// @example scss - Usage
 ///   .element {
@@ -19,7 +17,7 @@
 ///   .element {
 ///     width: 50%;
 ///   }
-@mixin u-width($-size, $-item-count: $u-width-item-count) {
-  $-base-size: (100% / $-item-count);
+@mixin u-width($-size, $-base: 12) {
+  $-base-size: (100% / $-base);
   width: ($-base-size * $-size) !important;
 }

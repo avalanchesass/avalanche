@@ -1,7 +1,7 @@
 // @TODO: import default variables.
 $breakpoints: (
   m: 42em
-);
+) !default;
 
 ////
 /// @group Utility: width
@@ -10,8 +10,8 @@ $breakpoints: (
 
 /// Width base.
 /// @type Number
-$u-width-item-count: 12 !default;
+$u-width-base: 12 !default;
 
-/// Vertical spacing.
+/// Width breakpoints.
 /// @type Map
 $u-width-breakpoints: (m) !default;
