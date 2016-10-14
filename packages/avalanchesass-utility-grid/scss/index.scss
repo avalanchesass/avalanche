@@ -2,7 +2,7 @@
 @import 'mixin';
 
 @for $-size from 1 through $u-width-item-count {
-  .u-width-#{$-size} {
+  .u-width-#{$-size}\/#{$u-width-item-count} {
     @include u-width($-size, $u-width-item-count);
   }
 }
@@ -10,7 +10,7 @@
 @each $-breakpoint in $u-width-breakpoints {
   @media (min-width: map-get($breakpoints, $-breakpoint)) {
     @for $-size from 1 through $u-width-item-count {
-      .u-width-#{$-size}\@#{$-breakpoint} {
+      .u-width-#{$-size}\/#{$u-width-item-count}\@#{$-breakpoint} {
         @include u-width($-size, $u-width-item-count);
       }
     }

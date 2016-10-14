@@ -1,2 +1,17 @@
+// @TODO: import default variables.
+$breakpoints: (
+  m: 42em
+);
+
+////
+/// @group Utility: width
+/// @author Markus Oberlehner
+////
+
+/// Width base.
+/// @type Number
 $u-width-item-count: 12 !default;
+
+/// Vertical spacing.
+/// @type Map
 $u-width-breakpoints: (m) !default;
