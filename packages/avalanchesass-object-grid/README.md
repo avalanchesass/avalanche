@@ -2,7 +2,7 @@
 Fluid width, responsive grid system.
 
 ## Install
-```
+```bash
 npm install avalanchesass-object-grid --save
 ```
 

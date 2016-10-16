@@ -2,7 +2,7 @@
 Width classes.
 
 ## Install
-```
+```bash
 npm install avalanchesass-utility-width --save
 ```
 
