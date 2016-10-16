@@ -16,7 +16,6 @@ npm install avalanchesass-utility-width --save
 ```
 
 ## Demo
-### Default
 ```html
 <div style="text-align: center;">
   <div class="u-width-1/12" style="padding: 1em;background: #efefef;">1</div>
@@ -51,7 +50,7 @@ npm install avalanchesass-utility-width --save
 </div>
 ```
 
-### Mixins
+## Mixins
 ```scss
 @import '~avalanchesass-utility-width/mixin';
 

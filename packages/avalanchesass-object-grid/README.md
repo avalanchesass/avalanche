@@ -16,7 +16,6 @@ npm install avalanchesass-object-grid --save
 ```
 
 ## Demo
-### Default
 ```html
 <div class="o-grid">
   <div class="o-grid__item">
@@ -31,7 +30,7 @@ npm install avalanchesass-object-grid --save
 </div>
 ```
 
-### Mixins
+## Mixins
 ```scss
 @import '~avalanchesass-object-grid/mixin';
 
