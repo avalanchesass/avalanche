@@ -19,13 +19,13 @@ npm install avalanchesass-object-grid --save
 ```html
 <div class="o-grid">
   <div class="o-grid__item">
-    <div style="padding: 1em;background: #efefef;">Grid item 1</div>
+    <div>Grid item 1</div>
   </div>
   <div class="o-grid__item">
-    <div style="padding: 1em;background: #efefef;">Grid item 2</div>
+    <div>Grid item 2</div>
   </div>
   <div class="o-grid__item">
-    <div style="padding: 1em;background: #efefef;">Grid item 3</div>
+    <div>Grid item 3</div>
   </div>
 </div>
 ```
