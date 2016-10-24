@@ -1,8 +1,8 @@
 module.exports = {
   rules: {
     'at-rule-empty-line-before': ['always', {
-      except: ['all-nested', 'blockless-group'],
-      ignore: ['after-comment']
+      except: ['blockless-group'],
+      ignore: ['after-comment', 'all-nested']
     }],
     'at-rule-name-case': 'lower',
     'at-rule-name-space-after': 'always-single-line',
