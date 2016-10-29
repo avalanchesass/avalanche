@@ -2,7 +2,7 @@
   "name": "avalanchesass-object-grid",
   "description": "Fluid width, responsive grid system",
   "keywords": [
-    "avalanche-package",
+    "avalanchesass-package",
     "sass"
   ],
   "version": "4.0.0-alpha.1",
