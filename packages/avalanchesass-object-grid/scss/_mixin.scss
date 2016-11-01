@@ -7,60 +7,90 @@
 
 /// Grid wrapper.
 ///
-/// @param {Number [unit]} $-spacing-vertical [1em]
-///   Vertical spacing size.
-/// @param {Number [unit]} $-spacing-horizontal [1em]
-///   Horizontal spacing size.
-///
 /// @example scss - Usage
 ///   .element {
-///     @include o-grid(1em, 1em);
+///     @include o-grid();
 ///   }
 ///
 /// @example css - CSS Output
 ///   .element {
 ///     display: flex;
 ///     flex-wrap: wrap;
-///     margin-top: -1em;
-///     margin-left: -1em;
 ///   }
-@mixin o-grid($-spacing-vertical: 1em, $-spacing-horizontal: 1em) {
+@mixin o-grid() {
   display: flex;
   flex-wrap: wrap;
-  @if $-spacing-vertical > 0 {
-    margin-top: -$-spacing-vertical;
+}
+
+/// Gutter horizontal.
+///
+/// @param {Number [unit]} $-gutter [1em]
+///   Gutter spacing size.
+/// @param {String} $-item-selector ['.o-grid__item']
+///   Grid item selector.
+///
+/// @example scss - Usage
+///   .element {
+///     @include o-grid-horizontal-gutter(1em);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     margin-left: -1em;
+///
+///     > .o-grid__item {
+///       padding-top: 1em;
+///     }
+///   }
+@mixin o-grid-horizontal-gutter($-gutter: 1em, $-item-selector: '.o-grid__item') {
+  margin-left: -$-gutter;
+
+  > #{$-item-selector} {
+    padding-left: $-gutter;
   }
-  @if $-spacing-horizontal > 0 {
-    margin-left: -$-spacing-horizontal;
+}
+
+/// Gutter vertical.
+///
+/// @param {Number [unit]} $-gutter [1em]
+///   Gutter spacing size.
+/// @param {String} $-item-selector ['.o-grid__item']
+///   Grid item selector.
+///
+/// @example scss - Usage
+///   .element {
+///     @include o-grid-vertical-gutter(1em);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     margin-top: -1em;
+///
+///     > .o-grid__item {
+///       margin-top: 1em;
+///     }
+///   }
+@mixin o-grid-vertical-gutter($-gutter: 1em, $-item-selector: '.o-grid__item') {
+  margin-top: -$-gutter;
+
+  > #{$-item-selector} {
+    margin-top: $-gutter;
   }
 }
 
 /// Grid item.
 ///
-/// @param {Number [unit]} $-spacing-vertical [1em]
-///   Vertical spacing size.
-/// @param {Number [unit]} $-spacing-horizontal [1em]
-///   Horizontal spacing size.
-///
 /// @example scss - Usage
 ///   .element {
-///     @include o-grid-item(1em, 1em);
+///     @include o-grid-item();
 ///   }
 ///
 /// @example css - CSS Output
 ///   .element {
 ///     flex-grow: 1;
 ///     box-sizing: border-box;
-///     padding-top: 1em;
-///     padding-left: 1em;
 ///   }
-@mixin o-grid-item($-spacing-vertical: 1em, $-spacing-horizontal: 1em) {
+@mixin o-grid-item() {
   flex-grow: 1;
   box-sizing: border-box;
-  @if $-spacing-vertical > 0 {
-    padding-top: $-spacing-vertical;
-  }
-  @if $-spacing-horizontal > 0 {
-    padding-left: $-spacing-horizontal;
-  }
 }

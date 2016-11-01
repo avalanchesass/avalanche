@@ -1,17 +1,68 @@
 // @TODO: may not use separate file?
-
 // @TODO: import default variables.
-$spacing-m: 1em !default;
+$spacings: (
+  xs: 0.5em,
+  s: 0.75em,
+  m: 1em,
+  l: 1.5em,
+  xl: 2em,
+  xxl: 3.5em,
+  xxxl: 6em,
+);
+
+@function spacing($-size, $-rem: false) {
+  $-spacing: map-get($spacings, $-size);
+  @if $-rem { $-spacing: ($-spacing / 1em) * 1rem; }
+  @return $-spacing;
+}
+
+$breakpoints: (
+  s: 30em,
+  m: 45em,
+  l: 60em,
+  xl: 75em,
+);
+
+@function breakpoint($-size, $-rem: false) {
+  $breakpoint: map-get($breakpoints, $-size);
+  @if $-rem { $breakpoint: ($breakpoint / 1em) * 1rem; }
+  @return $breakpoint;
+}
+
+
 
 ////
 /// @group Object: grid
 /// @author Markus Oberlehner
 ////
 
-/// Vertical spacing.
-/// @type Number (Unit)
-$o-grid-spacing-vertical: $spacing-m !default;
+/// Horizontal gutter default.
+/// @type String
+$o-grid-horizontal-gutter-default: m !default;
 
-/// Horizontal spacing.
-/// @type Number (Unit)
-$o-grid-spacing-horizontal: $spacing-m !default;
+/// Horizontal gutter sizes.
+/// @type Map
+$o-grid-horizontal-gutter: () !default;
+
+/// The key of the associative map defines the gutter size, the value is a map
+/// with breakpoint sizes for which horizontal gutter classes should be
+/// generated.
+/// @type Map
+$o-grid-horizontal-gutter-at-breakpoints: (
+  m: (),
+) !default;
+
+/// Vertical gutter default.
+/// @type String
+$o-grid-vertical-gutter-default: m !default;
+
+/// Vertical gutter sizes.
+/// @type Map
+$o-grid-vertical-gutter: () !default;
+
+/// The key of the associative map defines the gutter size, the value is a map
+/// with breakpoint sizes for which vertical gutter classes should be generated.
+/// @type Map
+$o-grid-vertical-gutter-at-breakpoints: (
+  m: (),
+) !default;
