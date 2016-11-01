@@ -30,7 +30,7 @@
   "scripts": {
     "doc": "sassdoc packages/**/*.scss",
     "lint": "stylelint packages/**/*.scss",
-    "test:reference": "sh scripts/test-reference.sh",
-    "test": "sh scripts/test.sh"
+    "test:reference": "sh test/test-reference.sh",
+    "test": "sh test/test.sh"
   }
 }

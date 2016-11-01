@@ -3,7 +3,7 @@ set -e
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-source "$DIR/_build-test-parameter.sh"
+source "$DIR/scripts/_build-test-parameter.sh"
 
 for f in packages/*; do
   if [ -n "$PACKAGE" ] && [ `basename $f` != "$PACKAGE" ]; then
@@ -13,11 +13,11 @@ for f in packages/*; do
   if [ -d "$f/test" ]; then
     mkdir -p "$f/test/tmp"
     # Build HTML
-    sh scripts/build-test-html.sh --package $(basename $f)
+    sh "$DIR/scripts/build-test-html.sh" --package $(basename $f)
     # Build CSS
-    sh scripts/build-test-css.sh --package $(basename $f)
-    # Create test reference
-    ( cd "$f" && ../../node_modules/backstopjs/cli/index.js reference --configPath=../../backstop.json )
+    sh "$DIR/scripts/build-test-css.sh" --package $(basename $f)
+    # Test
+    ( cd "$f" && ../../node_modules/backstopjs/cli/index.js test --configPath=../../backstop.json )
     # Cleanup
     rm -Rf "$f/test/tmp"
   fi
