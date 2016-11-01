@@ -25,7 +25,7 @@
   }
 }
 
-@each $-size, $-breakpoints in $o-grid-horizontal-gutter-at-breakpoints {
+@each $-size, $-breakpoints in $o-grid-horizontal-gutter-breakpoints {
   @each $-breakpoint in $-breakpoints {
     @media (min-width: breakpoint($-breakpoint)) {
       .o-grid--horizontal-gutter-#{$-size}\@#{$-breakpoint} {
@@ -44,7 +44,7 @@
   }
 }
 
-@each $-size, $-breakpoints in $o-grid-vertical-gutter-at-breakpoints {
+@each $-size, $-breakpoints in $o-grid-vertical-gutter-breakpoints {
   @each $-breakpoint in $-breakpoints {
     @media (min-width: breakpoint($-breakpoint)) {
       .o-grid--vertical-gutter-#{$-size}\@#{$-breakpoint} {

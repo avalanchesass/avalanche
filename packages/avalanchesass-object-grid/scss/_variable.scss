@@ -48,7 +48,7 @@ $o-grid-horizontal-gutter: () !default;
 /// with breakpoint sizes for which horizontal gutter classes should be
 /// generated.
 /// @type Map
-$o-grid-horizontal-gutter-at-breakpoints: (
+$o-grid-horizontal-gutter-breakpoints: (
   m: (),
 ) !default;
 
@@ -63,6 +63,6 @@ $o-grid-vertical-gutter: () !default;
 /// The key of the associative map defines the gutter size, the value is a map
 /// with breakpoint sizes for which vertical gutter classes should be generated.
 /// @type Map
-$o-grid-vertical-gutter-at-breakpoints: (
+$o-grid-vertical-gutter-breakpoints: (
   m: (),
 ) !default;

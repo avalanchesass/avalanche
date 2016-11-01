@@ -1,1 +1,11 @@
+$o-grid-horizontal-gutter: (l);
+$o-grid-horizontal-gutter-breakpoints: (
+  l: (m),
+);
+
+$o-grid-vertical-gutter: (l);
+$o-grid-vertical-gutter-breakpoints: (
+  l: (m),
+);
+
 @import '../scss/index';

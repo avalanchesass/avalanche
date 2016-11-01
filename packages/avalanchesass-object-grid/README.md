@@ -30,6 +30,60 @@ npm install avalanchesass-object-grid --save
 </div>
 ```
 
+### Gutter
+Activate horizontal / vertical gutter modifier classes via the `$o-grid-horizontal-gutter` / `$o-grid-vertical-gutter` map variables.
+
+```scss
+$o-grid-horizontal-gutter: (l);
+$o-grid-vertical-gutter: (l);
+```
+
+```html
+<div class="o-grid o-grid--horizontal-gutter-l o-grid--vertical-gutter-l">
+  <div class="o-grid__item">
+    <div>Grid item 1</div>
+  </div>
+  <div class="o-grid__item">
+    <div>Grid item 2</div>
+  </div>
+  <div class="o-grid__item">
+    <div>Grid item 3</div>
+  </div>
+  <div class="o-grid__item">
+    <div>Grid item 4</div>
+  </div>
+</div>
+```
+
+### Gutter breakpoints
+To activate gutter breakpoint modifier classes, use the `$o-grid-horizontal-gutter-breakpoints` / `$o-grid-vertical-gutter-breakpoints` map variables.
+
+```scss
+$o-grid-horizontal-gutter-breakpoints: (
+  l: (m),
+);
+$o-grid-vertical-gutter-breakpoints: (
+  l: (m),
+);
+```
+
+```html
+<div class="o-grid o-grid--horizontal-gutter-l@m o-grid--vertical-gutter-l@m">
+  <div class="o-grid__item">
+    <div>Grid item 1</div>
+  </div>
+  <div class="o-grid__item">
+    <div>Grid item 2</div>
+  </div>
+  <div class="o-grid__item">
+    <div>Grid item 3</div>
+  </div>
+  <div class="o-grid__item">
+    <div>Grid item 4</div>
+  </div>
+</div>
+```
+
 ## Mixins
 ```scss
 @import '~avalanchesass-object-grid/mixin';
