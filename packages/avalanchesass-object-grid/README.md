@@ -90,11 +90,13 @@ $o-grid-vertical-gutter-breakpoints: (
 
 // Usage.
 .grid {
-  @include o-grid(1em, 1em);
+  @include o-grid();
+  @include o-grid-horizontal-gutter(1em, '.grid__item');
+  @include o-grid-vertical-gutter(1em, '.grid__item');
 }
 
 .grid__item {
-  @include o-grid-item(1em, 1em);
+  @include o-grid-item();
 }
 ```
 
