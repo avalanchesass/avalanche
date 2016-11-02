@@ -15,5 +15,9 @@
   },
   "bugs": {
     "url": "https://github.com/avalanchesass/avalanche/issues"
-  }
+  },
+  "dependencies": {
+    "avalanchesass-setting-spacings": "0.0.0-alpha.4f7f2369"
+  },
+  "main": "scss/index.scss"
 }
