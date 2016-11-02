@@ -12,7 +12,7 @@ npm install avalanchesass-object-grid --save
 @import '~avalanchesass-object-grid';
 
 // Import just the mixin file.
-@import '~avalanchesass-object-grid/mixin';
+@import '~avalanchesass-object-grid/scss/mixin';
 ```
 
 ## Demo
@@ -86,7 +86,7 @@ $o-grid-vertical-gutter-breakpoints: (
 
 ## Mixins
 ```scss
-@import '~avalanchesass-object-grid/mixin';
+@import '~avalanchesass-object-grid/scss/mixin';
 
 // Usage.
 .grid {

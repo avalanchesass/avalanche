@@ -12,7 +12,7 @@ npm install avalanchesass-utility-width --save
 @import '~avalanchesass-utility-width';
 
 // Import just the mixin file.
-@import '~avalanchesass-utility-width/mixin';
+@import '~avalanchesass-utility-width/scss/mixin';
 ```
 
 ## Demo
@@ -48,7 +48,7 @@ npm install avalanchesass-utility-width --save
 
 ## Mixins
 ```scss
-@import '~avalanchesass-utility-width/mixin';
+@import '~avalanchesass-utility-width/scss/mixin';
 
 // Usage.
 .u-width-1/12 {
