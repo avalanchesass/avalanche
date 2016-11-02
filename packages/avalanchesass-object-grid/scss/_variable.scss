@@ -10,10 +10,10 @@ $spacings: (
   xxxl: 6em,
 );
 
-@function spacing($-size, $-rem: false) {
-  $-spacing: map-get($spacings, $-size);
-  @if $-rem { $-spacing: ($-spacing / 1em) * 1rem; }
-  @return $-spacing;
+@function spacing($size, $rem: false) {
+  $spacing: map-get($spacings, $size);
+  @if $rem { $spacing: ($spacing / 1em) * 1rem; }
+  @return $spacing;
 }
 
 $breakpoints: (
@@ -23,9 +23,9 @@ $breakpoints: (
   xl: 75em,
 );
 
-@function breakpoint($-size, $-rem: false) {
-  $breakpoint: map-get($breakpoints, $-size);
-  @if $-rem { $breakpoint: ($breakpoint / 1em) * 1rem; }
+@function breakpoint($size, $rem: false) {
+  $breakpoint: map-get($breakpoints, $size);
+  @if $rem { $breakpoint: ($breakpoint / 1em) * 1rem; }
   @return $breakpoint;
 }
 

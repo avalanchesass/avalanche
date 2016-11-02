@@ -3,9 +3,9 @@
 /// @group Utility: width
 /// @author Markus Oberlehner
 ///
-/// @param {Number} $-size
+/// @param {Number} $size
 ///   Width divisor.
-/// @param {Number} $-base [12]
+/// @param {Number} $base [12]
 ///   Width base.
 ///
 /// @example scss - Usage
@@ -17,7 +17,7 @@
 ///   .element {
 ///     width: 50%;
 ///   }
-@mixin u-width($-size, $-base: 12) {
-  $-base-size: (100% / $-base);
-  width: ($-base-size * $-size) !important;
+@mixin u-width($size, $base: 12) {
+  $base-size: (100% / $base);
+  width: ($base-size * $size) !important;
 }

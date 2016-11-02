@@ -1,17 +1,17 @@
 @import 'variable';
 @import 'mixin';
 
-@for $-size from 1 through $u-width-base {
-  .u-width-#{$-size}\/#{$u-width-base} {
-    @include u-width($-size, $u-width-base);
+@for $size from 1 through $u-width-base {
+  .u-width-#{$size}\/#{$u-width-base} {
+    @include u-width($size, $u-width-base);
   }
 }
 
-@each $-breakpoint in $u-width-breakpoints {
-  @media (min-width: map-get($breakpoints, $-breakpoint)) {
-    @for $-size from 1 through $u-width-base {
-      .u-width-#{$-size}\/#{$u-width-base}\@#{$-breakpoint} {
-        @include u-width($-size, $u-width-base);
+@each $breakpoint in $u-width-breakpoints {
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @for $size from 1 through $u-width-base {
+      .u-width-#{$size}\/#{$u-width-base}\@#{$breakpoint} {
+        @include u-width($size, $u-width-base);
       }
     }
   }

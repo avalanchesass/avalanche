@@ -24,9 +24,9 @@
 
 /// Gutter horizontal.
 ///
-/// @param {Number [unit]} $-gutter [1em]
+/// @param {Number [unit]} $gutter [1em]
 ///   Gutter spacing size.
-/// @param {String} $-item-selector ['.o-grid__item']
+/// @param {String} $item-selector ['.o-grid__item']
 ///   Grid item selector.
 ///
 /// @example scss - Usage
@@ -42,19 +42,19 @@
 ///       padding-top: 1em;
 ///     }
 ///   }
-@mixin o-grid-horizontal-gutter($-gutter: 1em, $-item-selector: '.o-grid__item') {
-  margin-left: -$-gutter;
+@mixin o-grid-horizontal-gutter($gutter: 1em, $item-selector: '.o-grid__item') {
+  margin-left: -$gutter;
 
-  > #{$-item-selector} {
-    padding-left: $-gutter;
+  > #{$item-selector} {
+    padding-left: $gutter;
   }
 }
 
 /// Gutter vertical.
 ///
-/// @param {Number [unit]} $-gutter [1em]
+/// @param {Number [unit]} $gutter [1em]
 ///   Gutter spacing size.
-/// @param {String} $-item-selector ['.o-grid__item']
+/// @param {String} $item-selector ['.o-grid__item']
 ///   Grid item selector.
 ///
 /// @example scss - Usage
@@ -70,11 +70,11 @@
 ///       margin-top: 1em;
 ///     }
 ///   }
-@mixin o-grid-vertical-gutter($-gutter: 1em, $-item-selector: '.o-grid__item') {
-  margin-top: -$-gutter;
+@mixin o-grid-vertical-gutter($gutter: 1em, $item-selector: '.o-grid__item') {
+  margin-top: -$gutter;
 
-  > #{$-item-selector} {
-    margin-top: $-gutter;
+  > #{$item-selector} {
+    margin-top: $gutter;
   }
 }
 
