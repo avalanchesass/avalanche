@@ -1,0 +1,19 @@
+{
+  "name": "avalanchesass-setting-spacings",
+  "description": "Spacing sizes",
+  "keywords": [
+    "avalanchesass-package",
+    "sass"
+  ],
+  "version": "4.0.0-alpha.1",
+  "author": "Markus Oberlehner",
+  "homepage": "https://avalanche.oberlehner.net/",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avalanchesass/avalanche/tree/master/packages/avalanchesass-setting-spacings"
+  },
+  "bugs": {
+    "url": "https://github.com/avalanchesass/avalanche/issues"
+  }
+}
