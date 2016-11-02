@@ -1,20 +1,7 @@
+@import '~avalanchesass-setting-spacings';
+
 // @TODO: may not use separate file?
 // @TODO: import default variables.
-$spacings: (
-  xs: 0.5em,
-  s: 0.75em,
-  m: 1em,
-  l: 1.5em,
-  xl: 2em,
-  xxl: 3.5em,
-  xxxl: 6em,
-);
-
-@function spacing($size, $rem: false) {
-  $spacing: map-get($spacings, $size);
-  @if $rem { $spacing: ($spacing / 1em) * 1rem; }
-  @return $spacing;
-}
 
 $breakpoints: (
   s: 30em,

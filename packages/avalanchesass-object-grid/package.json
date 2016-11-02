@@ -17,7 +17,7 @@
     "url": "https://github.com/avalanchesass/avalanche/issues"
   },
   "dependencies": {
-    "avalanchesass-setting-spacings": "0.0.0-alpha.4f7f2369"
+    "avalanchesass-setting-spacings": "0.0.0-alpha.efd67daa"
   },
   "main": "scss/index.scss"
 }
