@@ -7,18 +7,14 @@ npm install avalanchesass-setting-spacings --save
 ```
 
 ## Basic usage
-It is recommended to use [node-sass](https://github.com/sass/node-sass) in combination with the [node-sass-magic-importer](https://github.com/maoberlehner/node-sass-magic-importer) custom importer to enable tilde (~) prefixed imports.
+This package requires that [node-sass](https://github.com/sass/node-sass) (or one of the grunt, gulp, etc. equivalents) in combination with the [node-sass-magic-importer](https://github.com/maoberlehner/node-sass-magic-importer) custom importer is used.
 
 ```scss
 // Import the main file.
 @import '~avalanchesass-setting-spacings';
-// Without `node-sass-magic-importer`.
-@import 'node_modules/avalanchesass-setting-spacings/scss/index';
 
 // Import just the variable file.
 @import '~avalanchesass-setting-spacings/scss/variable';
-// Without `node-sass-magic-importer`.
-@import 'node_modules/avalanchesass-setting-spacings/scss/variable';
 ```
 
 ## Usage

@@ -7,18 +7,14 @@ npm install avalanchesass-utility-width --save
 ```
 
 ## Basic usage
-It is recommended to use [node-sass](https://github.com/sass/node-sass) in combination with the [node-sass-magic-importer](https://github.com/maoberlehner/node-sass-magic-importer) custom importer to enable tilde (~) prefixed imports.
+This package requires that [node-sass](https://github.com/sass/node-sass) (or one of the grunt, gulp, etc. equivalents) in combination with the [node-sass-magic-importer](https://github.com/maoberlehner/node-sass-magic-importer) custom importer is used.
 
 ```scss
 // Import the main file.
 @import '~avalanchesass-utility-width';
-// Without `node-sass-magic-importer`.
-@import 'node_modules/avalanchesass-utility-width/scss/index';
 
 // Import just the mixin file.
 @import '~avalanchesass-utility-width/scss/mixin';
-// Without `node-sass-magic-importer`.
-@import 'node_modules/avalanchesass-utility-width/scss/mixin';
 ```
 
 ## Demo
