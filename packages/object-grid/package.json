@@ -5,7 +5,7 @@
     "avalanche-package",
     "sass"
   ],
-  "version": "4.0.0-alpha.1",
+  "version": "4.0.0-alpha.3",
   "author": "Markus Oberlehner",
   "homepage": "https://avalanche.oberlehner.net/",
   "license": "MIT",
@@ -17,7 +17,7 @@
     "url": "https://github.com/avalanchesass/avalanche/issues"
   },
   "dependencies": {
-    "@avalanche/setting-spacings": "4.0.0-alpha.1"
+    "@avalanche/setting-spacings": "^4.0.0-alpha.1"
   },
   "main": "scss/index.scss"
 }
