@@ -1,9 +1,9 @@
-# avalanchesass-object-grid
+# @avalanche/object-grid
 Fluid width, responsive grid system.
 
 ## Install
 ```bash
-npm install avalanchesass-object-grid --save
+npm install @avalanche/object-grid --save
 ```
 
 ## Basic usage
@@ -11,10 +11,10 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 
 ```scss
 // Import the main file.
-@import '~avalanchesass-object-grid';
+@import '~@avalanche/object-grid';
 
 // Import just the mixin file.
-@import '~avalanchesass-object-grid/scss/mixin';
+@import '~@avalanche/object-grid/scss/mixin';
 ```
 
 ## Demo
@@ -88,7 +88,7 @@ $o-grid-vertical-gutter-breakpoints: (
 
 ## Mixins
 ```scss
-@import '~avalanchesass-object-grid/scss/mixin';
+@import '~@avalanche/object-grid/scss/mixin';
 
 // Usage.
 .grid {

@@ -1,8 +1,8 @@
 {
-  "name": "avalanchesass-setting-spacings",
-  "description": "Spacing sizes",
+  "name": "@avalanche/utility-width",
+  "description": "Width classes",
   "keywords": [
-    "avalanchesass-package",
+    "avalanche-package",
     "sass"
   ],
   "version": "4.0.0-alpha.1",
@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/avalanchesass/avalanche/tree/master/packages/avalanchesass-setting-spacings"
+    "url": "https://github.com/avalanchesass/avalanche/tree/master/packages/utility-width"
   },
   "bugs": {
     "url": "https://github.com/avalanchesass/avalanche/issues"

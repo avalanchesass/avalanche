@@ -1,9 +1,9 @@
-# avalanchesass-utility-width
+# @avalanche/utility-width
 Width classes.
 
 ## Install
 ```bash
-npm install avalanchesass-utility-width --save
+npm install @avalanche/utility-width --save
 ```
 
 ## Basic usage
@@ -11,10 +11,10 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 
 ```scss
 // Import the main file.
-@import '~avalanchesass-utility-width';
+@import '~@avalanche/utility-width';
 
 // Import just the mixin file.
-@import '~avalanchesass-utility-width/scss/mixin';
+@import '~@avalanche/utility-width/scss/mixin';
 ```
 
 ## Demo
@@ -50,7 +50,7 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 
 ## Mixins
 ```scss
-@import '~avalanchesass-utility-width/scss/mixin';
+@import '~@avalanche/utility-width/scss/mixin';
 
 // Usage.
 .u-width-1/12 {

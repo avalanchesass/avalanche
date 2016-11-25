@@ -1,8 +1,8 @@
 {
-  "name": "avalanchesass-object-grid",
-  "description": "Fluid width, responsive grid system",
+  "name": "@avalanche/setting-spacings",
+  "description": "Spacing sizes",
   "keywords": [
-    "avalanchesass-package",
+    "avalanche-package",
     "sass"
   ],
   "version": "4.0.0-alpha.1",
@@ -11,13 +11,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/avalanchesass/avalanche/tree/master/packages/avalanche-object-grid"
+    "url": "https://github.com/avalanchesass/avalanche/tree/master/packages/setting-spacings"
   },
   "bugs": {
     "url": "https://github.com/avalanchesass/avalanche/issues"
-  },
-  "dependencies": {
-    "avalanchesass-setting-spacings": "0.0.0-alpha.efd67daa"
   },
   "main": "scss/index.scss"
 }

@@ -1,9 +1,9 @@
-# avalanchesass-setting-spacings
+# @avalanche/setting-spacings
 Spacing sizes.
 
 ## Install
 ```bash
-npm install avalanchesass-setting-spacings --save
+npm install @avalanche/setting-spacings --save
 ```
 
 ## Basic usage
@@ -11,10 +11,10 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 
 ```scss
 // Import the main file.
-@import '~avalanchesass-setting-spacings';
+@import '~@avalanche/setting-spacings';
 
 // Import just the variable file.
-@import '~avalanchesass-setting-spacings/scss/variable';
+@import '~@avalanche/setting-spacings/scss/variable';
 ```
 
 ## Usage

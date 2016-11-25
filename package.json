@@ -1,8 +1,8 @@
 {
-  "name": "avalanchesass",
+  "name": "@avalanche/avalanche",
   "description": "A modular SASS framework which can be extended with npm packages",
   "keywords": [
-    "avalanchesass"
+    "avalanche"
   ],
   "version": "4.0.0-alpha.1",
   "author": "Markus Oberlehner",
@@ -19,7 +19,7 @@
     "autoprefixer": "^6.5.0",
     "backstopjs": "^2.0.2",
     "handlebars-cmd": "^0.1.4",
-    "lerna": "2.0.0-beta.29",
+    "lerna": "2.0.0-beta.30",
     "node-sass": "^3.10.1",
     "node-sass-magic-importer": "^2.1.1",
     "postcss-cli": "^2.6.0",
