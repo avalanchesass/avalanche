@@ -13,8 +13,8 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 // Import the main file.
 @import '~@avalanche/setting-spacings';
 
-// Import just the variable file.
-@import '~@avalanche/setting-spacings/scss/variable';
+// Import just the setting file.
+@import '~@avalanche/setting-spacings/scss/settings';
 ```
 
 ## Usage

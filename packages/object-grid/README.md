@@ -14,7 +14,7 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 @import '~@avalanche/object-grid';
 
 // Import just the mixin file.
-@import '~@avalanche/object-grid/scss/mixin';
+@import '~@avalanche/object-grid/scss/mixins';
 ```
 
 ## Demo
@@ -88,7 +88,7 @@ $o-grid-vertical-gutter-breakpoints: (
 
 ## Mixins
 ```scss
-@import '~@avalanche/object-grid/scss/mixin';
+@import '~@avalanche/object-grid/scss/mixins';
 
 // Usage.
 .grid {

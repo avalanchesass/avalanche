@@ -1,5 +1,5 @@
 @import 'settings';
-@import 'mixin';
+@import 'mixins';
 
 @for $size from 1 through $u-width-base {
   .u-width-#{$size}\/#{$u-width-base} {

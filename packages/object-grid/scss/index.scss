@@ -1,7 +1,7 @@
 @import '~@avalanche/setting-spacings';
 
 @import 'settings';
-@import 'mixin';
+@import 'mixins';
 
 .o-grid {
   @include o-grid();

@@ -14,7 +14,7 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 @import '~@avalanche/utility-width';
 
 // Import just the mixin file.
-@import '~@avalanche/utility-width/scss/mixin';
+@import '~@avalanche/utility-width/scss/mixins';
 ```
 
 ## Demo
@@ -50,7 +50,7 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 
 ## Mixins
 ```scss
-@import '~@avalanche/utility-width/scss/mixin';
+@import '~@avalanche/utility-width/scss/mixins';
 
 // Usage.
 .u-width-1/12 {
