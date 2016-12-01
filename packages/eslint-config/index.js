@@ -1,18 +1,17 @@
 module.exports = {
   extends: [
-    `./rules/best-practices`,
-    `./rules/errors`,
-    `./rules/node`,
-    `./rules/style`,
-    `./rules/variables`,
-    `./rules/es6`,
-    `./rules/imports`
+    `eslint-config-airbnb-base`,
   ].map(require.resolve),
   parserOptions: {
     ecmaVersion: 7,
-    sourceType: `module`
+    sourceType: `module`,
   },
   rules: {
-    strict: 2
-  }
+    strict: 2,
+    quotes: [2, `backtick`, { avoidEscape: true }],
+    'import/no-extraneous-dependencies': [2, {
+      devDependencies: true,
+      optionalDependencies: true,
+    }],
+  },
 };

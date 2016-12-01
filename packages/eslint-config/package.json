@@ -20,9 +20,11 @@
   "bugs": {
     "url": "https://github.com/modularis/eslint-config-modularis/issues"
   },
+  "dependencies": {
+    "eslint-config-airbnb-base": "^10.0.1"
+  },
   "devDependencies": {
     "eslint": "^3.11.1",
-    "eslint-find-rules": "^1.14.3",
     "eslint-plugin-import": "^2.2.0",
     "pre-git": "^3.11.1"
   },
