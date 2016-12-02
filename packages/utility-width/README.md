@@ -1,6 +1,8 @@
 # @avalanche/utility-width
 Width classes.
 
+- [Documentation](https://avalanche.oberlehner.net/documentation/#utility: width)
+
 ## Install
 ```bash
 npm install @avalanche/utility-width --save

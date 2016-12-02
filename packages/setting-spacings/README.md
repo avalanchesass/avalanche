@@ -1,6 +1,8 @@
 # @avalanche/setting-spacings
 Spacing sizes.
 
+- [Documentation](https://avalanche.oberlehner.net/documentation/#setting: spacings)
+
 ## Install
 ```bash
 npm install @avalanche/setting-spacings --save
