@@ -5,7 +5,7 @@ Width classes.
 
 ## Install
 ```bash
-npm install @avalanche/utility-width --save
+npm install @avalanche/utility-width --save-dev
 ```
 
 ## Basic usage

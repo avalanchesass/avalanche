@@ -5,7 +5,7 @@ Spacing sizes.
 
 ## Install
 ```bash
-npm install @avalanche/setting-spacings --save
+npm install @avalanche/setting-spacings --save-dev
 ```
 
 ## Basic usage

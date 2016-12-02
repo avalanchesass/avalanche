@@ -5,7 +5,7 @@ Fluid width, responsive grid system.
 
 ## Install
 ```bash
-npm install @avalanche/object-grid --save
+npm install @avalanche/object-grid --save-dev
 ```
 
 ## Basic usage
