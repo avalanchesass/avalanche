@@ -37,10 +37,9 @@
 /// @example css - CSS Output
 ///   .element {
 ///     margin-left: -1em;
-///
-///     > .o-grid__item {
-///       padding-top: 1em;
-///     }
+///   }
+///   .element > .o-grid__item {
+///     padding-top: 1em;
 ///   }
 @mixin o-grid-horizontal-gutter($gutter: 1em, $item-selector: '.o-grid__item') {
   margin-left: -$gutter;
@@ -65,10 +64,9 @@
 /// @example css - CSS Output
 ///   .element {
 ///     margin-top: -1em;
-///
-///     > .o-grid__item {
-///       margin-top: 1em;
-///     }
+///   }
+///   .element > .o-grid__item {
+///     margin-top: 1em;
 ///   }
 @mixin o-grid-vertical-gutter($gutter: 1em, $item-selector: '.o-grid__item') {
   margin-top: -$gutter;
