@@ -1,0 +1,54 @@
+/**
+ * Settings
+ *
+ * - Globally-available settings.
+ * - Config switches.
+ * - Brand colors, etc.
+ */
+@import 'settings/**/*.scss';
+
+/**
+ * Tools
+ *
+ * - Globally-available tools.
+ * - Public mixins.
+ * - Helper functions.
+ */
+@import 'tools/**/*.scss';
+
+/**
+ * Generic
+ *
+ * - Ground zero styles.
+ * - Low-specificity, far-reaching.
+ * - Resets, Normalize.css, etc.
+ */
+@import 'generic/**/*.scss';
+
+/**
+ * Objects
+ *
+ * - OOCSS.
+ * - Design patterns.
+ * - No cosmetics.
+ * - Agnostically named classes only (e.g. .o-uilist {}).
+ */
+@import 'objects/**/*.scss';
+
+/**
+ * Components
+ *
+ * - Designed pieces of UI.
+ * - Still only using classes.
+ * - More explicitly named (e.g. .c-products-list {}).
+ */
+@import 'components/**/*.scss';
+
+/**
+ * Utilities
+ *
+ * - Overrides, helpers, utilities.
+ * - Only affect one piece of the DOM at a time.
+ * - Usually carry !important.
+ */
+@import 'utilities/**/*.scss';
