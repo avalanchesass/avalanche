@@ -1,8 +1,8 @@
-language: bash
+language: node
 node_js:
   - "node"
 install:
   - npm install -g yarn
   - yarn
 script:
-    - bash test/test.sh
+  - bash test/test.sh
