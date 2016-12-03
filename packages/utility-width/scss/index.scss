@@ -1,3 +1,4 @@
+@import '~@avalanche/setting-breakpoints';
 @import 'settings';
 @import 'mixins';
 
@@ -8,7 +9,7 @@
 }
 
 @each $breakpoint in $u-width-breakpoints {
-  @media (min-width: map-get($breakpoints, $breakpoint)) {
+  @media (min-width: setting-breakpoint($breakpoint)) {
     @for $size from 1 through $u-width-base {
       .u-width-#{$size}\/#{$u-width-base}\@#{$breakpoint} {
         @include u-width($size, $u-width-base);
