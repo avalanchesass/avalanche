@@ -3,7 +3,7 @@ set -e
 
 DIR="$( cd "$( dirname $0 )" && pwd )"
 
-source "$DIR/scripts/_build-test-parameter.sh"
+. "$DIR/scripts/_build-test-parameter.sh"
 
 for f in packages/*; do
   if [ -n "$PACKAGE" ] && [ `basename $f` != "$PACKAGE" ]; then
