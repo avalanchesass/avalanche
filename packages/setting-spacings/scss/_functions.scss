@@ -14,14 +14,14 @@
 ///
 /// @example scss - Usage
 ///   .element {
-///     margin-top: spacing(m);
+///     margin-top: setting-spacing(m);
 ///   }
 ///
 /// @example css - CSS Output
 ///   .element {
 ///     margin-top: 1em;
 ///   }
-@function spacing($size, $rem: false) {
+@function setting-spacing($size, $rem: false) {
   $spacing: map-get($spacings, $size);
   @if $rem { $spacing: ($spacing / 1em) * 1rem; }
   @return $spacing;

@@ -6,10 +6,10 @@
   @include o-grid();
 
   @if $o-grid-horizontal-gutter-default {
-    @include o-grid-horizontal-gutter(spacing($o-grid-horizontal-gutter-default));
+    @include o-grid-horizontal-gutter(setting-spacing($o-grid-horizontal-gutter-default));
   }
   @if $o-grid-vertical-gutter-default {
-    @include o-grid-vertical-gutter(spacing($o-grid-vertical-gutter-default));
+    @include o-grid-vertical-gutter(setting-spacing($o-grid-vertical-gutter-default));
   }
 }
 
@@ -22,15 +22,15 @@
     @warn 'Defining the same size in $o-grid-horizontal-gutter as set for $o-grid-horizontal-gutter-default is redundant, remove "#{$size}" from $o-grid-horizontal-gutter';
   }
   .o-grid--horizontal-gutter-#{$size} {
-    @include o-grid-horizontal-gutter(spacing($size));
+    @include o-grid-horizontal-gutter(setting-spacing($size));
   }
 }
 
 @each $size, $breakpoints in $o-grid-horizontal-gutter-breakpoints {
   @each $breakpoint in $breakpoints {
-    @media (min-width: breakpoint($breakpoint)) {
+    @media (min-width: setting-breakpoint($breakpoint)) {
       .o-grid--horizontal-gutter-#{$size}\@#{$breakpoint} {
-        @include o-grid-horizontal-gutter(spacing($size));
+        @include o-grid-horizontal-gutter(setting-spacing($size));
       }
     }
   }
@@ -41,15 +41,15 @@
     @warn 'Defining the same size in $o-grid-vertical-gutter as set for $o-grid-vertical-gutter-default is redundant, remove "#{$size}" from $o-grid-vertical-gutter';
   }
   .o-grid--vertical-gutter-#{$size} {
-    @include o-grid-vertical-gutter(spacing($size));
+    @include o-grid-vertical-gutter(setting-spacing($size));
   }
 }
 
 @each $size, $breakpoints in $o-grid-vertical-gutter-breakpoints {
   @each $breakpoint in $breakpoints {
-    @media (min-width: breakpoint($breakpoint)) {
+    @media (min-width: setting-breakpoint($breakpoint)) {
       .o-grid--vertical-gutter-#{$size}\@#{$breakpoint} {
-        @include o-grid-vertical-gutter(spacing($size));
+        @include o-grid-vertical-gutter(setting-spacing($size));
       }
     }
   }

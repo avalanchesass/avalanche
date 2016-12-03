@@ -8,7 +8,7 @@ $breakpoints: (
   xl: 75em,
 );
 
-@function breakpoint($size, $rem: false) {
+@function setting-breakpoint($size, $rem: false) {
   $breakpoint: map-get($breakpoints, $size);
   @if $rem { $breakpoint: ($breakpoint / 1em) * 1rem; }
   @return $breakpoint;

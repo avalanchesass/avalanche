@@ -23,7 +23,7 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 ```scss
 // Function.
 .element {
-  margin-top: spacing(m);
+  margin-top: setting-spacing(m);
 }
 
 // Map.

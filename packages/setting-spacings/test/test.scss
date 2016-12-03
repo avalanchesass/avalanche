@@ -1,5 +1,5 @@
 @import '../scss/index';
 
 .test::before {
-  content: '#{spacing(xs)}, #{spacing(s)}, #{spacing(m)}, #{spacing(l)}, #{spacing(xl)}, #{spacing(xxl)}, #{spacing(xxxl)}';
+  content: '#{setting-spacing(xs)}, #{setting-spacing(s)}, #{setting-spacing(m)}, #{setting-spacing(l)}, #{setting-spacing(xl)}, #{setting-spacing(xxl)}, #{setting-spacing(xxxl)}';
 }
