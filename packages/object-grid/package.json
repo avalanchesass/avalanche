@@ -3,6 +3,7 @@
   "description": "Fluid width, responsive grid system",
   "keywords": [
     "avalanche-package",
+    "avalanche",
     "sass"
   ],
   "version": "4.0.0-alpha.3",
