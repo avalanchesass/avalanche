@@ -13,9 +13,9 @@ for f in packages/*; do
   if [ -d "$f/test" ]; then
     mkdir -p "$f/test/tmp"
     # Build HTML
-    sh "$DIR/scripts/build-test-html.sh" --package $(basename $f)
+    bash "$DIR/scripts/build-test-html.sh" --package $(basename $f)
     # Build CSS
-    sh "$DIR/scripts/build-test-css.sh" --package $(basename $f)
+    bash "$DIR/scripts/build-test-css.sh" --package $(basename $f)
     # Test
     ( cd "$f" && ../../node_modules/backstopjs/cli/index.js test --configPath=../../backstop.json )
     # Cleanup
