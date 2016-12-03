@@ -18,6 +18,7 @@
     "url": "https://github.com/avalanchesass/avalanche/issues"
   },
   "dependencies": {
+    "@avalanche/setting-breakpoints": "^4.0.0-alpha.1",
     "@avalanche/setting-spacings": "^4.0.0-alpha.1"
   },
   "main": "scss/index.scss"

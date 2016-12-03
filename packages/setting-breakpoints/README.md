@@ -1,11 +1,11 @@
-# @avalanche/setting-spacings
-Spacing sizes.
+# @avalanche/setting-breakpoints
+Breakpoint sizes.
 
-- [Documentation](https://avalanche.oberlehner.net/documentation/#setting: spacings)
+- [Documentation](https://avalanche.oberlehner.net/documentation/#setting: breakpoints)
 
 ## Install
 ```bash
-npm install @avalanche/setting-spacings --save-dev
+npm install @avalanche/setting-breakpoints --save-dev
 ```
 
 ## Basic usage
@@ -13,23 +13,19 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 
 ```scss
 // Import the main file.
-@import '~@avalanche/setting-spacings';
+@import '~@avalanche/setting-breakpoints';
 
 // Import just the settings file.
-@import '~@avalanche/setting-spacings/scss/settings';
+@import '~@avalanche/setting-breakpoints/scss/settings';
 ```
 
 ## Usage
 ```scss
 // Function.
-.element {
-  margin-top: setting-spacing(m);
-}
+@media (min-width: setting-breakpoint(m)) { }
 
 // Map.
-.element {
-  margin-top: map-get($spacings, m);
-}
+@media (min-width: map-get($breakpoints, m)) { }
 ```
 
 ## About

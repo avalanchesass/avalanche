@@ -1,0 +1,24 @@
+@import 'settings';
+
+////
+/// @group Setting: breakpoints
+/// @author Markus Oberlehner
+////
+
+/// Returns breakpoint size.
+///
+/// @param {String} $size
+///   Size (s, m, l or xl).
+/// @param {Boolean} $rem [false]
+///   Return spacing size in rem instead of em.
+///
+/// @example scss - Usage
+///   @media (min-width: setting-breakpoint(m)) { }
+///
+/// @example css - CSS Output
+///   @media (min-width: 45em) { }
+@function setting-breakpoint($size, $rem: false) {
+  $breakpoint: map-get($breakpoints, $size);
+  @if $rem { $breakpoint: ($breakpoint / 1em) * 1rem; }
+  @return $breakpoint;
+}

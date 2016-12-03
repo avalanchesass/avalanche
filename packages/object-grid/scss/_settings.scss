@@ -1,21 +1,3 @@
-// @TODO: may not use separate file?
-// @TODO: import default variables.
-
-$breakpoints: (
-  s: 30em,
-  m: 45em,
-  l: 60em,
-  xl: 75em,
-);
-
-@function setting-breakpoint($size, $rem: false) {
-  $breakpoint: map-get($breakpoints, $size);
-  @if $rem { $breakpoint: ($breakpoint / 1em) * 1rem; }
-  @return $breakpoint;
-}
-
-
-
 ////
 /// @group Object: grid
 /// @author Markus Oberlehner
