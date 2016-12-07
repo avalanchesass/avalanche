@@ -1,0 +1,32 @@
+////
+/// @group Object: container
+/// @author Markus Oberlehner
+////
+
+/// Basic container class to limit the max-width of the layout and add some padding.
+///
+/// @example scss - Usage
+///   .element {
+///     @include o-container();
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     margin-right: auto;
+///     margin-left: auto;
+///     max-width: 64em;
+///     padding-right: 1em;
+///     padding-left: 1em;
+///   }
+@mixin o-container($size: 64em, $horizontal-spacing: 1em) {
+  margin-right: auto;
+  margin-left: auto;
+
+  @if $size > 0 {
+    max-width: $size;
+  }
+  @if $horizontal-spacing > 0 {
+    padding-right: $horizontal-spacing;
+    padding-left: $horizontal-spacing;
+  }
+}

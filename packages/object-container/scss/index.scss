@@ -1,0 +1,16 @@
+@import '~@avalanche/setting-spacings';
+@import 'settings';
+@import 'mixins';
+
+.o-container {
+  @include o-container($o-container-size-default, setting-spacing($o-container-vertical-spacing));
+}
+
+@each $modifier, $size in $o-container-sizes {
+  @if $size == $o-container-size-default {
+    @warn 'Size #{$modifier} is the same as $o-container-size-default.';
+  }
+  .o-container--#{$modifier} {
+    @include o-container($size, setting-spacing($o-container-vertical-spacing));
+  }
+}

@@ -1,0 +1,16 @@
+////
+/// @group Object: container
+/// @author Markus Oberlehner
+////
+
+/// Default container size.
+/// @type Number
+$o-container-size-default: 64em !default;
+
+/// Container sizes.
+/// @type Map
+$o-container-sizes: () !default;
+
+/// Vertical spacing.
+/// @type String
+$o-container-vertical-spacing: m !default;
