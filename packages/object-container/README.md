@@ -28,10 +28,11 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 ```
 
 ### Sizes
-Activate size modifier classes via the `$o-container-sizes` map variable.
+Modify the container max widths via the `$o-container-max-widths` map variable.
 
 ```scss
-$o-container-sizes: (
+$o-container-max-widths: (
+  s: 32rem,
   m: 64rem,
   l: 96rem
 );
