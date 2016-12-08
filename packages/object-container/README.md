@@ -32,8 +32,8 @@ Activate size modifier classes via the `$o-container-sizes` map variable.
 
 ```scss
 $o-container-sizes: (
-  m: 64em,
-  l: 96em
+  m: 64rem,
+  l: 96rem
 );
 ```
 
@@ -50,7 +50,7 @@ $o-container-sizes: (
 
 // Usage.
 .container {
-  @include o-container(64em, 1em);
+  @include o-container(64rem, 1rem);
 }
 ```
 

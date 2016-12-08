@@ -14,11 +14,11 @@
 ///   .element {
 ///     margin-right: auto;
 ///     margin-left: auto;
-///     max-width: 64em;
+///     max-width: 64rem;
 ///     padding-right: 1em;
 ///     padding-left: 1em;
 ///   }
-@mixin o-container($size: 64em, $horizontal-spacing: 1em) {
+@mixin o-container($size: 64rem, $horizontal-spacing: 1rem) {
   margin-right: auto;
   margin-left: auto;
 
