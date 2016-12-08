@@ -17,6 +17,12 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 
 // Import just the mixin file.
 @import '~@avalanche/object-grid/scss/mixins';
+
+// Import just the classes you need.
+@import '{ .o-grid, .o-grid__item } from ~@avalanche/object-grid';
+
+// Not a fan of the "o-" prefix?
+@import '{ .o-grid as .grid, .o-grid__item as .grid__item } from ~@avalanche/object-grid';
 ```
 
 ## Demo
