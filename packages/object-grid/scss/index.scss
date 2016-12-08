@@ -16,6 +16,13 @@
 
 .o-grid__item {
   @include o-grid-item();
+
+  @if $o-grid-horizontal-gutter-default {
+    @include o-grid-item-horizontal-gutter(setting-spacing($o-grid-horizontal-gutter-default));
+  }
+  @if $o-grid-vertical-gutter-default {
+    @include o-grid-item-vertical-gutter(setting-spacing($o-grid-vertical-gutter-default));
+  }
 }
 
 @each $size in $o-grid-horizontal-gutter {
@@ -24,6 +31,10 @@
   }
   .o-grid--horizontal-gutter-#{$size} {
     @include o-grid-horizontal-gutter(setting-spacing($size));
+
+    > .o-grid__item {
+      @include o-grid-item-horizontal-gutter(setting-spacing($size));
+    }
   }
 }
 
@@ -32,6 +43,11 @@
     @media (min-width: setting-breakpoint($breakpoint)) {
       .o-grid--horizontal-gutter-#{$size}\@#{$breakpoint} {
         @include o-grid-horizontal-gutter(setting-spacing($size));
+
+        // stylelint-disable-next-line max-nesting-depth
+        > .o-grid__item {
+          @include o-grid-item-horizontal-gutter(setting-spacing($size));
+        }
       }
     }
   }
@@ -43,6 +59,10 @@
   }
   .o-grid--vertical-gutter-#{$size} {
     @include o-grid-vertical-gutter(setting-spacing($size));
+
+    > .o-grid__item {
+      @include o-grid-item-vertical-gutter(setting-spacing($size));
+    }
   }
 }
 
@@ -51,6 +71,11 @@
     @media (min-width: setting-breakpoint($breakpoint)) {
       .o-grid--vertical-gutter-#{$size}\@#{$breakpoint} {
         @include o-grid-vertical-gutter(setting-spacing($size));
+
+        // stylelint-disable-next-line max-nesting-depth
+        > .o-grid__item {
+          @include o-grid-item-vertical-gutter(setting-spacing($size));
+        }
       }
     }
   }
