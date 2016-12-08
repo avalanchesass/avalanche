@@ -26,8 +26,8 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 ```
 
 ## Demo
+### Default gutter sizes
 ```html
-<h3>Default gutter sizes.</h3>
 <div class="o-grid">
   <div class="o-grid__item">
     <div>Grid item 1</div>
@@ -42,7 +42,10 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
     <div>Grid item 4</div>
   </div>
 </div>
-<h3>X-large gutter size.</h3>
+```
+
+### X-large gutter size
+```html
 <div class="o-grid o-grid--xl">
   <div class="o-grid__item">
     <div>Grid item 1</div>
@@ -57,7 +60,10 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
     <div>Grid item 4</div>
   </div>
 </div>
-<h3>Default horizontal gutter with x-large vertical gutter size.</h3>
+```
+
+### Default horizontal gutter with x-large vertical gutter size
+```html
 <div class="o-grid o-grid--xl-vertical">
   <div class="o-grid__item">
     <div>Grid item 1</div>
