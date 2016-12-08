@@ -1,82 +1,209 @@
-@import '~@avalanche/setting-breakpoints';
 @import '~@avalanche/setting-spacings';
 @import 'settings';
 @import 'mixins';
 
 .o-grid {
-  @include o-grid();
-
-  @if $o-grid-horizontal-gutter-default {
-    @include o-grid-horizontal-gutter(setting-spacing($o-grid-horizontal-gutter-default));
-  }
-  @if $o-grid-vertical-gutter-default {
-    @include o-grid-vertical-gutter(setting-spacing($o-grid-vertical-gutter-default));
-  }
+  @include o-grid(
+    setting-spacing($o-grid-gutter-horizontal-default),
+    setting-spacing($o-grid-gutter-vertical-default)
+  );
 }
 
 .o-grid__item {
-  @include o-grid-item();
-
-  @if $o-grid-horizontal-gutter-default {
-    @include o-grid-item-horizontal-gutter(setting-spacing($o-grid-horizontal-gutter-default));
-  }
-  @if $o-grid-vertical-gutter-default {
-    @include o-grid-item-vertical-gutter(setting-spacing($o-grid-vertical-gutter-default));
-  }
+  @include o-grid-item(
+    setting-spacing($o-grid-gutter-horizontal-default),
+    setting-spacing($o-grid-gutter-vertical-default)
+  );
 }
 
-@each $size in $o-grid-horizontal-gutter {
-  @if $size == $o-grid-horizontal-gutter-default {
-    @warn 'Defining the same size in $o-grid-horizontal-gutter as set for $o-grid-horizontal-gutter-default is redundant, remove "#{$size}" from $o-grid-horizontal-gutter';
-  }
-  .o-grid--horizontal-gutter-#{$size} {
-    @include o-grid-horizontal-gutter(setting-spacing($size));
-
-    > .o-grid__item {
-      @include o-grid-item-horizontal-gutter(setting-spacing($size));
-    }
-  }
+.o-grid--s {
+  @include o-grid(
+    setting-spacing(s),
+    setting-spacing(s),
+    false
+  );
 }
 
-@each $size, $breakpoints in $o-grid-horizontal-gutter-breakpoints {
-  @each $breakpoint in $breakpoints {
-    @media (min-width: setting-breakpoint($breakpoint)) {
-      .o-grid--horizontal-gutter-#{$size}\@#{$breakpoint} {
-        @include o-grid-horizontal-gutter(setting-spacing($size));
-
-        // stylelint-disable-next-line max-nesting-depth
-        > .o-grid__item {
-          @include o-grid-item-horizontal-gutter(setting-spacing($size));
-        }
-      }
-    }
-  }
+.o-grid--s > .o-grid__item {
+  @include o-grid-item(
+    setting-spacing(s),
+    setting-spacing(s),
+    false
+  );
 }
 
-@each $size in $o-grid-vertical-gutter {
-  @if $size == $o-grid-vertical-gutter-default {
-    @warn 'Defining the same size in $o-grid-vertical-gutter as set for $o-grid-vertical-gutter-default is redundant, remove "#{$size}" from $o-grid-vertical-gutter';
-  }
-  .o-grid--vertical-gutter-#{$size} {
-    @include o-grid-vertical-gutter(setting-spacing($size));
-
-    > .o-grid__item {
-      @include o-grid-item-vertical-gutter(setting-spacing($size));
-    }
-  }
+.o-grid--s-horizontal {
+  @include o-grid(setting-spacing(s), 0, false);
 }
 
-@each $size, $breakpoints in $o-grid-vertical-gutter-breakpoints {
-  @each $breakpoint in $breakpoints {
-    @media (min-width: setting-breakpoint($breakpoint)) {
-      .o-grid--vertical-gutter-#{$size}\@#{$breakpoint} {
-        @include o-grid-vertical-gutter(setting-spacing($size));
+.o-grid--s-horizontal > .o-grid__item {
+  @include o-grid-item(setting-spacing(s), 0, false);
+}
 
-        // stylelint-disable-next-line max-nesting-depth
-        > .o-grid__item {
-          @include o-grid-item-vertical-gutter(setting-spacing($size));
-        }
-      }
-    }
-  }
+.o-grid--s-vertical {
+  @include o-grid(0, setting-spacing(s), false);
+}
+
+.o-grid--s-vertical > .o-grid__item {
+  @include o-grid-item(0, setting-spacing(s), false);
+}
+
+.o-grid--m {
+  @include o-grid(
+    setting-spacing(m),
+    setting-spacing(m),
+    false
+  );
+}
+
+.o-grid--m > .o-grid__item {
+  @include o-grid-item(
+    setting-spacing(m),
+    setting-spacing(m),
+    false
+  );
+}
+
+.o-grid--m-horizontal {
+  @include o-grid(setting-spacing(m), 0, false);
+}
+
+.o-grid--m-horizontal > .o-grid__item {
+  @include o-grid-item(setting-spacing(m), 0, false);
+}
+
+.o-grid--m-vertical {
+  @include o-grid(0, setting-spacing(m), false);
+}
+
+.o-grid--m-vertical > .o-grid__item {
+  @include o-grid-item(0, setting-spacing(m), false);
+}
+
+.o-grid--l {
+  @include o-grid(
+    setting-spacing(l),
+    setting-spacing(l),
+    false
+  );
+}
+
+.o-grid--l > .o-grid__item {
+  @include o-grid-item(
+    setting-spacing(l),
+    setting-spacing(l),
+    false
+  );
+}
+
+.o-grid--l-horizontal {
+  @include o-grid(setting-spacing(l), 0, false);
+}
+
+.o-grid--l-horizontal > .o-grid__item {
+  @include o-grid-item(setting-spacing(l), 0, false);
+}
+
+.o-grid--l-vertical {
+  @include o-grid(0, setting-spacing(l), false);
+}
+
+.o-grid--l-vertical > .o-grid__item {
+  @include o-grid-item(0, setting-spacing(l), false);
+}
+
+.o-grid--xl {
+  @include o-grid(
+    setting-spacing(xl),
+    setting-spacing(xl),
+    false
+  );
+}
+
+.o-grid--xl > .o-grid__item {
+  @include o-grid-item(
+    setting-spacing(xl),
+    setting-spacing(xl),
+    false
+  );
+}
+
+.o-grid--xl-horizontal {
+  @include o-grid(setting-spacing(xl), 0, false);
+}
+
+.o-grid--xl-horizontal > .o-grid__item {
+  @include o-grid-item(setting-spacing(xl), 0, false);
+}
+
+.o-grid--xl-vertical {
+  @include o-grid(0, setting-spacing(xl), false);
+}
+
+.o-grid--xl-vertical > .o-grid__item {
+  @include o-grid-item(0, setting-spacing(xl), false);
+}
+
+.o-grid--xxl {
+  @include o-grid(
+    setting-spacing(xxl),
+    setting-spacing(xxl),
+    false
+  );
+}
+
+.o-grid--xxl > .o-grid__item {
+  @include o-grid-item(
+    setting-spacing(xxl),
+    setting-spacing(xxl),
+    false
+  );
+}
+
+.o-grid--xxl-horizontal {
+  @include o-grid(setting-spacing(xxl), 0, false);
+}
+
+.o-grid--xxl-horizontal > .o-grid__item {
+  @include o-grid-item(setting-spacing(xxl), 0, false);
+}
+
+.o-grid--xxl-vertical {
+  @include o-grid(0, setting-spacing(xxl), false);
+}
+
+.o-grid--xxl-vertical > .o-grid__item {
+  @include o-grid-item(0, setting-spacing(xxl), false);
+}
+
+.o-grid--xxxl {
+  @include o-grid(
+    setting-spacing(xxxl),
+    setting-spacing(xxxl),
+    false
+  );
+}
+
+.o-grid--xxxl > .o-grid__item {
+  @include o-grid-item(
+    setting-spacing(xxxl),
+    setting-spacing(xxxl),
+    false
+  );
+}
+
+.o-grid--xxxl-horizontal {
+  @include o-grid(setting-spacing(xxxl), 0, false);
+}
+
+.o-grid--xxxl-horizontal > .o-grid__item {
+  @include o-grid-item(setting-spacing(xxxl), 0, false);
+}
+
+.o-grid--xxxl-vertical {
+  @include o-grid(0, setting-spacing(xxxl), false);
+}
+
+.o-grid--xxxl-vertical > .o-grid__item {
+  @include o-grid-item(0, setting-spacing(xxxl), false);
 }

@@ -7,6 +7,13 @@
 
 /// Grid wrapper.
 ///
+/// @param {Number [unit]} $gutter-horizontal [1rem]
+///   Horizontal gutter size.
+/// @param {Number [unit]} $gutter-vertical [1rem]
+///   Vertical gutter size.
+/// @param {Boolean} $layout [true]
+///   Enable or disable returning layout properties.
+///
 /// @example scss - Usage
 ///   .element {
 ///     @include o-grid();
@@ -14,51 +21,32 @@
 ///
 /// @example css - CSS Output
 ///   .element {
+///     margin-left: -1rem;
+///     margin-top: -1rem;
 ///     display: flex;
 ///     flex-wrap: wrap;
 ///   }
-@mixin o-grid() {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/// Gutter horizontal.
-///
-/// @param {Number [unit]} $gutter [1em]
-///   Gutter spacing size.
-///
-/// @example scss - Usage
-///   .element {
-///     @include o-grid-horizontal-gutter(1em);
-///   }
-///
-/// @example css - CSS Output
-///   .element {
-///     margin-left: -1em;
-///   }
-@mixin o-grid-horizontal-gutter($gutter: 1em) {
-  margin-left: -$gutter;
-}
-
-/// Gutter vertical.
-///
-/// @param {Number [unit]} $gutter [1em]
-///   Gutter spacing size.
-///
-/// @example scss - Usage
-///   .element {
-///     @include o-grid-vertical-gutter(1em);
-///   }
-///
-/// @example css - CSS Output
-///   .element {
-///     margin-top: -1em;
-///   }
-@mixin o-grid-vertical-gutter($gutter: 1em) {
-  margin-top: -$gutter;
+@mixin o-grid($gutter-horizontal: 1rem, $gutter-vertical: 1rem, $layout: true) {
+  @if $gutter-horizontal > 0 {
+    margin-left: -$gutter-horizontal;
+  }
+  @if $gutter-vertical > 0 {
+    margin-top: -$gutter-vertical;
+  }
+  @if $layout {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 /// Grid item.
+///
+/// @param {Number [unit]} $gutter-horizontal [1rem]
+///   Horizontal gutter size.
+/// @param {Number [unit]} $gutter-vertical [1rem]
+///   Vertical gutter size.
+/// @param {Boolean} $layout [true]
+///   Enable or disable returning layout properties.
 ///
 /// @example scss - Usage
 ///   .element {
@@ -67,46 +55,20 @@
 ///
 /// @example css - CSS Output
 ///   .element {
+///     padding-left: 1rem;
+///     margin-top: 1rem;
 ///     flex-grow: 1;
 ///     box-sizing: border-box;
 ///   }
-@mixin o-grid-item() {
-  flex-grow: 1;
-  box-sizing: border-box;
-}
-
-/// Item gutter horizontal.
-///
-/// @param {Number [unit]} $gutter [1em]
-///   Gutter spacing size.
-///
-/// @example scss - Usage
-///   .element {
-///     @include o-grid-item-horizontal-gutter(1em);
-///   }
-///
-/// @example css - CSS Output
-///   .element {
-///     padding-left: 1em;
-///   }
-@mixin o-grid-item-horizontal-gutter($gutter: 1em) {
-  padding-left: $gutter;
-}
-
-/// Item gutter vertical.
-///
-/// @param {Number [unit]} $gutter [1em]
-///   Gutter spacing size.
-///
-/// @example scss - Usage
-///   .element {
-///     @include o-grid-item-vertical-gutter(1em);
-///   }
-///
-/// @example css - CSS Output
-///   .element {
-///     margin-top: 1em;
-///   }
-@mixin o-grid-item-vertical-gutter($gutter: 1em) {
-  margin-top: $gutter;
+@mixin o-grid-item($gutter-horizontal: 1rem, $gutter-vertical: 1rem, $layout: true) {
+  @if $gutter-horizontal > 0 {
+    padding-left: $gutter-horizontal;
+  }
+  @if $gutter-vertical > 0 {
+    margin-top: $gutter-vertical;
+  }
+  @if $layout {
+    flex-grow: 1;
+    box-sizing: border-box;
+  }
 }

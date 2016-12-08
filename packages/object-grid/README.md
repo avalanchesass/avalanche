@@ -17,33 +17,18 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 
 // Import just the mixin file.
 @import '~@avalanche/object-grid/scss/mixins';
+
+// Import just the classes you need.
+@import '{ .o-grid, .o-grid__item } from ~@avalanche/object-grid';
+
+// Not a fan of the "o-" prefix?
+@import '{ .o-grid as .grid, .o-grid__item as .grid__item } from ~@avalanche/object-grid';
 ```
 
 ## Demo
 ```html
+<h3>Default gutter sizes.</h3>
 <div class="o-grid">
-  <div class="o-grid__item">
-    <div>Grid item 1</div>
-  </div>
-  <div class="o-grid__item">
-    <div>Grid item 2</div>
-  </div>
-  <div class="o-grid__item">
-    <div>Grid item 3</div>
-  </div>
-</div>
-```
-
-### Gutter
-Activate horizontal / vertical gutter modifier classes via the `$o-grid-horizontal-gutter` / `$o-grid-vertical-gutter` map variables.
-
-```scss
-$o-grid-horizontal-gutter: (l);
-$o-grid-vertical-gutter: (l);
-```
-
-```html
-<div class="o-grid o-grid--horizontal-gutter-l o-grid--vertical-gutter-l">
   <div class="o-grid__item">
     <div>Grid item 1</div>
   </div>
@@ -57,22 +42,23 @@ $o-grid-vertical-gutter: (l);
     <div>Grid item 4</div>
   </div>
 </div>
-```
-
-### Gutter breakpoints
-To activate gutter breakpoint modifier classes, use the `$o-grid-horizontal-gutter-breakpoints` / `$o-grid-vertical-gutter-breakpoints` map variables.
-
-```scss
-$o-grid-horizontal-gutter-breakpoints: (
-  l: (m),
-);
-$o-grid-vertical-gutter-breakpoints: (
-  l: (m),
-);
-```
-
-```html
-<div class="o-grid o-grid--horizontal-gutter-l@m o-grid--vertical-gutter-l@m">
+<h3>X-large gutter size.</h3>
+<div class="o-grid o-grid--xl">
+  <div class="o-grid__item">
+    <div>Grid item 1</div>
+  </div>
+  <div class="o-grid__item">
+    <div>Grid item 2</div>
+  </div>
+  <div class="o-grid__item">
+    <div>Grid item 3</div>
+  </div>
+  <div class="o-grid__item">
+    <div>Grid item 4</div>
+  </div>
+</div>
+<h3>Default horizontal gutter with x-large vertical gutter size.</h3>
+<div class="o-grid o-grid--xl-vertical">
   <div class="o-grid__item">
     <div>Grid item 1</div>
   </div>
@@ -95,8 +81,6 @@ $o-grid-vertical-gutter-breakpoints: (
 // Usage.
 .grid {
   @include o-grid();
-  @include o-grid-horizontal-gutter(1em, '.grid__item');
-  @include o-grid-vertical-gutter(1em, '.grid__item');
 }
 
 .grid__item {

@@ -3,33 +3,10 @@
 /// @author Markus Oberlehner
 ////
 
-/// Horizontal gutter default.
+/// Default horizontal gutter.
 /// @type String
-$o-grid-horizontal-gutter-default: m !default;
+$o-grid-gutter-horizontal-default: m !default;
 
-/// Horizontal gutter sizes.
-/// @type Map
-$o-grid-horizontal-gutter: () !default;
-
-/// The key of the associative map defines the gutter size, the value is a map
-/// with breakpoint sizes for which horizontal gutter classes should be
-/// generated.
-/// @type Map
-$o-grid-horizontal-gutter-breakpoints: (
-  m: (),
-) !default;
-
-/// Vertical gutter default.
+/// Default vertical gutter.
 /// @type String
-$o-grid-vertical-gutter-default: m !default;
-
-/// Vertical gutter sizes.
-/// @type Map
-$o-grid-vertical-gutter: () !default;
-
-/// The key of the associative map defines the gutter size, the value is a map
-/// with breakpoint sizes for which vertical gutter classes should be generated.
-/// @type Map
-$o-grid-vertical-gutter-breakpoints: (
-  m: (),
-) !default;
+$o-grid-gutter-vertical-default: m !default;
