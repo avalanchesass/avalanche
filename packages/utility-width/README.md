@@ -17,6 +17,12 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 
 // Import just the mixin file.
 @import '~@avalanche/utility-width/scss/mixins';
+
+// Import just the classes you need.
+@import '{ .u-width-12\/12, .u-width-4\/12\@m } from ~@avalanche/utility-width';
+
+// Not a fan of the "u-" prefix?
+@import '{ .u-width-12\/12 as .width-12\/12, .u-width-4\/12\@m as .width-4\/12\@m } from ~@avalanche/utility-width';
 ```
 
 ## Demo
