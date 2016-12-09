@@ -1,0 +1,38 @@
+@import 'avalanchesass_utility_offset/style_guide';
+@import 'avalanchesass_utility_offset/variable';
+@import 'avalanchesass_utility_offset/mixin';
+
+/* extract utility.css */
+/* extract utility_offset.css */
+/*---
+title:   Example
+name:    utility_offset_example
+section: utility_offset
+order:   1
+---
+
+```example:html
+<div style="text-align: center;">
+  <div class="#{$u-offset-namespace}-6" style="width:50%;padding: 0.5em;background: #fff;">Offset 6</div>
+  <div class="#{$u-offset-namespace}-8" style="width:33.3333333%;padding: 0.5em;background: #fff;">Offset 8</div>
+  <div class="#{$u-offset-namespace}-4" style="width:66.6666666%;padding: 0.5em;background: #fff;">Offset 4</div>
+</div>
+```
+*/
+@for $-size from 1 through $u-offset-item-count {
+  .#{$u-offset-namespace}-#{$-size} {
+    @include u-offset($-size, $u-offset-item-count);
+  }
+}
+
+@each $-breakpoint in $u-offset-breakpoints {
+  @media (min-width: map-get($breakpoints, $-breakpoint)) {
+    @for $-size from 1 through $u-offset-item-count {
+      .#{$u-offset-namespace}-#{$-size}\@#{$-breakpoint} {
+        @include u-offset($-size, $u-offset-item-count);
+      }
+    }
+  }
+}
+/* end extract utility_offset.css */
+/* end extract utility.css */

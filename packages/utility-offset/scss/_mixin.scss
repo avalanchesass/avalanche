@@ -1,0 +1,17 @@
+@import 'avalanchesass_utility_offset/style_guide';
+
+/*---
+title:   Mixin
+name:    utility_offset_mixin
+section: utility_offset
+order:   2
+---
+
+```css
+u-offset($-size[, $-item-count: 12])
+```
+*/
+@mixin u-offset($-size, $-item-count: 12) {
+  $-base-size: (100% / $-item-count);
+  margin-left: ($-base-size * $-size) !important;
+}
