@@ -1,0 +1,25 @@
+{
+  "name": "avalanchesass_object_aspect_ratio",
+  "description": "Maintain aspect ratio",
+  "keywords": [
+    "avalanchesass-package",
+    "eyeglass-module",
+    "sass"
+  ],
+  "version": "3.0.0",
+  "author": "Markus Oberlehner",
+  "homepage": "https://github.com/avalanchesass/avalanche_object_aspect_ratio",
+  "license": "GPL v2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avalanchesass/avalanche_object_aspect_ratio"
+  },
+  "bugs": {
+    "url": "https://github.com/avalanchesass/avalanche_object_aspect_ratio/issues"
+  },
+  "eyeglass": {
+    "sassDir": "scss",
+    "exports": false,
+    "needs": "^0.8.2"
+  }
+}

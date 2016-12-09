@@ -1,0 +1,29 @@
+@import 'avalanchesass_object_aspect_ratio/style_guide';
+
+/*---
+title:   Mixin
+name:    object_aspect_ratio_mixin
+section: object_aspect_ratio
+order:   2
+---
+
+```css
+// Aspect ratio.
+o-aspect-ratio($-width, $-height[, $-inner-selector: '.#{$o-aspect-ratio-namespace}__inner'])
+```
+*/
+@mixin o-aspect-ratio($-width, $-height, $-inner-selector: '.#{$o-aspect-ratio-namespace}__inner') {
+  position: relative;
+  &::before {
+    display: block;
+    padding-top: ($-height / $-width) * 100%;
+    content: '';
+  }
+  > #{$-inner-selector} {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
