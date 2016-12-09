@@ -1,21 +1,29 @@
-# avalanchesass_base_box_sizing_reset
+# @avalanche/generic-box-sizing-reset
 Box sizing reset.
 
+- [Documentation](https://avalanche.oberlehner.net/documentation/#generic: box-sizing-reset)
+
 ## Install
-```
-npm install avalanchesass_base_box_sizing_reset --save
+```bash
+npm install @avalanche/generic-box-sizing-reset --save-dev
 ```
 
 ## Basic usage
-```css
-/* Import the main file. */
-@import 'avalanchesass_base_box_sizing_reset';
+This package requires that [node-sass](https://github.com/sass/node-sass) (or one of the grunt, gulp, etc. equivalents) in combination with the [node-sass-magic-importer](https://github.com/maoberlehner/node-sass-magic-importer) custom importer is used.
+
+```scss
+// Import the main file.
+@import '~@avalanche/generic-box-sizing-reset';
+
+// Import just the mixin file.
+@import '~@avalanche/generic-box-sizing-reset/scss/mixins';
 ```
 
 ## About
 ### Author
 Markus Oberlehner  
-Twitter: https://twitter.com/MaOberlehner
+Twitter: https://twitter.com/MaOberlehner  
+PayPal.me: https://paypal.me/maoberlehner
 
 ### License
-GPL v2 (http://www.gnu.org/licenses/gpl-2.0.html)
+MIT
