@@ -1,0 +1,17 @@
+@import 'avalanchesass_utility_text_align/style_guide';
+
+/*---
+title:   Mixin
+name:    utility_text_align_mixin
+section: utility_text_align
+order:   2
+---
+
+```css
+// Text align.
+@mixin u-text-align([$-align: right])
+```
+*/
+@mixin u-text-align($-align: right) {
+  text-align: $-align !important;
+}
