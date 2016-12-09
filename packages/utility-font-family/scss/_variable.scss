@@ -1,0 +1,18 @@
+@import 'avalanchesass_utility_font_family/style_guide';
+
+$u-font-family-namespace: '#{map-get($namespace, utility)}font-family' !default;
+
+$u-font-family-font-families: (b) !default;
+/*---
+title:   Variable
+name:    utility_font_family_variable
+section: utility_font_family
+order:   3
+---
+
+```css
+$u-font-family-namespace: '#{$u-font-family-namespace}';
+
+$u-font-family-font-families: #{$u-font-family-font-families};
+```
+*/
