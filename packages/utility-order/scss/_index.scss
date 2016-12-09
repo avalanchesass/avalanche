@@ -1,0 +1,48 @@
+@import 'avalanchesass_utility_order/style_guide';
+@import 'avalanchesass_utility_order/variable';
+@import 'avalanchesass_utility_order/mixin';
+
+/* extract utility.css */
+/* extract utility_order.css */
+/*---
+title:   Example
+name:    utility_order_example
+section: utility_order
+order:   1
+---
+
+```example:html
+<div style="display: flex;">
+  <div style="background: grey; padding: 0.5em;">Item 1</div>
+  <div style="background: grey; padding: 0.5em;">Item 2</div>
+  <div class="u-order-first@m" style="background: grey; padding: 0.5em;">Item 3</div>
+  <div class="u-order-1@m" style="background: grey; padding: 0.5em;">Item 4</div>
+  <div class="u-order-last@m" style="background: grey; padding: 0.5em;">Item 5</div>
+  <div style="background: grey; padding: 0.5em;">Item 6</div>
+  <div style="background: grey; padding: 0.5em;">Item 7</div>
+</div>
+```
+*/
+@each $-breakpoint in $u-order-breakpoints {
+  @for $-i from 1 through $u-order-max-elements {
+    @media (min-width: map-get($breakpoints, $-breakpoint)) {
+      .#{$u-order-namespace}-#{$-i}\@#{$-breakpoint} {
+        @include u-order($-i);
+      }
+    }
+  }
+
+  @media (min-width: map-get($breakpoints, $-breakpoint)) {
+    .#{$u-order-namespace}-first\@#{$-breakpoint} {
+      @include u-order-first();
+    }
+  }
+
+  @media (min-width: map-get($breakpoints, $-breakpoint)) {
+    .#{$u-order-namespace}-last\@#{$-breakpoint} {
+      @include u-order-last();
+    }
+  }
+}
+/* end extract utility_order.css */
+/* end extract utility.css */

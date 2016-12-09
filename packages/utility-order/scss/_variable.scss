@@ -1,0 +1,19 @@
+@import 'avalanchesass_utility_order/style_guide';
+
+$u-order-namespace: '#{map-get($namespace, utility)}order' !default;
+
+$u-order-max-elements: 4 !default;
+$u-order-breakpoints: (m) !default;
+/*---
+title:   Variable
+name:    utility_order_variable
+section: utility_order
+order:   3
+---
+
+```css
+$u-order-namespace: '#{$u-order-namespace}';
+$u-order-max-elements: #{$u-order-max-elements};
+$u-order-breakpoints: #{$u-order-breakpoints};
+```
+*/
