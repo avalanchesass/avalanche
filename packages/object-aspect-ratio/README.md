@@ -1,24 +1,83 @@
-# avalanchesass_object_aspect_ratio
+# @avalanche/object-aspect-ratio
 Maintain aspect ratio.
 
+- [Documentation](https://avalanche.oberlehner.net/documentation/#object: aspect-ratio)
+
 ## Install
-```
-npm install avalanchesass_object_aspect_ratio --save
+```bash
+npm install @avalanche/object-aspect-ratio --save-dev
 ```
 
 ## Basic usage
-```css
-/* Import the main file. */
-@import 'avalanchesass_object_aspect_ratio';
+This package requires that [node-sass](https://github.com/sass/node-sass) (or one of the grunt, gulp, etc. equivalents) in combination with the [node-sass-magic-importer](https://github.com/maoberlehner/node-sass-magic-importer) custom importer is used.
 
-/* Import just the mixin file. */
-@import 'avalanchesass_object_aspect_ratio/mixin';
+```scss
+// Import the main file.
+@import '~@avalanche/object-aspect-ratio';
+
+// Import just the mixin file.
+@import '~@avalanche/object-aspect-ratio/scss/mixins';
+
+// Import just the classes you need.
+@import '{ /\.o-aspect-ratio(::before)?$/, .o-aspect-ratio--4\/3::before, .o-aspect-ratio__inner } from ~@avalanche/object-aspect-ratio';
+
+// Not a fan of the "o-" prefix?
+@import '{ /\.o-aspect-ratio(::before)?$/ as .aspect-ratio$1, .o-aspect-ratio__inner as .aspect-ratio__inner } from ~@avalanche/object-aspect-ratio';
+```
+
+## Demo
+```html
+<div class="o-aspect-ratio">
+  <div class="o-aspect-ratio__inner">
+    Default (16/9)
+  </div>
+</div>
+```
+
+### Ratios
+```html
+<div class="o-aspect-ratio o-aspect-ratio--4/3">
+  <div class="o-aspect-ratio__inner">
+    4/3
+  </div>
+</div>
+<div class="o-aspect-ratio o-aspect-ratio--16/9">
+  <div class="o-aspect-ratio__inner">
+    16/9
+  </div>
+</div>
+<div class="o-aspect-ratio o-aspect-ratio--21/9">
+  <div class="o-aspect-ratio__inner">
+    21/9
+  </div>
+</div>
+```
+
+### Settings
+Modify the default aspect ratio via the `$o-aspect-ratio-default` map variable.
+
+```scss
+$o-aspect-ratio-default: (
+  width: 4,
+  height: 3,
+);
+```
+
+## Mixins
+```scss
+@import '~@avalanche/object-aspect-ratio/scss/mixins';
+
+// Usage.
+.element {
+  @include o-aspect-ratio(16, 9, '.element__inner');
+}
 ```
 
 ## About
 ### Author
 Markus Oberlehner  
-Twitter: https://twitter.com/MaOberlehner
+Twitter: https://twitter.com/MaOberlehner  
+PayPal.me: https://paypal.me/maoberlehner
 
 ### License
-GPL v2 (http://www.gnu.org/licenses/gpl-2.0.html)
+MIT

@@ -1,0 +1,11 @@
+////
+/// @group Object: aspect-ratio
+/// @author Markus Oberlehner
+////
+
+/// Container max widths.
+/// @type Map
+$o-aspect-ratio-default: (
+  width: 16,
+  height: 9,
+) !default;
