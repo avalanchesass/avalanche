@@ -19,10 +19,10 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 @import '~@avalanche/object-aspect-ratio/scss/mixins';
 
 // Import just the classes you need.
-@import '{ /\.o-aspect-ratio(::before)?$/, .o-aspect-ratio--4\/3::before, .o-aspect-ratio__inner } from ~@avalanche/object-aspect-ratio';
+@import '{ .o-aspect-ratio, .o-aspect-ratio--4/3, .o-aspect-ratio__inner } from ~@avalanche/object-aspect-ratio';
 
 // Not a fan of the "o-" prefix?
-@import '{ /\.o-aspect-ratio(::before)?$/ as .aspect-ratio$1, .o-aspect-ratio__inner as .aspect-ratio__inner } from ~@avalanche/object-aspect-ratio';
+@import '{ .o-aspect-ratio as .aspect-ratio, .o-aspect-ratio__inner as .aspect-ratio__inner } from ~@avalanche/object-aspect-ratio';
 ```
 
 ## Demo
