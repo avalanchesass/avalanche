@@ -33,18 +33,34 @@
 }
 
 .o-grid--s-horizontal {
-  @include o-grid(setting-spacing(s), 0, false);
+  @include o-grid(
+    setting-spacing(s),
+    0,
+    false
+  );
 
   > .o-grid__item {
-    @include o-grid-item(setting-spacing(s), 0, false);
+    @include o-grid-item(
+      setting-spacing(s),
+      0,
+      false
+    );
   }
 }
 
 .o-grid--s-vertical {
-  @include o-grid(0, setting-spacing(s), false);
+  @include o-grid(
+    0,
+    setting-spacing(s),
+    false
+  );
 
   > .o-grid__item {
-    @include o-grid-item(0, setting-spacing(s), false);
+    @include o-grid-item(
+      0,
+      setting-spacing(s),
+      false
+    );
   }
 }
 
@@ -65,18 +81,34 @@
 }
 
 .o-grid--m-horizontal {
-  @include o-grid(setting-spacing(m), 0, false);
+  @include o-grid(
+    setting-spacing(m),
+    0,
+    false
+  );
 
   > .o-grid__item {
-    @include o-grid-item(setting-spacing(m), 0, false);
+    @include o-grid-item(
+      setting-spacing(m),
+      0,
+      false
+    );
   }
 }
 
 .o-grid--m-vertical {
-  @include o-grid(0, setting-spacing(m), false);
+  @include o-grid(
+    0,
+    setting-spacing(m),
+    false
+  );
 
   > .o-grid__item {
-    @include o-grid-item(0, setting-spacing(m), false);
+    @include o-grid-item(
+      0,
+      setting-spacing(m),
+      false
+    );
   }
 }
 
@@ -97,18 +129,34 @@
 }
 
 .o-grid--l-horizontal {
-  @include o-grid(setting-spacing(l), 0, false);
+  @include o-grid(
+    setting-spacing(l),
+    0,
+    false
+  );
 
   > .o-grid__item {
-    @include o-grid-item(setting-spacing(l), 0, false);
+    @include o-grid-item(
+      setting-spacing(l),
+      0,
+      false
+    );
   }
 }
 
 .o-grid--l-vertical {
-  @include o-grid(0, setting-spacing(l), false);
+  @include o-grid(
+    0,
+    setting-spacing(l),
+    false
+  );
 
   > .o-grid__item {
-    @include o-grid-item(0, setting-spacing(l), false);
+    @include o-grid-item(
+      0,
+      setting-spacing(l),
+      false
+    );
   }
 }
 
@@ -129,18 +177,34 @@
 }
 
 .o-grid--xl-horizontal {
-  @include o-grid(setting-spacing(xl), 0, false);
+  @include o-grid(
+    setting-spacing(xl),
+    0,
+    false
+  );
 
   > .o-grid__item {
-    @include o-grid-item(setting-spacing(xl), 0, false);
+    @include o-grid-item(
+      setting-spacing(xl),
+      0,
+      false
+    );
   }
 }
 
 .o-grid--xl-vertical {
-  @include o-grid(0, setting-spacing(xl), false);
+  @include o-grid(
+    0,
+    setting-spacing(xl),
+    false
+  );
 
   > .o-grid__item {
-    @include o-grid-item(0, setting-spacing(xl), false);
+    @include o-grid-item(
+      0,
+      setting-spacing(xl),
+      false
+    );
   }
 }
 
@@ -161,18 +225,34 @@
 }
 
 .o-grid--xxl-horizontal {
-  @include o-grid(setting-spacing(xxl), 0, false);
+  @include o-grid(
+    setting-spacing(xxl),
+    0,
+    false
+  );
 
   > .o-grid__item {
-    @include o-grid-item(setting-spacing(xxl), 0, false);
+    @include o-grid-item(
+      setting-spacing(xxl),
+      0,
+      false
+    );
   }
 }
 
 .o-grid--xxl-vertical {
-  @include o-grid(0, setting-spacing(xxl), false);
+  @include o-grid(
+    0,
+    setting-spacing(xxl),
+    false
+  );
 
   > .o-grid__item {
-    @include o-grid-item(0, setting-spacing(xxl), false);
+    @include o-grid-item(
+      0,
+      setting-spacing(xxl),
+      false
+    );
   }
 }
 
@@ -193,17 +273,33 @@
 }
 
 .o-grid--xxxl-horizontal {
-  @include o-grid(setting-spacing(xxxl), 0, false);
+  @include o-grid(
+    setting-spacing(xxxl),
+    0,
+    false
+  );
 
   > .o-grid__item {
-    @include o-grid-item(setting-spacing(xxxl), 0, false);
+    @include o-grid-item(
+      setting-spacing(xxxl),
+      0,
+      false
+    );
   }
 }
 
 .o-grid--xxxl-vertical {
-  @include o-grid(0, setting-spacing(xxxl), false);
+  @include o-grid(
+    0,
+    setting-spacing(xxxl),
+    false
+  );
 
   > .o-grid__item {
-    @include o-grid-item(0, setting-spacing(xxxl), false);
+    @include o-grid-item(
+      0,
+      setting-spacing(xxxl),
+      false
+    );
   }
 }
