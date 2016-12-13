@@ -7,13 +7,13 @@
     setting-spacing($o-grid-gutter-horizontal-default),
     setting-spacing($o-grid-gutter-vertical-default)
   );
-}
 
-.o-grid__item {
-  @include o-grid-item(
-    setting-spacing($o-grid-gutter-horizontal-default),
-    setting-spacing($o-grid-gutter-vertical-default)
-  );
+  > .o-grid__item {
+    @include o-grid-item(
+      setting-spacing($o-grid-gutter-horizontal-default),
+      setting-spacing($o-grid-gutter-vertical-default)
+    );
+  }
 }
 
 .o-grid--s {
@@ -22,30 +22,30 @@
     setting-spacing(s),
     false
   );
-}
 
-.o-grid--s > .o-grid__item {
-  @include o-grid-item(
-    setting-spacing(s),
-    setting-spacing(s),
-    false
-  );
+  > .o-grid__item {
+    @include o-grid-item(
+      setting-spacing(s),
+      setting-spacing(s),
+      false
+    );
+  }
 }
 
 .o-grid--s-horizontal {
   @include o-grid(setting-spacing(s), 0, false);
-}
 
-.o-grid--s-horizontal > .o-grid__item {
-  @include o-grid-item(setting-spacing(s), 0, false);
+  > .o-grid__item {
+    @include o-grid-item(setting-spacing(s), 0, false);
+  }
 }
 
 .o-grid--s-vertical {
   @include o-grid(0, setting-spacing(s), false);
-}
 
-.o-grid--s-vertical > .o-grid__item {
-  @include o-grid-item(0, setting-spacing(s), false);
+  > .o-grid__item {
+    @include o-grid-item(0, setting-spacing(s), false);
+  }
 }
 
 .o-grid--m {
@@ -54,30 +54,30 @@
     setting-spacing(m),
     false
   );
-}
 
-.o-grid--m > .o-grid__item {
-  @include o-grid-item(
-    setting-spacing(m),
-    setting-spacing(m),
-    false
-  );
+  > .o-grid__item {
+    @include o-grid-item(
+      setting-spacing(m),
+      setting-spacing(m),
+      false
+    );
+  }
 }
 
 .o-grid--m-horizontal {
   @include o-grid(setting-spacing(m), 0, false);
-}
 
-.o-grid--m-horizontal > .o-grid__item {
-  @include o-grid-item(setting-spacing(m), 0, false);
+  > .o-grid__item {
+    @include o-grid-item(setting-spacing(m), 0, false);
+  }
 }
 
 .o-grid--m-vertical {
   @include o-grid(0, setting-spacing(m), false);
-}
 
-.o-grid--m-vertical > .o-grid__item {
-  @include o-grid-item(0, setting-spacing(m), false);
+  > .o-grid__item {
+    @include o-grid-item(0, setting-spacing(m), false);
+  }
 }
 
 .o-grid--l {
@@ -86,30 +86,30 @@
     setting-spacing(l),
     false
   );
-}
 
-.o-grid--l > .o-grid__item {
-  @include o-grid-item(
-    setting-spacing(l),
-    setting-spacing(l),
-    false
-  );
+  > .o-grid__item {
+    @include o-grid-item(
+      setting-spacing(l),
+      setting-spacing(l),
+      false
+    );
+  }
 }
 
 .o-grid--l-horizontal {
   @include o-grid(setting-spacing(l), 0, false);
-}
 
-.o-grid--l-horizontal > .o-grid__item {
-  @include o-grid-item(setting-spacing(l), 0, false);
+  > .o-grid__item {
+    @include o-grid-item(setting-spacing(l), 0, false);
+  }
 }
 
 .o-grid--l-vertical {
   @include o-grid(0, setting-spacing(l), false);
-}
 
-.o-grid--l-vertical > .o-grid__item {
-  @include o-grid-item(0, setting-spacing(l), false);
+  > .o-grid__item {
+    @include o-grid-item(0, setting-spacing(l), false);
+  }
 }
 
 .o-grid--xl {
@@ -118,30 +118,30 @@
     setting-spacing(xl),
     false
   );
-}
 
-.o-grid--xl > .o-grid__item {
-  @include o-grid-item(
-    setting-spacing(xl),
-    setting-spacing(xl),
-    false
-  );
+  > .o-grid__item {
+    @include o-grid-item(
+      setting-spacing(xl),
+      setting-spacing(xl),
+      false
+    );
+  }
 }
 
 .o-grid--xl-horizontal {
   @include o-grid(setting-spacing(xl), 0, false);
-}
 
-.o-grid--xl-horizontal > .o-grid__item {
-  @include o-grid-item(setting-spacing(xl), 0, false);
+  > .o-grid__item {
+    @include o-grid-item(setting-spacing(xl), 0, false);
+  }
 }
 
 .o-grid--xl-vertical {
   @include o-grid(0, setting-spacing(xl), false);
-}
 
-.o-grid--xl-vertical > .o-grid__item {
-  @include o-grid-item(0, setting-spacing(xl), false);
+  > .o-grid__item {
+    @include o-grid-item(0, setting-spacing(xl), false);
+  }
 }
 
 .o-grid--xxl {
@@ -150,30 +150,30 @@
     setting-spacing(xxl),
     false
   );
-}
 
-.o-grid--xxl > .o-grid__item {
-  @include o-grid-item(
-    setting-spacing(xxl),
-    setting-spacing(xxl),
-    false
-  );
+  > .o-grid__item {
+    @include o-grid-item(
+      setting-spacing(xxl),
+      setting-spacing(xxl),
+      false
+    );
+  }
 }
 
 .o-grid--xxl-horizontal {
   @include o-grid(setting-spacing(xxl), 0, false);
-}
 
-.o-grid--xxl-horizontal > .o-grid__item {
-  @include o-grid-item(setting-spacing(xxl), 0, false);
+  > .o-grid__item {
+    @include o-grid-item(setting-spacing(xxl), 0, false);
+  }
 }
 
 .o-grid--xxl-vertical {
   @include o-grid(0, setting-spacing(xxl), false);
-}
 
-.o-grid--xxl-vertical > .o-grid__item {
-  @include o-grid-item(0, setting-spacing(xxl), false);
+  > .o-grid__item {
+    @include o-grid-item(0, setting-spacing(xxl), false);
+  }
 }
 
 .o-grid--xxxl {
@@ -182,28 +182,28 @@
     setting-spacing(xxxl),
     false
   );
-}
 
-.o-grid--xxxl > .o-grid__item {
-  @include o-grid-item(
-    setting-spacing(xxxl),
-    setting-spacing(xxxl),
-    false
-  );
+  > .o-grid__item {
+    @include o-grid-item(
+      setting-spacing(xxxl),
+      setting-spacing(xxxl),
+      false
+    );
+  }
 }
 
 .o-grid--xxxl-horizontal {
   @include o-grid(setting-spacing(xxxl), 0, false);
-}
 
-.o-grid--xxxl-horizontal > .o-grid__item {
-  @include o-grid-item(setting-spacing(xxxl), 0, false);
+  > .o-grid__item {
+    @include o-grid-item(setting-spacing(xxxl), 0, false);
+  }
 }
 
 .o-grid--xxxl-vertical {
   @include o-grid(0, setting-spacing(xxxl), false);
-}
 
-.o-grid--xxxl-vertical > .o-grid__item {
-  @include o-grid-item(0, setting-spacing(xxxl), false);
+  > .o-grid__item {
+    @include o-grid-item(0, setting-spacing(xxxl), false);
+  }
 }
