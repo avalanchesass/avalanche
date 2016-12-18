@@ -1,0 +1,22 @@
+////
+/// @group Object: island
+/// @author Markus Oberlehner
+////
+
+/// Box off content.
+///
+/// @param {Number [unit]} $spacing [1em]
+///   Spacing.
+///
+/// @example scss - Usage
+///   .element {
+///     @include o-island();
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     padding: 1em;
+///   }
+@mixin o-island($spacing: 1em) {
+  padding: $spacing;
+}

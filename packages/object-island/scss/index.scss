@@ -1,0 +1,35 @@
+@import '~@avalanche/setting-spacings';
+@import 'settings';
+@import 'mixins';
+
+.o-island {
+  @include o-island(setting-spacing($o-island-spacing-default));
+}
+
+.o-island--xs {
+  @include o-island(setting-spacing(xs));
+}
+
+.o-island--s {
+  @include o-island(setting-spacing(s));
+}
+
+.o-island--m {
+  @include o-island(setting-spacing(m));
+}
+
+.o-island--l {
+  @include o-island(setting-spacing(l));
+}
+
+.o-island--xl {
+  @include o-island(setting-spacing(xl));
+}
+
+.o-island--xxl {
+  @include o-island(setting-spacing(xxl));
+}
+
+.o-island--xxxl {
+  @include o-island(setting-spacing(xxxl));
+}
