@@ -16,6 +16,22 @@
   }
 }
 
+.o-grid--xs {
+  @include o-grid(
+    setting-spacing(xs),
+    setting-spacing(xs),
+    false
+  );
+
+  > .o-grid__item {
+    @include o-grid-item(
+      setting-spacing(xs),
+      setting-spacing(xs),
+      false
+    );
+  }
+}
+
 .o-grid--s {
   @include o-grid(
     setting-spacing(s),
