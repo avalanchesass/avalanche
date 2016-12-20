@@ -1,0 +1,43 @@
+@import '~@avalanche/setting-spacings';
+@import 'settings';
+@import 'mixins';
+
+.o-media {
+  @include o-media(setting-spacing($o-media-spacing-default));
+}
+
+.o-media--xs {
+  @include o-media(setting-spacing(xs));
+}
+
+.o-media--s {
+  @include o-media(setting-spacing(s));
+}
+
+.o-media--m {
+  @include o-media(setting-spacing(m));
+}
+
+.o-media--l {
+  @include o-media(setting-spacing(l));
+}
+
+.o-media--xl {
+  @include o-media(setting-spacing(xl));
+}
+
+.o-media--xxl {
+  @include o-media(setting-spacing(xxl));
+}
+
+.o-media--xxxl {
+  @include o-media(setting-spacing(xxxl));
+}
+
+.o-media__figure {
+  @include o-media-figure();
+}
+
+.o-media__body {
+  @include o-media-body();
+}

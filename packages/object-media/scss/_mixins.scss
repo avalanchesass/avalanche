@@ -1,0 +1,64 @@
+////
+/// Media object - image on left/right, text next to it.
+///
+/// @group Object: media
+/// @author Markus Oberlehner
+////
+
+/// Wrapper.
+///
+/// @param {Number [unit]} $spacing [1em]
+///   Spacing.
+/// @param {Boolean} $layout [true]
+///   Enable or disable returning layout properties.
+///
+/// @example scss - Usage
+///   .element {
+///     @include o-media();
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     display: flex;
+///   }
+///   .element > :last-child {
+///     margin-left: 1em;
+///   }
+@mixin o-media($spacing: 1em, $layout: true) {
+  @if $layout {
+    display: flex;
+  }
+  @if $spacing > 0 {
+    > :last-child {
+      margin-left: $spacing;
+    }
+  }
+}
+
+/// Figure.
+///
+/// @example scss - Usage
+///   .element {
+///     @include o-media-figure();
+///   }
+///
+/// @example css - CSS Output
+///   .element { }
+@mixin o-media-figure() {
+  // This is currently only a placeholder that may be used later.
+}
+
+/// Body.
+///
+/// @example scss - Usage
+///   .element {
+///     @include o-media-body();
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     flex: 1;
+///   }
+@mixin o-media-body() {
+  flex: 1;
+}
