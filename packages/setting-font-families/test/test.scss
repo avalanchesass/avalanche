@@ -1,0 +1,5 @@
+@import '../scss/index';
+
+.test::before {
+  content: '#{setting-font-family(a)}, #{setting-font-family(b)}';
+}

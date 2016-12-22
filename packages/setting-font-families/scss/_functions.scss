@@ -1,0 +1,24 @@
+@import 'settings';
+
+////
+/// @group Setting: font-families
+/// @author Markus Oberlehner
+////
+
+/// Returns font family.
+///
+/// @param {String} $font-family
+///   Font family (a or b).
+///
+/// @example scss - Usage
+///   .element {
+///     font-family: setting-font-family(a);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     font-family: sans-serif;
+///   }
+@function setting-font-family($font-family) {
+  @return map-get($font-families, $font-family);
+}
