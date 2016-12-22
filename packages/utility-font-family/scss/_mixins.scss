@@ -1,0 +1,20 @@
+/// Font family.
+///
+/// @group Utility: font-family
+/// @author Markus Oberlehner
+///
+/// @param {String} $font-family
+///   Font family.
+///
+/// @example scss - Usage
+///   .element {
+///     @include u-font-family();
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     font-family: sans-serif !important;
+///   }
+@mixin u-font-family($font-family: sans-serif) {
+  font-family: $font-family !important;
+}

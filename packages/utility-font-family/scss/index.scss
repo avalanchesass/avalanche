@@ -1,0 +1,10 @@
+@import '~@avalanche/setting-font-families';
+@import 'mixins';
+
+.u-font-family-a {
+  @include u-font-family(setting-font-family(a));
+}
+
+.u-font-family-b {
+  @include u-font-family(setting-font-family(b));
+}
