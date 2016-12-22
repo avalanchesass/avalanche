@@ -15,7 +15,7 @@
 ///
 /// @example css - CSS Output
 ///   .element {
-///     width: 50%;
+///     width: 50% !important;
 ///   }
 @mixin u-width($size, $base: 12) {
   $base-size: (100% / $base);
