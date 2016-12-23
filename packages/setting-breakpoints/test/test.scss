@@ -1,5 +1,10 @@
 @import '../scss/index';
 
-.test::before {
-  content: '#{setting-breakpoint(s)}, #{setting-breakpoint(m)}, #{setting-breakpoint(l)}, #{setting-breakpoint(xl)}';
+div {
+  padding: 1em;
+  background: #efefef;
+
+  &::before {
+    content: '#{setting-breakpoint(s)}, #{setting-breakpoint(m)}, #{setting-breakpoint(l)}, #{setting-breakpoint(xl)}';
+  }
 }

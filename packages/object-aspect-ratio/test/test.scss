@@ -1,1 +1,10 @@
 @import '../scss/index';
+
+.o-aspect-ratio {
+  background: #efefef;
+  text-align: center;
+
+  + .o-aspect-ratio {
+    margin-top: 16px;
+  }
+}

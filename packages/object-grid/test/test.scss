@@ -1,1 +1,14 @@
 @import '../scss/index';
+
+.o-grid__item {
+  > div {
+    padding: 1em;
+    background: #efefef;
+  }
+}
+
+[class*='o-grid--'] {
+  > .o-grid__item {
+    width: 50%;
+  }
+}

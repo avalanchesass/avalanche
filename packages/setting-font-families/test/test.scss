@@ -1,5 +1,10 @@
 @import '../scss/index';
 
-.test::before {
-  content: '#{setting-font-family(a)}, #{setting-font-family(b)}';
+div {
+  padding: 1em;
+  background: #efefef;
+
+  &::before {
+    content: '#{setting-font-family(a)}, #{setting-font-family(b)}';
+  }
 }
