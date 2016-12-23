@@ -22,12 +22,12 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 ## Usage
 ```scss
 // Function.
-.element {
+.selector {
   font-family: setting-font-family(a);
 }
 
 // Map.
-.element {
+.selector {
   font-family: map-get($font-families, a);
 }
 ```

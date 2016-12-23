@@ -11,12 +11,12 @@
 ///   Font family (a or b).
 ///
 /// @example scss - Usage
-///   .element {
+///   .selector {
 ///     font-family: setting-font-family(a);
 ///   }
 ///
 /// @example css - CSS Output
-///   .element {
+///   .selector {
 ///     font-family: sans-serif;
 ///   }
 @function setting-font-family($font-family) {

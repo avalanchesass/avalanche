@@ -9,12 +9,12 @@
 ///   Width base.
 ///
 /// @example scss - Usage
-///   .element {
+///   .selector {
 ///     @include u-width(6, 12);
 ///   }
 ///
 /// @example css - CSS Output
-///   .element {
+///   .selector {
 ///     width: 50% !important;
 ///   }
 @mixin u-width($size, $base: 12) {

@@ -11,12 +11,12 @@
 ///   Height.
 ///
 /// @example scss - Usage
-///   .element::before {
+///   .selector::before {
 ///     @include o-aspect-ratio-before();
 ///   }
 ///
 /// @example css - CSS Output
-///   .element::before {
+///   .selector::before {
 ///     display: block;
 ///     padding-top: 56.25%;
 ///     content: '';
@@ -30,12 +30,12 @@
 /// Aspect ratio inner styles.
 ///
 /// @example scss - Usage
-///   .element__inner {
+///   .selector__inner {
 ///     @include o-aspect-ratio-inner();
 ///   }
 ///
 /// @example css - CSS Output
-///   .element__inner {
+///   .selector__inner {
 ///     position: absolute;
 ///     top: 0;
 ///     right: 0;
@@ -60,20 +60,20 @@
 ///   Selector for the aspect ratio inner element.
 ///
 /// @example scss - Usage
-///   .element {
-///     @include o-aspect-ratio(16, 9, '.element__inner');
+///   .selector {
+///     @include o-aspect-ratio(16, 9, '.selector__inner');
 ///   }
 ///
 /// @example css - CSS Output
-///   .element {
+///   .selector {
 ///     position: relative;
 ///   }
-///   .element::before {
+///   .selector::before {
 ///     display: block;
 ///     padding-top: 56.25%;
 ///     content: '';
 ///   }
-///   .element__inner {
+///   .selector__inner {
 ///     position: absolute;
 ///     top: 0;
 ///     right: 0;

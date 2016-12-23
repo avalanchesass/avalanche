@@ -13,15 +13,15 @@
 ///   Enable or disable returning layout properties.
 ///
 /// @example scss - Usage
-///   .element {
+///   .selector {
 ///     @include o-media();
 ///   }
 ///
 /// @example css - CSS Output
-///   .element {
+///   .selector {
 ///     display: flex;
 ///   }
-///   .element > :last-child {
+///   .selector > :last-child {
 ///     margin-left: 1em;
 ///   }
 @mixin o-media($spacing: 1em, $layout: true) {
@@ -38,12 +38,12 @@
 /// Figure.
 ///
 /// @example scss - Usage
-///   .element {
+///   .selector {
 ///     @include o-media-figure();
 ///   }
 ///
 /// @example css - CSS Output
-///   .element { }
+///   .selector { }
 @mixin o-media-figure() {
   // This is currently only a placeholder that may be used later.
 }
@@ -51,12 +51,12 @@
 /// Body.
 ///
 /// @example scss - Usage
-///   .element {
+///   .selector {
 ///     @include o-media-body();
 ///   }
 ///
 /// @example css - CSS Output
-///   .element {
+///   .selector {
 ///     flex: 1;
 ///   }
 @mixin o-media-body() {

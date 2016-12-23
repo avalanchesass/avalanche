@@ -13,12 +13,12 @@
 ///   Horizontal centering.
 ///
 /// @example scss - Usage
-///   .element {
+///   .selector {
 ///     @include o-container();
 ///   }
 ///
 /// @example css - CSS Output
-///   .element {
+///   .selector {
 ///     max-width: 64rem;
 ///     padding-right: 1rem;
 ///     padding-left: 1rem;

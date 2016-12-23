@@ -7,12 +7,12 @@
 ///   Font family.
 ///
 /// @example scss - Usage
-///   .element {
+///   .selector {
 ///     @include u-font-family();
 ///   }
 ///
 /// @example css - CSS Output
-///   .element {
+///   .selector {
 ///     font-family: sans-serif !important;
 ///   }
 @mixin u-font-family($font-family: sans-serif) {

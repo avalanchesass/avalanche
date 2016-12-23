@@ -9,12 +9,12 @@
 ///   Spacing.
 ///
 /// @example scss - Usage
-///   .element {
+///   .selector {
 ///     @include o-island();
 ///   }
 ///
 /// @example css - CSS Output
-///   .element {
+///   .selector {
 ///     padding: 1em;
 ///   }
 @mixin o-island($spacing: 1em) {

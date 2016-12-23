@@ -15,12 +15,12 @@
 ///   Enable or disable returning layout properties.
 ///
 /// @example scss - Usage
-///   .element {
+///   .selector {
 ///     @include o-grid();
 ///   }
 ///
 /// @example css - CSS Output
-///   .element {
+///   .selector {
 ///     margin-left: -1rem;
 ///     margin-top: -1rem;
 ///     display: flex;
@@ -49,12 +49,12 @@
 ///   Enable or disable returning layout properties.
 ///
 /// @example scss - Usage
-///   .element {
+///   .selector {
 ///     @include o-grid-item();
 ///   }
 ///
 /// @example css - CSS Output
-///   .element {
+///   .selector {
 ///     padding-left: 1rem;
 ///     margin-top: 1rem;
 ///     flex-grow: 1;

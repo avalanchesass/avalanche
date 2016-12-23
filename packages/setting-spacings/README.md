@@ -22,12 +22,12 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 ## Usage
 ```scss
 // Function.
-.element {
+.selector {
   margin-top: setting-spacing(m);
 }
 
 // Map.
-.element {
+.selector {
   margin-top: map-get($spacings, m);
 }
 ```

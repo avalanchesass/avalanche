@@ -13,12 +13,12 @@
 ///   Return spacing size in rem instead of em.
 ///
 /// @example scss - Usage
-///   .element {
+///   .selector {
 ///     margin-top: setting-spacing(m);
 ///   }
 ///
 /// @example css - CSS Output
-///   .element {
+///   .selector {
 ///     margin-top: 1em;
 ///   }
 @function setting-spacing($size, $rem: false) {

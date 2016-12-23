@@ -68,8 +68,8 @@ $o-aspect-ratio-default: (
 @import '~@avalanche/object-aspect-ratio/scss/mixins';
 
 // Usage.
-.element {
-  @include o-aspect-ratio(16, 9, '.element__inner');
+.aspect-ratio {
+  @include o-aspect-ratio(16, 9, '.aspect-ratio__inner');
 }
 ```
 
