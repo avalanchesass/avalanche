@@ -61,7 +61,7 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 @import '~@avalanche/utility-width/scss/mixins';
 
 // Usage.
-.width-1\/12 {
+.width-6\/12 {
   @include u-width(6, 12);
 }
 ```
