@@ -1,0 +1,56 @@
+////
+/// Order helper.
+///
+/// @group Utility: order
+/// @author Markus Oberlehner
+////
+
+/// Order n.
+///
+/// @param {Number} $n [1]
+///   Number.
+/// @param {Number} $max-elements [10]
+///   Max order elements.
+///
+/// @example scss - Usage
+///   .selector {
+///     @include u-order();
+///   }
+///
+/// @example css - CSS Output
+///   .selector {
+///     order: -9 !important;
+///   }
+@mixin u-order($n: 1, $max-elements: 10) {
+  order: $n - $max-elements !important;
+}
+
+/// Order first.
+///
+/// @example scss - Usage
+///   .selector {
+///     @include u-order-first();
+///   }
+///
+/// @example css - CSS Output
+///   .selector {
+///     order: -9999 !important;
+///   }
+@mixin u-order-first() {
+  order: -9999 !important;
+}
+
+/// Order last.
+///
+/// @example scss - Usage
+///   .selector {
+///     @include u-order-last();
+///   }
+///
+/// @example css - CSS Output
+///   .selector {
+///     order: 9999 !important;
+///   }
+@mixin u-order-last() {
+  order: 9999 !important;
+}
