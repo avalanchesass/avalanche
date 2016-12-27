@@ -1,0 +1,24 @@
+{
+  "name": "@avalanche/utility-width",
+  "description": "Width classes",
+  "keywords": [
+    "avalanche-package",
+    "avalanche",
+    "sass"
+  ],
+  "version": "4.0.0-alpha.4",
+  "author": "Markus Oberlehner",
+  "homepage": "https://avalanche.oberlehner.net/",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avalanchesass/avalanche/tree/master/packages/utility-width"
+  },
+  "bugs": {
+    "url": "https://github.com/avalanchesass/avalanche/issues"
+  },
+  "dependencies": {
+    "@avalanche/setting-breakpoints": "^4.0.0-alpha.2"
+  },
+  "main": "scss/index.scss"
+}

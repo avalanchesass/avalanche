@@ -1,0 +1,48 @@
+{
+  "viewports": [
+    {
+      "name": "s",
+      "width": 480,
+      "height": 270
+    },
+    {
+      "name": "m",
+      "width": 720,
+      "height": 405
+    },
+    {
+      "name": "l",
+      "width": 960,
+      "height": 540
+    },
+    {
+      "name": "xl",
+      "width": 1200,
+      "height": 675
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "avalanche",
+      "url": "test/tmp/test.html",
+      "selectors": [
+        "document"
+      ],
+      "readyEvent": null,
+      "delay": 500,
+      "misMatchThreshold" : 0.1
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "test/backstopjs/bitmaps_reference",
+    "bitmaps_test": "test/backstopjs/bitmaps_test",
+    "compare_data": "test/backstopjs/bitmaps_test/compare.json",
+    "casper_scripts": "test/backstopjs/casper_scripts"
+  },
+  "engine": "phantomjs",
+  "report": ["CLI", "browser"],
+  "cliExitOnFail": false,
+  "casperFlags": [],
+  "debug": false,
+  "port": 9999
+}

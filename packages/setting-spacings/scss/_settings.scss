@@ -1,0 +1,16 @@
+////
+/// @group Setting: spacings
+/// @author Markus Oberlehner
+////
+
+/// Spacing sizes.
+/// @type Map
+$spacings: (
+  xs: 0.5em,
+  s: 0.75em,
+  m: 1em,
+  l: 1.5em,
+  xl: 2em,
+  xxl: 3.5em,
+  xxxl: 6em,
+) !default;

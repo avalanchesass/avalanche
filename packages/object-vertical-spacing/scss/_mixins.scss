@@ -1,0 +1,24 @@
+////
+/// @group Object: vertical-spacing
+/// @author Markus Oberlehner
+////
+
+/// Add vertical spacing to all child elements.
+///
+/// @param {Number [unit]} $spacing [1em]
+///   Spacing.
+///
+/// @example scss - Usage
+///   .selector {
+///     @include o-vertical-spacing();
+///   }
+///
+/// @example css - CSS Output
+///   .selector > * + * {
+///     margin-top: 1em;
+///   }
+@mixin o-vertical-spacing($spacing: 1em) {
+  > * + * {
+    margin-top: $spacing;
+  }
+}

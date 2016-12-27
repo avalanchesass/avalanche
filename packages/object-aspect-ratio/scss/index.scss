@@ -1,0 +1,35 @@
+@import 'settings';
+@import 'mixins';
+
+.o-aspect-ratio {
+  position: relative;
+
+  &::before {
+    @include o-aspect-ratio-before(
+      map-get($o-aspect-ratio-default, width),
+      map-get($o-aspect-ratio-default, height)
+    );
+  }
+}
+
+.o-aspect-ratio--4\/3 {
+  &::before {
+    @include o-aspect-ratio-before(4, 3);
+  }
+}
+
+.o-aspect-ratio--16\/9 {
+  &::before {
+    @include o-aspect-ratio-before(16, 9);
+  }
+}
+
+.o-aspect-ratio--21\/9 {
+  &::before {
+    @include o-aspect-ratio-before(21, 9);
+  }
+}
+
+.o-aspect-ratio__inner {
+  @include o-aspect-ratio-inner();
+}

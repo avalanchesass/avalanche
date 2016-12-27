@@ -1,0 +1,29 @@
+@import '~@avalanche/setting-spacings';
+@import 'settings';
+@import 'mixins';
+
+.o-container {
+  @include o-container(
+    map-get($o-container-max-widths, $o-container-default-size),
+    setting-spacing($o-container-spacing-horizontal, rem),
+    $o-container-center-horizontal
+  );
+}
+
+@if map-has-key($o-container-max-widths, s) {
+  .o-container--s {
+    @include o-container(map-get($o-container-max-widths, s), 0, false);
+  }
+}
+
+@if map-has-key($o-container-max-widths, m) {
+  .o-container--m {
+    @include o-container(map-get($o-container-max-widths, m), 0, false);
+  }
+}
+
+@if map-has-key($o-container-max-widths, l) {
+  .o-container--l {
+    @include o-container(map-get($o-container-max-widths, l), 0, false);
+  }
+}

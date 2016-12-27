@@ -1,0 +1,70 @@
+@import '~@avalanche/setting-breakpoints';
+@import 'mixins';
+
+.u-text-align-left {
+  @include u-text-align(left);
+}
+
+.u-text-align-center {
+  @include u-text-align(center);
+}
+
+.u-text-align-right {
+  @include u-text-align(right);
+}
+
+@media (min-width: setting-breakpoint(s)) {
+  .u-text-align-left\@s {
+    @include u-text-align(left);
+  }
+
+  .u-text-align-center\@s {
+    @include u-text-align(center);
+  }
+
+  .u-text-align-right\@s {
+    @include u-text-align(right);
+  }
+}
+
+@media (min-width: setting-breakpoint(m)) {
+  .u-text-align-left\@m {
+    @include u-text-align(left);
+  }
+
+  .u-text-align-center\@m {
+    @include u-text-align(center);
+  }
+
+  .u-text-align-right\@m {
+    @include u-text-align(right);
+  }
+}
+
+@media (min-width: setting-breakpoint(l)) {
+  .u-text-align-left\@l {
+    @include u-text-align(left);
+  }
+
+  .u-text-align-center\@l {
+    @include u-text-align(center);
+  }
+
+  .u-text-align-right\@l {
+    @include u-text-align(right);
+  }
+}
+
+@media (min-width: setting-breakpoint(xl)) {
+  .u-text-align-left\@xl {
+    @include u-text-align(left);
+  }
+
+  .u-text-align-center\@xl {
+    @include u-text-align(center);
+  }
+
+  .u-text-align-right\@xl {
+    @include u-text-align(right);
+  }
+}

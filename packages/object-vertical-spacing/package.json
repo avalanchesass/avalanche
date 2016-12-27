@@ -1,0 +1,24 @@
+{
+  "name": "@avalanche/object-vertical-spacing",
+  "description": "Add vertical spacing to all child elements",
+  "keywords": [
+    "avalanche-package",
+    "avalanche",
+    "sass"
+  ],
+  "version": "4.0.0-alpha.1",
+  "author": "Markus Oberlehner",
+  "homepage": "https://avalanche.oberlehner.net/",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avalanchesass/avalanche/tree/master/packages/object-vertical-spacing"
+  },
+  "bugs": {
+    "url": "https://github.com/avalanchesass/avalanche/issues"
+  },
+  "dependencies": {
+    "@avalanche/setting-spacings": "^4.0.0-alpha.3"
+  },
+  "main": "scss/index.scss"
+}

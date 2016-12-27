@@ -1,0 +1,24 @@
+////
+/// @group Object: container
+/// @author Markus Oberlehner
+////
+
+/// Container max widths.
+/// @type Map
+$o-container-max-widths: (
+  s: 32rem,
+  m: 64rem,
+  l: 96rem,
+) !default;
+
+/// Default container size.
+/// @type String
+$o-container-default-size: m !default;
+
+/// Horizontal spacing.
+/// @type String
+$o-container-spacing-horizontal: m !default;
+
+/// Horizontal centering.
+/// @type Boolean
+$o-container-center-horizontal: true !default;

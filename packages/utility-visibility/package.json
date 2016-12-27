@@ -1,0 +1,21 @@
+{
+  "name": "@avalanche/utility-visibility",
+  "description": "Classes to hide content with accessibility in mind",
+  "keywords": [
+    "avalanche-package",
+    "avalanche",
+    "sass"
+  ],
+  "version": "4.0.0-alpha.1",
+  "author": "Markus Oberlehner",
+  "homepage": "https://avalanche.oberlehner.net/",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avalanchesass/avalanche/tree/master/packages/utility-visibility"
+  },
+  "bugs": {
+    "url": "https://github.com/avalanchesass/avalanche/issues"
+  },
+  "main": "scss/index.scss"
+}

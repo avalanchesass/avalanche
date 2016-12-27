@@ -1,0 +1,13 @@
+////
+/// @group Setting: breakpoints
+/// @author Markus Oberlehner
+////
+
+/// Breakpoint sizes.
+/// @type Map
+$breakpoints: (
+  s: 30em,
+  m: 45em,
+  l: 60em,
+  xl: 75em,
+) !default;

@@ -1,0 +1,74 @@
+////
+/// Fluid width, responsive grid system.
+///
+/// @group Object: grid
+/// @author Markus Oberlehner
+////
+
+/// Grid wrapper.
+///
+/// @param {Number [unit]} $gutter-horizontal [1rem]
+///   Horizontal gutter size.
+/// @param {Number [unit]} $gutter-vertical [1rem]
+///   Vertical gutter size.
+/// @param {Boolean} $layout [true]
+///   Enable or disable returning layout properties.
+///
+/// @example scss - Usage
+///   .selector {
+///     @include o-grid();
+///   }
+///
+/// @example css - CSS Output
+///   .selector {
+///     margin-left: -1rem;
+///     margin-top: -1rem;
+///     display: flex;
+///     flex-wrap: wrap;
+///   }
+@mixin o-grid($gutter-horizontal: 1rem, $gutter-vertical: 1rem, $layout: true) {
+  @if $gutter-horizontal > 0 {
+    margin-left: -$gutter-horizontal;
+  }
+  @if $gutter-vertical > 0 {
+    margin-top: -$gutter-vertical;
+  }
+  @if $layout {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/// Grid item.
+///
+/// @param {Number [unit]} $gutter-horizontal [1rem]
+///   Horizontal gutter size.
+/// @param {Number [unit]} $gutter-vertical [1rem]
+///   Vertical gutter size.
+/// @param {Boolean} $layout [true]
+///   Enable or disable returning layout properties.
+///
+/// @example scss - Usage
+///   .selector {
+///     @include o-grid-item();
+///   }
+///
+/// @example css - CSS Output
+///   .selector {
+///     padding-left: 1rem;
+///     margin-top: 1rem;
+///     flex-grow: 1;
+///     box-sizing: border-box;
+///   }
+@mixin o-grid-item($gutter-horizontal: 1rem, $gutter-vertical: 1rem, $layout: true) {
+  @if $gutter-horizontal > 0 {
+    padding-left: $gutter-horizontal;
+  }
+  @if $gutter-vertical > 0 {
+    margin-top: $gutter-vertical;
+  }
+  @if $layout {
+    flex-grow: 1;
+    box-sizing: border-box;
+  }
+}

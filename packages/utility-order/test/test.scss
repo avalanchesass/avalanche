@@ -1,0 +1,10 @@
+@import '../scss/index';
+
+body > div {
+  display: flex;
+
+  > div {
+    padding: 1em;
+    background: #efefef;
+  }
+}

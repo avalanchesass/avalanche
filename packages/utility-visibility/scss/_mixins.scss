@@ -1,0 +1,91 @@
+////
+/// Classes to hide content with accessibility in mind.
+///
+/// @group Utility: visibility
+/// @author Markus Oberlehner
+////
+
+/// Hide from both screenreaders and browsers.
+///
+/// @example scss - Usage
+///   .selector {
+///     @include u-visibility-hidden();
+///   }
+///
+/// @example css - CSS Output
+///   .selector {
+///     display: none !important;
+///     visibility: hidden !important;
+///   }
+@mixin u-visibility-hidden() {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/// Hide only visually, but have it available for screenreaders.
+///
+/// @example scss - Usage
+///   .selector {
+///     @include u-visibility-visuallyhidden();
+///   }
+///
+/// @example css - CSS Output
+///   .selector {
+///     position: absolute;
+///     overflow: hidden;
+///     clip: rect(0 0 0 0);
+///     margin: -1px;
+///     padding: 0;
+///     width: 1px;
+///     height: 1px;
+///     border: 0;
+///     white-space: nowrap;
+///   }
+///
+///   .selector.is-focusable:active,
+///   .selector.is-focusable:focus {
+///     position: static;
+///     overflow: visible;
+///     clip: auto;
+///     margin: 0;
+///     width: auto;
+///     height: auto;
+///     white-space: inherit;
+///   }
+@mixin u-visibility-visuallyhidden() {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  white-space: nowrap;
+
+  &.is-focusable:active,
+  &.is-focusable:focus {
+    position: static;
+    overflow: visible;
+    clip: auto;
+    margin: 0;
+    width: auto;
+    height: auto;
+    white-space: inherit;
+  }
+}
+
+/// Hide visually and from screenreaders, but maintain layout.
+///
+/// @example scss - Usage
+///   .selector {
+///     @include u-visibility-invisible();
+///   }
+///
+/// @example css - CSS Output
+///   .selector {
+///     visibility: hidden !important;
+///   }
+@mixin u-visibility-invisible() {
+  visibility: hidden !important;
+}

@@ -1,0 +1,22 @@
+////
+/// @group Utility: text-align
+/// @author Markus Oberlehner
+////
+
+/// Text align helper.
+///
+/// @param {String} $alignment
+///   Text alignment.
+///
+/// @example scss - Usage
+///   .selector {
+///     @include u-text-align(right);
+///   }
+///
+/// @example css - CSS Output
+///   .selector {
+///     text-align: right;
+///   }
+@mixin u-text-align($alignment) {
+  text-align: $alignment !important;
+}

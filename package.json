@@ -1,26 +1,36 @@
 {
-  "name": "avalanchesass",
-  "description": "A modular SASS framework",
+  "name": "@avalanche/avalanche",
+  "description": "A modular SASS framework which can be extended with npm packages",
   "keywords": [
-    "avalanchesass-package"
+    "avalanche"
   ],
-  "version": "3.0.5",
+  "version": "4.0.0-alpha.1",
   "author": "Markus Oberlehner",
-  "homepage": "https://github.com/avalanchesass/avalanche",
-  "license": "GPL v2",
+  "homepage": "https://avalanche.oberlehner.net",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/avalanchesass/avalanche"
+    "url": "https://github.com/avalanchesass/avalanchesass"
   },
   "bugs": {
-    "url": "https://github.com/avalanchesass/avalanche/issues"
+    "url": "https://github.com/avalanchesass/avalanchesass/issues"
   },
-  "bin": {
-    "avalanchesass": "index.js"
+  "devDependencies": {
+    "autoprefixer": "^6.5.0",
+    "backstopjs": "^2.0.2",
+    "handlebars-cmd": "^0.1.4",
+    "lerna": "2.0.0-beta.30",
+    "node-sass": "^3.10.1",
+    "node-sass-magic-importer": "^2.1.1",
+    "postcss-cli": "^2.6.0",
+    "sassdoc": "^2.1.20",
+    "stylelint": "^7.3.1",
+    "stylelint-config-modularis": "2.0.1"
   },
-  "dependencies": {
-    "command-line-args": "^2.1.6",
-    "ncp": "^2.0.0",
-    "replace": "^0.3.0"
+  "scripts": {
+    "doc": "sassdoc packages/**/*.scss",
+    "lint": "stylelint packages/**/*.scss",
+    "test:reference": "bash test/test-reference.sh",
+    "test": "bash test/test.sh"
   }
 }

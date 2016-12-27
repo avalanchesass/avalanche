@@ -1,0 +1,11 @@
+////
+/// @group Setting: font-families
+/// @author Markus Oberlehner
+////
+
+/// Font families.
+/// @type Map
+$font-families: (
+  a: sans-serif,
+  b: serif,
+) !default;

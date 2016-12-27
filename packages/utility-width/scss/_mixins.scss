@@ -1,0 +1,23 @@
+/// Width helper.
+///
+/// @group Utility: width
+/// @author Markus Oberlehner
+///
+/// @param {Number} $size
+///   Width divisor.
+/// @param {Number} $base [12]
+///   Width base.
+///
+/// @example scss - Usage
+///   .selector {
+///     @include u-width(6, 12);
+///   }
+///
+/// @example css - CSS Output
+///   .selector {
+///     width: 50% !important;
+///   }
+@mixin u-width($size, $base: 12) {
+  $base-size: (100% / $base);
+  width: ($base-size * $size) !important;
+}

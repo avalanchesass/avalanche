@@ -1,0 +1,24 @@
+////
+/// @group Utility: spacing
+/// @author Markus Oberlehner
+////
+
+/// Spacing helper.
+///
+/// @param {Number [unit]} $spacing [1em]
+///   Spacing.
+/// @param {String} $direction [top]
+///   Spacing direction.
+///
+/// @example scss - Usage
+///   .selector {
+///     @include u-spacing();
+///   }
+///
+/// @example css - CSS Output
+///   .selector {
+///     margin-top: 1em;
+///   }
+@mixin u-spacing($spacing: 1em, $direction: top) {
+  margin-#{$direction}: $spacing !important;
+}

@@ -1,0 +1,202 @@
+@import '~@avalanche/setting-breakpoints';
+@import 'mixins';
+
+@media (min-width: setting-breakpoint(s)) {
+  .u-order-1\@s {
+    @include u-order(1);
+  }
+
+  .u-order-2\@s {
+    @include u-order(2);
+  }
+
+  .u-order-3\@s {
+    @include u-order(3);
+  }
+
+  .u-order-4\@s {
+    @include u-order(4);
+  }
+
+  .u-order-5\@s {
+    @include u-order(5);
+  }
+
+  .u-order-6\@s {
+    @include u-order(6);
+  }
+
+  .u-order-7\@s {
+    @include u-order(7);
+  }
+
+  .u-order-8\@s {
+    @include u-order(8);
+  }
+
+  .u-order-9\@s {
+    @include u-order(9);
+  }
+
+  .u-order-10\@s {
+    @include u-order(10);
+  }
+
+  .u-order-first\@s {
+    @include u-order-first();
+  }
+
+  .u-order-last\@s {
+    @include u-order-last();
+  }
+}
+
+@media (min-width: setting-breakpoint(m)) {
+  .u-order-1\@m {
+    @include u-order(1);
+  }
+
+  .u-order-2\@m {
+    @include u-order(2);
+  }
+
+  .u-order-3\@m {
+    @include u-order(3);
+  }
+
+  .u-order-4\@m {
+    @include u-order(4);
+  }
+
+  .u-order-5\@m {
+    @include u-order(5);
+  }
+
+  .u-order-6\@m {
+    @include u-order(6);
+  }
+
+  .u-order-7\@m {
+    @include u-order(7);
+  }
+
+  .u-order-8\@m {
+    @include u-order(8);
+  }
+
+  .u-order-9\@m {
+    @include u-order(9);
+  }
+
+  .u-order-10\@m {
+    @include u-order(10);
+  }
+
+  .u-order-first\@m {
+    @include u-order-first();
+  }
+
+  .u-order-last\@m {
+    @include u-order-last();
+  }
+}
+
+@media (min-width: setting-breakpoint(l)) {
+  .u-order-1\@l {
+    @include u-order(1);
+  }
+
+  .u-order-2\@l {
+    @include u-order(2);
+  }
+
+  .u-order-3\@l {
+    @include u-order(3);
+  }
+
+  .u-order-4\@l {
+    @include u-order(4);
+  }
+
+  .u-order-5\@l {
+    @include u-order(5);
+  }
+
+  .u-order-6\@l {
+    @include u-order(6);
+  }
+
+  .u-order-7\@l {
+    @include u-order(7);
+  }
+
+  .u-order-8\@l {
+    @include u-order(8);
+  }
+
+  .u-order-9\@l {
+    @include u-order(9);
+  }
+
+  .u-order-10\@l {
+    @include u-order(10);
+  }
+
+  .u-order-first\@l {
+    @include u-order-first();
+  }
+
+  .u-order-last\@l {
+    @include u-order-last();
+  }
+}
+
+@media (min-width: setting-breakpoint(xl)) {
+  .u-order-1\@xl {
+    @include u-order(1);
+  }
+
+  .u-order-2\@xl {
+    @include u-order(2);
+  }
+
+  .u-order-3\@xl {
+    @include u-order(3);
+  }
+
+  .u-order-4\@xl {
+    @include u-order(4);
+  }
+
+  .u-order-5\@xl {
+    @include u-order(5);
+  }
+
+  .u-order-6\@xl {
+    @include u-order(6);
+  }
+
+  .u-order-7\@xl {
+    @include u-order(7);
+  }
+
+  .u-order-8\@xl {
+    @include u-order(8);
+  }
+
+  .u-order-9\@xl {
+    @include u-order(9);
+  }
+
+  .u-order-10\@xl {
+    @include u-order(10);
+  }
+
+  .u-order-first\@xl {
+    @include u-order-first();
+  }
+
+  .u-order-last\@xl {
+    @include u-order-last();
+  }
+}

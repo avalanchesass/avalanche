@@ -1,0 +1,114 @@
+@import '~@avalanche/setting-spacings';
+@import 'mixins';
+
+.u-spacing-top-xs {
+  @include u-spacing(setting-spacing(xs));
+}
+
+.u-spacing-top-s {
+  @include u-spacing(setting-spacing(s));
+}
+
+.u-spacing-top-m {
+  @include u-spacing(setting-spacing(m));
+}
+
+.u-spacing-top-l {
+  @include u-spacing(setting-spacing(l));
+}
+
+.u-spacing-top-xl {
+  @include u-spacing(setting-spacing(xl));
+}
+
+.u-spacing-top-xxl {
+  @include u-spacing(setting-spacing(xxl));
+}
+
+.u-spacing-top-xxxl {
+  @include u-spacing(setting-spacing(xxxl));
+}
+
+.u-spacing-right-xs {
+  @include u-spacing(setting-spacing(xs), right);
+}
+
+.u-spacing-right-s {
+  @include u-spacing(setting-spacing(s), right);
+}
+
+.u-spacing-right-m {
+  @include u-spacing(setting-spacing(m), right);
+}
+
+.u-spacing-right-l {
+  @include u-spacing(setting-spacing(l), right);
+}
+
+.u-spacing-right-xl {
+  @include u-spacing(setting-spacing(xl), right);
+}
+
+.u-spacing-right-xxl {
+  @include u-spacing(setting-spacing(xxl), right);
+}
+
+.u-spacing-right-xxxl {
+  @include u-spacing(setting-spacing(xxxl), right);
+}
+
+.u-spacing-bottom-xs {
+  @include u-spacing(setting-spacing(xs), bottom);
+}
+
+.u-spacing-bottom-s {
+  @include u-spacing(setting-spacing(s), bottom);
+}
+
+.u-spacing-bottom-m {
+  @include u-spacing(setting-spacing(m), bottom);
+}
+
+.u-spacing-bottom-l {
+  @include u-spacing(setting-spacing(l), bottom);
+}
+
+.u-spacing-bottom-xl {
+  @include u-spacing(setting-spacing(xl), bottom);
+}
+
+.u-spacing-bottom-xxl {
+  @include u-spacing(setting-spacing(xxl), bottom);
+}
+
+.u-spacing-bottom-xxxl {
+  @include u-spacing(setting-spacing(xxxl), bottom);
+}
+
+.u-spacing-left-xs {
+  @include u-spacing(setting-spacing(xs), left);
+}
+
+.u-spacing-left-s {
+  @include u-spacing(setting-spacing(s), left);
+}
+
+.u-spacing-left-m {
+  @include u-spacing(setting-spacing(m), left);
+}
+
+.u-spacing-left-l {
+  @include u-spacing(setting-spacing(l), left);
+}
+
+.u-spacing-left-xl {
+  @include u-spacing(setting-spacing(xl), left);
+}
+
+.u-spacing-left-xxl {
+  @include u-spacing(setting-spacing(xxl), left);
+}
+
+.u-spacing-left-xxxl {
+  @include u-spacing(setting-spacing(xxxl), left);
+}
