@@ -1,25 +1,26 @@
 {
-  "name": "avalanchesass_utility_spacing",
+  "name": "@avalanche/utility-spacing",
   "description": "Spacing utility classes",
   "keywords": [
-    "avalanchesass-package",
-    "eyeglass-module",
+    "avalanche-package",
+    "avalanche",
     "sass"
   ],
-  "version": "3.0.3",
+  "version": "4.0.0-alpha.1",
   "author": "Markus Oberlehner",
-  "homepage": "https://github.com/avalanchesass/avalanche_utility_spacing",
-  "license": "GPL v2",
+  "homepage": "https://avalanche.oberlehner.net/",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/avalanchesass/avalanche_utility_spacing"
+    "url": "https://github.com/avalanchesass/avalanche/tree/master/packages/utility-spacing"
   },
   "bugs": {
-    "url": "https://github.com/avalanchesass/avalanche_utility_spacing/issues"
+    "url": "https://github.com/avalanchesass/avalanche/issues"
   },
-  "eyeglass": {
-    "sassDir": "scss",
-    "exports": false,
-    "needs": "^0.8.2"
-  }
+  "dependencies": {
+    "@avalanche/setting-spacings": "^4.0.0-alpha.2"
+  },
+  "main": "scss/index.scss"
 }
+
+
