@@ -1,0 +1,35 @@
+@import '~@avalanche/setting-spacings';
+@import 'settings';
+@import 'mixins';
+
+.o-vertical-spacing {
+  @include o-vertical-spacing(setting-spacing($o-vertical-spacing-default-size));
+}
+
+.o-vertical-spacing--xs {
+  @include o-vertical-spacing(setting-spacing(xs));
+}
+
+.o-vertical-spacing--s {
+  @include o-vertical-spacing(setting-spacing(s));
+}
+
+.o-vertical-spacing--m {
+  @include o-vertical-spacing(setting-spacing(m));
+}
+
+.o-vertical-spacing--l {
+  @include o-vertical-spacing(setting-spacing(l));
+}
+
+.o-vertical-spacing--xl {
+  @include o-vertical-spacing(setting-spacing(xl));
+}
+
+.o-vertical-spacing--xxl {
+  @include o-vertical-spacing(setting-spacing(xxl));
+}
+
+.o-vertical-spacing--xxxl {
+  @include o-vertical-spacing(setting-spacing(xxxl));
+}

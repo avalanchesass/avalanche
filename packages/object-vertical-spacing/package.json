@@ -1,6 +1,6 @@
 {
-  "name": "@avalanche/object-horizontal-spacing",
-  "description": "Add horizontal spacing to all child elements",
+  "name": "@avalanche/object-vertical-spacing",
+  "description": "Add vertical spacing to all child elements",
   "keywords": [
     "avalanche-package",
     "avalanche",
@@ -12,7 +12,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/avalanchesass/avalanche/tree/master/packages/object-horizontal-spacing"
+    "url": "https://github.com/avalanchesass/avalanche/tree/master/packages/object-vertical-spacing"
   },
   "bugs": {
     "url": "https://github.com/avalanchesass/avalanche/issues"
