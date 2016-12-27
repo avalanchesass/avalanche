@@ -1,0 +1,24 @@
+{
+  "name": "@avalanche/object-horizontal-spacing",
+  "description": "Add horizontal spacing to all child elements",
+  "keywords": [
+    "avalanche-package",
+    "avalanche",
+    "sass"
+  ],
+  "version": "4.0.0-alpha.1",
+  "author": "Markus Oberlehner",
+  "homepage": "https://avalanche.oberlehner.net/",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avalanchesass/avalanche/tree/master/packages/object-horizontal-spacing"
+  },
+  "bugs": {
+    "url": "https://github.com/avalanchesass/avalanche/issues"
+  },
+  "dependencies": {
+    "@avalanche/setting-spacings": "^4.0.0-alpha.2"
+  },
+  "main": "scss/index.scss"
+}

@@ -1,0 +1,24 @@
+////
+/// @group Object: horizontal-spacing
+/// @author Markus Oberlehner
+////
+
+/// Add horizontal spacing to all child elements.
+///
+/// @param {Number [unit]} $spacing [1em]
+///   Spacing.
+///
+/// @example scss - Usage
+///   .selector {
+///     @include o-horizontal-spacing();
+///   }
+///
+/// @example css - CSS Output
+///   .selector > * + * {
+///     margin-top: 1em;
+///   }
+@mixin o-horizontal-spacing($spacing: 1em) {
+  > * + * {
+    margin-top: $spacing;
+  }
+}
