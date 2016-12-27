@@ -1,5 +1,5 @@
 # avalanche
-[![Build Status](https://travis-ci.org/avalanchesass/avalanche.svg?branch=dev)](https://travis-ci.org/avalanchesass/avalanche)
+[![Build Status](https://travis-ci.org/avalanchesass/avalanche.svg?branch=master)](https://travis-ci.org/avalanchesass/avalanche)
 
 avalanche is a modular SASS framework which can be extended with npm packages. The goal is to provide a workflow to manage the complexity of big front-end projects.
 
