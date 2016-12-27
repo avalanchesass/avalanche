@@ -27,14 +27,9 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 
 ## Demo
 ```html
-<!-- Hide from both screenreaders and browsers. -->
-<div class="u-visibility-hidden">Hidden</div>
-
-<!-- Hide only visually, but have it available for screenreaders. -->
-<div class="u-visibility-visuallyhidden">Visually hidden</div>
-
-<!-- Hide visually and from screenreaders, but maintain layout. -->
-<div class="u-visibility-invisible">Invisible</div>
+<div class="u-visibility-hidden">Hide from both screenreaders and browsers.</div>
+<div class="u-visibility-visuallyhidden">Hide only visually, but have it available for screenreaders.</div>
+<div class="u-visibility-invisible">Hide visually and from screenreaders, but maintain layout.</div>
 ```
 
 ## Mixins
