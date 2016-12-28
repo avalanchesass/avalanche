@@ -57,7 +57,7 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 }
 
 .order-last {
-  @include u-order-first();
+  @include u-order-last();
 }
 ```
 
