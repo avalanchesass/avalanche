@@ -28,7 +28,7 @@
     "stylelint-config-modularis": "2.0.1"
   },
   "scripts": {
-    "bootstrap": "lerna bootsrap",
+    "bootstrap": "lerna bootstrap",
     "doc": "sassdoc packages/**/*.scss",
     "lint": "stylelint packages/**/*.scss",
     "test:reference": "bash test/test-reference.sh",
