@@ -22,7 +22,7 @@ gulp.task(`sass`, () =>
   gulp.src(`scss/**/*.scss`)
     .pipe(sourcemaps.init())
       .pipe(sass({
-        importer: nodeSassMagicImporter,
+        importer: nodeSassMagicImporter(),
       }).on(`error`, sass.logError))
       .pipe(autoprefixer())
     .pipe(sourcemaps.write({ sourceRoot: `/scss` }))
