@@ -5,4 +5,5 @@ install:
   - npm install -g yarn
   - yarn
 script:
-  - bash test/test.sh
+  - yarn run bootstrap
+  - yarn test
