@@ -1,25 +1,21 @@
 {
-  "name": "avalanchesass_utility_clearfix",
+  "name": "@avalanche/utility-clearfix",
   "description": "Contain floats",
   "keywords": [
-    "avalanchesass-package",
-    "eyeglass-module",
+    "avalanche-package",
+    "avalanche",
     "sass"
   ],
-  "version": "3.0.0",
+  "version": "4.0.0-alpha.1",
   "author": "Markus Oberlehner",
-  "homepage": "https://github.com/avalanchesass/avalanche_utility_clearfix",
-  "license": "GPL v2",
+  "homepage": "https://avalanche.oberlehner.net/",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/avalanchesass/avalanche_utility_clearfix"
+    "url": "https://github.com/avalanchesass/avalanche/tree/master/packages/utility-clearfix"
   },
   "bugs": {
-    "url": "https://github.com/avalanchesass/avalanche_utility_clearfix/issues"
+    "url": "https://github.com/avalanchesass/avalanche/issues"
   },
-  "eyeglass": {
-    "sassDir": "scss",
-    "exports": false,
-    "needs": "^0.8.2"
-  }
+  "main": "scss/index.scss"
 }

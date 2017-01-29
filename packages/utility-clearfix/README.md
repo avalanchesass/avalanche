@@ -1,24 +1,50 @@
-# avalanchesass_utility_clearfix
+# @avalanche/utility-clearfix
 Contain floats.
 
+- [Documentation](https://avalanche.oberlehner.net/documentation/#utility: clearfix)
+
 ## Install
-```
-npm install avalanchesass_utility_clearfix --save
+```bash
+npm install @avalanche/utility-clearfix --save-dev
 ```
 
 ## Basic usage
-```css
-/* Import the main file. */
-@import 'avalanchesass_utility_clearfix';
+This package requires that [node-sass](https://github.com/sass/node-sass) (or one of the grunt, gulp, etc. equivalents) in combination with the [node-sass-magic-importer](https://github.com/maoberlehner/node-sass-magic-importer) custom importer is used.
 
-/* Import just the mixin file. */
-@import 'avalanchesass_utility_clearfix/mixin';
+```scss
+// Import the main file.
+@import '~@avalanche/utility-clearfix';
+
+// Import just the mixin file.
+@import '~@avalanche/utility-clearfix/scss/mixins';
+
+// Not a fan of the "u-" prefix?
+@import '{ .u-clearfix as .clearfix } from ~@avalanche/utility-clearfix';
+```
+
+## Demo
+```html
+<div class="u-clearfix">
+  <p style="float: left;">Float left</p>
+  <p style="float: right;">Float right</p>
+</div>
+```
+
+## Mixins
+```scss
+@import '~@avalanche/utility-clearfix/scss/mixins';
+
+// Usage.
+.clearfix {
+  @include u-clearfix();
+}
 ```
 
 ## About
 ### Author
 Markus Oberlehner  
-Twitter: https://twitter.com/MaOberlehner
+Twitter: https://twitter.com/MaOberlehner  
+PayPal.me: https://paypal.me/maoberlehner
 
 ### License
-GPL v2 (http://www.gnu.org/licenses/gpl-2.0.html)
+MIT

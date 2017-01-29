@@ -1,0 +1,31 @@
+/// Clearfix.
+///
+/// @group Utility: clearfix
+/// @author Markus Oberlehner
+///
+/// @example scss - Usage
+///   .selector {
+///     @include u-clearfix();
+///   }
+///
+/// @example css - CSS Output
+///   .selector::before,
+///   .selector::after {
+///     display: table !important;
+///     content: ' ' !important;
+///   }
+///
+///   .selector::after {
+///     clear: both !important;
+///   }
+@mixin u-clearfix() {
+  &::before,
+  &::after {
+    display: table !important;
+    content: ' ' !important;
+  }
+
+  &::after {
+    clear: both !important;
+  }
+}

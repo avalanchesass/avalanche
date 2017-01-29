@@ -1,0 +1,5 @@
+@import 'mixins';
+
+.u-clearfix {
+  @include u-clearfix();
+}
