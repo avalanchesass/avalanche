@@ -80,6 +80,9 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 </div>
 ```
 
+## Clear negative margin
+To compensate for the vertical spacing of the grid items, the base grid block element (`.o-grid`) uses a negative value for margin top. If the grid is the first element inside a wrapping element, this can lead to an odd behavior where the negative margin is carried over by the wrapping element. You need to clear the negative margin by adding a [clearfix](https://avalanche.oberlehner.net/packages/utility-clearfix/) to the wrapping element. See the following CodePen for an example of the problem and how to solve it: [http://codepen.io/moberlehner/pen/BpJVGO](http://codepen.io/moberlehner/pen/BpJVGO).
+
 ## Mixins
 ```scss
 @import '~@avalanche/object-grid/scss/mixins';
