@@ -15,6 +15,9 @@ avalanche "Your Project Name"
 
 avalanche is flexible in the way you can use it – it is also very easy to integrate avalanche packages into your existing project. [Learn more about how to use avalanche](https://avalanche.oberlehner.net/get-started/).
 
+## Packages
+Go to the avalanche website to browse all available packages: [https://avalanche.oberlehner.net/packages](https://avalanche.oberlehner.net/packages/).
+
 ## Testing
 - Test all packages at once: `npm test`
 - Test a specific package: `npm test -- -p PACKAGE-NAME`
