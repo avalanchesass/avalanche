@@ -1,0 +1,41 @@
+////
+/// @group Setting: colors
+/// @author Markus Oberlehner
+////
+
+/// Default colors.
+/// @type Map
+$colors: (
+  a: #00acc1,
+  b: #7e6551,
+  c: #8896ab,
+  d: #938581,
+  e: #c5d5e4,
+) !default;
+
+/// Contrast colors.
+/// @type Map
+$colors-contrast: (
+  a: #fff,
+  b: #fff,
+  c: #fff,
+  d: #fff,
+  e: #fff,
+) !default;
+
+/// Alert colors.
+/// @type Map
+$colors-alert: (
+  positive: #468847,
+  neutral: #3a87ad,
+  cautious: #c09853,
+  negative: #b94a48,
+) !default;
+
+/// Gray colors.
+/// @type Map
+$colors-gray: (
+  a: #eee,
+  b: #bdbdbd,
+  c: #757575,
+) !default;

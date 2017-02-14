@@ -1,0 +1,33 @@
+@import 'settings';
+
+////
+/// @group Setting: colors
+/// @author Markus Oberlehner
+////
+
+/// Returns colors.
+///
+/// @param {String} $color
+///   Color (a, b, c, d, e).
+/// @param {String} $type [default]
+///   Type (default, contrast, alert, gray).
+///
+/// @example scss - Usage
+///   .selector {
+///     color: setting-color(a);
+///   }
+///
+/// @example css - CSS Output
+///   .selector {
+///     color: #2196f3;
+///   }
+@function setting-color($color, $type: default) {
+  @if $type == contrast {
+    @return map-get($colors-contrast, $color);
+  } @else if $type == alert {
+    @return map-get($colors-alert, $color);
+  } @else if $type == gray {
+    @return map-get($colors-gray, $color);
+  }
+  @return map-get($colors, $color);
+}
