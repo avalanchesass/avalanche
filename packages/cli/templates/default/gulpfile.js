@@ -27,6 +27,7 @@ gulp.task(`sass`, () =>
       .pipe(autoprefixer())
     .pipe(sourcemaps.write({ sourceRoot: `/scss` }))
     .pipe(gulp.dest(`app/css`))
+    .pipe(browserSync.stream())
     .pipe(rename((originalPath) => {
       // eslint-disable-next-line no-param-reassign
       originalPath.basename += `.min`;
