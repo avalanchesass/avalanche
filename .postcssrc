@@ -1,0 +1,7 @@
+{
+  "plugins": {
+    "autoprefixer": {
+      "browsers": "safari >= 4"
+    }
+  }
+}
