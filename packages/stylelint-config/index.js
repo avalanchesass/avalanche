@@ -1,8 +1,10 @@
 module.exports = {
+  plugins: [
+    `stylelint-order`,
+  ],
   rules: {
     'at-rule-empty-line-before': [`always`, {
-      except: [`blockless-group`],
-      ignore: [`after-comment`, `all-nested`],
+      ignore: [`after-comment`, `blockless-after-blockless`, `inside-block`],
     }],
     'at-rule-name-case': `lower`,
     'at-rule-name-space-after': `always-single-line`,
@@ -26,9 +28,8 @@ module.exports = {
     'comment-whitespace-inside': `always`,
     'declaration-bang-space-after': `never`,
     'declaration-bang-space-before': `always`,
-    'declaration-block-no-ignored-properties': true,
     'declaration-block-no-shorthand-property-overrides': true,
-    'declaration-block-properties-order': [
+    'order/declaration-block-properties-specified-order': [
       `position`,
       `top`,
       `right`,
@@ -257,11 +258,10 @@ module.exports = {
     'length-zero-no-unit': true,
     'max-empty-lines': 1,
     'max-nesting-depth': [1, {
-      ignore: [`at-rules-without-declaration-blocks`],
+      ignore: [`blockless-at-rules`],
     }],
     'media-feature-colon-space-after': `always`,
     'media-feature-colon-space-before': `never`,
-    'media-feature-no-missing-punctuation': true,
     'media-feature-parentheses-space-inside': `never`,
     'media-feature-range-operator-space-after': `always`,
     'media-feature-range-operator-space-before': `always`,
@@ -272,14 +272,14 @@ module.exports = {
     'no-empty-source': true,
     'no-eol-whitespace': true,
     'no-extra-semicolons': true,
-    'no-indistinguishable-colors': true,
     'no-invalid-double-slash-comments': true,
     'no-missing-end-of-source-newline': true,
     'number-leading-zero': `always`,
     'number-no-trailing-zeros': true,
     'property-case': `lower`,
     'property-no-vendor-prefix': true,
-    'rule-non-nested-empty-line-before': [`always-multi-line`, {
+    'rule-empty-line-before': [`always-multi-line`, {
+      except: [`first-nested`],
       ignore: [`after-comment`],
     }],
     'selector-attribute-brackets-space-inside': `never`,

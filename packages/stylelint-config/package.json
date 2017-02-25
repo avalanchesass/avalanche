@@ -17,6 +17,9 @@
   "bugs": {
     "url": "https://github.com/modularis/stylelint-config-modularis/issues"
   },
+  "dependencies": {
+    "stylelint-order": "^0.3.0"
+  },
   "devDependencies": {
     "eslint": "^3.16.1",
     "eslint-config-modularis": "^4.0.0",
