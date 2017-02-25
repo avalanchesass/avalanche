@@ -18,10 +18,10 @@
     "url": "https://github.com/modularis/stylelint-config-modularis/issues"
   },
   "devDependencies": {
-    "eslint": "^3.8.1",
-    "eslint-config-modularis": "^2.0.0",
-    "eslint-plugin-import": "^2.0.1",
-    "pre-git": "^3.10.0"
+    "eslint": "^3.16.1",
+    "eslint-config-modularis": "^4.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "pre-git": "^3.14.0"
   },
   "scripts": {
     "lint": "eslint ."
