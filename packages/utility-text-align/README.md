@@ -45,6 +45,7 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 ## About
 ### Author
 Markus Oberlehner  
+Website: https://markus.oberlehner.net  
 Twitter: https://twitter.com/MaOberlehner  
 PayPal.me: https://paypal.me/maoberlehner
 
