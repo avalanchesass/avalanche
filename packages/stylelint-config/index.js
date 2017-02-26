@@ -299,7 +299,7 @@ module.exports = {
     'selector-type-case': `lower`,
     'selector-type-no-unknown': true,
     'shorthand-property-no-redundant-values': true,
-    'string-no-newline': false,
+    'string-no-newline': null,
     'string-quotes': `single`,
     'unit-case': `lower`,
     'unit-no-unknown': true,
