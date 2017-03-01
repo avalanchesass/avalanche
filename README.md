@@ -18,6 +18,9 @@ avalanche is flexible in the way you can use it – it is also very easy to inte
 ## Packages
 Go to the avalanche website to browse all available packages: [https://avalanche.oberlehner.net/packages](https://avalanche.oberlehner.net/packages/).
 
+## Coding styleguide
+avalanche follows some strict principles how to write CSS. [Read more about it in the styleguide.](https://github.com/avalanchesass/avalanche/blob/master/STYLEGUIDE.md)
+
 ## Testing
 - Test all packages at once: `npm test`
 - Test a specific package: `npm test -- -p PACKAGE-NAME`
