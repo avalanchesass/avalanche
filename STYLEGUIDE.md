@@ -133,7 +133,7 @@ We encourage some combination of OOCSS and BEM for these reasons:
 - `.c-listing-card--featured` is a “modifier” and represents a different state or variation on the `.c-listing-card` block.
 
 ### Namespace prefixes
-We recommend you to use the BEMIT approach utilizing namespace prefixes for your CSS classes. You can [read more about that approach in Harry Roberts article about this topic](https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/).
+We recommend you to use the BEMIT approach utilizing namespace prefixes for your CSS classes. You can [read more about that approach in Harry Roberts' article about this topic](https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/).
 
 ### ID selectors
 While it is possible to select elements by ID in CSS, it should generally be considered an anti-pattern. ID selectors introduce an unnecessarily high level of [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) to your rule declarations, and they are not reusable.
