@@ -27,7 +27,6 @@ Thumbs.db
 # Folders to ignore
 backstop_data
 bitmaps_test
-bower_components
 dist
 node_modules
 sassdoc
