@@ -163,12 +163,23 @@ asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
 
-autoprefixer@^6.0.0, autoprefixer@^6.7.5:
+autoprefixer@^6.0.0:
   version "6.7.5"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-6.7.5.tgz#50848f39dc08730091d9495023487e7cc21f518d"
   dependencies:
     browserslist "^1.7.5"
     caniuse-db "^1.0.30000624"
+    normalize-range "^0.1.2"
+    num2fraction "^1.2.2"
+    postcss "^5.2.15"
+    postcss-value-parser "^3.2.3"
+
+autoprefixer@^6.7.6:
+  version "6.7.6"
+  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-6.7.6.tgz#00f05656c7ef73de9d2fd9b4668f6ef6905a855a"
+  dependencies:
+    browserslist "^1.7.5"
+    caniuse-db "^1.0.30000628"
     normalize-range "^0.1.2"
     num2fraction "^1.2.2"
     postcss "^5.2.15"
@@ -189,21 +200,20 @@ babel-runtime@^6.22.0:
     core-js "^2.4.0"
     regenerator-runtime "^0.10.0"
 
-backstopjs@^2.5.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/backstopjs/-/backstopjs-2.5.1.tgz#247a98fafd9a932fccc63c547077b29964b907a1"
+backstopjs@^2.6.6:
+  version "2.6.6"
+  resolved "https://registry.yarnpkg.com/backstopjs/-/backstopjs-2.6.6.tgz#b73000b9fd9d3a9b722afdad616adc09f70d699d"
   dependencies:
-    bluebird "^3.4.6"
     casperjs "^1.1.0-beta5"
     chalk "^1.1.3"
     fs-extra "^0.30.0"
     junitwriter "~0.3.1"
-    lodash.map "^4.6.0"
     minimist "^1.2.0"
     node-resemble-js "^0.2.0"
     object-hash "1.1.5"
     open "0.0.5"
     os "^0.1.1"
+    p-map "^1.1.1"
     phantomjs-prebuilt "^2.1.7"
     temp "^0.8.3"
 
@@ -232,10 +242,6 @@ block-stream@*:
   resolved "https://registry.yarnpkg.com/block-stream/-/block-stream-0.0.9.tgz#13ebfe778a03205cfe03751481ebb4b3300c126a"
   dependencies:
     inherits "~2.0.0"
-
-bluebird@^3.4.6:
-  version "3.4.6"
-  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.4.6.tgz#01da8d821d87813d158967e743d5fe6c62cf8c0f"
 
 boom@2.x.x:
   version "2.10.1"
@@ -316,6 +322,10 @@ camelcase@^3.0.0:
 caniuse-db@^1.0.30000187, caniuse-db@^1.0.30000624:
   version "1.0.30000624"
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000624.tgz#554b87547895e36f5fe128f4b7448a2ea5bf2213"
+
+caniuse-db@^1.0.30000628:
+  version "1.0.30000632"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000632.tgz#12e3f5c114d19de58e74dec478a327fb2eeb6bcb"
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
@@ -1779,10 +1789,6 @@ lodash.keys@~2.4.1:
     lodash._shimkeys "~2.4.1"
     lodash.isobject "~2.4.1"
 
-lodash.map@^4.6.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/lodash.map/-/lodash.map-4.6.0.tgz#771ec7839e3473d9c4cde28b19394c3562f4f6d3"
-
 lodash.mergewith@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.0.tgz#150cf0a16791f5903b8891eab154609274bdea55"
@@ -2299,6 +2305,10 @@ osenv@0, osenv@^0.1.0:
   dependencies:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.0"
+
+p-map@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/p-map/-/p-map-1.1.1.tgz#05f5e4ae97a068371bc2a5cc86bfbdbc19c4ae7a"
 
 package-json@^2.0.0:
   version "2.4.0"
@@ -3096,9 +3106,9 @@ stylehacks@^2.3.0:
     text-table "^0.2.0"
     write-file-stdout "0.0.2"
 
-stylelint-config-modularis@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-modularis/-/stylelint-config-modularis-3.0.0.tgz#271bba34fce95271eb7a932ee11326f22d02f3c7"
+stylelint-config-modularis@4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/stylelint-config-modularis/-/stylelint-config-modularis-4.0.1.tgz#762d8309649e85d0dd6b36d3b66903cfe82f4472"
   dependencies:
     stylelint-order "^0.3.0"
 
