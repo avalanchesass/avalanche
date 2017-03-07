@@ -140,6 +140,31 @@ While it is possible to select elements by ID in CSS, it should generally be con
 
 For more on this subject, read [CSS Wizardry's article](http://csswizardry.com/2014/07/hacks-for-dealing-with-specificity/) on dealing with specificity.
 
+### Pseudo selectors / elements
+Use single colons for pseudo selectors and double colons for pseudo elements.
+
+**Bad**
+```scss
+.some-selector::first-child {
+  // ...
+}
+
+.some-selector:after {
+  // ...
+}
+```
+
+**Good**
+```scss
+.some-selector:first-child {
+  // ...
+}
+
+.some-selector::after {
+  // ...
+}
+```
+
 ### JavaScript hooks
 Avoid binding to the same class in both your CSS and JavaScript. Conflating the two often leads to, at a minimum, time wasted during refactoring when a developer must cross-reference each class they are changing, and at its worst, developers being afraid to make changes for fear of breaking functionality.
 
