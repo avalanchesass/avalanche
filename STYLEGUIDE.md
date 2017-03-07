@@ -90,7 +90,7 @@ Finally, properties are what give the selected elements of a rule declaration th
 .c-one,
 .c-selector,
 .c-per-line {
-  // ...
+  /* ... */
 }
 ```
 
@@ -144,24 +144,24 @@ For more on this subject, read [CSS Wizardry's article](http://csswizardry.com/2
 Use single colons for pseudo selectors and double colons for pseudo elements.
 
 **Bad**
-```scss
+```css
 .some-selector::first-child {
-  // ...
+  /* ... */
 }
 
 .some-selector:after {
-  // ...
+  /* ... */
 }
 ```
 
 **Good**
-```scss
+```css
 .some-selector:first-child {
-  // ...
+  /* ... */
 }
 
 .some-selector::after {
-  // ...
+  /* ... */
 }
 ```
 
