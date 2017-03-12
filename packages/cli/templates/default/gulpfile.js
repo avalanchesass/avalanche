@@ -14,11 +14,11 @@ gulp.task(`serve`, () => {
     },
   });
 
-  gulp.watch(`scss/**/*.scss`, [`sass`]);
+  gulp.watch(`scss/**/*.scss`, [`styles`]);
   gulp.watch(`app/**/*.html`).on(`change`, browserSync.reload);
 });
 
-gulp.task(`sass`, () =>
+gulp.task(`styles`, () =>
   gulp.src(`scss/**/*.scss`)
     .pipe(sourcemaps.init())
       .pipe(sass({
@@ -28,6 +28,10 @@ gulp.task(`sass`, () =>
     .pipe(sourcemaps.write({ sourceRoot: `/scss` }))
     .pipe(gulp.dest(`app/css`))
     .pipe(browserSync.stream())
+);
+
+gulp.task(`styles:minify`, () =>
+  gulp.src(`app/css/**/*.css`)
     .pipe(rename((originalPath) => {
       // eslint-disable-next-line no-param-reassign
       originalPath.basename += `.min`;
