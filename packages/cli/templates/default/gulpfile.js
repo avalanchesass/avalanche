@@ -1,10 +1,10 @@
 const autoprefixer = require(`gulp-autoprefixer`);
 const browserSync = require(`browser-sync`);
 const cleancss = require(`gulp-cleancss`);
+const del = require(`del`);
 const gulp = require(`gulp`);
 const nodeSassMagicImporter = require(`node-sass-magic-importer`);
 const rename = require(`gulp-rename`);
-const rm = require(`rimraf`);
 const sass = require(`gulp-sass`);
 const sourcemaps = require(`gulp-sourcemaps`);
 
@@ -44,6 +44,6 @@ gulp.task(`styles:minify`, () =>
     .pipe(browserSync.stream())
 );
 
-gulp.task(`clean:styles`, () => rm(stylesDestDirectory));
+gulp.task(`clean:styles`, () => del(stylesDestDirectory));
 
 gulp.task(`default`, [`serve`]);
