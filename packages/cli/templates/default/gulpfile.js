@@ -4,8 +4,11 @@ const cleancss = require(`gulp-cleancss`);
 const gulp = require(`gulp`);
 const nodeSassMagicImporter = require(`node-sass-magic-importer`);
 const rename = require(`gulp-rename`);
+const rm = require(`rimraf`);
 const sass = require(`gulp-sass`);
 const sourcemaps = require(`gulp-sourcemaps`);
+
+const stylesDestDirectory = `app/css`;
 
 gulp.task(`serve`, () => {
   browserSync.init({
@@ -18,7 +21,7 @@ gulp.task(`serve`, () => {
   gulp.watch(`app/**/*.html`).on(`change`, browserSync.reload);
 });
 
-gulp.task(`styles`, () =>
+gulp.task(`styles`, [`clean:styles`], () =>
   gulp.src(`scss/**/*.scss`)
     .pipe(sourcemaps.init())
       .pipe(sass({
@@ -26,7 +29,7 @@ gulp.task(`styles`, () =>
       }).on(`error`, sass.logError))
       .pipe(autoprefixer())
     .pipe(sourcemaps.write({ sourceRoot: `/scss` }))
-    .pipe(gulp.dest(`app/css`))
+    .pipe(gulp.dest(stylesDestDirectory))
     .pipe(browserSync.stream())
 );
 
@@ -37,8 +40,10 @@ gulp.task(`styles:minify`, () =>
       originalPath.basename += `.min`;
     }))
     .pipe(cleancss())
-    .pipe(gulp.dest(`app/css`))
+    .pipe(gulp.dest(stylesDestDirectory))
     .pipe(browserSync.stream())
 );
+
+gulp.task(`clean:styles`, () => rm(stylesDestDirectory));
 
 gulp.task(`default`, [`serve`]);
