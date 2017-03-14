@@ -12,7 +12,9 @@ npm install @avalanche/cli -g
 avalanche "Your Project Name"
 # Switch to the newly created directory.
 cd your-project-name
-# Install dependencies and start the build process.
+# Install dependencies.
+npm install
+# Start the build process.
 npm start
 ```
 
