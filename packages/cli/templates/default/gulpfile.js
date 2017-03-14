@@ -33,7 +33,7 @@ gulp.task(`styles`, [`clean:styles`], () =>
     .pipe(browserSync.stream())
 );
 
-gulp.task(`styles:minify`, () =>
+gulp.task(`minify:styles`, () =>
   gulp.src(`app/css/**/*.css`)
     .pipe(rename((originalPath) => {
       // eslint-disable-next-line no-param-reassign
