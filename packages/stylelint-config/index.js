@@ -259,6 +259,7 @@ module.exports = {
     'max-empty-lines': 1,
     'max-nesting-depth': [1, {
       ignore: [`blockless-at-rules`],
+      ignoreAtRules: [`media`],
     }],
     'media-feature-colon-space-after': `always`,
     'media-feature-colon-space-before': `never`,
