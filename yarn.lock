@@ -3081,9 +3081,9 @@ stylehacks@^2.3.0:
     text-table "^0.2.0"
     write-file-stdout "0.0.2"
 
-stylelint-config-modularis@4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/stylelint-config-modularis/-/stylelint-config-modularis-4.0.1.tgz#762d8309649e85d0dd6b36d3b66903cfe82f4472"
+stylelint-config-modularis@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-modularis/-/stylelint-config-modularis-5.0.0.tgz#2ecc6d337bc808dcdd25fafb129612ffc95f822b"
   dependencies:
     stylelint-order "^0.3.0"
 

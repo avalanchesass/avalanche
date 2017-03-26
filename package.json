@@ -25,7 +25,7 @@
     "postcss-cli": "^3.0.0",
     "sassdoc": "^2.2.0",
     "stylelint": "^7.9.0",
-    "stylelint-config-modularis": "4.0.1"
+    "stylelint-config-modularis": "5.0.0"
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
