@@ -1,0 +1,146 @@
+////
+/// @group Component: button
+/// @author Markus Oberlehner
+////
+
+/// Button.
+///
+/// @param {Number [unit]} $spacing-vertical [0.5em]
+///   Spacing vertical.
+/// @param {Number [unit]} $spacing-horizontal [1em]
+///   Spacing horizontal.
+/// @param {Color} $background-color [#2196f3]
+///   Background color.
+/// @param {Color} $color [#fff]
+///   Text color.
+///
+/// @example scss - Usage
+///   .selector {
+///     @include c-button();
+///   }
+///
+/// @example css - CSS Output
+///   .selector {
+///     padding: 0.5em 1em;
+///     background-color: #2196f3;
+///     display: inline-block;
+///     margin: 0;
+///     border: none;
+///     vertical-align: top;
+///     white-space: nowrap;
+///     font-size: 100%;
+///     font-family: inherit;
+///     cursor: pointer;
+///   }
+///
+///   .selector,
+///   .selector:hover,
+///   .selector:focus,
+///   .selector:active,
+///   .selector:visited {
+///     color: #2196f3;
+///     outline: none;
+///     text-decoration: none;
+///   }
+///
+///   .selector:hover,
+///   .selector:focus,
+///   .selector:active {
+///     background-color: #64b6f7;
+///   }
+@mixin c-button($spacing-vertical: 0.5em, $spacing-horizontal: 1em, $background-color: #2196f3, $color: #fff) {
+  @include c-button-spacing(
+    $spacing-vertical,
+    $spacing-horizontal
+  );
+  @include c-button-color(
+    $background-color,
+    $color
+  );
+
+  display: inline-block;
+  margin: 0;
+  border: none;
+  vertical-align: top;
+  white-space: nowrap;
+  font-size: 100%;
+  font-family: inherit;
+  cursor: pointer;
+
+  &,
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+/// Button spacing.
+///
+/// @param {Number [unit]} $spacing-vertical [0.5em]
+///   Spacing vertical.
+/// @param {Number [unit]} $spacing-horizontal [1em]
+///   Spacing horizontal.
+///
+/// @example scss - Usage
+///   .selector {
+///     @include c-button-spacing();
+///   }
+///
+/// @example css - CSS Output
+///   .selector {
+///     padding: 0.5em 1em;
+///   }
+@mixin c-button-spacing($spacing-vertical: 0.5em, $spacing-horizontal: 1em) {
+  padding: $spacing-vertical $spacing-horizontal;
+}
+
+/// Button color.
+///
+/// @param {Color} $background-color [#2196f3]
+///   Background color.
+/// @param {Color} $color [#fff]
+///   Text color.
+///
+/// @example scss - Usage
+///   .selector {
+///     @include c-button-color();
+///   }
+///
+/// @example css - CSS Output
+///   .selector {
+///     background-color: #2196f3;
+///   }
+///
+///   .selector,
+///   .selector:hover,
+///   .selector:focus,
+///   .selector:active,
+///   .selector:visited {
+///     color: #2196f3;
+///   }
+///
+///   .selector:hover,
+///   .selector:focus,
+///   .selector:active {
+///     background-color: #64b6f7;
+///   }
+@mixin c-button-color($background-color: #2196f3, $color: #fff) {
+  background-color: $background-color;
+
+  &,
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    color: $color;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: mix($color, $background-color, 30%);
+  }
+}

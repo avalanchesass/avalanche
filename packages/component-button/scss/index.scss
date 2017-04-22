@@ -1,0 +1,89 @@
+@import '~@avalanche/setting-spacings';
+@import '~@avalanche/setting-colors';
+@import 'settings';
+@import 'mixins';
+
+.c-button {
+  @include c-button(
+    $c-button-spacing-vertical-default,
+    $c-button-spacing-horizontal-default,
+    $c-button-background-color-default,
+    $c-button-color-default
+  );
+}
+
+.c-button--s {
+  @include c-button-spacing(
+    $c-button-spacing-vertical-s,
+    $c-button-spacing-horizontal-s
+  );
+}
+
+.c-button--m {
+  @include c-button-spacing(
+    $c-button-spacing-vertical-m,
+    $c-button-spacing-horizontal-m
+  );
+}
+
+.c-button--l {
+  @include c-button-spacing(
+    $c-button-spacing-vertical-l,
+    $c-button-spacing-horizontal-l
+  );
+}
+
+.c-button--xl {
+  @include c-button-spacing(
+    $c-button-spacing-vertical-xl,
+    $c-button-spacing-horizontal-xl
+  );
+}
+
+.c-button--color-a {
+  @include c-button-color(setting-color(a), setting-color(a, contrast));
+}
+
+.c-button--color-b {
+  @include c-button-color(setting-color(b), setting-color(b, contrast));
+}
+
+.c-button--color-c {
+  @include c-button-color(setting-color(c), setting-color(c, contrast));
+}
+
+.c-button--color-d {
+  @include c-button-color(setting-color(d), setting-color(d, contrast));
+}
+
+.c-button--color-e {
+  @include c-button-color(setting-color(e), setting-color(e, contrast));
+}
+
+.c-button--alert-positive {
+  @include c-button-color(setting-color(positive, alert), #fff);
+}
+
+.c-button--alert-neutral {
+  @include c-button-color(setting-color(neutral, alert), #fff);
+}
+
+.c-button--alert-cautious {
+  @include c-button-color(setting-color(cautious, alert), #fff);
+}
+
+.c-button--alert-negative {
+  @include c-button-color(setting-color(negative, alert), #fff);
+}
+
+.c-button--gray-a {
+  @include c-button-color(setting-color(a, gray), #fff);
+}
+
+.c-button--gray-b {
+  @include c-button-color(setting-color(b, gray), #fff);
+}
+
+.c-button--gray-c {
+  @include c-button-color(setting-color(c, gray), #fff);
+}
