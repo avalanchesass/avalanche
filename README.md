@@ -1,5 +1,6 @@
 # avalanche
 [![Build Status](https://travis-ci.org/avalanchesass/avalanche.svg?branch=master)](https://travis-ci.org/avalanchesass/avalanche)
+[![GitHub stars](https://img.shields.io/github/stars/avalanchesass/avalanche.svg?style=social&label=Star)](https://github.com/avalanchesass/avalanche)
 
 avalanche establishes the foundation for a package based CSS workflow. Heavy weight CSS toolkits often stay in your way when creating unique looking experiences or they lead to a rather bland design. But you don't have to reinvent the wheel for every new project either. avalanche provides building blocks for you to handpick and integrate into your workflow.
 
