@@ -19,7 +19,7 @@
     "autoprefixer": "^6.7.7",
     "backstopjs": "^2.6.11",
     "handlebars-cmd": "^0.1.4",
-    "lerna": "2.0.0-beta.37",
+    "lerna": "2.0.0-rc.4",
     "node-sass": "^4.5.2",
     "node-sass-magic-importer": "^4.1.3",
     "postcss-cli": "^3.2.0",
