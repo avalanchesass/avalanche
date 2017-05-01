@@ -1,6 +1,6 @@
 {
-  "name": "eslint-config-modularis",
-  "description": "modularis ESLint config",
+  "name": "@avalanche/eslint-config",
+  "description": "ESLint config",
   "keywords": [
     "eslint",
     "eslintconfig",
@@ -8,37 +8,22 @@
     "javascript",
     "styleguide"
   ],
-  "main": "index.js",
-  "version": "4.0.0",
+  "version": "1.0.0",
   "author": "Markus Oberlehner",
   "homepage": "https://github.com/modularis/eslint-config-modularis",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/modularis/eslint-config-modularis"
+    "url": "https://github.com/avalanchesass/avalanche/tree/master/packages/eslint-config"
   },
   "bugs": {
-    "url": "https://github.com/modularis/eslint-config-modularis/issues"
+    "url": "https://github.com/avalanchesass/avalanche/issues"
   },
   "dependencies": {
     "eslint-config-airbnb-base": "^10.0.1"
   },
-  "devDependencies": {
-    "eslint": "^3.11.1",
-    "eslint-plugin-import": "^2.2.0",
-    "pre-git": "^3.11.1"
-  },
   "engines": {
     "node": ">= 6"
   },
-  "scripts": {
-    "lint": "eslint ."
-  },
-  "config": {
-    "pre-git": {
-      "pre-commit": [
-        "npm run lint"
-      ]
-    }
-  }
+  "main": "index.js"
 }
