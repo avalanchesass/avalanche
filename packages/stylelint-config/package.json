@@ -1,39 +1,23 @@
 {
-  "name": "stylelint-config-modularis",
-  "description": "modularis stylelint config",
+  "name": "@avalanche/stylelint-config",
+  "description": "avalanche stylelint config",
   "keywords": [
     "stylelint",
     "stylelint-config"
   ],
-  "main": "index.js",
-  "version": "5.0.0",
+  "version": "0.1.0",
   "author": "Markus Oberlehner",
-  "homepage": "https://github.com/modularis/stylelint-config-modularis",
+  "homepage": "https://avalanche.oberlehner.net/",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/modularis/stylelint-config-modularis"
+    "url": "https://github.com/avalanchesass/avalanche/tree/master/packages/stylelint-config"
   },
   "bugs": {
-    "url": "https://github.com/modularis/stylelint-config-modularis/issues"
+    "url": "https://github.com/avalanchesass/avalanche/issues"
   },
   "dependencies": {
     "stylelint-order": "^0.3.0"
   },
-  "devDependencies": {
-    "eslint": "^3.16.1",
-    "eslint-config-modularis": "^4.0.0",
-    "eslint-plugin-import": "^2.2.0",
-    "pre-git": "^3.14.0"
-  },
-  "scripts": {
-    "lint": "eslint ."
-  },
-  "config": {
-    "pre-git": {
-      "pre-commit": [
-        "npm run lint"
-      ]
-    }
-  }
+  "main": "index.js"
 }

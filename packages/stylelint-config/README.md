@@ -1,5 +1,10 @@
-# stylelint-config-modularis
-modularis stylelint config
+# @avalanche/stylelint-config
+avalanche stylelint config
+
+## Install
+```bash
+npm install @avalanche/stylelint-config --save-dev
+```
 
 ## About
 ### Author
