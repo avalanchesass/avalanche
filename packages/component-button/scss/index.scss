@@ -40,6 +40,10 @@
   );
 }
 
+.c-button--full-width {
+  @include c-button-full-width();
+}
+
 .c-button--color-a {
   @include c-button-color(setting-color(a), setting-color(a, contrast));
 }

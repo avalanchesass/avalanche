@@ -97,6 +97,22 @@
   padding: $spacing-vertical $spacing-horizontal;
 }
 
+/// Button full width.
+///
+/// @example scss - Usage
+///   .selector {
+///     @include c-button-full-width();
+///   }
+///
+/// @example css - CSS Output
+///   .selector {
+///     background-color: #2196f3;
+///   }
+@mixin c-button-full-width() {
+  width: 100%;
+  text-align: center;
+}
+
 /// Button color.
 ///
 /// @param {Color} $background-color [#2196f3]
