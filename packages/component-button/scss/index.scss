@@ -51,6 +51,18 @@
 }
 
 /**
+ * Full width
+ */
+.c-button--outline {
+  @include c-button-color(transparent, inherit);
+  @include c-button-outline(
+    $c-button-outline-border-width,
+    setting-color(a),
+    setting-color(a, contrast)
+  );
+}
+
+/**
  * Colors
  */
 .c-button--color-a {

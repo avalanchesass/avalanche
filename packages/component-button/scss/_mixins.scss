@@ -113,6 +113,78 @@
   text-align: center;
 }
 
+/// Button outline.
+///
+/// @param {Number [unit]} $border-width [0.1875em]
+///   Border width.
+/// @param {Color} $background-color [#2196f3]
+///   Background color (when active).
+/// @param {Color} $color [#fff]
+///   Text color (when active).
+///
+/// @example scss - Usage
+///   .selector {
+///     @include c-button-outline();
+///   }
+///
+/// @example css - CSS Output
+///   .selector {
+///     position: relative;
+///   }
+///
+///   .selector,
+///   .selector:hover,
+///   .selector:focus,
+///   .selector:active,
+///   .selector:visited {
+///     color: #2196f3;
+///   }
+///
+///   .selector:hover,
+///   .selector:focus,
+///   .selector:active {
+///     background-color: #2196f3;
+///     color: #fff;
+///   }
+///
+///   .selector::before {
+///     position: absolute;
+///     top: 0;
+///     right: 0;
+///     bottom: 0;
+///     left: 0;
+///     border: 0.1875em solid #2196f3;
+///     content: '';
+///   }
+@mixin c-button-outline($border-width: 0.1875em, $background-color: #2196f3, $color: #fff) {
+  position: relative;
+
+  &,
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    color: $background-color;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $background-color;
+    color: $color;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: $border-width solid $background-color;
+    content: '';
+  }
+}
+
 /// Button color.
 ///
 /// @param {Color} $background-color [#2196f3]
@@ -154,9 +226,11 @@
     color: $color;
   }
 
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: mix($color, $background-color, 30%);
+  @if type_of($color) == color {
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: mix($color, $background-color, 30%);
+    }
   }
 }
