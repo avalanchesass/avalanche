@@ -158,6 +158,8 @@
 ///   }
 @mixin c-button-outline($border-width: 0.1875em, $background-color: #2196f3, $color: #fff) {
   position: relative;
+  transition: background-color, color;
+  transition-duration: 0.2s;
 
   &,
   &:hover,
@@ -217,6 +219,8 @@
 ///   }
 @mixin c-button-color($background-color: #2196f3, $color: #fff) {
   background-color: $background-color;
+  transition: background-color, color;
+  transition-duration: 0.2s;
 
   &,
   &:hover,
