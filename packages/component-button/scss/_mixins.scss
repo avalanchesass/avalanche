@@ -133,9 +133,6 @@
 ///   }
 ///
 ///   .selector,
-///   .selector:hover,
-///   .selector:focus,
-///   .selector:active,
 ///   .selector:visited {
 ///     color: #2196f3;
 ///   }
@@ -162,9 +159,6 @@
   transition-duration: 0.2s;
 
   &,
-  &:hover,
-  &:focus,
-  &:active,
   &:visited {
     color: $background-color;
   }
