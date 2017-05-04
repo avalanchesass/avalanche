@@ -16,11 +16,6 @@
 ///   .selector {
 ///     margin-top: setting-spacing(m);
 ///   }
-///
-/// @example css - CSS Output
-///   .selector {
-///     margin-top: 1em;
-///   }
 @function setting-spacing($size, $rem: false) {
   $spacing: map-get($spacings, $size);
   @if $rem { $spacing: ($spacing / 1em) * 1rem; }

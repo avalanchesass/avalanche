@@ -7,17 +7,6 @@
 ///   .selector {
 ///     @include u-clearfix();
 ///   }
-///
-/// @example css - CSS Output
-///   .selector::before,
-///   .selector::after {
-///     display: table !important;
-///     content: ' ' !important;
-///   }
-///
-///   .selector::after {
-///     clear: both !important;
-///   }
 @mixin u-clearfix() {
   &::before,
   &::after {

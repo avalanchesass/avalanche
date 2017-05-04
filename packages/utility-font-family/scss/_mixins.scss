@@ -10,11 +10,6 @@
 ///   .selector {
 ///     @include u-font-family();
 ///   }
-///
-/// @example css - CSS Output
-///   .selector {
-///     font-family: sans-serif !important;
-///   }
 @mixin u-font-family($font-family: sans-serif) {
   font-family: $font-family !important;
 }

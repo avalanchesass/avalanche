@@ -14,9 +14,6 @@
 ///
 /// @example scss - Usage
 ///   @media (min-width: setting-breakpoint(m)) { }
-///
-/// @example css - CSS Output
-///   @media (min-width: 45em) { }
 @function setting-breakpoint($size, $rem: false) {
   $breakpoint: map-get($breakpoints, $size);
   @if $rem { $breakpoint: ($breakpoint / 1em) * 1rem; }

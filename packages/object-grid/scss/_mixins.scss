@@ -18,14 +18,6 @@
 ///   .selector {
 ///     @include o-grid();
 ///   }
-///
-/// @example css - CSS Output
-///   .selector {
-///     margin-left: -1rem;
-///     margin-top: -1rem;
-///     display: flex;
-///     flex-wrap: wrap;
-///   }
 @mixin o-grid($gutter-horizontal: 1rem, $gutter-vertical: 1rem, $layout: true) {
   @if $gutter-horizontal > 0 {
     margin-left: -$gutter-horizontal;

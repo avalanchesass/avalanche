@@ -11,12 +11,6 @@
 ///   .selector {
 ///     @include u-visibility-hidden();
 ///   }
-///
-/// @example css - CSS Output
-///   .selector {
-///     display: none !important;
-///     visibility: hidden !important;
-///   }
 @mixin u-visibility-hidden() {
   display: none !important;
   visibility: hidden !important;
@@ -27,30 +21,6 @@
 /// @example scss - Usage
 ///   .selector {
 ///     @include u-visibility-visuallyhidden();
-///   }
-///
-/// @example css - CSS Output
-///   .selector {
-///     position: absolute;
-///     margin: -1px;
-///     padding: 0;
-///     width: 1px;
-///     height: 1px;
-///     overflow: hidden;
-///     clip: rect(0 0 0 0);
-///     border: 0;
-///     white-space: nowrap;
-///   }
-///
-///   .selector.is-focusable:active,
-///   .selector.is-focusable:focus {
-///     position: static;
-///     margin: 0;
-///     width: auto;
-///     height: auto;
-///     overflow: visible;
-///     clip: auto;
-///     white-space: inherit;
 ///   }
 @mixin u-visibility-visuallyhidden() {
   position: absolute;
@@ -80,11 +50,6 @@
 /// @example scss - Usage
 ///   .selector {
 ///     @include u-visibility-invisible();
-///   }
-///
-/// @example css - CSS Output
-///   .selector {
-///     visibility: hidden !important;
 ///   }
 @mixin u-visibility-invisible() {
   visibility: hidden !important;

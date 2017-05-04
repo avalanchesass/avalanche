@@ -14,11 +14,6 @@
 ///   .selector {
 ///     @include u-spacing();
 ///   }
-///
-/// @example css - CSS Output
-///   .selector {
-///     margin-top: 1em;
-///   }
 @mixin u-spacing($spacing: 1em, $direction: top) {
   margin-#{$direction}: $spacing !important;
 }

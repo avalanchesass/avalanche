@@ -16,15 +16,6 @@
 ///   .selector {
 ///     @include o-container();
 ///   }
-///
-/// @example css - CSS Output
-///   .selector {
-///     max-width: 64rem;
-///     padding-right: 1rem;
-///     padding-left: 1rem;
-///     margin-right: auto;
-///     margin-left: auto;
-///   }
 @mixin o-container($max-width: 64rem, $spacing-horizontal: 1rem, $center-horizontal: true) {
   @if $max-width > 0 {
     max-width: $max-width;

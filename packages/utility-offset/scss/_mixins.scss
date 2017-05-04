@@ -12,11 +12,6 @@
 ///   .selector {
 ///     @include u-offset(6, 12);
 ///   }
-///
-/// @example css - CSS Output
-///   .selector {
-///     margin-left: 50% !important;
-///   }
 @mixin u-offset($size, $base: 12) {
   $base-size: (100% / $base);
   margin-left: ($base-size * $size) !important;

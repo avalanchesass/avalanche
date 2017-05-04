@@ -12,11 +12,6 @@
 ///   .selector {
 ///     @include u-text-align(right);
 ///   }
-///
-/// @example css - CSS Output
-///   .selector {
-///     text-align: right;
-///   }
 @mixin u-text-align($alignment) {
   text-align: $alignment !important;
 }

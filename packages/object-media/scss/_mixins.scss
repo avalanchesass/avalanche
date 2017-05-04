@@ -16,14 +16,6 @@
 ///   .selector {
 ///     @include o-media();
 ///   }
-///
-/// @example css - CSS Output
-///   .selector {
-///     display: flex;
-///   }
-///   .selector > :last-child {
-///     margin-left: 1em;
-///   }
 @mixin o-media($spacing: 1em, $layout: true) {
   @if $layout {
     display: flex;
@@ -41,9 +33,6 @@
 ///   .selector {
 ///     @include o-media-figure();
 ///   }
-///
-/// @example css - CSS Output
-///   .selector { }
 @mixin o-media-figure() {
   // This is currently only a placeholder that may be used later.
 }
@@ -53,11 +42,6 @@
 /// @example scss - Usage
 ///   .selector {
 ///     @include o-media-body();
-///   }
-///
-/// @example css - CSS Output
-///   .selector {
-///     flex: 1;
 ///   }
 @mixin o-media-body() {
   flex: 1;

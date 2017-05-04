@@ -12,11 +12,6 @@
 ///   .selector {
 ///     @include o-vertical-spacing();
 ///   }
-///
-/// @example css - CSS Output
-///   .selector > * + * {
-///     margin-top: 1em;
-///   }
 @mixin o-vertical-spacing($spacing: 1em) {
   > * + * {
     margin-top: $spacing;
