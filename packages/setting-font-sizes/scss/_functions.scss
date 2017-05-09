@@ -1,0 +1,19 @@
+@import 'settings';
+
+////
+/// @group Setting: font-sizes
+/// @author Markus Oberlehner
+////
+
+/// Returns font size.
+///
+/// @param {String} $font-size
+///   Font size (xs, s, m, l, xl, xxl, or xxxl).
+///
+/// @example scss - Usage
+///   .selector {
+///     font-size: setting-font-size(m);
+///   }
+@function setting-font-size($font-size) {
+  @return map-get($font-sizes, $font-size);
+}
