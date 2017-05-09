@@ -7,13 +7,17 @@
 
 /// Returns font size.
 ///
-/// @param {String} $font-size
-///   Font size (xs, s, m, l, xl, xxl, or xxxl).
+/// @param {String} $size
+///   Size (xs, s, m, l, xl, xxl, or xxxl).
+/// @param {Boolean} $rem [false]
+///   Return font size in rem instead of em.
 ///
 /// @example scss - Usage
 ///   .selector {
 ///     font-size: setting-font-size(m);
 ///   }
-@function setting-font-size($font-size) {
-  @return map-get($font-sizes, $font-size);
+@function setting-font-size($size, $rem: false) {
+  $font-size: map-get($font-sizes, $size);
+  @if $rem { $font-size: ($font-size / 1em) * 1rem; }
+  @return $font-size;
 }
