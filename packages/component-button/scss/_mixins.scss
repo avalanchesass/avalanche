@@ -18,36 +18,6 @@
 ///   .selector {
 ///     @include c-button();
 ///   }
-///
-/// @example css - CSS Output
-///   .selector {
-///     padding: 0.5em 1em;
-///     background-color: #2196f3;
-///     display: inline-block;
-///     margin: 0;
-///     border: none;
-///     vertical-align: top;
-///     white-space: nowrap;
-///     font-size: 100%;
-///     font-family: inherit;
-///     cursor: pointer;
-///   }
-///
-///   .selector,
-///   .selector:hover,
-///   .selector:focus,
-///   .selector:active,
-///   .selector:visited {
-///     color: #2196f3;
-///     outline: none;
-///     text-decoration: none;
-///   }
-///
-///   .selector:hover,
-///   .selector:focus,
-///   .selector:active {
-///     background-color: #64b6f7;
-///   }
 @mixin c-button($spacing-vertical: 0.5em, $spacing-horizontal: 1em, $background-color: #2196f3, $color: #fff) {
   @include c-button-spacing(
     $spacing-vertical,
@@ -88,11 +58,6 @@
 ///   .selector {
 ///     @include c-button-spacing();
 ///   }
-///
-/// @example css - CSS Output
-///   .selector {
-///     padding: 0.5em 1em;
-///   }
 @mixin c-button-spacing($spacing-vertical: 0.5em, $spacing-horizontal: 1em) {
   padding: $spacing-vertical $spacing-horizontal;
 }
@@ -103,14 +68,50 @@
 ///   .selector {
 ///     @include c-button-full-width();
 ///   }
-///
-/// @example css - CSS Output
-///   .selector {
-///     background-color: #2196f3;
-///   }
 @mixin c-button-full-width() {
   width: 100%;
   text-align: center;
+}
+
+/// Button outline.
+///
+/// @param {Number [unit]} $border-width [0.1875em]
+///   Border width.
+/// @param {Color} $background-color [#2196f3]
+///   Background color (when active).
+/// @param {Color} $color [#fff]
+///   Text color (when active).
+///
+/// @example scss - Usage
+///   .selector {
+///     @include c-button-outline();
+///   }
+@mixin c-button-outline($border-width: 0.1875em, $background-color: #2196f3, $color: #fff) {
+  position: relative;
+  transition: background-color, color;
+  transition-duration: 0.2s;
+
+  &,
+  &:visited {
+    color: $background-color;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $background-color;
+    color: $color;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: $border-width solid $background-color;
+    content: '';
+  }
 }
 
 /// Button color.
@@ -124,27 +125,10 @@
 ///   .selector {
 ///     @include c-button-color();
 ///   }
-///
-/// @example css - CSS Output
-///   .selector {
-///     background-color: #2196f3;
-///   }
-///
-///   .selector,
-///   .selector:hover,
-///   .selector:focus,
-///   .selector:active,
-///   .selector:visited {
-///     color: #2196f3;
-///   }
-///
-///   .selector:hover,
-///   .selector:focus,
-///   .selector:active {
-///     background-color: #64b6f7;
-///   }
 @mixin c-button-color($background-color: #2196f3, $color: #fff) {
   background-color: $background-color;
+  transition: background-color, color;
+  transition-duration: 0.2s;
 
   &,
   &:hover,
@@ -154,9 +138,11 @@
     color: $color;
   }
 
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: mix($color, $background-color, 30%);
+  @if type_of($color) == color {
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: mix($color, $background-color, 30%);
+    }
   }
 }

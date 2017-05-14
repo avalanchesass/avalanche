@@ -43,6 +43,10 @@ $c-button-spacing-vertical-xl: setting-spacing(m) !default;
 /// @type Number
 $c-button-spacing-horizontal-xl: setting-spacing(l) !default;
 
+/// Outline border width.
+/// @type Number
+$c-button-outline-border-width: 0.1875em !default;
+
 /// Default background color.
 /// @type Color
 $c-button-background-color-default: setting-color(a) !default;

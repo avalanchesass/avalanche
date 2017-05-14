@@ -16,11 +16,6 @@
 ///   .selector {
 ///     color: setting-color(a);
 ///   }
-///
-/// @example css - CSS Output
-///   .selector {
-///     color: #2196f3;
-///   }
 @function setting-color($color, $type: default) {
   @if $type == contrast {
     @return map-get($colors-contrast, $color);

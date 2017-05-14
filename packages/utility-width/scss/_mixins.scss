@@ -12,11 +12,6 @@
 ///   .selector {
 ///     @include u-width(6, 12);
 ///   }
-///
-/// @example css - CSS Output
-///   .selector {
-///     width: 50% !important;
-///   }
 @mixin u-width($size, $base: 12) {
   $base-size: (100% / $base);
   width: ($base-size * $size) !important;

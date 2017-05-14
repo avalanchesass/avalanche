@@ -5,17 +5,6 @@
 ///
 /// @example scss - Usage
 ///   @include generic-box-sizing-reset();
-///
-/// @example css - CSS Output
-///   html {
-///     box-sizing: border-box;
-///   }
-///
-///   *,
-///   *::before,
-///   *::after {
-///     box-sizing: inherit;
-///   }
 @mixin generic-box-sizing-reset() {
   html {
     box-sizing: border-box;

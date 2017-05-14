@@ -14,11 +14,6 @@
 ///   .selector {
 ///     font-family: setting-font-family(a);
 ///   }
-///
-/// @example css - CSS Output
-///   .selector {
-///     font-family: sans-serif;
-///   }
 @function setting-font-family($font-family) {
   @return map-get($font-families, $font-family);
 }

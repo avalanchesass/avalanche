@@ -43,6 +43,11 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 <button class="c-button c-button--full-width">Full width</button>
 ```
 
+### Outline
+```html
+<button class="c-button c-button--outline">Outline</button>
+```
+
 ### Colors
 ```html
 <button class="c-button c-button--color-a">Color a</button>
