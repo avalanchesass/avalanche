@@ -80,6 +80,61 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 }
 ```
 
+## Settings
+```scss
+/// Default vertical spacing.
+/// @type Number
+$c-button-spacing-vertical-default: setting-spacing(xs) !default;
+
+/// Default horizontal spacing.
+/// @type Number
+$c-button-spacing-horizontal-default: setting-spacing(m) !default;
+
+/// Size s vertical spacing.
+/// @type Number
+$c-button-spacing-vertical-s: (setting-spacing(xs) / 2) !default;
+
+/// Size s horizontal spacing.
+/// @type Number
+$c-button-spacing-horizontal-s: setting-spacing(xs) !default;
+
+/// Size m vertical spacing.
+/// @type Number
+$c-button-spacing-vertical-m: setting-spacing(xs) !default;
+
+/// Size m horizontal spacing.
+/// @type Number
+$c-button-spacing-horizontal-m: setting-spacing(m) !default;
+
+/// Size l vertical spacing.
+/// @type Number
+$c-button-spacing-vertical-l: setting-spacing(s) !default;
+
+/// Size l horizontal spacing.
+/// @type Number
+$c-button-spacing-horizontal-l: setting-spacing(m) !default;
+
+/// Size xl vertical spacing.
+/// @type Number
+$c-button-spacing-vertical-xl: setting-spacing(m) !default;
+
+/// Size xl horizontal spacing.
+/// @type Number
+$c-button-spacing-horizontal-xl: setting-spacing(l) !default;
+
+/// Outline border width.
+/// @type Number
+$c-button-outline-border-width: 0.1875em !default;
+
+/// Default background color.
+/// @type Color
+$c-button-background-color-default: setting-color(a) !default;
+
+/// Default color.
+/// @type Color
+$c-button-color-default: setting-color(a, contrast) !default;
+```
+
 ## About
 ### Author
 Markus Oberlehner  

@@ -28,6 +28,18 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 @media (min-width: map-get($breakpoints, m)) { }
 ```
 
+## Settings
+```scss
+/// Breakpoint sizes.
+/// @type Map
+$breakpoints: (
+  s: 30em,
+  m: 45em,
+  l: 60em,
+  xl: 75em,
+) !default;
+```
+
 ## About
 ### Author
 Markus Oberlehner  

@@ -97,6 +97,17 @@ To compensate for the vertical spacing of the grid items, the base grid block el
 }
 ```
 
+## Settings
+```scss
+/// Default horizontal gutter.
+/// @type String
+$o-grid-gutter-horizontal-default: m !default;
+
+/// Default vertical gutter.
+/// @type String
+$o-grid-gutter-vertical-default: m !default;
+```
+
 ## About
 ### Author
 Markus Oberlehner  

@@ -32,6 +32,21 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 }
 ```
 
+## Settings
+```scss
+/// Default font sizes.
+/// @type Map
+$font-sizes: (
+  xs: 0.64em,
+  s: 0.8em,
+  m: 1em,
+  l: 1.25em,
+  xl: 1.563em,
+  xxl: 1.953em,
+  xxxl: 2.441em,
+) !default;
+```
+
 ## About
 ### Author
 Markus Oberlehner  

@@ -73,6 +73,16 @@ $o-aspect-ratio-default: (
 }
 ```
 
+## Settings
+```scss
+/// Container max widths.
+/// @type Map
+$o-aspect-ratio-default: (
+  width: 16,
+  height: 9,
+) !default;
+```
+
 ## About
 ### Author
 Markus Oberlehner  

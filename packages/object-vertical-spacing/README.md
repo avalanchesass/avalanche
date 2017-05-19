@@ -52,6 +52,13 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 }
 ```
 
+## Settings
+```scss
+/// Default spacing size.
+/// @type String
+$o-vertical-spacing-default-size: m !default;
+```
+
 ## About
 ### Author
 Markus Oberlehner  

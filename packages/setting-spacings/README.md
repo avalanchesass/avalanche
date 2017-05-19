@@ -32,6 +32,21 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 }
 ```
 
+## Settings
+```scss
+/// Spacing sizes.
+/// @type Map
+$spacings: (
+  xs: 0.5em,
+  s: 0.75em,
+  m: 1em,
+  l: 1.5em,
+  xl: 2em,
+  xxl: 3.5em,
+  xxxl: 6em,
+) !default;
+```
+
 ## About
 ### Author
 Markus Oberlehner  

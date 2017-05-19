@@ -32,6 +32,16 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 }
 ```
 
+## Settings
+```scss
+/// Font families.
+/// @type Map
+$font-families: (
+  a: sans-serif,
+  b: serif,
+) !default;
+```
+
 ## About
 ### Author
 Markus Oberlehner  

@@ -68,6 +68,13 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 }
 ```
 
+## Settings
+```scss
+/// Default spacing.
+/// @type String
+$o-media-spacing-default: m !default;
+```
+
 ## About
 ### Author
 Markus Oberlehner  
