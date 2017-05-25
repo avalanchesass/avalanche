@@ -4,7 +4,7 @@
 
 .o-container {
   @include o-container(
-    map-get($o-container-max-widths, $o-container-default-size),
+    map-get($o-container-max-widths, $o-container-max-width-default),
     setting-spacing($o-container-spacing-horizontal, rem),
     $o-container-center-horizontal
   );

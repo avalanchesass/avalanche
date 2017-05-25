@@ -11,9 +11,9 @@ $o-container-max-widths: (
   l: 96rem,
 ) !default;
 
-/// Default container size.
+/// Default container max width.
 /// @type String
-$o-container-default-size: m !default;
+$o-container-max-width-default: m !default;
 
 /// Horizontal spacing.
 /// @type String

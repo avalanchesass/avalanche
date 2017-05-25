@@ -73,7 +73,7 @@ $o-container-max-widths: (
 
 /// Default container size.
 /// @type String
-$o-container-default-size: m !default;
+$o-container-max-width-default: m !default;
 
 /// Horizontal spacing.
 /// @type String
