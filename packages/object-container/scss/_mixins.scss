@@ -7,7 +7,7 @@
 ///
 /// @param {Number [unit]} $max-width [64rem]
 ///   Max width.
-/// @param {Number [unit]} $spacing-horizontal [1rem]
+/// @param {Number [unit] | Boolean} $spacing-horizontal [1rem]
 ///   Horizontal spacing.
 /// @param {Boolean} $center-horizontal [true]
 ///   Horizontal centering.
@@ -17,10 +17,10 @@
 ///     @include o-container();
 ///   }
 @mixin o-container($max-width: 64rem, $spacing-horizontal: 1rem, $center-horizontal: true) {
-  @if $max-width > 0 {
+  @if $max-width {
     max-width: $max-width;
   }
-  @if $spacing-horizontal > 0 {
+  @if $spacing-horizontal {
     padding-right: $spacing-horizontal;
     padding-left: $spacing-horizontal;
   }
