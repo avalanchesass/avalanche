@@ -26,8 +26,7 @@
     "node-sass-magic-importer": "^4.1.5",
     "postcss-cli": "^4.0.0",
     "sassdoc": "^2.2.2",
-    "stylelint": "^7.10.1",
-    "stylelint-config-modularis": "5.0.0"
+    "stylelint": "^7.10.1"
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
