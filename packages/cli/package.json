@@ -20,7 +20,7 @@
     "avalanche": "bin/avalanche.js"
   },
   "dependencies": {
-    "command-line-args": "^3.0.3",
+    "command-line-args": "^4.0.5",
     "ncp": "^2.0.0",
     "replace": "^0.3.0"
   }

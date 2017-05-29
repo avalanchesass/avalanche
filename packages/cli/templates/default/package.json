@@ -6,15 +6,15 @@
   "homepage": "HOMEPAGE",
   "license": "LICENSE",
   "devDependencies": {
-    "browser-sync": "^2.18.8",
+    "browser-sync": "^2.18.12",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
+    "gulp-autoprefixer": "^4.0.0",
     "gulp-cleancss": "^0.2.2",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.4.1",
-    "node-sass-magic-importer": "^4.1.4"
+    "gulp-sourcemaps": "^2.6.0",
+    "node-sass-magic-importer": "^4.1.5"
   },
   "scripts": {
     "start": "gulp",
