@@ -2,5 +2,5 @@ language: node_js
 node_js:
   - "node"
 script:
-  - yarn run bootstrap
-  - yarn test
+  - npm run bootstrap
+  - npm test
