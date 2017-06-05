@@ -1,4 +1,13 @@
 {
   "parser": "babel-eslint",
-  "extends": "./packages/eslint-config/index.js"
+  "extends": "./packages/eslint-config/index.js",
+  "rules": {
+    "comma-dangle": [2, {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "never"
+    }]
+  }
 }
