@@ -29,5 +29,6 @@ backstop_data
 bitmaps_test
 dist
 node_modules
+packages/**/package-lock.json
 sassdoc
 tmp
