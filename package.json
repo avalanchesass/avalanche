@@ -29,6 +29,7 @@
     "stylelint": "^7.10.1"
   },
   "scripts": {
+    "init": "npm install && npm run bootstrap",
     "bootstrap": "lerna bootstrap",
     "doc": "sassdoc packages/**/*.scss",
     "lint:scripts": "eslint packages/**/*.js",
