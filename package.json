@@ -31,7 +31,9 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "doc": "sassdoc packages/**/*.scss",
-    "lint": "stylelint packages/**/*.scss && eslint packages/**/*.js",
+    "lint:scripts": "eslint packages/**/*.js",
+    "lint:styles": "stylelint packages/**/*.scss",
+    "lint": "npm run lint:scripts & npm run lint:styles",
     "test:reference": "bash test/test-reference.sh",
     "test": "bash test/test.sh"
   }
