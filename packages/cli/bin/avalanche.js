@@ -1,17 +1,18 @@
 #!/usr/bin/env node
-const commandLineArgs = require(`command-line-args`);
+const args = require(`args`);
 const ncp = require(`ncp`);
 const path = require(`path`);
 
 const replaceRecursive = require(`../lib/replace-recursive.js`);
 
-const optionDefinitions = [
-  { name: `project-name`, type: String, defaultOption: true },
-];
-const options = commandLineArgs(optionDefinitions);
+args.option(
+  `project-name`,
+  `Directory and package name for the new avalanche powered project.`,
+  `New Project`
+);
 
-const projectName = options[`project-name`];
-if (!projectName) throw new Error(`Provide a project name.`);
+const options = args.parse(process.argv);
+const projectName = options.projectName;
 
 const projectNameCleaned = projectName
   .toLowerCase()
