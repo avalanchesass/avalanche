@@ -26,6 +26,11 @@ avalanche follows some strict principles how to write CSS. [Read more about it i
 - Test all packages at once: `npm test`
 - Test a specific package: `npm test -- -p PACKAGE-NAME`
 
+## Articles
+Read more about avalanche and what problems inspired the development of this CSS framework.
+
+- [Building avalanche 4.x.x](https://markus.oberlehner.net/blog/building-avalanche-v4/)
+
 ## About
 ### Author
 Markus Oberlehner  
