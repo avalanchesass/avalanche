@@ -23,7 +23,6 @@
     "handlebars-cmd": "^0.1.4",
     "lerna": "2.0.0-rc.5",
     "node-sass": "^4.5.3",
-    "node-sass-magic-importer": "^4.1.5",
     "postcss-cli": "^4.1.0",
     "sassdoc": "^2.3.0",
     "stylelint": "^7.11.1"

@@ -9,14 +9,17 @@ npm install @avalanche/utility-offset --save-dev
 ```
 
 ## Basic usage
-This package requires that [node-sass](https://github.com/sass/node-sass) (or one of the grunt, gulp, etc. equivalents) in combination with the [node-sass-magic-importer](https://github.com/maoberlehner/node-sass-magic-importer) custom importer is used.
+```scss
+// Import the main file.
+@import 'node_modules/@avalanche/utility-offset/scss/index.scss';
+```
+
+## Usage with [node-sass-magic-importer](https://github.com/maoberlehner/node-sass-magic-importer)
+Using [node-sass](https://github.com/sass/node-sass) (or a plugin for Grunt, gulp or webpack which is using node-sass) in combination with the [node-sass-magic-importer](https://github.com/maoberlehner/node-sass-magic-importer) custom importer, can make importing CSS dependencies from `node_modules` a much nicer experience.
 
 ```scss
 // Import the main file.
 @import '~@avalanche/utility-offset';
-
-// Import just the mixin file.
-@import '~@avalanche/utility-offset/scss/mixins';
 
 // Import just the classes you need.
 @import '{ .u-offset-4\/12, .u-offset-4\/12\@m } from ~@avalanche/utility-offset';
@@ -58,7 +61,7 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 
 ## Mixins
 ```scss
-@import '~@avalanche/utility-offset/scss/mixins';
+@import 'node_modules/@avalanche/utility-offset/scss/mixins';
 
 // Usage.
 .offset-6\/12 {

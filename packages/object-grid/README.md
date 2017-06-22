@@ -9,14 +9,17 @@ npm install @avalanche/object-grid --save-dev
 ```
 
 ## Basic usage
-This package requires that [node-sass](https://github.com/sass/node-sass) (or one of the grunt, gulp, etc. equivalents) in combination with the [node-sass-magic-importer](https://github.com/maoberlehner/node-sass-magic-importer) custom importer is used.
+```scss
+// Import the main file.
+@import 'node_modules/@avalanche/object-grid/scss/index.scss';
+```
+
+## Usage with [node-sass-magic-importer](https://github.com/maoberlehner/node-sass-magic-importer)
+Using [node-sass](https://github.com/sass/node-sass) (or a plugin for Grunt, gulp or webpack which is using node-sass) in combination with the [node-sass-magic-importer](https://github.com/maoberlehner/node-sass-magic-importer) custom importer, can make importing CSS dependencies from `node_modules` a much nicer experience.
 
 ```scss
 // Import the main file.
 @import '~@avalanche/object-grid';
-
-// Import just the mixin file.
-@import '~@avalanche/object-grid/scss/mixins';
 
 // Import just the classes you need.
 @import '{ .o-grid } from ~@avalanche/object-grid';
@@ -85,7 +88,7 @@ To compensate for the vertical spacing of the grid items, the base grid block el
 
 ## Mixins
 ```scss
-@import '~@avalanche/object-grid/scss/mixins';
+@import 'node_modules/@avalanche/object-grid/scss/mixins';
 
 // Usage.
 .grid {
