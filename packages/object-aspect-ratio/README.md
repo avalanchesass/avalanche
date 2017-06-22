@@ -9,14 +9,17 @@ npm install @avalanche/object-aspect-ratio --save-dev
 ```
 
 ## Basic usage
-This package requires that [node-sass](https://github.com/sass/node-sass) (or one of the grunt, gulp, etc. equivalents) in combination with the [node-sass-magic-importer](https://github.com/maoberlehner/node-sass-magic-importer) custom importer is used.
+```scss
+// Import the main file.
+@import 'node_modules/@avalanche/object-aspect-ratio/scss/index.scss';
+```
+
+## Usage with [node-sass-magic-importer](https://github.com/maoberlehner/node-sass-magic-importer)
+Using [node-sass](https://github.com/sass/node-sass) (or a plugin for Grunt, gulp or webpack which is using node-sass) in combination with the [node-sass-magic-importer](https://github.com/maoberlehner/node-sass-magic-importer) custom importer, can make importing CSS dependencies from `node_modules` a much nicer experience.
 
 ```scss
 // Import the main file.
 @import '~@avalanche/object-aspect-ratio';
-
-// Import just the mixin file.
-@import '~@avalanche/object-aspect-ratio/scss/mixins';
 
 // Import just the classes you need.
 @import '{ .o-aspect-ratio, .o-aspect-ratio--4/3, .o-aspect-ratio__inner } from ~@avalanche/object-aspect-ratio';
@@ -53,19 +56,9 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 </div>
 ```
 
-### Settings
-Modify the default aspect ratio via the `$o-aspect-ratio-default` map variable.
-
-```scss
-$o-aspect-ratio-default: (
-  width: 4,
-  height: 3,
-);
-```
-
 ## Mixins
 ```scss
-@import '~@avalanche/object-aspect-ratio/scss/mixins';
+@import 'node_modules/@avalanche/object-aspect-ratio/scss/mixins';
 
 // Usage.
 .aspect-ratio {
@@ -74,6 +67,8 @@ $o-aspect-ratio-default: (
 ```
 
 ## Settings
+Modify the default aspect ratio via the `$o-aspect-ratio-default` map variable.
+
 ```scss
 /// Container max widths.
 /// @type Map

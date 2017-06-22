@@ -9,14 +9,17 @@ npm install @avalanche/utility-clearfix --save-dev
 ```
 
 ## Basic usage
-This package requires that [node-sass](https://github.com/sass/node-sass) (or one of the grunt, gulp, etc. equivalents) in combination with the [node-sass-magic-importer](https://github.com/maoberlehner/node-sass-magic-importer) custom importer is used.
+```scss
+// Import the main file.
+@import 'node_modules/@avalanche/utility-clearfix/scss/index.scss';
+```
+
+## Usage with [node-sass-magic-importer](https://github.com/maoberlehner/node-sass-magic-importer)
+Using [node-sass](https://github.com/sass/node-sass) (or a plugin for Grunt, gulp or webpack which is using node-sass) in combination with the [node-sass-magic-importer](https://github.com/maoberlehner/node-sass-magic-importer) custom importer, can make importing CSS dependencies from `node_modules` a much nicer experience.
 
 ```scss
 // Import the main file.
 @import '~@avalanche/utility-clearfix';
-
-// Import just the mixin file.
-@import '~@avalanche/utility-clearfix/scss/mixins';
 
 // Not a fan of the "u-" prefix?
 @import '{ .u-clearfix as .clearfix } from ~@avalanche/utility-clearfix';
@@ -32,7 +35,7 @@ This package requires that [node-sass](https://github.com/sass/node-sass) (or on
 
 ## Mixins
 ```scss
-@import '~@avalanche/utility-clearfix/scss/mixins';
+@import 'node_modules/@avalanche/utility-clearfix/scss/mixins';
 
 // Usage.
 .clearfix {
