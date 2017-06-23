@@ -31,6 +31,13 @@ Read more about avalanche and what problems inspired the development of this CSS
 
 - [Building avalanche 4.x.x](https://markus.oberlehner.net/blog/building-avalanche-v4/)
 
+## Thanks
+The development of avalanche is based on the work and ideas of mostly the following three people:
+
+- [Harry Roberts](https://csswizardry.com/): [BEMIT](https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/), [ITCSS](http://itcss.io/) and [inuitcss](https://github.com/inuitcss/inuitcss)
+- [Nicole Sulivan](http://www.stubbornella.org/content/): [OOCSS](https://github.com/stubbornella/oocss)
+- [Jonathan Snook](https://snook.ca/): [SMACSS](https://smacss.com/)
+
 ## About
 ### Author
 Markus Oberlehner  
