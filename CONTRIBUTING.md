@@ -1,3 +1,5 @@
+# Contributing
+
 ## Reporting Issues
 Found a problem? Want a new feature?
 
