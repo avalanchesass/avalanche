@@ -29,6 +29,7 @@ avalanche follows some strict principles how to write CSS. [Read more about it i
 ## Articles
 Read more about avalanche and what problems inspired the development of this CSS framework.
 
+- [Dreaming of a Package Based CSS Workflow](https://markus.oberlehner.net/blog/dreaming-of-a-package-based-css-workflow/)
 - [Building avalanche 4.x.x](https://markus.oberlehner.net/blog/building-avalanche-v4/)
 
 ## Thanks
