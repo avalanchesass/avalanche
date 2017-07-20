@@ -29,7 +29,7 @@ module.exports = {
     'declaration-bang-space-after': `never`,
     'declaration-bang-space-before': `always`,
     'declaration-block-no-shorthand-property-overrides': true,
-    'order/declaration-block-properties-specified-order': [
+    'order/properties-order': [
       `display`,
       `visibility`,
       `position`,
