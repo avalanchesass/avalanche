@@ -8,7 +8,7 @@
     "javascript",
     "styleguide"
   ],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Markus Oberlehner",
   "homepage": "https://avalanche.oberlehner.net/",
   "license": "MIT",
@@ -20,7 +20,7 @@
     "url": "https://github.com/avalanchesass/avalanche/issues"
   },
   "dependencies": {
-    "eslint-config-airbnb-base": "^15.0.2"
+    "eslint-config-airbnb-base": "^11.2.0"
   },
   "engines": {
     "node": ">= 6"
