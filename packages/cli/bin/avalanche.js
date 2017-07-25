@@ -12,7 +12,11 @@ args.option(
 );
 
 const options = args.parse(process.argv);
-const projectName = options.projectName;
+let projectName = options.projectName;
+
+if (process.argv[2].substring(0, 1) !== `-`) {
+  projectName = process.argv[2];
+}
 
 const projectNameCleaned = projectName
   .toLowerCase()
