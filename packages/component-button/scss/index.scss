@@ -12,9 +12,7 @@
   );
 }
 
-/**
- * Sizes
- */
+// Sizes
 .c-button--s {
   @include c-button-spacing(
     $c-button-spacing-vertical-s,
@@ -43,16 +41,12 @@
   );
 }
 
-/**
- * Full width
- */
+// Full width
 .c-button--full-width {
   @include c-button-full-width();
 }
 
-/**
- * Full width
- */
+// Outline
 .c-button--outline {
   @include c-button-color(transparent, inherit);
   @include c-button-outline(
@@ -62,9 +56,7 @@
   );
 }
 
-/**
- * Colors
- */
+// Colors
 .c-button--color-a {
   @include c-button-color(setting-color(a), setting-color(a, contrast));
 }
@@ -85,9 +77,7 @@
   @include c-button-color(setting-color(e), setting-color(e, contrast));
 }
 
-/**
- * Alert colors
- */
+// Alert colors
 .c-button--alert-positive {
   @include c-button-color(setting-color(positive, alert), #fff);
 }
@@ -104,9 +94,7 @@
   @include c-button-color(setting-color(negative, alert), #fff);
 }
 
-/**
- * Gray colors
- */
+// Gray colors
 .c-button--gray-a {
   @include c-button-color(setting-color(a, gray), #fff);
 }
