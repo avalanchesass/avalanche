@@ -19,13 +19,13 @@
     "autoprefixer": "^7.1.2",
     "babel-eslint": "^7.2.3",
     "backstopjs": "^2.7.5",
-    "eslint": "^4.2.0",
+    "eslint": "^4.3.0",
     "handlebars-cmd": "^0.1.4",
     "lerna": "2.0.0",
     "node-sass": "^4.5.3",
     "postcss-cli": "^4.1.0",
     "sassdoc": "^2.3.0",
-    "stylelint": "^7.13.0"
+    "stylelint": "^8.0.0"
   },
   "scripts": {
     "init": "npm install && npm run bootstrap",
