@@ -21,5 +21,8 @@
     "@avalanche/setting-colors": "^4.0.0-alpha.3",
     "@avalanche/setting-spacings": "^4.0.0-alpha.4"
   },
-  "main": "scss/index.scss"
+  "main": "scss/index.scss",
+  "engines": {
+    "npm": ">=3.0.0"
+  }
 }

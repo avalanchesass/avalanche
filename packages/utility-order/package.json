@@ -20,5 +20,8 @@
   "dependencies": {
     "@avalanche/setting-breakpoints": "^4.0.0-alpha.3"
   },
-  "main": "scss/index.scss"
+  "main": "scss/index.scss",
+  "engines": {
+    "npm": ">=3.0.0"
+  }
 }

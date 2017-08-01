@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/avalanchesass/avalanche/issues"
   },
-  "main": "scss/index.scss"
+  "main": "scss/index.scss",
+  "engines": {
+    "npm": ">=3.0.0"
+  }
 }
