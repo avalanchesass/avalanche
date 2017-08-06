@@ -19,7 +19,7 @@
     "autoprefixer": "^7.1.2",
     "babel-eslint": "^7.2.3",
     "backstopjs": "^2.7.5",
-    "eslint": "^4.3.0",
+    "eslint": "^4.4.0",
     "handlebars-cmd": "^0.1.4",
     "lerna": "2.0.0",
     "node-sass": "^4.5.3",
