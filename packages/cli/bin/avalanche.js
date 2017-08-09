@@ -14,6 +14,11 @@ args.option(
 const options = args.parse(process.argv);
 let projectName = options.projectName;
 
+if (!process.argv[2]) {
+  args.showHelp();
+  return;
+}
+
 if (process.argv[2].substring(0, 1) !== `-`) {
   projectName = process.argv[2];
 }
