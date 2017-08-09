@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const args = require(`args`);
+const fs = require(`fs`);
 const ncp = require(`ncp`);
 const path = require(`path`);
 
@@ -47,6 +48,10 @@ ncp(source, destination, (error) => {
   if (error) throw error;
 
   replaceRecursive(replacements, destination);
+  fs.renameSync(
+    path.join(destination, `gitignore.template`),
+    path.join(destination, `.gitignore`)
+  );
 
   // eslint-disable-next-line no-console
   console.info(`Created a new avalanche project "${projectName}" in ${destination}.`);
