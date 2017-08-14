@@ -1,0 +1,110 @@
+@import '../../../../node_modules/@avalanche/setting-breakpoints/scss/index.scss';
+@import 'mixins';
+
+.u-align-self-flex-start {
+  @include u-align-self(flex-start);
+}
+
+.u-align-self-flex-end {
+  @include u-align-self(flex-end);
+}
+
+.u-align-self-center {
+  @include u-align-self(center);
+}
+
+.u-align-self-baseline {
+  @include u-align-self(baseline);
+}
+
+.u-align-self-stretch {
+  @include u-align-self(stretch);
+}
+
+@media (min-width: setting-breakpoint(s)) {
+  .u-align-self-flex-start\@s {
+    @include u-align-self(flex-start);
+  }
+
+  .u-align-self-flex-end\@s {
+    @include u-align-self(flex-end);
+  }
+
+  .u-align-self-center\@s {
+    @include u-align-self(center);
+  }
+
+  .u-align-self-baseline\@s {
+    @include u-align-self(baseline);
+  }
+
+  .u-align-self-stretch\@s {
+    @include u-align-self(stretch);
+  }
+}
+
+@media (min-width: setting-breakpoint(m)) {
+  .u-align-self-flex-start\@m {
+    @include u-align-self(flex-start);
+  }
+
+  .u-align-self-flex-end\@m {
+    @include u-align-self(flex-end);
+  }
+
+  .u-align-self-center\@m {
+    @include u-align-self(center);
+  }
+
+  .u-align-self-baseline\@m {
+    @include u-align-self(baseline);
+  }
+
+  .u-align-self-stretch\@m {
+    @include u-align-self(stretch);
+  }
+}
+
+@media (min-width: setting-breakpoint(l)) {
+  .u-align-self-flex-start\@l {
+    @include u-align-self(flex-start);
+  }
+
+  .u-align-self-flex-end\@l {
+    @include u-align-self(flex-end);
+  }
+
+  .u-align-self-center\@l {
+    @include u-align-self(center);
+  }
+
+  .u-align-self-baseline\@l {
+    @include u-align-self(baseline);
+  }
+
+  .u-align-self-stretch\@l {
+    @include u-align-self(stretch);
+  }
+}
+
+@media (min-width: setting-breakpoint(xl)) {
+  .u-align-self-flex-start\@xl {
+    @include u-align-self(flex-start);
+  }
+
+  .u-align-self-flex-end\@xl {
+    @include u-align-self(flex-end);
+  }
+
+  .u-align-self-center\@xl {
+    @include u-align-self(center);
+  }
+
+  .u-align-self-baseline\@xl {
+    @include u-align-self(baseline);
+  }
+
+  .u-align-self-stretch\@xl {
+    @include u-align-self(stretch);
+  }
+}

@@ -1,0 +1,17 @@
+////
+/// @group Utility: align-self
+/// @author Markus Oberlehner
+////
+
+/// Align self helper.
+///
+/// @param {String} $alignment
+///   Alignment.
+///
+/// @example scss - Usage
+///   .selector {
+///     @include u-align-self(right);
+///   }
+@mixin u-align-self($alignment) {
+  align-self: $alignment !important;
+}
