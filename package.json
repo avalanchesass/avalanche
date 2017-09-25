@@ -16,18 +16,18 @@
     "url": "https://github.com/avalanchesass/avalanchesass/issues"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.2",
-    "babel-eslint": "^7.2.3",
-    "backstopjs": "^2.7.5",
-    "eslint": "^4.4.1",
+    "autoprefixer": "^7.1.4",
+    "babel-eslint": "^8.0.0",
+    "backstopjs": "^3.0.26",
+    "eslint": "^4.7.2",
     "eslint-plugin-import": "^2.7.0",
     "handlebars-cmd": "^0.1.4",
-    "lerna": "2.0.0",
+    "lerna": "2.2.0",
     "node-sass": "^4.5.3",
-    "postcss-cli": "^4.1.0",
+    "postcss-cli": "^4.1.1",
     "sassdoc": "^2.3.0",
-    "stylelint": "^8.0.0",
-    "stylelint-order": "^0.6.0"
+    "stylelint": "^8.1.1",
+    "stylelint-order": "^0.7.0"
   },
   "scripts": {
     "init": "npm install && npm run bootstrap",
