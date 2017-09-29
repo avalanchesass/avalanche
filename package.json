@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^7.1.4",
-    "babel-eslint": "^8.0.0",
+    "babel-eslint": "^8.0.1",
     "backstopjs": "^3.0.26",
     "eslint": "^4.7.2",
     "eslint-plugin-import": "^2.7.0",
