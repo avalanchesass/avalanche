@@ -17,7 +17,7 @@ for f in packages/*; do
     # Build CSS
     bash "$DIR/scripts/build-test-css.sh" --package $(basename $f)
     # Test
-    ( cd "$f" && ../../node_modules/backstopjs/cli/index.js test --configPath=../../backstop.json )
+    ( cd "$f" && ../../node_modules/.bin/backstop test --configPath=../../backstop.json )
     # Cleanup
     rm -Rf "$f/test/tmp"
   fi
