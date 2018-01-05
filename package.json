@@ -27,17 +27,17 @@
     "url": "https://github.com/avalanchesass/avalanchesass/issues"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.6",
-    "babel-eslint": "^8.0.2",
-    "backstopjs": "^3.0.32",
-    "eslint": "^4.10.0",
+    "autoprefixer": "^7.2.4",
+    "babel-eslint": "^8.1.2",
+    "backstopjs": "^3.0.37",
+    "eslint": "^4.14.0",
     "eslint-plugin-import": "^2.8.0",
     "handlebars-cmd": "^0.1.4",
     "lerna": "2.5.1",
-    "node-sass": "^4.6.0",
+    "node-sass": "^4.7.2",
     "postcss-cli": "^4.1.1",
-    "sassdoc": "^2.4.0",
-    "stylelint": "^8.2.0",
-    "stylelint-order": "^0.7.0"
+    "sassdoc": "^2.5.0",
+    "stylelint": "^8.4.0",
+    "stylelint-order": "^0.8.0"
   }
 }
