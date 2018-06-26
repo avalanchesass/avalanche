@@ -9,7 +9,6 @@
   "homepage": "https://avalanche.oberlehner.net",
   "license": "MIT",
   "scripts": {
-    "init": "yarn && yarn run bootstrap",
     "bootstrap": "lerna bootstrap",
     "publish": "lerna publish",
     "doc": "sassdoc packages/**/*.scss",
