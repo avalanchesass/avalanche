@@ -16,9 +16,11 @@ for f in packages/*; do
     bash "$DIR/scripts/build-test-html.sh" --package $(basename $f)
     # Build CSS
     bash "$DIR/scripts/build-test-css.sh" --package $(basename $f)
+    cp backstop.json "$f"
     # Test
-    ( cd "$f" && ../../node_modules/.bin/backstop test --configPath=../../backstop.json )
+    ( cd "$f" && ../../node_modules/.bin/backstop test --docker )
     # Cleanup
     rm -Rf "$f/test/tmp"
+    rm "$f/backstop.json"
   fi
 done
