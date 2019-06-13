@@ -40,7 +40,7 @@
     "compare_data": "test/backstopjs/bitmaps_test/compare.json",
     "casper_scripts": "test/backstopjs/casper_scripts"
   },
-  "engine": "phantomjs",
+  "engine": "chromy",
   "report": ["CLI"],
   "cliExitOnFail": false,
   "casperFlags": [],
