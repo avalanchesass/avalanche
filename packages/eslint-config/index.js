@@ -7,6 +7,7 @@ module.exports = {
     sourceType: `module`,
   },
   rules: {
+    'import/prefer-default-export': `off`,
     quotes: [2, `backtick`, { avoidEscape: true }],
   },
 };
