@@ -67,7 +67,14 @@ source-map@^0.6.1:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
-stylelint-order@^4.1.0:
+stylelint-config-concentric-order@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-concentric-order/-/stylelint-config-concentric-order-4.0.0.tgz#caf4e5fcc80afb1d2a96337564690f4e0fbcac2f"
+  integrity sha512-DLgTmlL3ZD6pQxADiu+DHBm6SEmtNStJBTGJoco3MSzSYd9mx12NY56MfhcMqtf5AEwFrj9UIcIsEgeSXOI0wA==
+  dependencies:
+    stylelint-order "^4.0.0"
+
+stylelint-order@^4.0.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/stylelint-order/-/stylelint-order-4.1.0.tgz#692d05b7d0c235ac66fcf5ea1d9e5f08a76747f6"
   integrity sha512-sVTikaDvMqg2aJjh4r48jsdfmqLT+nqB1MOsaBnvM3OwLx4S+WXcsxsgk5w18h/OZoxZCxuyXMh61iBHcj9Qiw==

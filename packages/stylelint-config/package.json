@@ -17,7 +17,7 @@
     "url": "https://github.com/avalanchesass/avalanche/issues"
   },
   "dependencies": {
-    "stylelint-order": "^4.1.0"
+    "stylelint-config-concentric-order": "^4.0.0"
   },
   "main": "index.js"
 }
